@@ -1,0 +1,8 @@
+{
+  "passed": 74,
+  "checks": 74,
+  "source_log": "qa/native-windows.log",
+  "windows_dll_sha256": "c83412b6446abcdca6906f7271ba322da11c6e264c07f225543f1b625c195f1b",
+  "android_so_sha256": "d87f3d9c770d16fce42ef7c846f63ae733aab5f3171c919d4ec3cb6459cf1afe",
+  "manifold_revision": "11235e6b8ebea2dbed8aec4285685aafd3d95667"
+}

@@ -1,0 +1,3245 @@
+{
+  "expected": 249,
+  "imported": 249,
+  "passed": 249,
+  "unexpected": [],
+  "checks": [
+    {
+      "id": "FMA7857",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA7857",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7882",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA7882",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7909",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA7909",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7957",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 3000,
+      "stable_id": "FMA7957",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7987",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 3000,
+      "stable_id": "FMA7987",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8012",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8012",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8039",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8039",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8066",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8066",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8093",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA8093",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8148",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8148",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8175",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8175",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8202",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8202",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8229",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8229",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8256",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8256",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8283",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8283",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8310",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA8310",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8364",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8364",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8391",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8391",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8445",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8445",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8472",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8472",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8531",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA8531",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8532",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 3000,
+      "stable_id": "FMA8532",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8533",
+      "passed": true,
+      "max_bound_error_m": 2.384185791015625e-07,
+      "triangles": 2818,
+      "stable_id": "FMA8533",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA8534",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2818,
+      "stable_id": "FMA8534",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7875",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 676,
+      "stable_id": "FMA7875",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA7886",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "FMA7886",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA7913",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 652,
+      "stable_id": "FMA7913",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA7976",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 694,
+      "stable_id": "FMA7976",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8005",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 642,
+      "stable_id": "FMA8005",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8031",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 588,
+      "stable_id": "FMA8031",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8058",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 604,
+      "stable_id": "FMA8058",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8070",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1168,
+      "stable_id": "FMA8070",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8112",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1086,
+      "stable_id": "FMA8112",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8167",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 658,
+      "stable_id": "FMA8167",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8194",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA8194",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8221",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1498,
+      "stable_id": "FMA8221",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8248",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA8248",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA8275",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2314,
+      "stable_id": "FMA8275",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA7486",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2546,
+      "stable_id": "FMA7486",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7487",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA7487",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA7488",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 922,
+      "stable_id": "FMA7488",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9165",
+      "passed": true,
+      "max_bound_error_m": 2.384185791015625e-07,
+      "triangles": 1700,
+      "stable_id": "FMA9165",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9187",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 1938,
+      "stable_id": "FMA9187",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9209",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 2038,
+      "stable_id": "FMA9209",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9248",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2066,
+      "stable_id": "FMA9248",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9922",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 2280,
+      "stable_id": "FMA9922",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9945",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2248,
+      "stable_id": "FMA9945",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9968",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2574,
+      "stable_id": "FMA9968",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA9991",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2424,
+      "stable_id": "FMA9991",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA10014",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2586,
+      "stable_id": "FMA10014",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA10037",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2790,
+      "stable_id": "FMA10037",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA10059",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2674,
+      "stable_id": "FMA10059",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA10081",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2772,
+      "stable_id": "FMA10081",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA10458",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1232,
+      "stable_id": "FMA10458",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13495",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5498,
+      "stable_id": "FMA13495",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13500",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "FMA13500",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13501",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA13501",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13502",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1836,
+      "stable_id": "FMA13502",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13503",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2564,
+      "stable_id": "FMA13503",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13504",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2630,
+      "stable_id": "FMA13504",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13505",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2894,
+      "stable_id": "FMA13505",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13506",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2940,
+      "stable_id": "FMA13506",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13507",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3102,
+      "stable_id": "FMA13507",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13508",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3336,
+      "stable_id": "FMA13508",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA13322",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1146,
+      "stable_id": "FMA13322",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA13323",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1176,
+      "stable_id": "FMA13323",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA13395",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3000,
+      "stable_id": "FMA13395",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA13396",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3000,
+      "stable_id": "FMA13396",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_bone"
+      ]
+    },
+    {
+      "id": "FMA34690",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3996,
+      "stable_id": "FMA34690",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA34691",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 3996,
+      "stable_id": "FMA34691",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA45874",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4000,
+      "stable_id": "FMA45874",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA45875",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 4000,
+      "stable_id": "FMA45875",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA79979",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3998,
+      "stable_id": "FMA79979",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA79980",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3998,
+      "stable_id": "FMA79980",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA13375",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3996,
+      "stable_id": "FMA13375",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA13376",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 3994,
+      "stable_id": "FMA13376",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA13398",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 4000,
+      "stable_id": "FMA13398",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA13399",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3998,
+      "stable_id": "FMA13399",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA9756",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3940,
+      "stable_id": "FMA9756",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA9757",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3976,
+      "stable_id": "FMA9757",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA9758",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 3978,
+      "stable_id": "FMA9758",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA9761",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3994,
+      "stable_id": "FMA9761",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA9762",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3996,
+      "stable_id": "FMA9762",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA13295",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 4000,
+      "stable_id": "FMA13295",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "FMA7163",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 8000,
+      "stable_id": "FMA7163",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_skin"
+      ]
+    },
+    {
+      "id": "FMA7394",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 9992,
+      "stable_id": "FMA7394",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA68418",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 11042,
+      "stable_id": "FMA68418",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA7396",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 11000,
+      "stable_id": "FMA7396",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA31744",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 13816,
+      "stable_id": "FMA31744",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA31741",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 11772,
+      "stable_id": "FMA31741",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA31747",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 14390,
+      "stable_id": "FMA31747",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA31746",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 9454,
+      "stable_id": "FMA31746",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA31748",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 12840,
+      "stable_id": "FMA31748",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA12224",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2940,
+      "stable_id": "FMA12224",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_airway"
+      ]
+    },
+    {
+      "id": "FMA9457",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6500,
+      "stable_id": "FMA9457",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA9531",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6500,
+      "stable_id": "FMA9531",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA13884",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 6500,
+      "stable_id": "FMA13884",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7238",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6500,
+      "stable_id": "FMA7238",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7239",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4926,
+      "stable_id": "FMA7239",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7240",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 4526,
+      "stable_id": "FMA7240",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7242",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 6500,
+      "stable_id": "FMA7242",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7243",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 3820,
+      "stable_id": "FMA7243",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7247",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 1272,
+      "stable_id": "FMA7247",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7249",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 6500,
+      "stable_id": "FMA7249",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7250",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 996,
+      "stable_id": "FMA7250",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7252",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 316,
+      "stable_id": "FMA7252",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7253",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 920,
+      "stable_id": "FMA7253",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7254",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 914,
+      "stable_id": "FMA7254",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7260",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 882,
+      "stable_id": "FMA7260",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7261",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 692,
+      "stable_id": "FMA7261",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7262",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 844,
+      "stable_id": "FMA7262",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7264",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 780,
+      "stable_id": "FMA7264",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA7265",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 816,
+      "stable_id": "FMA7265",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "FMA3736",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 396,
+      "stable_id": "FMA3736",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA3768",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 670,
+      "stable_id": "FMA3768",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA87217",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2290,
+      "stable_id": "FMA87217",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA3932",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 262,
+      "stable_id": "FMA3932",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA3953",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 452,
+      "stable_id": "FMA3953",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4694",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 646,
+      "stable_id": "FMA4694",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4720",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 598,
+      "stable_id": "FMA4720",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA10951",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 1992,
+      "stable_id": "FMA10951",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4751",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 546,
+      "stable_id": "FMA4751",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4761",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 748,
+      "stable_id": "FMA4761",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA8612",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1302,
+      "stable_id": "FMA8612",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA50872",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA50872",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA50873",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "FMA50873",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA49911",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 5500,
+      "stable_id": "FMA49911",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA49913",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4554,
+      "stable_id": "FMA49913",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA49914",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 5500,
+      "stable_id": "FMA49914",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA49916",
+      "passed": true,
+      "max_bound_error_m": 2.384185791015625e-07,
+      "triangles": 5500,
+      "stable_id": "FMA49916",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA50039",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA50039",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA50040",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA50040",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4706",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 624,
+      "stable_id": "FMA4706",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4707",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 826,
+      "stable_id": "FMA4707",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4712",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 3710,
+      "stable_id": "FMA4712",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4838",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "FMA4838",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4944",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 4266,
+      "stable_id": "FMA4944",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA5011",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4532,
+      "stable_id": "FMA5011",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA3969",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3546,
+      "stable_id": "FMA3969",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4068",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3642,
+      "stable_id": "FMA4068",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA66242",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 1508,
+      "stable_id": "FMA66242",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA66243",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 1538,
+      "stable_id": "FMA66243",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA5041",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 2656,
+      "stable_id": "FMA5041",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4112",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 2724,
+      "stable_id": "FMA4112",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "FMA4758",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3038,
+      "stable_id": "FMA4758",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4797",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 786,
+      "stable_id": "FMA4797",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA4877",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 1094,
+      "stable_id": "FMA4877",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA7131",
+      "passed": true,
+      "max_bound_error_m": 2.384185791015625e-07,
+      "triangles": 1156,
+      "stable_id": "FMA7131",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_muscle"
+      ]
+    },
+    {
+      "id": "MAL_RUL",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6500,
+      "stable_id": "MAL_RUL",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_lung"
+      ]
+    },
+    {
+      "id": "MAL_RML",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6500,
+      "stable_id": "MAL_RML",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_lung"
+      ]
+    },
+    {
+      "id": "MAL_RLL",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 6500,
+      "stable_id": "MAL_RLL",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_lung"
+      ]
+    },
+    {
+      "id": "MAL_LUL",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 6500,
+      "stable_id": "MAL_LUL",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_lung"
+      ]
+    },
+    {
+      "id": "MAL_LLL",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 6500,
+      "stable_id": "MAL_LLL",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_lung"
+      ]
+    },
+    {
+      "id": "REC_Right_Visceral_Pleura",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "REC_Right_Visceral_Pleura",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_membrane"
+      ]
+    },
+    {
+      "id": "REC_Right_Parietal_Pleura",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "REC_Right_Parietal_Pleura",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_membrane"
+      ]
+    },
+    {
+      "id": "REC_Left_Visceral_Pleura",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 5500,
+      "stable_id": "REC_Left_Visceral_Pleura",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_membrane"
+      ]
+    },
+    {
+      "id": "REC_Left_Parietal_Pleura",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "REC_Left_Parietal_Pleura",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_membrane"
+      ]
+    },
+    {
+      "id": "REC_Pericardium",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5500,
+      "stable_id": "REC_Pericardium",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_membrane"
+      ]
+    },
+    {
+      "id": "REC_fat",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4000,
+      "stable_id": "REC_fat",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_fat"
+      ]
+    },
+    {
+      "id": "REC_fascia",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 4000,
+      "stable_id": "REC_fascia",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_fascia"
+      ]
+    },
+    {
+      "id": "REC_Right_Phrenic_nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_Phrenic_nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_Vagus_nerve",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 400,
+      "stable_id": "REC_Right_Vagus_nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_Sympathetic_trunk",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Right_Sympathetic_trunk",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC1_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC1_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC1_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC1_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC1_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC1_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC2_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC2_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC2_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC2_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC2_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC2_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC3_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC3_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC3_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC3_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC3_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC3_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC4_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC4_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC4_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC4_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC4_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC4_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC5_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC5_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC5_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC5_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC5_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC5_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC6_Nerve",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC6_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC6_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC6_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC6_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC6_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC7_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC7_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC7_Artery",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC7_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC7_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC7_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC8_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC8_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC8_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC8_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC8_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Right_IC8_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC9_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC9_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC9_Artery",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC9_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC9_Vein",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC9_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC10_Nerve",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC10_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC10_Artery",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC10_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC10_Vein",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC10_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Right_IC11_Nerve",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC11_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Right_IC11_Artery",
+      "passed": true,
+      "max_bound_error_m": 5.960464477539063e-08,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC11_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Right_IC11_Vein",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 400,
+      "stable_id": "REC_Right_IC11_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_Phrenic_nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_Phrenic_nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_Vagus_nerve",
+      "passed": true,
+      "max_bound_error_m": 1.862645149230957e-09,
+      "triangles": 400,
+      "stable_id": "REC_Left_Vagus_nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_Sympathetic_trunk",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_Sympathetic_trunk",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC1_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC1_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC1_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC1_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC1_Vein",
+      "passed": true,
+      "max_bound_error_m": 3.725290298461914e-09,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC1_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC2_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC2_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC2_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC2_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC2_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC2_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC3_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC3_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC3_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC3_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC3_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC3_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC4_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC4_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC4_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC4_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC4_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC4_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC5_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC5_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC5_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC5_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC5_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC5_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC6_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC6_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC6_Artery",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC6_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC6_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC6_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC7_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC7_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC7_Artery",
+      "passed": true,
+      "max_bound_error_m": 2.384185791015625e-07,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC7_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC7_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC7_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC8_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC8_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC8_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC8_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC8_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 398,
+      "stable_id": "REC_Left_IC8_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC9_Nerve",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC9_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC9_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC9_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC9_Vein",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC9_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC10_Nerve",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC10_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC10_Artery",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC10_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC10_Vein",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC10_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_Left_IC11_Nerve",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC11_Nerve",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_nerve"
+      ]
+    },
+    {
+      "id": "REC_Left_IC11_Artery",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC11_Artery",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_artery"
+      ]
+    },
+    {
+      "id": "REC_Left_IC11_Vein",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 400,
+      "stable_id": "REC_Left_IC11_Vein",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REC_ThoracicDuct",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 524,
+      "stable_id": "REC_ThoracicDuct",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_duct"
+      ]
+    },
+    {
+      "id": "REC_right_costal_cartilage_8",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 248,
+      "stable_id": "REC_right_costal_cartilage_8",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_right_costal_cartilage_9",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 248,
+      "stable_id": "REC_right_costal_cartilage_9",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_right_costal_cartilage_10",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 248,
+      "stable_id": "REC_right_costal_cartilage_10",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_right_costal_cartilage_11",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 20,
+      "stable_id": "REC_right_costal_cartilage_11",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_right_costal_cartilage_12",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 20,
+      "stable_id": "REC_right_costal_cartilage_12",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_left_costal_cartilage_8",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 248,
+      "stable_id": "REC_left_costal_cartilage_8",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_left_costal_cartilage_9",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 248,
+      "stable_id": "REC_left_costal_cartilage_9",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_left_costal_cartilage_10",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 248,
+      "stable_id": "REC_left_costal_cartilage_10",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_left_costal_cartilage_11",
+      "passed": true,
+      "max_bound_error_m": 7.450580596923828e-09,
+      "triangles": 20,
+      "stable_id": "REC_left_costal_cartilage_11",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "REC_left_costal_cartilage_12",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 20,
+      "stable_id": "REC_left_costal_cartilage_12",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cartilage"
+      ]
+    },
+    {
+      "id": "FMA11359",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 7620,
+      "stable_id": "FMA11359",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA9465",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 3720,
+      "stable_id": "FMA9465",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA9291",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 6708,
+      "stable_id": "FMA9291",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "FMA9466",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 5900,
+      "stable_id": "FMA9466",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_vein"
+      ]
+    },
+    {
+      "id": "REGION_InterventricularSeptum",
+      "passed": true,
+      "max_bound_error_m": 0.0,
+      "triangles": 40,
+      "stable_id": "REGION_InterventricularSeptum",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    },
+    {
+      "id": "REGION_InteratrialSeptum",
+      "passed": true,
+      "max_bound_error_m": 1.1920928955078125e-07,
+      "triangles": 40,
+      "stable_id": "REGION_InteratrialSeptum",
+      "uv_layers": 1,
+      "uv_valid": true,
+      "normals_valid": true,
+      "materials": [
+        "Tissue_cardiac"
+      ]
+    }
+  ]
+}

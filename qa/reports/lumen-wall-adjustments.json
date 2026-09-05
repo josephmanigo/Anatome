@@ -1,0 +1,32 @@
+[
+  {
+    "id": "FMA31744",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  },
+  {
+    "id": "FMA31741",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  },
+  {
+    "id": "FMA31747",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  },
+  {
+    "id": "FMA31746",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  },
+  {
+    "id": "FMA31748",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  },
+  {
+    "id": "FMA12224",
+    "final_wall_offset_mm": 0.1,
+    "reason": "preserve source section centroid voids; dimension is authored, not measured"
+  }
+]

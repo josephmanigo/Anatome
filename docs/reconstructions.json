@@ -1,0 +1,813 @@
+[
+  {
+    "id": "REC_Right_Visceral_Pleura",
+    "name": "Right visceral pleura",
+    "method": "Thin membrane envelope around registered MAL lung extent; simplified hilum and fissural reflections. Layer gap and thickness selected for visibility, with spatial relationships referenced to Gray 968.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_Parietal_Pleura",
+    "name": "Right parietal pleura",
+    "method": "Thin membrane envelope around registered MAL lung extent; simplified hilum and fissural reflections. Layer gap and thickness selected for visibility, with spatial relationships referenced to Gray 968.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_Visceral_Pleura",
+    "name": "Left visceral pleura",
+    "method": "Thin membrane envelope around registered MAL lung extent; simplified hilum and fissural reflections. Layer gap and thickness selected for visibility, with spatial relationships referenced to Gray 968.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_Parietal_Pleura",
+    "name": "Left parietal pleura",
+    "method": "Thin membrane envelope around registered MAL lung extent; simplified hilum and fissural reflections. Layer gap and thickness selected for visibility, with spatial relationships referenced to Gray 968.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Pericardium",
+    "name": "Pericardial sac",
+    "method": "Pericardial envelope reconstructed around source heart walls, with a closed tissue shell; 0.8 mm teaching thickness and spacing are author-selected.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_fat",
+    "name": "Subcutaneous tissue",
+    "method": "Region-cropped BodyParts3D skin envelope adapted into an inner teaching layer with explicit authored thickness.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [
+      "FJ2810"
+    ],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_fascia",
+    "name": "Thoracic fascia",
+    "method": "Region-cropped BodyParts3D skin envelope adapted into an inner teaching layer with explicit authored thickness.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [
+      "FJ2810"
+    ],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_Phrenic_nerve",
+    "name": "Right phrenic nerve",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_Vagus_nerve",
+    "name": "Right vagus nerve",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_Sympathetic_trunk",
+    "name": "Right sympathetic trunk",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC1_Nerve",
+    "name": "Right intercostal nerve 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC1_Artery",
+    "name": "Right intercostal artery 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC1_Vein",
+    "name": "Right intercostal vein 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC2_Nerve",
+    "name": "Right intercostal nerve 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC2_Artery",
+    "name": "Right intercostal artery 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC2_Vein",
+    "name": "Right intercostal vein 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC3_Nerve",
+    "name": "Right intercostal nerve 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC3_Artery",
+    "name": "Right intercostal artery 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC3_Vein",
+    "name": "Right intercostal vein 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC4_Nerve",
+    "name": "Right intercostal nerve 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC4_Artery",
+    "name": "Right intercostal artery 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC4_Vein",
+    "name": "Right intercostal vein 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC5_Nerve",
+    "name": "Right intercostal nerve 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC5_Artery",
+    "name": "Right intercostal artery 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC5_Vein",
+    "name": "Right intercostal vein 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC6_Nerve",
+    "name": "Right intercostal nerve 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC6_Artery",
+    "name": "Right intercostal artery 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC6_Vein",
+    "name": "Right intercostal vein 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC7_Nerve",
+    "name": "Right intercostal nerve 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC7_Artery",
+    "name": "Right intercostal artery 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC7_Vein",
+    "name": "Right intercostal vein 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC8_Nerve",
+    "name": "Right intercostal nerve 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC8_Artery",
+    "name": "Right intercostal artery 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC8_Vein",
+    "name": "Right intercostal vein 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC9_Nerve",
+    "name": "Right intercostal nerve 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC9_Artery",
+    "name": "Right intercostal artery 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC9_Vein",
+    "name": "Right intercostal vein 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC10_Nerve",
+    "name": "Right intercostal nerve 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC10_Artery",
+    "name": "Right intercostal artery 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC10_Vein",
+    "name": "Right intercostal vein 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC11_Nerve",
+    "name": "Right intercostal nerve 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC11_Artery",
+    "name": "Right intercostal artery 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Right_IC11_Vein",
+    "name": "Right intercostal vein 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_Phrenic_nerve",
+    "name": "Left phrenic nerve",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_Vagus_nerve",
+    "name": "Left vagus nerve",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_Sympathetic_trunk",
+    "name": "Left sympathetic trunk",
+    "method": "Author-traced gross nerve path positioned relative to source heart, root and spine; not a segmented nerve. Diameter enlarged for teaching visibility.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC1_Nerve",
+    "name": "Left intercostal nerve 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC1_Artery",
+    "name": "Left intercostal artery 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC1_Vein",
+    "name": "Left intercostal vein 1",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC2_Nerve",
+    "name": "Left intercostal nerve 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC2_Artery",
+    "name": "Left intercostal artery 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC2_Vein",
+    "name": "Left intercostal vein 2",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC3_Nerve",
+    "name": "Left intercostal nerve 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC3_Artery",
+    "name": "Left intercostal artery 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC3_Vein",
+    "name": "Left intercostal vein 3",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC4_Nerve",
+    "name": "Left intercostal nerve 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC4_Artery",
+    "name": "Left intercostal artery 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC4_Vein",
+    "name": "Left intercostal vein 4",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC5_Nerve",
+    "name": "Left intercostal nerve 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC5_Artery",
+    "name": "Left intercostal artery 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC5_Vein",
+    "name": "Left intercostal vein 5",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC6_Nerve",
+    "name": "Left intercostal nerve 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC6_Artery",
+    "name": "Left intercostal artery 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC6_Vein",
+    "name": "Left intercostal vein 6",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC7_Nerve",
+    "name": "Left intercostal nerve 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC7_Artery",
+    "name": "Left intercostal artery 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC7_Vein",
+    "name": "Left intercostal vein 7",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC8_Nerve",
+    "name": "Left intercostal nerve 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC8_Artery",
+    "name": "Left intercostal artery 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC8_Vein",
+    "name": "Left intercostal vein 8",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC9_Nerve",
+    "name": "Left intercostal nerve 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC9_Artery",
+    "name": "Left intercostal artery 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC9_Vein",
+    "name": "Left intercostal vein 9",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC10_Nerve",
+    "name": "Left intercostal nerve 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC10_Artery",
+    "name": "Left intercostal artery 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC10_Vein",
+    "name": "Left intercostal vein 10",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC11_Nerve",
+    "name": "Left intercostal nerve 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC11_Artery",
+    "name": "Left intercostal artery 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_Left_IC11_Vein",
+    "name": "Left intercostal vein 11",
+    "method": "Inferior costal neurovascular course reconstructed from the corresponding source rib; order vein-artery-nerve and visible diameters are teaching conventions.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  },
+  {
+    "id": "REC_ThoracicDuct",
+    "name": "Thoracic duct",
+    "method": "Gross duct path reconstructed posterior to esophagus, ascending from right toward left superiorly; not a segmented lymphatic vessel.",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Gray968.png"
+    ],
+    "mesh_ids": [],
+    "independently_anatomically_validated": false
+  }
+]

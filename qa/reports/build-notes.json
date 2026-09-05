@@ -1,0 +1,12 @@
+{
+  "blocking_build_errors": 0,
+  "scope": "ThoraxAssetDemo only; concurrent ThoraxLab learning/account work is preserved separately",
+  "windows_warnings": [
+    "XR Interaction Toolkit sample-cache directory warning"
+  ],
+  "android_warnings": [
+    "Optional OpenXR recommendation: prioritize input polling for latency optimization",
+    "XR Interaction Toolkit sample-cache directory warning"
+  ],
+  "headset_tests": "No ADB device connected"
+}

@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "batch_count": true,
+    "triangle_count": true,
+    "finite_geometry": true,
+    "metre_scale_room": true,
+    "adjustable_table_batches": true,
+    "material_assignments": true
+  },
+  "passed": true,
+  "objects": 16,
+  "triangles": 112408,
+  "bounds_size_m": [
+    12.260000228881836,
+    9.260001182556152,
+    3.247500866651535
+  ],
+  "names": [
+    "Lab_Black",
+    "Lab_Blue",
+    "Lab_Ceiling",
+    "Lab_Cloth",
+    "Lab_DarkSteel",
+    "Lab_Floor",
+    "Lab_Glass",
+    "Lab_Light",
+    "Lab_MainTable_DarkSteel",
+    "Lab_MainTable_Stainless",
+    "Lab_Red",
+    "Lab_Sign",
+    "Lab_Stainless",
+    "Lab_Wall",
+    "Lab_White",
+    "Lab_Wood"
+  ]
+}

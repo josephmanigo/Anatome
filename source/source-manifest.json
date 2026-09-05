@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "acquired_utc": "2026-09-05T19:17:54Z",
+  "policy": "Free redistributable sources; no share-alike source geometry. Original downloaded bytes retained.",
+  "sources": [
+    {
+      "path": "source/bodyparts3d/archive/isa_BP3D_4.0_obj_99.zip",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "license": "CC-BY-4.0",
+      "role": "mesh_archive",
+      "status": "acquired",
+      "bytes": 142903898,
+      "sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+      "verified_utc": "2026-09-05T19:17:54Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/isa_parts_list_e.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 128086,
+      "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/isa_element_parts.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_element_parts.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 1142159,
+      "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/isa_inclusion_relation_list.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_inclusion_relation_list.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 207664,
+      "sha256": "26e7d818e03a8c909fe09c561f38d0d513423c87681f9450a803bc38f5b07564",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/partof_parts_list_e.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_parts_list_e.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 59351,
+      "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/partof_element_parts.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_element_parts.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 651179,
+      "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/partof_inclusion_relation_list.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_inclusion_relation_list.txt",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 91241,
+      "sha256": "1b40738270931e3c1d955ce34e0fce0d8d10d8c5ad543463e40b4b4c0243007c",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/README_e.html",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 19263,
+      "sha256": "f9a90b4d945ad0fe50db45c712e931aa54e52667187b30d7085b6cc394f40107",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/release_4.0_e.html",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/release_4.0_e.html",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 6310,
+      "sha256": "771bd30a47ab11396eb6333e73a946426093c57fa4d4a1db8f718910fea7d985",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/coordinate_system.png",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/coordinate_system.png",
+      "license": "CC-BY-4.0",
+      "role": "source_metadata",
+      "status": "acquired",
+      "bytes": 28425,
+      "sha256": "338736275c11eac8c89531fdc14193c9a8adf5baab674033d9d89259f152a5f6",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/bodyparts3d/metadata/license.html",
+      "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+      "license": "CC-BY-4.0",
+      "role": "license_evidence",
+      "status": "acquired",
+      "bytes": 14694,
+      "sha256": "9fe920223dd268937851f823b1a276c0e9ca0dc7d8576aa3a5d180d505f4552a",
+      "verified_utc": "2026-09-05T19:17:53Z",
+      "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+    },
+    {
+      "path": "source/references/gray/Gray806.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Gray806.png",
+      "license": "public-domain",
+      "role": "historical_reference_image",
+      "status": "acquired",
+      "bytes": 84216,
+      "sha256": "22f932ea9ddf584610df58ab40c6892264eeea807fac625de5fb4ccf45cbbe75",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/gray/Gray968.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Gray968.png",
+      "license": "public-domain",
+      "role": "historical_reference_image",
+      "status": "acquired",
+      "bytes": 104329,
+      "sha256": "54a67bcb69df13087f6b683ea7344dce4e236842feef1a229d4a5b34cadd42eb",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/gray/Gray806-source.html",
+      "url": "https://commons.wikimedia.org/wiki/File:Gray806.png",
+      "license": "reference-page",
+      "role": "license_evidence",
+      "status": "acquired",
+      "bytes": 145611,
+      "sha256": "bd5d1fd4ae692e36b7a9a48e6f11913c57dbe60975f7b9f8322b12e35dcdcbc8",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/gray/Gray968-source.html",
+      "url": "https://commons.wikimedia.org/wiki/File:Gray968.png",
+      "license": "reference-page",
+      "role": "license_evidence",
+      "status": "acquired",
+      "bytes": 130232,
+      "sha256": "6edf336e0e40a3714a31a75e381bf79e58ff561822705606a4da595c850c735d",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/nlm/visible_human.html",
+      "url": "https://www.nlm.nih.gov/research/visible/visible_human.html",
+      "license": "reference-page",
+      "role": "dataset_documentation",
+      "status": "acquired",
+      "bytes": 31521,
+      "sha256": "e09ee146e6e16bae0db5a94a26e3b75cd2dc9f7808efd9e256569c2054fee01d",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/open-anatomy/mal-thoracic-atlas.html",
+      "url": "https://www.openanatomy.org/atlas-pages/atlas-mauritania-thorax.html",
+      "license": "reference-page",
+      "role": "dataset_documentation",
+      "status": "acquired",
+      "bytes": 10720,
+      "sha256": "e45c5c46924a868e8f231a76e7926c8f3fcac827af5f733c9b3a49a0e29d2dd2",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    },
+    {
+      "path": "source/references/open-anatomy/slicer-license.html",
+      "url": "https://www.openanatomy.org/atlas-pages/slicer-license.html",
+      "license": "reference-page",
+      "role": "license_evidence",
+      "status": "acquired",
+      "bytes": 17276,
+      "sha256": "fb74b4753e822915adbe03ffae18e03529a669994ac2f58c45ceb981cc75c1da",
+      "verified_utc": "2026-09-05T19:17:53Z"
+    }
+  ],
+  "extraction": {
+    "status": "extracted",
+    "obj_count": 2234,
+    "path": "source/bodyparts3d/obj",
+    "geometry_modified": false
+  }
+}

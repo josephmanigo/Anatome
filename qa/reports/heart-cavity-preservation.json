@@ -1,0 +1,1057 @@
+{
+  "tested": 100,
+  "passed": 100,
+  "samples": [
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        35.36688246871446,
+        -119.51852605233204,
+        1222.328919226393
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        47.3120036046644,
+        -121.53574193401582,
+        1215.9592974971556
+      ],
+      "production_wall_winding": 5.300924469105861e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        45.9298536046644,
+        -125.74554193401582,
+        1222.7317974971554
+      ],
+      "production_wall_winding": 1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        44.9700486046644,
+        -121.43074193401583,
+        1225.1747974971554
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        43.5572386046644,
+        -132.99614193401584,
+        1216.8412974971554
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        42.450923604664396,
+        -131.42429193401583,
+        1221.2372974971554
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        42.2882086046644,
+        -129.71034193401582,
+        1223.3512974971554
+      ],
+      "production_wall_winding": -1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        40.5791586046644,
+        -111.93237193401582,
+        1215.7702974971555
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        39.2125486046644,
+        -110.76519193401583,
+        1217.1002974971555
+      ],
+      "production_wall_winding": -3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        38.112918604664394,
+        -127.83154193401583,
+        1215.6652974971555
+      ],
+      "production_wall_winding": 1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        36.2540686046644,
+        -124.01164193401581,
+        1226.6797974971555
+      ],
+      "production_wall_winding": -1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        36.6736836046644,
+        -113.63554193401582,
+        1211.8922974971556
+      ],
+      "production_wall_winding": 8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        34.721558604664395,
+        -109.86215693401583,
+        1218.3112974971555
+      ],
+      "production_wall_winding": -4.417437057588218e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        34.2040136046644,
+        -107.97751193401582,
+        1220.3797974971556
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        32.7486086046644,
+        -116.80934193401582,
+        1232.4862974971554
+      ],
+      "production_wall_winding": 2.208718528794109e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        32.4144636046644,
+        -110.38803193401583,
+        1216.3372974971555
+      ],
+      "production_wall_winding": 4.417437057588218e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        32.141533604664396,
+        -119.96354193401582,
+        1214.3352974971556
+      ],
+      "production_wall_winding": 5.300924469105861e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        30.8703336046644,
+        -112.66313693401582,
+        1214.6677974971556
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        29.535083604664397,
+        -110.98989193401582,
+        1215.9907974971554
+      ],
+      "production_wall_winding": 2.208718528794109e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        29.884488604664398,
+        -120.16829193401583,
+        1219.1092974971555
+      ],
+      "production_wall_winding": -4.417437057588218e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        28.328703604664398,
+        -111.96331193401582,
+        1216.4177974971556
+      ],
+      "production_wall_winding": 7.730514850779381e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        28.470033604664398,
+        -116.59724193401583,
+        1225.3147974971555
+      ],
+      "production_wall_winding": 7.50964299789997e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        27.2068486046644,
+        -122.90599193401583,
+        1228.9022974971554
+      ],
+      "production_wall_winding": 1.987846675914698e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        27.083088604664397,
+        -122.93959193401582,
+        1228.5977974971554
+      ],
+      "production_wall_winding": 6.847027439261738e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2422",
+      "point_mm": [
+        25.2868081046644,
+        -119.19809193401582,
+        1228.2267974971555
+      ],
+      "production_wall_winding": 2.4295903816735198e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        20.214089457553943,
+        -144.94462589928057,
+        1226.2373792394662
+      ],
+      "production_wall_winding": 7.067899292141149e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        30.85346314741006,
+        -146.08995683453236,
+        1210.768296505653
+      ],
+      "production_wall_winding": 5.300924469105861e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        30.488413147410064,
+        -151.75750683453236,
+        1216.4592965056531
+      ],
+      "production_wall_winding": 7.067899292141149e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        29.482408147410062,
+        -150.64065683453236,
+        1228.397796505653
+      ],
+      "production_wall_winding": -7.067899292141149e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        28.47398814741006,
+        -147.55085683453237,
+        1232.758796505653
+      ],
+      "production_wall_winding": -4.8591807633470396e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        27.31303814741006,
+        -145.29405683453237,
+        1235.982296505653
+      ],
+      "production_wall_winding": 8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        26.33636314741006,
+        -140.62575683453235,
+        1233.994296505653
+      ],
+      "production_wall_winding": 6.184411880623505e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        26.291248147410062,
+        -151.84325683453238,
+        1231.092796505653
+      ],
+      "production_wall_winding": 2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        25.07454314741006,
+        -149.43210683453236,
+        1233.847296505653
+      ],
+      "production_wall_winding": 4.417437057588218e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        24.339613147410063,
+        -141.04085683453238,
+        1232.3422965056532
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        22.685758147410063,
+        -149.74045683453235,
+        1236.297296505653
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        23.06088814741006,
+        -141.94070683453236,
+        1230.567796505653
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        21.68696314741006,
+        -141.69115683453236,
+        1219.311796505653
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        20.048053147410062,
+        -140.82385683453236,
+        1236.4057965056531
+      ],
+      "production_wall_winding": -5.300924469105861e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        19.370593147410062,
+        -154.16445683453236,
+        1228.341796505653
+      ],
+      "production_wall_winding": 2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        17.654963147410065,
+        -147.83015683453237,
+        1236.339296505653
+      ],
+      "production_wall_winding": -1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        16.62374414741006,
+        -143.35365683453236,
+        1236.8747965056532
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        16.736983147410065,
+        -146.57190683453237,
+        1235.898296505653
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        15.298955647410063,
+        -151.35255683453235,
+        1216.711296505653
+      ],
+      "production_wall_winding": 7.951386703658792e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        13.222395847410063,
+        -136.61055683453236,
+        1215.307796505653
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        11.328195147410064,
+        -136.55420683453238,
+        1226.927796505653
+      ],
+      "production_wall_winding": 5.300924469105861e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        10.500102147410063,
+        -141.19905683453237,
+        1214.7337965056531
+      ],
+      "production_wall_winding": -3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        8.515168147410064,
+        -144.19785683453236,
+        1216.182796505653
+      ],
+      "production_wall_winding": 2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        6.9744681474100645,
+        -142.97670683453237,
+        1221.282296505653
+      ],
+      "production_wall_winding": 1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2423",
+      "point_mm": [
+        18.93522814741006,
+        -141.38910683453236,
+        1237.221296505653
+      ],
+      "production_wall_winding": 0.0,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        18.80648179216354,
+        -93.01381328790465,
+        1243.624957410563
+      ],
+      "production_wall_winding": 4.417437057588218e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        5.459203164906301,
+        -91.60124363713803,
+        1243.945222316866
+      ],
+      "production_wall_winding": 4.8591807633470396e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        5.879553164906303,
+        -87.67634363713803,
+        1239.444222316866
+      ],
+      "production_wall_winding": 4.417437057588218e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        5.4130031649063035,
+        -85.57994863713802,
+        1239.6857223168658
+      ],
+      "production_wall_winding": -3.092205940311753e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        6.6234081649063015,
+        -86.64020363713803,
+        1237.974222316866
+      ],
+      "production_wall_winding": -4.417437057588218e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        9.948730164906303,
+        -91.73196863713802,
+        1237.1097223168658
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        12.158921014906301,
+        -92.98923863713803,
+        1234.299222316866
+      ],
+      "production_wall_winding": -3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        14.356115664906302,
+        -87.05428863713803,
+        1246.164222316866
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        15.384972164906301,
+        -93.42166363713802,
+        1230.7572223168659
+      ],
+      "production_wall_winding": 2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        16.048488164906303,
+        -90.48908363713802,
+        1231.289222316866
+      ],
+      "production_wall_winding": -2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        19.670498164906302,
+        -96.96747863713803,
+        1249.5977223168659
+      ],
+      "production_wall_winding": 4.1965652047088066e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        20.5038481649063,
+        -97.81062863713802,
+        1248.162722316866
+      ],
+      "production_wall_winding": 2.208718528794109e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        21.971748164906302,
+        -86.21365863713802,
+        1241.264222316866
+      ],
+      "production_wall_winding": 2.6504622345529306e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        23.5213731649063,
+        -96.69587863713802,
+        1249.2582223168658
+      ],
+      "production_wall_winding": -4.8591807633470396e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        25.311553164906304,
+        -96.42322863713802,
+        1247.2527223168659
+      ],
+      "production_wall_winding": -8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        25.740198164906303,
+        -90.29584863713802,
+        1240.882722316866
+      ],
+      "production_wall_winding": -1.3252311172764653e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        26.226418164906303,
+        -102.89052863713803,
+        1252.257722316866
+      ],
+      "production_wall_winding": 1.0601848938211722e-16,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        26.230618164906303,
+        -92.80454363713802,
+        1245.236722316866
+      ],
+      "production_wall_winding": 3.092205940311753e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        26.743088164906304,
+        -91.14834363713803,
+        1248.344722316866
+      ],
+      "production_wall_winding": 8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        26.395573164906303,
+        -88.55200863713803,
+        1240.480222316866
+      ],
+      "production_wall_winding": 5.0800526162264503e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        26.854878164906303,
+        -86.45704863713803,
+        1239.472222316866
+      ],
+      "production_wall_winding": 1.1043592643970545e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        27.3203081649063,
+        -99.39577863713802,
+        1247.683222316866
+      ],
+      "production_wall_winding": -1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        5.418883164906303,
+        -90.81335863713802,
+        1246.2202223168658
+      ],
+      "production_wall_winding": -3.975693351829396e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        6.455373164906305,
+        -86.09273363713802,
+        1237.746722316866
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2425",
+      "wall_id": "FMA9531",
+      "point_mm": [
+        27.0520331649063,
+        -86.62277363713802,
+        1239.619222316866
+      ],
+      "production_wall_winding": 1.3252311172764653e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -14.07592926756917,
+        -120.83058625314328,
+        1231.358038558256
+      ],
+      "production_wall_winding": -1.987846675914698e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -21.005709023919962,
+        -117.82633106454313,
+        1229.5107250628664
+      ],
+      "production_wall_winding": 2.208718528794109e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -20.75409402391996,
+        -114.02708106454313,
+        1232.2477250628665
+      ],
+      "production_wall_winding": -3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -19.51572402391996,
+        -117.72693106454312,
+        1241.7782250628666
+      ],
+      "production_wall_winding": -6.6261555863823264e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -18.019754023919962,
+        -125.86688106454314,
+        1225.0937250628665
+      ],
+      "production_wall_winding": 6.405283733502916e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -18.32519902391996,
+        -117.36223106454314,
+        1247.3607250628665
+      ],
+      "production_wall_winding": 2.8713340874323413e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -17.52366402391996,
+        -128.70923106454313,
+        1226.8297250628666
+      ],
+      "production_wall_winding": -4.1965652047088066e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -17.116684023919962,
+        -121.78658106454313,
+        1247.1612250628664
+      ],
+      "production_wall_winding": -4.417437057588218e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -16.44622402391996,
+        -130.04133106454313,
+        1228.3942250628666
+      ],
+      "production_wall_winding": -1.2147951908367599e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -15.80103402391996,
+        -121.79113106454314,
+        1221.4572250628664
+      ],
+      "production_wall_winding": -8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -14.487484023919961,
+        -128.18003106454313,
+        1231.2712250628665
+      ],
+      "production_wall_winding": 6.073975954183799e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -14.55958402391996,
+        -115.05608106454314,
+        1246.0762250628666
+      ],
+      "production_wall_winding": 1.766974823035287e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -13.72525402391996,
+        -123.24958106454314,
+        1245.5757250628665
+      ],
+      "production_wall_winding": -1.1043592643970545e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -12.380288023919961,
+        -131.82283106454312,
+        1233.6792250628664
+      ],
+      "production_wall_winding": 5.135270579446303e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -12.186500023919962,
+        -115.87788106454313,
+        1215.2797250628664
+      ],
+      "production_wall_winding": 1.987846675914698e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -11.467953523919961,
+        -126.48463106454314,
+        1241.7782250628666
+      ],
+      "production_wall_winding": -2.7608981609926363e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -12.02236752391996,
+        -115.25733106454314,
+        1216.0777250628664
+      ],
+      "production_wall_winding": 8.834874115176436e-18,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -10.082499523919962,
+        -125.69153106454313,
+        1240.9697250628665
+      ],
+      "production_wall_winding": 1.8774107494749925e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -10.65559652391996,
+        -118.67928106454313,
+        1247.3607250628665
+      ],
+      "production_wall_winding": -3.975693351829396e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -9.11436753391996,
+        -130.63948106454313,
+        1240.6722250628666
+      ],
+      "production_wall_winding": 3.533949646070574e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -9.050398873919962,
+        -119.51403106454313,
+        1235.5097250628664
+      ],
+      "production_wall_winding": -3.920475388609543e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -8.64106652391996,
+        -130.01053106454313,
+        1241.2182250628664
+      ],
+      "production_wall_winding": 5.963540027744093e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -8.423755023919961,
+        -115.88138106454313,
+        1220.9077250628666
+      ],
+      "production_wall_winding": -4.307001131148512e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -16.80651402391996,
+        -121.75788106454313,
+        1215.4197250628665
+      ],
+      "production_wall_winding": -5.853104101304388e-17,
+      "outside_tissue": true
+    },
+    {
+      "cavity_mesh": "FJ2424",
+      "wall_id": "FMA9457",
+      "point_mm": [
+        -10.78412352391996,
+        -118.00098106454313,
+        1247.3607250628665
+      ],
+      "production_wall_winding": 4.5278729840279234e-17,
+      "outside_tissue": true
+    }
+  ],
+  "limitation": "Confirms these source-derived cavity samples survived production repair; does not establish all thin trabeculae or chamber boundaries."
+}

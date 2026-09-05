@@ -1,0 +1,75 @@
+{
+  "apk": "builds/AssetDemo/Android/ThoraxLab.apk",
+  "bytes": 94364054,
+  "sha256": "f03def0192a31d4093f6cd6ed1fea838a55c34efa302bd189c72c359007959af",
+  "checks": [
+    {
+      "name": "ZIP integrity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ARM64 libraries only",
+      "passed": true,
+      "detail": [
+        "lib/arm64-v8a/libUnityOpenXR.so",
+        "lib/arm64-v8a/lib_burst_generated.so",
+        "lib/arm64-v8a/libc++_shared.so",
+        "lib/arm64-v8a/libgame.so",
+        "lib/arm64-v8a/libil2cpp.so",
+        "lib/arm64-v8a/libmain.so",
+        "lib/arm64-v8a/libopenxr_loader.so",
+        "lib/arm64-v8a/libswappywrapper.so",
+        "lib/arm64-v8a/libthoraxcut.so",
+        "lib/arm64-v8a/libunity.so"
+      ]
+    },
+    {
+      "name": "native cutting library packaged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ELF64 AArch64",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "attribution packaged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "complete MAL terms packaged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Apache license packaged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "16 KB ELF load alignment",
+      "passed": true,
+      "detail": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "package identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "APK signature verifies",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "failures": 0,
+  "headset_run": false,
+  "signing": "development/debug signing for local installation, not a store release"
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "volume_declared_space": "left-posterior-superior",
+  "voxel_spacing_mm": [
+    0.644,
+    0.644,
+    0.8000488281249998
+  ],
+  "origin_lps_mm": [
+    -164.864,
+    -164.864,
+    -185.61132812499994
+  ],
+  "mesh_space_conclusion": "RAS inferred and numerically checked against the corresponding authoritative LPS-labeled voxels; apply x/y sign inversion to compare in LPS.",
+  "meshes": [
+    {
+      "name": "superior lobe of right lung",
+      "label": 1,
+      "voxel_count": 1829680,
+      "voxel_center_bounds_lps_mm": {
+        "min": [
+          -112.7,
+          -74.06,
+          16.0009765625
+        ],
+        "max": [
+          1.288000000000011,
+          86.94,
+          125.60766601562494
+        ]
+      },
+      "same_bounds_converted_to_ras_mm": {
+        "min": [
+          -1.288000000000011,
+          -86.94,
+          16.0009765625
+        ],
+        "max": [
+          112.7,
+          74.06,
+          125.60766601562494
+        ]
+      },
+      "vtk_bounds_ras_mm": {
+        "min": [
+          -1.49587,
+          -79.3272,
+          15.7858
+        ],
+        "max": [
+          112.762,
+          74.1463,
+          125.962
+        ]
+      },
+      "largest_bbox_discrepancy_mm": 7.612799999999993
+    },
+    {
+      "name": "middle lobe of right lung",
+      "label": 12,
+      "voxel_count": 357982,
+      "voxel_center_bounds_lps_mm": {
+        "min": [
+          -113.344,
+          -90.804,
+          -29.601806640625
+        ],
+        "max": [
+          -3.219999999999999,
+          14.168000000000006,
+          31.201904296875
+        ]
+      },
+      "same_bounds_converted_to_ras_mm": {
+        "min": [
+          3.219999999999999,
+          -14.168000000000006,
+          -29.601806640625
+        ],
+        "max": [
+          113.344,
+          90.804,
+          31.201904296875
+        ]
+      },
+      "vtk_bounds_ras_mm": {
+        "min": [
+          1.15702,
+          -13.8621,
+          -30.0862
+        ],
+        "max": [
+          113.166,
+          91.133,
+          31.6328
+        ]
+      },
+      "largest_bbox_discrepancy_mm": 2.0629799999999987
+    },
+    {
+      "name": "inferior lobe of right lung",
+      "label": 23,
+      "voxel_count": 1247763,
+      "voxel_center_bounds_lps_mm": {
+        "min": [
+          -123.648,
+          -29.623999999999995,
+          -71.20434570312497
+        ],
+        "max": [
+          -0.6440000000000055,
+          94.66799999999998,
+          66.404052734375
+        ]
+      },
+      "same_bounds_converted_to_ras_mm": {
+        "min": [
+          0.6440000000000055,
+          -94.66799999999998,
+          -71.20434570312497
+        ],
+        "max": [
+          123.648,
+          29.623999999999995,
+          66.404052734375
+        ]
+      },
+      "vtk_bounds_ras_mm": {
+        "min": [
+          0.347502,
+          -95.167,
+          -71.4154
+        ],
+        "max": [
+          123.885,
+          29.7266,
+          65.9575
+        ]
+      },
+      "largest_bbox_discrepancy_mm": 0.49900000000002365
+    },
+    {
+      "name": "superior lobe of left lung",
+      "label": 28,
+      "voxel_count": 1573034,
+      "voxel_center_bounds_lps_mm": {
+        "min": [
+          12.879999999999995,
+          -63.111999999999995,
+          -44.80273437499997
+        ],
+        "max": [
+          128.79999999999998,
+          81.78800000000001,
+          128.80786132812494
+        ]
+      },
+      "same_bounds_converted_to_ras_mm": {
+        "min": [
+          -128.79999999999998,
+          -81.78800000000001,
+          -44.80273437499997
+        ],
+        "max": [
+          -12.879999999999995,
+          63.111999999999995,
+          128.80786132812494
+        ]
+      },
+      "vtk_bounds_ras_mm": {
+        "min": [
+          -128.901,
+          -81.7614,
+          -44.7207
+        ],
+        "max": [
+          -12.3814,
+          63.2995,
+          129.079
+        ]
+      },
+      "largest_bbox_discrepancy_mm": 0.49859999999999616
+    },
+    {
+      "name": "inferior lobe of left lung",
+      "label": 29,
+      "voxel_count": 1497109,
+      "voxel_center_bounds_lps_mm": {
+        "min": [
+          16.099999999999994,
+          -14.812000000000012,
+          -84.80517578124997
+        ],
+        "max": [
+          129.444,
+          96.6,
+          72.804443359375
+        ]
+      },
+      "same_bounds_converted_to_ras_mm": {
+        "min": [
+          -129.444,
+          -96.6,
+          -84.80517578124997
+        ],
+        "max": [
+          -16.099999999999994,
+          14.812000000000012,
+          72.804443359375
+        ]
+      },
+      "vtk_bounds_ras_mm": {
+        "min": [
+          -129.392,
+          -96.7062,
+          -84.8094
+        ],
+        "max": [
+          -16.0113,
+          15.0386,
+          72.8811
+        ]
+      },
+      "largest_bbox_discrepancy_mm": 0.2265999999999888
+    }
+  ],
+  "note": "This checks global coordinate basis and gross label correspondence, not anatomical accuracy or BP3D registration."
+}

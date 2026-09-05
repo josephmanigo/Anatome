@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "name": "Hash and size: handoff/ThoraxLab-Assets-and-Sources.zip",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: handoff/ThoraxLab-Unity-AssetDemo.zip",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: handoff/ThoraxLab-Windows.zip",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: builds/AssetDemo/Android/ThoraxLab.apk",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: blender/Thorax_MASTER.blend",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: blender/Laboratory_MASTER.blend",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: exports/Thorax.fbx",
+      "passed": true
+    },
+    {
+      "name": "Hash and size: exports/Laboratory.fbx",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: README.md",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: docs/HANDOFF.md",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: pipeline/package_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: qa/reports/runtime-asset-demo.json",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: qa/reports/apk-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: qa/renders/laboratory-overview.png",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: blender/Thorax_MASTER.blend",
+      "passed": true
+    },
+    {
+      "name": "Assets archive current: source/bodyparts3d/archive/isa_BP3D_4.0_obj_99.zip",
+      "passed": true
+    },
+    {
+      "name": "No concurrent pipeline scripts",
+      "passed": true
+    },
+    {
+      "name": "Unity archive current: README.md",
+      "passed": true
+    },
+    {
+      "name": "Unity archive current: docs/HANDOFF.md",
+      "passed": true
+    },
+    {
+      "name": "Unity archive current: unity/ThoraxAssetDemo/Assets/ThoraxLab/Scenes/ThoraxLab.unity",
+      "passed": true
+    },
+    {
+      "name": "Unity archive current: unity/ThoraxAssetDemo/Packages/packages-lock.json",
+      "passed": true
+    },
+    {
+      "name": "Isolated Unity only",
+      "passed": true
+    },
+    {
+      "name": "No Unity build caches",
+      "passed": true
+    },
+    {
+      "name": "Windows complete player",
+      "passed": true
+    }
+  ],
+  "passed": 24,
+  "failures": 0,
+  "crc_validation": "All three archives passed ZipFile.testzip during packaging",
+  "manifest": "handoff/SHA256.json"
+}

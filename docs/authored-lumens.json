@@ -1,0 +1,102 @@
+[
+  {
+    "id": "FMA7394",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA68418",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA7396",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA31744",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA31741",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA31747",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA31746",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA31748",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA12224",
+    "wall_offset_mm": 0.65,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  },
+  {
+    "id": "FMA7131",
+    "wall_offset_mm": 1.2,
+    "method": "inward offset with local clamp, reversed inner shell",
+    "source_audit": "source/airway-lumen-audit.json",
+    "limitations": [
+      "Source surface may trace the lumen or outer boundary; uncertainty retained.",
+      "Regional and elemental endpoint closures retained; branch-junction wall continuity needs visual review."
+    ]
+  }
+]

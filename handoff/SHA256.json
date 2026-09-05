@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-05T21:57:19.896898+00:00",
+  "artifacts": [
+    {
+      "path": "handoff/ThoraxLab-Assets-and-Sources.zip",
+      "bytes": 416106213,
+      "sha256": "7f78e9bcbb1207006e7aa1da00c2321eaa15cc8d909f73936d3f2be330f7c6ad"
+    },
+    {
+      "path": "handoff/ThoraxLab-Unity-AssetDemo.zip",
+      "bytes": 47078829,
+      "sha256": "54aef99d0ec6f984e394de4be9958ab9abcac1d087443b3fca3b3020c27e7789"
+    },
+    {
+      "path": "handoff/ThoraxLab-Windows.zip",
+      "bytes": 112547927,
+      "sha256": "0cf9cf519023e0dfda009aa53630055b18f182f25a716159a89b4716248268c7"
+    },
+    {
+      "path": "builds/AssetDemo/Android/ThoraxLab.apk",
+      "bytes": 94364054,
+      "sha256": "f03def0192a31d4093f6cd6ed1fea838a55c34efa302bd189c72c359007959af"
+    },
+    {
+      "path": "blender/Thorax_MASTER.blend",
+      "bytes": 61216418,
+      "sha256": "852186a94b054d5829cd1083774f56cccee3ff16d9ff0e5c9c58246776a331e1"
+    },
+    {
+      "path": "blender/Laboratory_MASTER.blend",
+      "bytes": 497770,
+      "sha256": "d7e262065c3e7698de142e66452d4ebc098e12ff0f06b2eacbd344a0c888765c"
+    },
+    {
+      "path": "exports/Thorax.fbx",
+      "bytes": 20621164,
+      "sha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a"
+    },
+    {
+      "path": "exports/Laboratory.fbx",
+      "bytes": 2414844,
+      "sha256": "897c516cf74ab4818b001ebf1e7923ae4f1f7a306970c13fe111e67ca249cee2"
+    }
+  ],
+  "headset_measured": false,
+  "professional_review_required": false
+}

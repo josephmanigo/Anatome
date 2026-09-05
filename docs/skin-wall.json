@@ -1,0 +1,10 @@
+{
+  "id": "FMA7163",
+  "source_meshes": [
+    "FJ2810"
+  ],
+  "method": "inward Solidify shell, 1.8 mm with local clamp, on the positive-volume normalized source envelope",
+  "regional_boundaries": "Existing thorax inlet/inferior closure faces retained as explicit regional treatment; these are not natural skin surfaces.",
+  "limitation": "Author-selected dermal thickness; no histological thickness segmentation.",
+  "validation": "Native topology and real shallow/curved/grazing/miss strokes rerun on this actual hollow skin volume."
+}

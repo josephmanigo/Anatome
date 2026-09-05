@@ -1,0 +1,104 @@
+{
+  "method": "One common axis-constrained similarity based on sternum surface centroids; transverse axes retained as prior. Cross-specimen teaching adaptation, not a validated patient registration.",
+  "scale": 1.0305351338762454,
+  "row_vector_rotation": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.998115800747363,
+      -0.06135835964602143
+    ],
+    [
+      0.0,
+      0.06135835964602143,
+      0.998115800747363
+    ]
+  ],
+  "translation_mm": [
+    -7.4816918534208545,
+    -105.24713082343487,
+    1220.9258271789408
+  ],
+  "residuals_mm": [
+    0.6981076726822825,
+    1.809855284554329,
+    1.1391738653532146
+  ],
+  "landmarks": [
+    {
+      "name": "manubrium of sternum",
+      "mal_path": "models/manubrium of sternum.vtk",
+      "bp3d_element": "FJ3290",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -7.000812490499021,
+        50.80517375626478,
+        75.35398951224067
+      ],
+      "mal_lps_mm": [
+        7.000812490499021,
+        -50.80517375626478,
+        75.35398951224067
+      ],
+      "bp3d_mm": [
+        -0.017471845723162856,
+        -152.09220518877981,
+        1301.7184749605553
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    },
+    {
+      "name": "body of sternum",
+      "mal_path": "models/body of sternum.vtk",
+      "bp3d_element": "FJ3178",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -8.266871875378703,
+        81.89894003008419,
+        5.487806861277452
+      ],
+      "mal_lps_mm": [
+        8.266871875378703,
+        -81.89894003008419,
+        5.487806861277452
+      ],
+      "bp3d_mm": [
+        0.05263008622073909,
+        -190.6318832765271,
+        1231.4625311941918
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    },
+    {
+      "name": "xiphoid process",
+      "mal_path": "models/xiphoid process.vtk",
+      "bp3d_element": "FJ3153",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -6.647748402519007,
+        96.0206033288267,
+        -49.071938806277245
+      ],
+      "mal_lps_mm": [
+        6.647748402519007,
+        -96.0206033288267,
+        -49.071938806277245
+      ],
+      "bp3d_mm": [
+        0.10438964117544336,
+        -206.2731686277674,
+        1176.7374500236165
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    }
+  ],
+  "ras_to_bp_basis": [
+    -1,
+    -1,
+    1
+  ]
+}

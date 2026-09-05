@@ -1,0 +1,1436 @@
+[
+  {
+    "id": "FMA7394",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA68418",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA7396",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA31744",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA31741",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA31747",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA31746",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA31748",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA12224",
+    "operation": "union source envelope components minus union authored voids; resolves intersecting branch wall shells while preserving voids"
+  },
+  {
+    "id": "FMA7857",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA7882",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA7909",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA7957",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA7987",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8012",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8039",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8066",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8093",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8148",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8175",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8202",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8229",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8256",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8283",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8310",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8364",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8391",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8445",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8472",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8531",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8532",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA8533",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2818,
+    "after_triangles": 2818
+  },
+  {
+    "id": "FMA8534",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2818,
+    "after_triangles": 2818
+  },
+  {
+    "id": "FMA7875",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 676,
+    "after_triangles": 676
+  },
+  {
+    "id": "FMA7886",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA7913",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 652,
+    "after_triangles": 652
+  },
+  {
+    "id": "FMA7976",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 694,
+    "after_triangles": 694
+  },
+  {
+    "id": "FMA8005",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 642,
+    "after_triangles": 642
+  },
+  {
+    "id": "FMA8031",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 588,
+    "after_triangles": 588
+  },
+  {
+    "id": "FMA8058",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 604,
+    "after_triangles": 604
+  },
+  {
+    "id": "FMA8070",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1168,
+    "after_triangles": 1168
+  },
+  {
+    "id": "FMA8112",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1086,
+    "after_triangles": 1086
+  },
+  {
+    "id": "FMA8167",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 658,
+    "after_triangles": 658
+  },
+  {
+    "id": "FMA8194",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA8221",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1498,
+    "after_triangles": 1498
+  },
+  {
+    "id": "FMA8248",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA8275",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2314,
+    "after_triangles": 2314
+  },
+  {
+    "id": "FMA7486",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2546,
+    "after_triangles": 2546
+  },
+  {
+    "id": "FMA7487",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA7488",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 922,
+    "after_triangles": 922
+  },
+  {
+    "id": "FMA9165",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1700,
+    "after_triangles": 1700
+  },
+  {
+    "id": "FMA9187",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1938,
+    "after_triangles": 1938
+  },
+  {
+    "id": "FMA9209",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2038,
+    "after_triangles": 2038
+  },
+  {
+    "id": "FMA9248",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2066,
+    "after_triangles": 2066
+  },
+  {
+    "id": "FMA9922",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2280,
+    "after_triangles": 2280
+  },
+  {
+    "id": "FMA9945",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2248,
+    "after_triangles": 2248
+  },
+  {
+    "id": "FMA9968",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2574,
+    "after_triangles": 2574
+  },
+  {
+    "id": "FMA9991",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2424,
+    "after_triangles": 2424
+  },
+  {
+    "id": "FMA10014",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2586,
+    "after_triangles": 2586
+  },
+  {
+    "id": "FMA10037",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2790,
+    "after_triangles": 2790
+  },
+  {
+    "id": "FMA10059",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2674,
+    "after_triangles": 2674
+  },
+  {
+    "id": "FMA10081",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2772,
+    "after_triangles": 2772
+  },
+  {
+    "id": "FMA10458",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1232,
+    "after_triangles": 1232
+  },
+  {
+    "id": "FMA13495",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5498,
+    "after_triangles": 5498
+  },
+  {
+    "id": "FMA13500",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA13501",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA13502",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1836,
+    "after_triangles": 1836
+  },
+  {
+    "id": "FMA13503",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2564,
+    "after_triangles": 2564
+  },
+  {
+    "id": "FMA13504",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2630,
+    "after_triangles": 2630
+  },
+  {
+    "id": "FMA13505",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2894,
+    "after_triangles": 2894
+  },
+  {
+    "id": "FMA13506",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2940,
+    "after_triangles": 2940
+  },
+  {
+    "id": "FMA13507",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3102,
+    "after_triangles": 3102
+  },
+  {
+    "id": "FMA13508",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3336,
+    "after_triangles": 3336
+  },
+  {
+    "id": "FMA13322",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1146,
+    "after_triangles": 1146
+  },
+  {
+    "id": "FMA13323",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1176,
+    "after_triangles": 1176
+  },
+  {
+    "id": "FMA13395",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA13396",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3000,
+    "after_triangles": 3000
+  },
+  {
+    "id": "FMA34690",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3996,
+    "after_triangles": 3996
+  },
+  {
+    "id": "FMA34691",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3996,
+    "after_triangles": 3996
+  },
+  {
+    "id": "FMA45874",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "FMA45875",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "FMA79979",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3998,
+    "after_triangles": 3998
+  },
+  {
+    "id": "FMA79980",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3998,
+    "after_triangles": 3998
+  },
+  {
+    "id": "FMA13375",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3996,
+    "after_triangles": 3996
+  },
+  {
+    "id": "FMA13376",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3994,
+    "after_triangles": 3994
+  },
+  {
+    "id": "FMA13398",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "FMA13399",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3998,
+    "after_triangles": 3998
+  },
+  {
+    "id": "FMA9756",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3940,
+    "after_triangles": 3940
+  },
+  {
+    "id": "FMA9757",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3976,
+    "after_triangles": 3976
+  },
+  {
+    "id": "FMA9758",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3978,
+    "after_triangles": 3978
+  },
+  {
+    "id": "FMA9761",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3994,
+    "after_triangles": 3994
+  },
+  {
+    "id": "FMA9762",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3996,
+    "after_triangles": 3996
+  },
+  {
+    "id": "FMA13295",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "FMA7163",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "FMA7394",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 9992,
+    "after_triangles": 9992
+  },
+  {
+    "id": "FMA68418",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 11042,
+    "after_triangles": 11042
+  },
+  {
+    "id": "FMA7396",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 11000,
+    "after_triangles": 11000
+  },
+  {
+    "id": "FMA31744",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 13816,
+    "after_triangles": 13816
+  },
+  {
+    "id": "FMA31741",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 11772,
+    "after_triangles": 11772
+  },
+  {
+    "id": "FMA31747",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 14390,
+    "after_triangles": 14390
+  },
+  {
+    "id": "FMA31746",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 9454,
+    "after_triangles": 9454
+  },
+  {
+    "id": "FMA31748",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 12840,
+    "after_triangles": 12840
+  },
+  {
+    "id": "FMA12224",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2940,
+    "after_triangles": 2940
+  },
+  {
+    "id": "FMA9457",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA9531",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA13884",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA7238",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA7239",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4926,
+    "after_triangles": 4926
+  },
+  {
+    "id": "FMA7240",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4526,
+    "after_triangles": 4526
+  },
+  {
+    "id": "FMA7242",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA7243",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3820,
+    "after_triangles": 3820
+  },
+  {
+    "id": "FMA7247",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1272,
+    "after_triangles": 1272
+  },
+  {
+    "id": "FMA7249",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "FMA7250",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 996,
+    "after_triangles": 996
+  },
+  {
+    "id": "FMA7252",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 316,
+    "after_triangles": 316
+  },
+  {
+    "id": "FMA7253",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 920,
+    "after_triangles": 920
+  },
+  {
+    "id": "FMA7254",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 914,
+    "after_triangles": 914
+  },
+  {
+    "id": "FMA7260",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 882,
+    "after_triangles": 882
+  },
+  {
+    "id": "FMA7261",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 692,
+    "after_triangles": 692
+  },
+  {
+    "id": "FMA7262",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 844,
+    "after_triangles": 844
+  },
+  {
+    "id": "FMA7264",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 780,
+    "after_triangles": 780
+  },
+  {
+    "id": "FMA7265",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 816,
+    "after_triangles": 816
+  },
+  {
+    "id": "FMA3736",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 396,
+    "after_triangles": 396
+  },
+  {
+    "id": "FMA3768",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 670,
+    "after_triangles": 670
+  },
+  {
+    "id": "FMA87217",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2290,
+    "after_triangles": 2290
+  },
+  {
+    "id": "FMA3932",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 262,
+    "after_triangles": 262
+  },
+  {
+    "id": "FMA3953",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 452,
+    "after_triangles": 452
+  },
+  {
+    "id": "FMA4694",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 646,
+    "after_triangles": 646
+  },
+  {
+    "id": "FMA4720",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 598,
+    "after_triangles": 598
+  },
+  {
+    "id": "FMA10951",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1992,
+    "after_triangles": 1992
+  },
+  {
+    "id": "FMA4751",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 546,
+    "after_triangles": 546
+  },
+  {
+    "id": "FMA4761",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 748,
+    "after_triangles": 748
+  },
+  {
+    "id": "FMA8612",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1302,
+    "after_triangles": 1302
+  },
+  {
+    "id": "FMA50872",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA50873",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA49911",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA49913",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4554,
+    "after_triangles": 4554
+  },
+  {
+    "id": "FMA49914",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA49916",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA50039",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA50040",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA4706",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 624,
+    "after_triangles": 624
+  },
+  {
+    "id": "FMA4707",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 826,
+    "after_triangles": 826
+  },
+  {
+    "id": "FMA4712",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3710,
+    "after_triangles": 3710
+  },
+  {
+    "id": "FMA4838",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "FMA4944",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4266,
+    "after_triangles": 4266
+  },
+  {
+    "id": "FMA5011",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4532,
+    "after_triangles": 4532
+  },
+  {
+    "id": "FMA3969",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3546,
+    "after_triangles": 3546
+  },
+  {
+    "id": "FMA4068",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3642,
+    "after_triangles": 3642
+  },
+  {
+    "id": "FMA66242",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1508,
+    "after_triangles": 1508
+  },
+  {
+    "id": "FMA66243",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1538,
+    "after_triangles": 1538
+  },
+  {
+    "id": "FMA5041",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2656,
+    "after_triangles": 2656
+  },
+  {
+    "id": "FMA4112",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 2724,
+    "after_triangles": 2724
+  },
+  {
+    "id": "FMA4758",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 3038,
+    "after_triangles": 3038
+  },
+  {
+    "id": "FMA4797",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 786,
+    "after_triangles": 786
+  },
+  {
+    "id": "FMA4877",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1094,
+    "after_triangles": 1094
+  },
+  {
+    "id": "FMA7131",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 1156,
+    "after_triangles": 1156
+  },
+  {
+    "id": "MAL_RUL",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "MAL_RML",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "MAL_RLL",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "MAL_LUL",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "MAL_LLL",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 6500,
+    "after_triangles": 6500
+  },
+  {
+    "id": "REC_Right_Visceral_Pleura",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "REC_Right_Parietal_Pleura",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "REC_Left_Visceral_Pleura",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "REC_Left_Parietal_Pleura",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "REC_Pericardium",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 5500,
+    "after_triangles": 5500
+  },
+  {
+    "id": "REC_fat",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "REC_fascia",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 4000,
+    "after_triangles": 4000
+  },
+  {
+    "id": "REC_Right_Phrenic_nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_Vagus_nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_Sympathetic_trunk",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC1_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC1_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC1_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC2_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC2_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC2_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC3_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC3_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC3_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC4_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC4_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC4_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC5_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC5_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC5_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC6_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC6_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC6_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC7_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC7_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC7_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC8_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC8_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC8_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Right_IC9_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC9_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC9_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC10_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC10_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC10_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC11_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC11_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Right_IC11_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_Phrenic_nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_Vagus_nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_Sympathetic_trunk",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC1_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC1_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC1_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC2_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC2_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC2_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC3_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC3_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC3_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC4_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC4_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC4_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC5_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC5_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC5_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC6_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC6_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC6_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC7_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC7_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC7_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC8_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC8_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC8_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 398,
+    "after_triangles": 398
+  },
+  {
+    "id": "REC_Left_IC9_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC9_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC9_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC10_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC10_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC10_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC11_Nerve",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC11_Artery",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_Left_IC11_Vein",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 400,
+    "after_triangles": 400
+  },
+  {
+    "id": "REC_ThoracicDuct",
+    "operation": "Manifold normalization without hole filling",
+    "before_triangles": 524,
+    "after_triangles": 524
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "id": "REC_right_costal_cartilage_8",
+    "name": "right costal cartilage 8",
+    "object_name": "A_REC_right_costal_cartilage_8",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3347"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_right_costal_cartilage_9",
+    "name": "right costal cartilage 9",
+    "object_name": "A_REC_right_costal_cartilage_9",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3348"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_right_costal_cartilage_10",
+    "name": "right costal cartilage 10",
+    "object_name": "A_REC_right_costal_cartilage_10",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3330"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_right_costal_cartilage_11",
+    "name": "right costal cartilage 11",
+    "object_name": "A_REC_right_costal_cartilage_11",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3331"
+    ],
+    "notes": "Short authored terminal costal-cartilage cap on the floating rib, without connection to the sternum or other cartilage. Length and boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_right_costal_cartilage_12",
+    "name": "right costal cartilage 12",
+    "object_name": "A_REC_right_costal_cartilage_12",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3332"
+    ],
+    "notes": "Short authored terminal costal-cartilage cap on the floating rib, without connection to the sternum or other cartilage. Length and boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_left_costal_cartilage_8",
+    "name": "left costal cartilage 8",
+    "object_name": "A_REC_left_costal_cartilage_8",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3235"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_left_costal_cartilage_9",
+    "name": "left costal cartilage 9",
+    "object_name": "A_REC_left_costal_cartilage_9",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3236"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_left_costal_cartilage_10",
+    "name": "left costal cartilage 10",
+    "object_name": "A_REC_left_costal_cartilage_10",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3225"
+    ],
+    "notes": "Authored costal margin segment from source rib tip to the preceding costal cartilage. Ribs 8-10 join the cartilage above; dimensions and bone/cartilage boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_left_costal_cartilage_11",
+    "name": "left costal cartilage 11",
+    "object_name": "A_REC_left_costal_cartilage_11",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3226"
+    ],
+    "notes": "Short authored terminal costal-cartilage cap on the floating rib, without connection to the sternum or other cartilage. Length and boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REC_left_costal_cartilage_12",
+    "name": "left costal cartilage 12",
+    "object_name": "A_REC_left_costal_cartilage_12",
+    "system": "Skeletal",
+    "tissue": "cartilage",
+    "layer": 3,
+    "source_kind": "authored_reconstruction",
+    "mesh_ids": [
+      "FJ3227"
+    ],
+    "notes": "Short authored terminal costal-cartilage cap on the floating rib, without connection to the sternum or other cartilage. Length and boundary are author estimates. Reference: https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage",
+    "cutting_ready": true,
+    "reference_region": false,
+    "required_group": "costal_cartilages",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "FMA11359",
+    "name": "cavity of right atrium",
+    "object_name": "A_FMA11359",
+    "system": "Cardiovascular",
+    "tissue": "cavity",
+    "layer": 6,
+    "source_kind": "source_region_annotation",
+    "mesh_ids": [
+      "FJ2424"
+    ],
+    "notes": "Contour annotation of an actual source cavity, representing empty space. Select the surrounding atrial or ventricular wall for cutting.",
+    "cutting_ready": false,
+    "reference_region": true,
+    "required_group": "cardiac_chambers",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "FMA9465",
+    "name": "cavity of left atrium",
+    "object_name": "A_FMA9465",
+    "system": "Cardiovascular",
+    "tissue": "cavity",
+    "layer": 6,
+    "source_kind": "source_region_annotation",
+    "mesh_ids": [
+      "FJ2425"
+    ],
+    "notes": "Contour annotation of an actual source cavity, representing empty space. Select the surrounding atrial or ventricular wall for cutting.",
+    "cutting_ready": false,
+    "reference_region": true,
+    "required_group": "cardiac_chambers",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "FMA9291",
+    "name": "cavity of right ventricle",
+    "object_name": "A_FMA9291",
+    "system": "Cardiovascular",
+    "tissue": "cavity",
+    "layer": 6,
+    "source_kind": "source_region_annotation",
+    "mesh_ids": [
+      "FJ2423"
+    ],
+    "notes": "Contour annotation of an actual source cavity, representing empty space. Select the surrounding atrial or ventricular wall for cutting.",
+    "cutting_ready": false,
+    "reference_region": true,
+    "required_group": "cardiac_chambers",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "FMA9466",
+    "name": "cavity of left ventricle",
+    "object_name": "A_FMA9466",
+    "system": "Cardiovascular",
+    "tissue": "cavity",
+    "layer": 6,
+    "source_kind": "source_region_annotation",
+    "mesh_ids": [
+      "FJ2422"
+    ],
+    "notes": "Contour annotation of an actual source cavity, representing empty space. Select the surrounding atrial or ventricular wall for cutting.",
+    "cutting_ready": false,
+    "reference_region": true,
+    "required_group": "cardiac_chambers",
+    "source_record": "docs/inventory-completion.json"
+  },
+  {
+    "id": "REGION_InterventricularSeptum",
+    "name": "Interventricular septal region",
+    "object_name": "A_REGION_InterventricularSeptum",
+    "system": "Cardiovascular",
+    "tissue": "cardiac",
+    "layer": 6,
+    "source_kind": "source_region_annotation",
+    "mesh_ids": [
+      "FJ2428"
+    ],
+    "notes": "Region anchor within sampled separating ventricular wall tissue (FMA13884). Full septal extent is not separately segmented; use its parent wall for cutting.",
+    "cutting_ready": false,
+    "reference_region": true,
+    "required_group": "cardiac_septa",
+    "source_record": "docs/inventory-completion.json"
+  }
+]

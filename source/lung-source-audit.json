@@ -1,0 +1,906 @@
+{
+  "obj_headers_examined": 2234,
+  "headers_named_lung_or_lung_lobe": [],
+  "unnamed_headers": [
+    {
+      "id": "FJ1450",
+      "bounds_mm_source_header": "(-14.940000,-38.794700,753.569700)-(-3.282000,-16.899900,774.860600)",
+      "volume_cm3_source_header": "0.413800",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA9623",
+          "perineal muscle"
+        ],
+        [
+          "FMA19728",
+          "superficial perineal muscle"
+        ],
+        [
+          "FMA21930",
+          "external anal sphincter"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA58274",
+          "muscle of trunk"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1451",
+      "bounds_mm_source_header": "(-136.265600,-191.641100,1011.510800)-(-23.285900,-3.228600,1365.365700)",
+      "volume_cm3_source_header": "80.884000",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA9619",
+          "muscle of thorax"
+        ],
+        [
+          "FMA9756",
+          "external intercostal muscle"
+        ],
+        [
+          "FMA13354",
+          "intercostal muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA58274",
+          "muscle of trunk"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1454",
+      "bounds_mm_source_header": "(-134.646600,-193.373500,1019.160200)-(-50.776300,-6.257800,1315.021100)",
+      "volume_cm3_source_header": "63.890500",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA9619",
+          "muscle of thorax"
+        ],
+        [
+          "FMA9758",
+          "innermost intercostal muscle"
+        ],
+        [
+          "FMA13354",
+          "intercostal muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA58274",
+          "muscle of trunk"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1455",
+      "bounds_mm_source_header": "(-132.914100,-209.310900,1018.442200)-(-16.167200,-4.654700,1314.023400)",
+      "volume_cm3_source_header": "65.323100",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA9619",
+          "muscle of thorax"
+        ],
+        [
+          "FMA9757",
+          "internal intercostal muscle"
+        ],
+        [
+          "FMA13354",
+          "intercostal muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA58274",
+          "muscle of trunk"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1465",
+      "bounds_mm_source_header": "(-49.150600,-102.459900,786.619000)-(-23.758800,-36.293800,820.333600)",
+      "volume_cm3_source_header": "0.773200",
+      "mapped_concepts": [
+        [
+          "FMA9721",
+          "tendon"
+        ],
+        [
+          "FMA14065",
+          "organ component"
+        ],
+        [
+          "FMA46442",
+          "tendinous arch of levator ani"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA82472",
+          "cardinal organ part"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1525",
+      "bounds_mm_source_header": "(-30.067100,-59.439600,1079.275900)-(1.484200,-12.384200,1378.752900)",
+      "volume_cm3_source_header": "8.784700",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA22594",
+          "muscle of vertebral column"
+        ],
+        [
+          "FMA23081",
+          "rotator muscle"
+        ],
+        [
+          "FMA23083",
+          "thoracic rotator"
+        ],
+        [
+          "FMA32515",
+          "postvertebral muscle"
+        ],
+        [
+          "FMA32561",
+          "deep postvertebral muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1543",
+      "bounds_mm_source_header": "(-8.004000,-43.452500,1329.206500)-(0.030000,-12.253700,1435.419900)",
+      "volume_cm3_source_header": "1.250700",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA22594",
+          "muscle of vertebral column"
+        ],
+        [
+          "FMA32515",
+          "postvertebral muscle"
+        ],
+        [
+          "FMA32559",
+          "superficial postvertebral muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ],
+        [
+          "FMA77179",
+          "spinalis"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1547",
+      "bounds_mm_source_header": "(-46.885200,-70.884900,942.031100)-(-18.726100,-41.058300,1088.555300)",
+      "volume_cm3_source_header": "3.999400",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA22594",
+          "muscle of vertebral column"
+        ],
+        [
+          "FMA22848",
+          "intertransversarius muscle"
+        ],
+        [
+          "FMA22849",
+          "lumbar intertransversarius"
+        ],
+        [
+          "FMA22850",
+          "lateral lumbar intertransversarius"
+        ],
+        [
+          "FMA32515",
+          "postvertebral muscle"
+        ],
+        [
+          "FMA32561",
+          "deep postvertebral muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1548",
+      "bounds_mm_source_header": "(-46.399300,-72.881000,938.737900)-(-20.972000,-57.099200,1051.280200)",
+      "volume_cm3_source_header": "2.384100",
+      "mapped_concepts": [
+        [
+          "FMA5022",
+          "muscle organ"
+        ],
+        [
+          "FMA22594",
+          "muscle of vertebral column"
+        ],
+        [
+          "FMA22848",
+          "intertransversarius muscle"
+        ],
+        [
+          "FMA22849",
+          "lumbar intertransversarius"
+        ],
+        [
+          "FMA22851",
+          "medial lumbar intertransversarius"
+        ],
+        [
+          "FMA32515",
+          "postvertebral muscle"
+        ],
+        [
+          "FMA32561",
+          "deep postvertebral muscle"
+        ],
+        [
+          "FMA55665",
+          "nonparenchymatous organ"
+        ],
+        [
+          "FMA55670",
+          "solid organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67498",
+          "organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1549",
+      "bounds_mm_source_header": "(-37.601900,-86.111100,1375.231000)-(-15.501000,-72.954500,1471.211200)",
+      "volume_cm3_source_header": "0.796100",
+      "mapped_concepts": [
+        [
+          "FMA32558",
+          "musculature"
+        ],
+        [
+          "FMA55652",
+          "anatomical set"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA70779",
+          "set of organs"
+        ],
+        [
+          "FMA71442",
+          "set of anterior cervical intertransversarii"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1550",
+      "bounds_mm_source_header": "(-4.581600,-42.585500,934.944200)-(1.139300,-32.809200,1026.341600)",
+      "volume_cm3_source_header": "0.564400",
+      "mapped_concepts": [
+        [
+          "FMA32558",
+          "musculature"
+        ],
+        [
+          "FMA50185",
+          "musculature of subdivision of trunk"
+        ],
+        [
+          "FMA55652",
+          "anatomical set"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA70779",
+          "set of organs"
+        ],
+        [
+          "FMA71307",
+          "set of interspinales lumborum"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1552",
+      "bounds_mm_source_header": "(-7.116800,-47.785100,1372.910900)-(0.689700,-28.287100,1466.891400)",
+      "volume_cm3_source_header": "0.568300",
+      "mapped_concepts": [
+        [
+          "FMA32558",
+          "musculature"
+        ],
+        [
+          "FMA50185",
+          "musculature of subdivision of trunk"
+        ],
+        [
+          "FMA55652",
+          "anatomical set"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA70779",
+          "set of organs"
+        ],
+        [
+          "FMA71309",
+          "set of interspinales cervicis"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1553",
+      "bounds_mm_source_header": "(-39.781200,-79.658500,1381.664700)-(-21.405600,-68.138100,1468.327500)",
+      "volume_cm3_source_header": "0.609300",
+      "mapped_concepts": [
+        [
+          "FMA32558",
+          "musculature"
+        ],
+        [
+          "FMA55652",
+          "anatomical set"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA70779",
+          "set of organs"
+        ],
+        [
+          "FMA71443",
+          "set of posterior cervical intertransversarii"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1656",
+      "bounds_mm_source_header": "(-35.688200,-89.331400,1502.058300)-(0.664900,-61.137600,1511.892800)",
+      "volume_cm3_source_header": "0.071300",
+      "mapped_concepts": [
+        [
+          "FMA50544",
+          "anterior inferior cerebellar artery"
+        ],
+        [
+          "FMA50720",
+          "artery"
+        ],
+        [
+          "FMA50722",
+          "region of vascular tree organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA66464",
+          "systemic artery"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67619",
+          "organ region"
+        ],
+        [
+          "FMA70345",
+          "subdivision of subclavian artery"
+        ],
+        [
+          "FMA76269",
+          "branch of basilar artery"
+        ],
+        [
+          "FMA82472",
+          "cardinal organ part"
+        ],
+        [
+          "FMA86140",
+          "organ segment"
+        ],
+        [
+          "FMA86187",
+          "segment of arterial tree organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1664",
+      "bounds_mm_source_header": "(-68.119500,-102.352300,1549.419600)-(-43.653900,-68.632000,1605.936800)",
+      "volume_cm3_source_header": "0.164800",
+      "mapped_concepts": [
+        [
+          "FMA50081",
+          "branch of middle cerebral artery"
+        ],
+        [
+          "FMA50436",
+          "superior terminal branch of middle cerebral artery"
+        ],
+        [
+          "FMA50720",
+          "artery"
+        ],
+        [
+          "FMA50722",
+          "region of vascular tree organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA66464",
+          "systemic artery"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67619",
+          "organ region"
+        ],
+        [
+          "FMA70504",
+          "subdivision of common carotid artery"
+        ],
+        [
+          "FMA70506",
+          "subdivision of internal carotid artery"
+        ],
+        [
+          "FMA70523",
+          "subdivision of cerebral part of internal carotid artery"
+        ],
+        [
+          "FMA77439",
+          "artery of central sulcus"
+        ],
+        [
+          "FMA82472",
+          "cardinal organ part"
+        ],
+        [
+          "FMA86140",
+          "organ segment"
+        ],
+        [
+          "FMA86187",
+          "segment of arterial tree organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1665",
+      "bounds_mm_source_header": "(-69.255500,-86.900000,1563.058700)-(-38.236700,-45.600000,1615.924300)",
+      "volume_cm3_source_header": "0.112400",
+      "mapped_concepts": [
+        [
+          "FMA50081",
+          "branch of middle cerebral artery"
+        ],
+        [
+          "FMA50436",
+          "superior terminal branch of middle cerebral artery"
+        ],
+        [
+          "FMA50720",
+          "artery"
+        ],
+        [
+          "FMA50722",
+          "region of vascular tree organ"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA66464",
+          "systemic artery"
+        ],
+        [
+          "FMA67135",
+          "anatomical structure"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA67619",
+          "organ region"
+        ],
+        [
+          "FMA70504",
+          "subdivision of common carotid artery"
+        ],
+        [
+          "FMA70506",
+          "subdivision of internal carotid artery"
+        ],
+        [
+          "FMA70523",
+          "subdivision of cerebral part of internal carotid artery"
+        ],
+        [
+          "FMA77439",
+          "artery of central sulcus"
+        ],
+        [
+          "FMA82472",
+          "cardinal organ part"
+        ],
+        [
+          "FMA86140",
+          "organ segment"
+        ],
+        [
+          "FMA86187",
+          "segment of arterial tree organ"
+        ]
+      ]
+    },
+    {
+      "id": "FJ1719",
+      "bounds_mm_source_header": "(-53.007800,-43.586800,1521.204500)-(-8.348400,-13.346200,1547.290400)",
+      "volume_cm3_source_header": "0.038100",
+      "mapped_concepts": [
+        [
+          "FMA55652",
+          "anatomical set"
+        ],
+        [
+          "FMA61775",
+          "physical anatomical entity"
+        ],
+        [
+          "FMA62955",
+          "anatomical entity"
+        ],
+        [
+          "FMA63812",
+          "set of arteries"
+        ],
+        [
+          "FMA67165",
+          "material anatomical entity"
+        ],
+        [
+          "FMA71502",
+          "set of posterior temporal branches of lateral occipital artery"
+        ],
+        [
+          "FMA78562",
+          "set of organ regions"
+        ],
+        [
+          "FMA228667",
+          "set of organ parts"
+        ]
+      ]
+    }
+  ],
+  "conclusion": "No lung tissue boundary was identified in the current official 4.0 archive. PART-OF lobe concepts are airway/vascular compounds. The three unnamed broad thorax meshes FJ1451/FJ1454/FJ1455 map to external/innermost/internal intercostal muscle, with named mirrored counterparts. They must not be repurposed as lungs."
+}

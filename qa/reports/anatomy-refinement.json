@@ -1,0 +1,4440 @@
+{
+  "structures": 233,
+  "triangles": 648878,
+  "checks": [
+    {
+      "id": "FMA7857",
+      "before": {
+        "triangles": 3276,
+        "volume_m3": 6.10308423664412e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 6.102375737402647e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7882",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.4340383508126404e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.4327343054292339e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7909",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.794320865869412e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.791973170273469e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7957",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.482383170430063e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.4792538249768553e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7987",
+      "before": {
+        "triangles": 3276,
+        "volume_m3": 6.09627777395236e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 6.09561191586465e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8012",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.4339664837380576e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.43277289054512e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8039",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.795278961715771e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.7929780582663618e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8066",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.9989387420329172e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.9942805557832942e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8093",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.9988561914776477e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.9946115683614866e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8148",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.486325563130838e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.483330064109653e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8175",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 3.130595780653937e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 3.1259044995601544e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8202",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 3.135336430389995e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 3.130877624779473e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8229",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 3.19071144268432e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 3.186439941073523e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8256",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 3.190792622856723e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 3.1863000456172016e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8283",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.4073171512910904e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.4042657366859102e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8310",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.4076839097450764e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.4044689655207317e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8364",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.1051881017796876e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.1021769964429984e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8391",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 2.1053782266473816e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 2.1024389450941992e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8445",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.7073322905984843e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.705286416100889e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8472",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.7068925344904464e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.704687073321442e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8531",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.134889780233274e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.1335062698756603e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8532",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 1.1357924827967576e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 1.1341926694249744e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8533",
+      "before": {
+        "triangles": 2818,
+        "volume_m3": 6.446937087476352e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2818,
+        "volume_m3": 6.446937087476352e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8534",
+      "before": {
+        "triangles": 2818,
+        "volume_m3": 6.440442155137773e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2818,
+        "volume_m3": 6.440442155137773e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7875",
+      "before": {
+        "triangles": 676,
+        "volume_m3": 3.5759414046420952e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 676,
+        "volume_m3": 3.5759414046420952e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7886",
+      "before": {
+        "triangles": 657,
+        "volume_m3": 3.6085050978887146e-06,
+        "boundary": 3,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.6011481103365774e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00010847114172078124
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0019404735071647528
+        }
+      ]
+    },
+    {
+      "id": "FMA7913",
+      "before": {
+        "triangles": 652,
+        "volume_m3": 3.4271140016507433e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 652,
+        "volume_m3": 3.4271140016507433e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7976",
+      "before": {
+        "triangles": 694,
+        "volume_m3": 4.1396466710714935e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 694,
+        "volume_m3": 4.1396466710714935e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8005",
+      "before": {
+        "triangles": 642,
+        "volume_m3": 3.5553923935740064e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 642,
+        "volume_m3": 3.5553923935740064e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8031",
+      "before": {
+        "triangles": 588,
+        "volume_m3": 3.5953224279236596e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 588,
+        "volume_m3": 3.5953224279236596e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8058",
+      "before": {
+        "triangles": 604,
+        "volume_m3": 3.4111590553607364e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 604,
+        "volume_m3": 3.4111590553607364e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8070",
+      "before": {
+        "triangles": 1168,
+        "volume_m3": 7.434878720923436e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1168,
+        "volume_m3": 7.434878720923436e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8112",
+      "before": {
+        "triangles": 1086,
+        "volume_m3": 7.434229628679542e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1086,
+        "volume_m3": 7.434229628679542e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8167",
+      "before": {
+        "triangles": 658,
+        "volume_m3": 4.131074168407433e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 658,
+        "volume_m3": 4.131074168407433e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8194",
+      "before": {
+        "triangles": 1540,
+        "volume_m3": 1.0709602693796903e-05,
+        "boundary": 18,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.0690712367953957e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.1164357333039115e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.836723658427022e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.822559313058802e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.69814767236691e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002216715422227706
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00018940531037527563
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.001369135439632685
+        }
+      ]
+    },
+    {
+      "id": "FMA8221",
+      "before": {
+        "triangles": 1498,
+        "volume_m3": 1.0698758905940182e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1498,
+        "volume_m3": 1.0698758905940182e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8248",
+      "before": {
+        "triangles": 2447,
+        "volume_m3": 1.7706906038149823e-05,
+        "boundary": 9,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.767844684735407e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00013581292593543132
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.100846902325751e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.563734559480427e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0011600093189779725
+        }
+      ]
+    },
+    {
+      "id": "FMA8275",
+      "before": {
+        "triangles": 2314,
+        "volume_m3": 1.766843160444489e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2314,
+        "volume_m3": 1.766843160444489e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7486",
+      "before": {
+        "triangles": 2546,
+        "volume_m3": 3.609889977344371e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2546,
+        "volume_m3": 3.609889977344371e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7487",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 5.642772182107827e-05,
+        "boundary": 24,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 5.642645978283212e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 9.830490393189815e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.628228519363238e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00013226785237176742
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.19770421967435e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.62790992061502e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.00045,
+          "volume_change_fraction": -3.343525407517589e-05
+        }
+      ]
+    },
+    {
+      "id": "FMA7488",
+      "before": {
+        "triangles": 922,
+        "volume_m3": 2.45079315081103e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 922,
+        "volume_m3": 2.45079315081103e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9165",
+      "before": {
+        "triangles": 1700,
+        "volume_m3": 1.5225847342762801e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1700,
+        "volume_m3": 1.5225847342762801e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9187",
+      "before": {
+        "triangles": 1938,
+        "volume_m3": 1.768927883358272e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1938,
+        "volume_m3": 1.768927883358272e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9209",
+      "before": {
+        "triangles": 2038,
+        "volume_m3": 1.868107675823558e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2038,
+        "volume_m3": 1.868107675823558e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9248",
+      "before": {
+        "triangles": 2066,
+        "volume_m3": 1.9128825923467822e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2066,
+        "volume_m3": 1.9128825923467822e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9922",
+      "before": {
+        "triangles": 2280,
+        "volume_m3": 2.1726793399901664e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2280,
+        "volume_m3": 2.1726793399901664e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9945",
+      "before": {
+        "triangles": 2248,
+        "volume_m3": 2.3707811692450136e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2248,
+        "volume_m3": 2.3707811692450136e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9968",
+      "before": {
+        "triangles": 2574,
+        "volume_m3": 2.7928752964071215e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2574,
+        "volume_m3": 2.7928752964071215e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9991",
+      "before": {
+        "triangles": 2424,
+        "volume_m3": 2.796581880401102e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2424,
+        "volume_m3": 2.796581880401102e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10014",
+      "before": {
+        "triangles": 2586,
+        "volume_m3": 3.2052238179508164e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2586,
+        "volume_m3": 3.2052238179508164e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10037",
+      "before": {
+        "triangles": 2790,
+        "volume_m3": 3.646653440214696e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2790,
+        "volume_m3": 3.646653440214696e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10059",
+      "before": {
+        "triangles": 2674,
+        "volume_m3": 3.756257660644659e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2674,
+        "volume_m3": 3.756257660644659e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10081",
+      "before": {
+        "triangles": 2772,
+        "volume_m3": 3.847880674756778e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2772,
+        "volume_m3": 3.847880674756778e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10458",
+      "before": {
+        "triangles": 1232,
+        "volume_m3": 2.1123442545442715e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1232,
+        "volume_m3": 2.1123442545442715e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13495",
+      "before": {
+        "triangles": 1369,
+        "volume_m3": 3.0613523265028797e-06,
+        "boundary": 15,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.056868067201843e-06,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001054548440080975
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001198392645167426
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00016671038508937777
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.244571328639219e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.986993428052702e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0009802943823409294
+        }
+      ]
+    },
+    {
+      "id": "FMA13500",
+      "before": {
+        "triangles": 1466,
+        "volume_m3": 3.2532398385452427e-06,
+        "boundary": 24,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.2489040279600634e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.132643477113831e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.8269458902551782e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.7957711406736366e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00022101251026657948
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.061050018018989e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.039193836682042e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.051872810346005e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00017569853958100752
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0010033692322118926
+        }
+      ]
+    },
+    {
+      "id": "FMA13501",
+      "before": {
+        "triangles": 1554,
+        "volume_m3": 3.649252778035037e-06,
+        "boundary": 18,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.6435832774276825e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.8145427397768842e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 8.609412768157105e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.993700331981582e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.109265954908801e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020477406910366416
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.833743080339065e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0012199993306383217
+        }
+      ]
+    },
+    {
+      "id": "FMA13502",
+      "before": {
+        "triangles": 1836,
+        "volume_m3": 4.051597795914586e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1836,
+        "volume_m3": 4.051597795914586e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13503",
+      "before": {
+        "triangles": 2564,
+        "volume_m3": 5.926494288629483e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2564,
+        "volume_m3": 5.926494288629483e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13504",
+      "before": {
+        "triangles": 2630,
+        "volume_m3": 6.48927935465341e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2630,
+        "volume_m3": 6.48927935465341e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13505",
+      "before": {
+        "triangles": 2894,
+        "volume_m3": 6.087164220152346e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2894,
+        "volume_m3": 6.087164220152346e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13506",
+      "before": {
+        "triangles": 2940,
+        "volume_m3": 6.90492956501237e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2940,
+        "volume_m3": 6.90492956501237e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13507",
+      "before": {
+        "triangles": 3102,
+        "volume_m3": 6.690900091001259e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3102,
+        "volume_m3": 6.690900091001259e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13508",
+      "before": {
+        "triangles": 3336,
+        "volume_m3": 7.3137016037964015e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3336,
+        "volume_m3": 7.3137016037964015e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13322",
+      "before": {
+        "triangles": 1146,
+        "volume_m3": 2.724761877883814e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1146,
+        "volume_m3": 2.724761877883814e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13323",
+      "before": {
+        "triangles": 1176,
+        "volume_m3": 2.7156069523037652e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1176,
+        "volume_m3": 2.7156069523037652e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13395",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 7.310369728946866e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 7.308245035325985e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13396",
+      "before": {
+        "triangles": 4500,
+        "volume_m3": 7.317711851228607e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3000,
+        "volume_m3": 7.313733792638666e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA34690",
+      "before": {
+        "triangles": 1837,
+        "volume_m3": 4.7228515516414e-05,
+        "boundary": 27,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 4.7187438292265377e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.342318926751364e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024570172934863723
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00022203298890867618
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00019736303645220772
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 8.649623534831312e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.536549989680356e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.00037255899826371675
+        }
+      ]
+    },
+    {
+      "id": "FMA34691",
+      "before": {
+        "triangles": 1837,
+        "volume_m3": 4.72251691451978e-05,
+        "boundary": 27,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 4.7186294242772236e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.342318926751364e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024570172934863723
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00022203298890867618
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00019736303645220772
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 8.649623534831312e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.536549989680356e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.00037003925966927476
+        }
+      ]
+    },
+    {
+      "id": "FMA45874",
+      "before": {
+        "triangles": 1534,
+        "volume_m3": 2.5104557511736398e-05,
+        "boundary": 6,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 2.50460704750747e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.671229573732563e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0012041134965330436
+        }
+      ]
+    },
+    {
+      "id": "FMA45875",
+      "before": {
+        "triangles": 1534,
+        "volume_m3": 2.5104617298603363e-05,
+        "boundary": 6,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 2.5047645624806383e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 6.671006110138959e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0012089855272926497
+        }
+      ]
+    },
+    {
+      "id": "FMA79979",
+      "before": {
+        "triangles": 7110,
+        "volume_m3": 0.0003971055531115177,
+        "boundary": 12,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3998,
+        "volume_m3": 0.000400951113364948,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024680231617750016
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024255942074393694
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00016837582540905104
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 0.01014824146269988
+        }
+      ]
+    },
+    {
+      "id": "FMA79980",
+      "before": {
+        "triangles": 7110,
+        "volume_m3": 0.0003971006424869242,
+        "boundary": 12,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3998,
+        "volume_m3": 0.00040097247707474227,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024680231617750016
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002425615708640667
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001683780378760047
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 0.010148734639721102
+        }
+      ]
+    },
+    {
+      "id": "FMA13375",
+      "before": {
+        "triangles": 8999,
+        "volume_m3": 3.7230837919486374e-05,
+        "boundary": 15,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 3.7199247840060514e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.000239371469381523
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.8920548454247426e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002349087185509849
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00017444748059128654
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.5956800570161677e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 0.00011994504597856448
+        }
+      ]
+    },
+    {
+      "id": "FMA13376",
+      "before": {
+        "triangles": 8999,
+        "volume_m3": 3.7231259181592295e-05,
+        "boundary": 15,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 3.72032540819422e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.8920548454247426e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.000239371469381523
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00017440584181632222
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002349087185509849
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.5956800570161677e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 0.00022498298531159477
+        }
+      ]
+    },
+    {
+      "id": "FMA13398",
+      "before": {
+        "triangles": 8999,
+        "volume_m3": 0.00014175533047204895,
+        "boundary": 3,
+        "nonmanifold": 3
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.00014127096260048696,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00013721424296112635
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 8.835392032358058e-05
+        }
+      ]
+    },
+    {
+      "id": "FMA13399",
+      "before": {
+        "triangles": 8999,
+        "volume_m3": 0.00014177864568571655,
+        "boundary": 3,
+        "nonmanifold": 3
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.00014136747500933226,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00013722267612283382
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": 0.00011999757431646607
+        }
+      ]
+    },
+    {
+      "id": "FMA9756",
+      "before": {
+        "triangles": 8910,
+        "volume_m3": 0.00013956274445570637,
+        "boundary": 270,
+        "nonmanifold": 234
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.00013193559824389593,
+        "boundary": 0,
+        "nonmanifold": 2
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 9.870425272177106e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00012723214154790598
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0221293047541873e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 9.278108019105835e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00021554599781565978
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00019703634275167897
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00012723214154790598
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0221293047541873e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.1620705310642082e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00021554599781565978
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.4108992052281974e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001970346187998712
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 9.278108019105835e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00023053538384784828
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0230436684445007e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0209946283815517e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020291238073182673
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00012652351270088464
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001664048894292448
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020291238073182673
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00016640931261855115
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00018999951278789078
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020104208669202264
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00023053538384784828
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020104394536546425
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 9.870933583225073e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00012652031796227646
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 5.778783711233214e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.1620705310642082e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 5.778783711233214e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00021618092644813523
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0209946283815517e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00021618092644813523
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.0230436684445007e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00018999951278789078
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.4094941578893064e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.001278734624710287
+        }
+      ]
+    },
+    {
+      "id": "FMA9757",
+      "before": {
+        "triangles": 8990,
+        "volume_m3": 0.0001191412662783403,
+        "boundary": 30,
+        "nonmanifold": 34
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.00011374201103726134,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "repairs": [
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0023235419992383433
+        }
+      ]
+    },
+    {
+      "id": "FMA9758",
+      "before": {
+        "triangles": 8984,
+        "volume_m3": 0.00012135396087616818,
+        "boundary": 48,
+        "nonmanifold": 82
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.00011910687983985337,
+        "boundary": 0,
+        "nonmanifold": 2
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 8.390754556078948e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002418275281232887
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00024182436437880715
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001791376467291618
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 8.391196642060157e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001791376467291618
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.000186952090933782
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.000186952090933782
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.001972581635094506
+        }
+      ]
+    },
+    {
+      "id": "FMA9761",
+      "before": {
+        "triangles": 4181,
+        "volume_m3": 1.128374329013054e-05,
+        "boundary": 21,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 1.1216903784988301e-05,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002037982096311011
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001128116441102783
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 5.904845417577509e-05
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0019916347067392426
+        }
+      ]
+    },
+    {
+      "id": "FMA9762",
+      "before": {
+        "triangles": 4181,
+        "volume_m3": 1.1284173663930307e-05,
+        "boundary": 21,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 1.1216796031751963e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 5.904845417577509e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0001128116441102783
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002037982096311011
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0018921422084827721
+        }
+      ]
+    },
+    {
+      "id": "FMA13295",
+      "before": {
+        "triangles": 8996,
+        "volume_m3": 0.00031991636261736767,
+        "boundary": 12,
+        "nonmanifold": 1
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.0003193473456512128,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 4.102649707916696e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00016176661365359626
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.00020571135864189127
+        }
+      ]
+    },
+    {
+      "id": "FMA7163",
+      "before": {
+        "triangles": 9000,
+        "volume_m3": 0.0009236389681502398,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.0009233158551297974,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7394",
+      "before": {
+        "triangles": 4996,
+        "volume_m3": 2.5690988240516766e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4996,
+        "volume_m3": 2.5690988240516766e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA68418",
+      "before": {
+        "triangles": 4466,
+        "volume_m3": 1.6359808954619817e-05,
+        "boundary": 6,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.6326499698192783e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00020550777808712298
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00015381231240230267
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.0010694926106348257
+        }
+      ]
+    },
+    {
+      "id": "FMA7396",
+      "before": {
+        "triangles": 4133,
+        "volume_m3": 1.4888816885939008e-05,
+        "boundary": 9,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.4858787829997033e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 2.0523124650163018e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.0002203744060471635
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00022459904534524687
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.001109200819291556
+        }
+      ]
+    },
+    {
+      "id": "FMA31744",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 8.916624543173268e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 8.889900994048054e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA31741",
+      "before": {
+        "triangles": 9866,
+        "volume_m3": 9.29746023378571e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 9.29155439239047e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA31747",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 1.4492861208159763e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.4422133742559487e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA31746",
+      "before": {
+        "triangles": 4078,
+        "volume_m3": 1.499371159379936e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4078,
+        "volume_m3": 1.499371159379936e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA31748",
+      "before": {
+        "triangles": 5284,
+        "volume_m3": 1.804790590885818e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5284,
+        "volume_m3": 1.804790590885818e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA12224",
+      "before": {
+        "triangles": 1226,
+        "volume_m3": 3.697873264637582e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1226,
+        "volume_m3": 3.697873264637582e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9457",
+      "before": {
+        "triangles": 14000,
+        "volume_m3": 2.76248478966793e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 2.761395493239641e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA9531",
+      "before": {
+        "triangles": 7544,
+        "volume_m3": 4.053763738960444e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 4.05338637184011e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA13884",
+      "before": {
+        "triangles": 13995,
+        "volume_m3": 0.0001606667387530649,
+        "boundary": 19,
+        "nonmanifold": 5
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.0001606217290845357,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.5202999895702057e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.690078214646734e-06
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.525623870609642e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.851506680771842e-05
+        },
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 3.690078214646734e-06
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.00045,
+          "volume_change_fraction": 2.3174068578546425e-05
+        }
+      ]
+    },
+    {
+      "id": "FMA7238",
+      "before": {
+        "triangles": 8160,
+        "volume_m3": 1.5891290086109568e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 1.5877060842229451e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7239",
+      "before": {
+        "triangles": 4926,
+        "volume_m3": 7.350517149025447e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4926,
+        "volume_m3": 7.350517149025447e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7240",
+      "before": {
+        "triangles": 4526,
+        "volume_m3": 6.066769254171784e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4526,
+        "volume_m3": 6.066769254171784e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7242",
+      "before": {
+        "triangles": 7558,
+        "volume_m3": 1.2792850365701958e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 1.2785687731349275e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7243",
+      "before": {
+        "triangles": 3820,
+        "volume_m3": 1.3851753485734894e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3820,
+        "volume_m3": 1.3851753485734894e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7247",
+      "before": {
+        "triangles": 1272,
+        "volume_m3": 8.793959135630953e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1272,
+        "volume_m3": 8.793959135630953e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7249",
+      "before": {
+        "triangles": 1369,
+        "volume_m3": 9.665312929908153e-07,
+        "boundary": 3,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 9.647553830136356e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 0.00011165780302814869
+        },
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.00045,
+          "volume_change_fraction": -0.001534281242809854
+        }
+      ]
+    },
+    {
+      "id": "FMA7250",
+      "before": {
+        "triangles": 996,
+        "volume_m3": 6.854057168807465e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 996,
+        "volume_m3": 6.854057168807465e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7252",
+      "before": {
+        "triangles": 316,
+        "volume_m3": 1.052306280229721e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 316,
+        "volume_m3": 1.052306280229721e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7253",
+      "before": {
+        "triangles": 920,
+        "volume_m3": 6.580111711170874e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 920,
+        "volume_m3": 6.580111711170874e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7254",
+      "before": {
+        "triangles": 914,
+        "volume_m3": 6.431114528145592e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 914,
+        "volume_m3": 6.431114528145592e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7260",
+      "before": {
+        "triangles": 882,
+        "volume_m3": 3.5002748598115843e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 882,
+        "volume_m3": 3.5002748598115843e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7261",
+      "before": {
+        "triangles": 692,
+        "volume_m3": 2.185601475184999e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 692,
+        "volume_m3": 2.185601475184999e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7262",
+      "before": {
+        "triangles": 844,
+        "volume_m3": 2.0347036293143078e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 844,
+        "volume_m3": 2.0347036293143078e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7264",
+      "before": {
+        "triangles": 780,
+        "volume_m3": 5.1664801481998235e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 780,
+        "volume_m3": 5.1664801481998235e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7265",
+      "before": {
+        "triangles": 816,
+        "volume_m3": 5.558897455889378e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 816,
+        "volume_m3": 5.558897455889378e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA3736",
+      "before": {
+        "triangles": 396,
+        "volume_m3": 2.1495389585699902e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 396,
+        "volume_m3": 2.1495389585699902e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA3768",
+      "before": {
+        "triangles": 670,
+        "volume_m3": 3.638353244947608e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 670,
+        "volume_m3": 3.638353244947608e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA87217",
+      "before": {
+        "triangles": 2290,
+        "volume_m3": 3.842291721123884e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2290,
+        "volume_m3": 3.842291721123884e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA3932",
+      "before": {
+        "triangles": 262,
+        "volume_m3": 4.849398271856e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 262,
+        "volume_m3": 4.849398271856e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA3953",
+      "before": {
+        "triangles": 452,
+        "volume_m3": 2.9217344865425444e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 452,
+        "volume_m3": 2.9217344865425444e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4694",
+      "before": {
+        "triangles": 646,
+        "volume_m3": 4.7804175438410425e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 646,
+        "volume_m3": 4.7804175438410425e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4720",
+      "before": {
+        "triangles": 598,
+        "volume_m3": 1.2348753702345663e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 598,
+        "volume_m3": 1.2348753702345663e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA10951",
+      "before": {
+        "triangles": 1992,
+        "volume_m3": 5.0534708724339436e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1992,
+        "volume_m3": 5.0534708724339436e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4751",
+      "before": {
+        "triangles": 546,
+        "volume_m3": 7.242278119572969e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 546,
+        "volume_m3": 7.242278119572969e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4761",
+      "before": {
+        "triangles": 748,
+        "volume_m3": 1.0301501636322247e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 748,
+        "volume_m3": 1.0301501636322247e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA8612",
+      "before": {
+        "triangles": 1302,
+        "volume_m3": 1.9156994221267574e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1302,
+        "volume_m3": 1.9156994221267574e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA50872",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 6.916405597828256e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 6.856525469414585e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA50873",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 6.109266343956245e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 6.052107440695905e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA49911",
+      "before": {
+        "triangles": 5524,
+        "volume_m3": 1.0280067118317014e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.0280000442646128e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA49913",
+      "before": {
+        "triangles": 4554,
+        "volume_m3": 7.380483878292773e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4554,
+        "volume_m3": 7.380483878292773e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA49914",
+      "before": {
+        "triangles": 6746,
+        "volume_m3": 1.4228201412155248e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.4196090871327762e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA49916",
+      "before": {
+        "triangles": 6721,
+        "volume_m3": 1.1366287423024144e-05,
+        "boundary": 3,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.134855687460309e-05,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "repairs": [
+        {
+          "operation": "close degeneracy loop",
+          "bounding_diagonal_m": 1.3200315828825553e-05
+        },
+        {
+          "operation": "voxel repair rejected",
+          "voxel_m": 0.0006,
+          "reason": "volume change exceeds eight percent"
+        }
+      ]
+    },
+    {
+      "id": "FMA50039",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 1.4169076089103726e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.3880966024964963e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA50040",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 1.5381347625607922e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 1.517254079775918e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4706",
+      "before": {
+        "triangles": 624,
+        "volume_m3": 1.3373741878155089e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 624,
+        "volume_m3": 1.3373741878155089e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4707",
+      "before": {
+        "triangles": 826,
+        "volume_m3": 5.499960499105863e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 826,
+        "volume_m3": 5.499960499105863e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4712",
+      "before": {
+        "triangles": 3710,
+        "volume_m3": 1.6734086213006569e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3710,
+        "volume_m3": 1.6734086213006569e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4838",
+      "before": {
+        "triangles": 12000,
+        "volume_m3": 6.888008221537673e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 6.8768498681026375e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4944",
+      "before": {
+        "triangles": 4266,
+        "volume_m3": 6.76843895832633e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4266,
+        "volume_m3": 6.76843895832633e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA5011",
+      "before": {
+        "triangles": 4532,
+        "volume_m3": 1.6170026081728674e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4532,
+        "volume_m3": 1.6170026081728674e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA3969",
+      "before": {
+        "triangles": 3546,
+        "volume_m3": 1.4563873591807354e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3546,
+        "volume_m3": 1.4563873591807354e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4068",
+      "before": {
+        "triangles": 3642,
+        "volume_m3": 1.4737183388454083e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3642,
+        "volume_m3": 1.4737183388454083e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA66242",
+      "before": {
+        "triangles": 1508,
+        "volume_m3": 3.732421196718749e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1508,
+        "volume_m3": 3.732421196718749e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA66243",
+      "before": {
+        "triangles": 1538,
+        "volume_m3": 3.72169357983595e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1538,
+        "volume_m3": 3.72169357983595e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA5041",
+      "before": {
+        "triangles": 2656,
+        "volume_m3": 7.043024556535751e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2656,
+        "volume_m3": 7.043024556535751e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4112",
+      "before": {
+        "triangles": 2724,
+        "volume_m3": 7.000898341677112e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2724,
+        "volume_m3": 7.000898341677112e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4758",
+      "before": {
+        "triangles": 3038,
+        "volume_m3": 1.2248621268018714e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 3038,
+        "volume_m3": 1.2248621268018714e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4797",
+      "before": {
+        "triangles": 786,
+        "volume_m3": 1.87155894123703e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 786,
+        "volume_m3": 1.87155894123703e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA4877",
+      "before": {
+        "triangles": 1094,
+        "volume_m3": 2.599527961881545e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1094,
+        "volume_m3": 2.599527961881545e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "FMA7131",
+      "before": {
+        "triangles": 578,
+        "volume_m3": 3.800177358350527e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 578,
+        "volume_m3": 3.800177358350527e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "MAL_RUL",
+      "before": {
+        "triangles": 7999,
+        "volume_m3": 0.0006775358252704028,
+        "boundary": 2,
+        "nonmanifold": 2
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.0006774617187975236,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -4.3640666711586285e-05
+        }
+      ]
+    },
+    {
+      "id": "MAL_RML",
+      "before": {
+        "triangles": 8000,
+        "volume_m3": 0.00013268068841204082,
+        "boundary": 4,
+        "nonmanifold": 2
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.00013263516075937525,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -0.00018774238231134
+        }
+      ]
+    },
+    {
+      "id": "MAL_RLL",
+      "before": {
+        "triangles": 8000,
+        "volume_m3": 0.00046395492352771354,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.0004639279434601098,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "MAL_LUL",
+      "before": {
+        "triangles": 7999,
+        "volume_m3": 0.0005732030041070107,
+        "boundary": 2,
+        "nonmanifold": 1
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.0005731226398184215,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": [
+        {
+          "operation": "production surface voxel resampling",
+          "voxel_m": 0.0006,
+          "volume_change_fraction": -6.321866548497646e-05
+        }
+      ]
+    },
+    {
+      "id": "MAL_LLL",
+      "before": {
+        "triangles": 8000,
+        "volume_m3": 0.0005470257685567867,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "after": {
+        "triangles": 6500,
+        "volume_m3": 0.0005470112073209792,
+        "boundary": 0,
+        "nonmanifold": 1
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_Visceral_Pleura",
+      "before": {
+        "triangles": 6600,
+        "volume_m3": 4.145396174068328e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 4.145354624170319e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_Parietal_Pleura",
+      "before": {
+        "triangles": 6600,
+        "volume_m3": 6.386070797224466e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 6.386039836835214e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_Visceral_Pleura",
+      "before": {
+        "triangles": 6600,
+        "volume_m3": 3.702789574913406e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.7029099599025303e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_Parietal_Pleura",
+      "before": {
+        "triangles": 6600,
+        "volume_m3": 5.705335145587207e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 5.70538373359925e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Pericardium",
+      "before": {
+        "triangles": 6600,
+        "volume_m3": 3.660120577636291e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 5500,
+        "volume_m3": 3.660055485672203e-05,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_fat",
+      "before": {
+        "triangles": 18000,
+        "volume_m3": 0.0030285267580950287,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.0030094219607580395,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_fascia",
+      "before": {
+        "triangles": 18000,
+        "volume_m3": 0.0006843663013608212,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 4000,
+        "volume_m3": 0.0006808764024670087,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_Phrenic_nerve",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 9.837950686747455e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 9.837950686747455e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_Vagus_nerve",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 9.878734206519958e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 9.878734206519958e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_Sympathetic_trunk",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 1.1143773346998737e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 1.1143773346998737e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC1_Nerve",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.8914812328277868e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.8914812328277868e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC1_Artery",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.2486756226862152e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.2486756226862152e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC1_Vein",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.8914814898699347e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.8914814898699347e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC2_Nerve",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 3.556559851572101e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 3.556559851572101e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC2_Artery",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 2.3478873484703455e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 2.3478873484703455e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC2_Vein",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 3.556559982441196e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 3.556559982441196e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC3_Nerve",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 5.290017485979519e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 5.290017485979519e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC3_Artery",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 3.492239528889621e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 3.492239528889621e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC3_Vein",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 5.29001865922407e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 5.29001865922407e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC4_Nerve",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 5.893029844867476e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 5.893029844867476e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC4_Artery",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 3.8903206293723327e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 3.8903206293723327e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC4_Vein",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 5.893030566252713e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 5.893030566252713e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC5_Nerve",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 6.767942702905464e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 6.767942702905464e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC5_Artery",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 4.467897993132731e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 4.467897993132731e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC5_Vein",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 6.767940243240517e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 6.767940243240517e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC6_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.927843231505851e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.927843231505851e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC6_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.5734610330849517e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.5734610330849517e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC6_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.927843271675545e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.927843271675545e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC7_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.786310681479521e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.786310681479521e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC7_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.480019722778647e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.480019722778647e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC7_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.786309224339577e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.786309224339577e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC8_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.420045864593292e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.420045864593292e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC8_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.238232942513065e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.238232942513065e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC8_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.420044468408732e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.420044468408732e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC9_Nerve",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 5.515208911267685e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 5.515208911267685e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC9_Artery",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 3.6409012131306644e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 3.6409012131306644e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC9_Vein",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 5.515208211580616e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 5.515208211580616e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC10_Nerve",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 5.404877154211174e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 5.404877154211174e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC10_Artery",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 3.5680637289629654e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 3.5680637289629654e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC10_Vein",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 5.404876729503635e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 5.404876729503635e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC11_Nerve",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 4.279472304628593e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 4.279472304628593e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC11_Artery",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 2.8251179973662487e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 2.8251179973662487e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Right_IC11_Vein",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 4.2794716231138185e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 4.2794716231138185e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_Phrenic_nerve",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 9.837952378839481e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 9.837952378839481e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_Vagus_nerve",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 9.878732332869742e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 9.878732332869742e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_Sympathetic_trunk",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 1.1143773944372907e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 1.1143773944372907e-06,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC1_Nerve",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.82724533135275e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.82724533135275e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC1_Artery",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.2062686790381513e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.2062686790381513e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC1_Vein",
+      "before": {
+        "triangles": 1036,
+        "volume_m3": 1.8272458826503222e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1036,
+        "volume_m3": 1.8272458826503222e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC2_Nerve",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 3.954052137032165e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 3.954052137032165e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC2_Artery",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 2.610291846259332e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 2.610291846259332e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC2_Vein",
+      "before": {
+        "triangles": 1292,
+        "volume_m3": 3.954049625628709e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1292,
+        "volume_m3": 3.954049625628709e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC3_Nerve",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 5.932907584304934e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 5.932907584304934e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC3_Artery",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 3.916647394534887e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 3.916647394534887e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC3_Vein",
+      "before": {
+        "triangles": 1804,
+        "volume_m3": 5.932906078840004e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1804,
+        "volume_m3": 5.932906078840004e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC4_Nerve",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 6.638077477355234e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 6.638077477355234e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC4_Artery",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 4.382155871413948e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 4.382155871413948e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC4_Vein",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 6.638077808168648e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 6.638077808168648e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC5_Nerve",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 5.467383416939131e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 5.467383416939131e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC5_Artery",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 3.609327743331245e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 3.609327743331245e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC5_Vein",
+      "before": {
+        "triangles": 2060,
+        "volume_m3": 5.467384849722958e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2060,
+        "volume_m3": 5.467384849722958e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC6_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 7.556624723924488e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 7.556624723924488e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC6_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.988550305679787e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.988550305679787e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC6_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 7.556624765275234e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 7.556624765275234e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC7_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 7.549315279942928e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 7.549315279942928e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC7_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.983729448742437e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.983729448742437e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC7_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 7.549318056316269e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 7.549318056316269e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC8_Nerve",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.304044730692406e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.304044730692406e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC8_Artery",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 4.161654023833289e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 4.161654023833289e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC8_Vein",
+      "before": {
+        "triangles": 2444,
+        "volume_m3": 6.304046129940544e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2444,
+        "volume_m3": 6.304046129940544e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC9_Nerve",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 5.40743678005492e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 5.40743678005492e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC9_Artery",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 3.5697563241779344e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 3.5697563241779344e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC9_Vein",
+      "before": {
+        "triangles": 2316,
+        "volume_m3": 5.407439032129434e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2316,
+        "volume_m3": 5.407439032129434e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC10_Nerve",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 5.441077129010082e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 5.441077129010082e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC10_Artery",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 3.591961105429981e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 3.591961105429981e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC10_Vein",
+      "before": {
+        "triangles": 2188,
+        "volume_m3": 5.441075006442622e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 2188,
+        "volume_m3": 5.441075006442622e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC11_Nerve",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 4.0287897426784865e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 4.0287897426784865e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC11_Artery",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 2.659629416980236e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 2.659629416980236e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_Left_IC11_Vein",
+      "before": {
+        "triangles": 1932,
+        "volume_m3": 4.028788864372064e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 1932,
+        "volume_m3": 4.028788864372064e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    },
+    {
+      "id": "REC_ThoracicDuct",
+      "before": {
+        "triangles": 524,
+        "volume_m3": 9.684740835821336e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "after": {
+        "triangles": 524,
+        "volume_m3": 9.684740835821336e-07,
+        "boundary": 0,
+        "nonmanifold": 0
+      },
+      "repairs": []
+    }
+  ]
+}

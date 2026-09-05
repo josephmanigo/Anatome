@@ -1,0 +1,55 @@
+THORAX LAB — SOURCE ATTRIBUTION AND MODIFICATIONS
+
+BodyParts3D, © The Database Center for Life Science licensed under CC
+Attribution 4.0 International.
+Dataset: current official BodyParts3D 4.0 IS-A reduced polygon OBJ archive.
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+https://creativecommons.org/licenses/by/4.0/
+The current archive's license page was updated in February 2025 to CC BY 4.0.
+Unmodified original OBJ files retain their historical license comments.
+Modifications: regional selection/cropping, coordinate conversion and table
+placement, vertex welding, degeneracy cleanup, bounded topology repair,
+decimation, UVs, materials, LODs, local pivots, explicit boundary closures,
+authored airway/esophageal walls, and non-tissue chamber/region annotations.
+Original archive and all source files remain separate and unchanged.
+
+Mauritanian Anatomy Laboratory (MAL) Thoracic Atlas.
+Authors: Haythem Guermazi; Ahmedou Moulaye IDRISS; Tfeil Yahya.
+Publisher: Open Anatomy Project.
+https://www.openanatomy.org/atlas-pages/atlas-mauritania-thorax.html
+Five lung-lobe surfaces are incorporated as MODIFIED versions. Original data
+remain in a separate specimen collection. Changes: one common cross-specimen
+registration, a documented common cage-fit scale/translation, local topology
+repair, display simplification, UVs, materials, and LODs.
+All or portions of this licensed product (such portions are the “Software”)
+have been obtained under license from The Brigham and Women’s Hospital, Inc.
+and are subject to the terms and conditions reproduced in
+Licenses/MAL-Atlas-License.txt (runtime) or docs/licenses/MAL-Atlas-License.txt
+(source package). Those complete terms accompany every distributed package.
+
+Gray's Anatomy public-domain plates 806 and 968 are anatomical REFERENCES.
+https://commons.wikimedia.org/wiki/File:Gray806.png
+https://commons.wikimedia.org/wiki/File:Gray968.png
+Original geometry authored for missing membranes, nerves, neurovascular
+bundles, fascia, fat, and thoracic duct uses cited spatial relationships;
+diagram spacing is not treated as a measured coordinate system.
+OpenStax Anatomy and Physiology, 7.4 The Thoracic Cage, supplies factual
+reference for lower costal cartilage connections. No OpenStax art is copied.
+https://openstax.org/books/anatomy-and-physiology/pages/7-4-the-thoracic-cage
+NLM Visible Human documentation was consulted; no Visible Human volume was
+downloaded, segmented, or incorporated into the supplied geometry.
+
+Manifold v3.5.2, revision 11235e6b8ebea2dbed8aec4285685aafd3d95667.
+https://github.com/elalish/manifold
+Apache License 2.0; complete license in Licenses/Manifold-Apache-2.0.txt
+(runtime) or docs/licenses/Manifold-Apache-2.0.txt (source package).
+The ThoraxCut C ABI adapter and Unity integration are project-authored.
+Unity, URP, OpenXR, XR Interaction Toolkit and dependencies retain their
+respective package licenses; pinned versions and package license files are
+available through the Unity package manifest and Package Manager.
+
+The laboratory geometry and deterministic texture sets are original project
+work inspired by the user-provided photograph. The photograph is not used as
+a projected room texture. No Z-Anatomy or previous ANATOME meshes are included.
+No source author or institution is represented as endorsing this game.

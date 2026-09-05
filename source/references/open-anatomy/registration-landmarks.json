@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "coordinate_basis_change_vtk_to_bp3d": {
+    "diagonal": [
+      -1,
+      -1,
+      1
+    ],
+    "unit": "millimetres"
+  },
+  "registration_performed": false,
+  "proposed_correspondences": [
+    {
+      "name": "manubrium of sternum",
+      "mal_path": "models/manubrium of sternum.vtk",
+      "bp3d_element": "FJ3290",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -7.000812490499021,
+        50.80517375626478,
+        75.35398951224067
+      ],
+      "mal_lps_mm": [
+        7.000812490499021,
+        -50.80517375626478,
+        75.35398951224067
+      ],
+      "bp3d_mm": [
+        -0.017471845723162856,
+        -152.09220518877981,
+        1301.7184749605553
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    },
+    {
+      "name": "body of sternum",
+      "mal_path": "models/body of sternum.vtk",
+      "bp3d_element": "FJ3178",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -8.266871875378703,
+        81.89894003008419,
+        5.487806861277452
+      ],
+      "mal_lps_mm": [
+        8.266871875378703,
+        -81.89894003008419,
+        5.487806861277452
+      ],
+      "bp3d_mm": [
+        0.05263008622073909,
+        -190.6318832765271,
+        1231.4625311941918
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    },
+    {
+      "name": "xiphoid process",
+      "mal_path": "models/xiphoid process.vtk",
+      "bp3d_element": "FJ3153",
+      "kind": "area_weighted_centroid_of_corresponding_named_surface",
+      "mal_ras_mm": [
+        -6.647748402519007,
+        96.0206033288267,
+        -49.071938806277245
+      ],
+      "mal_lps_mm": [
+        6.647748402519007,
+        -96.0206033288267,
+        -49.071938806277245
+      ],
+      "bp3d_mm": [
+        0.10438964117544336,
+        -206.2731686277674,
+        1176.7374500236165
+      ],
+      "limitation": "Geometric centroid estimates from two different specimens, not manually identified anatomical point fiducials."
+    }
+  ],
+  "limitations": [
+    "These three sternum-region centers are nearly collinear and do not independently constrain all rotational degrees of freedom.",
+    "Use anatomy axis basis as prior or acquire additional corresponding landmarks; do not silently call these verified fiducials.",
+    "MAL trachea has separate carina model; BP3D trachea has no named carina model. A bounding-box end is not automatically a homologous carina landmark.",
+    "No MAL diaphragm mesh was present in the live atlas structure."
+  ],
+  "recommended_record_for_registration": "Record one common transform, input landmarks and their estimation method, residuals in millimetres, and a source-specific approximation note for all MAL-derived objects."
+}

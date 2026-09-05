@@ -1,0 +1,1873 @@
+{
+  "structures": 233,
+  "triangles": 806747,
+  "cutting_ready": 201,
+  "structure_checks": [
+    {
+      "id": "FMA7857",
+      "triangles": 3276,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.103084241724461e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7882",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.4340383518817292e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7909",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.7943208643117368e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7957",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.4823831741734415e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7987",
+      "triangles": 3276,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.096277762715148e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8012",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.4339664839375758e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8039",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.7952789623159468e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8066",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.9989387237935305e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8093",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.998856180684832e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8148",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.4863255610689315e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8175",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.130595768567788e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8202",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.135336438702731e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8229",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.1907114943162984e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8256",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.190792676608459e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8283",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.4073171365613805e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8310",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.407683977787418e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8364",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.105188104770235e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8391",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.1053782582980132e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8445",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.707332289270041e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8472",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.706892533450331e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8531",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.134889785296734e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8532",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.1357924875631958e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8533",
+      "triangles": 2818,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.446937088900338e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8534",
+      "triangles": 2818,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.440442147036356e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7875",
+      "triangles": 676,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.575941404642082e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7886",
+      "triangles": 657,
+      "boundary_edges": 3,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.608438774527469e-06,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7913",
+      "triangles": 652,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.427114001650759e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7976",
+      "triangles": 694,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.139646673371798e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8005",
+      "triangles": 642,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.5553923935740123e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8031",
+      "triangles": 588,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.595322427923666e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8058",
+      "triangles": 604,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.411159055360738e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8070",
+      "triangles": 1168,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.434878712701833e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8112",
+      "triangles": 1086,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.434229623882258e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8167",
+      "triangles": 658,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.1310741546148114e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8194",
+      "triangles": 1540,
+      "boundary_edges": 18,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.0709660351397218e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA8221",
+      "triangles": 1498,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.0698758936936758e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8248",
+      "triangles": 2447,
+      "boundary_edges": 9,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.770681897345893e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA8275",
+      "triangles": 2314,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.7668431595642737e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7486",
+      "triangles": 2546,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.6098899803589486e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7487",
+      "triangles": 4500,
+      "boundary_edges": 24,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.6425579496081705e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7488",
+      "triangles": 922,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.450793151479741e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9165",
+      "triangles": 1700,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.5225847318752058e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9187",
+      "triangles": 1938,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.7689278718112954e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9209",
+      "triangles": 2038,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.8681076831012255e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9248",
+      "triangles": 2066,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.9128825918032307e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9922",
+      "triangles": 2280,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.172679307414295e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9945",
+      "triangles": 2248,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.3707812300821145e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9968",
+      "triangles": 2574,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.7928752452809764e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9991",
+      "triangles": 2424,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.7965817687603327e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10014",
+      "triangles": 2586,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.205223825115407e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10037",
+      "triangles": 2790,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.64665345899429e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10059",
+      "triangles": 2674,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.756257662957945e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10081",
+      "triangles": 2772,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.847880659558902e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10458",
+      "triangles": 1232,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.1123442286145127e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13495",
+      "triangles": 1369,
+      "boundary_edges": 15,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.06131914601713e-06,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13500",
+      "triangles": 1466,
+      "boundary_edges": 24,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.2531652118616592e-06,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13501",
+      "triangles": 1554,
+      "boundary_edges": 18,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.6492012250793003e-06,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13502",
+      "triangles": 1836,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.0515977967882975e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13503",
+      "triangles": 2564,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.926494299576826e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13504",
+      "triangles": 2630,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.489279354600954e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13505",
+      "triangles": 2894,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.087164218794114e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13506",
+      "triangles": 2940,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.904929563088478e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13507",
+      "triangles": 3102,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.690900085455985e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13508",
+      "triangles": 3336,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.313701578284439e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13322",
+      "triangles": 1146,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.724761892734474e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13323",
+      "triangles": 1176,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.715606949760609e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13395",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.310369855893816e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13396",
+      "triangles": 4500,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.317711868312035e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA34690",
+      "triangles": 1837,
+      "boundary_edges": 27,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.723007751612189e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA34691",
+      "triangles": 1837,
+      "boundary_edges": 27,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.722673112131875e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA45874",
+      "triangles": 1534,
+      "boundary_edges": 6,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.5104709422904304e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA45875",
+      "triangles": 1534,
+      "boundary_edges": 6,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.510476912778908e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA79979",
+      "triangles": 7110,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.00039710998202022754,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA79980",
+      "triangles": 7110,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.00039710506791781067,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13375",
+      "triangles": 8999,
+      "boundary_edges": 15,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.7231182211931724e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13376",
+      "triangles": 8999,
+      "boundary_edges": 15,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.7231603575315375e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13398",
+      "triangles": 8999,
+      "boundary_edges": 3,
+      "nonmanifold_edges": 3,
+      "signed_volume_m3": 0.000141755277996639,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13399",
+      "triangles": 8999,
+      "boundary_edges": 3,
+      "nonmanifold_edges": 3,
+      "signed_volume_m3": 0.00014177862315463237,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA9756",
+      "triangles": 8910,
+      "boundary_edges": 270,
+      "nonmanifold_edges": 234,
+      "signed_volume_m3": 0.0001395827937964089,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA9757",
+      "triangles": 8990,
+      "boundary_edges": 30,
+      "nonmanifold_edges": 34,
+      "signed_volume_m3": 0.00011915149420097199,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA9758",
+      "triangles": 8984,
+      "boundary_edges": 48,
+      "nonmanifold_edges": 82,
+      "signed_volume_m3": 0.00012135521424449541,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA9761",
+      "triangles": 4181,
+      "boundary_edges": 21,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.1282537598388262e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA9762",
+      "triangles": 4181,
+      "boundary_edges": 21,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.1282967895165754e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA13295",
+      "triangles": 8996,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 1,
+      "signed_volume_m3": 0.0003199175932132705,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7163",
+      "triangles": 9000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.0009236390227918187,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7394",
+      "triangles": 4996,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.5690988262551573e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA68418",
+      "triangles": 4466,
+      "boundary_edges": 6,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.635970334847934e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7396",
+      "triangles": 4133,
+      "boundary_edges": 9,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.48892555945385e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA31744",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 8.916624542487019e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA31741",
+      "triangles": 9866,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.297460227279407e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA31747",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.44928610377488e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA31746",
+      "triangles": 4078,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.4993711490801168e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA31748",
+      "triangles": 5284,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.804790585224028e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA12224",
+      "triangles": 1226,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.6978732646375856e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9457",
+      "triangles": 14000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.762484719320743e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA9531",
+      "triangles": 7544,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.053763741430962e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA13884",
+      "triangles": 13995,
+      "boundary_edges": 19,
+      "nonmanifold_edges": 5,
+      "signed_volume_m3": 0.00016066402059100842,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7238",
+      "triangles": 8160,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.5891290491291014e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7239",
+      "triangles": 4926,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.350517207046683e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7240",
+      "triangles": 4526,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.066769306249727e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7242",
+      "triangles": 7558,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.2792850565442496e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7243",
+      "triangles": 3820,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.3851753577106902e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7247",
+      "triangles": 1272,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 8.793959135630848e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7249",
+      "triangles": 1369,
+      "boundary_edges": 3,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.664934980177548e-07,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA7250",
+      "triangles": 996,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.854057168807531e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7252",
+      "triangles": 316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.0523062815865744e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7253",
+      "triangles": 920,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.580111701604534e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7254",
+      "triangles": 914,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.431114528145597e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7260",
+      "triangles": 882,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.500274854888658e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7261",
+      "triangles": 692,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.185601475284877e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7262",
+      "triangles": 844,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.0347036269189905e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7264",
+      "triangles": 780,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.166480144580288e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7265",
+      "triangles": 816,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.558897417531848e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA3736",
+      "triangles": 396,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.14953896364408e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA3768",
+      "triangles": 670,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.638353252740831e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA87217",
+      "triangles": 2290,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.84229171978501e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA3932",
+      "triangles": 262,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.849398322861206e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA3953",
+      "triangles": 452,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.9217345268874343e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4694",
+      "triangles": 646,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.780417543841039e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4720",
+      "triangles": 598,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.2348753704082133e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA10951",
+      "triangles": 1992,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.053470880950252e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4751",
+      "triangles": 546,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.2422781195729645e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4761",
+      "triangles": 748,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.0301501648711832e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA8612",
+      "triangles": 1302,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.91569942236643e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA50872",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.916405605626623e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA50873",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.109266059775575e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA49911",
+      "triangles": 5524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.0280067142291872e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA49913",
+      "triangles": 4554,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.380483838813697e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA49914",
+      "triangles": 6746,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.422820141471788e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA49916",
+      "triangles": 6721,
+      "boundary_edges": 3,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.1366287184541956e-05,
+      "cutting_ready": false
+    },
+    {
+      "id": "FMA50039",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.416907616025408e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA50040",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.5381347622768187e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4706",
+      "triangles": 624,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.3373741954567043e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4707",
+      "triangles": 826,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.499960422973296e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4712",
+      "triangles": 3710,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.6734086276348418e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4838",
+      "triangles": 12000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.888008216208552e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4944",
+      "triangles": 4266,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.768438955790792e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA5011",
+      "triangles": 4532,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.6170025593169633e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA3969",
+      "triangles": 3546,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.4563873655271702e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4068",
+      "triangles": 3642,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.4737183003545778e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA66242",
+      "triangles": 1508,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.732421196718514e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA66243",
+      "triangles": 1538,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.721693579835766e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA5041",
+      "triangles": 2656,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.043024549515663e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4112",
+      "triangles": 2724,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.000898352379355e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4758",
+      "triangles": 3038,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.2248621050341011e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4797",
+      "triangles": 786,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.871558941237042e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA4877",
+      "triangles": 1094,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.5995279618815447e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "FMA7131",
+      "triangles": 578,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.800177391598027e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "MAL_RUL",
+      "triangles": 7999,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 2,
+      "signed_volume_m3": 0.0006775349178548776,
+      "cutting_ready": false
+    },
+    {
+      "id": "MAL_RML",
+      "triangles": 8000,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 2,
+      "signed_volume_m3": 0.00013268018378671426,
+      "cutting_ready": false
+    },
+    {
+      "id": "MAL_RLL",
+      "triangles": 8000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.00046395492360586424,
+      "cutting_ready": true
+    },
+    {
+      "id": "MAL_LUL",
+      "triangles": 7999,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 1,
+      "signed_volume_m3": 0.0005732039737091206,
+      "cutting_ready": false
+    },
+    {
+      "id": "MAL_LLL",
+      "triangles": 8000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 1,
+      "signed_volume_m3": 0.0005470257757471347,
+      "cutting_ready": false
+    },
+    {
+      "id": "REC_Right_Visceral_Pleura",
+      "triangles": 6600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.145397336358576e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_Parietal_Pleura",
+      "triangles": 6600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.386071325861615e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_Visceral_Pleura",
+      "triangles": 6600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.702788007066312e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_Parietal_Pleura",
+      "triangles": 6600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.705337033056407e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Pericardium",
+      "triangles": 6600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.660120591285964e-05,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_fat",
+      "triangles": 18000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.0030285267449447714,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_fascia",
+      "triangles": 18000,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 0.0006843662776717277,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_Phrenic_nerve",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.837951149426948e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_Vagus_nerve",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.878733992076468e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_Sympathetic_trunk",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.1143773471069842e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC1_Nerve",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.8914812336919457e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC1_Artery",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.2486756272706868e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC1_Vein",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.8914814907341563e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC2_Nerve",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.5565596888123734e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC2_Artery",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.3478869704098876e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC2_Vein",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.556559819681428e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC3_Nerve",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.290017567418803e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC3_Artery",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.4922397246043796e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC3_Vein",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.290018148063595e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC4_Nerve",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.893030082851946e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC4_Artery",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.890320687831772e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC4_Vein",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.893030721821922e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC5_Nerve",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.767941605922658e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC5_Artery",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.467897718154237e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC5_Vein",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.767939869130555e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC6_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.92784409272041e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC6_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.573461380892108e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC6_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.927844133090996e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC7_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.786310655741507e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC7_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.4800199705766895e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC7_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.786309113453795e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC8_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.420045751170885e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC8_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.2382326632032e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC8_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.420044310609483e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC9_Nerve",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.51520833149523e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC9_Artery",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.640901176095841e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC9_Vein",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.515208241654759e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC10_Nerve",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.404877219331969e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC10_Artery",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.568063732791693e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC10_Vein",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.404876798864628e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC11_Nerve",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.279472321551322e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC11_Artery",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.825118011352259e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Right_IC11_Vein",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.279471640036495e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_Phrenic_nerve",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.83795339601812e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_Vagus_nerve",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.878732561210974e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_Sympathetic_trunk",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.114377402729869e-06,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC1_Nerve",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.827245340213504e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC1_Artery",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.2062686745326e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC1_Vein",
+      "triangles": 1036,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 1.827245891511001e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC2_Nerve",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.954052283076959e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC2_Artery",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.6102920329322425e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC2_Vein",
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.954049742786523e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC3_Nerve",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.932907279905231e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC3_Artery",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.9166466015288915e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC3_Vein",
+      "triangles": 1804,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.932905631780289e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC4_Nerve",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.638077122031023e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC4_Artery",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.3821566076818704e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC4_Vein",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.638077678706282e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC5_Nerve",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.4673837473591e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC5_Artery",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.6093279546075116e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC5_Vein",
+      "triangles": 2060,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.467385180481257e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC6_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.556624707262856e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC6_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.988550332151761e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC6_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.556624721809197e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC7_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.549314716584269e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC7_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.983729499066451e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC7_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 7.549317825318329e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC8_Nerve",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.304043969529844e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC8_Artery",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.1616545368997586e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC8_Vein",
+      "triangles": 2444,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 6.304045582918942e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC9_Nerve",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.40743688762837e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC9_Artery",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.5697563553268436e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC9_Vein",
+      "triangles": 2316,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.407439144123867e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC10_Nerve",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.441077056038339e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC10_Artery",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 3.59196109393975e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC10_Vein",
+      "triangles": 2188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 5.44107492965772e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC11_Nerve",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.0287897596575764e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC11_Artery",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 2.659629410870386e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_Left_IC11_Vein",
+      "triangles": 1932,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 4.0287888813511436e-07,
+      "cutting_ready": true
+    },
+    {
+      "id": "REC_ThoracicDuct",
+      "triangles": 524,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "signed_volume_m3": 9.68474054691444e-07,
+      "cutting_ready": true
+    }
+  ],
+  "headset_tested": false,
+  "anatomical_professional_review_required": false
+}

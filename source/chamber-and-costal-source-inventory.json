@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scope": "All 2234 original OBJ headers, both official metadata trees, and current source selection",
+  "separate_costal_cartilage_elements": [
+    {
+      "mesh_id": "FJ3239",
+      "concept_id": "FMA8005",
+      "name": "Left first costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3242",
+      "concept_id": "FMA8031",
+      "name": "Left second costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3245",
+      "concept_id": "FMA8058",
+      "name": "Left third costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3248",
+      "concept_id": "FMA8167",
+      "name": "Left fourth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3251",
+      "concept_id": "FMA8112",
+      "name": "Left fifth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3254",
+      "concept_id": "FMA8221",
+      "name": "Left sixth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3255",
+      "concept_id": "FMA8275",
+      "name": "Left seventh costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3333",
+      "concept_id": "FMA7875",
+      "name": "Right first costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3335",
+      "concept_id": "FMA7886",
+      "name": "Right second costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3337",
+      "concept_id": "FMA7913",
+      "name": "Right third costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3339",
+      "concept_id": "FMA7976",
+      "name": "Right fourth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3341",
+      "concept_id": "FMA8070",
+      "name": "Right fifth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3343",
+      "concept_id": "FMA8194",
+      "name": "Right sixth costal cartilage"
+    },
+    {
+      "mesh_id": "FJ3345",
+      "concept_id": "FMA8248",
+      "name": "Right seventh costal cartilage"
+    }
+  ],
+  "separate_costal_cartilage_8_through_12_found": false,
+  "cartilage_inference_limit": "No separately named/identified lower cartilage files were found. This does not prove source lower-rib meshes include cartilage or establish a histological bone-cartilage boundary.",
+  "chamber_elements": [
+    {
+      "mesh_id": "FJ2422",
+      "concept_id": "FMA9466",
+      "name": "Cavity of left ventricle",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2423",
+      "concept_id": "FMA9291",
+      "name": "Cavity of right ventricle",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2424",
+      "concept_id": "FMA11359",
+      "name": "Cavity of right atrium",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2425",
+      "concept_id": "FMA9465",
+      "name": "Cavity of left atrium",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2428",
+      "concept_id": "FMA13884",
+      "name": "Wall of ventricle",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2438",
+      "concept_id": "FMA9531",
+      "name": "Wall of left atrium",
+      "selected": true
+    },
+    {
+      "mesh_id": "FJ2439",
+      "concept_id": "FMA9457",
+      "name": "Wall of right atrium",
+      "selected": true
+    }
+  ],
+  "unselected_genuine_chamber_meshes_found": [],
+  "separately_identified_interatrial_or_interventricular_septum_meshes_found": [],
+  "septum_inference_limit": "Sampled separating tissue exists in FJ2428 between ventricular cavities; segmentation of this region as a separate anatomical septum was not present in the source."
+}

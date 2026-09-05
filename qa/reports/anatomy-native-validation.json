@@ -1,0 +1,2000 @@
+{
+  "checks": [
+    {
+      "id": "FMA7857",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 6.102376119088149e-06
+    },
+    {
+      "id": "FMA7882",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.4327341887110379e-05
+    },
+    {
+      "id": "FMA7909",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.7919723177328706e-05
+    },
+    {
+      "id": "FMA7957",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.4792505428195e-05
+    },
+    {
+      "id": "FMA7987",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 6.095605840528151e-06
+    },
+    {
+      "id": "FMA8012",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.4327716598927509e-05
+    },
+    {
+      "id": "FMA8039",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.7929784007719718e-05
+    },
+    {
+      "id": "FMA8066",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.99427720165113e-05
+    },
+    {
+      "id": "FMA8093",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.994614806084428e-05
+    },
+    {
+      "id": "FMA8148",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.483332355041057e-05
+    },
+    {
+      "id": "FMA8175",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 3.1258994567906484e-05
+    },
+    {
+      "id": "FMA8202",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 3.130874756607227e-05
+    },
+    {
+      "id": "FMA8229",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 3.186437606927939e-05
+    },
+    {
+      "id": "FMA8256",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 3.186301910318434e-05
+    },
+    {
+      "id": "FMA8283",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.4042659788392484e-05
+    },
+    {
+      "id": "FMA8310",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.4044624296948314e-05
+    },
+    {
+      "id": "FMA8364",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.102174039464444e-05
+    },
+    {
+      "id": "FMA8391",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 2.102436155837495e-05
+    },
+    {
+      "id": "FMA8445",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.7052923794835806e-05
+    },
+    {
+      "id": "FMA8472",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.7046855646185577e-05
+    },
+    {
+      "id": "FMA8531",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.133507612394169e-05
+    },
+    {
+      "id": "FMA8532",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 1.1341916433593724e-05
+    },
+    {
+      "id": "FMA8533",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2818,
+      "signed_volume_m3": 6.4469386416021734e-06
+    },
+    {
+      "id": "FMA8534",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2818,
+      "signed_volume_m3": 6.440445304178866e-06
+    },
+    {
+      "id": "FMA7875",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 676,
+      "signed_volume_m3": 3.5759410366154043e-06
+    },
+    {
+      "id": "FMA7886",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 3.601148137022392e-06
+    },
+    {
+      "id": "FMA7913",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 652,
+      "signed_volume_m3": 3.427114279475063e-06
+    },
+    {
+      "id": "FMA7976",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 694,
+      "signed_volume_m3": 4.1396465348952916e-06
+    },
+    {
+      "id": "FMA8005",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 642,
+      "signed_volume_m3": 3.5553923680708976e-06
+    },
+    {
+      "id": "FMA8031",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 588,
+      "signed_volume_m3": 3.5953223687101854e-06
+    },
+    {
+      "id": "FMA8058",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 604,
+      "signed_volume_m3": 3.411159241295536e-06
+    },
+    {
+      "id": "FMA8070",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1168,
+      "signed_volume_m3": 7.43487908039242e-06
+    },
+    {
+      "id": "FMA8112",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1086,
+      "signed_volume_m3": 7.434230155922705e-06
+    },
+    {
+      "id": "FMA8167",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 658,
+      "signed_volume_m3": 4.131074092583731e-06
+    },
+    {
+      "id": "FMA8194",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.0690712770156097e-05
+    },
+    {
+      "id": "FMA8221",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1498,
+      "signed_volume_m3": 1.0698759979277384e-05
+    },
+    {
+      "id": "FMA8248",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.7678443327895366e-05
+    },
+    {
+      "id": "FMA8275",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2314,
+      "signed_volume_m3": 1.766844252415467e-05
+    },
+    {
+      "id": "FMA7486",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2546,
+      "signed_volume_m3": 3.609889608924277e-05
+    },
+    {
+      "id": "FMA7487",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 5.642646283376962e-05
+    },
+    {
+      "id": "FMA7488",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 922,
+      "signed_volume_m3": 2.4507933176209917e-06
+    },
+    {
+      "id": "FMA9165",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1700,
+      "signed_volume_m3": 1.5225848073896486e-05
+    },
+    {
+      "id": "FMA9187",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1938,
+      "signed_volume_m3": 1.7689277228782885e-05
+    },
+    {
+      "id": "FMA9209",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2038,
+      "signed_volume_m3": 1.8681075744098052e-05
+    },
+    {
+      "id": "FMA9248",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2066,
+      "signed_volume_m3": 1.9128825442749076e-05
+    },
+    {
+      "id": "FMA9922",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2280,
+      "signed_volume_m3": 2.1726793420384638e-05
+    },
+    {
+      "id": "FMA9945",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2248,
+      "signed_volume_m3": 2.370781294303015e-05
+    },
+    {
+      "id": "FMA9968",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2574,
+      "signed_volume_m3": 2.7928754207096063e-05
+    },
+    {
+      "id": "FMA9991",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2424,
+      "signed_volume_m3": 2.7965817935182713e-05
+    },
+    {
+      "id": "FMA10014",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2586,
+      "signed_volume_m3": 3.2052241294877604e-05
+    },
+    {
+      "id": "FMA10037",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2790,
+      "signed_volume_m3": 3.6466532037593424e-05
+    },
+    {
+      "id": "FMA10059",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2674,
+      "signed_volume_m3": 3.756257865461521e-05
+    },
+    {
+      "id": "FMA10081",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2772,
+      "signed_volume_m3": 3.847881089313887e-05
+    },
+    {
+      "id": "FMA10458",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1232,
+      "signed_volume_m3": 2.112344191118609e-06
+    },
+    {
+      "id": "FMA13495",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5498,
+      "signed_volume_m3": 3.0568680813303217e-06
+    },
+    {
+      "id": "FMA13500",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 3.2489042496308684e-06
+    },
+    {
+      "id": "FMA13501",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 3.6435831134440377e-06
+    },
+    {
+      "id": "FMA13502",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1836,
+      "signed_volume_m3": 4.0515978980693035e-06
+    },
+    {
+      "id": "FMA13503",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2564,
+      "signed_volume_m3": 5.926494395680493e-06
+    },
+    {
+      "id": "FMA13504",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2630,
+      "signed_volume_m3": 6.4892788032011595e-06
+    },
+    {
+      "id": "FMA13505",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2894,
+      "signed_volume_m3": 6.087164365453646e-06
+    },
+    {
+      "id": "FMA13506",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2940,
+      "signed_volume_m3": 6.904929705342511e-06
+    },
+    {
+      "id": "FMA13507",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3102,
+      "signed_volume_m3": 6.690900136163691e-06
+    },
+    {
+      "id": "FMA13508",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3336,
+      "signed_volume_m3": 7.3137016443070024e-06
+    },
+    {
+      "id": "FMA13322",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1146,
+      "signed_volume_m3": 2.724761543504428e-05
+    },
+    {
+      "id": "FMA13323",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1176,
+      "signed_volume_m3": 2.7156065698363818e-05
+    },
+    {
+      "id": "FMA13395",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 7.308246131287888e-05
+    },
+    {
+      "id": "FMA13396",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3000,
+      "signed_volume_m3": 7.313734386116266e-05
+    },
+    {
+      "id": "FMA34690",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3996,
+      "signed_volume_m3": 4.718734999187291e-05
+    },
+    {
+      "id": "FMA34691",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3996,
+      "signed_volume_m3": 4.7186276788124815e-05
+    },
+    {
+      "id": "FMA45874",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 2.504599979147315e-05
+    },
+    {
+      "id": "FMA45875",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 2.504764597688336e-05
+    },
+    {
+      "id": "FMA79979",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3998,
+      "signed_volume_m3": 0.0004009511030744761
+    },
+    {
+      "id": "FMA79980",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3998,
+      "signed_volume_m3": 0.00040097246528603137
+    },
+    {
+      "id": "FMA13375",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3996,
+      "signed_volume_m3": 3.719925371115096e-05
+    },
+    {
+      "id": "FMA13376",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3994,
+      "signed_volume_m3": 3.720323365996592e-05
+    },
+    {
+      "id": "FMA13398",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 0.0001412709680153057
+    },
+    {
+      "id": "FMA13399",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3998,
+      "signed_volume_m3": 0.00014136749086901546
+    },
+    {
+      "id": "FMA9756",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3940,
+      "signed_volume_m3": 0.00013193620543461293
+    },
+    {
+      "id": "FMA9757",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3976,
+      "signed_volume_m3": 0.00011374218593118712
+    },
+    {
+      "id": "FMA9758",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3978,
+      "signed_volume_m3": 0.00011910634202649817
+    },
+    {
+      "id": "FMA9761",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3994,
+      "signed_volume_m3": 1.1216839084227104e-05
+    },
+    {
+      "id": "FMA9762",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3996,
+      "signed_volume_m3": 1.1216791790502612e-05
+    },
+    {
+      "id": "FMA13295",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 0.0003193473967257887
+    },
+    {
+      "id": "FMA7163",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 8000,
+      "signed_volume_m3": 0.0019806146156042814
+    },
+    {
+      "id": "FMA7394",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 9992,
+      "signed_volume_m3": 4.666985660151113e-06
+    },
+    {
+      "id": "FMA68418",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 11042,
+      "signed_volume_m3": 4.035425718029728e-06
+    },
+    {
+      "id": "FMA7396",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 11000,
+      "signed_volume_m3": 4.069279839313822e-06
+    },
+    {
+      "id": "FMA31744",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 13816,
+      "signed_volume_m3": 9.112292786994658e-07
+    },
+    {
+      "id": "FMA31741",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 11772,
+      "signed_volume_m3": 7.134789825613552e-07
+    },
+    {
+      "id": "FMA31747",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 14390,
+      "signed_volume_m3": 1.376247382722795e-06
+    },
+    {
+      "id": "FMA31746",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 9454,
+      "signed_volume_m3": 1.1621001476669335e-06
+    },
+    {
+      "id": "FMA31748",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 12840,
+      "signed_volume_m3": 1.5440340348504833e-06
+    },
+    {
+      "id": "FMA12224",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2940,
+      "signed_volume_m3": 3.249358542234404e-07
+    },
+    {
+      "id": "FMA9457",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 2.761395626293961e-05
+    },
+    {
+      "id": "FMA9531",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 4.053385418956168e-05
+    },
+    {
+      "id": "FMA13884",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.000160621726536192
+    },
+    {
+      "id": "FMA7238",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 1.5877054693191894e-06
+    },
+    {
+      "id": "FMA7239",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4926,
+      "signed_volume_m3": 7.350513442361262e-07
+    },
+    {
+      "id": "FMA7240",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4526,
+      "signed_volume_m3": 6.066769060453225e-07
+    },
+    {
+      "id": "FMA7242",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 1.278569470741786e-06
+    },
+    {
+      "id": "FMA7243",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3820,
+      "signed_volume_m3": 1.3851758922100998e-06
+    },
+    {
+      "id": "FMA7247",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1272,
+      "signed_volume_m3": 8.79395884112455e-07
+    },
+    {
+      "id": "FMA7249",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 9.647554861658136e-07
+    },
+    {
+      "id": "FMA7250",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 996,
+      "signed_volume_m3": 6.854056664451491e-07
+    },
+    {
+      "id": "FMA7252",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 316,
+      "signed_volume_m3": 1.0523062883294187e-06
+    },
+    {
+      "id": "FMA7253",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 920,
+      "signed_volume_m3": 6.580111744369788e-07
+    },
+    {
+      "id": "FMA7254",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 914,
+      "signed_volume_m3": 6.431114343286026e-07
+    },
+    {
+      "id": "FMA7260",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 882,
+      "signed_volume_m3": 3.500274942780379e-06
+    },
+    {
+      "id": "FMA7261",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 692,
+      "signed_volume_m3": 2.1856014882359887e-06
+    },
+    {
+      "id": "FMA7262",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 844,
+      "signed_volume_m3": 2.034703584286035e-06
+    },
+    {
+      "id": "FMA7264",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 780,
+      "signed_volume_m3": 5.166480605112156e-06
+    },
+    {
+      "id": "FMA7265",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 816,
+      "signed_volume_m3": 5.558897100854665e-06
+    },
+    {
+      "id": "FMA3736",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 396,
+      "signed_volume_m3": 2.1495390683412552e-05
+    },
+    {
+      "id": "FMA3768",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 670,
+      "signed_volume_m3": 3.638353155110963e-05
+    },
+    {
+      "id": "FMA87217",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2290,
+      "signed_volume_m3": 3.842290607281029e-05
+    },
+    {
+      "id": "FMA3932",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 262,
+      "signed_volume_m3": 4.849398919759551e-06
+    },
+    {
+      "id": "FMA3953",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 452,
+      "signed_volume_m3": 2.9217346764198737e-06
+    },
+    {
+      "id": "FMA4694",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 646,
+      "signed_volume_m3": 4.7804173846088815e-06
+    },
+    {
+      "id": "FMA4720",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 598,
+      "signed_volume_m3": 1.2348754353297409e-05
+    },
+    {
+      "id": "FMA10951",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1992,
+      "signed_volume_m3": 5.05347088619601e-05
+    },
+    {
+      "id": "FMA4751",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 546,
+      "signed_volume_m3": 7.2422785706294235e-06
+    },
+    {
+      "id": "FMA4761",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 748,
+      "signed_volume_m3": 1.0301501788489986e-05
+    },
+    {
+      "id": "FMA8612",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1302,
+      "signed_volume_m3": 1.9156994312652387e-05
+    },
+    {
+      "id": "FMA50872",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 6.856524851173162e-05
+    },
+    {
+      "id": "FMA50873",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 6.052109529264271e-05
+    },
+    {
+      "id": "FMA49911",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.0280006790708285e-05
+    },
+    {
+      "id": "FMA49913",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4554,
+      "signed_volume_m3": 7.38049175197375e-06
+    },
+    {
+      "id": "FMA49914",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.4196087249729317e-05
+    },
+    {
+      "id": "FMA49916",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.1348541193001438e-05
+    },
+    {
+      "id": "FMA50039",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.3880938922739006e-06
+    },
+    {
+      "id": "FMA50040",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 1.5172494158832706e-06
+    },
+    {
+      "id": "FMA4706",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 624,
+      "signed_volume_m3": 1.3373743286138051e-06
+    },
+    {
+      "id": "FMA4707",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 826,
+      "signed_volume_m3": 5.499960593624564e-07
+    },
+    {
+      "id": "FMA4712",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3710,
+      "signed_volume_m3": 1.6734288976749667e-07
+    },
+    {
+      "id": "FMA4838",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 6.8768495111726224e-06
+    },
+    {
+      "id": "FMA4944",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4266,
+      "signed_volume_m3": 6.76845218094968e-07
+    },
+    {
+      "id": "FMA5011",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4532,
+      "signed_volume_m3": 1.6170030221474008e-06
+    },
+    {
+      "id": "FMA3969",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3546,
+      "signed_volume_m3": 1.4563846661985735e-06
+    },
+    {
+      "id": "FMA4068",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3642,
+      "signed_volume_m3": 1.473717816224962e-06
+    },
+    {
+      "id": "FMA66242",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1508,
+      "signed_volume_m3": 3.7324193158383423e-07
+    },
+    {
+      "id": "FMA66243",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1538,
+      "signed_volume_m3": 3.721633277109504e-07
+    },
+    {
+      "id": "FMA5041",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2656,
+      "signed_volume_m3": 7.043010441520892e-07
+    },
+    {
+      "id": "FMA4112",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 2724,
+      "signed_volume_m3": 7.000940058787819e-07
+    },
+    {
+      "id": "FMA4758",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3038,
+      "signed_volume_m3": 1.2248614211785025e-06
+    },
+    {
+      "id": "FMA4797",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 786,
+      "signed_volume_m3": 1.8715540761604643e-07
+    },
+    {
+      "id": "FMA4877",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1094,
+      "signed_volume_m3": 2.5995242936005525e-07
+    },
+    {
+      "id": "FMA7131",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 1156,
+      "signed_volume_m3": 1.6555388356209733e-05
+    },
+    {
+      "id": "MAL_RUL",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.0005206799251027405
+    },
+    {
+      "id": "MAL_RML",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.0001019401170196943
+    },
+    {
+      "id": "MAL_RLL",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.0003565633378457278
+    },
+    {
+      "id": "MAL_LUL",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.0004404876381158829
+    },
+    {
+      "id": "MAL_LLL",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 6500,
+      "signed_volume_m3": 0.00042041903361678123
+    },
+    {
+      "id": "REC_Right_Visceral_Pleura",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 3.186022149748169e-05
+    },
+    {
+      "id": "REC_Right_Parietal_Pleura",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 4.90814090881031e-05
+    },
+    {
+      "id": "REC_Left_Visceral_Pleura",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 2.8459520763135515e-05
+    },
+    {
+      "id": "REC_Left_Parietal_Pleura",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 4.385021384223364e-05
+    },
+    {
+      "id": "REC_Pericardium",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500,
+      "signed_volume_m3": 3.660057336674072e-05
+    },
+    {
+      "id": "REC_fat",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 0.002590746385976672
+    },
+    {
+      "id": "REC_fascia",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 4000,
+      "signed_volume_m3": 0.0005379754002206028
+    },
+    {
+      "id": "REC_Right_Phrenic_nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 9.837999641604256e-07
+    },
+    {
+      "id": "REC_Right_Vagus_nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 9.880529887595912e-07
+    },
+    {
+      "id": "REC_Right_Sympathetic_trunk",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.1143881692987634e-06
+    },
+    {
+      "id": "REC_Right_IC1_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.8971989845795179e-07
+    },
+    {
+      "id": "REC_Right_IC1_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.2424283113432466e-07
+    },
+    {
+      "id": "REC_Right_IC1_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.897201968859008e-07
+    },
+    {
+      "id": "REC_Right_IC2_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.426766852498986e-07
+    },
+    {
+      "id": "REC_Right_IC2_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 2.2246000241921138e-07
+    },
+    {
+      "id": "REC_Right_IC2_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.426783052873361e-07
+    },
+    {
+      "id": "REC_Right_IC3_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.708655580998311e-07
+    },
+    {
+      "id": "REC_Right_IC3_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.065348721520422e-07
+    },
+    {
+      "id": "REC_Right_IC3_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.708653875695745e-07
+    },
+    {
+      "id": "REC_Right_IC4_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.306533239490818e-07
+    },
+    {
+      "id": "REC_Right_IC4_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.4037020668620244e-07
+    },
+    {
+      "id": "REC_Right_IC4_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.30649572283437e-07
+    },
+    {
+      "id": "REC_Right_IC5_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.738233426200168e-07
+    },
+    {
+      "id": "REC_Right_IC5_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.6702010675071506e-07
+    },
+    {
+      "id": "REC_Right_IC5_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.73523891489458e-07
+    },
+    {
+      "id": "REC_Right_IC6_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.036638637851865e-07
+    },
+    {
+      "id": "REC_Right_IC6_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 3.9268505247491703e-07
+    },
+    {
+      "id": "REC_Right_IC6_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.036656827745901e-07
+    },
+    {
+      "id": "REC_Right_IC7_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.978929493721807e-07
+    },
+    {
+      "id": "REC_Right_IC7_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 3.893487985351385e-07
+    },
+    {
+      "id": "REC_Right_IC7_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.978901640446566e-07
+    },
+    {
+      "id": "REC_Right_IC8_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.585682743003417e-07
+    },
+    {
+      "id": "REC_Right_IC8_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 3.6152917459730816e-07
+    },
+    {
+      "id": "REC_Right_IC8_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.582843982665509e-07
+    },
+    {
+      "id": "REC_Right_IC9_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.771346198140236e-07
+    },
+    {
+      "id": "REC_Right_IC9_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.1169068392955523e-07
+    },
+    {
+      "id": "REC_Right_IC9_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.771243311552098e-07
+    },
+    {
+      "id": "REC_Right_IC10_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.746607373817824e-07
+    },
+    {
+      "id": "REC_Right_IC10_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.1018456070341927e-07
+    },
+    {
+      "id": "REC_Right_IC10_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.746814283862477e-07
+    },
+    {
+      "id": "REC_Right_IC11_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.06973100552932e-07
+    },
+    {
+      "id": "REC_Right_IC11_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 2.623587533889804e-07
+    },
+    {
+      "id": "REC_Right_IC11_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.0697025838198897e-07
+    },
+    {
+      "id": "REC_Left_Phrenic_nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 9.837984862315352e-07
+    },
+    {
+      "id": "REC_Left_Vagus_nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 9.880544666884816e-07
+    },
+    {
+      "id": "REC_Left_Sympathetic_trunk",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.1143885103592766e-06
+    },
+    {
+      "id": "REC_Left_IC1_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.8313430416583287e-07
+    },
+    {
+      "id": "REC_Left_IC1_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.1986146830622602e-07
+    },
+    {
+      "id": "REC_Left_IC1_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 1.831334799362594e-07
+    },
+    {
+      "id": "REC_Left_IC2_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.7180271306169743e-07
+    },
+    {
+      "id": "REC_Left_IC2_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 2.400405492153368e-07
+    },
+    {
+      "id": "REC_Left_IC2_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.7180384993007465e-07
+    },
+    {
+      "id": "REC_Left_IC3_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.368000870475953e-07
+    },
+    {
+      "id": "REC_Left_IC3_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.408644886349066e-07
+    },
+    {
+      "id": "REC_Left_IC3_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.366354685065744e-07
+    },
+    {
+      "id": "REC_Left_IC4_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.66969390547456e-07
+    },
+    {
+      "id": "REC_Left_IC4_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.674475408388389e-07
+    },
+    {
+      "id": "REC_Left_IC4_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.669698452948069e-07
+    },
+    {
+      "id": "REC_Left_IC5_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.040556629865023e-07
+    },
+    {
+      "id": "REC_Left_IC5_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.25813431345523e-07
+    },
+    {
+      "id": "REC_Left_IC5_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 5.040523660682084e-07
+    },
+    {
+      "id": "REC_Left_IC6_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.436658281927521e-07
+    },
+    {
+      "id": "REC_Left_IC6_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 4.1646129034234036e-07
+    },
+    {
+      "id": "REC_Left_IC6_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.403157044587715e-07
+    },
+    {
+      "id": "REC_Left_IC7_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.518586701531603e-07
+    },
+    {
+      "id": "REC_Left_IC7_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 4.153887402935652e-07
+    },
+    {
+      "id": "REC_Left_IC7_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 6.51617028779583e-07
+    },
+    {
+      "id": "REC_Left_IC8_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.405835850069707e-07
+    },
+    {
+      "id": "REC_Left_IC8_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 3.4599369769239274e-07
+    },
+    {
+      "id": "REC_Left_IC8_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 398,
+      "signed_volume_m3": 5.405838123806461e-07
+    },
+    {
+      "id": "REC_Left_IC9_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.885084763373015e-07
+    },
+    {
+      "id": "REC_Left_IC9_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.190619111137494e-07
+    },
+    {
+      "id": "REC_Left_IC9_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.885144448962819e-07
+    },
+    {
+      "id": "REC_Left_IC10_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.864188554165594e-07
+    },
+    {
+      "id": "REC_Left_IC10_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.1540466238766385e-07
+    },
+    {
+      "id": "REC_Left_IC10_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 4.863982780989318e-07
+    },
+    {
+      "id": "REC_Left_IC11_Nerve",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.880317933635524e-07
+    },
+    {
+      "id": "REC_Left_IC11_Artery",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 2.4336944193237287e-07
+    },
+    {
+      "id": "REC_Left_IC11_Vein",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 400,
+      "signed_volume_m3": 3.8804031987638155e-07
+    },
+    {
+      "id": "REC_ThoracicDuct",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 524,
+      "signed_volume_m3": 9.684722499514464e-07
+    },
+    {
+      "id": "REC_right_costal_cartilage_8",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 9.792656783247367e-07
+    },
+    {
+      "id": "REC_right_costal_cartilage_9",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 1.4557150507243932e-06
+    },
+    {
+      "id": "REC_right_costal_cartilage_10",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 1.2486535752032069e-06
+    },
+    {
+      "id": "REC_right_costal_cartilage_11",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 20,
+      "signed_volume_m3": 1.0669916861161255e-07
+    },
+    {
+      "id": "REC_right_costal_cartilage_12",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 20,
+      "signed_volume_m3": 1.0669914018990312e-07
+    },
+    {
+      "id": "REC_left_costal_cartilage_8",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 9.775991429705755e-07
+    },
+    {
+      "id": "REC_left_costal_cartilage_9",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 1.4585834833269473e-06
+    },
+    {
+      "id": "REC_left_costal_cartilage_10",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 248,
+      "signed_volume_m3": 1.232023009833938e-06
+    },
+    {
+      "id": "REC_left_costal_cartilage_11",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 20,
+      "signed_volume_m3": 1.0669918282246726e-07
+    },
+    {
+      "id": "REC_left_costal_cartilage_12",
+      "reference_region": false,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 20,
+      "signed_volume_m3": 1.0669914018990312e-07
+    },
+    {
+      "id": "FMA11359",
+      "reference_region": true,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 7620,
+      "signed_volume_m3": 1.048364879352448e-07
+    },
+    {
+      "id": "FMA9465",
+      "reference_region": true,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 3720,
+      "signed_volume_m3": 7.289235526286575e-08
+    },
+    {
+      "id": "FMA9291",
+      "reference_region": true,
+      "native_status": 1,
+      "message": "Target is not a closed, oriented tissue volume. Original preserved.",
+      "triangles": 6708,
+      "signed_volume_m3": 1.0150089480021052e-07
+    },
+    {
+      "id": "FMA9466",
+      "reference_region": true,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 5900,
+      "signed_volume_m3": 8.780576621347791e-08
+    },
+    {
+      "id": "REGION_InterventricularSeptum",
+      "reference_region": true,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 40,
+      "signed_volume_m3": 6.651149409009349e-09
+    },
+    {
+      "id": "REGION_InteratrialSeptum",
+      "reference_region": true,
+      "native_status": 2,
+      "message": "No material intersected.",
+      "triangles": 40,
+      "signed_volume_m3": 6.6510152940679745e-09
+    }
+  ],
+  "closed_accepted_tissue": 243,
+  "total_tissue": 243,
+  "annotation_count": 6,
+  "total": 249
+}

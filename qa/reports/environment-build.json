@@ -1,0 +1,29 @@
+{
+  "master": "blender/Laboratory_MASTER.blend",
+  "export": "exports/Laboratory.fbx",
+  "original_authoring": true,
+  "reference": "user-supplied laboratory photograph",
+  "room_metres": [
+    12,
+    9,
+    3
+  ],
+  "renderers": 16,
+  "triangles": 112408,
+  "materials": [
+    "Wall",
+    "Floor",
+    "Stainless",
+    "DarkSteel",
+    "Cloth",
+    "Blue",
+    "Ceiling",
+    "Wood",
+    "Glass",
+    "Black",
+    "White",
+    "Red",
+    "Light",
+    "Sign"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "archive_crc_validated": true,
+  "archive_sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+  "archive_bytes": 142903898,
+  "extracted_obj_count": 2234,
+  "selected_record_count": 152,
+  "selected_unique_elements": 488,
+  "source_triangles_before_optimization": 1607418,
+  "selected_bytes_match_archive": true,
+  "all_manifest_hashes_verified": true,
+  "duplicate_assignments": 0,
+  "anatomical_validation_complete": false,
+  "missing_group_count": 14
+}

@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "dataset": "Mauritanian Anatomy Laboratory Thoracic Atlas, January 2021",
+  "publisher_page": "https://www.openanatomy.org/atlas-pages/atlas-mauritania-thorax.html",
+  "atlas_structure_url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/atlasStructure.json",
+  "license_url": "https://www.openanatomy.org/atlas-pages/slicer-license.html#PART-B",
+  "notice": "All or portions of this licensed product (such portions are the “Software”) have been obtained under license from The Brigham and Women’s Hospital, Inc. and are subject to the following terms and conditions:",
+  "required_license_copy": "LICENSE-AND-NOTICE.txt (publisher Section B plus Section C retained)",
+  "authors": [
+    "Haythem Guermazi",
+    "Ahmedou Moulaye IDRISS",
+    "Tfeil Yahya"
+  ],
+  "source_specimen": "38-year-old male; independent CT-derived specimen, not BodyParts3D",
+  "registration_status": "Original coordinates retained; no registration to BodyParts3D performed",
+  "sources": [
+    {
+      "atlas_source_id": "#_id3",
+      "path": "Data/Segmentation-flattened.seg.nrrd",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/Data/Segmentation-flattened.seg.nrrd",
+      "source_name": "Segmentation-flattened.seg",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 2187577,
+      "sha256": "54dadbf6c85038223e95231077e9f5ca758b7de10d7d822b2ed3753f030ea731"
+    },
+    {
+      "atlas_source_id": "#superior_lobe_of_right_lung_Model",
+      "path": "models/superior lobe of right lung.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/superior%20lobe%20of%20right%20lung.vtk",
+      "source_name": "superior lobe of right lung",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 941316,
+      "sha256": "d7c970c3b282cffccbbc6493bc4ffb1df17ba3c062c5e6f3cc1f1097de3fb72a"
+    },
+    {
+      "atlas_source_id": "#aorta_Model",
+      "path": "models/aorta.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/aorta.vtk",
+      "source_name": "aorta",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 789415,
+      "sha256": "60a5d15c266da1e028d537984a25e87272feca98f5759039a56ca733e4703e33"
+    },
+    {
+      "atlas_source_id": "#pulmonary_arteries_Model",
+      "path": "models/pulmonary arteries.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/pulmonary%20arteries.vtk",
+      "source_name": "pulmonary arteries",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 463284,
+      "sha256": "ad1e316fc6cc45e67fa52efaf44b264f8da4c0b84c8b9794e9e0ab97137c25b7"
+    },
+    {
+      "atlas_source_id": "#middle_lobe_of_right_lung_Model",
+      "path": "models/middle lobe of right lung.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/middle%20lobe%20of%20right%20lung.vtk",
+      "source_name": "middle lobe of right lung",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 423375,
+      "sha256": "159a374c6df89faa811b57ea6696f3ad07abaee529e8d93955833bfe14e9016a"
+    },
+    {
+      "atlas_source_id": "#esophagus_Model",
+      "path": "models/esophagus.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/esophagus.vtk",
+      "source_name": "esophagus",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 186000,
+      "sha256": "52930a258e5dbfec3b3815d8531c5e6091ef44fdd76f39164c941db71494fb4a"
+    },
+    {
+      "atlas_source_id": "#manubrium_of_sternum_Model",
+      "path": "models/manubrium of sternum.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/manubrium%20of%20sternum.vtk",
+      "source_name": "manubrium of sternum",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 97082,
+      "sha256": "a94f13a5bf7568d41eccc21dc8c875c2046e512361a1d4193c8fd0102a212178"
+    },
+    {
+      "atlas_source_id": "#body_of_sternum_Model",
+      "path": "models/body of sternum.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/body%20of%20sternum.vtk",
+      "source_name": "body of sternum",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 145677,
+      "sha256": "88a536def67cc5ab95c2cbd93129fcb79478e8d158ceb051071c1d7e44af6924"
+    },
+    {
+      "atlas_source_id": "#xiphoid_process_Model",
+      "path": "models/xiphoid process.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/xiphoid%20process.vtk",
+      "source_name": "xiphoid process",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 19835,
+      "sha256": "0b2b02ae0159b0cf9ec1bee1b932763d31a751ea201ed714624db38720ca70d6"
+    },
+    {
+      "atlas_source_id": "#ribs_Model",
+      "path": "models/ribs.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/ribs.vtk",
+      "source_name": "ribs",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 4623829,
+      "sha256": "b56c1c17a395df68e77c7da643a22995e3d4e7d243a59ed76bf5e4ad45ba9f02"
+    },
+    {
+      "atlas_source_id": "#inferior_lobe_of_right_lung_Model",
+      "path": "models/inferior lobe of right lung.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/inferior%20lobe%20of%20right%20lung.vtk",
+      "source_name": "inferior lobe of right lung",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 907856,
+      "sha256": "9d7b58bab62a03a75a0524bf534510c6eaf94ded3beaf365f3b235fcc266f6ff"
+    },
+    {
+      "atlas_source_id": "#vertebra_Model",
+      "path": "models/vertebra.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/vertebra.vtk",
+      "source_name": "vertebra",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 1735501,
+      "sha256": "778d319df7486288bac4d82d31c2003266a18d4044dace841fa326d57ff46d33"
+    },
+    {
+      "atlas_source_id": "#heart_Model",
+      "path": "models/heart.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/heart.vtk",
+      "source_name": "heart",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 813340,
+      "sha256": "1bf6d7699af785d0a20501179a5f8cbb31e705f310ae8b3487e79e4285ff851d"
+    },
+    {
+      "atlas_source_id": "#pulmonary_veins_Model",
+      "path": "models/pulmonary veins.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/pulmonary%20veins.vtk",
+      "source_name": "pulmonary veins",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 735859,
+      "sha256": "f134f62a96f19629e9b262a0330de381ff108f96e3b31f82dfdecebd8c429d5f"
+    },
+    {
+      "atlas_source_id": "#superior_lobe_of_left_lung_Model",
+      "path": "models/superior lobe of left lung.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/superior%20lobe%20of%20left%20lung.vtk",
+      "source_name": "superior lobe of left lung",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 975981,
+      "sha256": "5884dea72556c084ac413996bd5c90068c10e1d556b19c0bee4333503f8e1cb7"
+    },
+    {
+      "atlas_source_id": "#inferior_lobe_of_left_lung_Model",
+      "path": "models/inferior lobe of left lung.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/inferior%20lobe%20of%20left%20lung.vtk",
+      "source_name": "inferior lobe of left lung",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 1012608,
+      "sha256": "6ded3642eae835913445536322f402f401d80796250fb1410e1185ec23ec84da"
+    },
+    {
+      "atlas_source_id": "#trachea_Model",
+      "path": "models/trachea.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/trachea.vtk",
+      "source_name": "trachea",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 81213,
+      "sha256": "d548500ad714ed35ebf05840ae232b753c94d64a451f93e8bd54014f0d9d7072"
+    },
+    {
+      "atlas_source_id": "#carina_of_trachea_Model",
+      "path": "models/carina of trachea.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/carina%20of%20trachea.vtk",
+      "source_name": "carina of trachea",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 15786,
+      "sha256": "bfeb94c3283da1e55acb197e09631c71701659ee0f1dee842cc229e17d7c4587"
+    },
+    {
+      "atlas_source_id": "#main_bronchi_Model",
+      "path": "models/main bronchi.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/main%20bronchi.vtk",
+      "source_name": "main bronchi",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 63806,
+      "sha256": "1964e6c937165e2dc82744c50040f791b32bb9799d7984a7aa7ba6ba718057af"
+    },
+    {
+      "atlas_source_id": "#lobar_bronchi_Model",
+      "path": "models/lobar bronchi.vtk",
+      "url": "https://www.openanatomy.org/atlases/macbioidi/mauritania/thorax-2020-11-15/models/lobar%20bronchi.vtk",
+      "source_name": "lobar bronchi",
+      "license": "3D Slicer License Section B",
+      "acquired_utc": "2026-09-05T19:30:49Z",
+      "coordinates_modified": false,
+      "status": "acquired",
+      "bytes": 20466,
+      "sha256": "07f78560fc3a6a7f7a04ad44bb0149b681433b8f97132b0d7fb9c2ed288e7549"
+    }
+  ],
+  "notice_sha256": "5260428491c2fe571c710b30420b865dc2455fec9e644cd681adf0c11086272d",
+  "metadata_files": [
+    {
+      "path": "atlasStructure.json",
+      "sha256": "dab34fb95ffdb9c971078cb75661094638b50a4be0dab6cd566edf5772dd9e1f"
+    },
+    {
+      "path": "viewer.html",
+      "sha256": "cefb10cc9912a498d7e80c4a969f2a8188543c8f0b9e6725463db0ed0c693383"
+    },
+    {
+      "path": "configAtlasViewer-default.js",
+      "sha256": "3f440de7dcb6497fb6514398fb6693b77c1f6afd722c7223710c65886fcef078"
+    },
+    {
+      "path": "slicer-license.html",
+      "sha256": "fb74b4753e822915adbe03ffae18e03529a669994ac2f58c45ceb981cc75c1da"
+    },
+    {
+      "path": "mal-thoracic-atlas.html",
+      "sha256": "e45c5c46924a868e8f231a76e7926c8f3fcac827af5f733c9b3a49a0e29d2dd2"
+    }
+  ]
+}

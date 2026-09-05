@@ -1,0 +1,4903 @@
+{
+  "samples_in_region": 408,
+  "empty_samples": 408,
+  "samples": [
+    {
+      "id": "FMA7394",
+      "mesh": "FJ2541",
+      "source_sample_mm": [
+        -0.7030171267083807,
+        -88.2879172461046,
+        1309.887705197052
+      ],
+      "inside_region": true,
+      "production_winding": 1.2147951908367598e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA7394",
+      "mesh": "FJ2541",
+      "source_sample_mm": [
+        -0.7796656131175697,
+        -92.24124198635096,
+        1329.5191868490676
+      ],
+      "inside_region": true,
+      "production_winding": -6.184411880623505e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7394",
+      "mesh": "FJ2541",
+      "source_sample_mm": [
+        -0.7294400296143078,
+        -95.76387786614072,
+        1349.228120108496
+      ],
+      "inside_region": true,
+      "production_winding": 4.8591807633470396e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7394",
+      "mesh": "FJ2541",
+      "source_sample_mm": [
+        -0.7141730160747999,
+        -98.8481608362618,
+        1369.0152904504862
+      ],
+      "inside_region": true,
+      "production_winding": 1.0491413011772017e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA68418",
+      "mesh": "FJ2539",
+      "source_sample_mm": [
+        -41.15523730948934,
+        -70.91857996372707,
+        1226.3207272634736
+      ],
+      "inside_region": true,
+      "production_winding": 1.6565388965955818e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA68418",
+      "mesh": "FJ2539",
+      "source_sample_mm": [
+        -35.32510990506648,
+        -82.23198037978938,
+        1242.1160350397358
+      ],
+      "inside_region": true,
+      "production_winding": -3.975693351829396e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA68418",
+      "mesh": "FJ2539",
+      "source_sample_mm": [
+        -25.976045267689756,
+        -77.68616799686961,
+        1258.8205291394108
+      ],
+      "inside_region": true,
+      "production_winding": 5.742668174864683e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA68418",
+      "mesh": "FJ2539",
+      "source_sample_mm": [
+        -25.648651682340358,
+        -81.49889260254167,
+        1277.8366496471083
+      ],
+      "inside_region": true,
+      "production_winding": -4.417437057588218e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA7396",
+      "mesh": "FJ2450",
+      "source_sample_mm": [
+        18.906045351167222,
+        -78.48078611801405,
+        1275.6238553950259
+      ],
+      "inside_region": true,
+      "production_winding": -1.2037515981927892e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA7396",
+      "mesh": "FJ2450",
+      "source_sample_mm": [
+        31.059107337589353,
+        -74.79366539953169,
+        1263.063502479018
+      ],
+      "inside_region": true,
+      "production_winding": -7.50964299789997e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7396",
+      "mesh": "FJ2450",
+      "source_sample_mm": [
+        53.552438362659586,
+        -77.83234118844159,
+        1260.6598188777466
+      ],
+      "inside_region": true,
+      "production_winding": 3.423513719630869e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7396",
+      "mesh": "FJ2450",
+      "source_sample_mm": [
+        57.68653933916153,
+        -69.25030908205555,
+        1240.1476956273932
+      ],
+      "inside_region": true,
+      "production_winding": 5.521796321985272e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2453",
+      "source_sample_mm": [
+        -77.5297088576844,
+        -94.68404064402208,
+        1287.0210359457158
+      ],
+      "inside_region": true,
+      "production_winding": 2.802311633407526e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2453",
+      "source_sample_mm": [
+        -66.57860632155382,
+        -96.98929763210481,
+        1281.995742146735
+      ],
+      "inside_region": true,
+      "production_winding": -5.0800526162264503e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2453",
+      "source_sample_mm": [
+        -55.11027918346866,
+        -97.64641874849033,
+        1279.4091231373447
+      ],
+      "inside_region": true,
+      "production_winding": -2.8713340874323413e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2453",
+      "source_sample_mm": [
+        -43.693557847240754,
+        -93.96928557746548,
+        1278.146471554693
+      ],
+      "inside_region": true,
+      "production_winding": 5.0248346530065976e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2454",
+      "source_sample_mm": [
+        -34.54021061173387,
+        -81.14995167285599,
+        1295.3970050127182
+      ],
+      "inside_region": true,
+      "production_winding": -6.377674751892989e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2454",
+      "source_sample_mm": [
+        -37.61377189068486,
+        -83.87639474422514,
+        1306.092856399426
+      ],
+      "inside_region": true,
+      "production_winding": -5.0800526162264503e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2454",
+      "source_sample_mm": [
+        -40.13272931315112,
+        -87.85147666113443,
+        1316.489394634184
+      ],
+      "inside_region": true,
+      "production_winding": -1.2258387834807303e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2454",
+      "source_sample_mm": [
+        -42.585132618043986,
+        -92.14852166495717,
+        1326.787480511314
+      ],
+      "inside_region": true,
+      "production_winding": -1.137490042328966e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2458",
+      "source_sample_mm": [
+        -66.79158257385012,
+        -48.841645496065894,
+        1298.2321921008029
+      ],
+      "inside_region": true,
+      "production_winding": 5.756472665669647e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2458",
+      "source_sample_mm": [
+        -61.51286861584077,
+        -56.52505749451808,
+        1289.1635739755773
+      ],
+      "inside_region": true,
+      "production_winding": 1.0353368103722386e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2458",
+      "source_sample_mm": [
+        -53.108899581249545,
+        -65.4640237997263,
+        1284.667268638233
+      ],
+      "inside_region": true,
+      "production_winding": 1.2644913577346273e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2458",
+      "source_sample_mm": [
+        -43.215156303812535,
+        -74.32081074386491,
+        1281.6636845484672
+      ],
+      "inside_region": true,
+      "production_winding": 5.880713082914315e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2509",
+      "source_sample_mm": [
+        -35.750968849347544,
+        -137.93678970366804,
+        1267.7212316881332
+      ],
+      "inside_region": true,
+      "production_winding": 2.8713340874323413e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2509",
+      "source_sample_mm": [
+        -39.753899240324316,
+        -128.85896982141378,
+        1271.53038614623
+      ],
+      "inside_region": true,
+      "production_winding": 5.659841230034904e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2509",
+      "source_sample_mm": [
+        -43.96043880837978,
+        -119.58755388150519,
+        1274.5540945857242
+      ],
+      "inside_region": true,
+      "production_winding": -6.322456788673137e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2509",
+      "source_sample_mm": [
+        -46.7417341444436,
+        -109.49733952646392,
+        1276.7089948542216
+      ],
+      "inside_region": true,
+      "production_winding": 1.0877938754310986e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2510",
+      "source_sample_mm": [
+        -85.52496500459563,
+        -98.85786855028621,
+        1275.9179733669755
+      ],
+      "inside_region": true,
+      "production_winding": 1.870508504072511e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2510",
+      "source_sample_mm": [
+        -81.31004956224638,
+        -99.76600721946818,
+        1277.9432483715038
+      ],
+      "inside_region": true,
+      "production_winding": 3.810039462169838e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2510",
+      "source_sample_mm": [
+        -76.99187393745035,
+        -99.68837005968427,
+        1279.6153037239446
+      ],
+      "inside_region": true,
+      "production_winding": 2.8713340874323413e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2510",
+      "source_sample_mm": [
+        -72.56877951406886,
+        -98.63298644520567,
+        1280.9305646103455
+      ],
+      "inside_region": true,
+      "production_winding": 1.2424041724466862e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2511",
+      "source_sample_mm": [
+        -80.639792218053,
+        -104.01378158840504,
+        1273.5327188873262
+      ],
+      "inside_region": true,
+      "production_winding": -9.37324925657e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2511",
+      "source_sample_mm": [
+        -80.02812888763685,
+        -102.95865604662765,
+        1275.0563216509574
+      ],
+      "inside_region": true,
+      "production_winding": 3.527047400668093e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2511",
+      "source_sample_mm": [
+        -79.28179976243217,
+        -101.92007564182063,
+        1276.520155689011
+      ],
+      "inside_region": true,
+      "production_winding": -2.0430646391345506e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2511",
+      "source_sample_mm": [
+        -78.36960657417188,
+        -100.91345557857454,
+        1277.9190372163298
+      ],
+      "inside_region": true,
+      "production_winding": 4.9420077081768186e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2512",
+      "source_sample_mm": [
+        -31.79695152454115,
+        -139.61564380402805,
+        1266.1092402822387
+      ],
+      "inside_region": true,
+      "production_winding": 2.999025627378251e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2512",
+      "source_sample_mm": [
+        -29.107503896294723,
+        -139.6128716823359,
+        1265.747037717624
+      ],
+      "inside_region": true,
+      "production_winding": -1.732463596022879e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2512",
+      "source_sample_mm": [
+        -26.415026895360633,
+        -139.61648777425344,
+        1265.700311530545
+      ],
+      "inside_region": true,
+      "production_winding": 5.466578358765419e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2512",
+      "source_sample_mm": [
+        -23.719732547891105,
+        -139.6186776048216,
+        1265.9608968905652
+      ],
+      "inside_region": true,
+      "production_winding": -4.8074139228284276e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2513",
+      "source_sample_mm": [
+        -50.8961969645147,
+        -142.1523369663558,
+        1266.1870885925223
+      ],
+      "inside_region": true,
+      "production_winding": 3.666817870068345e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2513",
+      "source_sample_mm": [
+        -47.53554456179927,
+        -139.56790251672902,
+        1268.7215628999263
+      ],
+      "inside_region": true,
+      "production_winding": 1.2838176448615758e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2513",
+      "source_sample_mm": [
+        -44.860155190868994,
+        -136.0526788332765,
+        1270.4759950165512
+      ],
+      "inside_region": true,
+      "production_winding": 4.7763538185172605e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2513",
+      "source_sample_mm": [
+        -42.81820758738559,
+        -131.71401327144565,
+        1271.580522857732
+      ],
+      "inside_region": true,
+      "production_winding": 4.762549327712297e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2514",
+      "source_sample_mm": [
+        -46.62029844615313,
+        -137.18099816959352,
+        1281.6471356344612
+      ],
+      "inside_region": true,
+      "production_winding": 7.281868899618078e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2514",
+      "source_sample_mm": [
+        -45.21452529672811,
+        -134.58188093663807,
+        1278.7691647545587
+      ],
+      "inside_region": true,
+      "production_winding": -9.46297844680226e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2514",
+      "source_sample_mm": [
+        -44.0297392386411,
+        -131.5360041388875,
+        1276.4135143172305
+      ],
+      "inside_region": true,
+      "production_winding": 8.075627120903461e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2514",
+      "source_sample_mm": [
+        -43.146591704461116,
+        -127.88067056308296,
+        1274.7703097485696
+      ],
+      "inside_region": true,
+      "production_winding": 2.291545473623888e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2515",
+      "source_sample_mm": [
+        -78.3797282728965,
+        -52.75726407270314,
+        1284.5086044676036
+      ],
+      "inside_region": true,
+      "production_winding": 8.054920384696016e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2515",
+      "source_sample_mm": [
+        -71.05341408766103,
+        -58.42385053529664,
+        1282.6942788496399
+      ],
+      "inside_region": true,
+      "production_winding": 4.003302333439323e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2515",
+      "source_sample_mm": [
+        -63.34519065634868,
+        -63.6932961511847,
+        1281.930953505932
+      ],
+      "inside_region": true,
+      "production_winding": 1.3597423442888732e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2515",
+      "source_sample_mm": [
+        -55.11712811044069,
+        -68.27544081221673,
+        1281.764348670113
+      ],
+      "inside_region": true,
+      "production_winding": 1.6565388965955816e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2516",
+      "source_sample_mm": [
+        -93.56798258953965,
+        -66.69288493466598,
+        1283.485678848378
+      ],
+      "inside_region": true,
+      "production_winding": -3.910122020505821e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2516",
+      "source_sample_mm": [
+        -89.25682456628692,
+        -64.23016311798459,
+        1284.05937012117
+      ],
+      "inside_region": true,
+      "production_winding": 4.6314066650651474e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2516",
+      "source_sample_mm": [
+        -85.26034908607812,
+        -61.33321907238028,
+        1284.4422820588677
+      ],
+      "inside_region": true,
+      "production_winding": -6.55713313235751e-19,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2516",
+      "source_sample_mm": [
+        -81.732176554218,
+        -57.79068463710765,
+        1284.5471909347991
+      ],
+      "inside_region": true,
+      "production_winding": -4.845376272542076e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2517",
+      "source_sample_mm": [
+        -76.2475820737393,
+        -48.454464820376636,
+        1316.9087347257273
+      ],
+      "inside_region": true,
+      "production_winding": 2.2777409828189248e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2517",
+      "source_sample_mm": [
+        -74.24919119763842,
+        -48.43155127108966,
+        1315.9568981873247
+      ],
+      "inside_region": true,
+      "production_winding": -2.933454296054676e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2517",
+      "source_sample_mm": [
+        -72.40087020445753,
+        -48.36944868674068,
+        1314.766610391239
+      ],
+      "inside_region": true,
+      "production_winding": 9.221399857715405e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2517",
+      "source_sample_mm": [
+        -70.67985775289299,
+        -48.26358936287207,
+        1313.3747597954011
+      ],
+      "inside_region": true,
+      "production_winding": -1.4301452473941854e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2518",
+      "source_sample_mm": [
+        -67.17909999695485,
+        -46.08767243300008,
+        1304.6435412832425
+      ],
+      "inside_region": true,
+      "production_winding": -6.63996007718729e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2518",
+      "source_sample_mm": [
+        -66.61686849156021,
+        -44.82920464372154,
+        1305.898035809386
+      ],
+      "inside_region": true,
+      "production_winding": 1.1561261049156664e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2518",
+      "source_sample_mm": [
+        -66.01583893036346,
+        -43.448508760545224,
+        1306.9524686328664
+      ],
+      "inside_region": true,
+      "production_winding": -2.360567927648704e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2518",
+      "source_sample_mm": [
+        -65.35418224666142,
+        -41.91270134279097,
+        1307.746086225758
+      ],
+      "inside_region": true,
+      "production_winding": 1.3307529135984505e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2519",
+      "source_sample_mm": [
+        -78.88037051078875,
+        -50.60497584899156,
+        1284.7089131838172
+      ],
+      "inside_region": true,
+      "production_winding": -7.599372188132231e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2519",
+      "source_sample_mm": [
+        -79.50246778523277,
+        -48.50202754334933,
+        1284.8602658356106
+      ],
+      "inside_region": true,
+      "production_winding": -1.424278338802076e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2519",
+      "source_sample_mm": [
+        -79.90373203412886,
+        -46.36702359246904,
+        1284.7702799065796
+      ],
+      "inside_region": true,
+      "production_winding": 8.762400538450379e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2519",
+      "source_sample_mm": [
+        -80.12687493249523,
+        -44.20747322090163,
+        1284.4603027770224
+      ],
+      "inside_region": true,
+      "production_winding": 1.905019731084919e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2520",
+      "source_sample_mm": [
+        -35.31383831722658,
+        -80.2080582327145,
+        1310.3510900042759
+      ],
+      "inside_region": true,
+      "production_winding": -1.987846675914698e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2520",
+      "source_sample_mm": [
+        -34.811225690336755,
+        -78.82269769657455,
+        1318.6814053203345
+      ],
+      "inside_region": true,
+      "production_winding": 3.4787316828507216e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2520",
+      "source_sample_mm": [
+        -34.304992434707316,
+        -77.0984794455365,
+        1326.864918081842
+      ],
+      "inside_region": true,
+      "production_winding": 5.38375141393564e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2520",
+      "source_sample_mm": [
+        -32.81973670090531,
+        -72.69375630243752,
+        1333.717427508894
+      ],
+      "inside_region": true,
+      "production_winding": 1.5184939885459497e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2521",
+      "source_sample_mm": [
+        -34.52311369806128,
+        -77.89006603055961,
+        1327.8339740545498
+      ],
+      "inside_region": true,
+      "production_winding": -7.316380126630485e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2521",
+      "source_sample_mm": [
+        -34.648518934754804,
+        -77.537247622519,
+        1332.4440000822167
+      ],
+      "inside_region": true,
+      "production_winding": 8.213672028953093e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2521",
+      "source_sample_mm": [
+        -35.228773008336645,
+        -77.04108701549941,
+        1336.9394076511094
+      ],
+      "inside_region": true,
+      "production_winding": -5.1421728248487845e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2521",
+      "source_sample_mm": [
+        -36.67991896603618,
+        -76.08147189949833,
+        1341.186061064933
+      ],
+      "inside_region": true,
+      "production_winding": 2.678071216162857e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2522",
+      "source_sample_mm": [
+        -40.03351370442999,
+        -110.80079937118461,
+        1321.757287937534
+      ],
+      "inside_region": true,
+      "production_winding": 4.762549327712297e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2522",
+      "source_sample_mm": [
+        -40.34635967856335,
+        -105.52089165820232,
+        1320.9348021726366
+      ],
+      "inside_region": true,
+      "production_winding": -7.040290310531222e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2522",
+      "source_sample_mm": [
+        -40.291286618603884,
+        -100.30393097360849,
+        1319.7013879341805
+      ],
+      "inside_region": true,
+      "production_winding": -2.967965523067084e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2522",
+      "source_sample_mm": [
+        -40.21100360026429,
+        -95.05498863643581,
+        1318.6533435762262
+      ],
+      "inside_region": true,
+      "production_winding": 9.166181894495552e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2523",
+      "source_sample_mm": [
+        -45.77392549982926,
+        -107.271187157317,
+        1326.2800418405589
+      ],
+      "inside_region": true,
+      "production_winding": -1.376307733254829e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2523",
+      "source_sample_mm": [
+        -44.62107372930882,
+        -108.05998430317138,
+        1325.037238136177
+      ],
+      "inside_region": true,
+      "production_winding": -7.799537304804198e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2523",
+      "source_sample_mm": [
+        -43.32571308578679,
+        -108.5251948727886,
+        1323.8337981787772
+      ],
+      "inside_region": true,
+      "production_winding": -6.750396003626995e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2523",
+      "source_sample_mm": [
+        -41.860978975638204,
+        -108.55737939943452,
+        1322.6600799458238
+      ],
+      "inside_region": true,
+      "production_winding": 2.3536656822462222e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2524",
+      "source_sample_mm": [
+        -44.25007622835906,
+        -94.10444190151395,
+        1334.6832545440275
+      ],
+      "inside_region": true,
+      "production_winding": 3.685799044925169e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2524",
+      "source_sample_mm": [
+        -44.152125525556244,
+        -92.42135587077121,
+        1336.3324974375564
+      ],
+      "inside_region": true,
+      "production_winding": 8.710633697931767e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2524",
+      "source_sample_mm": [
+        -43.785923836663216,
+        -90.84970087346312,
+        1338.0221965825845
+      ],
+      "inside_region": true,
+      "production_winding": -3.879061916194654e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2524",
+      "source_sample_mm": [
+        -43.137133546006226,
+        -89.44222021497046,
+        1339.7968860093963
+      ],
+      "inside_region": true,
+      "production_winding": 1.3680250387718513e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2525",
+      "source_sample_mm": [
+        -31.366239140288315,
+        -70.52996865454793,
+        1337.0140397351042
+      ],
+      "inside_region": true,
+      "production_winding": -3.2095441121539395e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2525",
+      "source_sample_mm": [
+        -30.948710602245683,
+        -70.35602330494237,
+        1338.6860361164443
+      ],
+      "inside_region": true,
+      "production_winding": 3.38555136991722e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2525",
+      "source_sample_mm": [
+        -30.621872084380357,
+        -69.88063735651593,
+        1340.2600857668253
+      ],
+      "inside_region": true,
+      "production_winding": 8.389679286716373e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2525",
+      "source_sample_mm": [
+        -30.503800475572945,
+        -68.95859774687347,
+        1341.7021690377626
+      ],
+      "inside_region": true,
+      "production_winding": 4.659015646675074e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2526",
+      "source_sample_mm": [
+        -35.43916701312588,
+        -77.98700428428157,
+        1341.070319814918
+      ],
+      "inside_region": true,
+      "production_winding": 3.302724425087441e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2526",
+      "source_sample_mm": [
+        -35.00091704218329,
+        -79.1334777276968,
+        1342.4986439797615
+      ],
+      "inside_region": true,
+      "production_winding": 3.278566566178755e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2526",
+      "source_sample_mm": [
+        -34.432521344702764,
+        -80.0551351430513,
+        1344.0105880139809
+      ],
+      "inside_region": true,
+      "production_winding": 4.3415123581609204e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31744",
+      "mesh": "FJ2526",
+      "source_sample_mm": [
+        -33.674238279879546,
+        -80.67870766145813,
+        1345.6266530203957
+      ],
+      "inside_region": true,
+      "production_winding": -5.507991831180309e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2449",
+      "source_sample_mm": [
+        -87.04431465863718,
+        -125.89498973757978,
+        1202.6198661054711
+      ],
+      "inside_region": true,
+      "production_winding": -9.663143563474226e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2449",
+      "source_sample_mm": [
+        -70.1656274985653,
+        -117.29435806343665,
+        1211.277788321214
+      ],
+      "inside_region": true,
+      "production_winding": -7.123117255361001e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2449",
+      "source_sample_mm": [
+        -54.33411455922976,
+        -109.140528593688,
+        1221.8149693974556
+      ],
+      "inside_region": true,
+      "production_winding": -1.7117568598154344e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2449",
+      "source_sample_mm": [
+        -41.83497634768963,
+        -97.56198372989408,
+        1234.126888615071
+      ],
+      "inside_region": true,
+      "production_winding": -1.2424041724466862e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2451",
+      "source_sample_mm": [
+        -47.57164445544748,
+        -146.8267249109278,
+        1196.3463567384479
+      ],
+      "inside_region": true,
+      "production_winding": -1.2313605798027157e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2451",
+      "source_sample_mm": [
+        -51.57252121393959,
+        -136.61247980157486,
+        1205.895972151452
+      ],
+      "inside_region": true,
+      "production_winding": -9.93923337957349e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2451",
+      "source_sample_mm": [
+        -51.468260530477046,
+        -125.0084289263583,
+        1214.1116707708734
+      ],
+      "inside_region": true,
+      "production_winding": -1.2424041724466862e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2451",
+      "source_sample_mm": [
+        -48.84171645185036,
+        -113.29256958156884,
+        1222.3804588935677
+      ],
+      "inside_region": true,
+      "production_winding": -4.141347241488954e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2503",
+      "source_sample_mm": [
+        -92.96439372760713,
+        -139.78634817456725,
+        1192.5459916884888
+      ],
+      "inside_region": true,
+      "production_winding": -1.905019731084919e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2503",
+      "source_sample_mm": [
+        -91.97697643269288,
+        -136.39882520537623,
+        1194.5780809650587
+      ],
+      "inside_region": true,
+      "production_winding": -8.738242679541693e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2503",
+      "source_sample_mm": [
+        -90.84690284150474,
+        -133.18798903516466,
+        1196.8029949580925
+      ],
+      "inside_region": true,
+      "production_winding": -3.533949646070574e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2503",
+      "source_sample_mm": [
+        -89.61337532018248,
+        -130.1055310177685,
+        1199.1681150075692
+      ],
+      "inside_region": true,
+      "production_winding": -3.506340664460648e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2504",
+      "source_sample_mm": [
+        -101.10801592728103,
+        -103.98622306455323,
+        1229.0427027256992
+      ],
+      "inside_region": true,
+      "production_winding": -1.297277023396415e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2504",
+      "source_sample_mm": [
+        -91.52029535979705,
+        -105.8038668536286,
+        1226.1987592020278
+      ],
+      "inside_region": true,
+      "production_winding": 4.2690387814348635e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2504",
+      "source_sample_mm": [
+        -82.0194086210048,
+        -107.76543677254388,
+        1223.1370660386535
+      ],
+      "inside_region": true,
+      "production_winding": 3.90667089780458e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2504",
+      "source_sample_mm": [
+        -72.42462167281082,
+        -109.83257063308798,
+        1220.4971302355075
+      ],
+      "inside_region": true,
+      "production_winding": -2.0982826023544033e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2505",
+      "source_sample_mm": [
+        -103.44103632122528,
+        -98.41464058164695,
+        1233.2787547527446
+      ],
+      "inside_region": true,
+      "production_winding": -2.434767065725381e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2505",
+      "source_sample_mm": [
+        -101.52771960396427,
+        -99.64085092787434,
+        1232.0802045816238
+      ],
+      "inside_region": true,
+      "production_winding": -2.2432297558065168e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2505",
+      "source_sample_mm": [
+        -99.84765412712744,
+        -101.09614945997089,
+        1230.8231504746295
+      ],
+      "inside_region": true,
+      "production_winding": -1.8981174856824374e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2505",
+      "source_sample_mm": [
+        -98.38848930045236,
+        -102.77521822594332,
+        1229.5182311572214
+      ],
+      "inside_region": true,
+      "production_winding": 3.682347922223928e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2506",
+      "source_sample_mm": [
+        -67.22387835420659,
+        -156.9610671846533,
+        1206.1631456832274
+      ],
+      "inside_region": true,
+      "production_winding": 9.055745968055847e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2506",
+      "source_sample_mm": [
+        -60.27726418693183,
+        -150.29983173108513,
+        1206.3392147613276
+      ],
+      "inside_region": true,
+      "production_winding": -4.417437057588218e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2506",
+      "source_sample_mm": [
+        -55.655554702956245,
+        -142.4124307104843,
+        1208.1014134836182
+      ],
+      "inside_region": true,
+      "production_winding": 1.341796506242421e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2506",
+      "source_sample_mm": [
+        -52.90655259067834,
+        -133.53353371352506,
+        1211.114166434843
+      ],
+      "inside_region": true,
+      "production_winding": -9.442271710594816e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2507",
+      "source_sample_mm": [
+        -43.38215489509773,
+        -159.52502367789307,
+        1212.6662670304709
+      ],
+      "inside_region": true,
+      "production_winding": 2.374372418453667e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2507",
+      "source_sample_mm": [
+        -46.40223920729332,
+        -154.04146269737782,
+        1209.0180688147136
+      ],
+      "inside_region": true,
+      "production_winding": 1.380449080496318e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2507",
+      "source_sample_mm": [
+        -49.00627828829482,
+        -148.05867344793847,
+        1206.639115620761
+      ],
+      "inside_region": true,
+      "production_winding": -4.5278729840279234e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2507",
+      "source_sample_mm": [
+        -50.7222656604518,
+        -141.19950376475163,
+        1206.2897610822627
+      ],
+      "inside_region": true,
+      "production_winding": -8.834874115176436e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2508",
+      "source_sample_mm": [
+        -55.90047592596507,
+        -168.24978713103334,
+        1199.1229220977236
+      ],
+      "inside_region": true,
+      "production_winding": 7.50964299789997e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2508",
+      "source_sample_mm": [
+        -57.225672639780925,
+        -164.21103816628516,
+        1200.3935506057271
+      ],
+      "inside_region": true,
+      "production_winding": 7.067899292141149e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2508",
+      "source_sample_mm": [
+        -58.55088486266927,
+        -160.28408085799114,
+        1201.9542033078717
+      ],
+      "inside_region": true,
+      "production_winding": 8.614002262297024e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31741",
+      "mesh": "FJ2508",
+      "source_sample_mm": [
+        -59.87928676311455,
+        -156.44675407607946,
+        1203.744585307801
+      ],
+      "inside_region": true,
+      "production_winding": -5.742668174864683e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2452",
+      "source_sample_mm": [
+        -88.60572565560255,
+        -68.3011111922878,
+        1202.8262298170494
+      ],
+      "inside_region": true,
+      "production_winding": -6.170607389818541e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2452",
+      "source_sample_mm": [
+        -75.33017218929285,
+        -75.31442625723436,
+        1205.8897072026475
+      ],
+      "inside_region": true,
+      "production_winding": -3.34068677480109e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2452",
+      "source_sample_mm": [
+        -62.82255182436819,
+        -77.84915312316981,
+        1212.4750572881903
+      ],
+      "inside_region": true,
+      "production_winding": -8.42073939102754e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2452",
+      "source_sample_mm": [
+        -51.033676428430965,
+        -76.6819695638425,
+        1222.1307684075937
+      ],
+      "inside_region": true,
+      "production_winding": 3.064596958701826e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2455",
+      "source_sample_mm": [
+        -95.93323598884979,
+        -69.1453387052442,
+        1163.7813079960595
+      ],
+      "inside_region": true,
+      "production_winding": -4.162053977696399e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2455",
+      "source_sample_mm": [
+        -81.82172764143183,
+        -65.12494119892996,
+        1177.7196911672918
+      ],
+      "inside_region": true,
+      "production_winding": -4.417437057588218e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2455",
+      "source_sample_mm": [
+        -66.69119740083022,
+        -65.21612592740178,
+        1190.8817837394868
+      ],
+      "inside_region": true,
+      "production_winding": -1.0933156717530838e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2455",
+      "source_sample_mm": [
+        -54.140577486079565,
+        -68.0347282143342,
+        1206.44108771949
+      ],
+      "inside_region": true,
+      "production_winding": -7.50964299789997e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2456",
+      "source_sample_mm": [
+        -16.152244164563456,
+        -92.51298676490956,
+        1220.274782759106
+      ],
+      "inside_region": true,
+      "production_winding": 7.095508273751074e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2456",
+      "source_sample_mm": [
+        -21.357707051799594,
+        -88.8164030408675,
+        1225.9572160693847
+      ],
+      "inside_region": true,
+      "production_winding": 7.882364249633976e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2456",
+      "source_sample_mm": [
+        -26.259528544468367,
+        -84.69286031608385,
+        1231.6015797973514
+      ],
+      "inside_region": true,
+      "production_winding": -7.371598089850338e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2456",
+      "source_sample_mm": [
+        -30.878024291856775,
+        -80.25675200536114,
+        1237.2719253295647
+      ],
+      "inside_region": true,
+      "production_winding": -5.915224309926723e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2457",
+      "source_sample_mm": [
+        -53.6585963217597,
+        -48.10667073029947,
+        1159.5403251850048
+      ],
+      "inside_region": true,
+      "production_winding": 6.0739759541837995e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2457",
+      "source_sample_mm": [
+        -53.59497208489796,
+        -53.970054464754355,
+        1175.769778797491
+      ],
+      "inside_region": true,
+      "production_winding": -1.8028664991281914e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2457",
+      "source_sample_mm": [
+        -50.03204536847633,
+        -60.06708109913575,
+        1191.6375613295206
+      ],
+      "inside_region": true,
+      "production_winding": 6.142998408208615e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2457",
+      "source_sample_mm": [
+        -46.35954114512188,
+        -65.01758154124724,
+        1207.8744437644555
+      ],
+      "inside_region": true,
+      "production_winding": 1.905019731084919e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2459",
+      "source_sample_mm": [
+        -73.38846801718367,
+        -37.91237476657972,
+        1244.7953616056743
+      ],
+      "inside_region": true,
+      "production_winding": 4.624504419662665e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2459",
+      "source_sample_mm": [
+        -61.35672151083247,
+        -47.08241720636835,
+        1247.2765051191914
+      ],
+      "inside_region": true,
+      "production_winding": -5.632232248424977e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2459",
+      "source_sample_mm": [
+        -49.029487798825386,
+        -56.04704722528126,
+        1249.2452429700736
+      ],
+      "inside_region": true,
+      "production_winding": -5.3975559047406036e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2459",
+      "source_sample_mm": [
+        -37.54332661503588,
+        -65.78217412540005,
+        1252.0582004955945
+      ],
+      "inside_region": true,
+      "production_winding": -3.319980038593645e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2470",
+      "source_sample_mm": [
+        -39.38995101821416,
+        -46.5741102148271,
+        1176.1098312670556
+      ],
+      "inside_region": true,
+      "production_winding": 1.0988374680750691e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2470",
+      "source_sample_mm": [
+        -42.600782656875936,
+        -50.227846655578276,
+        1179.880065619519
+      ],
+      "inside_region": true,
+      "production_winding": -6.736591512822032e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2470",
+      "source_sample_mm": [
+        -45.21284659995615,
+        -53.60598551149167,
+        1184.2049076182584
+      ],
+      "inside_region": true,
+      "production_winding": 2.926552050652194e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2470",
+      "source_sample_mm": [
+        -47.04800386929713,
+        -56.62090863465403,
+        1189.2536530815269
+      ],
+      "inside_region": true,
+      "production_winding": 1.2147951908367599e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2481",
+      "source_sample_mm": [
+        -46.292854105731834,
+        -42.003321480573675,
+        1142.6129160712628
+      ],
+      "inside_region": true,
+      "production_winding": 1.4287647983136892e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2481",
+      "source_sample_mm": [
+        -47.24810256847988,
+        -40.23779476207761,
+        1141.208285066953
+      ],
+      "inside_region": true,
+      "production_winding": 1.6855283272860043e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2481",
+      "source_sample_mm": [
+        -48.1873037536584,
+        -38.48113400956089,
+        1139.782581725518
+      ],
+      "inside_region": true,
+      "production_winding": -4.728038100699889e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2481",
+      "source_sample_mm": [
+        -49.09671607706585,
+        -36.729745406975326,
+        1138.3318116322353
+      ],
+      "inside_region": true,
+      "production_winding": 1.570605941334686e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2486",
+      "source_sample_mm": [
+        -42.5557006193235,
+        -47.413846490570336,
+        1177.0638034162348
+      ],
+      "inside_region": true,
+      "production_winding": -4.55548196563785e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2486",
+      "source_sample_mm": [
+        -42.61913552909903,
+        -45.256599228283335,
+        1175.1006784751003
+      ],
+      "inside_region": true,
+      "production_winding": 7.123117255361001e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2486",
+      "source_sample_mm": [
+        -42.55109038528872,
+        -42.960467187338395,
+        1173.321839162586
+      ],
+      "inside_region": true,
+      "production_winding": 5.300924469105861e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2486",
+      "source_sample_mm": [
+        -42.37706043822628,
+        -40.53406568203479,
+        1171.7151394106834
+      ],
+      "inside_region": true,
+      "production_winding": -1.6565388965955818e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2487",
+      "source_sample_mm": [
+        -73.51879328890067,
+        -30.45225269341603,
+        1154.7793715486448
+      ],
+      "inside_region": true,
+      "production_winding": 4.583090947247776e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2487",
+      "source_sample_mm": [
+        -67.36469528873835,
+        -35.582606779634546,
+        1157.3881901574277
+      ],
+      "inside_region": true,
+      "production_winding": 7.095508273751074e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2487",
+      "source_sample_mm": [
+        -62.43594126542433,
+        -41.35731981402154,
+        1160.8093737955294
+      ],
+      "inside_region": true,
+      "production_winding": 1.297622135666539e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2487",
+      "source_sample_mm": [
+        -58.36311777375687,
+        -46.83915608295308,
+        1165.8255952603467
+      ],
+      "inside_region": true,
+      "production_winding": 2.912747559847231e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2488",
+      "source_sample_mm": [
+        -14.002998745316802,
+        -95.78321056498334,
+        1205.3643733274487
+      ],
+      "inside_region": true,
+      "production_winding": -3.4566444975627804e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2488",
+      "source_sample_mm": [
+        -15.784522312581828,
+        -94.00737201877962,
+        1210.6717825318856
+      ],
+      "inside_region": true,
+      "production_winding": 1.1871862092268335e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2488",
+      "source_sample_mm": [
+        -17.766816892565657,
+        -92.15675990957948,
+        1215.8781949926765
+      ],
+      "inside_region": true,
+      "production_winding": -1.119544204282514e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2488",
+      "source_sample_mm": [
+        -19.904835571727517,
+        -90.25634469398022,
+        1221.0091563701899
+      ],
+      "inside_region": true,
+      "production_winding": 3.3268822839961264e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2489",
+      "source_sample_mm": [
+        -69.7193718235601,
+        -32.107287698606,
+        1149.0806708008822
+      ],
+      "inside_region": true,
+      "production_winding": 2.0679127225834843e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2489",
+      "source_sample_mm": [
+        -68.11290584073981,
+        -35.338132195049866,
+        1151.8132939654429
+      ],
+      "inside_region": true,
+      "production_winding": -1.6151254241806922e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2489",
+      "source_sample_mm": [
+        -66.21621479087406,
+        -38.12516239673329,
+        1154.7854125057108
+      ],
+      "inside_region": true,
+      "production_winding": -3.975693351829396e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2489",
+      "source_sample_mm": [
+        -64.02920110604992,
+        -40.46042772952819,
+        1158.004540523003
+      ],
+      "inside_region": true,
+      "production_winding": 9.670045808876708e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2490",
+      "source_sample_mm": [
+        -97.96662911771546,
+        -64.91572078597653,
+        1145.836017870624
+      ],
+      "inside_region": true,
+      "production_winding": -2.3467634368437407e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2490",
+      "source_sample_mm": [
+        -98.80361451321465,
+        -66.85979729305791,
+        1148.727080578282
+      ],
+      "inside_region": true,
+      "production_winding": -1.12851712330574e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2490",
+      "source_sample_mm": [
+        -99.43229210233284,
+        -68.43825785989509,
+        1151.8520867408106
+      ],
+      "inside_region": true,
+      "production_winding": -1.3217799945752246e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2490",
+      "source_sample_mm": [
+        -99.85012173923718,
+        -69.65548207531953,
+        1155.2092833381182
+      ],
+      "inside_region": true,
+      "production_winding": 6.491561801033935e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2491",
+      "source_sample_mm": [
+        -93.91920658191474,
+        -63.28036014545171,
+        1185.0542328490137
+      ],
+      "inside_region": true,
+      "production_winding": 7.095508273751074e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2491",
+      "source_sample_mm": [
+        -87.33397221124974,
+        -64.8105505570689,
+        1185.3199142585145
+      ],
+      "inside_region": true,
+      "production_winding": -4.4450460391981444e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2491",
+      "source_sample_mm": [
+        -80.8058311567232,
+        -65.591189202289,
+        1186.3672220316505
+      ],
+      "inside_region": true,
+      "production_winding": 2.2225230195990722e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2491",
+      "source_sample_mm": [
+        -74.33492850944498,
+        -65.61453792398896,
+        1188.2016878231245
+      ],
+      "inside_region": true,
+      "production_winding": -1.1043592643970545e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2492",
+      "source_sample_mm": [
+        -95.54234789197119,
+        -69.47423591092266,
+        1181.4476060345041
+      ],
+      "inside_region": true,
+      "production_winding": -1.496406803258009e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2492",
+      "source_sample_mm": [
+        -93.80976714430818,
+        -68.4170676898897,
+        1182.3342242244603
+      ],
+      "inside_region": true,
+      "production_winding": 1.1526749822144256e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2492",
+      "source_sample_mm": [
+        -92.12380200949355,
+        -67.2956025631288,
+        1183.223360150557
+      ],
+      "inside_region": true,
+      "production_winding": -6.011855745561465e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2492",
+      "source_sample_mm": [
+        -90.48259825436094,
+        -66.11013912312356,
+        1184.1119812405702
+      ],
+      "inside_region": true,
+      "production_winding": 1.684147878205508e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2493",
+      "source_sample_mm": [
+        -107.71542618857563,
+        -83.95094630668221,
+        1190.8884572875322
+      ],
+      "inside_region": true,
+      "production_winding": -8.548430930973449e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2493",
+      "source_sample_mm": [
+        -101.1119313751135,
+        -80.83037818045193,
+        1193.371683988834
+      ],
+      "inside_region": true,
+      "production_winding": 7.488936261692526e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2493",
+      "source_sample_mm": [
+        -94.5693906050443,
+        -78.09443146404574,
+        1196.3171359400844
+      ],
+      "inside_region": true,
+      "production_winding": -1.3224702191154726e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2493",
+      "source_sample_mm": [
+        -88.09753479154199,
+        -75.7888052756069,
+        1199.7850356944173
+      ],
+      "inside_region": true,
+      "production_winding": -8.834874115176436e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2494",
+      "source_sample_mm": [
+        -108.78798484216205,
+        -91.59793504139935,
+        1183.4618468323956
+      ],
+      "inside_region": true,
+      "production_winding": -1.532298479350913e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2494",
+      "source_sample_mm": [
+        -108.39658475872673,
+        -89.50058590756589,
+        1185.3287559584676
+      ],
+      "inside_region": true,
+      "production_winding": 1.1233404392538787e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2494",
+      "source_sample_mm": [
+        -107.814342410342,
+        -87.47190074176655,
+        1187.2120622627212
+      ],
+      "inside_region": true,
+      "production_winding": 9.352542520362555e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2494",
+      "source_sample_mm": [
+        -107.06420646662025,
+        -85.51154340666221,
+        1189.1184308055103
+      ],
+      "inside_region": true,
+      "production_winding": 1.3908024486000404e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2495",
+      "source_sample_mm": [
+        -42.26370362867635,
+        -42.395352909806675,
+        1267.04165298462
+      ],
+      "inside_region": true,
+      "production_winding": 4.2379786771236964e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2495",
+      "source_sample_mm": [
+        -40.716440138384314,
+        -41.75512880798399,
+        1270.935592495817
+      ],
+      "inside_region": true,
+      "production_winding": 8.213672028953092e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2495",
+      "source_sample_mm": [
+        -38.40833611303617,
+        -41.437969999437755,
+        1274.3676367926057
+      ],
+      "inside_region": true,
+      "production_winding": 2.4986128356983356e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2495",
+      "source_sample_mm": [
+        -35.51731010567153,
+        -41.368380172490774,
+        1277.445803277661
+      ],
+      "inside_region": true,
+      "production_winding": 2.208718528794109e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2496",
+      "source_sample_mm": [
+        -42.606095359386586,
+        -49.22950463754182,
+        1255.4033443189917
+      ],
+      "inside_region": true,
+      "production_winding": -3.9894978426343593e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2496",
+      "source_sample_mm": [
+        -43.69934768597594,
+        -42.728793827554114,
+        1263.4088617045718
+      ],
+      "inside_region": true,
+      "production_winding": -5.521796321985272e-19,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2496",
+      "source_sample_mm": [
+        -47.05647788529183,
+        -38.51182005958094,
+        1272.0989738835776
+      ],
+      "inside_region": true,
+      "production_winding": 1.0974570189945729e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2496",
+      "source_sample_mm": [
+        -52.40314565200535,
+        -35.9182364724702,
+        1281.137269788048
+      ],
+      "inside_region": true,
+      "production_winding": -7.261162163410632e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2497",
+      "source_sample_mm": [
+        -60.946712792162145,
+        -37.05507230226718,
+        1282.7829343031285
+      ],
+      "inside_region": true,
+      "production_winding": 6.570937623162474e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2497",
+      "source_sample_mm": [
+        -59.11313666145789,
+        -36.574704604017114,
+        1282.8582754727377
+      ],
+      "inside_region": true,
+      "production_winding": -8.724438188736731e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2497",
+      "source_sample_mm": [
+        -57.266139171659745,
+        -36.20622699684478,
+        1282.7954625714776
+      ],
+      "inside_region": true,
+      "production_winding": 5.797886138084536e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2497",
+      "source_sample_mm": [
+        -55.405192702880626,
+        -35.95603589050668,
+        1282.5828234094904
+      ],
+      "inside_region": true,
+      "production_winding": 3.810039462169838e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2498",
+      "source_sample_mm": [
+        -70.13239178803201,
+        -40.32774084058218,
+        1248.6967555049566
+      ],
+      "inside_region": true,
+      "production_winding": 4.831571781737113e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2498",
+      "source_sample_mm": [
+        -72.73277549668012,
+        -39.00079761948311,
+        1251.100811712337
+      ],
+      "inside_region": true,
+      "production_winding": 4.3208056219534755e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2498",
+      "source_sample_mm": [
+        -75.23964952926906,
+        -38.340157846290765,
+        1253.784607522289
+      ],
+      "inside_region": true,
+      "production_winding": 2.443394872478483e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2498",
+      "source_sample_mm": [
+        -77.06841018558669,
+        -37.856149493975494,
+        1257.0469922013729
+      ],
+      "inside_region": true,
+      "production_winding": -4.969616689786745e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2499",
+      "source_sample_mm": [
+        -38.09326970222918,
+        -36.045262847669164,
+        1230.96797920278
+      ],
+      "inside_region": true,
+      "production_winding": 4.6624667693763144e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2499",
+      "source_sample_mm": [
+        -40.53106881914309,
+        -35.30211458220964,
+        1238.1805644435087
+      ],
+      "inside_region": true,
+      "production_winding": 2.2639364920139617e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2499",
+      "source_sample_mm": [
+        -42.12436024879213,
+        -36.75065412761842,
+        1245.0771214393035
+      ],
+      "inside_region": true,
+      "production_winding": 4.451948284600626e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2499",
+      "source_sample_mm": [
+        -43.23657032013725,
+        -40.53593362195494,
+        1251.5364085275055
+      ],
+      "inside_region": true,
+      "production_winding": 2.001651166719661e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2500",
+      "source_sample_mm": [
+        -81.87750473835378,
+        -39.630669328376555,
+        1252.905563338282
+      ],
+      "inside_region": true,
+      "production_winding": -8.565686544479654e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2500",
+      "source_sample_mm": [
+        -80.10663755694533,
+        -39.24646529689649,
+        1253.3631163995733
+      ],
+      "inside_region": true,
+      "production_winding": 1.5461029701558764e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2500",
+      "source_sample_mm": [
+        -78.30506511073852,
+        -38.923298326595884,
+        1253.5633832348221
+      ],
+      "inside_region": true,
+      "production_winding": -9.041941477250883e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2500",
+      "source_sample_mm": [
+        -76.46013439954407,
+        -38.68776278402858,
+        1253.4031913364763
+      ],
+      "inside_region": true,
+      "production_winding": -9.946135624975971e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2501",
+      "source_sample_mm": [
+        -53.52368876276148,
+        -31.693570104054515,
+        1231.0686235496835
+      ],
+      "inside_region": true,
+      "production_winding": -3.5874420479398066e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2501",
+      "source_sample_mm": [
+        -50.09394800607879,
+        -33.43525620558435,
+        1232.2597749011325
+      ],
+      "inside_region": true,
+      "production_winding": 3.1474239035316054e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2501",
+      "source_sample_mm": [
+        -46.94484756736233,
+        -34.56439921310508,
+        1234.2801046483
+      ],
+      "inside_region": true,
+      "production_winding": 7.606274433534713e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2501",
+      "source_sample_mm": [
+        -44.08350672759872,
+        -35.212390277811295,
+        1237.060391739633
+      ],
+      "inside_region": true,
+      "production_winding": -4.3415123581609204e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2502",
+      "source_sample_mm": [
+        -40.29116634018902,
+        -37.380421021447006,
+        1247.1006125112954
+      ],
+      "inside_region": true,
+      "production_winding": 5.507991831180309e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2502",
+      "source_sample_mm": [
+        -38.132722634721006,
+        -36.479812657212676,
+        1246.2058045327349
+      ],
+      "inside_region": true,
+      "production_winding": 6.287945561660728e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2502",
+      "source_sample_mm": [
+        -35.982000092260705,
+        -35.41728934481608,
+        1245.556530309304
+      ],
+      "inside_region": true,
+      "production_winding": -1.245855295147927e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31747",
+      "mesh": "FJ2502",
+      "source_sample_mm": [
+        -33.844919901272704,
+        -34.158045564586644,
+        1245.1913250943987
+      ],
+      "inside_region": true,
+      "production_winding": -7.592469942729749e-19,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2441",
+      "source_sample_mm": [
+        78.18320673160915,
+        -147.79675382078312,
+        1188.3326994780261
+      ],
+      "inside_region": true,
+      "production_winding": -2.829920615017452e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2441",
+      "source_sample_mm": [
+        82.57146271612953,
+        -127.28923812426683,
+        1204.013723899156
+      ],
+      "inside_region": true,
+      "production_winding": 2.4019814000635934e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2441",
+      "source_sample_mm": [
+        86.75732163776848,
+        -111.4020726951627,
+        1224.2674968546262
+      ],
+      "inside_region": true,
+      "production_winding": -1.236882376124701e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2441",
+      "source_sample_mm": [
+        80.2240048687058,
+        -97.71274532110908,
+        1245.176839823228
+      ],
+      "inside_region": true,
+      "production_winding": 7.730514850779382e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2443",
+      "source_sample_mm": [
+        45.2252950377362,
+        -124.79232851963718,
+        1288.4688487139883
+      ],
+      "inside_region": true,
+      "production_winding": 3.2561342686206905e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2443",
+      "source_sample_mm": [
+        54.31135100630348,
+        -118.25023366242212,
+        1284.5471699905856
+      ],
+      "inside_region": true,
+      "production_winding": -1.0406860505591617e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2443",
+      "source_sample_mm": [
+        61.226779241846174,
+        -110.09823365862951,
+        1280.7581037873783
+      ],
+      "inside_region": true,
+      "production_winding": 8.641611243906951e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2443",
+      "source_sample_mm": [
+        65.62196897926495,
+        -100.02560971016419,
+        1277.249176904578
+      ],
+      "inside_region": true,
+      "production_winding": 8.006604666878645e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2447",
+      "source_sample_mm": [
+        70.1792420785186,
+        -83.77453974977686,
+        1296.954606597046
+      ],
+      "inside_region": true,
+      "production_winding": 6.840125193859256e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2447",
+      "source_sample_mm": [
+        73.83327924818991,
+        -78.02483286800998,
+        1302.9200143010864
+      ],
+      "inside_region": true,
+      "production_winding": 1.5378202756728982e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2447",
+      "source_sample_mm": [
+        76.11113036535832,
+        -71.89495033401317,
+        1308.8822688017578
+      ],
+      "inside_region": true,
+      "production_winding": 9.276617820935258e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2447",
+      "source_sample_mm": [
+        76.24455211715593,
+        -65.34899666937577,
+        1315.0226694903158
+      ],
+      "inside_region": true,
+      "production_winding": -3.879061916194654e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2465",
+      "source_sample_mm": [
+        74.06047766211418,
+        -77.10671617666026,
+        1297.9840523573941
+      ],
+      "inside_region": true,
+      "production_winding": -9.718361526694079e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2465",
+      "source_sample_mm": [
+        75.83014791471658,
+        -73.70976025843197,
+        1296.4514212582867
+      ],
+      "inside_region": true,
+      "production_winding": 1.9436723053388158e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2465",
+      "source_sample_mm": [
+        78.04004952466073,
+        -70.62783783549736,
+        1294.8554577209704
+      ],
+      "inside_region": true,
+      "production_winding": -1.8221927862551398e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2465",
+      "source_sample_mm": [
+        80.38795305003015,
+        -67.66907483836519,
+        1293.1908629286065
+      ],
+      "inside_region": true,
+      "production_winding": 2.368850622131682e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2466",
+      "source_sample_mm": [
+        77.38565100260153,
+        -68.3757291837585,
+        1308.3843664410363
+      ],
+      "inside_region": true,
+      "production_winding": -7.730514850779381e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2466",
+      "source_sample_mm": [
+        78.33267024572343,
+        -65.3535658706426,
+        1308.1940559671211
+      ],
+      "inside_region": true,
+      "production_winding": -2.374372418453667e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2466",
+      "source_sample_mm": [
+        79.28574928994016,
+        -62.33594089657683,
+        1307.9901932473404
+      ],
+      "inside_region": true,
+      "production_winding": 2.0927608060324182e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2466",
+      "source_sample_mm": [
+        80.53573384701471,
+        -59.49191146807223,
+        1307.4335423043112
+      ],
+      "inside_region": true,
+      "production_winding": 5.797886138084535e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2467",
+      "source_sample_mm": [
+        58.495808530578074,
+        -145.6308617908769,
+        1258.747341124864
+      ],
+      "inside_region": true,
+      "production_winding": -1.7290124733216383e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2467",
+      "source_sample_mm": [
+        58.478825315557984,
+        -133.39031826084835,
+        1265.2021679775578
+      ],
+      "inside_region": true,
+      "production_winding": -4.4950873183661354e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2467",
+      "source_sample_mm": [
+        60.830763342459385,
+        -120.7644640060787,
+        1269.974729033997
+      ],
+      "inside_region": true,
+      "production_winding": -1.033093580616432e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2467",
+      "source_sample_mm": [
+        64.62750657154643,
+        -107.85959454970293,
+        1273.606306671229
+      ],
+      "inside_region": true,
+      "production_winding": 2.0430646391345506e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2468",
+      "source_sample_mm": [
+        80.62421158247443,
+        -116.3669146733996,
+        1279.6730047396254
+      ],
+      "inside_region": true,
+      "production_winding": 1.1140224079605286e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2468",
+      "source_sample_mm": [
+        76.85752414862912,
+        -111.07371184016392,
+        1277.405232281549
+      ],
+      "inside_region": true,
+      "production_winding": 8.614002262297024e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2468",
+      "source_sample_mm": [
+        73.57171111383335,
+        -105.19284605384064,
+        1275.7902740431803
+      ],
+      "inside_region": true,
+      "production_winding": 1.3638836915303622e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2468",
+      "source_sample_mm": [
+        69.62014250111883,
+        -99.30776413064285,
+        1275.832005499295
+      ],
+      "inside_region": true,
+      "production_winding": -3.837648443779764e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2469",
+      "source_sample_mm": [
+        89.2009181984406,
+        -120.98251537460311,
+        1266.3422334191282
+      ],
+      "inside_region": true,
+      "production_winding": 4.983421180591708e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2469",
+      "source_sample_mm": [
+        87.21629686082974,
+        -118.31731403414705,
+        1269.3326370891095
+      ],
+      "inside_region": true,
+      "production_winding": 3.257859829971311e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2469",
+      "source_sample_mm": [
+        84.8561916405522,
+        -115.95348579525978,
+        1272.2047540521246
+      ],
+      "inside_region": true,
+      "production_winding": 7.343989108240412e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2469",
+      "source_sample_mm": [
+        81.62630707387348,
+        -114.24490182510363,
+        1274.76757386675
+      ],
+      "inside_region": true,
+      "production_winding": 2.6366577437479674e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2471",
+      "source_sample_mm": [
+        83.83337460433448,
+        -124.73611707752646,
+        1281.5296847346074
+      ],
+      "inside_region": true,
+      "production_winding": 4.748744836907334e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2471",
+      "source_sample_mm": [
+        83.13946462274464,
+        -122.85517979773077,
+        1281.6912912465832
+      ],
+      "inside_region": true,
+      "production_winding": -3.975693351829396e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2471",
+      "source_sample_mm": [
+        82.55165619967677,
+        -120.97714095293787,
+        1281.4767292399567
+      ],
+      "inside_region": true,
+      "production_winding": -4.914398726566892e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2471",
+      "source_sample_mm": [
+        81.96297960235265,
+        -119.13629060406618,
+        1280.8998100513095
+      ],
+      "inside_region": true,
+      "production_winding": -8.310303464587835e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2472",
+      "source_sample_mm": [
+        52.61836335142746,
+        -129.12579224885548,
+        1289.849575092906
+      ],
+      "inside_region": true,
+      "production_winding": -1.1207520972279482e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2472",
+      "source_sample_mm": [
+        51.555792189666136,
+        -127.27301120947823,
+        1288.7344584249047
+      ],
+      "inside_region": true,
+      "production_winding": 8.994488540108823e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2472",
+      "source_sample_mm": [
+        51.235536138532865,
+        -125.14287871089539,
+        1287.7380127655692
+      ],
+      "inside_region": true,
+      "production_winding": 3.221623041608282e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2472",
+      "source_sample_mm": [
+        51.404570707594075,
+        -122.85286028170151,
+        1286.776562689438
+      ],
+      "inside_region": true,
+      "production_winding": -4.5899931926502575e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2473",
+      "source_sample_mm": [
+        50.4898939452093,
+        -142.6383574536982,
+        1274.9045953737182
+      ],
+      "inside_region": true,
+      "production_winding": -2.1077731897828156e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2473",
+      "source_sample_mm": [
+        53.56931320680212,
+        -140.85037002349083,
+        1272.4877044629566
+      ],
+      "inside_region": true,
+      "production_winding": 6.33539849880279e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2473",
+      "source_sample_mm": [
+        55.75748242274972,
+        -137.61876711895206,
+        1270.5077717871545
+      ],
+      "inside_region": true,
+      "production_winding": -2.3079383064547818e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2473",
+      "source_sample_mm": [
+        57.33653869082457,
+        -133.57512985416946,
+        1268.6380246120304
+      ],
+      "inside_region": true,
+      "production_winding": 3.841099566481005e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2474",
+      "source_sample_mm": [
+        66.74683350122808,
+        -129.446229425752,
+        1285.7652967903787
+      ],
+      "inside_region": true,
+      "production_winding": -2.0057925139611502e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2474",
+      "source_sample_mm": [
+        63.86344182747649,
+        -125.30122852696087,
+        1285.0041186482254
+      ],
+      "inside_region": true,
+      "production_winding": 2.5538307989181883e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2474",
+      "source_sample_mm": [
+        61.61589049443671,
+        -120.91617530427598,
+        1284.1141365812243
+      ],
+      "inside_region": true,
+      "production_winding": 5.300924469105861e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2474",
+      "source_sample_mm": [
+        60.83326863774451,
+        -116.03271666853624,
+        1282.691822224603
+      ],
+      "inside_region": true,
+      "production_winding": -2.4502971178809645e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2475",
+      "source_sample_mm": [
+        98.35055481362943,
+        -144.95477823518456,
+        1194.0686679782193
+      ],
+      "inside_region": true,
+      "production_winding": -9.1109639312757e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2475",
+      "source_sample_mm": [
+        94.48793825619688,
+        -138.84071703152523,
+        1196.867378213699
+      ],
+      "inside_region": true,
+      "production_winding": -3.288919934282478e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2475",
+      "source_sample_mm": [
+        90.9287025657963,
+        -133.01019708003344,
+        1200.4276178976438
+      ],
+      "inside_region": true,
+      "production_winding": -3.7272125173400584e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2475",
+      "source_sample_mm": [
+        87.75304926149391,
+        -127.44734892330041,
+        1204.8020107587822
+      ],
+      "inside_region": true,
+      "production_winding": 2.678071216162857e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2476",
+      "source_sample_mm": [
+        92.50028005108334,
+        -94.19811824846855,
+        1247.2831431320355
+      ],
+      "inside_region": true,
+      "production_winding": -1.1499140840534328e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2476",
+      "source_sample_mm": [
+        97.23920528097727,
+        -91.46623912992882,
+        1248.0266453542329
+      ],
+      "inside_region": true,
+      "production_winding": -9.000528004835994e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2476",
+      "source_sample_mm": [
+        101.34889330155437,
+        -88.4177998428836,
+        1249.6364000434403
+      ],
+      "inside_region": true,
+      "production_winding": 5.577014285205125e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2476",
+      "source_sample_mm": [
+        104.7062102719596,
+        -84.96618592213451,
+        1252.2393703452422
+      ],
+      "inside_region": true,
+      "production_winding": -5.466578358765419e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2477",
+      "source_sample_mm": [
+        105.90354794341744,
+        -114.62782838677413,
+        1230.324036676325
+      ],
+      "inside_region": true,
+      "production_winding": 8.234378765160537e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2477",
+      "source_sample_mm": [
+        107.08139113308593,
+        -113.22903445161205,
+        1229.097561382362
+      ],
+      "inside_region": true,
+      "production_winding": 1.5564563382595985e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2477",
+      "source_sample_mm": [
+        108.57052682949956,
+        -112.06688090743324,
+        1228.299008525407
+      ],
+      "inside_region": true,
+      "production_winding": 1.0146300741647937e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2477",
+      "source_sample_mm": [
+        110.5012613562356,
+        -111.19047597213606,
+        1228.2055418833277
+      ],
+      "inside_region": true,
+      "production_winding": 2.0637713753419955e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2478",
+      "source_sample_mm": [
+        104.91137939551066,
+        -85.73856282295489,
+        1249.971692961628
+      ],
+      "inside_region": true,
+      "production_winding": -8.089431611708424e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2478",
+      "source_sample_mm": [
+        106.57145240253521,
+        -84.71695709795148,
+        1249.2913841883762
+      ],
+      "inside_region": true,
+      "production_winding": 2.6504622345529306e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2478",
+      "source_sample_mm": [
+        108.06786330292545,
+        -83.66448604894407,
+        1248.3751110165683
+      ],
+      "inside_region": true,
+      "production_winding": -9.166181894495552e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2478",
+      "source_sample_mm": [
+        109.46313033067196,
+        -82.62432136221395,
+        1247.277356120109
+      ],
+      "inside_region": true,
+      "production_winding": -1.4687978216480824e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2540",
+      "source_sample_mm": [
+        105.28425108335841,
+        -117.45219928516315,
+        1230.3807801194912
+      ],
+      "inside_region": true,
+      "production_winding": -1.5561112259894746e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2540",
+      "source_sample_mm": [
+        101.7186989327052,
+        -108.69688570063244,
+        1236.6400716583723
+      ],
+      "inside_region": true,
+      "production_winding": 3.7272125173400584e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2540",
+      "source_sample_mm": [
+        95.40991783766287,
+        -102.11261713074254,
+        1242.4482867268684
+      ],
+      "inside_region": true,
+      "production_winding": -6.847027439261738e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31746",
+      "mesh": "FJ2540",
+      "source_sample_mm": [
+        86.49638762110027,
+        -97.0209493713549,
+        1247.1089014879997
+      ],
+      "inside_region": true,
+      "production_winding": 4.376023585173328e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2442",
+      "source_sample_mm": [
+        113.1049473454338,
+        -107.35601538093306,
+        1163.33964703933
+      ],
+      "inside_region": true,
+      "production_winding": -5.781493305253642e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2442",
+      "source_sample_mm": [
+        102.06269870632917,
+        -96.33947409025086,
+        1177.6372454203483
+      ],
+      "inside_region": true,
+      "production_winding": -3.180209569193393e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2442",
+      "source_sample_mm": [
+        90.98553425062931,
+        -87.85388679300138,
+        1193.69375230967
+      ],
+      "inside_region": true,
+      "production_winding": -2.1590223618962415e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2442",
+      "source_sample_mm": [
+        79.24990928627722,
+        -80.1031779014296,
+        1209.8082867622434
+      ],
+      "inside_region": true,
+      "production_winding": 5.0800526162264503e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2445",
+      "source_sample_mm": [
+        111.20684197852654,
+        -76.52161942136348,
+        1152.7370811086876
+      ],
+      "inside_region": true,
+      "production_winding": 4.5692864564428126e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2445",
+      "source_sample_mm": [
+        103.05386992349821,
+        -68.54651637770337,
+        1167.706086687064
+      ],
+      "inside_region": true,
+      "production_winding": 5.797886138084536e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2445",
+      "source_sample_mm": [
+        92.8614794517826,
+        -63.9496223421792,
+        1182.3936035897732
+      ],
+      "inside_region": true,
+      "production_winding": 8.172258556538202e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2445",
+      "source_sample_mm": [
+        81.72473757741238,
+        -62.288782475302014,
+        1197.3632327786456
+      ],
+      "inside_region": true,
+      "production_winding": 3.092205940311753e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2446",
+      "source_sample_mm": [
+        72.41621053815928,
+        -39.62393463591087,
+        1153.1324972944933
+      ],
+      "inside_region": true,
+      "production_winding": 4.679722382882518e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2446",
+      "source_sample_mm": [
+        75.03991939758976,
+        -46.56248073429788,
+        1171.3041364249686
+      ],
+      "inside_region": true,
+      "production_winding": -3.727212517340059e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2446",
+      "source_sample_mm": [
+        75.1441870944748,
+        -53.62991243620621,
+        1189.34627398731
+      ],
+      "inside_region": true,
+      "production_winding": 3.3130777931911635e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2446",
+      "source_sample_mm": [
+        72.89413090327275,
+        -60.58623192229521,
+        1207.3527775631358
+      ],
+      "inside_region": true,
+      "production_winding": 9.387053747374963e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2448",
+      "source_sample_mm": [
+        52.61107183522927,
+        -55.95208448682877,
+        1250.0351101687672
+      ],
+      "inside_region": true,
+      "production_winding": 1.5184939885459497e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2448",
+      "source_sample_mm": [
+        53.096065304057475,
+        -46.14402813561958,
+        1256.8273083855292
+      ],
+      "inside_region": true,
+      "production_winding": -4.472655020808071e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2448",
+      "source_sample_mm": [
+        52.4123455933337,
+        -40.350967645269975,
+        1266.4692878435453
+      ],
+      "inside_region": true,
+      "production_winding": -2.5365751854119845e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2448",
+      "source_sample_mm": [
+        49.65991133172852,
+        -37.03787179658491,
+        1277.6047841270806
+      ],
+      "inside_region": true,
+      "production_winding": -4.3208056219534755e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2479",
+      "source_sample_mm": [
+        60.78399651151943,
+        -52.44714515880037,
+        1250.9797149008918
+      ],
+      "inside_region": true,
+      "production_winding": 9.93923337957349e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2479",
+      "source_sample_mm": [
+        67.34174266388624,
+        -49.46665560737438,
+        1252.1484134054263
+      ],
+      "inside_region": true,
+      "production_winding": 7.067899292141149e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2479",
+      "source_sample_mm": [
+        72.66813717180315,
+        -45.45540453357751,
+        1254.2639081032191
+      ],
+      "inside_region": true,
+      "production_winding": 3.368295756411016e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2479",
+      "source_sample_mm": [
+        76.51697161188645,
+        -40.68980688143239,
+        1258.223275144227
+      ],
+      "inside_region": true,
+      "production_winding": 4.583090947247776e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2480",
+      "source_sample_mm": [
+        55.2588172320651,
+        -39.41829848580721,
+        1272.7610030024348
+      ],
+      "inside_region": true,
+      "production_winding": 7.620078924339676e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2480",
+      "source_sample_mm": [
+        58.32834839496138,
+        -39.37142883082782,
+        1276.0386656935686
+      ],
+      "inside_region": true,
+      "production_winding": -2.5400263081132252e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2480",
+      "source_sample_mm": [
+        61.91623296104672,
+        -39.334661235236425,
+        1278.5971541531246
+      ],
+      "inside_region": true,
+      "production_winding": 5.963540027744093e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2480",
+      "source_sample_mm": [
+        65.97737076096803,
+        -39.37861627109079,
+        1280.4976044573784
+      ],
+      "inside_region": true,
+      "production_winding": -4.491981307935019e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2482",
+      "source_sample_mm": [
+        74.85761535246462,
+        -45.212270179865044,
+        1250.3435880257794
+      ],
+      "inside_region": true,
+      "production_winding": 6.405283733502916e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2482",
+      "source_sample_mm": [
+        78.49015571899037,
+        -43.3039812249238,
+        1248.3280571909002
+      ],
+      "inside_region": true,
+      "production_winding": -4.086129278269101e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2482",
+      "source_sample_mm": [
+        82.12325662041775,
+        -41.38748213598825,
+        1246.3212270476772
+      ],
+      "inside_region": true,
+      "production_winding": -8.282694482977908e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2482",
+      "source_sample_mm": [
+        85.75356710422767,
+        -39.48051804925791,
+        1244.3005138703284
+      ],
+      "inside_region": true,
+      "production_winding": -1.6344517113076405e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2483",
+      "source_sample_mm": [
+        61.984602844035294,
+        -52.047288051741646,
+        1232.3264488396615
+      ],
+      "inside_region": true,
+      "production_winding": -5.245706505886008e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2483",
+      "source_sample_mm": [
+        59.55600782417844,
+        -52.07831178549358,
+        1234.4032596703055
+      ],
+      "inside_region": true,
+      "production_winding": 4.6935268736874815e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2483",
+      "source_sample_mm": [
+        57.34509798735769,
+        -52.029106740013845,
+        1236.696246518883
+      ],
+      "inside_region": true,
+      "production_winding": 1.4853632106140383e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2483",
+      "source_sample_mm": [
+        55.199535530180356,
+        -51.951106989377045,
+        1239.0540772647346
+      ],
+      "inside_region": true,
+      "production_winding": -9.166181894495552e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2484",
+      "source_sample_mm": [
+        49.91517480574919,
+        -47.69953266122553,
+        1233.2696451900042
+      ],
+      "inside_region": true,
+      "production_winding": -2.5814397805281147e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2484",
+      "source_sample_mm": [
+        51.163726818446264,
+        -49.28194907717358,
+        1237.4264441333582
+      ],
+      "inside_region": true,
+      "production_winding": -3.823843952974801e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2484",
+      "source_sample_mm": [
+        52.4680057971882,
+        -51.44466084512595,
+        1241.2848062385128
+      ],
+      "inside_region": true,
+      "production_winding": 7.951386703658792e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2484",
+      "source_sample_mm": [
+        52.805950950672525,
+        -54.14534349897423,
+        1245.036486444327
+      ],
+      "inside_region": true,
+      "production_winding": 1.783540212001243e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2485",
+      "source_sample_mm": [
+        49.80286629169399,
+        -36.98945015348197,
+        1281.258563584124
+      ],
+      "inside_region": true,
+      "production_winding": -2.464101608685928e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2485",
+      "source_sample_mm": [
+        50.322706244173446,
+        -36.99114313860376,
+        1283.776771350089
+      ],
+      "inside_region": true,
+      "production_winding": -3.259585391321931e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2485",
+      "source_sample_mm": [
+        51.38964197679621,
+        -37.00137532139778,
+        1286.0615070636672
+      ],
+      "inside_region": true,
+      "production_winding": 4.659015646675074e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2485",
+      "source_sample_mm": [
+        52.72676480403942,
+        -37.04997474751749,
+        1288.2310687364231
+      ],
+      "inside_region": true,
+      "production_winding": 1.4853632106140383e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2527",
+      "source_sample_mm": [
+        47.686766866040784,
+        -38.636775816755375,
+        1153.33724422857
+      ],
+      "inside_region": true,
+      "production_winding": 7.399207071460265e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2527",
+      "source_sample_mm": [
+        56.02475265138435,
+        -40.196340240937076,
+        1159.0589366745535
+      ],
+      "inside_region": true,
+      "production_winding": -1.1699305957206295e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2527",
+      "source_sample_mm": [
+        63.49718657715823,
+        -42.028259317835335,
+        1165.6168137617865
+      ],
+      "inside_region": true,
+      "production_winding": -1.0104887269233048e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2527",
+      "source_sample_mm": [
+        69.73676145484205,
+        -45.25349326824488,
+        1172.9509822835507
+      ],
+      "inside_region": true,
+      "production_winding": 1.1043592643970544e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2528",
+      "source_sample_mm": [
+        69.42465960479903,
+        -54.30412694009544,
+        1202.2842339336073
+      ],
+      "inside_region": true,
+      "production_winding": 9.773579489913932e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2528",
+      "source_sample_mm": [
+        67.42780866696371,
+        -48.305023151950536,
+        1195.7740254960504
+      ],
+      "inside_region": true,
+      "production_winding": 3.064596958701826e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2528",
+      "source_sample_mm": [
+        66.24311266721992,
+        -41.36500455237581,
+        1190.5069042526566
+      ],
+      "inside_region": true,
+      "production_winding": 5.68745021164483e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2528",
+      "source_sample_mm": [
+        65.91018006083917,
+        -32.60340153633865,
+        1187.8357500936272
+      ],
+      "inside_region": true,
+      "production_winding": -1.1264464496849955e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2529",
+      "source_sample_mm": [
+        78.86411102271256,
+        -31.330456039697822,
+        1138.3501917238787
+      ],
+      "inside_region": true,
+      "production_winding": 4.8798874995544845e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2529",
+      "source_sample_mm": [
+        76.01274318954955,
+        -32.920213106830886,
+        1140.6200265828047
+      ],
+      "inside_region": true,
+      "production_winding": 5.190488542666156e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2529",
+      "source_sample_mm": [
+        74.11971143219131,
+        -34.70551433575082,
+        1143.5205144641923
+      ],
+      "inside_region": true,
+      "production_winding": 7.59246994272975e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2529",
+      "source_sample_mm": [
+        72.84583027603117,
+        -36.578561969761836,
+        1146.8530513385438
+      ],
+      "inside_region": true,
+      "production_winding": -1.6358321603881368e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2530",
+      "source_sample_mm": [
+        60.22128828513664,
+        -31.503823296274447,
+        1167.0994977050143
+      ],
+      "inside_region": true,
+      "production_winding": 1.6351419358478886e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2530",
+      "source_sample_mm": [
+        61.54687984098629,
+        -33.106922930660346,
+        1172.8809505830845
+      ],
+      "inside_region": true,
+      "production_winding": 1.124375776064251e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2530",
+      "source_sample_mm": [
+        62.97222662843606,
+        -35.10159868296404,
+        1178.491052182492
+      ],
+      "inside_region": true,
+      "production_winding": 3.4097092288259054e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2530",
+      "source_sample_mm": [
+        64.3963774712407,
+        -37.67451591068033,
+        1183.8854686917634
+      ],
+      "inside_region": true,
+      "production_winding": -1.4549933308431193e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2531",
+      "source_sample_mm": [
+        49.508333193065056,
+        -34.25201485616316,
+        1146.4782414531435
+      ],
+      "inside_region": true,
+      "production_winding": -1.423933226531952e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2531",
+      "source_sample_mm": [
+        50.311955833503816,
+        -35.666529152131034,
+        1148.410771421843
+      ],
+      "inside_region": true,
+      "production_winding": 2.5538307989181883e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2531",
+      "source_sample_mm": [
+        50.92569875173152,
+        -36.938575609681095,
+        1150.4806775129282
+      ],
+      "inside_region": true,
+      "production_winding": -2.546928553515707e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2531",
+      "source_sample_mm": [
+        51.121519892780896,
+        -38.10813283923329,
+        1152.718793703488
+      ],
+      "inside_region": true,
+      "production_winding": 1.2424041724466862e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2532",
+      "source_sample_mm": [
+        105.41739325928921,
+        -54.408757372566555,
+        1141.8941777617983
+      ],
+      "inside_region": true,
+      "production_winding": 1.3645739160706103e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2532",
+      "source_sample_mm": [
+        103.68615259548756,
+        -57.48035175440836,
+        1152.2699392812099
+      ],
+      "inside_region": true,
+      "production_winding": 5.904870941823e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2532",
+      "source_sample_mm": [
+        100.532549262668,
+        -60.48776312563015,
+        1162.2658096348023
+      ],
+      "inside_region": true,
+      "production_winding": 6.633057831784808e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2532",
+      "source_sample_mm": [
+        96.52950577210208,
+        -62.40042755626595,
+        1172.2814504020907
+      ],
+      "inside_region": true,
+      "production_winding": -2.3467634368437407e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2533",
+      "source_sample_mm": [
+        113.97569930209872,
+        -71.11780158403732,
+        1132.0674539891377
+      ],
+      "inside_region": true,
+      "production_winding": -4.42779042569194e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2533",
+      "source_sample_mm": [
+        114.05036358886093,
+        -74.32701320495283,
+        1137.9159541722731
+      ],
+      "inside_region": true,
+      "production_winding": 2.521045133256401e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2533",
+      "source_sample_mm": [
+        113.03520564084664,
+        -75.54471313201338,
+        1144.0739248002758
+      ],
+      "inside_region": true,
+      "production_winding": -4.966165567085504e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2533",
+      "source_sample_mm": [
+        111.16590967355734,
+        -75.04174883408402,
+        1150.510857718099
+      ],
+      "inside_region": true,
+      "production_winding": -5.195665226718017e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2534",
+      "source_sample_mm": [
+        101.88290906457779,
+        -54.912603469721375,
+        1152.1723117628105
+      ],
+      "inside_region": true,
+      "production_winding": 1.1685501466401332e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2534",
+      "source_sample_mm": [
+        101.23959292477862,
+        -52.12052437251077,
+        1149.3598995704765
+      ],
+      "inside_region": true,
+      "production_winding": -8.738242679541693e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2534",
+      "source_sample_mm": [
+        100.89699791907422,
+        -48.95226068315867,
+        1146.9403180295528
+      ],
+      "inside_region": true,
+      "production_winding": -3.0697736427536875e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2534",
+      "source_sample_mm": [
+        100.4866295444569,
+        -45.660975788668225,
+        1144.6811602298155
+      ],
+      "inside_region": true,
+      "production_winding": -2.232358719297608e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2535",
+      "source_sample_mm": [
+        84.85067182861806,
+        -83.80612316042254,
+        1206.6089933960357
+      ],
+      "inside_region": true,
+      "production_winding": 3.953606166541455e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2535",
+      "source_sample_mm": [
+        91.68089655690304,
+        -88.4897035110146,
+        1202.2743613233158
+      ],
+      "inside_region": true,
+      "production_winding": 2.843725105822415e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2535",
+      "source_sample_mm": [
+        99.11170508728986,
+        -93.15515993702465,
+        1199.6857604006323
+      ],
+      "inside_region": true,
+      "production_winding": 2.1258915839643297e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2535",
+      "source_sample_mm": [
+        107.27898308298242,
+        -97.80272480542357,
+        1199.246368009326
+      ],
+      "inside_region": true,
+      "production_winding": -1.5329887038911612e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2536",
+      "source_sample_mm": [
+        109.48056355761744,
+        -131.0204689107315,
+        1174.5680086235016
+      ],
+      "inside_region": true,
+      "production_winding": 9.630357897812439e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2536",
+      "source_sample_mm": [
+        109.03525331734019,
+        -122.41061636535824,
+        1182.5822177167577
+      ],
+      "inside_region": true,
+      "production_winding": 3.116363799220438e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2536",
+      "source_sample_mm": [
+        106.99383062381337,
+        -113.13418507909415,
+        1189.1760576646275
+      ],
+      "inside_region": true,
+      "production_winding": -2.660815602656653e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2536",
+      "source_sample_mm": [
+        103.08597315585261,
+        -103.48705394823628,
+        1194.6541630239553
+      ],
+      "inside_region": true,
+      "production_winding": -5.866908592109352e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2537",
+      "source_sample_mm": [
+        119.50552750964968,
+        -113.992271848711,
+        1162.4985977461665
+      ],
+      "inside_region": true,
+      "production_winding": 1.536439826592402e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2537",
+      "source_sample_mm": [
+        117.32323781136543,
+        -110.91227528537024,
+        1164.1464350885594
+      ],
+      "inside_region": true,
+      "production_winding": 1.2075478331641541e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2537",
+      "source_sample_mm": [
+        114.71750764924212,
+        -108.15214728899707,
+        1165.7101741805382
+      ],
+      "inside_region": true,
+      "production_winding": 9.445722833296056e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2537",
+      "source_sample_mm": [
+        111.9100077550363,
+        -105.54864808011567,
+        1167.2415375675866
+      ],
+      "inside_region": true,
+      "production_winding": -1.532298479350913e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2538",
+      "source_sample_mm": [
+        116.90756535282429,
+        -100.9286038676899,
+        1144.6145798431317
+      ],
+      "inside_region": true,
+      "production_winding": -1.306336220487172e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2538",
+      "source_sample_mm": [
+        114.33185236599843,
+        -101.23769758934392,
+        1151.9678091419287
+      ],
+      "inside_region": true,
+      "production_winding": 1.8998430470330576e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2538",
+      "source_sample_mm": [
+        111.4581843438475,
+        -100.55806181527748,
+        1159.181895864062
+      ],
+      "inside_region": true,
+      "production_winding": -1.580700475235815e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA31748",
+      "mesh": "FJ2538",
+      "source_sample_mm": [
+        108.43493229829363,
+        -99.67123087912157,
+        1166.3331239865704
+      ],
+      "inside_region": true,
+      "production_winding": 1.827714582577125e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2444",
+      "source_sample_mm": [
+        64.82832648317503,
+        -89.72086361139989,
+        1293.464966202416
+      ],
+      "inside_region": true,
+      "production_winding": 5.273315487495935e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2444",
+      "source_sample_mm": [
+        61.01398564305629,
+        -91.22824616397253,
+        1309.602355737981
+      ],
+      "inside_region": true,
+      "production_winding": -2.8161161242124886e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2444",
+      "source_sample_mm": [
+        53.03860017121019,
+        -91.77053770627036,
+        1324.0108677057246
+      ],
+      "inside_region": true,
+      "production_winding": 2.3191544552338144e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2444",
+      "source_sample_mm": [
+        43.249973204883986,
+        -92.23604982704732,
+        1337.629488229366
+      ],
+      "inside_region": true,
+      "production_winding": 0.0,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2460",
+      "source_sample_mm": [
+        61.13146850843657,
+        -88.38340765859482,
+        1315.8591540838568
+      ],
+      "inside_region": true,
+      "production_winding": 2.1258915839643297e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2460",
+      "source_sample_mm": [
+        59.57601465816629,
+        -85.56004079026746,
+        1323.941959240645
+      ],
+      "inside_region": true,
+      "production_winding": 7.730514850779382e-18,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2460",
+      "source_sample_mm": [
+        57.3174343495192,
+        -81.69045885392882,
+        1331.171636526736
+      ],
+      "inside_region": true,
+      "production_winding": -1.5461029701558764e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2460",
+      "source_sample_mm": [
+        53.619408593835146,
+        -76.07055879033845,
+        1336.8786075725354
+      ],
+      "inside_region": true,
+      "production_winding": 1.9257264672923638e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2461",
+      "source_sample_mm": [
+        30.912432944602756,
+        -83.84570717921656,
+        1342.0150100215712
+      ],
+      "inside_region": true,
+      "production_winding": 9.801188471523858e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2461",
+      "source_sample_mm": [
+        36.4417438179654,
+        -86.41649729288497,
+        1340.0683459743002
+      ],
+      "inside_region": true,
+      "production_winding": -8.890092078396289e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2461",
+      "source_sample_mm": [
+        41.416883541384664,
+        -89.14046036441218,
+        1337.2979887750735
+      ],
+      "inside_region": true,
+      "production_winding": 2.4295903816735198e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2461",
+      "source_sample_mm": [
+        45.878044030464025,
+        -90.89045010066226,
+        1332.9751848081953
+      ],
+      "inside_region": true,
+      "production_winding": -1.7007132671714637e-16,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2462",
+      "source_sample_mm": [
+        61.106170298419954,
+        -82.81332066693301,
+        1327.110235907705
+      ],
+      "inside_region": true,
+      "production_winding": -3.202641866751458e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2462",
+      "source_sample_mm": [
+        62.73131597864233,
+        -80.78391993888181,
+        1328.6358118053245
+      ],
+      "inside_region": true,
+      "production_winding": 1.601320933375729e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2462",
+      "source_sample_mm": [
+        63.602409965642266,
+        -78.80867489120214,
+        1330.5913845410985
+      ],
+      "inside_region": true,
+      "production_winding": 5.701254702449794e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2462",
+      "source_sample_mm": [
+        63.90916397948229,
+        -76.89052346403923,
+        1332.8864448767988
+      ],
+      "inside_region": true,
+      "production_winding": -4.748744836907334e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2463",
+      "source_sample_mm": [
+        38.27794467024842,
+        -91.42375480027931,
+        1345.2814234549414
+      ],
+      "inside_region": true,
+      "production_winding": 2.6504622345529306e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2463",
+      "source_sample_mm": [
+        37.846220206338174,
+        -89.92961820484231,
+        1347.1302908183006
+      ],
+      "inside_region": true,
+      "production_winding": -7.123117255361001e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2463",
+      "source_sample_mm": [
+        37.75002953705783,
+        -88.1022854784336,
+        1348.5029300864992
+      ],
+      "inside_region": true,
+      "production_winding": 2.4157858908685566e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2463",
+      "source_sample_mm": [
+        38.17827420328137,
+        -85.94767627234273,
+        1349.3980235805727
+      ],
+      "inside_region": true,
+      "production_winding": 5.3975559047406036e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2464",
+      "source_sample_mm": [
+        52.769885970400644,
+        -72.34497141969803,
+        1339.0817336107066
+      ],
+      "inside_region": true,
+      "production_winding": 1.918824221889882e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2464",
+      "source_sample_mm": [
+        53.2703750035292,
+        -71.0230032096199,
+        1339.5662691767886
+      ],
+      "inside_region": true,
+      "production_winding": 8.255085501367982e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2464",
+      "source_sample_mm": [
+        53.508286055450284,
+        -69.6105861611947,
+        1339.980923974553
+      ],
+      "inside_region": true,
+      "production_winding": -2.8230183696149707e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA12224",
+      "mesh": "FJ2464",
+      "source_sample_mm": [
+        53.72606080375456,
+        -68.19316469293642,
+        1340.3964750278622
+      ],
+      "inside_region": true,
+      "production_winding": 5.2319020150810456e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7131",
+      "mesh": "FJ2563",
+      "source_sample_mm": [
+        3.209852418438601,
+        -86.25452743122656,
+        1176.2195966046268
+      ],
+      "inside_region": true,
+      "production_winding": 4.417437057588218e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7131",
+      "mesh": "FJ2563",
+      "source_sample_mm": [
+        0.8734098046288494,
+        -73.38858913130423,
+        1224.8277946060991
+      ],
+      "inside_region": true,
+      "production_winding": 7.951386703658792e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7131",
+      "mesh": "FJ2563",
+      "source_sample_mm": [
+        0.3435175859847277,
+        -71.69429492178534,
+        1274.5433841613371
+      ],
+      "inside_region": true,
+      "production_winding": -1.766974823035287e-17,
+      "empty": true
+    },
+    {
+      "id": "FMA7131",
+      "mesh": "FJ2563",
+      "source_sample_mm": [
+        0.5130540356528002,
+        -81.9696087976821,
+        1325.3723755782466
+      ],
+      "inside_region": true,
+      "production_winding": 3.533949646070574e-17,
+      "empty": true
+    }
+  ],
+  "limitation": "Point samples establish these lumen voids only. Offset thickness and endpoint closures are authored approximations."
+}

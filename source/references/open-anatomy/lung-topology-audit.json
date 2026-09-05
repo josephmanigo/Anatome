@@ -1,0 +1,37 @@
+[
+  {
+    "name": "inferior lobe of left lung",
+    "triangles": 31510,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 1,
+    "zero_area_triangles": 0
+  },
+  {
+    "name": "inferior lobe of right lung",
+    "triangles": 28894,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "zero_area_triangles": 0
+  },
+  {
+    "name": "middle lobe of right lung",
+    "triangles": 14214,
+    "boundary_edges": 4,
+    "nonmanifold_edges": 2,
+    "zero_area_triangles": 0
+  },
+  {
+    "name": "superior lobe of left lung",
+    "triangles": 30769,
+    "boundary_edges": 2,
+    "nonmanifold_edges": 1,
+    "zero_area_triangles": 0
+  },
+  {
+    "name": "superior lobe of right lung",
+    "triangles": 30247,
+    "boundary_edges": 2,
+    "nonmanifold_edges": 2,
+    "zero_area_triangles": 0
+  }
+]

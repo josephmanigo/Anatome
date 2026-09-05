@@ -1,0 +1,1492 @@
+[
+  {
+    "url": "models",
+    "@type": "BaseURL",
+    "@id": "#_id1"
+  },
+  {
+    "url": "",
+    "@type": "BaseURL",
+    "@id": "#_id2"
+  },
+  {
+    "@id": "#_id3",
+    "@type": "DataSource",
+    "mimeType": "application/x-nrrd",
+    "baseUrl": "#_id2",
+    "source": "Data/Segmentation-flattened.seg.nrrd"
+  },
+  {
+    "@id": "#superior_lobe_of_right_lung_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/superior lobe of right lung.vtk"
+  },
+  {
+    "@id": "#superior_lobe_of_right_lung",
+    "@type": "Structure",
+    "annotation": {
+      "name": "superior lobe of right lung"
+    },
+    "renderOption": {
+      "color": "rgb(147,84,66)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id4",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "1",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id5",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#superior_lobe_of_right_lung_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#aorta_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/aorta.vtk"
+  },
+  {
+    "@id": "#aorta",
+    "@type": "Structure",
+    "annotation": {
+      "name": "aorta"
+    },
+    "renderOption": {
+      "color": "rgb(223,96,75)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id6",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "2",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id7",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#aorta_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#right_coronary_artery_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/right coronary artery.vtk"
+  },
+  {
+    "@id": "#right_coronary_artery",
+    "@type": "Structure",
+    "annotation": {
+      "name": "right coronary artery"
+    },
+    "renderOption": {
+      "color": "rgb(216,100,79)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id8",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "3",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id9",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#right_coronary_artery_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#inferior_interventricular_artery_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/inferior interventricular artery.vtk"
+  },
+  {
+    "@id": "#inferior_interventricular_artery",
+    "@type": "Structure",
+    "annotation": {
+      "name": "inferior interventricular artery"
+    },
+    "renderOption": {
+      "color": "rgb(216,100,79)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id10",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "4",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id11",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#inferior_interventricular_artery_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#left_coronary_artery_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/left coronary artery.vtk"
+  },
+  {
+    "@id": "#left_coronary_artery",
+    "@type": "Structure",
+    "annotation": {
+      "name": "left coronary artery"
+    },
+    "renderOption": {
+      "color": "rgb(216,100,79)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id12",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "5",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id13",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#left_coronary_artery_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#anterior_interventricular_artery_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/anterior interventricular artery.vtk"
+  },
+  {
+    "@id": "#anterior_interventricular_artery",
+    "@type": "Structure",
+    "annotation": {
+      "name": "anterior interventricular artery"
+    },
+    "renderOption": {
+      "color": "rgb(216,100,79)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id14",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "6",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id15",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#anterior_interventricular_artery_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#coronary_sinus_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/coronary sinus.vtk"
+  },
+  {
+    "@id": "#coronary_sinus",
+    "@type": "Structure",
+    "annotation": {
+      "name": "coronary sinus"
+    },
+    "renderOption": {
+      "color": "rgb(0,11,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id16",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "7",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id17",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#coronary_sinus_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#pulmonary_trunk_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/pulmonary trunk.vtk"
+  },
+  {
+    "@id": "#pulmonary_trunk",
+    "@type": "Structure",
+    "annotation": {
+      "name": "pulmonary trunk"
+    },
+    "renderOption": {
+      "color": "rgb(52,54,221)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id18",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "8",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id19",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#pulmonary_trunk_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#pulmonary_arteries_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/pulmonary arteries.vtk"
+  },
+  {
+    "@id": "#pulmonary_arteries",
+    "@type": "Structure",
+    "annotation": {
+      "name": "pulmonary arteries"
+    },
+    "renderOption": {
+      "color": "rgb(52,54,221)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id20",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "9",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id21",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#pulmonary_arteries_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#superior_vena_cava_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/superior vena cava.vtk"
+  },
+  {
+    "@id": "#superior_vena_cava",
+    "@type": "Structure",
+    "annotation": {
+      "name": "superior vena cava"
+    },
+    "renderOption": {
+      "color": "rgb(0,11,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id22",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "10",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id23",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#superior_vena_cava_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#azygos_vein_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/azygos vein.vtk"
+  },
+  {
+    "@id": "#azygos_vein",
+    "@type": "Structure",
+    "annotation": {
+      "name": "azygos vein"
+    },
+    "renderOption": {
+      "color": "rgb(98,89,216)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id24",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "11",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id25",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#azygos_vein_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#middle_lobe_of_right_lung_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/middle lobe of right lung.vtk"
+  },
+  {
+    "@id": "#middle_lobe_of_right_lung",
+    "@type": "Structure",
+    "annotation": {
+      "name": "middle lobe of right lung"
+    },
+    "renderOption": {
+      "color": "rgb(191,84,237)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id26",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "12",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id27",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#middle_lobe_of_right_lung_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#inferior_vena_cava_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/inferior vena cava.vtk"
+  },
+  {
+    "@id": "#inferior_vena_cava",
+    "@type": "Structure",
+    "annotation": {
+      "name": "inferior vena cava"
+    },
+    "renderOption": {
+      "color": "rgb(43,82,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id28",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "13",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id29",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#inferior_vena_cava_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#esophagus_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/esophagus.vtk"
+  },
+  {
+    "@id": "#esophagus",
+    "@type": "Structure",
+    "annotation": {
+      "name": "esophagus"
+    },
+    "renderOption": {
+      "color": "rgb(211,170,142)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id30",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "14",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id31",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#esophagus_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#manubrium_of_sternum_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/manubrium of sternum.vtk"
+  },
+  {
+    "@id": "#manubrium_of_sternum",
+    "@type": "Structure",
+    "annotation": {
+      "name": "manubrium of sternum"
+    },
+    "renderOption": {
+      "color": "rgb(209,75,33)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id32",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "15",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id33",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#manubrium_of_sternum_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#body_of_sternum_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/body of sternum.vtk"
+  },
+  {
+    "@id": "#body_of_sternum",
+    "@type": "Structure",
+    "annotation": {
+      "name": "body of sternum"
+    },
+    "renderOption": {
+      "color": "rgb(228,80,35)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id34",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "16",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id35",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#body_of_sternum_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#xiphoid_process_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/xiphoid process.vtk"
+  },
+  {
+    "@id": "#xiphoid_process",
+    "@type": "Structure",
+    "annotation": {
+      "name": "xiphoid process"
+    },
+    "renderOption": {
+      "color": "rgb(255,89,40)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id36",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "17",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id37",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#xiphoid_process_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#ribs_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/ribs.vtk"
+  },
+  {
+    "@id": "#ribs",
+    "@type": "Structure",
+    "annotation": {
+      "name": "ribs"
+    },
+    "renderOption": {
+      "color": "rgb(223,209,175)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id38",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "18",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id39",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#ribs_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#costal_cartilages_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/costal cartilages.vtk"
+  },
+  {
+    "@id": "#costal_cartilages",
+    "@type": "Structure",
+    "annotation": {
+      "name": "costal cartilages"
+    },
+    "renderOption": {
+      "color": "rgb(181,205,219)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id40",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "19",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id41",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#costal_cartilages_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#clavicle_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/clavicle.vtk"
+  },
+  {
+    "@id": "#clavicle",
+    "@type": "Structure",
+    "annotation": {
+      "name": "clavicle"
+    },
+    "renderOption": {
+      "color": "rgb(223,209,175)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id42",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "20",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id43",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#clavicle_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#sternoclavicular_joint_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/sternoclavicular joint.vtk"
+  },
+  {
+    "@id": "#sternoclavicular_joint",
+    "@type": "Structure",
+    "annotation": {
+      "name": "sternoclavicular joint"
+    },
+    "renderOption": {
+      "color": "rgb(137,158,167)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id44",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "21",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id45",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#sternoclavicular_joint_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#scapula_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/scapula.vtk"
+  },
+  {
+    "@id": "#scapula",
+    "@type": "Structure",
+    "annotation": {
+      "name": "scapula"
+    },
+    "renderOption": {
+      "color": "rgb(207,195,163)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id46",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "22",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id47",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#scapula_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#inferior_lobe_of_right_lung_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/inferior lobe of right lung.vtk"
+  },
+  {
+    "@id": "#inferior_lobe_of_right_lung",
+    "@type": "Structure",
+    "annotation": {
+      "name": "inferior lobe of right lung"
+    },
+    "renderOption": {
+      "color": "rgb(84,188,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id48",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "23",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id49",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#inferior_lobe_of_right_lung_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#vertebra_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/vertebra.vtk"
+  },
+  {
+    "@id": "#vertebra",
+    "@type": "Structure",
+    "annotation": {
+      "name": "vertebra"
+    },
+    "renderOption": {
+      "color": "rgb(207,195,163)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id50",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "24",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id51",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#vertebra_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#intervertebral_discs_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/intervertebral discs.vtk"
+  },
+  {
+    "@id": "#intervertebral_discs",
+    "@type": "Structure",
+    "annotation": {
+      "name": "intervertebral discs"
+    },
+    "renderOption": {
+      "color": "rgb(181,205,219)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id52",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "25",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id53",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#intervertebral_discs_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#heart_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/heart.vtk"
+  },
+  {
+    "@id": "#heart",
+    "@type": "Structure",
+    "annotation": {
+      "name": "heart"
+    },
+    "renderOption": {
+      "color": "rgb(205,110,84)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id54",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "26",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id55",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#heart_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#pulmonary_veins_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/pulmonary veins.vtk"
+  },
+  {
+    "@id": "#pulmonary_veins",
+    "@type": "Structure",
+    "annotation": {
+      "name": "pulmonary veins"
+    },
+    "renderOption": {
+      "color": "rgb(237,0,2)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id56",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "27",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id57",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#pulmonary_veins_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#superior_lobe_of_left_lung_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/superior lobe of left lung.vtk"
+  },
+  {
+    "@id": "#superior_lobe_of_left_lung",
+    "@type": "Structure",
+    "annotation": {
+      "name": "superior lobe of left lung"
+    },
+    "renderOption": {
+      "color": "rgb(147,84,66)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id58",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "28",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id59",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#superior_lobe_of_left_lung_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#inferior_lobe_of_left_lung_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/inferior lobe of left lung.vtk"
+  },
+  {
+    "@id": "#inferior_lobe_of_left_lung",
+    "@type": "Structure",
+    "annotation": {
+      "name": "inferior lobe of left lung"
+    },
+    "renderOption": {
+      "color": "rgb(84,188,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id60",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "29",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id61",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#inferior_lobe_of_left_lung_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#trachea_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/trachea.vtk"
+  },
+  {
+    "@id": "#trachea",
+    "@type": "Structure",
+    "annotation": {
+      "name": "trachea"
+    },
+    "renderOption": {
+      "color": "rgb(181,228,255)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id62",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "30",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id63",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#trachea_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#carina_of_trachea_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/carina of trachea.vtk"
+  },
+  {
+    "@id": "#carina_of_trachea",
+    "@type": "Structure",
+    "annotation": {
+      "name": "carina of trachea"
+    },
+    "renderOption": {
+      "color": "rgb(154,193,214)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id64",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "31",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id65",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#carina_of_trachea_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#main_bronchi_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/main bronchi.vtk"
+  },
+  {
+    "@id": "#main_bronchi",
+    "@type": "Structure",
+    "annotation": {
+      "name": "main bronchi"
+    },
+    "renderOption": {
+      "color": "rgb(130,163,181)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id66",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "32",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id67",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#main_bronchi_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#lobar_bronchi_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/lobar bronchi.vtk"
+  },
+  {
+    "@id": "#lobar_bronchi",
+    "@type": "Structure",
+    "annotation": {
+      "name": "lobar bronchi"
+    },
+    "renderOption": {
+      "color": "rgb(114,144,160)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id68",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "33",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id69",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#lobar_bronchi_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#segmental_bronchi_Model",
+    "@type": "DataSource",
+    "mimeType": "application/octet-stream",
+    "baseURL": "#_id2",
+    "source": "models/segmental bronchi.vtk"
+  },
+  {
+    "@id": "#segmental_bronchi",
+    "@type": "Structure",
+    "annotation": {
+      "name": "segmental bronchi"
+    },
+    "renderOption": {
+      "color": "rgb(68,86,96)"
+    },
+    "sourceSelector": [
+      {
+        "@id": "#_id70",
+        "@type": [
+          "Selector",
+          "LabelMapSelector"
+        ],
+        "authoritative": true,
+        "dataKey": "34",
+        "dataSource": "#_id3"
+      },
+      {
+        "@id": "#_id71",
+        "@type": [
+          "Selector",
+          "GeometrySelector"
+        ],
+        "authoritative": false,
+        "dataSource": "#segmental_bronchi_Model"
+      }
+    ]
+  },
+  {
+    "@id": "#_root",
+    "@type": "Group",
+    "annotation": {
+      "name": "Thoracic atlas"
+    },
+    "member": [
+    ]
+  },
+  {
+    "@id": "#_id73",
+    "@type": "DataSource",
+    "mimeType": "application/x-nrrd",
+    "baseUrl": "#_id2",
+    "source": "Data/CT-256.nrrd"
+  },
+  {
+    "@id": "#__header__",
+    "@type": "Header",
+    "root": [
+      "#esophagus",
+      "#cardiovascular_system",
+      "#respiratory_system",
+      "#skeletal_system"
+    ],
+    "name": "Mauritanian Thoracic Atlas",
+    "contact": "https://openanatomy.org",
+    "backgroundImage": [
+      "#_id73"
+    ]
+  },
+  {
+    "@id": "#respiratory_system",
+    "@type": "Group",
+    "annotation": {
+      "name": "Respiratory system"
+    },
+    "member": [
+      "#lungs",
+      "#tracheo"
+    ]
+  },
+  {
+    "@id": "#cardiovascular_system",
+    "@type": "Group",
+    "annotation": {
+      "name": "Cardiovascular system"
+    },
+    "member": [
+      "#heart",
+      "#cardiac_vessels",
+      "#pulmonary_vessels",
+      "#systemic_vessels"
+    ]
+  },
+  {
+    "@id": "#cardiac_vessels",
+    "@type": "Group",
+    "annotation": {
+      "name": "Cardiac vessels"
+    },
+    "member": [
+      "#left_coronary_artery",
+      "#anterior_interventricular_artery",
+      "#right_coronary_artery",
+      "#inferior_interventricular_artery",
+      "#coronary_sinus"
+    ]
+  },
+  {
+    "@id": "#pulmonary_vessels",
+    "@type": "Group",
+    "annotation": {
+      "name": "Pulmonary vessels"
+    },
+    "member": [
+      "#pulmonary_trunk",
+      "#pulmonary_arteries",
+      "#pulmonary_veins"
+    ]
+  },
+  {
+    "@id": "#systemic_vessels",
+    "@type": "Group",
+    "annotation": {
+      "name": "Systemic vessels"
+    },
+    "member": [
+      "#aorta",
+      "#superior_vena_cava",
+      "#inferior_vena_cava",
+      "#azygos_vein"
+    ]
+  },
+  {
+    "@id": "#skeletal_system",
+    "@type": "Group",
+    "annotation": {
+      "name": "Skeletal system"
+    },
+    "member": [
+      "#ribs",
+      "#costal_cartilages",
+      "#vertebral_column",
+      "#scapula",
+      "#clavicle",
+      "#sternoclavicular_joint",
+      "#sternum"
+    ]
+  },
+  {
+    "@id": "#vertebral_column",
+    "@type": "Group",
+    "annotation": {
+      "name": "Vertebral column"
+    },
+    "member": [
+      "#vertebra",
+      "#intervertebral_discs"
+    ]
+  },
+  {
+    "@id": "#sternum",
+    "@type": "Group",
+    "annotation": {
+      "name": "Sternum"
+    },
+    "member": [
+      "#manubrium_of_sternum",
+      "#body_of_sternum",
+      "#xiphoid_process"
+    ]
+  },
+  {
+    "@id": "#lungs",
+    "@type": "Group",
+    "annotation": {
+      "name": "Lungs"
+    },
+    "member": [
+      "#left_lung",
+      "#right_lung"
+    ]
+  },
+  {
+    "@id": "#right_lung",
+    "@type": "Group",
+    "annotation": {
+      "name": "Right lung"
+    },
+    "member": [
+      "#superior_lobe_of_right_lung",
+      "#middle_lobe_of_right_lung",
+      "#inferior_lobe_of_right_lung"
+    ]
+  },
+  {
+    "@id": "#left_lung",
+    "@type": "Group",
+    "annotation": {
+      "name": "Left lung"
+    },
+    "member": [
+      "#superior_lobe_of_left_lung",
+      "#inferior_lobe_of_left_lung"
+    ]
+  },
+  {
+    "@id": "#tracheo",
+    "@type": "Group",
+    "annotation": {
+      "name": "Tracheobronchial tree"
+    },
+    "member": [
+      "#trachea",
+      "#carina_of_trachea",
+      "#main_bronchi",
+      "#lobar_bronchi",
+      "#segmental_bronchi"
+    ]
+  }
+]

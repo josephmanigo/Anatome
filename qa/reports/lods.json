@@ -1,0 +1,14 @@
+[
+  {
+    "level": 1,
+    "objects": 249,
+    "triangles": 300171,
+    "role": "intact display only; cutting always uses LOD0"
+  },
+  {
+    "level": 2,
+    "objects": 249,
+    "triangles": 144599,
+    "role": "intact display only; cutting always uses LOD0"
+  }
+]
