@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "zip": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-1.5.1-FOV-Guide.zip",
+  "sha256": "0598752325e92e6e49721f230be68377ef761f5d05b1eb8b9be950ffe66b3d70",
+  "bytes": 105172405,
+  "entries": [
+    "Anatome-1.5.1-Production.apk",
+    "README.txt",
+    "TEST-RESULTS.json",
+    "SHA256SUMS.txt"
+  ],
+  "allEntryHashesMatch": true,
+  "crcPassed": true,
+  "apkSha256": "7d033d45040065acc6d2669abd70c531aff9b8d7352f722a68e0e384dd48af14",
+  "privateSigningMaterialIncluded": false
+}

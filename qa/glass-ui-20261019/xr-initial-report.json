@@ -1,0 +1,2402 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-18T22:19:30.4313940Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/career/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/career/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/career/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/career/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/career/Start an Easy lesson",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Start an Easy lesson; callbacks=1; frame delay=0; aimed=(-0.24, 1.66, 0.61); current=(-0.24, 1.66, 0.61); ray=(-1.00, 0.01, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/career/Start an Easy lesson",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/career/Choose an activity",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose an activity; callbacks=1; frame delay=0; aimed=(-0.23, 1.56, 0.61); current=(-0.23, 1.56, 0.61); ray=(-0.99, -0.08, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/career/Choose an activity",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/career/Sign in to save progress",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Sign in to save progress; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/career/Sign in to save progress",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Return to lab",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Return to lab; callbacks=1; frame delay=0; aimed=(-0.24, 1.73, 0.61); current=(-0.24, 1.73, 0.61); ray=(-0.99, 0.07, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Return to lab",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Settings",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Settings; callbacks=1; frame delay=0; aimed=(-0.24, 1.66, 0.61); current=(-0.24, 1.66, 0.61); ray=(-1.00, 0.01, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Settings",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Your progress",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Your progress; callbacks=1; frame delay=0; aimed=(-0.23, 1.58, 0.61); current=(-0.23, 1.58, 0.61); ray=(-0.99, -0.06, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Your progress",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/menu/Move panel in front of me",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Move panel in front of me; callbacks=1; frame delay=0; aimed=(-0.23, 1.50, 0.61); current=(-0.23, 1.50, 0.61); ray=(-0.99, -0.13, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/menu/Move panel in front of me",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/On   Seated fallback height",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Seated fallback height; callbacks=1; frame delay=0; aimed=(-0.23, 1.61, 0.61); current=(-0.23, 1.61, 0.61); ray=(-1.00, -0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/On   Seated fallback height",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Recenter panel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Recenter panel; callbacks=1; frame delay=0; aimed=(-0.23, 1.53, 0.61); current=(-0.23, 1.53, 0.61); ray=(-0.99, -0.11, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Recenter panel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/On   Automatic height assistance",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Automatic height assistance; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/On   Automatic height assistance",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Recenter view and height",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Recenter view and height; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Recenter view and height",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Movement   Smooth",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Movement   Smooth; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Movement   Smooth",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Turning   Snap",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Turning   Snap; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Turning   Snap",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/On   Comfort vignette",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Comfort vignette; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/On   Comfort vignette",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Reset this category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Reset this category; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Reset this category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/VR comfort/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/VR comfort/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/On   Captions",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Captions; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/On   Captions",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Reset this category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Reset this category; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Reset this category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Audio/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Audio/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Off   Left dominant hand",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   Left dominant hand; callbacks=1; frame delay=0; aimed=(-0.23, 1.61, 0.61); current=(-0.23, 1.61, 0.61); ray=(-1.00, -0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Off   Left dominant hand",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Off   Toggle grip",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   Toggle grip; callbacks=1; frame delay=0; aimed=(-0.23, 1.53, 0.61); current=(-0.23, 1.53, 0.61); ray=(-0.99, -0.11, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Off   Toggle grip",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/On   Controller vibration",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Controller vibration; callbacks=1; frame delay=0; aimed=(-0.23, 1.45, 0.61); current=(-0.23, 1.45, 0.61); ray=(-0.98, -0.17, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/On   Controller vibration",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Reset this category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Reset this category; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Reset this category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Controls/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Controls/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Graphics preset   Medium",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Graphics preset   Medium; callbacks=1; frame delay=0; aimed=(-0.23, 1.61, 0.61); current=(-0.23, 1.61, 0.61); ray=(-1.00, -0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Graphics preset   Medium",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Texture mip limit   1",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Texture mip limit   1; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Texture mip limit   1",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Anti-aliasing   2",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Anti-aliasing   2; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Anti-aliasing   2",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Off   Shadows",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   Shadows; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Off   Shadows",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Resolution   1440 × 1000",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Resolution   1440 × 1000; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Resolution   1440 × 1000",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Off   Fullscreen",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   Fullscreen; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Off   Fullscreen",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Off   VSync",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   VSync; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Off   VSync",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Frame cap   60",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Frame cap   60; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Frame cap   60",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/On   Show FPS",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Show FPS; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/On   Show FPS",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Reset this category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Reset this category; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Reset this category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Graphics & display/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Graphics & display/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/On   Practice hints",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Practice hints; callbacks=1; frame delay=0; aimed=(-0.23, 1.61, 0.61); current=(-0.23, 1.61, 0.61); ray=(-1.00, -0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/On   Practice hints",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/On   Structure labels",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=On   Structure labels; callbacks=1; frame delay=0; aimed=(-0.23, 1.53, 0.61); current=(-0.23, 1.53, 0.61); ray=(-0.99, -0.11, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/On   Structure labels",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Off   High contrast",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   High contrast; callbacks=1; frame delay=0; aimed=(-0.23, 1.45, 0.61); current=(-0.23, 1.45, 0.61); ray=(-0.98, -0.17, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Off   High contrast",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Off   Reduced motion",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Off   Reduced motion; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Off   Reduced motion",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Reset this category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Reset this category; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Reset this category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Learning & accessibility/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Learning & accessibility/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Create default profile",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Create default profile; callbacks=1; frame delay=0; aimed=(-0.23, 1.54, 0.61); current=(-0.23, 1.54, 0.61); ray=(-0.99, -0.10, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Create default profile",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Duplicate current draft",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Duplicate current draft; callbacks=1; frame delay=0; aimed=(-0.23, 1.46, 0.61); current=(-0.23, 1.46, 0.61); ray=(-0.98, -0.17, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Duplicate current draft",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Load · Windows balanced",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Load · Windows balanced; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Load · Windows balanced",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Delete this device's copy",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Delete this device's copy; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Delete this device's copy",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Profiles/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Profiles/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Choose a settings category",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Choose a settings category; callbacks=1; frame delay=0; aimed=(-0.24, 1.69, 0.61); current=(-0.24, 1.69, 0.61); ray=(-1.00, 0.04, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Choose a settings category",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Sync now",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Sync now; callbacks=1; frame delay=0; aimed=(-0.23, 1.53, 0.61); current=(-0.23, 1.53, 0.61); ray=(-0.99, -0.11, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Sync now",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Resume last safe step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Resume last safe step; callbacks=1; frame delay=0; aimed=(-0.23, 1.45, 0.61); current=(-0.23, 1.45, 0.61); ray=(-0.98, -0.17, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Resume last safe step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Export progress",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Export progress; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Export progress",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Privacy and shared headsets",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Privacy and shared headsets; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Privacy and shared headsets",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Apply",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Apply; callbacks=1; frame delay=0; aimed=(-0.22, 1.34, 0.47); current=(-0.22, 1.34, 0.47); ray=(-0.94, -0.27, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Apply",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/Account & saves/Cancel",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Cancel; callbacks=1; frame delay=0; aimed=(-0.24, 1.34, 0.76); current=(-0.24, 1.34, 0.76); ray=(-0.96, -0.27, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/Account & saves/Cancel",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/VR comfort",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=VR comfort; callbacks=1; frame delay=0; aimed=(-0.24, 1.73, 0.61); current=(-0.24, 1.73, 0.61); ray=(-0.99, 0.07, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/VR comfort",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Audio",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Audio; callbacks=1; frame delay=0; aimed=(-0.24, 1.66, 0.61); current=(-0.24, 1.66, 0.61); ray=(-1.00, 0.01, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Audio",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Learning & accessibility",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learning & accessibility; callbacks=1; frame delay=0; aimed=(-0.23, 1.58, 0.61); current=(-0.23, 1.58, 0.61); ray=(-0.99, -0.06, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Learning & accessibility",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Graphics & display",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Graphics & display; callbacks=1; frame delay=0; aimed=(-0.23, 1.50, 0.61); current=(-0.23, 1.50, 0.61); ray=(-0.99, -0.13, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Graphics & display",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Controls",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Controls; callbacks=1; frame delay=0; aimed=(-0.23, 1.43, 0.61); current=(-0.23, 1.43, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Controls",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Profiles",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Profiles; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Profiles",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Account & saves",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Account & saves; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Account & saves",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/settings/categories/Back to settings",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to settings; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/settings/categories/Back to settings",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Identify & Enumerate",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Identify & Enumerate; callbacks=1; frame delay=0; aimed=(-0.24, 1.70, 0.61); current=(-0.24, 1.70, 0.61); ray=(-0.99, 0.05, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Identify & Enumerate",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Assemble Anatomy",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Assemble Anatomy; callbacks=1; frame delay=0; aimed=(-0.23, 1.56, 0.61); current=(-0.23, 1.56, 0.61); ray=(-0.99, -0.08, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Assemble Anatomy",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Guided Dissection",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guided Dissection; callbacks=1; frame delay=0; aimed=(-0.23, 1.43, 0.61); current=(-0.23, 1.43, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Guided Dissection",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Anatomy Cases",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Anatomy Cases; callbacks=1; frame delay=0; aimed=(-0.23, 1.40, 0.61); current=(-0.23, 1.40, 0.61); ray=(-0.97, -0.22, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Anatomy Cases",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/modes/Back to lab",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to lab; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/modes/Back to lab",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Pneumothorax",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pneumothorax; callbacks=1; frame delay=0; aimed=(-0.24, 1.64, 0.61); current=(-0.24, 1.64, 0.61); ray=(-1.00, 0.00, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Pneumothorax",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Asthma",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Asthma; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Asthma",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Coronary artery disease",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Coronary artery disease; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Coronary artery disease",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Pneumonia",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pneumonia; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Pneumonia",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Pleural effusion",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pleural effusion; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Pleural effusion",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Aortic valve stenosis",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Aortic valve stenosis; callbacks=1; frame delay=0; aimed=(-0.23, 1.42, 0.61); current=(-0.23, 1.42, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Aortic valve stenosis",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/AnatomyCases/Back to activities",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to activities; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/AnatomyCases/Back to activities",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumothorax/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumothorax/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/asthma/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/asthma/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/coronary-disease/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/coronary-disease/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pneumonia/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pneumonia/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/pleural-effusion/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/pleural-effusion/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/AnatomyCases/aortic-stenosis/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/AnatomyCases/aortic-stenosis/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/difficulty/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/difficulty/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/difficulty/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/difficulty/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/difficulty/AnatomyCases/Easy",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Easy; callbacks=1; frame delay=0; aimed=(-0.24, 1.70, 0.61); current=(-0.24, 1.70, 0.61); ray=(-0.99, 0.05, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/difficulty/AnatomyCases/Easy",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/difficulty/AnatomyCases/Back",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/difficulty/AnatomyCases/Back",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Practice with guidance",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice with guidance; callbacks=1; frame delay=0; aimed=(-0.24, 1.70, 0.61); current=(-0.24, 1.70, 0.61); ray=(-0.99, 0.05, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Practice with guidance",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Take the assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Take the assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.56, 0.61); current=(-0.23, 1.56, 0.61); ray=(-0.99, -0.08, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Take the assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Read the anatomy and sources",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read the anatomy and sources; callbacks=1; frame delay=0; aimed=(-0.23, 1.46, 0.61); current=(-0.23, 1.46, 0.61); ray=(-0.98, -0.17, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Read the anatomy and sources",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/phase/AnatomyCases/Back",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back; callbacks=1; frame delay=0; aimed=(-0.23, 1.38, 0.61); current=(-0.23, 1.38, 0.61); ray=(-0.97, -0.23, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/phase/AnatomyCases/Back",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Back to unit",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to unit; callbacks=1; frame delay=0; aimed=(-0.24, 1.73, 0.61); current=(-0.24, 1.73, 0.61); ray=(-0.99, 0.07, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Back to unit",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Read source details",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read source details; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Read source details",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Read source details",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read source details; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Read source details",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Read source details",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read source details; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Read source details",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Read source details",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read source details; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Read source details",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/references/AnatomyCases/Read source details",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read source details; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/references/AnatomyCases/Read source details",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/workspace/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/workspace/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/workspace/AnatomyCases/Pause",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/workspace/AnatomyCases/Pause",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/workspace/AnatomyCases/Case and controls",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Case and controls; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/workspace/AnatomyCases/Case and controls",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/workspace/AnatomyCases/Show me this step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Show me this step; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/workspace/AnatomyCases/Show me this step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/workspace/AnatomyCases/Tools and more help",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Tools and more help; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/workspace/AnatomyCases/Tools and more help",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Return to your step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Return to your step; callbacks=1; frame delay=0; aimed=(-0.24, 1.73, 0.61); current=(-0.24, 1.73, 0.61); ray=(-0.99, 0.07, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Return to your step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Read this lesson",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Read this lesson; callbacks=1; frame delay=0; aimed=(-0.24, 1.66, 0.61); current=(-0.24, 1.66, 0.61); ray=(-1.00, 0.01, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Read this lesson",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Pause / resume narration",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume narration; callbacks=1; frame delay=0; aimed=(-0.23, 1.58, 0.61); current=(-0.23, 1.58, 0.61); ray=(-0.99, -0.06, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Pause / resume narration",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/References",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=References; callbacks=1; frame delay=0; aimed=(-0.23, 1.50, 0.61); current=(-0.23, 1.50, 0.61); ray=(-0.99, -0.13, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/References",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Isolate selected anatomy",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Isolate selected anatomy; callbacks=1; frame delay=0; aimed=(-0.23, 1.43, 0.61); current=(-0.23, 1.43, 0.61); ray=(-0.98, -0.20, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Isolate selected anatomy",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Find a structure",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Find a structure; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Find a structure",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Restore activity position",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Restore activity position; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Restore activity position",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/tools/AnatomyCases/Finish this attempt early",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Finish this attempt early; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/tools/AnatomyCases/Finish this attempt early",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/teaching/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/teaching/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/teaching/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/teaching/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/teaching/AnatomyCases/Return to specimen",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Return to specimen; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/teaching/AnatomyCases/Return to specimen",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/results/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/results/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/results/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/results/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/results/AnatomyCases/Practise this step again",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practise this step again; callbacks=1; frame delay=0; aimed=(-0.23, 1.51, 0.61); current=(-0.23, 1.51, 0.61); ray=(-0.99, -0.12, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/results/AnatomyCases/Practise this step again",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/results/AnatomyCases/Review your steps",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Review your steps; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.19, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/results/AnatomyCases/Review your steps",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/results/AnatomyCases/Return to lab",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Return to lab; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/results/AnatomyCases/Return to lab",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/feedback/AnatomyCases/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/feedback/AnatomyCases/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/feedback/AnatomyCases/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/feedback/AnatomyCases/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/feedback/AnatomyCases/Back to results",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to results; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/feedback/AnatomyCases/Back to results",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Chest wall",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Chest wall; callbacks=1; frame delay=0; aimed=(-0.24, 1.66, 0.61); current=(-0.24, 1.66, 0.61); ray=(-1.00, 0.01, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Chest wall",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Pleura & lungs",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pleura & lungs; callbacks=1; frame delay=0; aimed=(-0.23, 1.50, 0.61); current=(-0.23, 1.50, 0.61); ray=(-0.99, -0.13, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Pleura & lungs",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Airways",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Airways; callbacks=1; frame delay=0; aimed=(-0.23, 1.41, 0.61); current=(-0.23, 1.41, 0.61); ray=(-0.97, -0.21, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Airways",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Heart & coronary anatomy",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Heart & coronary anatomy; callbacks=1; frame delay=0; aimed=(-0.23, 1.41, 0.61); current=(-0.23, 1.41, 0.61); ray=(-0.97, -0.21, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Heart & coronary anatomy",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Great vessels & valves",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Great vessels & valves; callbacks=1; frame delay=0; aimed=(-0.23, 1.41, 0.61); current=(-0.23, 1.41, 0.61); ray=(-0.97, -0.21, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Great vessels & valves",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Mediastinal relationships",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Mediastinal relationships; callbacks=1; frame delay=0; aimed=(-0.23, 1.41, 0.61); current=(-0.23, 1.41, 0.61); ray=(-0.97, -0.21, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Mediastinal relationships",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/units/IdentifyEnumerate/Back to activities",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to activities; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/units/IdentifyEnumerate/Back to activities",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/chest-wall/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/chest-wall/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.39, 0.61); current=(-0.23, 1.39, 0.61); ray=(-0.97, -0.22, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/pleura-lungs/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/pleura-lungs/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.47, 0.61); current=(-0.23, 1.47, 0.61); ray=(-0.98, -0.16, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.39, 0.61); current=(-0.23, 1.39, 0.61); ray=(-0.97, -0.22, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/airways/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/airways/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.95, 0.22, -0.20)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Menu",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Menu; callbacks=1; frame delay=0; aimed=(-0.25, 1.90, 0.76); current=(-0.25, 1.90, 0.76); ray=(-0.98, 0.22, 0.04)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Menu",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Learn step by step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Learn step by step; callbacks=1; frame delay=0; aimed=(-0.23, 1.44, 0.61); current=(-0.23, 1.44, 0.61); ray=(-0.98, -0.18, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Learn step by step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Practice or assessment",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Practice or assessment; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Practice or assessment",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Change difficulty",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Change difficulty; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Change difficulty",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/heart-coronaries/Back to units",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Back to units; callbacks=1; frame delay=0; aimed=(-0.23, 1.37, 0.61); current=(-0.23, 1.37, 0.61); ray=(-0.97, -0.25, -0.09)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/unit/IdentifyEnumerate/heart-coronaries/Back to units",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/unit/IdentifyEnumerate/vessels-valves/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=0; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.97, -0.25, -0.09)",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: ui_target/unit/IdentifyEnumerate/vessels-valves/Guide: Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=0; frame delay=0; aimed=(-0.23, 1.90, 0.47); current=(-0.23, 1.90, 0.47); ray=(-0.97, -0.25, -0.09)\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:189 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<AuditButtons>d__32.MoveNext () [0x0038f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.UI.cs:377 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyUIAudit>d__30.MoveNext () [0x0070d] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.UI.cs:298 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__56.MoveNext () [0x00911] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:239 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:173 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "failure: head=(0.86, 1.65, 0.67) hand=(0.88, 1.65, 0.71) direction=(-0.97, -0.25, -0.09) plane=True distance=1.148794 screen=(577.30, 305.68, 0.94) hits=Practice or assessment/Practice or assessment, Viewport/"
+    ]
+}

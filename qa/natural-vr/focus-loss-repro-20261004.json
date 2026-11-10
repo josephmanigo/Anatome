@@ -1,0 +1,99 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-04T10:52:29.4333450Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "measured_floor_eye_height_preserved",
+            "detail": "Seated layout preserves measured Floor eye height=1.65",
+            "passed": true
+        },
+        {
+            "id": "startup_origin_change_keeps_head_above_floor",
+            "detail": "A delayed 1.65m -> 0m origin change must not put the headset under the floor. World eye height=1.25",
+            "passed": true
+        },
+        {
+            "id": "controller_button_tolerates_hand_jitter",
+            "detail": "A 2 mm controller movement during trigger press must still open the guest lesson. Screen=Career",
+            "passed": true
+        },
+        {
+            "id": "performance_pause_stops_sampling",
+            "detail": "Paused frames cannot enter the session performance sample.",
+            "passed": true
+        },
+        {
+            "id": "performance_pause_persists_measurement",
+            "detail": "Android pause persists the measured session before the OS can terminate the app.",
+            "passed": true
+        },
+        {
+            "id": "performance_resume_samples_again",
+            "detail": "Sampling resumes after skipping the pause-transition frame.",
+            "passed": true
+        },
+        {
+            "id": "lost_focus_blocks_ui",
+            "detail": "A still-tracked controller cannot activate UI after application focus is lost. Screen=Menu; pointer-downs=1",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: lost_focus_blocks_ui: A still-tracked controller cannot activate UI after application focus is lost. Screen=Menu; pointer-downs=1\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:185 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyFocusAndMonitor>d__0.MoveNext () [0x0022a] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.UI.cs:34 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__25.MoveNext () [0x007f5] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:233 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:169 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "Aimed Try your first VR lesson world=(-0.39, 1.26, 0.96); screen=(-41.97, 259.21, 0.95); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Menu world=(-0.39, 1.61, 1.18); screen=(228.95, 366.23, 1.10); button rect=(x:-72.50, y:-32.00, width:145.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "failure: head=(0.71, 1.28, 1.02) hand=(0.71, 1.20, 1.10) direction=(-0.93, 0.35, 0.07) plane=True distance=1.17632 screen=(228.95, 366.23, 1.10) hits="
+    ]
+}

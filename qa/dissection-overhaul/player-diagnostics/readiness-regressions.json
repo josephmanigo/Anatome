@@ -1,0 +1,94 @@
+{
+    "utc": "2026-10-07T10:07:41.2127857Z",
+    "passed": true,
+    "checks": [
+        {
+            "id": "profile_read_omits_optional_profile",
+            "passed": true
+        },
+        {
+            "id": "profile_delete_does_not_create_default",
+            "passed": true
+        },
+        {
+            "id": "profile_save_preserves_explicit_identity",
+            "passed": true
+        },
+        {
+            "id": "corrupt_settings_boot_with_defaults",
+            "passed": true
+        },
+        {
+            "id": "corrupt_settings_originals_preserved",
+            "passed": true
+        },
+        {
+            "id": "first_recovery_save_rebuilds_valid_backup",
+            "passed": true
+        },
+        {
+            "id": "saved_lighting_matches_profile",
+            "passed": true
+        },
+        {
+            "id": "failed_apply_preserves_current_profile",
+            "passed": true
+        },
+        {
+            "id": "cancel_after_failed_apply_keeps_old_profile",
+            "passed": true
+        },
+        {
+            "id": "incorrect_assembly_release_recorded",
+            "passed": true
+        },
+        {
+            "id": "corrected_assembly_retains_error",
+            "passed": true
+        },
+        {
+            "id": "restore_does_not_erase_assembly_error",
+            "passed": true
+        },
+        {
+            "id": "practice_assembly_remains_forgiving",
+            "passed": true
+        },
+        {
+            "id": "enumeration_places_surface_marker",
+            "passed": true
+        },
+        {
+            "id": "repeated_selection_does_not_duplicate_marker",
+            "passed": true
+        },
+        {
+            "id": "markers_rebuilt_from_safe_checkpoint",
+            "passed": true
+        },
+        {
+            "id": "paused_blade_contact_does_not_score",
+            "passed": true
+        },
+        {
+            "id": "protected_mesh_contact_recorded_without_cut_permission",
+            "passed": true
+        },
+        {
+            "id": "repeated_protected_contact_is_bounded",
+            "passed": true
+        },
+        {
+            "id": "undo_and_restore_preserve_protection_failure",
+            "passed": true
+        },
+        {
+            "id": "saturated_contact_query_blocks_stroke",
+            "passed": true
+        },
+        {
+            "id": "releasing_blocked_stroke_allows_retry",
+            "passed": true
+        }
+    ]
+}

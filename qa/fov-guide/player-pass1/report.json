@@ -1,0 +1,35 @@
+{
+    "method": "Fresh managed code in copied development player with cached scene/assets; QA tracking bypass",
+    "utc": "2026-10-21T23:15:44.9717492Z",
+    "passed": false,
+    "physicalHeadsetTested": false,
+    "checks": [
+        "Comfort slider changes draft only",
+        "Apply saves comfort width",
+        "Comfort aperture narrows independently of camera projection",
+        "Disabled vignette stays hidden",
+        "Large settings labels fit their rectangles",
+        "Default practice viewpoint has a continuous surface route",
+        "Practice guide is visible",
+        "Guide has no colliders",
+        "Left route stays on anatomical left",
+        "Right route stays on anatomical right",
+        "Hints off hides guide without scoring",
+        "Guide route creates a real native-cut chunk: Cut complete · 2 pieces · 1/32 detached pieces.",
+        "Cut and guide alone earn no removal credit",
+        "Guide switches to chunk lift stage",
+        "Undo restores current sweep guide",
+        "Pause hides guide",
+        "Assessment has no added answer guide",
+        "Sandbox clears old guide objects"
+    ],
+    "errors": [
+        "Blocking geometry prevents guide route"
+    ],
+    "screenshots": [
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-pass1\\settings.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-pass1\\settings-large-contrast.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-pass1\\sweep.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-pass1\\lift.png"
+    ]
+}

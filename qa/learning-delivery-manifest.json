@@ -1,0 +1,200 @@
+{
+  "utc": "2026-09-05T23:26:54.2002415Z",
+  "status": "Working UI review build; full release not accepted",
+  "unity": "6000.3.19f1",
+  "artifacts": [
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\ThoraxLab-Learning-Windows-20260906-072649.zip",
+      "bytes": 87772033,
+      "sha256": "eab9cf33ac2900afa87fff556fffbbc6b3607412d0b9ec1c187b0b84e988e67f"
+    },
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningQuest\\ThoraxLab.apk",
+      "bytes": 87977661,
+      "sha256": "29a187c56ab09816fd249756e8174d4a39bbe19746aab308eb1836f2879ea13f"
+    }
+  ],
+  "performance": {
+    "utc": "2026-09-05T23:04:53.1004542Z",
+    "device": "B550M Pro4 (To Be Filled By O.E.M.)",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "platform": "WindowsPlayer",
+    "preset": "Medium",
+    "frames": 110266,
+    "seconds": 919.1480102539062,
+    "averageFps": 119.96544647216797,
+    "onePercentLow": 116.59748840332031,
+    "fifteenMinutes": true
+  },
+  "benchmarkConfiguration": {
+    "width": 1280,
+    "height": 720,
+    "renderScale": 1.0,
+    "frameCap": 120,
+    "vsync": false,
+    "msaa": 2,
+    "textureMipLimit": 1,
+    "shadows": false,
+    "narrationVolume": 0.0
+  },
+  "runtime": {
+    "utc": "2026-09-05T23:26:13.0347716Z",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "units": 12,
+    "variants": 72,
+    "sceneAttemptsPassed": 72,
+    "deviceEncryption": true,
+    "xrSliderRayInput": true,
+    "xrReleaseStops": true,
+    "xrButtonRayInput": true,
+    "xrScrollRayInput": true,
+    "sliderBefore": 0.7600008249282837,
+    "sliderAfter": 1.2400001287460327,
+    "screenshots": [
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\career-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\signin-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\case-selection-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\captions-1440.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\career-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-large-text-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-long-profile-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\captions-large-text-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-anatomy-closeup-960.png",
+      "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-tools-closeup-960.png"
+    ],
+    "errors": [],
+    "performance": {
+      "utc": "2026-09-05T23:26:13.0418277Z",
+      "device": "B550M Pro4 (To Be Filled By O.E.M.)",
+      "gpu": "NVIDIA GeForce RTX 3080",
+      "platform": "WindowsPlayer",
+      "preset": "Medium",
+      "frames": 5456,
+      "seconds": 95.13526916503906,
+      "averageFps": 57.349918365478516,
+      "onePercentLow": 12.641366004943848,
+      "fifteenMinutes": false
+    }
+  },
+  "backend": {
+    "checks": 244,
+    "variants": 72,
+    "result": "pass",
+    "engine": "PGlite PostgreSQL",
+    "liveSupabase": false,
+    "utc": "2026-09-05T22:47:12.055Z"
+  },
+  "liveApi": {
+    "utc": "2026-09-05T23:13:54.664Z",
+    "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+    "checks": [
+      {
+        "name": "public auth configuration",
+        "status": 200,
+        "expected": 200,
+        "passed": true
+      },
+      {
+        "name": "anonymous progress sync denied",
+        "status": 401,
+        "expected": 401,
+        "passed": true
+      },
+      {
+        "name": "anonymous attempt read denied",
+        "status": 401,
+        "expected": 401,
+        "passed": true
+      },
+      {
+        "name": "account deletion without a session denied",
+        "status": 401,
+        "expected": 401,
+        "passed": true
+      },
+      {
+        "name": "account deletion rejects GET",
+        "status": 405,
+        "expected": 405,
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "emailsSent": 0,
+    "authenticatedUserTests": false
+  },
+  "liveSetup": {
+    "verifiedDate": "2026-09-06",
+    "project": "ckefbyhshjrlkheunpgc",
+    "method": "Supabase dashboard UI plus public HTTP probes",
+    "migrationsApplied": [
+      "202609060001",
+      "202609060002",
+      "202609060003",
+      "202609060004"
+    ],
+    "cliMigrationLedgerPopulated": false,
+    "rubrics": 72,
+    "rlsTables": 5,
+    "anonymousSyncAllowed": false,
+    "authenticatedSyncAllowed": true,
+    "authenticatedTruncateAllowed": false,
+    "email": {
+      "smtpEnabled": true,
+      "codeLength": 6,
+      "expirySeconds": 600,
+      "minimumIntervalPerUserSeconds": 60,
+      "passwordlessCodeTemplateSaved": true,
+      "signupCodeTemplateSaved": true,
+      "testEmailSent": false,
+      "deliveredAndVerified": false,
+      "deliveryTest": {
+        "utc": "2026-09-05T23:19:40Z",
+        "requests": 1,
+        "status": 500,
+        "requestId": "01a073de-d896-769d-997c-29aa83cc1bb3",
+        "failure": "SMTP hostname Anatome.smtp.host.com does not resolve (no such host).",
+        "nextAction": "Correct provider-specific SMTP host and credentials in the Supabase dashboard, then retry the authorized test."
+      }
+    },
+    "accountDeletion": {
+      "function": "thorax-delete-account",
+      "deployed": true,
+      "legacyJwtGatewayVerification": false,
+      "authentication": "Bearer session verified through Supabase Auth before deletion; account ID is derived from that session",
+      "actualAccountDeletionTested": false
+    }
+  },
+  "apkVerification": {
+    "package": "org.thoraxlab.learning",
+    "abi": "arm64-v8a",
+    "minimumSdk": 29,
+    "targetSdk": 36,
+    "signatureVerified": true,
+    "certificate": "Android Debug",
+    "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+    "physicalDeviceTested": false,
+    "buildErrors": 0,
+    "buildWarnings": 0,
+    "verifiedUtc": "2026-09-05T23:26:48.8826334Z",
+    "artifactSha256": "29a187c56ab09816fd249756e8174d4a39bbe19746aab308eb1836f2879ea13f"
+  },
+  "benchmarkArtifact": {
+    "windowsArchive": "handoff/ThoraxLab-Learning-Windows-20260906-070609.zip",
+    "sha256": "4bb76b66e8bebf2dbdcc3fd4160925b16bf6b905d6f7933da5ae9cc68668d3fc",
+    "report": "qa/learning-performance/windows-15-minute-benchmark.json",
+    "relationshipToLatestBuild": "Benchmark preceded the objective-reward correction. Graphics code, preset settings and benchmark workload are unchanged. Latest build receives the runtime regression checks separately."
+  },
+  "limitations": [
+    "SMTP test failed: saved provider hostname does not resolve; real login pending",
+    "Real-account and concurrent-device tests pending",
+    "Detailed clinical procedures incomplete",
+    "Physical Quest 3 and Iris Xe-class laptop not tested",
+    "User visual acceptance pending",
+    "Quest APK uses a debug certificate for sideload review",
+    "15-minute benchmark predates the objective-reward correction; graphics code and preset values are unchanged"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "verifiedUtc": "2026-10-13T20:31:31.823973+00:00",
+  "status": "LOCAL_CHECKS_PASSED_MANUAL_HEADSET_RETEST_REQUIRED",
+  "version": "1.4.7",
+  "versionCode": 15,
+  "package": "org.thoraxlab.learning",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome-1.4.7.apk",
+  "sha256": "3e17422cbc0191ea86b51322b1a835b2085dbba43f0095bb2c881b71f74aeeff",
+  "bytes": 110963889,
+  "runtimeFixes": [
+    "Measured startup heading",
+    "Passive UI hover no longer captures walking"
+  ],
+  "graphicsWorkaround": "OpenGLES3 only; Vulkan-only buffer discards disabled",
+  "baseline": {
+    "report": "baseline-repeat.json",
+    "failedChecks": 8
+  },
+  "xr": {
+    "report": "full-xr.json",
+    "checks": 2376,
+    "errors": 0,
+    "runtimeQaBypass": false
+  },
+  "focused": {
+    "report": "fixed-focused.json",
+    "checks": 43,
+    "errors": 0
+  },
+  "graphics": {
+    "report": "graphics-fixed.json",
+    "checks": 35,
+    "presetTransitions": 15,
+    "hardwareCrashReproducedInDesktopTest": false
+  },
+  "player": {
+    "report": "player/runtime-report.json",
+    "sceneAttemptsPassed": 72,
+    "variants": 72,
+    "errors": 0,
+    "trackingBypass": true,
+    "readinessChecks": 22,
+    "readinessReport": "player/readiness-regressions.json"
+  },
+  "apkChecks": {
+    "report": "apk/learning-apk-verification.json",
+    "checks": 19,
+    "failures": 0
+  },
+  "builds": {
+    "android": "Succeeded\n0 errors\n0 warnings\n00:02:24.3052757",
+    "windowsQA": "Succeeded\n0 errors\n0 warnings\n00:00:38.1179885"
+  },
+  "signing": "Android Debug certificate; sideload review, not a store release",
+  "signingCertificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "sameSignerAs1_4_6": true,
+  "compiledPlayerAssemblySha256": "d7adf2609748877280f3e1092de8d53ae45005a46380ada3d3444862f6b18870",
+  "installedOnHeadset": false,
+  "launchedOnHeadset": false,
+  "physical1_4_7Accepted": false,
+  "deviceEvidence": {
+    "report": "graphics-diagnosis.json",
+    "observedVersion": "1.4.6",
+    "nativeVulkanCrashes": 4,
+    "savedPreset": "Low",
+    "savedRefreshRate": 72,
+    "latest30Samples": "72/72 FPS"
+  },
+  "limits": [
+    "The full XR run precedes the later Android graphics API configuration and explanatory UI text. Separate graphics tests and final compiled-player checks cover those edits locally.",
+    "An earlier full XR run lost interaction during a new hover test; its failed report is retained as full-xr-first.json. The diagnostic repeat passed all 2376 checks with normal focus and tracking gates.",
+    "No physical confirmation that the graphics workaround prevents the reported crash; the user requested manual Developer Hub installation.",
+    "No matched High versus Low benchmark, sustained thermal test, new cloud test or publisher release signing."
+  ],
+  "sourceSha256": {
+    "Assets/ThoraxLab/Learning/LearningControls.cs": "e61fed830b9f731f1ecd313fe1256c6eb9ec5497285ad269487846ba1a2d1dca",
+    "Assets/ThoraxLab/Learning/LabUI.cs": "459e83f1ab02d94ac0c995e46976cca8066139af937842590c7f051b98c5b00d",
+    "Assets/ThoraxLab/Learning/LabUI.Settings.cs": "651e860413160c49230dcaf31aca63b11961d50c1f34f37b89296b34a67d0114",
+    "Assets/ThoraxLab/Scripts/LabHandInteractor.cs": "d6ff2e6e7dcc76724ad8632c9ec7fc9e633f7fbcedc538553e56c8293abac842",
+    "Assets/ThoraxLab/Editor/LearningBuild.cs": "4e4b9c1d70db8011d10cf03da915d3dff8658a764cdbb2e706c88d12061207e6",
+    "Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Facing.cs": "23c9f3ff4da96ae154dd87f998e14e3ced4c0cbd1c7aa8a8ee9d40fe26eb2771",
+    "Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Settings.cs": "352e680b45c4da9a4363c7c47e9ce32e704017c846f3d31e699ace5f4b2562a1",
+    "Assets/XR/Settings/OpenXR Package Settings.asset": "e3fb515f58c46c8953395302f15c009f82c6d0c514e9c7ac919426f3f74a4ad6",
+    "ProjectSettings/ProjectSettings.asset": "ff5a14ef94e82f886c286774a8eb6cac91f146a62fc862e3e357c9a84c8607a7"
+  }
+}

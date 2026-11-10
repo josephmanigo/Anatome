@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-10-04T12:35:45.220Z",
+  "product": "Anatome",
+  "applicationVersion": "1.1.0",
+  "contentVersion": "2026.10.1",
+  "revision": "advanced-procedural-learning-20261004",
+  "audience": "Medical students: advanced procedural anatomy",
+  "status": "LOCAL_AND_DEPLOYED_RUBRIC_VALIDATION_PASSED_PHYSICAL_RELEASE_ACCEPTANCE_PENDING",
+  "localValidationPassed": true,
+  "productionReady": false,
+  "checks": {
+    "currentCurriculum": true,
+    "actualXrInput": true,
+    "fullScenarioPlayer": true,
+    "playerMatchesCurrentBuild": true,
+    "readiness": true,
+    "content": true,
+    "serverScoring": true,
+    "deployedRubricsAndSafety": true,
+    "livePublicApi": true,
+    "releaseTrackingGate": true,
+    "sideloadApk": true,
+    "signingEvidenceBindsApk": true,
+    "sourceParity": true,
+    "kit": true,
+    "clinicalInputCoverage": true
+  },
+  "learning": {
+    "modes": 4,
+    "cases": 6,
+    "variants": 72,
+    "essentialClinicalDecisions": 39,
+    "criticalClinicalDecisions": 3,
+    "narrationClips": 311,
+    "cognitiveOutcomeMeasured": false,
+    "clinicalCompetencyValidated": false,
+    "schematicResponseStates": true
+  },
+  "coreRegression": {
+    "assertions": 826,
+    "passed": true,
+    "method": "Observed dotnet run --project qa/learning-tests/LearningTests.csproj -- unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/catalog.json"
+  },
+  "xr": {
+    "report": "qa/clinical-learning/xr-final-report.json",
+    "utc": "2026-10-04T12:33:12.8725546Z",
+    "checks": 1033,
+    "errors": 0,
+    "runtimeQaBypass": false,
+    "physicalDeviceTested": false
+  },
+  "developmentPlayer": {
+    "report": "qa/clinical-learning/player/runtime-report.json",
+    "utc": "2026-10-04T12:34:10.5785211Z",
+    "passedScenarios": 72,
+    "errors": 0,
+    "trackingBypass": true,
+    "readinessChecks": 22,
+    "widgets": {
+      "button": true,
+      "slider": true,
+      "release": true,
+      "scroll": true
+    },
+    "assemblySha256": "081f7e00e278d75b55f65fe9ee41949bf0893a68a8c3962f62af160a6616addb"
+  },
+  "content": {
+    "checks": 1669,
+    "baseCaseActions": 79,
+    "report": "qa/clinical-learning/vr-content-report.json"
+  },
+  "localPostgresql": {
+    "checks": 254,
+    "report": "qa/clinical-learning/learning-backend-report.json",
+    "liveSupabase": false
+  },
+  "liveBackend": {
+    "projectResumed": true,
+    "migrationsApplied": [
+      {
+        "file": "supabase/migrations/202610040001_clinical_reasoning_content.sql",
+        "sha256": "72084164ced23924f82f3199c6d3e94235a39a79196f950c943eed30741da5b3"
+      },
+      {
+        "file": "supabase/migrations/202610040002_clinical_decision_safety.sql",
+        "sha256": "49b1960d817444a3dc54587dfdde092a805f47f9b083b471d11e6ceb78627962"
+      }
+    ],
+    "readbackPassed": true,
+    "publicApiChecks": 5,
+    "authenticatedLearnerTested": false,
+    "report": "qa/clinical-learning/live-migration-report.json",
+    "proof": "qa/clinical-learning/live-migration-proof.png"
+  },
+  "sourceParity": {
+    "files": 383,
+    "matched": 383,
+    "report": "qa/clinical-learning/source-parity.json"
+  },
+  "artifacts": {
+    "apk": {
+      "path": "builds/AnatomeQuest/Anatome.apk",
+      "sha256": "c3ca01dc588b23795f3cabbec117c4c0ba0eb53cdf9741804d22cee2a5983c72",
+      "checks": 16,
+      "signing": "Android Debug certificate; sideload review, not a store release"
+    },
+    "schoolKit": {
+      "utc": "2026-10-04T12:35:44.3936721Z",
+      "archive": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-Advanced-Procedural-Quest3-Test-Kit-20261004-203540.zip",
+      "archiveSha256": "f90fea071f15c07b1c4d366fb88e2b7c7c85dcb0f1b7cfa861d23b21fa44906e",
+      "apkSha256": "c3ca01dc588b23795f3cabbec117c4c0ba0eb53cdf9741804d22cee2a5983c72",
+      "verified": true
+    },
+    "releaseGateReport": "qa/clinical-learning/vr-release-gate-report.json"
+  },
+  "codeReview": {
+    "basis": ".tmp/clinical-learning-before",
+    "standards": {
+      "initialP2": 2,
+      "resolved": 2,
+      "remaining": 0
+    },
+    "spec": {
+      "findings": 0
+    },
+    "runtimeAndVisualFixes": [
+      "Correct world-space font units and maximum-size layout",
+      "Move choice labels forward and station clear of the specimen to avoid occlusion",
+      "Add non-colliding guided token/dock cues; refuse assessment hints",
+      "Cache instrument choices and remove per-frame token snapshots"
+    ],
+    "failedEvidenceRetained": [
+      "qa/clinical-learning/xr-label-failure-report.json",
+      "qa/clinical-learning/player-label-failure-report.json",
+      "qa/clinical-learning/label-specimen-occlusion-before.png"
+    ]
+  },
+  "accuracy": {
+    "sourceReview": "docs/VR-CLINICAL-LEARNING-AUDIT.md",
+    "primarySourcesReviewed": true,
+    "professionalClinicalCertification": false
+  },
+  "openProductionGates": [
+    {
+      "gate": "Physical current-APK Quest 3 acceptance",
+      "passed": false,
+      "requires": "Visible controllers, all learner buttons, new physical choices, bare hands, interruptions, readability, reach and Android secure storage on the headset"
+    },
+    {
+      "gate": "Sustained native Quest performance",
+      "passed": false,
+      "requires": "At least 15 minutes of representative on-device performance and thermal/tracking evidence"
+    },
+    {
+      "gate": "Publisher release signing",
+      "passed": false,
+      "requires": "Publisher-owned non-debug keystore and expected certificate fingerprint; current strict inspection rejects the debug certificate"
+    },
+    {
+      "gate": "Current authenticated learner persistence",
+      "passed": false,
+      "requires": "Learner OTP, current-version saved assessment, reopen/offline recovery and Windows/Quest synchronization"
+    }
+  ]
+}

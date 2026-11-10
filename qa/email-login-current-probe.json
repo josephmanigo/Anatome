@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-06T09:09:00.7788460Z",
+  "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+  "publicAuthStatus": 200,
+  "emailProviderEnabled": true,
+  "signupDisabled": false,
+  "testRecipient": "j.***@gmail.com",
+  "requests": 1,
+  "otpStatus": 500,
+  "otpResponse": "{\"code\":500,\"error_code\":\"unexpected_failure\",\"msg\":\"Error sending confirmation email\",\"error_id\":\"01a075fa-89a9-77d0-8e9e-dec6f7248eab\"}",
+  "requestId": [
+    "01a075fa-89a9-77d0-8e9e-dec6f7248eab"
+  ],
+  "deliveredAndVerified": false
+}

@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-07T07:44:23.5762427Z",
+  "passed": true,
+  "checks": [
+    {
+      "id": "guide-welcome",
+      "passed": true
+    },
+    {
+      "id": "guide-point",
+      "passed": true
+    },
+    {
+      "id": "guide-grip",
+      "passed": true
+    },
+    {
+      "id": "guide-learn",
+      "passed": true
+    },
+    {
+      "id": "guide-identify",
+      "passed": true
+    },
+    {
+      "id": "guide-assemble",
+      "passed": true
+    },
+    {
+      "id": "guide-dissect",
+      "passed": true
+    },
+    {
+      "id": "guide-cases",
+      "passed": true
+    },
+    {
+      "id": "guide-progress",
+      "passed": true
+    },
+    {
+      "id": "guide-help",
+      "passed": true
+    }
+  ]
+}

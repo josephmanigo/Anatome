@@ -1,0 +1,587 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-08T14:15:14.2139858Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/FMA7163",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/FMA7163",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/FMA7163",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/FMA7163",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/FMA7163",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/FMA7163",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/FMA7163",
+            "detail": "Exposed real surface · FMA7163 · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/FMA7163",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/FMA7163",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/FMA7163",
+            "detail": "chunkAlive=False remainderMove=0 notice=Chunk removed. Continue cutting this region until its removal meter is full. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/FMA7163",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/FMA7163",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/FMA7163",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/REC_fat",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/REC_fat",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/REC_fat",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/REC_fat",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/REC_fat",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/REC_fat",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/REC_fat",
+            "detail": "Exposed real surface · REC_fat · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/REC_fat",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/REC_fat",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/REC_fat",
+            "detail": "chunkAlive=False remainderMove=0 notice=Chunk removed. Continue cutting this region until its removal meter is full. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/REC_fat",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/REC_fat",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/REC_fat",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/REC_fascia",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/REC_fascia",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/REC_fascia",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/REC_fascia",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/REC_fascia",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/REC_fascia",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/REC_fascia",
+            "detail": "Exposed real surface · REC_fascia · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/REC_fascia",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/REC_fascia",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/REC_fascia",
+            "detail": "chunkAlive=False remainderMove=0 notice=Chunk removed. Continue cutting this region until its removal meter is full. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/REC_fascia",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/REC_fascia",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/REC_fascia",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/FMA79979",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/FMA79979",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/FMA79979",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/FMA79979",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/FMA79979",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/FMA79979",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/FMA79979",
+            "detail": "Exposed real surface · FMA79979 · sample 3",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/FMA79979",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/FMA79979",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/FMA79979",
+            "detail": "chunkAlive=False remainderMove=0 notice=A tissue section from sternocostal part of right pectoralis major was cut and lifted. The next prepared station does not imply that all remaining tissue was removed. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/FMA79979",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/FMA79979",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/FMA79979",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/MAL_RUL",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/MAL_RUL",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/MAL_RUL",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/MAL_RUL",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/MAL_RUL",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/MAL_RUL",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/MAL_RUL",
+            "detail": "Exposed real surface · MAL_RUL · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/MAL_RUL",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/MAL_RUL",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/MAL_RUL",
+            "detail": "chunkAlive=False remainderMove=0 notice=A tissue section from superior lobe of right lung was cut and lifted. The next prepared station does not imply that all remaining tissue was removed. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/MAL_RUL",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/MAL_RUL",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/MAL_RUL",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/FMA7957",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/FMA7957",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/FMA7957",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/FMA7957",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/FMA7957",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/FMA7957",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/FMA7957",
+            "detail": "Exposed real surface · FMA7957 · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/FMA7957",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/FMA7957",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/FMA7957",
+            "detail": "chunkAlive=False remainderMove=0 notice=A tissue section from right fourth rib was cut and lifted. The next prepared station does not imply that all remaining tissue was removed. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/FMA7957",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/FMA7957",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/FMA7957",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "auto_tool/FMA8148",
+            "detail": "Bone objectives equip the saw before any input.",
+            "passed": true
+        },
+        {
+            "id": "cut_surface/FMA8148",
+            "detail": "A real unobstructed surface exists in the required region.",
+            "passed": true
+        },
+        {
+            "id": "ray_cut_separates_chunk/FMA8148",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "one_bounded_chunk/FMA8148",
+            "detail": "Moving tissue is confined to the swept cut, not a complete layer.",
+            "passed": true
+        },
+        {
+            "id": "uncut_remainder_anchored/FMA8148",
+            "detail": "A small cut cannot unlock the entire remaining structure.",
+            "passed": true
+        },
+        {
+            "id": "cut_alone_no_credit/FMA8148",
+            "detail": "A committed cut is not a verified lift.",
+            "passed": true
+        },
+        {
+            "id": "chunk_exposed/FMA8148",
+            "detail": "Exposed real surface · FMA8148 · sample 1",
+            "passed": true
+        },
+        {
+            "id": "xr_grips_chunk_only/FMA8148",
+            "detail": "Real XRI selection holds only the cut piece.",
+            "passed": true
+        },
+        {
+            "id": "release_without_lift_no_credit/FMA8148",
+            "detail": "Releasing in place cannot remove tissue or advance.",
+            "passed": true
+        },
+        {
+            "id": "collected_chunk_not_duplicated/FMA8148",
+            "detail": "chunkAlive=False remainderMove=0 notice=A tissue section from left fourth rib was cut and lifted. The next prepared station does not imply that all remaining tissue was removed. chunkRegion=collected center=(0.00, 0.00, 0.00)",
+            "passed": true
+        },
+        {
+            "id": "single_remaining_source/FMA8148",
+            "detail": "Only one original anatomy object exists after cutting/grabbing.",
+            "passed": true
+        },
+        {
+            "id": "one_visible_cut_renderer/FMA8148",
+            "detail": "No intact LOD copy remains enabled.",
+            "passed": true
+        },
+        {
+            "id": "credited_chunk_cannot_return_on_undo/FMA8148",
+            "detail": "Undo cannot recreate already collected tissue.",
+            "passed": true
+        },
+        {
+            "id": "left_region_complete",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "left_only_not_finished",
+            "detail": "The left chest does not satisfy the right chest or finish the activity.",
+            "passed": true
+        },
+        {
+            "id": "resume_preserves_actual_opening",
+            "detail": "Stored cut strokes rebuild completed regional openings without restoring removed tissue.",
+            "passed": true
+        },
+        {
+            "id": "repeated_restore_keeps_activity_usable",
+            "detail": "A second Restore press must not cancel the in-flight reconstruction and pause the activity.",
+            "passed": true
+        },
+        {
+            "id": "repeated_restore_preserves_opening",
+            "detail": "Repeated Restore keeps one reconstructed remainder with the accepted opening.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "FMA7163 attempt=0 canCut=True ray=False notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=0",
+        "FMA7163 attempt=1 canCut=True ray=False notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=0",
+        "FMA7163 attempt=2 canCut=True ray=True notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=168",
+        "REC_fat attempt=0 canCut=True ray=False notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=0",
+        "REC_fat attempt=1 canCut=True ray=False notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=0",
+        "REC_fat attempt=2 canCut=True ray=True notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=168",
+        "REC_fascia attempt=0 canCut=True ray=True notice= strokes=168",
+        "REC_fascia attempt=1 canCut=True ray=False notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=0",
+        "REC_fascia attempt=2 canCut=True ray=True notice=Stroke cancelled. Keep the ray on one surface, release, then try again. strokes=96",
+        "FMA79979 attempt=0 canCut=True ray=True notice= strokes=96",
+        "MAL_RUL attempt=0 canCut=True ray=True notice=A protected structure was affected. Review its relationship and retry the assessment. strokes=96",
+        "FMA7957 attempt=0 canCut=True ray=True notice= strokes=96",
+        "FMA8148 attempt=0 canCut=True ray=True notice= strokes=144"
+    ]
+}

@@ -61,9 +61,9 @@ std::vector<MeshGL> tissuePieces(const Manifold& output,bool removeExternalSourc
  return meshes;
 }
 }
-void* tl_cut(const float* vertices, int vertexCount, const int* triangles,
+static void* cutImpl(const float* vertices, int vertexCount, const int* triangles,
              int indexCount, const float* bladeCorners, int poseCount,
-             int maxTriangles, int maxPieces) {
+             int maxTriangles, int maxPieces, bool extractChunk) {
   auto r=std::make_unique<Result>();
   try {
     if(!vertices || !triangles || !bladeCorners || vertexCount<4 || vertexCount>600000 ||
@@ -92,7 +92,9 @@ void* tl_cut(const float* vertices, int vertexCount, const int* triangles,
     }
     if(segments.empty()) { r->status=2; r->message="The stroke has no cutting volume."; return r.release(); }
     auto blade=Manifold::BatchBoolean(segments,manifold::OpType::Add)
-      .SetProperties(3,[](double* p,vec3 v,const double*) {p[0]=v.x*40; p[1]=v.z*40; p[2]=1;});
+      // Mark this stroke's new cut faces independently of previous cut faces.
+      // The marker is reduced to the public interior-material value before return.
+      .SetProperties(3,[](double* p,vec3 v,const double*) {p[0]=v.x*40; p[1]=v.z*40; p[2]=2;});
     auto output=body-blade;
     if(output.Status()!=Manifold::Error::NoError) {r->message="Boolean failed validation. Original preserved."; return r.release();}
     if(output.IsEmpty()) {r->status=2; r->message="Stroke would erase the entire target; use remove instead."; return r.release();}
@@ -100,7 +102,37 @@ void* tl_cut(const float* vertices, int vertexCount, const int* triangles,
     if(std::abs(before-after)<=std::max(1e-15,std::abs(before)*1e-8)) {
       r->status=2; r->message="No material intersected."; return r.release();
     }
+    if(extractChunk){
+      auto chunk=body^blade;
+      if(chunk.Status()!=Manifold::Error::NoError||chunk.IsEmpty()||chunk.Volume()<=0){r->message="Chunk failed validation; original preserved.";return r.release();}
+      if(maxPieces<2||output.NumTri()+chunk.NumTri()>maxTriangles){r->status=3;r->message="Chunk exceeds mesh budget. Undo or reset.";return r.release();}
+      // Keep all untouched islands and the remaining tissue together. Only the
+      // intersected volume may move: decomposition must never detach whole shells.
+      r->pieces={output.GetMeshGL(),chunk.GetMeshGL()};
+      for(auto& part:r->pieces)for(size_t i=5;i<part.vertProperties.size();i+=part.numProp)part.vertProperties[i]=std::min(1.f,part.vertProperties[i]);
+      r->status=0;r->message="Chunk separated; remainder anchored.";return r.release();
+    }
     auto parts=tissuePieces(output);
+    // A single attributed anatomy record can already contain disconnected source
+    // islands, such as bilateral intercostal muscles. A local incision must not
+    // turn every untouched island into a newly detached physics object. Retain
+    // unchanged islands in the primary source mesh and publish only newly cut
+    // components separately. Existing cut-face marks are 1; only this cut is 2.
+    MeshGL unchanged; std::vector<MeshGL> changed;
+    for(auto& part:parts){
+      bool freshFace=false;
+      for(size_t i=5;i<part.vertProperties.size();i+=part.numProp)
+        freshFace|=part.vertProperties[i]>1.5f;
+      if(freshFace)changed.push_back(std::move(part));
+      else appendMesh(unchanged,part);
+    }
+    if(unchanged.NumVert()>0){
+      if(changed.empty())changed.push_back(std::move(unchanged));
+      else appendMesh(changed.front(),unchanged);
+    }
+    parts=std::move(changed);
+    for(auto& part:parts)for(size_t i=5;i<part.vertProperties.size();i+=part.numProp)
+      part.vertProperties[i]=std::min(1.f,part.vertProperties[i]);
     if(parts.size()>size_t(maxPieces) || output.NumTri()>size_t(maxTriangles)) {
       r->status=3; r->message="Cut exceeds triangle or fragment budget. Undo or reset before continuing."; return r.release();
     }
@@ -110,6 +142,8 @@ void* tl_cut(const float* vertices, int vertexCount, const int* triangles,
     catch(...) {r->pieces.clear();r->message="Native cutting exception; original preserved.";}
   return r.release();
 }
+void* tl_cut(const float*v,int nv,const int*t,int nt,const float*p,int np,int mt,int mp){return cutImpl(v,nv,t,nt,p,np,mt,mp,false);}
+void* tl_extract_chunk(const float*v,int nv,const int*t,int nt,const float*p,int np,int mt,int mp){return cutImpl(v,nv,t,nt,p,np,mt,mp,true);}
 int tl_status(void* r){return r?ptr(r)->status:4;}
 void* normalizeImpl(const float* vertices,int vertexCount,const int* triangles,int indexCount,bool resolve){
  auto r=std::make_unique<Result>();
@@ -148,4 +182,4 @@ int tl_piece_copy(void* r,int i,float* v,int vf,int* t,int ti){
  std::copy(m.triVerts.begin(),m.triVerts.end(),t);return 1;
 }
 void tl_free(void*r){delete ptr(r);}
-const char* tl_version(){return "ThoraxCut/1.0 Manifold/3.5.2 11235e6b8ebea2dbed8aec4285685aafd3d95667";}
+const char* tl_version(){return "ThoraxCut/1.1 chunk-extraction Manifold/3.5.2 11235e6b8ebea2dbed8aec4285685aafd3d95667";}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-06T09:37:58.6998959Z",
+  "passed": true,
+  "exitCode": 0,
+  "method": "Unity-bundled Roslyn with Editor reference file; output redirected to qa",
+  "liveVisualVerified": false,
+  "source": "Assets/ThoraxLab/Learning/LabUI.cs",
+  "sourceSha256": "5bff10a5bc7b32280ddc5884743c24d4941d2bb8f936f10066885f7af53d9f2f"
+}

@@ -1,0 +1,110 @@
+{
+  "verifiedUtc": "2026-10-04T13:10:22.617667+00:00",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome.apk",
+  "artifactSha256": "60e79330767668ac2618cfdbe552f507fd89893c02b72e9fd1ccd1482a8c34d4",
+  "bytes": 109080353,
+  "package": "org.thoraxlab.learning",
+  "checks": [
+    {
+      "name": "Archive integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARM64 libraries only",
+      "passed": true,
+      "detail": [
+        "lib/arm64-v8a/libUnityOpenXR.so",
+        "lib/arm64-v8a/libUnityOpenXRHands.so",
+        "lib/arm64-v8a/lib_burst_generated.so",
+        "lib/arm64-v8a/libc++_shared.so",
+        "lib/arm64-v8a/libgame.so",
+        "lib/arm64-v8a/libil2cpp.so",
+        "lib/arm64-v8a/libmain.so",
+        "lib/arm64-v8a/libopenxr_loader.so",
+        "lib/arm64-v8a/libswappywrapper.so",
+        "lib/arm64-v8a/libthoraxcut.so",
+        "lib/arm64-v8a/libunity.so"
+      ]
+    },
+    {
+      "name": "XR Hands ARM64 provider",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Native cutting AArch64",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16 KB native load alignment",
+      "passed": true,
+      "detail": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "Packaged ATTRIBUTION.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged MAL-Atlas-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Manifold-Apache-2.0.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-Third-Party-Notices.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Learning package identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Application display name",
+      "passed": true,
+      "detail": "Anatome"
+    },
+    {
+      "name": "Application version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "Hand tracking permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Optional hand tracking preserves controller support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "APK signature verifies",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failures": 0,
+  "physicalDeviceTested": false,
+  "releaseSigningRequired": false,
+  "nonDebugSigner": false,
+  "signing": "Android Debug certificate; sideload review, not a store release"
+}

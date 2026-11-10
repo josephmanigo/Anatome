@@ -1,0 +1,142 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-09T09:18:18.1799064Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/surface/IdentifyEnumerate",
+            "detail": "The current anatomy has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/acquired/IdentifyEnumerate",
+            "detail": "A real controller grip acquires visible anatomy in IdentifyEnumerate; canManipulate=True",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_jump/IdentifyEnumerate",
+            "detail": "Stationary pickup preserves the anatomy pose.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/follows/IdentifyEnumerate",
+            "detail": "The anatomy follows a deliberate controller lift.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/rotates/IdentifyEnumerate",
+            "detail": "The anatomy can be turned for inspection.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_false_credit/IdentifyEnumerate",
+            "detail": "Inspection does not change the mesh or submit learning evidence.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/returns/IdentifyEnumerate",
+            "detail": "Inspected anatomy returns on release so the station remains usable.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/deadzone/IdentifyEnumerate",
+            "detail": "A resting stick cannot drift the player.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/IdentifyEnumerate/(0.00, 1.00)",
+            "detail": "Joystick walks forward, backward and sideways without changing calibrated height.",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: all_mode_walk/direction/IdentifyEnumerate/(0.00, 1.00): Joystick walks forward, backward and sideways without changing calibrated height.\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:186 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyAllModeGrabAndWalk>d__4.MoveNext () [0x0094e] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Manipulation.cs:52 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__41.MoveNext () [0x00879] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:235 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:170 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.65, 1.00); world panel=(-0.39, 1.63, 0.90)",
+        "failure: head=(0.53, 1.26, 1.12) hand=(0.53, 1.26, 1.12) direction=(0.00, 1.00, 0.00) plane=False distance=-50.05304 screen=(2258.98, -12171980000.00, 0.00) hits="
+    ]
+}

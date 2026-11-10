@@ -1,0 +1,139 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-07T17:19:04.0065704Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "focus_unpause_cannot_steal_browser_input",
+            "detail": "Unpausing does not override a still-unfocused browser session.",
+            "passed": false
+        },
+        {
+            "id": "focus_gain_cannot_override_pause",
+            "detail": "Input remains blocked until both OS pause and focus recover.",
+            "passed": false
+        },
+        {
+            "id": "focus_returns_after_both_events",
+            "detail": "Both callback orders recover focus.",
+            "passed": true
+        },
+        {
+            "id": "case_has_visible_controls",
+            "detail": "The current case and its controls must be available from the main step.",
+            "passed": false
+        },
+        {
+            "id": "case_has_live_action_feedback",
+            "detail": "Pickup, alignment and action progress must be visible on the main panel.",
+            "passed": false
+        },
+        {
+            "id": "references_return_to_activity",
+            "detail": "References must have a direct return to the retained activity.",
+            "passed": false
+        },
+        {
+            "id": "references_preserve_attempt",
+            "detail": "Viewing references never restarts the current attempt.",
+            "passed": true
+        },
+        {
+            "id": "case_reaches_patient_plan",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "pointer_contact_needs_no_trigger",
+            "detail": "A held pointer at the chart completes contact without an unexplained trigger hold.",
+            "passed": false
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)"
+    ]
+}

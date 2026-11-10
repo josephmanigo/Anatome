@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-06T10:03:25.1666683Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "provider": "Google Workspace SMTP",
+  "recipient": "joseph.m***@hcdc.edu.ph",
+  "requests": 1,
+  "httpStatus": 200,
+  "requestAccepted": true,
+  "errorCode": null,
+  "errorMessage": null,
+  "errorId": null,
+  "deliveryConfirmed": false,
+  "codeVerified": false,
+  "previousAttempt": "qa/email-google-delivery-rejected.json"
+}

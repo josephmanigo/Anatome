@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-04T12:35:39.8004208Z",
+  "method": "Manual review of final development-player renders; clinical choices use maximum text size",
+  "reviewed": [
+    {
+      "path": "qa/clinical-learning/player/vr-mode-cards.png",
+      "sha256": "719787c4bfdab21e09d0d1ffb361e97e98b2f9f265959cd1be2abd604721db34"
+    },
+    {
+      "path": "qa/clinical-learning/player/pneumothorax-0-0-reasoning.png",
+      "sha256": "8864f9a9429eb765ee93d05329a6058bd09e25b38573a6456efb36cf8b5ce916"
+    },
+    {
+      "path": "qa/clinical-learning/player/asthma-0-0-reasoning.png",
+      "sha256": "df7cf2351445d1596ff4f2a347d4fd03c42ce35b7f27b2480421230c7e386257"
+    },
+    {
+      "path": "qa/clinical-learning/player/coronary-disease-0-0-reasoning.png",
+      "sha256": "95f051a1d6304869acfd3257f48343298059635f6ba0b546d526e89ee1414af6"
+    },
+    {
+      "path": "qa/clinical-learning/player/pneumonia-0-0-reasoning.png",
+      "sha256": "dbc074b10e7af516838e7ca37161ed4ab93c609b478f65f8ae10b68f0d9ecaca"
+    },
+    {
+      "path": "qa/clinical-learning/player/pleural-effusion-0-0-reasoning.png",
+      "sha256": "033e3406b0c894ce452c086f64093148b8fefb58796778757688ae53fdab8d0c"
+    },
+    {
+      "path": "qa/clinical-learning/player/aortic-stenosis-0-0-reasoning.png",
+      "sha256": "e70e7943e0f464c18de21ebd1d2efdf7025c1a6050eaa7c8b8be58512a94783f"
+    }
+  ],
+  "verdict": "PASS: distinct cutaways, readable separated labels, station clear of specimen and model-base label occlusion",
+  "physicalHeadsetLegibilityVerified": false
+}

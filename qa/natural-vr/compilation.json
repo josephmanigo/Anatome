@@ -1,0 +1,44 @@
+{
+  "method": "Unity Roslyn with installed build references and official XR Hands 1.8.1 source",
+  "apkBuilt": false,
+  "passed": true,
+  "editorSceneRan": false,
+  "utc": "2026-09-19T13:43:20.6984111Z",
+  "checks": [
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\editor\\Unity.XR.Hands.txt",
+      "exitCode": 0,
+      "name": "editor/Unity.XR.Hands"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\editor\\ThoraxLab.Learning.Core.txt",
+      "exitCode": 0,
+      "name": "editor/ThoraxLab.Learning.Core"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\editor\\Assembly-CSharp.txt",
+      "exitCode": 0,
+      "name": "editor/Assembly-CSharp"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\editor\\Assembly-CSharp-Editor.txt",
+      "exitCode": 0,
+      "name": "editor/Assembly-CSharp-Editor"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\android\\Unity.XR.Hands.txt",
+      "exitCode": 0,
+      "name": "android/Unity.XR.Hands"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\android\\ThoraxLab.Learning.Core.txt",
+      "exitCode": 0,
+      "name": "android/ThoraxLab.Learning.Core"
+    },
+    {
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\natural-vr\\compile\\android\\Assembly-CSharp.txt",
+      "exitCode": 0,
+      "name": "android/Assembly-CSharp"
+    }
+  ]
+}

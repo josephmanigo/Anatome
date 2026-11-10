@@ -1,0 +1,683 @@
+{
+  "utc": "2026-10-07T10:08:21.697Z",
+  "passed": true,
+  "checks": [
+    {
+      "id": "chest-wall/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "FMA7163",
+          "FMA7163",
+          "REC_fat",
+          "REC_fat",
+          "REC_fascia",
+          "REC_fascia",
+          "FMA79979",
+          "FMA79980",
+          "FMA13375",
+          "FMA13376",
+          "FMA9756",
+          "FMA9756",
+          "FMA9757",
+          "FMA9757",
+          "FMA9758",
+          "FMA9758",
+          "FMA7957",
+          "FMA8148",
+          "FMA8066",
+          "FMA8093",
+          "FMA7486",
+          "FMA7487",
+          "FMA7488",
+          "FMA7857",
+          "FMA7987",
+          "FMA7875"
+        ],
+        [
+          "FMA7163",
+          "FMA7163",
+          "REC_fat",
+          "REC_fat",
+          "REC_fascia",
+          "REC_fascia",
+          "FMA79979",
+          "FMA79980",
+          "FMA13375",
+          "FMA13376",
+          "FMA9756",
+          "FMA9756",
+          "FMA9757",
+          "FMA9757",
+          "FMA9758",
+          "FMA9758",
+          "FMA7957",
+          "FMA8148",
+          "FMA8066",
+          "FMA8093",
+          "FMA7486",
+          "FMA7487",
+          "FMA7488",
+          "FMA7857",
+          "FMA7987",
+          "FMA7875"
+        ],
+        [
+          "FMA7163",
+          "FMA7163",
+          "REC_fat",
+          "REC_fat",
+          "REC_fascia",
+          "REC_fascia",
+          "FMA79979",
+          "FMA79980",
+          "FMA13375",
+          "FMA13376",
+          "FMA9756",
+          "FMA9756",
+          "FMA9757",
+          "FMA9757",
+          "FMA9758",
+          "FMA9758",
+          "FMA7957",
+          "FMA8148",
+          "FMA8066",
+          "FMA8093",
+          "FMA7486",
+          "FMA7487",
+          "FMA7488",
+          "FMA7857",
+          "FMA7987",
+          "FMA7875"
+        ]
+      ]
+    },
+    {
+      "id": "chest-wall/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "id": "chest-wall-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "chest-wall-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "chest-wall-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "chest-wall-3-0/both-fourth-ribs",
+      "passed": true,
+      "detail": "Right and left fourth ribs are required."
+    },
+    {
+      "id": "chest-wall-3-0/bilateral-layers",
+      "passed": true,
+      "detail": "One side alone cannot finish the chest wall."
+    },
+    {
+      "id": "chest-wall-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "chest-wall-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "chest-wall-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "chest-wall-3-1/both-fourth-ribs",
+      "passed": true,
+      "detail": "Right and left fourth ribs are required."
+    },
+    {
+      "id": "chest-wall-3-1/bilateral-layers",
+      "passed": true,
+      "detail": "One side alone cannot finish the chest wall."
+    },
+    {
+      "id": "chest-wall-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "chest-wall-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "chest-wall-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "chest-wall-3-2/both-fourth-ribs",
+      "passed": true,
+      "detail": "Right and left fourth ribs are required."
+    },
+    {
+      "id": "chest-wall-3-2/bilateral-layers",
+      "passed": true,
+      "detail": "One side alone cannot finish the chest wall."
+    },
+    {
+      "id": "chest-wall/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "pleura-lungs/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "REC_Right_Parietal_Pleura",
+          "REC_Right_Visceral_Pleura",
+          "MAL_RUL",
+          "MAL_RML",
+          "MAL_RLL",
+          "REC_Left_Parietal_Pleura",
+          "REC_Left_Visceral_Pleura",
+          "MAL_LUL",
+          "MAL_LLL",
+          "FMA13295"
+        ],
+        [
+          "REC_Right_Parietal_Pleura",
+          "REC_Right_Visceral_Pleura",
+          "MAL_RUL",
+          "MAL_RML",
+          "MAL_RLL",
+          "REC_Left_Parietal_Pleura",
+          "REC_Left_Visceral_Pleura",
+          "MAL_LUL",
+          "MAL_LLL",
+          "FMA13295"
+        ],
+        [
+          "REC_Right_Parietal_Pleura",
+          "REC_Right_Visceral_Pleura",
+          "MAL_RUL",
+          "MAL_RML",
+          "MAL_RLL",
+          "REC_Left_Parietal_Pleura",
+          "REC_Left_Visceral_Pleura",
+          "MAL_LUL",
+          "MAL_LLL",
+          "FMA13295"
+        ]
+      ]
+    },
+    {
+      "id": "pleura-lungs/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "pleura-lungs-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "pleura-lungs-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "pleura-lungs-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "pleura-lungs-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "pleura-lungs-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "pleura-lungs-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "pleura-lungs-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "pleura-lungs-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "pleura-lungs-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "pleura-lungs/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "airways/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "FMA7394",
+          "FMA68418",
+          "FMA7396",
+          "FMA31744",
+          "FMA31741",
+          "FMA31747",
+          "FMA31746",
+          "FMA31748"
+        ],
+        [
+          "FMA7394",
+          "FMA68418",
+          "FMA7396",
+          "FMA31744",
+          "FMA31741",
+          "FMA31747",
+          "FMA31746",
+          "FMA31748"
+        ],
+        [
+          "FMA7394",
+          "FMA68418",
+          "FMA7396",
+          "FMA31744",
+          "FMA31741",
+          "FMA31747",
+          "FMA31746",
+          "FMA31748"
+        ]
+      ]
+    },
+    {
+      "id": "airways/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "id": "airways-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "airways-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "airways-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "airways-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "airways-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "airways-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "airways-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "airways-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "airways-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "airways/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "heart-coronaries/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "REC_Pericardium",
+          "FMA9457",
+          "FMA9531",
+          "FMA13884",
+          "FMA50039",
+          "FMA50040",
+          "FMA4706",
+          "FMA3736",
+          "FMA7242",
+          "FMA7243",
+          "FMA8612",
+          "FMA50873"
+        ],
+        [
+          "REC_Pericardium",
+          "FMA9457",
+          "FMA9531",
+          "FMA13884",
+          "FMA50039",
+          "FMA50040",
+          "FMA4706",
+          "FMA3736",
+          "FMA7242",
+          "FMA7243",
+          "FMA8612",
+          "FMA50873"
+        ],
+        [
+          "REC_Pericardium",
+          "FMA9457",
+          "FMA9531",
+          "FMA13884",
+          "FMA50039",
+          "FMA50040",
+          "FMA4706",
+          "FMA3736",
+          "FMA7242",
+          "FMA7243",
+          "FMA8612",
+          "FMA50873"
+        ]
+      ]
+    },
+    {
+      "id": "heart-coronaries/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "heart-coronaries-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "heart-coronaries-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "heart-coronaries-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "heart-coronaries-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "heart-coronaries-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "heart-coronaries-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "heart-coronaries-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "heart-coronaries-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "heart-coronaries-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "heart-coronaries/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "vessels-valves/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "FMA3736",
+          "FMA8612",
+          "FMA3768",
+          "FMA50872",
+          "FMA50873",
+          "FMA7252",
+          "FMA7253",
+          "FMA7254"
+        ],
+        [
+          "FMA3736",
+          "FMA8612",
+          "FMA3768",
+          "FMA50872",
+          "FMA50873",
+          "FMA7252",
+          "FMA7253",
+          "FMA7254"
+        ],
+        [
+          "FMA3736",
+          "FMA8612",
+          "FMA3768",
+          "FMA50872",
+          "FMA50873",
+          "FMA7252",
+          "FMA7253",
+          "FMA7254"
+        ]
+      ]
+    },
+    {
+      "id": "vessels-valves/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "id": "vessels-valves-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "vessels-valves-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "vessels-valves-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "vessels-valves-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "vessels-valves-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "vessels-valves-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "vessels-valves-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "vessels-valves-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "vessels-valves-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "vessels-valves/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "mediastinum/full-topic-at-every-level",
+      "passed": true,
+      "detail": [
+        [
+          "FMA7131",
+          "REC_Right_Phrenic_nerve",
+          "REC_Left_Phrenic_nerve",
+          "REC_Right_Vagus_nerve",
+          "REC_Left_Vagus_nerve",
+          "REC_ThoracicDuct",
+          "FMA87217",
+          "FMA7394"
+        ],
+        [
+          "FMA7131",
+          "REC_Right_Phrenic_nerve",
+          "REC_Left_Phrenic_nerve",
+          "REC_Right_Vagus_nerve",
+          "REC_Left_Vagus_nerve",
+          "REC_ThoracicDuct",
+          "FMA87217",
+          "FMA7394"
+        ],
+        [
+          "FMA7131",
+          "REC_Right_Phrenic_nerve",
+          "REC_Left_Phrenic_nerve",
+          "REC_Right_Vagus_nerve",
+          "REC_Left_Vagus_nerve",
+          "REC_ThoracicDuct",
+          "FMA87217",
+          "FMA7394"
+        ]
+      ]
+    },
+    {
+      "id": "mediastinum/same-coverage-at-every-level",
+      "passed": true,
+      "detail": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "id": "mediastinum-3-0/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "mediastinum-3-0/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "mediastinum-3-0/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "mediastinum-3-1/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "mediastinum-3-1/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "mediastinum-3-1/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "mediastinum-3-2/actual-chunk-evidence",
+      "passed": true,
+      "detail": "Bare incision or whole-object movement must not complete a cut."
+    },
+    {
+      "id": "mediastinum-3-2/correct-tool",
+      "passed": true,
+      "detail": "Every bone objective requires the saw."
+    },
+    {
+      "id": "mediastinum-3-2/preserve-protected-anatomy",
+      "passed": true,
+      "detail": "Preserved nerves and coronary vessels must not be removal targets."
+    },
+    {
+      "id": "mediastinum/stricter-removal",
+      "passed": true,
+      "detail": "Harder levels require more measured removal from the same anatomy."
+    },
+    {
+      "id": "topics-have-distinct-dissection",
+      "passed": true,
+      "detail": "Each topic must teach its own anatomy from Easy onward."
+    }
+  ]
+}

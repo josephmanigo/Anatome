@@ -1,0 +1,83 @@
+PASS skin shell
+PASS complete separation produces two pieces
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS hollow airway
+PASS complete separation produces two pieces
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS organ
+PASS complete separation produces two pieces
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS rib
+PASS complete separation produces two pieces
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS bounded buffer sizing
+PASS copy buffers
+PASS fragment manifold
+PASS cut material retained
+PASS miss preserves original
+Enclosed result: 0 Cut validated.
+PASS enclosed chamber grazing cut
+PASS cavity boundary stays with its tissue owner
+PASS no negative-volume detached fragments
+PASS enclosed cavity volume preserved
+PASS triangle limit rejects
+PASS fragment limit rejects
+PASS localized cut preserves untouched source islands without fragment inflation
+PASS only newly separated cut pieces become output fragments
+PASS retained source island group remains manifold
+PASS retained source island group remains manifold
+PASS temporary cut provenance marker does not leak into renderer material values
+PASS untouched source island volumes are preserved
+PASS more than32 newly cut islands still fail the fragment budget
+PASS NaN rejected
+PASS open mesh rejected without hole fill
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+PASS repeat allocation/free
+RESULT 81/81

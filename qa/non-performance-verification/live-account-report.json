@@ -1,0 +1,200 @@
+{
+    "utc": "2026-09-06T17:17:52.9736842Z",
+    "status": "passed",
+    "method": "Actual Unity account service and UI handlers, isolated local stores and live Supabase test accounts",
+    "performanceExcluded": true,
+    "physicalDeviceTested": false,
+    "checks": [
+        {
+            "id": "isolated_persistent_root",
+            "detail": "C:/Users/My Pc/AppData/LocalLow/Thorax Lab/ThoraxLabAccountVerification",
+            "passed": true
+        },
+        {
+            "id": "unity_ui_requests_email_code",
+            "detail": "First-time account creation is enabled by the production request.",
+            "passed": true
+        },
+        {
+            "id": "unity_ui_email_code_sign_in",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "dpapi_file_contains_no_plaintext_tokens",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "incorrect_local_pin_denied",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "offline_pin_after_service_restart",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "offline_pin_reset_requires_email_auth",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "offline_session_refresh_reconnects",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "malformed_code_rejected_locally",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "incorrect_email_code_denied",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "client_resend_interval_enforced",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "second_independent_auth_session",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "fresh_test_account_has_no_existing_progress",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "live_completed_attempt_and_mastery",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "repeated_sync_does_not_duplicate_rewards",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "independent_session_loads_cloud_progress",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "concurrent_sessions_retain_separate_attempts",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "real_account_backup_recovery",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "safe_checkpoint_reaches_second_session",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "newer_checkpoint_updates_cached_attempt",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "profile_sync_between_sessions",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "account_profile_delete_persists",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "progress_export_excludes_auth_secrets",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "sign_out_clears_session_and_visible_progress",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "actual_app_offline_resume",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "account_switch_has_isolated_progress",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "rls_hides_other_account_attempts",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "client_rejects_foreign_progress",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "server_rejects_foreign_account_attempt",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "rejected_foreign_attempt_does_not_change_b",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "account_profile_reads_do_not_create_defaults",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "account_a_attempts_preserved",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "stale_independent_session_cannot_restore_reset",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "second_test_account_reset",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "first_account_delete_clears_local_trust",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "deleted_account_rejected_by_auth",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "deleted_account_refresh_token_revoked",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "second_account_delete_clears_application",
+            "detail": "",
+            "passed": true
+        }
+    ],
+    "errors": []
+}

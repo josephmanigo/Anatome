@@ -1,0 +1,375 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-11T13:24:28.9271470Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "walking_preferences_upgrade",
+            "detail": "The existing settings serializer adopts walking and preserves player height and the cloud RPC's required schema version 1.",
+            "passed": true
+        },
+        {
+            "id": "walking_preferences_teleport_round_trip",
+            "detail": "A deliberately saved teleport preference survives reload.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/surface/IdentifyEnumerate",
+            "detail": "The current anatomy has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/acquired/IdentifyEnumerate",
+            "detail": "A real controller grip acquires visible anatomy in IdentifyEnumerate; canManipulate=True",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_jump/IdentifyEnumerate",
+            "detail": "Stationary pickup preserves the anatomy pose.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/follows/IdentifyEnumerate",
+            "detail": "The anatomy follows a deliberate controller lift.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/rotates/IdentifyEnumerate",
+            "detail": "The anatomy can be turned for inspection.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_false_credit/IdentifyEnumerate",
+            "detail": "Inspection does not change the mesh or submit learning evidence.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/returns/IdentifyEnumerate",
+            "detail": "Inspected anatomy returns on release so the station remains usable.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/deadzone/IdentifyEnumerate",
+            "detail": "A resting stick cannot drift the player.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/IdentifyEnumerate/(0.00, 1.00)",
+            "detail": "Joystick delta=(-0.12994, 0.00000, 0.06621); expected direction=(-0.89, 0.00, 0.45); dt=0.0196671; canInteract=True; UI capture=False; input=(0.00, 1.00); rig=(0.85, 1.62, 0.65); head=(0.73, 1.65, 0.74)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/IdentifyEnumerate/(0.00, -1.00)",
+            "detail": "Joystick delta=(0.13150, 0.00000, -0.06700); expected direction=(0.89, 0.00, -0.45); dt=0.0145681; canInteract=True; UI capture=False; input=(0.00, -1.00); rig=(0.71, 1.62, 0.72); head=(0.85, 1.65, 0.68)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/IdentifyEnumerate/(-1.00, 0.00)",
+            "detail": "Joystick delta=(-0.06623, 0.00000, -0.12999); expected direction=(-0.45, 0.00, -0.89); dt=0.0149919; canInteract=True; UI capture=False; input=(-1.00, 0.00); rig=(0.85, 1.62, 0.65); head=(0.79, 1.65, 0.54)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/IdentifyEnumerate/(1.00, 0.00)",
+            "detail": "Joystick delta=(0.06739, 0.00000, 0.13226); expected direction=(0.45, 0.00, 0.89); dt=0.0147234; canInteract=True; UI capture=False; input=(1.00, 0.00); rig=(0.78, 1.62, 0.51); head=(0.85, 1.65, 0.67)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/regrip_before_pause",
+            "detail": "The interruption check starts with a real held part.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/carry_while_walking",
+            "detail": "Held anatomy follows the controller while the player walks.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/pause_restores",
+            "detail": "Pause releases inspected anatomy and returns it without credit.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/pause_blocks",
+            "detail": "Pause blocks joystick movement.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/held_stick_resume_blocks",
+            "detail": "Unpausing requires a neutral stick before walking resumes.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/left_handed",
+            "detail": "Left-handed controls walk with the right stick.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/maximum_height_boost",
+            "detail": "Walking preserves the maximum assisted height instead of colliding with the ceiling.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/regrip_before_tracking_loss",
+            "detail": "The tracking-loss check starts with a real held part.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/tracking_loss_restores",
+            "detail": "Lost tracking returns inspected anatomy without credit.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/tracking_recovery_requires_release",
+            "detail": "A grip held through tracking recovery cannot reacquire the part.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/surface/AnatomyCases",
+            "detail": "The current anatomy has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/acquired/AnatomyCases",
+            "detail": "A real controller grip acquires visible anatomy in AnatomyCases; canManipulate=True",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_jump/AnatomyCases",
+            "detail": "Stationary pickup preserves the anatomy pose.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/follows/AnatomyCases",
+            "detail": "The anatomy follows a deliberate controller lift.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/rotates/AnatomyCases",
+            "detail": "The anatomy can be turned for inspection.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_false_credit/AnatomyCases",
+            "detail": "Inspection does not change the mesh or submit learning evidence.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/returns/AnatomyCases",
+            "detail": "Inspected anatomy returns on release so the station remains usable.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/deadzone/AnatomyCases",
+            "detail": "A resting stick cannot drift the player.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AnatomyCases/(0.00, 1.00)",
+            "detail": "Joystick delta=(-0.12999, 0.00000, 0.06623); expected direction=(-0.89, 0.00, 0.45); dt=0.0196805; canInteract=True; UI capture=False; input=(0.00, 1.00); rig=(1.00, 1.62, 0.57); head=(0.88, 1.65, 0.66)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AnatomyCases/(0.00, -1.00)",
+            "detail": "Joystick delta=(0.13042, 0.00000, -0.06645); expected direction=(0.89, 0.00, -0.45); dt=0.0167204; canInteract=True; UI capture=False; input=(0.00, -1.00); rig=(0.86, 1.62, 0.65); head=(1.00, 1.65, 0.60)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AnatomyCases/(-1.00, 0.00)",
+            "detail": "Joystick delta=(-0.06648, 0.00000, -0.13047); expected direction=(-0.45, 0.00, -0.89); dt=0.0146459; canInteract=True; UI capture=False; input=(-1.00, 0.00); rig=(1.00, 1.62, 0.58); head=(0.95, 1.65, 0.47)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AnatomyCases/(1.00, 0.00)",
+            "detail": "Joystick delta=(0.06670, 0.00000, 0.13090); expected direction=(0.45, 0.00, 0.89); dt=0.0182325; canInteract=True; UI capture=False; input=(1.00, 0.00); rig=(0.93, 1.62, 0.43); head=(1.01, 1.65, 0.59)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/surface/GuidedDissection",
+            "detail": "The current anatomy has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/dissection_anchors_whole_layer",
+            "detail": "Cutting holds the whole layer in place; only a separated chunk can move.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/deadzone/GuidedDissection",
+            "detail": "A resting stick cannot drift the player.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/GuidedDissection/(0.00, 1.00)",
+            "detail": "Joystick delta=(-0.13008, 0.00000, 0.06628); expected direction=(-0.89, 0.00, 0.45); dt=0.0180617; canInteract=True; UI capture=False; input=(0.00, 1.00); rig=(1.00, 1.62, 0.58); head=(0.88, 1.65, 0.67)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/GuidedDissection/(0.00, -1.00)",
+            "detail": "Joystick delta=(0.12957, 0.00000, -0.06602); expected direction=(0.89, 0.00, -0.45); dt=0.0182271; canInteract=True; UI capture=False; input=(0.00, -1.00); rig=(0.86, 1.62, 0.65); head=(1.00, 1.65, 0.61)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/GuidedDissection/(-1.00, 0.00)",
+            "detail": "Joystick delta=(-0.06673, 0.00000, -0.13097); expected direction=(-0.45, 0.00, -0.89); dt=0.0150087; canInteract=True; UI capture=False; input=(-1.00, 0.00); rig=(1.00, 1.62, 0.58); head=(0.95, 1.65, 0.47)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/GuidedDissection/(1.00, 0.00)",
+            "detail": "Joystick delta=(0.06671, 0.00000, 0.13093); expected direction=(0.45, 0.00, 0.89); dt=0.01527569; canInteract=True; UI capture=False; input=(1.00, 0.00); rig=(0.93, 1.62, 0.44); head=(1.01, 1.65, 0.59)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/surface/AssembleAnatomy",
+            "detail": "The current anatomy has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/acquired/AssembleAnatomy",
+            "detail": "A real controller grip acquires visible anatomy in AssembleAnatomy; canManipulate=True",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_jump/AssembleAnatomy",
+            "detail": "Stationary pickup preserves the anatomy pose.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/follows/AssembleAnatomy",
+            "detail": "The anatomy follows a deliberate controller lift.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/rotates/AssembleAnatomy",
+            "detail": "The anatomy can be turned for inspection.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/no_false_credit/AssembleAnatomy",
+            "detail": "Inspection does not change the mesh or submit learning evidence.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/deadzone/AssembleAnatomy",
+            "detail": "A resting stick cannot drift the player.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AssembleAnatomy/(0.00, 1.00)",
+            "detail": "Joystick delta=(-0.13005, 0.00000, 0.06627); expected direction=(-0.89, 0.00, 0.45); dt=0.0167881; canInteract=True; UI capture=False; input=(0.00, 1.00); rig=(1.00, 1.62, 0.58); head=(0.88, 1.65, 0.67)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AssembleAnatomy/(0.00, -1.00)",
+            "detail": "Joystick delta=(0.12982, 0.00000, -0.06615); expected direction=(0.89, 0.00, -0.45); dt=0.018677; canInteract=True; UI capture=False; input=(0.00, -1.00); rig=(0.86, 1.62, 0.65); head=(1.00, 1.65, 0.61)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AssembleAnatomy/(-1.00, 0.00)",
+            "detail": "Joystick delta=(-0.06728, 0.00000, -0.13205); expected direction=(-0.45, 0.00, -0.89); dt=0.0167953; canInteract=True; UI capture=False; input=(-1.00, 0.00); rig=(1.00, 1.62, 0.58); head=(0.95, 1.65, 0.47)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_walk/direction/AssembleAnatomy/(1.00, 0.00)",
+            "detail": "Joystick delta=(0.06642, 0.00000, 0.13036); expected direction=(0.45, 0.00, 0.89); dt=0.0143545; canInteract=True; UI capture=False; input=(1.00, 0.00); rig=(0.93, 1.62, 0.43); head=(1.01, 1.65, 0.59)",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/assembly_context",
+            "detail": "Assembly also permits inspection of visible anatomy outside the current placement target.",
+            "passed": true
+        },
+        {
+            "id": "all_mode_grab/assembly_context_returns",
+            "detail": "Inspecting another assembly part preserves its previous pose and cannot place it or earn credit.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Assembly context expected=A_FMA8283; ray=A_FMA8283; selected=A_FMA8283; canManipulate=True; selectActive=True; nearby="
+    ]
+}

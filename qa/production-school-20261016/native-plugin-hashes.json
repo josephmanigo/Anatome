@@ -1,0 +1,14 @@
+[
+  {
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\native\\build-windows\\thoraxcut.dll",
+    "Hash": "AAE72C8D73F156BCAE58C4CDB6EDEEBF2AF0F22D0E971A3B642FED421CDA6DBF"
+  },
+  {
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\Plugins\\x86_64\\thoraxcut.dll",
+    "Hash": "AAE72C8D73F156BCAE58C4CDB6EDEEBF2AF0F22D0E971A3B642FED421CDA6DBF"
+  },
+  {
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\Plugins\\Android\\arm64-v8a\\libthoraxcut.so",
+    "Hash": "F4CD7AF110BAC5D8F51A8B58476024C7FB44339B73D518D7324E08C574371F26"
+  }
+]

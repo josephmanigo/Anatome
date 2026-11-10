@@ -1,0 +1,182 @@
+{
+  "verifiedUtc": "2026-10-18T22:28:55.305193+00:00",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeSchool\\Anatome-1.5.0-Production.apk",
+  "artifactSha256": "247963317147078fe18fde7084458d4cebefa7a21d3bff8cdafa00a3e6d93188",
+  "bytes": 110979413,
+  "package": "org.thoraxlab.learning",
+  "checks": [
+    {
+      "name": "Archive integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARM64 libraries only",
+      "passed": true,
+      "detail": [
+        "lib/arm64-v8a/libUnityOpenXR.so",
+        "lib/arm64-v8a/libUnityOpenXRHands.so",
+        "lib/arm64-v8a/lib_burst_generated.so",
+        "lib/arm64-v8a/libc++_shared.so",
+        "lib/arm64-v8a/libgame.so",
+        "lib/arm64-v8a/libil2cpp.so",
+        "lib/arm64-v8a/libmain.so",
+        "lib/arm64-v8a/libopenxr_loader.so",
+        "lib/arm64-v8a/libswappywrapper.so",
+        "lib/arm64-v8a/libthoraxcut.so",
+        "lib/arm64-v8a/libunity.so"
+      ]
+    },
+    {
+      "name": "XR Hands ARM64 provider",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Native cutting AArch64",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Chunk extraction native entry point",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current chunk extraction native version",
+      "passed": true,
+      "detail": "3fd2b7c8250ffc5cf875e2f5b8baf543c234a7588151baedb0a20f88ca3989e9"
+    },
+    {
+      "name": "16 KB native load alignment",
+      "passed": true,
+      "detail": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "Packaged ATTRIBUTION.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged MAL-Atlas-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Manifold-Apache-2.0.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-Third-Party-Notices.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Learning package identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Application display name",
+      "passed": true,
+      "detail": "Anatome"
+    },
+    {
+      "name": "Application version",
+      "passed": true,
+      "detail": "1.5.0"
+    },
+    {
+      "name": "Application version code",
+      "passed": true,
+      "detail": 18
+    },
+    {
+      "name": "Hand tracking permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Optional hand tracking preserves controller support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "APK signature verifies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Non-debug release signing certificate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Expected publisher certificate",
+      "passed": true,
+      "detail": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910"
+    },
+    {
+      "name": "Android manifest readable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Android allowBackup disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Android fullBackupContent disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Android usesCleartextTraffic disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Android debugging disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Explicit Quest 2 and Quest 3 support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Android extraction rules linked",
+      "passed": true,
+      "detail": "res/br.xml"
+    },
+    {
+      "name": "cloud-backup excludes device credentials and saves",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "device-transfer excludes device credentials and saves",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failures": 0,
+  "physicalDeviceTested": false,
+  "releaseSigningRequired": true,
+  "schoolPolicyRequired": true,
+  "certificateSha256": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910",
+  "nonDebugSigner": true,
+  "signing": "Non-debug certificate; compare the recorded fingerprint with the school's signing record"
+}

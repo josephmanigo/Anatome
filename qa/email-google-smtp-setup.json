@@ -1,0 +1,32 @@
+{
+  "utc": "2026-09-06T10:06:36.5688413Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "status": "Google Workspace SMTP accepts OTP delivery requests; awaiting learner receipt and Unity sign-in verification",
+  "provider": "Google Workspace SMTP",
+  "senderEmail": "joseph.manigo@hcdc.edu.ph",
+  "senderName": "Anatome",
+  "host": "smtp.gmail.com",
+  "port": 465,
+  "username": "joseph.manigo@hcdc.edu.ph",
+  "minimumIntervalPerUserSeconds": 60,
+  "observedMx": "ASPMX.L.GOOGLE.COM",
+  "resendDraftRemoved": true,
+  "resendPreviouslySaved": false,
+  "nonSecretFieldsVisuallyVerified": true,
+  "configurationSaved": true,
+  "savedSettingsReloadVerified": true,
+  "deliveryRetested": true,
+  "deliveryEvidence": "qa/email-google-delivery-test.json",
+  "googleTwoStepVerificationEnabled": true,
+  "googleAppPasswordsAvailable": true,
+  "deliveredAndVerified": false,
+  "nextAction": "User receives a fresh code and completes the six-digit code screen in Unity; record actual success before marking sign-in verified.",
+  "sources": [
+    "https://knowledge.workspace.google.com/admin/gmail/send-email-from-a-printer-scanner-or-app",
+    "https://support.google.com/accounts/answer/185833?hl=en"
+  ],
+  "credentialsStoredInWorkspace": false,
+  "latestOtpHttpStatus": 200,
+  "deliveryRequestAccepted": true,
+  "previousFailureEvidence": "qa/email-google-delivery-rejected.json"
+}

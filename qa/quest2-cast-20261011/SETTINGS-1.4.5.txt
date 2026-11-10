@@ -1,0 +1,35 @@
+ANATOME 1.4.5 - SETTINGS, PANEL AND CHUNK UPDATE
+Package: org.thoraxlab.learning. Android version code: 13.
+
+Use Anatome-1.4.5.apk in Meta Quest Developer Hub to update the existing app.
+If using the ZIP, extract it first and select the APK inside it.
+Keep the installed app and its data; do not uninstall or clear data for this update.
+The user requested manual installation. This version was not installed or launched on the headset by the agent.
+
+Changes
+- Apply and Cancel stay visible while scrolling through settings.
+- Graphics settings use the active Android rendering pipeline, including render scale, anti-aliasing and shadows.
+- A table-height change during a cut is applied when the cut finishes. Assembly outlines and case equipment follow the table.
+- Practice-hint changes refresh the current teaching aids immediately. OpenXR session startup requests the saved refresh rate.
+- Grip the top bar labelled "Grip to move / rotate" to move the panel. Turn your wrist while holding grip to rotate it; release to leave it in place.
+- Applying unrelated settings preserves the panel position and rotation.
+- Guided Dissection and the free dissection sandbox keep whole layers anchored. A grip holds one detached chunk; pointing across other anatomy cannot add it to the held selection.
+- Other learning modes retain temporary anatomy inspection. Placement and chunk-removal credit keep their existing validation.
+- Earlier cut-feedback visibility and "Needs review" progress wording fixes are included.
+
+Verification
+- Full official XR simulator regression: 2,343 checks passed, zero failed checks, zero captured runtime errors, runtimeQaBypass=false.
+- The checks drive actual controller sliders and Apply, verify all five preference categories, measure view/table/specimen height, inspect real audio/render/UI state, and exercise panel movement, rotation and release.
+- Coverage also includes native chunk cutting/removal, all learning modes, walking, pause and tracking recovery.
+- A ray-pickup test was corrected to start outside other nearby anatomy. The original test position legitimately selected a closer part; diagnostic evidence is retained in grab-context-full-diagnostic.json.
+- Exact APK size/hash, Android build result, package checks and signing identity are in verification-summary.json and learning-apk-verification.json.
+
+Headset retest
+1. Launch the updated standalone ANATOME app from Developer Hub.
+2. Open Settings > VR comfort. Change Extra player height and Table height offset, then Apply. Confirm the view and table move and the values remain when reopening settings.
+3. Change an audio or graphics setting and Apply. Confirm its visible or audible effect.
+4. Grip the panel's top bar, move it, rotate your wrist, then release. Confirm the panel stays where placed.
+5. Start Guided Dissection > Chest wall > Easy > Practice. Cut a small chunk with the scalpel, release the trigger, then grip, lift and release the detached piece. Confirm the whole layer stays anchored and the pointer cannot collect additional pieces while held.
+
+Limits
+This exact APK still needs the physical headset retest above. Local simulator/build checks do not prove headset comfort, controller feel, supported refresh-rate application or sustained performance. Account/cloud operations were not retested. Windows binaries were not rebuilt. Android Debug signing is for controlled sideload testing, not a publisher/store release.

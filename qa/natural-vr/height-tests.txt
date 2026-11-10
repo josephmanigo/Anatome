@@ -1,0 +1,62 @@
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: real floor height is preserved even with seated preference
+PASS: physical headset projection is not overridden
+Startup Floor pose: eye=1.65m; requested=Unknown
+[Anatome XR] Height aligned: origin=Device, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+Delayed Device pose: eye=1.25m; expected=1.25m
+PASS: startup origin transition keeps POV at seated eye height
+PASS: layout never requests Device mode
+PASS: device-relative crouch preserved
+PASS: unrelated settings do not reset crouch
+[Anatome XR] Height aligned: origin=Device, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+PASS: manual recenter calibrates fresh pose
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: late floor pose adopts measured eye height
+PASS: floor-relative crouch preserved
+[Anatome XR] Height aligned: origin=Floor, seated=False, localHeadY=1.45, rigY=0, eyeY=1.45
+PASS: standing uses reported floor height
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.45, rigY=0, eyeY=1.45
+PASS: seated preference does not shrink the learner
+PASS: tracking loss holds last valid camera pose
+[Anatome XR] Height aligned: origin=Device, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+PASS: tracking recovery after origin change
+PASS: invalid height cannot corrupt rig transform
+[Anatome XR] Height aligned: origin=Device, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+PASS: valid pose recovers after invalid sample
+[Anatome XR] Height aligned: origin=Device, seated=False, localHeadY=0, rigY=1.65, eyeY=1.65
+PASS: standing Device fallback starts above floor
+PASS: unsupported floor mode is not requested
+PASS: standing Device fallback preserves head movement
+[Anatome XR] Height aligned: origin=Device, seated=False, localHeadY=0, rigY=1.65, eyeY=1.65
+PASS: rejected floor request still has safe eye height
+PASS: floor requested for supported runtime
+[Anatome XR] Height aligned: origin=Floor, seated=False, localHeadY=1.72, rigY=0, eyeY=1.72
+PASS: standing delayed floor pose does not double eye height
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: official simulator floor pose is not double offset
+PASS: only simulator preview uses a wider 75 degree lens
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+PASS: late pose without event recovers from underfloor jump
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: reverse delayed pose without event recovers from high jump
+PASS: ordinary crouching stays available after recovery
+[Anatome XR] Height aligned: origin=Unknown, seated=False, localHeadY=0, rigY=1.65, eyeY=1.65
+PASS: subsystem not ready at startup has safe fallback
+[Anatome XR] Height aligned: origin=Floor, seated=False, localHeadY=1.7, rigY=0, eyeY=1.7
+PASS: late subsystem startup adopts actual floor
+[Anatome XR] Height aligned: origin=Device, seated=True, localHeadY=0, rigY=1.25, eyeY=1.25
+PASS: first tracked Device pose is safe on the same frame as subsystem startup
+PASS: origin transition holds last safe view for the change frame
+[Anatome XR] Height aligned: origin=Floor, seated=True, localHeadY=1.68, rigY=0, eyeY=1.68
+PASS: fresh floor pose completes startup without double height
+[Anatome XR] Height aligned: origin=Floor, seated=False, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: controller-to-hand switch cancels pending teleport
+PASS: controller returned with held stick does not teleport
+PASS: fresh controller push and release can request teleport
+[Anatome XR] Height aligned: origin=Floor, seated=False, localHeadY=1.65, rigY=0, eyeY=1.65
+PASS: head tracking recovery cannot finish old teleport
+PASS: unpausing cannot finish old teleport
+PASS: lost controller tracking blocks stale movement axes
+PASS: held stick on recovery stays still until neutral
+PASS: movement returns after neutral then new stick input
+PASS 39 camera height and locomotion checks (actual LearningControls.cs; engine/XR doubles, not a physical headset).

@@ -1,0 +1,5 @@
+Assets\ThoraxLab\Editor\LearningVRSimulatorVerification.cs(143,9): warning CS0618: 'XRDeviceSimulator' is obsolete: 'XRDeviceSimulator has been marked for deprecation and will be replaced by the XRInteractionSimulator in future versions.'
+Assets\ThoraxLab\Editor\LearningSimulatorSetup.cs(33,58): warning CS0618: 'XRDeviceSimulator' is obsolete: 'XRDeviceSimulator has been marked for deprecation and will be replaced by the XRInteractionSimulator in future versions.'
+Assets\ThoraxLab\Editor\LearningSimulatorSetup.cs(42,45): warning CS0618: 'XRDeviceSimulator' is obsolete: 'XRDeviceSimulator has been marked for deprecation and will be replaced by the XRInteractionSimulator in future versions.'
+Assets\ThoraxLab\Editor\LearningSimulatorSetup.cs(49,45): warning CS0618: 'XRDeviceSimulator' is obsolete: 'XRDeviceSimulator has been marked for deprecation and will be replaced by the XRInteractionSimulator in future versions.'
+Assets\ThoraxLab\Editor\LearningVRSimulatorVerification.cs(197,47): warning CS0618: 'XRDeviceSimulator' is obsolete: 'XRDeviceSimulator has been marked for deprecation and will be replaced by the XRInteractionSimulator in future versions.'

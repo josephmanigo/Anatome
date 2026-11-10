@@ -1,0 +1,199 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-13T20:05:52.0586984Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (1.35, 1.65, 0.89)",
+            "passed": false
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(0.42, 0.00, 0.91); expected=(-0.91, 0.00, 0.42)",
+            "passed": false
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(0.91, 0.00, -0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": false
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.42, 0.00, -0.91); expected=(-0.91, 0.00, 0.42)",
+            "passed": false
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/workspace",
+            "detail": "Walking checks use the ordinary tracked lesson gate.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/real_hover/False/LeftHand",
+            "detail": "The queued controller ray really intersects the UI header, with no trigger or grip.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/passive_hover/False/LeftHand",
+            "detail": "Movement stick must walk while either ray hovers; delta=(0.00, 0.00, 0.00); capture=True; canInteract=True",
+            "passed": false
+        },
+        {
+            "id": "panel_walk/real_hover/False/RightHand",
+            "detail": "The queued controller ray really intersects the UI header, with no trigger or grip.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/passive_hover/False/RightHand",
+            "detail": "Movement stick must walk while either ray hovers; delta=(0.00, 0.00, 0.00); capture=True; canInteract=True",
+            "passed": false
+        },
+        {
+            "id": "panel_walk/real_hover/True/LeftHand",
+            "detail": "The queued controller ray really intersects the UI header, with no trigger or grip.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/passive_hover/True/LeftHand",
+            "detail": "Movement stick must walk while either ray hovers; delta=(0.00, 0.00, 0.00); capture=True; canInteract=True",
+            "passed": false
+        },
+        {
+            "id": "panel_walk/real_hover/True/RightHand",
+            "detail": "The queued controller ray really intersects the UI header, with no trigger or grip.",
+            "passed": true
+        },
+        {
+            "id": "panel_walk/passive_hover/True/RightHand",
+            "detail": "Movement stick must walk while either ray hovers; delta=(0.00, 0.00, 0.00); capture=True; canInteract=True",
+            "passed": false
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)"
+    ]
+}

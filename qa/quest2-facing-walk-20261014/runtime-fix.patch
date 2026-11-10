@@ -1,0 +1,116 @@
+--- before/Assets/ThoraxLab/Learning/LearningControls.cs
++++ after/Assets/ThoraxLab/Learning/LearningControls.cs
+@@ -38,7 +38,10 @@
+             bool firstTrackedPose=!tracked;
+             if(!tracked)
+             {
+-                rig.rotation=Quaternion.Euler(0,-65,0);
++                // Align the learner's actual gaze, independent of the runtime's initial room heading.
++                var facing=Vector3.ProjectOnPlane(head.rotation*Vector3.forward,Vector3.up);
++                if(facing.sqrMagnitude<.0001f)facing=Vector3.Cross(head.rotation*Vector3.right,Vector3.up);
++                rig.rotation=Quaternion.Euler(0,-65-Mathf.Atan2(facing.x,facing.z)*Mathf.Rad2Deg,0);
+                 // Start in the clear aisle, independent of the headset's room-scale origin.
+                 rig.position=new Vector3(.85f,0,.65f)-Vector3.ProjectOnPlane(rig.rotation*head.position,Vector3.up);tracked=true;
+                 // Only the flat Editor simulator uses this preview lens. The
+--- before/Assets/ThoraxLab/Learning/LabUI.cs
++++ after/Assets/ThoraxLab/Learning/LabUI.cs
+@@ -423,11 +423,12 @@
+             Hover(pointer,result.gameObject);
+             if(!result.gameObject){ReleasePointer(pointer,null);if(panelDragPointer==pointerId)panelDragPointer=-1;if(pointer.captured)xrCaptureUntil=Time.unscaledTime+.15f;return pointer.captured;}
+             var point=result.screenPosition;data.delta=point-data.position;data.position=point;
+-            xrCaptureUntil=Time.unscaledTime+.15f;
+-            if(Mathf.Abs(scroll.y)>.2f){data.scrollDelta=new Vector2(0,scroll.y*.8f);ExecuteEvents.ExecuteHierarchy(result.gameObject,data,ExecuteEvents.scrollHandler);}
++            // Hover consumes world selection, but only deliberate UI input suspends locomotion.
++            if(press||pointer.captured)xrCaptureUntil=Time.unscaledTime+.15f;
++            if(Mathf.Abs(scroll.y)>.2f){data.scrollDelta=new Vector2(0,scroll.y*.8f);if(ExecuteEvents.ExecuteHierarchy(result.gameObject,data,ExecuteEvents.scrollHandler))xrCaptureUntil=Time.unscaledTime+.15f;}
+             var local=(Vector2)screen.InverseTransformPoint(result.worldPosition);
+             if(gripDown&&panelDragPointer<0&&!modal&&local.y>screen.rect.yMax-Mathf.Max(100,48*TextScale+48))
+-            {ReleasePointer(pointer,null);panelGrabOffset=Quaternion.Inverse(rotation)*(screen.position-ray.origin);panelGrabRotation=Quaternion.Inverse(rotation)*screen.rotation;panelDragPointer=pointerId;return true;}
++            {ReleasePointer(pointer,null);panelGrabOffset=Quaternion.Inverse(rotation)*(screen.position-ray.origin);panelGrabRotation=Quaternion.Inverse(rotation)*screen.rotation;panelDragPointer=pointerId;xrCaptureUntil=Time.unscaledTime+.15f;return true;}
+             if(press)
+             {
+                 ReleasePointer(pointer,null);pointer.captured=held;pointer.pressLocal=local;pointer.pressWorld=result.worldPosition;
+--- before/Assets/ThoraxLab/Learning/LabUI.Settings.cs
++++ after/Assets/ThoraxLab/Learning/LabUI.Settings.cs
+@@ -33,6 +33,7 @@
+                     Cycle(content,"Anti-aliasing",draft.platform=="Quest"?new[]{1,2,4}:new[]{1,2,4,8},()=>draft.msaa,v=>draft.msaa=v);
+                     Toggle(content,"Shadows",()=>draft.shadows,v=>draft.shadows=v);Slider(content,"Shadow distance (m)",0,12,()=>draft.shadowDistance,v=>draft.shadowDistance=v);
+                     Text(content,"Anatomy and task accuracy stay the same at every graphics level.",20,Muted);
++                    if(draft.platform=="Quest")Text(content,"Lower graphics reduce GPU work. FPS cannot exceed the headset refresh rate selected below; a lower preset may keep the same FPS when already at that limit.",20,Muted);
+                     if(draft.platform=="Windows")
+                     {
+                         Cycle(content,"Resolution",new[]{"1280 × 720","1440 × 1000","1920 × 1080","2560 × 1440","3840 × 2160"},()=>draft.width+" × "+draft.height,v=>{var pair=v.Split('×');draft.width=int.Parse(pair[0]);draft.height=int.Parse(pair[1]);});
+@@ -58,7 +59,7 @@
+                     Button(content,"Recenter view and height",()=>{var controls=FindFirstObjectByType<LearningControls>();if(controls)controls.RecenterTracking();});
+                     Slider(content,"Table height offset (m)",-.2f,.25f,()=>draft.tableHeight,v=>draft.tableHeight=v);
+                     Cycle(content,"Movement",new[]{MoveStyle.Teleport,MoveStyle.Smooth},()=>draft.movement,v=>draft.movement=v);Slider(content,"Movement speed",.2f,1.5f,()=>draft.moveSpeed,v=>draft.moveSpeed=v);
+-                    Text(content,"Smooth: use the left stick to walk forward, backward or sideways. Right stick turns. Left dominant hand swaps the sticks. Teleport remains available for comfort. Aim away from the panel to move.",21,Muted);
++                    Text(content,"Smooth: left stick walks; right stick turns or scrolls the panel. Left dominant hand swaps the sticks. Pointing at the panel still allows walking. After a panel grab or click, release the stick before moving again.",21,Muted);
+                     Cycle(content,"Turning",new[]{TurnStyle.Snap,TurnStyle.Smooth},()=>draft.turning,v=>draft.turning=v);Slider(content,"Turn speed",15,120,()=>draft.turnSpeed,v=>draft.turnSpeed=v);Slider(content,"Snap angle",15,60,()=>draft.snapAngle,v=>draft.snapAngle=v);Toggle(content,"Comfort vignette",()=>draft.vignette,v=>draft.vignette=v);break;
+                 case "Learning & accessibility":
+                     Toggle(content,"Practice hints",()=>draft.hints,v=>draft.hints=v);Toggle(content,"Structure labels",()=>draft.labels,v=>draft.labels=v);Toggle(content,"High contrast",()=>draft.highContrast,v=>draft.highContrast=v);Toggle(content,"Reduced motion",()=>draft.reducedMotion,v=>draft.reducedMotion=v);
+--- before/Assets/ThoraxLab/Scripts/LabHandInteractor.cs
++++ after/Assets/ThoraxLab/Scripts/LabHandInteractor.cs
+@@ -42,7 +42,10 @@
+   var preferences=app?.Settings?.Current;
+   bool rawGrip=grip;if(!rawGrip)gripArmed=true;if(preferences!=null&&preferences.toggleGrip&&xr.source!=Learning.XRInteractionSource.BareHand){if(gripArmed&&grip&&!previousGrip)toggledGrip=!toggledGrip;grip=toggledGrip;}previousGrip=rawGrip;
+   var ray=InputRay(xr);hit=null;button=null;procedureTool=null;
+-  Vector2 uiScroll=xr.axis;overUI=app&&app.UI&&app.UI.RayPointer(ray,trigger&&!previousTrigger,uiScroll,rawGrip&&interactablesSelected.Count==0,trigger,(int)hand+1,transform.rotation);
++  // During a lesson, the movement stick stays available even when its ray crosses the panel.
++  bool movementHand=hand==(preferences?.leftHanded==true?XRNode.RightHand:XRNode.LeftHand);
++  Vector2 uiScroll=app&&app.CanInteract&&movementHand?Vector2.zero:xr.axis;
++  overUI=app&&app.UI&&app.UI.RayPointer(ray,trigger&&!previousTrigger,uiScroll,rawGrip&&interactablesSelected.Count==0,trigger,(int)hand+1,transform.rotation);
+   if(Physics.Raycast(ray,out var h,3,~0,QueryTriggerInteraction.Ignore)) {hit=h.collider.GetComponentInParent<AnatomyStructure>();button=h.collider.GetComponent<LabButton>();procedureTool=h.collider.GetComponentInParent<Learning.ProcedureTool>();if(line){line.SetPosition(0,ray.origin);line.SetPosition(1,h.point);}}
+   else if(line){line.SetPosition(0,ray.origin);line.SetPosition(1,ray.GetPoint(2));}
+   float closest=float.MaxValue;int count=Physics.OverlapSphereNonAlloc(transform.position,.035f,near);for(int i=0;i<count;i++){var s=near[i].GetComponentInParent<AnatomyStructure>();if(s&&(!app||app.CanManipulate(s))){float distance=s.Renderer.bounds.SqrDistance(transform.position);if(distance<closest){closest=distance;hit=s;procedureTool=null;}}}
+--- before/Assets/ThoraxLab/Editor/LearningBuild.cs
++++ after/Assets/ThoraxLab/Editor/LearningBuild.cs
+@@ -49,6 +49,15 @@
+             AssetDatabase.SaveAssets();
+             UnityEditor.XR.OpenXR.Features.FeatureHelpers.RefreshFeatures(BuildTargetGroup.Android);
+             var xr=UnityEngine.XR.OpenXR.OpenXRSettings.GetSettingsForBuildTargetGroup(BuildTargetGroup.Android);if(xr){var refresh=xr.GetFeature<Learning.QuestRefreshFeature>();if(refresh){refresh.enabled=true;EditorUtility.SetDirty(refresh);}}
++            // Quest 2 logs reproduce Adreno Vulkan image-view crashes during graphics changes.
++            PlayerSettings.SetUseDefaultGraphicsAPIs(BuildTarget.Android,false);
++            PlayerSettings.SetGraphicsAPIs(BuildTarget.Android,new[]{UnityEngine.Rendering.GraphicsDeviceType.OpenGLES3});
++            if(xr){
++                xr.optimizeBufferDiscards=false;
++                var quest=xr.GetFeature<UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature>();
++                if(quest){var settings=new SerializedObject(quest);settings.FindProperty("m_optimizeBufferDiscards").boolValue=false;settings.ApplyModifiedPropertiesWithoutUndo();}
++                EditorUtility.SetDirty(xr);
++            }
+             AssetDatabase.SaveAssets();
+         }
+         public static void Windows()
+@@ -130,6 +139,10 @@
+         {
+             Prepare();
+             var xr=UnityEngine.XR.OpenXR.OpenXRSettings.GetSettingsForBuildTargetGroup(BuildTargetGroup.Android);
++            var apis=PlayerSettings.GetGraphicsAPIs(BuildTarget.Android);
++            if(apis.Length!=1||apis[0]!=UnityEngine.Rendering.GraphicsDeviceType.OpenGLES3||xr&&xr.optimizeBufferDiscards)
++                throw new Exception("Quest compatibility build requires OpenGLES3 with Vulkan buffer discards disabled.");
++            File.WriteAllText(Path.GetFullPath(Path.Combine(Application.dataPath,"../../../qa/learning-graphics-Android.txt")),"OpenGLES3 only\nVulkan buffer discards disabled\n");
+             if(xr){xr.latencyOptimization=UnityEngine.XR.OpenXR.OpenXRSettings.LatencyOptimization.PrioritizeInputPolling;EditorUtility.SetDirty(xr);AssetDatabase.SaveAssets();}
+             Build(BuildTarget.Android,"builds/AnatomeQuest/Anatome.apk");
+         }
+--- before/Assets/XR/Settings/OpenXR Package Settings.asset
++++ after/Assets/XR/Settings/OpenXR Package Settings.asset
+@@ -490,7 +490,7 @@
+   m_symmetricProjection: 0
+   systemSplashScreen: {fileID: 0}
+   enableSystemKeyboard: 0
+-  m_optimizeBufferDiscards: 1
++  m_optimizeBufferDiscards: 0
+   lateLatchingMode: 0
+   lateLatchingDebug: 0
+   optimizeMultiviewRenderRegions: 0
+--- before/ProjectSettings/ProjectSettings.asset
++++ after/ProjectSettings/ProjectSettings.asset
+@@ -401,7 +401,7 @@
+   m_BuildTargetGraphicsJobMode: []
+   m_BuildTargetGraphicsAPIs:
+   - m_BuildTarget: AndroidPlayer
+-    m_APIs: 15000000
++    m_APIs: 0b000000
+     m_Automatic: 0
+   m_BuildTargetVRSettings: []
+   m_DefaultShaderChunkSizeInMB: 16

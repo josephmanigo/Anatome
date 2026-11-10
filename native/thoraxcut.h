@@ -10,6 +10,10 @@ TL_API void* tl_cut(const float* vertices, int vertexCount, const int* triangles
                    int indexCount, const float* bladeCorners, int poseCount,
                    int maxTriangles, int maxPieces);
 TL_API int tl_status(void* result);
+// Piece 0 is the anchored remainder; piece 1 is the swept tissue chunk.
+TL_API void* tl_extract_chunk(const float* vertices, int vertexCount, const int* triangles,
+                   int indexCount, const float* bladeCorners, int poseCount,
+                   int maxTriangles, int maxPieces);
 TL_API const char* tl_message(void* result);
 TL_API int tl_piece_count(void* result);
 TL_API int tl_piece_sizes(void* result, int piece, int* vertices, int* indices);

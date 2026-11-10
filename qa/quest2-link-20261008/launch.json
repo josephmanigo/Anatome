@@ -1,0 +1,13 @@
+{
+  "startedUtc": "2026-10-08T11:22:32.3658273Z",
+  "processId": 25068,
+  "executable": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeWindows\\Anatome.exe",
+  "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\quest2-link-20261008\\player-d3d11-20261008-112232.log",
+  "mode": "Windows PC VR through Meta Horizon Link",
+  "graphicsApi": "Direct3D11",
+  "guestPractice": true,
+  "simulator": false,
+  "automatedLearningQa": false,
+  "unknownSourcesEnabledByUser": true,
+  "applicationAssemblySha256": "7A1024EA03F6540F371581621F4E768AC1769A7672B3ACFFECB328B460C175C7"
+}

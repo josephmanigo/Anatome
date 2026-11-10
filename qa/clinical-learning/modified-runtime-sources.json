@@ -1,0 +1,18 @@
+[
+  {
+    "file": "Learning/ClinicalReasoningWorkbench.cs",
+    "sourceSha256": "bd3463bdcf053ec17632d9095223b5a07fa7448c8136b62f5103fd0f4f9e07e2"
+  },
+  {
+    "file": "Learning/ProcedureWorkbench.cs",
+    "sourceSha256": "9adaa3475be730e1a06815624efe1a1256038b342ea36f9caf04b7e8e0e091dc"
+  },
+  {
+    "file": "Learning/Core/AssessmentEngine.cs",
+    "sourceSha256": "438dad0320f793decbceab18083e8040be6af3e241909671e219ed3c7d64f102"
+  },
+  {
+    "file": "Learning/Core/LearningModels.cs",
+    "sourceSha256": "2de34c2ed73b20f0dd4ee629e11077c3220e1169d8ae4ebccb5a9c0b1284b465"
+  }
+]

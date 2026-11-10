@@ -1,0 +1,30 @@
+{
+    "utc": "2026-10-04T13:13:41.1682298Z",
+    "anatomyId": "FMA9757",
+    "source": "Assets/ThoraxLab/Models/Thorax.fbx",
+    "sourceSha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a",
+    "derived": "Assets/ThoraxLab/Resources/Learning/Specimen/FMA9757-validated-working-mesh.asset",
+    "operation": "Remove exactly one disconnected six-triangle negative-occupancy numerical artifact; retain every vertex and all vertex channels. No surface is moved or filled.",
+    "sourceTriangles": 3976,
+    "derivedTriangles": 3970,
+    "components": 19,
+    "removedTriangles": 6,
+    "removedSignedVolumeM3": -2.8113272322661928e-15,
+    "removedDiagonalM": 0.001229223795235157,
+    "sourceFileUnchanged": true,
+    "vertexChannelsUnchanged": true,
+    "boundsUnchanged": true,
+    "removedSourceTriangleIndices": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+    ],
+    "cutValidation": [
+        "Localized native incision: 1 outputs, 4030 triangles; Cut validated.",
+        "Localized native incision: 1 outputs, 4034 triangles; Cut validated.",
+        "Localized native incision: 1 outputs, 4038 triangles; Cut validated."
+    ]
+}

@@ -1,0 +1,2 @@
+[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
+PASS 905 assertions: scoring, order, evidence, mastery, idempotence, account isolation, reset and durable save recovery.

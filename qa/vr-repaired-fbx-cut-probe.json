@@ -1,0 +1,26 @@
+[
+  {
+    "id": "FMA9757",
+    "axis": 0,
+    "triangles": 3970,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9757",
+    "axis": 1,
+    "triangles": 3970,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9757",
+    "axis": 2,
+    "triangles": 3970,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  }
+]

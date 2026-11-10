@@ -1,0 +1,149 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-07T08:30:31.8407708Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "layer_current/FMA7163",
+            "detail": "Cut and lift layers in their actual lesson order.",
+            "passed": true
+        },
+        {
+            "id": "layer_surface/FMA7163",
+            "detail": "Exposed real surface · FMA7163 · sample 1",
+            "passed": true
+        },
+        {
+            "id": "layer_cut/FMA7163",
+            "detail": "Cut complete · 1 pieces · 0/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_exposed/FMA7163",
+            "detail": "Exposed real surface · FMA7163 · sample 2",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_grab/FMA7163",
+            "detail": "The actual cut remainder is held by the XR controller.",
+            "passed": true
+        },
+        {
+            "id": "no_intact_display_copy_after_grab/FMA7163",
+            "detail": "Only the current cut mesh may render after grip, movement and release.",
+            "passed": true
+        },
+        {
+            "id": "no_original_clone_after_grab/FMA7163",
+            "detail": "Each physical piece has cut geometry; the uncut original cannot remain visible.",
+            "passed": true
+        },
+        {
+            "id": "layer_current/REC_fat",
+            "detail": "Cut and lift layers in their actual lesson order.",
+            "passed": true
+        },
+        {
+            "id": "layer_surface/REC_fat",
+            "detail": "Exposed real surface · REC_fat · sample 1",
+            "passed": true
+        },
+        {
+            "id": "layer_cut/REC_fat",
+            "detail": "Subcutaneous tissue\nREC_fat · authored_reconstruction\nRegion-cropped BodyParts3D skin envelope adapted into an inner teaching layer with explicit authored thickness. Educational reconstruction; dimensions are author-selected, not measured tissue parameters. Additional author-selected layer clearance reduces overlap from independent surface simplification; spacing is a teaching adjustment.",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: layer_cut/REC_fat: Subcutaneous tissue\nREC_fat · authored_reconstruction\nRegion-cropped BodyParts3D skin envelope adapted into an inner teaching layer with explicit authored thickness. Educational reconstruction; dimensions are author-selected, not measured tissue parameters. Additional author-selected layer clearance reduces overlap from independent surface simplification; spacing is a teaching adjustment.\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:186 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyDissectionLayerCopies>d__0.MoveNext () [0x003b2] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Dissection.cs:27 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__37.MoveNext () [0x0084d] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:235 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:170 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "FMA7163 pieces=1 A_FMA7163 size=(0.54, 0.27, 0.37) tris=8592",
+        "FMA7163 renderers=A_FMA7163=True/True; LOD1=False/True; LOD2=False/True",
+        "failure: head=(0.71, 1.25, 1.02) hand=(0.76, 1.26, 1.00) direction=(-0.89, -0.29, 0.35) plane=True distance=1.326891 screen=(125.25, 161.68, 1.22) hits="
+    ]
+}

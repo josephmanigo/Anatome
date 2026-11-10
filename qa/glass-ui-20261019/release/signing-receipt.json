@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-18T22:29:00.5243955Z",
+  "passed": true,
+  "sourceSha256": "92c0ff4869bbdb2c25a7b3736807b20a114b0216c63297238559159946bb7357",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeSchool\\Anatome-1.5.0-Production.apk",
+  "apkSha256": "247963317147078fe18fde7084458d4cebefa7a21d3bff8cdafa00a3e6d93188",
+  "certificateSha256": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910",
+  "previousCertificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "privateKeyOutsideWorkspace": true,
+  "privateDirectoryRestrictedToCurrentUserAndSystem": true,
+  "passwordProtectedWithCurrentUserDpapi": true,
+  "zipAlignment16Kb": true,
+  "physicalInstallationTested": false
+}

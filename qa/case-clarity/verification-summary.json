@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-07T18:05:21.5224064Z",
+  "status": "READY_FOR_SCHOOL_CASE_RETEST_PHYSICAL_QUEST_PENDING",
+  "applicationVersion": "1.4.1",
+  "versionCode": 9,
+  "contentVersion": "2026.10.2",
+  "apkSha256": "32e9d78d2f8c14c45c26b34da7a333b52391a9d6e66af674ce9e756f4b7ceac3",
+  "apkBytes": 111985273,
+  "verified": {
+    "xrChecks": 2251,
+    "xrErrors": 0,
+    "xrRuntimeQaBypass": false,
+    "sceneVariants": 72,
+    "sceneVariantsPassed": 72,
+    "sceneErrors": 0,
+    "readinessChecks": 22,
+    "apkChecks": 19,
+    "apkFailures": 0,
+    "updateSignerMatchesPrevious": true,
+    "contentChecks": 1761,
+    "caseSteps": 79,
+    "backendScoringChecks": 263,
+    "learningCoreAssertions": 889,
+    "windowsBuild": "Succeeded\n0 errors\n0 warnings\n00:00:25.2976663",
+    "androidBuild": "Succeeded\n0 errors\n0 warnings\n00:01:53.9575423"
+  },
+  "sources": {
+    "reported404Fixed": true,
+    "bodyPartsUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html",
+    "bodyPartsHttpStatus": 200,
+    "directHttpPassed": 19,
+    "total": 22,
+    "unverifiedExternalSources": [
+      {
+        "id": "spacer",
+        "url": "https://www.uhsussex.nhs.uk/resources/inhaler-technique-metered-dose-inhalers-with-aerochamber-spacer/",
+        "finalUrl": "https://www.uhsussex.nhs.uk/resources/inhaler-technique-metered-dose-inhalers-with-aerochamber-spacer/",
+        "status": 403,
+        "title": "Just a moment...",
+        "passed": false
+      },
+      {
+        "id": "heart-dissection",
+        "url": "https://anatomy.ttuhscep.edu/schemes/thorax_wall.html",
+        "passed": false,
+        "error": "fetch failed"
+      },
+      {
+        "id": "coronary-dissection",
+        "url": "https://anatomy.ttuhscep.edu/cardiovascular_system/heart.html",
+        "passed": false,
+        "error": "fetch failed"
+      }
+    ],
+    "note": "Original provenance retained. A 403 or connection failure is not proof that a publisher page was removed."
+  },
+  "changes": [
+    "Case briefing and retained controls page",
+    "Live pickup, placement, alignment, route and hold feedback",
+    "Natural grip contact and route interaction; trigger for active operations",
+    "Named choice feedback and non-credit instrument demonstrations",
+    "Radial band, needle-free IV medicine and monitoring finger visuals",
+    "Working-end pose retained on withdrawal and tray reset; corrected pleural and coronary return routes",
+    "Saved reference browser return; pause and focus tracked separately"
+  ],
+  "retained": {
+    "dissectionFixesVerifiedInCurrentXr": true,
+    "curriculumUnchanged": true,
+    "databaseMigrationRequired": false,
+    "backendEvidence": "qa/dissection-overhaul/live-migration-report.json",
+    "backendEvidenceReused": true,
+    "historicalAnatomyMeshReport": "qa/dissection-overhaul/mesh-report.json",
+    "nativeMeshChangedThisUpdate": false
+  },
+  "evidence": [
+    "qa/case-clarity/xr-final-report.json",
+    "qa/case-clarity/player/runtime-report.json",
+    "qa/case-clarity/player/readiness-regressions.json",
+    "qa/case-clarity/apk/learning-apk-verification.json",
+    "qa/case-clarity/source-links-after.json",
+    "qa/vr-content-report.json",
+    "qa/learning-backend-report.json"
+  ],
+  "screenshots": [
+    "qa/case-clarity/workspace.png",
+    "qa/case-clarity/case-controls.png"
+  ],
+  "physicalQuestTested": false,
+  "browserClosureOnQuestTested": false,
+  "authenticatedLearnerCurrentBuildTested": false,
+  "clinicalCompetencyValidated": false,
+  "productionRelease": false,
+  "signing": "Android Debug certificate; sideload review, not a store release",
+  "remaining": [
+    "Quest browser closure and same-step return",
+    "Physical tool pickup, placement, release and comfort",
+    "Headset text readability and source availability on the school network",
+    "Authenticated learner persistence and synchronization",
+    "Sustained physical Quest latency and FPS",
+    "Clinical educator review of simplified models and teaching workflow"
+  ]
+}

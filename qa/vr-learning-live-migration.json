@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-06T00:57:28.5130267Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "method": "Authenticated Supabase dashboard SQL Editor, followed by fresh read-only database queries",
+  "migrations": [
+    {
+      "file": "202609060005_vr_learning_content.sql",
+      "sha256": "02b6432006249b899a68b565865df2d80d3546aa0c834751d6b518564ef394be"
+    },
+    {
+      "file": "202609060006_content_version_mastery.sql",
+      "sha256": "efbc42ee4cc94b1e2bed9928d6b84e332b6f3ec49604b8aca79ecfd99c73aa2b"
+    },
+    {
+      "file": "202609060007_heart_dissection_content.sql",
+      "sha256": "1ba1242f85083840a4bd2fd5a7f5cb5e7e40f882fb8c149d1f863e118b024c99"
+    }
+  ],
+  "rubrics": {
+    "2026.09.3": 72,
+    "2026.09.1": 72,
+    "2026.09.2": 72
+  },
+  "security": {
+    "contentVersionCheckedForAttemptsAndCheckpoints": true,
+    "anonymousProgressSyncDenied": true,
+    "authenticatedProgressSyncAllowed": true,
+    "allPriorDifficultyLevelsRequired": true,
+    "allFiveTablesRls": true
+  },
+  "heartRubric": {
+    "finalActions": [
+      2,
+      0,
+      0
+    ],
+    "version": "2026.09.3",
+    "scenario": "heart-coronaries-3-2",
+    "finalTargets": [
+      "REC_Pericardium",
+      "FMA9457",
+      "FMA8612"
+    ],
+    "protectedIds": [
+      "REC_Left_Phrenic_nerve",
+      "REC_Right_Phrenic_nerve",
+      "FMA50039",
+      "FMA50040"
+    ]
+  },
+  "deploymentNotes": [
+    "RLS explicitly enabled for all five existing learning tables inside the migration transaction",
+    "Dashboard Run and enable RLS parser misidentified narrative text as a table named the and reported relation does not exist after the explicit COMMIT",
+    "Fresh read queries confirmed all 72 v3 rubrics committed, historical versions retained, five tables secured, expected grants and version mastery rules present"
+  ],
+  "cliMigrationHistoryPopulated": false,
+  "realLearnerAuthenticationTested": false,
+  "emailDelivery": "Previously observed SMTP hostname failure remains unresolved"
+}

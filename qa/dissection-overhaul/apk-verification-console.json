@@ -1,0 +1,125 @@
+{
+  "verifiedUtc": "2026-10-07T16:50:55.857470+00:00",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome.apk",
+  "artifactSha256": "37e1745fa0c1f9b0bab701a8eb47bb5bab119e225a835d685b0d607018b42f69",
+  "bytes": 111966657,
+  "package": "org.thoraxlab.learning",
+  "checks": [
+    {
+      "name": "Archive integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARM64 libraries only",
+      "passed": true,
+      "detail": [
+        "lib/arm64-v8a/libUnityOpenXR.so",
+        "lib/arm64-v8a/libUnityOpenXRHands.so",
+        "lib/arm64-v8a/lib_burst_generated.so",
+        "lib/arm64-v8a/libc++_shared.so",
+        "lib/arm64-v8a/libgame.so",
+        "lib/arm64-v8a/libil2cpp.so",
+        "lib/arm64-v8a/libmain.so",
+        "lib/arm64-v8a/libopenxr_loader.so",
+        "lib/arm64-v8a/libswappywrapper.so",
+        "lib/arm64-v8a/libthoraxcut.so",
+        "lib/arm64-v8a/libunity.so"
+      ]
+    },
+    {
+      "name": "XR Hands ARM64 provider",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Native cutting AArch64",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Chunk extraction native entry point",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current chunk extraction native version",
+      "passed": true,
+      "detail": "3fd2b7c8250ffc5cf875e2f5b8baf543c234a7588151baedb0a20f88ca3989e9"
+    },
+    {
+      "name": "16 KB native load alignment",
+      "passed": true,
+      "detail": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "Packaged ATTRIBUTION.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged MAL-Atlas-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Manifold-Apache-2.0.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-Third-Party-Notices.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Learning package identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Application display name",
+      "passed": true,
+      "detail": "Anatome"
+    },
+    {
+      "name": "Application version",
+      "passed": true,
+      "detail": "1.4.0"
+    },
+    {
+      "name": "Application version code",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "name": "Hand tracking permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Optional hand tracking preserves controller support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "APK signature verifies",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failures": 0,
+  "physicalDeviceTested": false,
+  "releaseSigningRequired": false,
+  "nonDebugSigner": false,
+  "signing": "Android Debug certificate; sideload review, not a store release"
+}

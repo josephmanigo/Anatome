@@ -1,0 +1,270 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-07T08:35:36.7445473Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "layer_current/FMA7163",
+            "detail": "Cut and lift layers in their actual lesson order.",
+            "passed": true
+        },
+        {
+            "id": "layer_surface/FMA7163",
+            "detail": "Exposed real surface · FMA7163 · sample 1",
+            "passed": true
+        },
+        {
+            "id": "layer_cut/FMA7163",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "incision_keeps_real_tissue_visible/FMA7163",
+            "detail": "Cutting alone cannot hide tissue or complete the lift objective.",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_exposed/FMA7163",
+            "detail": "Exposed real surface · FMA7163 · sample 2",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_grab/FMA7163",
+            "detail": "The actual cut remainder is held by the XR controller.",
+            "passed": true
+        },
+        {
+            "id": "no_intact_display_copy_after_grab/FMA7163",
+            "detail": "An old display mesh cannot reappear after grip, movement and release.",
+            "passed": true
+        },
+        {
+            "id": "no_original_clone_after_grab/FMA7163",
+            "detail": "Each physical piece has cut geometry; the uncut original cannot remain visible.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_leaves_work_area/FMA7163",
+            "detail": "Completed tissue must not remain as a floating, body-shaped copy next to the specimen.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_clears_selection/FMA7163",
+            "detail": "The selected cut tissue is cleared after accepted release.",
+            "passed": true
+        },
+        {
+            "id": "undo_cannot_resurrect_completed_layer",
+            "detail": "Undo cannot restore a floating shell from an earlier completed step.",
+            "passed": true
+        },
+        {
+            "id": "restore_cannot_resurrect_completed_layer",
+            "detail": "Restoring positions keeps the completed skin retired and preserves progress.",
+            "passed": true
+        },
+        {
+            "id": "resume_cannot_resurrect_completed_layer",
+            "detail": "Continuing the saved activity does not rebuild a detached skin copy.",
+            "passed": true
+        },
+        {
+            "id": "layer_current/REC_fat",
+            "detail": "Cut and lift layers in their actual lesson order.",
+            "passed": true
+        },
+        {
+            "id": "layer_surface/REC_fat",
+            "detail": "Exposed real surface · REC_fat · sample 1",
+            "passed": true
+        },
+        {
+            "id": "layer_cut/REC_fat",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "incision_keeps_real_tissue_visible/REC_fat",
+            "detail": "Cutting alone cannot hide tissue or complete the lift objective.",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_exposed/REC_fat",
+            "detail": "Exposed real surface · REC_fat · sample 2",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_grab/REC_fat",
+            "detail": "The actual cut remainder is held by the XR controller.",
+            "passed": true
+        },
+        {
+            "id": "no_intact_display_copy_after_grab/REC_fat",
+            "detail": "An old display mesh cannot reappear after grip, movement and release.",
+            "passed": true
+        },
+        {
+            "id": "no_original_clone_after_grab/REC_fat",
+            "detail": "Each physical piece has cut geometry; the uncut original cannot remain visible.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_leaves_work_area/REC_fat",
+            "detail": "Completed tissue must not remain as a floating, body-shaped copy next to the specimen.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_clears_selection/REC_fat",
+            "detail": "The selected cut tissue is cleared after accepted release.",
+            "passed": true
+        },
+        {
+            "id": "layer_current/REC_fascia",
+            "detail": "Cut and lift layers in their actual lesson order.",
+            "passed": true
+        },
+        {
+            "id": "layer_surface/REC_fascia",
+            "detail": "Exposed real surface · REC_fascia · sample 2",
+            "passed": true
+        },
+        {
+            "id": "layer_cut/REC_fascia",
+            "detail": "Cut complete · 2 pieces · 2/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "incision_keeps_real_tissue_visible/REC_fascia",
+            "detail": "Cutting alone cannot hide tissue or complete the lift objective.",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_exposed/REC_fascia",
+            "detail": "Exposed real surface · REC_fascia · sample 5",
+            "passed": true
+        },
+        {
+            "id": "cut_layer_grab/REC_fascia",
+            "detail": "The actual cut remainder is held by the XR controller.",
+            "passed": true
+        },
+        {
+            "id": "no_intact_display_copy_after_grab/REC_fascia",
+            "detail": "An old display mesh cannot reappear after grip, movement and release.",
+            "passed": true
+        },
+        {
+            "id": "no_original_clone_after_grab/REC_fascia",
+            "detail": "Each physical piece has cut geometry; the uncut original cannot remain visible.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_leaves_work_area/REC_fascia",
+            "detail": "Completed tissue must not remain as a floating, body-shaped copy next to the specimen.",
+            "passed": true
+        },
+        {
+            "id": "completed_layer_clears_selection/REC_fascia",
+            "detail": "The selected cut tissue is cleared after accepted release.",
+            "passed": true
+        },
+        {
+            "id": "new_activity_restores_one_intact_specimen",
+            "detail": "Starting again restores the original once and removes old fragments.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "FMA7163 pieces=2 A_FMA7163 size=(0.54, 0.27, 0.37) tris=3996; skin fragment 1 size=(0.54, 0.27, 0.37) tris=4148",
+        "FMA7163 renderers=A_FMA7163=True/False; LOD1=False/False; LOD2=False/False",
+        "REC_fat pieces=2 Subcutaneous tissue fragment 1 size=(0.48, 0.24, 0.37) tris=2160; A_REC_fat size=(0.49, 0.25, 0.37) tris=2100",
+        "REC_fat renderers=A_REC_fat=True/False; LOD1=False/False; LOD2=False/False",
+        "REC_fascia pieces=2 A_REC_fascia size=(0.46, 0.23, 0.37) tris=2024; Thoracic fascia fragment 1 size=(0.45, 0.23, 0.37) tris=2128",
+        "REC_fascia renderers=A_REC_fascia=True/False; LOD1=False/False; LOD2=False/False"
+    ]
+}

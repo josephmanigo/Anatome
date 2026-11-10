@@ -1,0 +1,11 @@
+{
+  "observedUtc": "2026-09-06T08:51:23.7173082Z",
+  "editorPid": 28960,
+  "editorRunning": true,
+  "responding": true,
+  "officialSimulatorActiveLog": true,
+  "requestedEntryPoint": "ThoraxLab.Editor.LearningBuild.OpenVRReview",
+  "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-gloved-hands-user-review.log",
+  "firstPersonCapture": "qa/vr-gloved-hands-first-person.png",
+  "scope": "Editor process and official simulator activation observed; physical hardware not tested"
+}

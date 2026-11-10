@@ -1,0 +1,183 @@
+{
+  "utc": "2026-09-06T11:20:48.5321997Z",
+  "status": "Software checks passed; VR review candidate",
+  "productionAccepted": false,
+  "project": "unity/ThoraxLab",
+  "verificationProject": "unity/ThoraxLabReview",
+  "unity": "6000.3.19f1",
+  "contentVersion": "2026.09.3",
+  "source": {
+    "assetFiles": 1937,
+    "exactlyMatchingAssets": 1936,
+    "allSourceCodeAndAnatomyMatch": true,
+    "generatedCacheDifferences": [
+      {
+        "path": "ThoraxLab/Resources/Fonts/SourceSans3-SDF.asset",
+        "sha256": "8a133bec27d4d424b251043b0aba885be8da70f8aa9fd55649972b5f469ec7c4",
+        "matchesReview": false,
+        "comparison": "Only TextMeshPro generated font-feature cache differs; source font and all other serialized fields match.",
+        "reviewSha256": "c78fbf20c940794c3d8beeb4ec7e954bc5cf6bd66b70530328c9bdb5abcae0f3"
+      }
+    ],
+    "unexpectedReviewAssets": [],
+    "snapshot": "qa/readiness-review/source-assets-snapshot.json",
+    "originalAnatomyFileUnchanged": true,
+    "originalAnatomySha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a"
+  },
+  "tests": {
+    "officialXrSimulator": {
+      "passed": 74,
+      "utc": "2026-09-06T11:16:02.513964Z",
+      "runtimeQaBypass": false,
+      "errors": []
+    },
+    "sceneVariants": {
+      "passed": 72,
+      "total": 72,
+      "utc": "2026-09-06T11:06:19.6422811Z",
+      "errors": []
+    },
+    "readinessRegressions": {
+      "passed": 19,
+      "utc": "2026-09-06T11:02:56.8935883Z"
+    },
+    "coreAssertions": 769,
+    "contentAssertions": 1451,
+    "postgresAssertions": 251,
+    "databaseScope": "Local PGlite; real authenticated concurrent devices not tested",
+    "apkChecks": 11,
+    "releaseTrackingGatePassed": true
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\ThoraxLab-VR-Windows-20260906-191745.zip",
+      "bytes": 112097368,
+      "sha256": "6730ac885e4a41e9da7e2401fd02976f140fd1e3fd1976f6bdf6fe95560d42ec"
+    },
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningQuest\\ThoraxLab.apk",
+      "bytes": 109053730,
+      "sha256": "3e4767f268d0bfdd7c6e892db0230aa216a422cb602085fe89a75ff0a9c07fce"
+    }
+  ],
+  "reports": [
+    {
+      "path": "qa/readiness-review/source-assets-snapshot.json",
+      "bytes": 385097,
+      "lastWriteUtc": "2026-09-06T11:20:29.7641699Z",
+      "sha256": "a6014c2eb58191c3d7517f271a2dfb915d0bebbe4bfc43a3e317c9f83fa82af9"
+    },
+    {
+      "path": "qa/readiness-review/core-test-output.txt",
+      "bytes": 122,
+      "lastWriteUtc": "2026-09-06T11:15:17.2074284Z",
+      "sha256": "0e936f652c88f36055c32c2bbeba38c65952c377b45a4019914d5cde779a85e5"
+    },
+    {
+      "path": "qa/readiness-review/baseline/rotation-reproduced.json",
+      "bytes": 13896,
+      "lastWriteUtc": "2026-09-06T10:29:41.0502530Z",
+      "sha256": "afef2380ce175dbcbc7e3802df688d3ae2900a61a130a22c09a69c4eff4160a0"
+    },
+    {
+      "path": "qa/readiness-review/player/runtime-report.json",
+      "bytes": 3578,
+      "lastWriteUtc": "2026-09-06T11:06:19.6437952Z",
+      "sha256": "76b3868b985545c4e223984b04728b9752de74b2ec43971b45880a2e3d879ceb"
+    },
+    {
+      "path": "qa/readiness-review/player/readiness-regressions.json",
+      "bytes": 2136,
+      "lastWriteUtc": "2026-09-06T11:02:56.8945887Z",
+      "sha256": "c3d19f06761524c07f3f28f8e103ed02a7803099e1cc3ca42703dc2da1dbd756"
+    },
+    {
+      "path": "qa/vr-xr-simulator-report.json",
+      "bytes": 19741,
+      "lastWriteUtc": "2026-09-06T11:16:02.5169828Z",
+      "sha256": "1a335223cc3f6a7932a1ddf899a3e54794511feac791e8a04622378277f7f5b0"
+    },
+    {
+      "path": "qa/vr-content-report.json",
+      "bytes": 121,
+      "lastWriteUtc": "2026-09-06T10:47:18.4093974Z",
+      "sha256": "27709b2809ef37e70ea5ecfae7cf33f76269d912f5833ddf546ff1d78851a376"
+    },
+    {
+      "path": "qa/learning-backend-report.json",
+      "bytes": 152,
+      "lastWriteUtc": "2026-09-06T10:47:23.4535984Z",
+      "sha256": "94cb225b605955cfbd63bcf9c10fc02473f9cd02d82311e64ee08794f3d54bd3"
+    },
+    {
+      "path": "qa/vr-release-gate-report.json",
+      "bytes": 1750,
+      "lastWriteUtc": "2026-09-06T11:03:14.0481300Z",
+      "sha256": "11c9491727829bd8a49e3a1b695f547ea2897c9fed75609abc99220fcf88591e"
+    },
+    {
+      "path": "qa/learning-apk-verification.json",
+      "bytes": 2095,
+      "lastWriteUtc": "2026-09-06T11:15:14.4018588Z",
+      "sha256": "2587f018e30a15840fc70d853a61a426a9f734bbf2ed6b28bbe92db2c416b69b"
+    },
+    {
+      "path": "qa/learning-build-StandaloneWindows64.txt",
+      "bytes": 46,
+      "lastWriteUtc": "2026-09-06T11:02:09.2105656Z",
+      "sha256": "2b9aab528cd65fa26cc0323e8f8bc9e6df2fbaf7bbe305f3d12bdb3b7a7934ae"
+    },
+    {
+      "path": "qa/learning-build-StandaloneWindows64-QA.txt",
+      "bytes": 46,
+      "lastWriteUtc": "2026-09-06T11:01:38.9943563Z",
+      "sha256": "0f14c369c6a5c2e8e9e6be80149bdc174cabcbad8da95293ace9c0ff9d4e2439"
+    },
+    {
+      "path": "qa/learning-build-Android.txt",
+      "bytes": 46,
+      "lastWriteUtc": "2026-09-06T11:14:08.7107346Z",
+      "sha256": "a5e131d023b5eaecdc059ebf4ca16e25fc915d2791296004159c2ec1aa279911"
+    },
+    {
+      "path": "qa/vr-learning-delivery-manifest.json",
+      "bytes": 205026,
+      "lastWriteUtc": "2026-09-06T11:17:58.8520630Z",
+      "sha256": "708d73c3a61127bf91b65476d7c9977309ea61c953e45b3f7b5f15461f285c3c"
+    }
+  ],
+  "fixes": [
+    "Bounded upright orientation lift and interruption recovery",
+    "Assembly parent stability and recorded assessment mistakes",
+    "Independent protected-structure blade contacts with saturation cancellation",
+    "Numbered surface markers and resume reconstruction",
+    "Append-only inactive checkpoint reconciliation including same-device backup recovery",
+    "Corrupt-settings recovery with preserved originals and repaired backup",
+    "Settings commit after successful save and saved lighting restoration",
+    "Distinct local and account profile deletion",
+    "Centered keyboard labels and guarded UI refresh",
+    "Neutral selection cue preserving tissue color"
+  ],
+  "reference": {
+    "title": "Human Anatomy VR 2025 by Virtual Medicine",
+    "url": "https://www.youtube.com/watch?v=F9zJNhHAmVI",
+    "method": "Reviewed official trailer sequences; did not run the purchased game",
+    "copiedThirdPartyAssets": false
+  },
+  "physicalDeviceTested": false,
+  "performanceMeasuredForThisBuild": false,
+  "limitations": [
+    "Latest retained Google SMTP send request returned HTTP 200; mailbox receipt and Unity code verification remain unverified",
+    "Real-account and simultaneous-device tests pending",
+    "Researched procedural teaching includes documented anatomical and mechanical simplifications",
+    "Physical Quest 3 and Iris Xe hardware not tested",
+    "User visual and ease-of-use review pending",
+    "Quest APK uses a debug certificate for sideload review"
+  ],
+  "scopeNotes": [
+    "No production or 10/10 visual-quality claim",
+    "Research-led anatomy retains documented model and procedural abstractions",
+    "No additional professional-validation approval gate imposed",
+    "User open Editor left intact; stop and restart Play to load the updated state"
+  ]
+}

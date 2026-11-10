@@ -1,0 +1,23 @@
+{
+    "utc": "2026-10-15T17:07:22.3883055Z",
+    "passed": true,
+    "checks": [
+        "allowBackup disabled",
+        "fullBackupContent disabled",
+        "usesCleartextTraffic disabled",
+        "Backup resource linked",
+        "Existing Android activity retained",
+        "Repeated build does not duplicate supported devices",
+        "Explicit Quest 2 and Quest 3 device identifiers",
+        "Device identifiers override the generated XR library during manifest merge",
+        "cloud-backup excludes every app storage domain",
+        "device-transfer excludes every app storage domain",
+        "Packaged account key is public",
+        "Private or malformed client key rejected 11",
+        "Private or malformed client key rejected 12",
+        "Private or malformed client key rejected 13",
+        "Private or malformed client key rejected 14",
+        "Cleartext account endpoint rejected"
+    ],
+    "errors": []
+}

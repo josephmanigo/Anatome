@@ -1,0 +1,14 @@
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.AssemblyInfoInputs.cache
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.AssemblyInfo.cs
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.csproj.CoreCompileInputs.cache
+C:\Users\My Pc\Downloads\new\qa\floor-height\bin\Debug\net10.0\FloorHeightTests.exe
+C:\Users\My Pc\Downloads\new\qa\floor-height\bin\Debug\net10.0\FloorHeightTests.deps.json
+C:\Users\My Pc\Downloads\new\qa\floor-height\bin\Debug\net10.0\FloorHeightTests.runtimeconfig.json
+C:\Users\My Pc\Downloads\new\qa\floor-height\bin\Debug\net10.0\FloorHeightTests.dll
+C:\Users\My Pc\Downloads\new\qa\floor-height\bin\Debug\net10.0\FloorHeightTests.pdb
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.dll
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\refint\FloorHeightTests.dll
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.pdb
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\FloorHeightTests.genruntimeconfig.cache
+C:\Users\My Pc\Downloads\new\qa\floor-height\obj\Debug\net10.0\ref\FloorHeightTests.dll

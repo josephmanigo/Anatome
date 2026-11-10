@@ -1,0 +1,66 @@
+{
+  "verifiedDate": "2026-09-06",
+  "project": "ckefbyhshjrlkheunpgc",
+  "method": "Supabase dashboard UI plus public HTTP probes",
+  "migrationsApplied": [
+    "202609060001",
+    "202609060002",
+    "202609060003",
+    "202609060004"
+  ],
+  "cliMigrationLedgerPopulated": false,
+  "rubrics": 72,
+  "rlsTables": 5,
+  "anonymousSyncAllowed": false,
+  "authenticatedSyncAllowed": true,
+  "authenticatedTruncateAllowed": false,
+  "email": {
+    "currentMailSetup": "qa/email-google-smtp-setup.json",
+    "latestDeliveryTest": "qa/email-google-delivery-test.json",
+    "smtpEnabled": true,
+    "codeLength": 6,
+    "expirySeconds": 600,
+    "minimumIntervalPerUserSeconds": 60,
+    "passwordlessCodeTemplateSaved": true,
+    "signupCodeTemplateSaved": true,
+    "testEmailSent": true,
+    "deliveredAndVerified": false,
+    "deliveryTest": {
+      "utc": "2026-09-05T23:19:40Z",
+      "requests": 1,
+      "status": 500,
+      "requestId": "01a073de-d896-769d-997c-29aa83cc1bb3",
+      "failure": "SMTP hostname Anatome.smtp.host.com does not resolve (no such host).",
+      "nextAction": "Correct provider-specific SMTP host and credentials in the Supabase dashboard, then retry the authorized test."
+    },
+    "latestDeliveryDiagnosis": {
+      "requestUtc": "2026-09-06T09:09:00Z",
+      "status": 500,
+      "errorCode": "unexpected_failure",
+      "failure": "Error sending confirmation email",
+      "smtpHostResolves": false,
+      "senderEmailConfigured": true,
+      "senderDomain": "gmail.com",
+      "smtpUsernameConfiguredBeforeEdits": null,
+      "observationCorrection": "The text-only browser view redacted account fields. Visual inspection confirmed a Gmail sender; original username presence was not established.",
+      "passwordInspected": false,
+      "selectedProviderAtDiagnosis": "Resend",
+      "providerChoiceSuperseded": true,
+      "replacementConfigurationSaved": false,
+      "resendVerifiedDomainCount": 0,
+      "resendListedDomainStatus": "failed",
+      "probeEvidence": "qa/email-login-current-probe.json",
+      "configurationEvidence": "qa/email-login-diagnosis.json",
+      "clientCompileEvidence": "qa/email-client-compile.json",
+      "nextAction": "Use the Google Workspace sender requested by the user; see qa/email-google-smtp-setup.json for current setup and delivery status."
+    },
+    "deliveryRequestAccepted": true
+  },
+  "accountDeletion": {
+    "function": "thorax-delete-account",
+    "deployed": true,
+    "legacyJwtGatewayVerification": false,
+    "authentication": "Bearer session verified through Supabase Auth before deletion; account ID is derived from that session",
+    "actualAccountDeletionTested": false
+  }
+}

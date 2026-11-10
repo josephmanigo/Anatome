@@ -1,0 +1,3442 @@
+{
+    "revision": "source-card-art-2026.09.06.2",
+    "generatedUtc": "2026-10-14T11:26:47.1018934Z",
+    "dependencyFingerprint": "source-card-art-2026.09.06.2|ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a|b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141|305d510217a05684ba40f52aea7b1f47|Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_airway.mat:89dc6b29fada17c7cc6d1bd92c9c554e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_artery.mat:5f8ed60c1e5dfe310329b24dac4a4152;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cardiac.mat:f772ca655c34636382321deb1ad54a51;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cartilage.mat:ff253320c501237627fa8db32276536f;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_duct.mat:c09ef0ba0ce2d96f1a7ca1a601654152;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fascia.mat:3e0aebf74e52ecace7063d4232ce16f4;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fat.mat:557e43f13e8979d00caa0054059d98cc;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_lung.mat:53f1f21a0e10409a963a7420c508762c;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_membrane.mat:a9fe213cdd457f4598ebcc5d317f119a;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_muscle.mat:45015836e6711a86204b2827d28e2412;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_nerve.mat:d00ddb62aecf2dc17474dc2283f9bcc5;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_skin.mat:c092691fad13e3e2ab6406014ea912bc;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_vein.mat:afaef6c277f12ff17a802fb6f52b2c4b;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_airway.mat:990f59455eacfbe187a2a4b1e4451f9e;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_artery.mat:b75cf301b0fd0fb18daa3d27c80e13c0;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_bone.mat:a4800dc60a88f8cb5ceb61a93eda8ca3;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cardiac.mat:5d7221b82f59f234fc6683961fa161a5;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cartilage.mat:8c7dc80fe9d71e572f7ca802bb09b57d;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_duct.mat:0a4bd7c0c80a702f975eb1b707a1402f;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fascia.mat:b247b6459993c2bec869869a65f70b95;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fat.mat:0dc35f0d4f2892d1d7701ec15bb52cfc;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_lung.mat:dda7c9ff0c2774112a74ea85e19124bc;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_membrane.mat:4b6958a435bff69c3677a307c111d86f;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_muscle.mat:546a6719f1f22cd78622103b90397deb;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_nerve.mat:16c36d2cd55d3c04c4b1082615c9be2e;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_skin.mat:524f6b9d4cd4d2e9de77c58ea2eee511;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_vein.mat:91acdffd216e4cf983c4b049f8f0bab5",
+    "sourceSha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a",
+    "catalogSha256": "b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141",
+    "method": "Unity URP PreviewRenderUtility. Source FBX mesh instances only, isolated in a temporary preview scene. Curated visibility and, where recorded, translated components; no vertex, normal, boundary or source material changes.",
+    "interpretation": "Healthy anatomical subject previews, not diagnostic images or representations of disease severity. Teal is interface emphasis. Exploded assembly views are presentation only. No labels or physiological claims are baked into the pixels.",
+    "attribution": "BodyParts3D / The Database Center for Life Science (CC BY 4.0), Medical Augmented Learning source lung models, and existing authored teaching reconstructions. Exact source kinds and source records are recorded for every depicted component; anatomy-catalog.json remains authoritative.",
+    "runtime": "16 static 512 x 320 textures; mipmaps; trilinear filtering; BC7 on Windows, ASTC 6x6 on Android. No runtime render textures, live cameras, or anatomical colliders are added.",
+    "sourceFileUnchanged": true,
+    "cards": [
+        {
+            "id": "mode-cases",
+            "resourceKey": "Learning/CardArt/mode-cases",
+            "imageSha256": "978e7def9829e591108af91fc0c5cd681523b8fc2967564b16c6b1a3a6bed104",
+            "composition": "Anterior oblique lungs and exposed heart, with superficial coverings omitted. Healthy reference subject for case investigation.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.16566772758960725,
+            "viewDirection": {
+                "x": 0.3773385286331177,
+                "y": 0.8984251022338867,
+                "z": -0.22460627555847169
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA9457",
+                    "name": "wall of right atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9457",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA9531",
+                    "name": "wall of left atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9531",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA13884",
+                    "name": "wall of ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13884",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7238",
+                    "name": "anterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7238",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7239",
+                    "name": "posterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7239",
+                    "sourceTriangles": 4926,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7240",
+                    "name": "septal leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7240",
+                    "sourceTriangles": 4526,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7242",
+                    "name": "anterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7242",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7243",
+                    "name": "posterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7243",
+                    "sourceTriangles": 3820,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7247",
+                    "name": "left anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7247",
+                    "sourceTriangles": 1272,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7249",
+                    "name": "right anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7249",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7250",
+                    "name": "posterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7250",
+                    "sourceTriangles": 996,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7252",
+                    "name": "right posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7252",
+                    "sourceTriangles": 316,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7253",
+                    "name": "anterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7253",
+                    "sourceTriangles": 920,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7254",
+                    "name": "left posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7254",
+                    "sourceTriangles": 914,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7260",
+                    "name": "anterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7260",
+                    "sourceTriangles": 882,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7261",
+                    "name": "posterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7261",
+                    "sourceTriangles": 692,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7262",
+                    "name": "septal papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7262",
+                    "sourceTriangles": 844,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7264",
+                    "name": "lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7264",
+                    "sourceTriangles": 780,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7265",
+                    "name": "anterolateral head of lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7265",
+                    "sourceTriangles": 816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3736",
+                    "name": "ascending aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3736",
+                    "sourceTriangles": 396,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3768",
+                    "name": "arch of aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3768",
+                    "sourceTriangles": 670,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8612",
+                    "name": "pulmonary trunk",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8612",
+                    "sourceTriangles": 1302,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50039",
+                    "name": "right coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50039",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50040",
+                    "name": "left coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50040",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4706",
+                    "name": "coronary sinus",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4706",
+                    "sourceTriangles": 624,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4707",
+                    "name": "great cardiac vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4707",
+                    "sourceTriangles": 826,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LUL",
+                    "name": "superior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LLL",
+                    "name": "inferior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mode-identify",
+            "resourceKey": "Learning/CardArt/mode-identify",
+            "imageSha256": "f2016d47c56e2e701813087b56c8dc88ea316dd62a4f7295691274e202a7e7aa",
+            "composition": "Anterior thoracic cage with the sternum emphasised; original rest relationships retained.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.14142456650733949,
+            "viewDirection": {
+                "x": 0.17443695664405824,
+                "y": 0.9690941572189331,
+                "z": -0.17443695664405824
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7857",
+                    "name": "right first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7857",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7882",
+                    "name": "right second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7882",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7909",
+                    "name": "right third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7909",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7957",
+                    "name": "right fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7957",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7987",
+                    "name": "left first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7987",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8012",
+                    "name": "left second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8012",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8039",
+                    "name": "left third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8039",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8066",
+                    "name": "right fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8066",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8093",
+                    "name": "left fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8093",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8148",
+                    "name": "left fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8148",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8175",
+                    "name": "right sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8175",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8202",
+                    "name": "left sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8202",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8229",
+                    "name": "right seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8229",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8256",
+                    "name": "left seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8256",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8283",
+                    "name": "right eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8283",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8310",
+                    "name": "left eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8310",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8364",
+                    "name": "right ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8364",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8391",
+                    "name": "left ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8391",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8445",
+                    "name": "right tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8445",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8472",
+                    "name": "left tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8472",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8531",
+                    "name": "right eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8531",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8532",
+                    "name": "left eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8532",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8533",
+                    "name": "right twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8533",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8534",
+                    "name": "left twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8534",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7486",
+                    "name": "manubrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7486",
+                    "sourceTriangles": 2546,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7487",
+                    "name": "body of sternum",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7487",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7488",
+                    "name": "xiphoid process",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7488",
+                    "sourceTriangles": 922,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mode-assemble",
+            "resourceKey": "Learning/CardArt/mode-assemble",
+            "imageSha256": "f88bb02ba52560b3385b7c8b4bfc71c697109a11e0ab519ae327a6f847603a85",
+            "composition": "Five lung lobes and bronchial tree, in a small exploded teaching composition. Every translation is recorded; source geometry is unchanged.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.16874389350414277,
+            "viewDirection": {
+                "x": 0.17443695664405824,
+                "y": 0.9690941572189331,
+                "z": -0.17443695664405824
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA68418",
+                    "name": "right main bronchus proper",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA68418",
+                    "sourceTriangles": 11042,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7396",
+                    "name": "left main bronchus",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7396",
+                    "sourceTriangles": 11000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31744",
+                    "name": "upper lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31744",
+                    "sourceTriangles": 13816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31741",
+                    "name": "middle lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31741",
+                    "sourceTriangles": 11772,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31747",
+                    "name": "lower lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31747",
+                    "sourceTriangles": 14390,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31746",
+                    "name": "upper lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31746",
+                    "sourceTriangles": 9454,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31748",
+                    "name": "lower lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31748",
+                    "sourceTriangles": 12840,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA12224",
+                    "name": "Additional source tracheobronchial segments",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA12224",
+                    "sourceTriangles": 2940,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": -0.02800000086426735,
+                        "y": 0.0,
+                        "z": -0.01600000075995922
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": -0.02800000086426735,
+                        "y": 0.02800000086426735,
+                        "z": -0.01600000075995922
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": -0.02800000086426735,
+                        "y": 0.0,
+                        "z": 0.02199999988079071
+                    }
+                },
+                {
+                    "id": "MAL_LUL",
+                    "name": "superior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.02800000086426735,
+                        "y": 0.0,
+                        "z": -0.01600000075995922
+                    }
+                },
+                {
+                    "id": "MAL_LLL",
+                    "name": "inferior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.02800000086426735,
+                        "y": 0.0,
+                        "z": 0.02199999988079071
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mode-dissect",
+            "resourceKey": "Learning/CardArt/mode-dissect",
+            "imageSha256": "41c2fedd941186333936b68a6f3ab87eecee55d6473b61358bc4eef649891e97",
+            "composition": "One-sided chest wall exposure with right pectoral muscle translated anteriorly to reveal ribs. No cut or histology is depicted.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.15073242783546449,
+            "viewDirection": {
+                "x": 0.3773385286331177,
+                "y": 0.8984251022338867,
+                "z": -0.22460627555847169
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7857",
+                    "name": "right first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7857",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7882",
+                    "name": "right second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7882",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7909",
+                    "name": "right third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7909",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7957",
+                    "name": "right fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7957",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7987",
+                    "name": "left first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7987",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8012",
+                    "name": "left second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8012",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8039",
+                    "name": "left third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8039",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8066",
+                    "name": "right fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8066",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8093",
+                    "name": "left fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8093",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8148",
+                    "name": "left fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8148",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8175",
+                    "name": "right sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8175",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8202",
+                    "name": "left sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8202",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8229",
+                    "name": "right seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8229",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8256",
+                    "name": "left seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8256",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8283",
+                    "name": "right eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8283",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8310",
+                    "name": "left eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8310",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8364",
+                    "name": "right ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8364",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8391",
+                    "name": "left ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8391",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8445",
+                    "name": "right tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8445",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8472",
+                    "name": "left tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8472",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8531",
+                    "name": "right eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8531",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8532",
+                    "name": "left eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8532",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8533",
+                    "name": "right twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8533",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8534",
+                    "name": "left twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8534",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7486",
+                    "name": "manubrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7486",
+                    "sourceTriangles": 2546,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7487",
+                    "name": "body of sternum",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7487",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7488",
+                    "name": "xiphoid process",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7488",
+                    "sourceTriangles": 922,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA79979",
+                    "name": "sternocostal part of right pectoralis major",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA79979",
+                    "sourceTriangles": 3998,
+                    "presentationTranslation": {
+                        "x": -0.03500000014901161,
+                        "y": 0.03500000014901161,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA13375",
+                    "name": "right pectoralis minor",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13375",
+                    "sourceTriangles": 3996,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA13884",
+                    "name": "wall of ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13884",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LUL",
+                    "name": "superior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LLL",
+                    "name": "inferior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "chest-wall",
+            "resourceKey": "Learning/CardArt/chest-wall",
+            "imageSha256": "c7f82d201bd0aa88115360828357f9ff764f8ff3ddbbfcdd3d950d71f3c25749",
+            "composition": "Ribs and sternum in original rest relationships. The right fifth rib is emphasised as a selection cue.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.12903442978858949,
+            "viewDirection": {
+                "x": 0.3773385286331177,
+                "y": 0.8984251022338867,
+                "z": -0.22460627555847169
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7857",
+                    "name": "right first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7857",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7882",
+                    "name": "right second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7882",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7909",
+                    "name": "right third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7909",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7957",
+                    "name": "right fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7957",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7987",
+                    "name": "left first rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7987",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8012",
+                    "name": "left second rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8012",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8039",
+                    "name": "left third rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8039",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8066",
+                    "name": "right fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8066",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8093",
+                    "name": "left fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8093",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8148",
+                    "name": "left fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8148",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8175",
+                    "name": "right sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8175",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8202",
+                    "name": "left sixth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8202",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8229",
+                    "name": "right seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8229",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8256",
+                    "name": "left seventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8256",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8283",
+                    "name": "right eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8283",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8310",
+                    "name": "left eighth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8310",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8364",
+                    "name": "right ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8364",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8391",
+                    "name": "left ninth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8391",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8445",
+                    "name": "right tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8445",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8472",
+                    "name": "left tenth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8472",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8531",
+                    "name": "right eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8531",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8532",
+                    "name": "left eleventh rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8532",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8533",
+                    "name": "right twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8533",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8534",
+                    "name": "left twelfth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8534",
+                    "sourceTriangles": 2818,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7486",
+                    "name": "manubrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7486",
+                    "sourceTriangles": 2546,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7487",
+                    "name": "body of sternum",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7487",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7488",
+                    "name": "xiphoid process",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7488",
+                    "sourceTriangles": 922,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pleura-lungs",
+            "resourceKey": "Learning/CardArt/pleura-lungs",
+            "imageSha256": "0fb6b8c5584d565276bd1db4782a2065157f8b9a7bb262cae24e8de3fbd91d22",
+            "composition": "Lung lobes, trachea and diaphragm. Pleural coverings are omitted for clear lobe relationships.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.15443114936351777,
+            "viewDirection": {
+                "x": 0.17443695664405824,
+                "y": 0.9690941572189331,
+                "z": -0.17443695664405824
+            },
+            "anatomy": [
+                {
+                    "id": "FMA13295",
+                    "name": "diaphragm",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13295",
+                    "sourceTriangles": 4000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LUL",
+                    "name": "superior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_LLL",
+                    "name": "inferior lobe of left lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_LLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "airways",
+            "resourceKey": "Learning/CardArt/airways",
+            "imageSha256": "b18e4f58dbc88266cb0faf63f00857c5ec211a4863bb8f2138cf7a9676dbe175",
+            "composition": "Source trachea and bronchial tree isolated from the lungs, retaining their shared source coordinates.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.09462890774011612,
+            "viewDirection": {
+                "x": 0.17443695664405824,
+                "y": 0.9690941572189331,
+                "z": -0.17443695664405824
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA68418",
+                    "name": "right main bronchus proper",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA68418",
+                    "sourceTriangles": 11042,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7396",
+                    "name": "left main bronchus",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7396",
+                    "sourceTriangles": 11000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31744",
+                    "name": "upper lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31744",
+                    "sourceTriangles": 13816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31741",
+                    "name": "middle lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31741",
+                    "sourceTriangles": 11772,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31747",
+                    "name": "lower lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31747",
+                    "sourceTriangles": 14390,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31746",
+                    "name": "upper lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31746",
+                    "sourceTriangles": 9454,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31748",
+                    "name": "lower lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31748",
+                    "sourceTriangles": 12840,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA12224",
+                    "name": "Additional source tracheobronchial segments",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA12224",
+                    "sourceTriangles": 2940,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "heart-coronaries",
+            "resourceKey": "Learning/CardArt/heart-coronaries",
+            "imageSha256": "c6f25cdb1a2f01d081c24ea8fc18a75ebb06363ef636ead6772988f519e065af",
+            "composition": "Heart walls, coronary vessels and proximal outflow, with the pericardial covering omitted.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.22641602158546449,
+            "viewDirection": {
+                "x": -0.16990207135677339,
+                "y": 0.9439004063606262,
+                "z": -0.2831701338291168
+            },
+            "anatomy": [
+                {
+                    "id": "FMA9457",
+                    "name": "wall of right atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9457",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA9531",
+                    "name": "wall of left atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9531",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA13884",
+                    "name": "wall of ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13884",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7238",
+                    "name": "anterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7238",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7239",
+                    "name": "posterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7239",
+                    "sourceTriangles": 4926,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7240",
+                    "name": "septal leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7240",
+                    "sourceTriangles": 4526,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7242",
+                    "name": "anterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7242",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7243",
+                    "name": "posterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7243",
+                    "sourceTriangles": 3820,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7247",
+                    "name": "left anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7247",
+                    "sourceTriangles": 1272,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7249",
+                    "name": "right anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7249",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7250",
+                    "name": "posterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7250",
+                    "sourceTriangles": 996,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7252",
+                    "name": "right posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7252",
+                    "sourceTriangles": 316,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7253",
+                    "name": "anterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7253",
+                    "sourceTriangles": 920,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7254",
+                    "name": "left posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7254",
+                    "sourceTriangles": 914,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7260",
+                    "name": "anterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7260",
+                    "sourceTriangles": 882,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7261",
+                    "name": "posterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7261",
+                    "sourceTriangles": 692,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7262",
+                    "name": "septal papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7262",
+                    "sourceTriangles": 844,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7264",
+                    "name": "lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7264",
+                    "sourceTriangles": 780,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7265",
+                    "name": "anterolateral head of lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7265",
+                    "sourceTriangles": 816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3736",
+                    "name": "ascending aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3736",
+                    "sourceTriangles": 396,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8612",
+                    "name": "pulmonary trunk",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8612",
+                    "sourceTriangles": 1302,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50039",
+                    "name": "right coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50039",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50040",
+                    "name": "left coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50040",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4706",
+                    "name": "coronary sinus",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4706",
+                    "sourceTriangles": 624,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4707",
+                    "name": "great cardiac vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4707",
+                    "sourceTriangles": 826,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "vessels-valves",
+            "resourceKey": "Learning/CardArt/vessels-valves",
+            "imageSha256": "012fbe8c6416359a31a92e38484123d2d7df857298edd8cb49bd54b0c97c2049",
+            "composition": "Central great vessels in their original spatial arrangement. The aortic arch is emphasised. Peripheral subclavian/pulmonary branches and long descending vessels are omitted to keep the central relationships readable at card size.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.11440429836511612,
+            "viewDirection": {
+                "x": 0.3773385286331177,
+                "y": 0.8984251022338867,
+                "z": -0.22460627555847169
+            },
+            "anatomy": [
+                {
+                    "id": "FMA3736",
+                    "name": "ascending aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3736",
+                    "sourceTriangles": 396,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3768",
+                    "name": "arch of aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3768",
+                    "sourceTriangles": 670,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3932",
+                    "name": "brachiocephalic artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3932",
+                    "sourceTriangles": 262,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4720",
+                    "name": "superior vena cava",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4720",
+                    "sourceTriangles": 598,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4751",
+                    "name": "right brachiocephalic vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4751",
+                    "sourceTriangles": 546,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4761",
+                    "name": "left brachiocephalic vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4761",
+                    "sourceTriangles": 748,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8612",
+                    "name": "pulmonary trunk",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8612",
+                    "sourceTriangles": 1302,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mediastinum",
+            "resourceKey": "Learning/CardArt/mediastinum",
+            "imageSha256": "97a74d58d445424037c604342105cb571ad77641ffd2280535f25dc1b20ddd7b",
+            "composition": "Central airway, esophagus, central great vessels and existing authored phrenic/vagus nerve models; peripheral branches, lung and chest-wall coverings omitted for thumbnail readability.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.05494995042681694,
+            "viewDirection": {
+                "x": -0.4302208125591278,
+                "y": 0.8962934017181397,
+                "z": -0.10755520313978195
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3736",
+                    "name": "ascending aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3736",
+                    "sourceTriangles": 396,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3768",
+                    "name": "arch of aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3768",
+                    "sourceTriangles": 670,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3932",
+                    "name": "brachiocephalic artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3932",
+                    "sourceTriangles": 262,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4720",
+                    "name": "superior vena cava",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4720",
+                    "sourceTriangles": 598,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4751",
+                    "name": "right brachiocephalic vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4751",
+                    "sourceTriangles": 546,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4761",
+                    "name": "left brachiocephalic vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4761",
+                    "sourceTriangles": 748,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8612",
+                    "name": "pulmonary trunk",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8612",
+                    "sourceTriangles": 1302,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7131",
+                    "name": "esophagus",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7131",
+                    "sourceTriangles": 1156,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "REC_Right_Phrenic_nerve",
+                    "name": "Right phrenic nerve",
+                    "sourceKind": "authored_reconstruction",
+                    "sourceRecord": "docs/reconstructions.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_REC_Right_Phrenic_nerve",
+                    "sourceTriangles": 400,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "REC_Right_Vagus_nerve",
+                    "name": "Right vagus nerve",
+                    "sourceKind": "authored_reconstruction",
+                    "sourceRecord": "docs/reconstructions.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_REC_Right_Vagus_nerve",
+                    "sourceTriangles": 400,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "REC_Left_Phrenic_nerve",
+                    "name": "Left phrenic nerve",
+                    "sourceKind": "authored_reconstruction",
+                    "sourceRecord": "docs/reconstructions.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_REC_Left_Phrenic_nerve",
+                    "sourceTriangles": 400,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "REC_Left_Vagus_nerve",
+                    "name": "Left vagus nerve",
+                    "sourceKind": "authored_reconstruction",
+                    "sourceRecord": "docs/reconstructions.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_REC_Left_Vagus_nerve",
+                    "sourceTriangles": 400,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pneumothorax",
+            "resourceKey": "Learning/CardArt/pneumothorax",
+            "imageSha256": "4f3dd94124553489b3daabf64c0f5375976e53c46103db5dcc2d147b1bc80e9f",
+            "composition": "Right lung lobes with selected lateral ribs, showing the case's anatomical region. Healthy reference geometry; no invented collapse or drain placement.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.12255859375,
+            "viewDirection": {
+                "x": -0.44543540477752688,
+                "y": 0.8908708095550537,
+                "z": -0.08908708393573761
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7957",
+                    "name": "right fourth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7957",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8066",
+                    "name": "right fifth rib",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8066",
+                    "sourceTriangles": 3000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "asthma",
+            "resourceKey": "Learning/CardArt/asthma",
+            "imageSha256": "4e66b8d2e69d784e8649c251568cadd41267e96bc2f3dc29cd37eb548c13511a",
+            "composition": "Bronchial tree isolated at an anterior oblique angle. Major bronchi emphasised; no invented narrowing or alveolar segmentation.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.08983764797449112,
+            "viewDirection": {
+                "x": -0.284427285194397,
+                "y": 0.9480909109115601,
+                "z": -0.1422136425971985
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7394",
+                    "name": "trachea",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7394",
+                    "sourceTriangles": 9992,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA68418",
+                    "name": "right main bronchus proper",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA68418",
+                    "sourceTriangles": 11042,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7396",
+                    "name": "left main bronchus",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7396",
+                    "sourceTriangles": 11000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31744",
+                    "name": "upper lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31744",
+                    "sourceTriangles": 13816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31741",
+                    "name": "middle lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31741",
+                    "sourceTriangles": 11772,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31747",
+                    "name": "lower lobe part of right bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31747",
+                    "sourceTriangles": 14390,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31746",
+                    "name": "upper lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31746",
+                    "sourceTriangles": 9454,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA31748",
+                    "name": "lower lobe part of left bronchial tree",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA31748",
+                    "sourceTriangles": 12840,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA12224",
+                    "name": "Additional source tracheobronchial segments",
+                    "sourceKind": "source_mesh_with_authored_lumen",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA12224",
+                    "sourceTriangles": 2940,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "coronary-disease",
+            "resourceKey": "Learning/CardArt/coronary-disease",
+            "imageSha256": "af01018a0243d11ce05c01318dac83c5d82ca64a52f366f45121c140324b48b1",
+            "composition": "Exposed healthy heart and source coronary vessels. Interface emphasis does not claim a lesion location.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.25541990995407107,
+            "viewDirection": {
+                "x": 0.4037051796913147,
+                "y": 0.8971226215362549,
+                "z": -0.17942452430725099
+            },
+            "anatomy": [
+                {
+                    "id": "FMA9457",
+                    "name": "wall of right atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9457",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA9531",
+                    "name": "wall of left atrium",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA9531",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA13884",
+                    "name": "wall of ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13884",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7238",
+                    "name": "anterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7238",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7239",
+                    "name": "posterior leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7239",
+                    "sourceTriangles": 4926,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7240",
+                    "name": "septal leaflet of tricuspid valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7240",
+                    "sourceTriangles": 4526,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7242",
+                    "name": "anterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7242",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7243",
+                    "name": "posterior leaflet of mitral valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7243",
+                    "sourceTriangles": 3820,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7247",
+                    "name": "left anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7247",
+                    "sourceTriangles": 1272,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7249",
+                    "name": "right anterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7249",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7250",
+                    "name": "posterior cusp of pulmonary valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7250",
+                    "sourceTriangles": 996,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7252",
+                    "name": "right posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7252",
+                    "sourceTriangles": 316,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7253",
+                    "name": "anterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7253",
+                    "sourceTriangles": 920,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7254",
+                    "name": "left posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7254",
+                    "sourceTriangles": 914,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7260",
+                    "name": "anterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7260",
+                    "sourceTriangles": 882,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7261",
+                    "name": "posterior papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7261",
+                    "sourceTriangles": 692,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7262",
+                    "name": "septal papillary muscle of right ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7262",
+                    "sourceTriangles": 844,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7264",
+                    "name": "lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7264",
+                    "sourceTriangles": 780,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7265",
+                    "name": "anterolateral head of lateral papillary muscle of left ventricle",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7265",
+                    "sourceTriangles": 816,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA3736",
+                    "name": "ascending aorta",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA3736",
+                    "sourceTriangles": 396,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA8612",
+                    "name": "pulmonary trunk",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA8612",
+                    "sourceTriangles": 1302,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50039",
+                    "name": "right coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50039",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA50040",
+                    "name": "left coronary artery",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA50040",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4706",
+                    "name": "coronary sinus",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4706",
+                    "sourceTriangles": 624,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA4707",
+                    "name": "great cardiac vein",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA4707",
+                    "sourceTriangles": 826,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pneumonia",
+            "resourceKey": "Learning/CardArt/pneumonia",
+            "imageSha256": "684fabb141aad39ea4ca3c02c9be845a7e595bd2660edfc6b388f36f605b8ed7",
+            "composition": "Posterior-lateral view of the complete right lung lobes, with the lower lobe emphasised and bronchial meshes omitted. This is a healthy subject preview, not an infection map.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.16301879286766053,
+            "viewDirection": {
+                "x": -0.4000987708568573,
+                "y": -0.889108419418335,
+                "z": 0.22227710485458375
+            },
+            "anatomy": [
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pleural-effusion",
+            "resourceKey": "Learning/CardArt/pleural-effusion",
+            "imageSha256": "29617c21ae005ed3a0d24a67f12571de0f808bceecf738b0786b03c382d6e8a3",
+            "composition": "Right lung lobes, diaphragm and existing parietal pleura translated laterally as a layer relationship preview. No fluid volume is implied.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.19818726181983949,
+            "viewDirection": {
+                "x": 0.17443695664405824,
+                "y": 0.9690941572189331,
+                "z": -0.17443695664405824
+            },
+            "anatomy": [
+                {
+                    "id": "FMA13295",
+                    "name": "diaphragm",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA13295",
+                    "sourceTriangles": 4000,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RUL",
+                    "name": "superior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RUL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RML",
+                    "name": "middle lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RML",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "MAL_RLL",
+                    "name": "inferior lobe of right lung",
+                    "sourceKind": "registered_reference_mesh",
+                    "sourceRecord": "docs/lung-production-adaptation.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_MAL_RLL",
+                    "sourceTriangles": 6500,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "REC_Right_Parietal_Pleura",
+                    "name": "Right parietal pleura",
+                    "sourceKind": "authored_reconstruction",
+                    "sourceRecord": "docs/reconstructions.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_REC_Right_Parietal_Pleura",
+                    "sourceTriangles": 5500,
+                    "presentationTranslation": {
+                        "x": -0.0949999988079071,
+                        "y": 0.012000000104308129,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "aortic-stenosis",
+            "resourceKey": "Learning/CardArt/aortic-stenosis",
+            "imageSha256": "c162cd96a415a0949392a9162319aadfc84aa9343788009fb9d75d199d3b3505",
+            "composition": "The three original aortic valve cusps, isolated and enlarged equally for recognition. Healthy source shapes, not a fabricated stenosis or treatment result.",
+            "width": 512,
+            "height": 320,
+            "imageContentFraction": 0.188629150390625,
+            "viewDirection": {
+                "x": 0.1001078188419342,
+                "y": 0.8342317938804627,
+                "z": -0.5422506332397461
+            },
+            "anatomy": [
+                {
+                    "id": "FMA7252",
+                    "name": "right posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7252",
+                    "sourceTriangles": 316,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7253",
+                    "name": "anterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7253",
+                    "sourceTriangles": 920,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "id": "FMA7254",
+                    "name": "left posterior cusp of aortic valve",
+                    "sourceKind": "source_mesh",
+                    "sourceRecord": "source/source-manifest.json",
+                    "meshAsset": "Assets/ThoraxLab/Models/Thorax.fbx#A_FMA7254",
+                    "sourceTriangles": 914,
+                    "presentationTranslation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        }
+    ]
+}

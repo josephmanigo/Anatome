@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "dpapiPasswordRecovered": true,
+  "privateKeystoreReopened": true,
+  "publicCertificateMatchesIssuedApk": true,
+  "portableBackupCompleted": false,
+  "negativeAncestryRejected": true,
+  "wrongCertificateBuildRejected": true,
+  "issuedApkOverwriteRejected": true,
+  "secretReadTrimsFileNewline": true
+}

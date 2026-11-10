@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "verifiedUtc": "2026-10-04T11:21:50.9304039Z",
+  "status": "LOCAL_VALIDATION_PASSED_QUEST_RETEST_AND_PRODUCTION_GATES_PENDING",
+  "product": "Anatome",
+  "revision": "controller-ui-repair-20261004",
+  "applicationVersion": "1.0.1",
+  "localValidationPassed": true,
+  "productionReady": false,
+  "previousPhysicalResult": {
+    "result": "Invisible controllers and unreliable buttons",
+    "source": "User school-test report",
+    "archive": "handoff/Anatome-School-Quest3-Test-Kit-20260919-214108.zip"
+  },
+  "xr": {
+    "report": "qa/controller-ui-audit/xr-report.json",
+    "runtimeQaBypass": false,
+    "reportedErrors": 0,
+    "passed": true,
+    "physicalDeviceTested": false,
+    "utc": "2026-10-04T11:12:04.9972695Z",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "scope": "Actual queued XR controller events through shipping input and UI; expanded button targeting checks press and cancel. Separate callback tests cover guest/orientation, menus, keyboard, confirmation and both hands. Repeated page visits count as separate rendered targets.",
+    "renderedButtonTargetChecks": 432,
+    "checks": 963,
+    "log": "qa/vr-input-validated-xr-20261004.log"
+  },
+  "developmentPlayer": {
+    "report": "qa/controller-ui-audit/player-final/runtime-report.json",
+    "slider": true,
+    "passedScenarios": 72,
+    "reportedErrors": 0,
+    "qaTrackingBypass": true,
+    "button": true,
+    "utc": "2026-10-04T11:20:05.093544Z",
+    "scroll": true,
+    "scope": "All 72 learning scenario fixtures and world-space UI; Windows desktop QA mode, not headset operation",
+    "release": true,
+    "sceneVariants": 72,
+    "log": "qa/controller-ui-player-final-20261004.log"
+  },
+  "readiness": {
+    "report": "qa/controller-ui-audit/player-final/readiness-regressions.json",
+    "utc": "2026-10-04T11:16:48.612735Z",
+    "checks": 22,
+    "passed": true
+  },
+  "initialWidgetFailure": {
+    "focusedControllerReport": "qa/controller-ui-audit/focused-widget-report.json",
+    "finalFullRerunPassed": true,
+    "repair": "Scroll the target into view before interaction",
+    "retained": true,
+    "cause": "Fixture aimed at a clipped off-viewport slider",
+    "report": "qa/controller-ui-audit/player-initial-report.json"
+  },
+  "additionalLocalChecks": [
+    {
+      "scope": "Actual LearningControls with explicit engine doubles",
+      "command": "rtk dotnet run --project qa/floor-height/FloorHeightTests.csproj",
+      "evidence": "Executed console results in this audit",
+      "passed": true,
+      "checks": 42,
+      "name": "Viewpoint and menu focus"
+    },
+    {
+      "name": "Hand gestures and input source gate",
+      "passed": true,
+      "evidence": "Executed console results in this audit",
+      "checks": 31,
+      "command": "rtk dotnet run --project qa/natural-vr/GestureTests.csproj"
+    },
+    {
+      "name": "Learning core",
+      "passed": true,
+      "evidence": "Executed console results in this audit",
+      "checks": 775,
+      "command": "rtk dotnet run --project qa/learning-tests/LearningTests.csproj -- unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/catalog.json"
+    },
+    {
+      "name": "Curriculum",
+      "utc": "2026-10-04T10:33:45.726Z",
+      "report": "qa/vr-content-report.json",
+      "checks": 1451,
+      "passed": true
+    },
+    {
+      "liveSupabase": false,
+      "utc": "2026-10-04T10:33:50.76Z",
+      "engine": "PGlite PostgreSQL",
+      "passed": true,
+      "checks": 251,
+      "name": "Database",
+      "report": "qa/learning-backend-report.json"
+    },
+    {
+      "name": "Native cutting",
+      "passed": true,
+      "evidence": "Executed console results in this audit",
+      "checks": 81,
+      "command": "native/build-windows/thoraxcut_tests.exe"
+    }
+  ],
+  "sourceParity": {
+    "report": "qa/controller-ui-audit/source-parity.json",
+    "allMatch": true,
+    "main": "unity/ThoraxLab",
+    "review": "unity/ThoraxLabReview",
+    "inputs": 70
+  },
+  "releaseGate": {
+    "report": "qa/controller-ui-audit/vr-release-gate-report.json",
+    "utc": "2026-10-04T11:16:32.9530176Z",
+    "assemblySha256": "b48a6ce46a7bd414973ffd5729b3b80d1ef6faeb2c65cb8b5bba6f9fc9d12f9d",
+    "passed": true,
+    "scope": "Normal Windows release retains the XR tracking gate, compiles simulator and runtime verification bypasses to false, and excludes the Editor-only network interruption hook."
+  },
+  "builds": [
+    {
+      "report": "qa/learning-build-Android.txt",
+      "log": "qa/vr-input-validated-quest-20261004.log",
+      "result": "Succeeded",
+      "buildReportErrors": 0,
+      "buildReportWarnings": 0,
+      "duration": "00:01:19.4055991",
+      "artifact": "builds/AnatomeQuest/Anatome.apk",
+      "sha256": "1830697cdf59e620920e2f199b20ef83bdc758b86527efa2ce8487708f283758",
+      "writtenUtc": "2026-10-04T11:11:21.7476122Z",
+      "managedAssembly": null,
+      "managedSha256": null
+    },
+    {
+      "report": "qa/learning-build-StandaloneWindows64.txt",
+      "log": "qa/vr-input-validated-windows-20261004.log",
+      "result": "Succeeded",
+      "buildReportErrors": 0,
+      "buildReportWarnings": 0,
+      "duration": "00:00:19.2890084",
+      "artifact": "builds/AnatomeWindows/Anatome.exe",
+      "sha256": "70ed4baffc5bf8cba6116a39811a9c0d2aadfbbacf3836ea822592ec6484a1ca",
+      "writtenUtc": "2026-10-04T10:59:16.671435Z",
+      "managedAssembly": "builds/AnatomeWindows/Anatome_Data/Managed/Assembly-CSharp.dll",
+      "managedSha256": "b48a6ce46a7bd414973ffd5729b3b80d1ef6faeb2c65cb8b5bba6f9fc9d12f9d",
+      "managedWrittenUtc": "2026-10-04T11:13:36.1230700Z"
+    },
+    {
+      "report": "qa/learning-build-StandaloneWindows64-QA.txt",
+      "log": "qa/vr-input-validated-windows-20261004.log",
+      "result": "Succeeded",
+      "buildReportErrors": 0,
+      "buildReportWarnings": 0,
+      "duration": "00:00:32.9032602",
+      "artifact": "builds/AnatomeVRTest/Anatome.exe",
+      "sha256": "1377ae95b8d09103b4f304eab912fd826afcc94ef4daf3a3dfd350014b78562e",
+      "writtenUtc": "2026-10-04T10:58:25.4961371Z",
+      "managedAssembly": "builds/AnatomeVRTest/Anatome_Data/Managed/Assembly-CSharp.dll",
+      "managedSha256": "cb345f495a12d50c8eae1d7bc1c99ec3602b097664d3464061f291e97f645b98",
+      "managedWrittenUtc": "2026-10-04T11:13:11.5600501Z"
+    }
+  ],
+  "apk": {
+    "failures": 0,
+    "report": "qa/controller-ui-audit/learning-apk-verification.json",
+    "sha256": "1830697cdf59e620920e2f199b20ef83bdc758b86527efa2ce8487708f283758",
+    "checks": 16,
+    "package": "org.thoraxlab.learning",
+    "utc": "2026-10-04T19:12:13.138285+08:00",
+    "signing": "Android Debug certificate; sideload review, not a store release",
+    "physicalDeviceTested": false,
+    "bytes": 109549912
+  },
+  "releaseSigning": {
+    "productionSigningPassed": false,
+    "utc": "2026-10-04T19:16:43.19015+08:00",
+    "failures": 1,
+    "comparisonReport": "qa/controller-ui-audit/update-signing.json",
+    "failedChecks": [
+      "Non-debug release signing certificate"
+    ],
+    "certificateMatchesPreviousTest": true,
+    "report": "qa/controller-ui-audit/release-signing/learning-apk-verification.json"
+  },
+  "archive": {
+    "utc": "2026-10-04T11:20:23.3078491Z",
+    "archive": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-School-Quest3-Test-Kit-20261004-192019.zip",
+    "archiveSha256": "65197ead8d92f786b80d670ca78c38af06185d8e49795314b3f1e4d5e786153b",
+    "apkSha256": "1830697cdf59e620920e2f199b20ef83bdc758b86527efa2ce8487708f283758",
+    "verified": true
+  },
+  "diagnostics": [
+    "Windows QA startup contains XR_ERROR_RUNTIME_UNAVAILABLE because no desktop OpenXR runtime or headset is available; the scenario run explicitly uses the development tracking bypass.",
+    "Android Editor compilation retains XRDeviceSimulator deprecation warnings in test fixtures. Final player BuildReport error/warning counts are separate from Editor and platform startup diagnostics."
+  ],
+  "openProductionGates": [
+    {
+      "checklist": "docs/VR-SCHOOL-TEST-RESULTS.txt",
+      "evidence": "No adb device connected in current audit; previous physical test failed on the older build",
+      "passed": false,
+      "gate": "Physical Quest 3 acceptance of this APK"
+    },
+    {
+      "required": "Representative session of at least 15 minutes; native 72 FPS target, 1 percent low, thermal behavior and on-device profiler evidence",
+      "passed": false,
+      "gate": "Sustained physical headset performance"
+    },
+    {
+      "required": "Backed-up publisher keystore, expected certificate fingerprint and final APK passing --require-release-signing",
+      "passed": false,
+      "gate": "Publisher-owned production signing"
+    },
+    {
+      "required": "Fresh real email sign-in, same-account save/reopen/sync and Quest secure-storage behavior",
+      "historicalLiveEvidence": "Previous live reports remain historical; not freshly revalidated in this audit",
+      "passed": false,
+      "gate": "Connected learner acceptance"
+    }
+  ]
+}

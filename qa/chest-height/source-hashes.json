@@ -1,0 +1,38 @@
+[
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Scripts\\LabHandInteractor.cs",
+    "sha256": "8bf03f573e10143ff306e3e40517121308163ef5af819fa0237a3cc5b4e84ae3"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Scripts\\DissectionSession.cs",
+    "sha256": "7b79f633505984a12f3373c9fd393244125fd241c0017fcccd7009c6a385f066"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LearningControls.cs",
+    "sha256": "e544615949a038baa9b8f161e45e1c935a00fbc78265f4673758dd62d340cd82"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\Core\\SettingsProfile.cs",
+    "sha256": "dc7513e6faddfd5df58c8bea482d5d7bdee3d51a44cefd6fe2b77907e3db0f03"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LabUI.Settings.cs",
+    "sha256": "31c4eeb0398d76a296096e5e7f08485347627c687b6c31b8033679652c000791"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs",
+    "sha256": "d68ec4a0ece365076166948f248b70f3048601c5713141099a3deff833019013"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Dissection.cs",
+    "sha256": "a08aa647db1f3824ef7683342a3cf4b0352d760e1543dc17f5ab6d3f828948fd"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Usability.cs",
+    "sha256": "12dba2e2025bbc4f8a7c8045dcfbd8ce8022ee4139cbc91aaadd262fee303c4e"
+  },
+  {
+    "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningBuild.cs",
+    "sha256": "085397444a56ebce33c9e83917b48b1b600e6ce9b30650a2a1b5c3e29b85f36a"
+  }
+]

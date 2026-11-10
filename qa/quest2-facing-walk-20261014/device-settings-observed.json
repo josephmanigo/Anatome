@@ -1,0 +1,16 @@
+{
+  "platform": "Quest",
+  "preset": 0,
+  "renderScale": 0.7200000286102295,
+  "msaa": 2,
+  "shadows": false,
+  "shadowDistance": 0.0,
+  "textureLimit": 2,
+  "refreshRate": 72,
+  "movement": 1,
+  "leftHanded": false,
+  "seated": true,
+  "autoHeight": true,
+  "heightBoost": 0.0,
+  "tableHeight": 0.0
+}

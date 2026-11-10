@@ -1,0 +1,54 @@
+{
+  "verifiedUtc": "2026-10-21T23:50:29.903887+00:00",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeSchool\\Anatome-1.5.1-Production.apk",
+  "sha256": "7d033d45040065acc6d2669abd70c531aff9b8d7352f722a68e0e384dd48af14",
+  "method": "Read packaged IL2CPP metadata and ZIP CRC; compare with fresh build metadata",
+  "passed": true,
+  "physicalDeviceTested": false,
+  "checks": [
+    {
+      "name": "Every APK entry passes CRC",
+      "passed": true
+    },
+    {
+      "name": "Packaged metadata matches the fresh Unity Android build",
+      "passed": true
+    },
+    {
+      "name": "Packaged simulatorFov",
+      "passed": true
+    },
+    {
+      "name": "Packaged comfortFov",
+      "passed": true
+    },
+    {
+      "name": "Packaged UpdateDissectionGuide",
+      "passed": true
+    },
+    {
+      "name": "Packaged TryGetCutGuide",
+      "passed": true
+    },
+    {
+      "name": "Packaged Dissection visual guide - no collision or scoring",
+      "passed": true
+    },
+    {
+      "name": "Packaged Hold trigger and sweep",
+      "passed": true
+    },
+    {
+      "name": "Packaged Grip and lift",
+      "passed": true
+    },
+    {
+      "name": "Excluded QA fixture FovGuideRuntime",
+      "passed": true
+    },
+    {
+      "name": "Excluded QA fixture LearningVRSimulatorVerificationRunner",
+      "passed": true
+    }
+  ]
+}

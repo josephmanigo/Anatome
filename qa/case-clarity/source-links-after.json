@@ -1,0 +1,178 @@
+{
+  "utc": "2026-10-07T17:31:48.173Z",
+  "passed": false,
+  "checks": [
+    {
+      "id": "bodyparts",
+      "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html",
+      "finalUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html",
+      "status": 200,
+      "title": "Database Description - BodyParts3D | LSDB Archive",
+      "passed": true
+    },
+    {
+      "id": "bts",
+      "url": "https://www.brit-thoracic.org.uk/clinical-resources/clinical-statements/pleural-procedures/",
+      "finalUrl": "https://www.brit-thoracic.org.uk/clinical-resources/clinical-statements/pleural-procedures/",
+      "status": 200,
+      "title": "BTS Clinical Statement on Pleural Procedures",
+      "passed": true
+    },
+    {
+      "id": "asthma",
+      "url": "https://www.nhlbi.nih.gov/health/asthma/treatment-action-plan",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/asthma/treatment-action-plan",
+      "status": 200,
+      "title": "Asthma - Treatment and Action Plan | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "pneumonia",
+      "url": "https://www.nhlbi.nih.gov/health/pneumonia/treatment",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/pneumonia/treatment",
+      "status": 200,
+      "title": "Pneumonia - Treatment | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "coronary",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/chronic-coronary-syndromes/",
+      "finalUrl": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/chronic-coronary-syndromes/",
+      "status": 200,
+      "title": "2024 Chronic Coronary Syndromes",
+      "passed": true
+    },
+    {
+      "id": "valves",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/",
+      "finalUrl": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/",
+      "status": 200,
+      "title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+      "passed": true
+    },
+    {
+      "id": "tavr",
+      "url": "https://www.nhlbi.nih.gov/health/tavr",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/tavr",
+      "status": 200,
+      "title": "Transcatheter Aortic Valve Replacement (TAVR) - Transcatheter Aortic Valve Replacement (TAVR) | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "pleural",
+      "url": "https://www.nhlbi.nih.gov/health/pleural-disorders/treatment",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/pleural-disorders/treatment",
+      "status": 200,
+      "title": "Pleural Disorders - Treatment | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "bts-safety",
+      "url": "https://www.brit-thoracic.org.uk/clinical-resources/interventional-procedures/national-safety-standards-for-invasive-procedures-bronchoscopy-and-pleural-procedures/",
+      "finalUrl": "https://www.brit-thoracic.org.uk/clinical-resources/interventional-procedures/national-safety-standards-for-invasive-procedures-bronchoscopy-and-pleural-procedures/",
+      "status": 200,
+      "title": "National Safety Standards for Invasive Procedures - Bronchoscopy and Pleural Procedures | British Thoracic Society | Better lung health for all",
+      "passed": true
+    },
+    {
+      "id": "bts-detail",
+      "url": "https://www.brit-thoracic.org.uk/document-library/clinical-statements/pleural-procedures/bts-clinical-statement-on-pleural-procedures/",
+      "finalUrl": "https://www.brit-thoracic.org.uk/document-library/clinical-statements/pleural-procedures/bts-clinical-statement-on-pleural-procedures/",
+      "status": 200,
+      "title": "application/pdf",
+      "passed": true
+    },
+    {
+      "id": "spacer",
+      "url": "https://www.uhsussex.nhs.uk/resources/inhaler-technique-metered-dose-inhalers-with-aerochamber-spacer/",
+      "finalUrl": "https://www.uhsussex.nhs.uk/resources/inhaler-technique-metered-dose-inhalers-with-aerochamber-spacer/",
+      "status": 403,
+      "title": "Just a moment...",
+      "passed": false
+    },
+    {
+      "id": "pci-process",
+      "url": "https://www.nhs.uk/tests-and-treatments/coronary-angioplasty/what-happens/",
+      "finalUrl": "https://www.nhs.uk/tests-and-treatments/coronary-angioplasty/what-happens/",
+      "status": 200,
+      "title": "Coronary angioplasty and stent insertion - How it&#x27;s performed\n - NHS",
+      "passed": true
+    },
+    {
+      "id": "pci-aftercare",
+      "url": "https://www.gloshospitals.nhs.uk/your-visit/patient-information-leaflets/coronary-angioplasty-cgh/",
+      "finalUrl": "https://www.gloshospitals.nhs.uk/your-visit/patient-information-leaflets/coronary-angioplasty-cgh/",
+      "status": 200,
+      "title": "Coronary angioplasty",
+      "passed": true
+    },
+    {
+      "id": "pneumonia-care",
+      "url": "https://www.nice.org.uk/guidance/NG250/chapter/recommendations",
+      "finalUrl": "https://www.nice.org.uk/guidance/NG250/chapter/recommendations",
+      "status": 200,
+      "title": "Recommendations | Pneumonia: diagnosis and management  | Guidance | NICE",
+      "passed": true
+    },
+    {
+      "id": "tavi-process",
+      "url": "https://www.guysandstthomas.nhs.uk/health-information/tavi-aortic-stenosis/tavi-procedure",
+      "finalUrl": "https://www.guysandstthomas.nhs.uk/health-information/tavi-aortic-stenosis/tavi-procedure",
+      "status": 200,
+      "title": "TAVI for aortic stenosis - TAVI procedure | Guy&#039;s and St Thomas&#039; NHS Foundation Trust",
+      "passed": true
+    },
+    {
+      "id": "tavi-assessment",
+      "url": "https://www.rbht.nhs.uk/our-services/transcatheter-aortic-valve-implantation-tavi-for-aortic-stenosis",
+      "finalUrl": "https://www.rbht.nhs.uk/our-services/transcatheter-aortic-valve-implantation-tavi-for-aortic-stenosis",
+      "status": 200,
+      "title": "Transcatheter aortic valve implantation (TAVI) for aortic stenosis | Royal Brompton &amp; Harefield hospitals",
+      "passed": true
+    },
+    {
+      "id": "arterial-routes",
+      "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-5-circulatory-pathways",
+      "finalUrl": "https://openstax.org/books/anatomy-and-physiology/pages/20-5-circulatory-pathways",
+      "status": 200,
+      "title": "20.5 Circulatory Pathways  - Anatomy and Physiology | OpenStax",
+      "passed": true
+    },
+    {
+      "id": "heart-dissection",
+      "url": "https://anatomy.ttuhscep.edu/schemes/thorax_wall.html",
+      "passed": false,
+      "error": "fetch failed"
+    },
+    {
+      "id": "coronary-dissection",
+      "url": "https://anatomy.ttuhscep.edu/cardiovascular_system/heart.html",
+      "passed": false,
+      "error": "fetch failed"
+    },
+    {
+      "id": "mechanisms-asthma",
+      "url": "https://www.nhlbi.nih.gov/health/asthma",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/asthma",
+      "status": 200,
+      "title": "Asthma - What Is Asthma? | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "mechanisms-pneumonia",
+      "url": "https://www.nhlbi.nih.gov/health/pneumonia",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/pneumonia",
+      "status": 200,
+      "title": "Pneumonia - What Is Pneumonia? | NHLBI, NIH",
+      "passed": true
+    },
+    {
+      "id": "mechanisms-pleural",
+      "url": "https://www.nhlbi.nih.gov/health/pleural-disorders",
+      "finalUrl": "https://www.nhlbi.nih.gov/health/pleural-disorders",
+      "status": 200,
+      "title": "Pleural Disorders - What Are Pleural Disorders? | NHLBI, NIH",
+      "passed": true
+    }
+  ]
+}

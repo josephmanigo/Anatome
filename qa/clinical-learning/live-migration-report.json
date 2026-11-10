@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "utc": "2026-10-04T12:13:12.482Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "method": "Observed Supabase SQL editor results; additive transaction followed by read-only stored-rubric fixtures",
+  "projectResumed": true,
+  "migrations": [
+    {
+      "file": "supabase/migrations/202610040001_clinical_reasoning_content.sql",
+      "sha256": "72084164ced23924f82f3199c6d3e94235a39a79196f950c943eed30741da5b3"
+    },
+    {
+      "file": "supabase/migrations/202610040002_clinical_decision_safety.sql",
+      "sha256": "49b1960d817444a3dc54587dfdde092a805f47f9b083b471d11e6ceb78627962"
+    }
+  ],
+  "result": {
+    "versions": [
+      {
+        "rubrics": 72,
+        "version": "2026.09.1"
+      },
+      {
+        "rubrics": 72,
+        "version": "2026.09.2"
+      },
+      {
+        "rubrics": 72,
+        "version": "2026.09.3"
+      },
+      {
+        "rubrics": 72,
+        "version": "2026.10.1"
+      }
+    ],
+    "rlsTables": 5,
+    "unsafeGrade": {
+      "score": 95,
+      "passed": false,
+      "mistakes": 1,
+      "criticalFailure": true
+    },
+    "contentVersion": "2026.10.1",
+    "clinicalDecisions": 39,
+    "criticalDecisions": 3,
+    "anonymousSyncDenied": true,
+    "anonymousEvaluatorDenied": true,
+    "authenticatedSyncAllowed": true,
+    "unsafeFailsAfterCorrection": true,
+    "unverifiedCannotCreateCriticalFailure": true
+  },
+  "passed": true,
+  "authenticatedLearnerTested": false,
+  "emailsSent": 0
+}

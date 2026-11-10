@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-06T09:54:28.4087933Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "provider": "Google Workspace SMTP",
+  "recipient": "joseph.m***@hcdc.edu.ph",
+  "requests": 1,
+  "httpStatus": 500,
+  "requestAccepted": false,
+  "errorCode": "unexpected_failure",
+  "errorMessage": "Error sending confirmation email",
+  "errorId": "01a07624-1f47-7c8d-a0c8-610516700cfd",
+  "smtpResponseCode": 535,
+  "smtpEnhancedStatus": "5.7.8",
+  "smtpError": "Username and Password not accepted",
+  "logEventId": "ff002bf9-327b-4be2-8014-19c2693e8ff4",
+  "logRequestIdMatches": true,
+  "deliveryConfirmed": false,
+  "codeVerified": false
+}

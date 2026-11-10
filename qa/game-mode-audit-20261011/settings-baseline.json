@@ -1,0 +1,159 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-11T13:57:45.6777304Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "settings_graphics_default_pipeline",
+            "detail": "Quest quality levels with no override must still apply render scale, MSAA and shadow distance.",
+            "passed": true
+        },
+        {
+            "id": "settings_table_change_survives_busy_cut",
+            "detail": "A setting saved during mesh processing must take effect when processing finishes.",
+            "passed": true
+        },
+        {
+            "id": "settings_hints_off_updates_current_step",
+            "detail": "Turning hints off removes the current assembly socket immediately.",
+            "passed": true
+        },
+        {
+            "id": "settings_hints_on_updates_current_step",
+            "detail": "Turning hints on restores the current practice socket.",
+            "passed": true
+        },
+        {
+            "id": "settings_height_moves_assembly_socket",
+            "detail": "Assembly guidance moves with the specimen when table height changes.",
+            "passed": true
+        },
+        {
+            "id": "settings_height_moves_case_equipment",
+            "detail": "The instrument station follows table height without restarting the case.",
+            "passed": true
+        },
+        {
+            "id": "settings_clinical_hint_shown_without_credit",
+            "detail": "An explicit practice hint reveals the choice without answering it.",
+            "passed": true
+        },
+        {
+            "id": "settings_hints_off_hides_clinical_choice",
+            "detail": "Turning hints off hides existing clinical choice cues on the same objective without recording a choice.",
+            "passed": false
+        },
+        {
+            "id": "settings_hints_on_does_not_reveal_clinical_answer",
+            "detail": "Turning hints back on does not automatically reveal a clinical answer.",
+            "passed": false
+        },
+        {
+            "id": "settings_clinical_hint_can_be_requested_again",
+            "detail": "The learner can explicitly request another hint after changing preferences.",
+            "passed": true
+        },
+        {
+            "id": "dissection_whole_layer_anchored",
+            "detail": "Only detached chunks are grabbable while cutting a dissection layer.",
+            "passed": true
+        },
+        {
+            "id": "dissection_instruction_matches_chunk_only_grab",
+            "detail": "Dissection instructions cannot promise whole-layer inspection while that layer is anchored.",
+            "passed": false
+        },
+        {
+            "id": "sandbox_whole_layer_anchored",
+            "detail": "Free dissection also keeps uncut tissue anchored.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)"
+    ]
+}

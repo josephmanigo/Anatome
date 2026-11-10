@@ -9,7 +9,7 @@ if($Android){
  if($LASTEXITCODE){throw 'Android configure failed'}
  & $cmake --build "$root\native\build-android" --parallel 6
  if($LASTEXITCODE){throw 'Android native build failed'}
- Copy-Item -LiteralPath "$root\native\build-android\libthoraxcut.so" -Destination "$root\unity\ThoraxAssetDemo\Assets\Plugins\Android\arm64-v8a\libthoraxcut.so"
+ Copy-Item -LiteralPath "$root\native\build-android\libthoraxcut.so" -Destination "$root\unity\ThoraxLab\Assets\Plugins\Android\arm64-v8a\libthoraxcut.so"
 } else {
  $vs='C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\VsDevCmd.bat'
  $body=@"
@@ -29,5 +29,5 @@ exit /b %errorlevel%
  [IO.File]::WriteAllText($runner,$body)
  & $env:ComSpec /d /c $runner
  if($LASTEXITCODE){throw 'Windows native build/tests failed'}
- Copy-Item -LiteralPath "$root\native\build-windows\thoraxcut.dll" -Destination "$root\unity\ThoraxAssetDemo\Assets\Plugins\x86_64\thoraxcut.dll"
+ Copy-Item -LiteralPath "$root\native\build-windows\thoraxcut.dll" -Destination "$root\unity\ThoraxLab\Assets\Plugins\x86_64\thoraxcut.dll"
 }

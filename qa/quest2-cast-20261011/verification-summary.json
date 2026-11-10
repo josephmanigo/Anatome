@@ -1,0 +1,47 @@
+{
+  "verifiedUtc": "2026-10-11T13:38:23.4546303Z",
+  "status": "READY_FOR_MANUAL_DEVELOPER_HUB_UPDATE_PHYSICAL_RETEST_PENDING",
+  "version": "1.4.5",
+  "versionCode": 13,
+  "package": "org.thoraxlab.learning",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome-1.4.5.apk",
+  "sha256": "c66a2106f000338d912480f753e9f987220b4db2f9c6c1c42f69ac7a2ccdd1df",
+  "bytes": 111989009,
+  "xr": {
+    "status": "passed",
+    "checks": 2343,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "runtimeQaBypass": false,
+    "report": "settings-full-verified.json"
+  },
+  "androidBuild": {
+    "status": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "duration": "00:02:51.4693977",
+    "report": "android-settings-build-summary.txt"
+  },
+  "apkChecks": {
+    "checks": 19,
+    "failed": 0,
+    "report": "apk-1.4.5/learning-apk-verification.json"
+  },
+  "signing": {
+    "kind": "Android Debug",
+    "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+    "matchesPrevious144": true
+  },
+  "installation": {
+    "installed": false,
+    "reason": "User explicitly requested manual installation through Meta Quest Developer Hub."
+  },
+  "physicalDeviceTested": false,
+  "notRetested": [
+    "Physical controller feel and comfort",
+    "Sustained headset performance",
+    "Actual supported headset refresh-rate application",
+    "Authenticated account/cloud operations",
+    "Windows player build"
+  ]
+}

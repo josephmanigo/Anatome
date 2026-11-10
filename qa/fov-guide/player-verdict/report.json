@@ -1,0 +1,40 @@
+{
+    "method": "Fresh managed code in copied development player with cached scene/assets; QA tracking bypass",
+    "utc": "2026-10-21T23:24:04.4332422Z",
+    "passed": true,
+    "physicalHeadsetTested": false,
+    "checks": [
+        "Comfort slider changes draft only",
+        "Apply saves comfort width",
+        "Comfort aperture narrows independently of camera projection",
+        "Disabled vignette stays hidden",
+        "Large settings labels fit their rectangles",
+        "Default practice viewpoint has a continuous surface route",
+        "Practice guide is visible",
+        "Guide has no colliders",
+        "Left route stays on anatomical left",
+        "Right route stays on anatomical right",
+        "Hints off hides guide without scoring",
+        "Blocking geometry prevents guide route",
+        "Guide route creates a real native-cut chunk: Cut complete · 2 pieces · 1/32 detached pieces.",
+        "Cut and guide alone earn no removal credit",
+        "Guide switches to chunk lift stage",
+        "Undo restores current sweep guide",
+        "Pause hides guide",
+        "Assessment has no added answer guide",
+        "Sandbox clears old guide objects",
+        "Guide surface REC_fat from prepared QA view; probe 1.58 ms on this PC",
+        "Guide surface REC_fascia from prepared QA view; probe 7.05 ms on this PC",
+        "Guide surface FMA79979 from prepared QA view; probe 0.14 ms on this PC",
+        "Guide surface MAL_RUL from prepared QA view; probe 0.11 ms on this PC",
+        "Guide surface FMA7957 from prepared QA view; probe 2.36 ms on this PC",
+        "Guide surface FMA8148 from prepared QA view; probe 6.49 ms on this PC"
+    ],
+    "errors": [],
+    "screenshots": [
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-verdict\\settings.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-verdict\\settings-large-contrast.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-verdict\\sweep.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\player-verdict\\lift.png"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "utc": "2026-09-05T23:04:53.1004542Z",
+    "device": "B550M Pro4 (To Be Filled By O.E.M.)",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "platform": "WindowsPlayer",
+    "preset": "Medium",
+    "frames": 110266,
+    "seconds": 919.1480102539063,
+    "averageFps": 119.96544647216797,
+    "onePercentLow": 116.59748840332031,
+    "fifteenMinutes": true
+}

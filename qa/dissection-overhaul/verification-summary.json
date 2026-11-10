@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-07T16:58:11.5899373Z",
+  "applicationVersion": "1.4.0",
+  "applicationVersionCode": 8,
+  "contentVersion": "2026.10.2",
+  "status": "READY_FOR_SCHOOL_FUNCTIONAL_RETEST_PHYSICAL_QUEST_PENDING",
+  "passedLocalChecks": true,
+  "checks": {
+    "fullPlayerActivities": 72,
+    "fullPlayerVariants": 72,
+    "playerErrors": 0,
+    "xrSimulator": 2204,
+    "actualAnatomyMesh": 176,
+    "readiness": 22,
+    "nativeChunkGeometry": 105,
+    "clientScoringAndPersistence": 889,
+    "postgresql": 263,
+    "curriculum": 1761,
+    "dissectionCoverage": 79,
+    "assetAndVoice": 1967,
+    "apk": 19
+  },
+  "builds": {
+    "android": "Succeeded: 0 errors, 1 warning",
+    "androidWarning": "Unity PerformanceTesting rewrote generated PerformanceTestRunInfo.json metadata.",
+    "windowsRelease": "Succeeded: 0 errors, 0 warnings",
+    "windowsQA": "Succeeded: 0 errors, 0 warnings"
+  },
+  "backend": {
+    "deployed": true,
+    "definitions": 72,
+    "definitionDigest": "bfa728009f70c07371d6b8027a21fa5c",
+    "previousVersionsPreserved": 4,
+    "previousResultsModified": false,
+    "authenticatedLearnerCurrentBuildTested": false
+  },
+  "artifacts": {
+    "apkSha256": "37e1745fa0c1f9b0bab701a8eb47bb5bab119e225a835d685b0d607018b42f69",
+    "catalogSha256": "1cab07ffc366d41dd7667b1027863450f96591c5d977b144462249f95063f386",
+    "testedPlayerAssemblySha256": "c29102eb55d072423ab69100555d813cbc2fea70172e1aa099d17bc3c812d393",
+    "sameSigningCertificateAsPreviousSchoolBuild": true
+  },
+  "verificationNotes": [
+    "Native chunk regression initially failed 10 conservation/bounds checks, then passed 105/105.",
+    "Topic regression initially failed 13 coverage checks, then passed 79/79.",
+    "Repeated Restore reproduced an activity pause; its guard passes both focused assertions in the final full XR suite.",
+    "An earlier player run had an intermittent case contact failure. The subsequent full run, isolated case repeat, and final full run all passed; diagnostic failure capture remains available in development QA."
+  ],
+  "pending": [
+    "Physical Quest 3 controller and optional hand tracking",
+    "Physical button/cut latency and sustained frame rate",
+    "Current-build real email sign-in and authenticated progress/persistence on Quest",
+    "Publisher-owned non-debug signing before production distribution"
+  ]
+}

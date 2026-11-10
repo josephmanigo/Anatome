@@ -1,0 +1,310 @@
+{
+    "platform": "WindowsPlayer",
+    "nativeVersion": "ThoraxCut/1.1 chunk-extraction Manifold/3.5.2 11235e6b8ebea2dbed8aec4285685aafd3d95667",
+    "graphicsDevice": "NVIDIA GeForce RTX 3080",
+    "checks": [
+        {
+            "name": "scene catalog loaded",
+            "passed": true,
+            "detail": "249"
+        },
+        {
+            "name": "LeftHand XRI selection event",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "LeftHand release snaps to rest pose",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "RightHand XRI selection event",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "RightHand release snaps to rest pose",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "swept cut creates detached piece",
+            "passed": true,
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces."
+        },
+        {
+            "name": "mesh and collider replaced together",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "interior submesh assigned",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "undo restores original mesh and pieces",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "bone cut carries cortical and cancellous appearance data",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "invalid cut preserves previous state",
+            "passed": true,
+            "detail": "Invalid input or cut budget."
+        },
+        {
+            "name": "reset discards in-flight result",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "undo retains ten steps",
+            "passed": false,
+            "detail": "3"
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "cut completes within timeout",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "session enforces 32 detached fragments",
+            "passed": false,
+            "detail": "3 No material intersected."
+        },
+        {
+            "name": "dynamic meshes bounded by reachable history",
+            "passed": true,
+            "detail": "6"
+        },
+        {
+            "name": "ten undo operations succeed",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "mode change restores intact specimen",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "snap returns to recorded pose",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "table and anatomy share height offset",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "guided opening advances prepared layer",
+            "passed": true,
+            "detail": ""
+        },
+        {
+            "name": "region annotations cannot be cut",
+            "passed": true,
+            "detail": ""
+        }
+    ],
+    "rendering": [
+        {
+            "view": "open chest",
+            "captureMethod": "Forced offscreen 1440x1000 rendering in hidden Windows player; not headset timing",
+            "maxDrawCalls": 268,
+            "maxTriangles": 382928,
+            "medianFrameMs": 0.6508999466896057,
+            "p95FrameMs": 1.4014952182769776,
+            "renderingCountersAvailable": true
+        },
+        {
+            "view": "all layers",
+            "captureMethod": "Forced offscreen 1440x1000 rendering in hidden Windows player; not headset timing",
+            "maxDrawCalls": 291,
+            "maxTriangles": 483428,
+            "medianFrameMs": 0.6647037863731384,
+            "p95FrameMs": 0.8292021155357361,
+            "renderingCountersAvailable": true
+        }
+    ],
+    "failures": 2,
+    "managedBytesBefore": 4444160,
+    "managedBytesAfter": 5234688
+}

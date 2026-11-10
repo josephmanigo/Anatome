@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "entries": 1346,
+  "changed": [],
+  "sourceSha256": "92c0ff4869bbdb2c25a7b3736807b20a114b0216c63297238559159946bb7357",
+  "signedSha256": "247963317147078fe18fde7084458d4cebefa7a21d3bff8cdafa00a3e6d93188",
+  "method": "SHA-256 comparison of every ZIP entry except JAR signing metadata; includes manifest, code, resources and native libraries"
+}

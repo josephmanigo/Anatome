@@ -1,0 +1,21 @@
+{
+  "recordedUtc": "2026-10-15T17:38:51.151409+00:00",
+  "source": "Direct user messages in this task; user-reported, not independently observed by the agent",
+  "version": "1.4.9",
+  "versionCode": 17,
+  "userConfirmedVersion": true,
+  "versionCodeInferredFromNamedRelease": true,
+  "headsetConfirmationQuote": "Both Quest 2 and Quest 3 \u2014 version 1.4.9",
+  "functionalConfirmationQuote": "i test it already and there is no problem",
+  "loginConfirmationQuote": "the login is working also",
+  "quest2FunctionalPassed": true,
+  "quest3FunctionalPassed": true,
+  "loginPassed": true,
+  "associatedCandidateSha256": "6bfd9b01681b32151f65e957e0912df23c1a4c0ba49ace602e8c38e9910b57f1",
+  "hashAssociation": "Project artifact for the version named by the user; the user did not independently supply an APK hash.",
+  "productionPayloadUnchanged": true,
+  "signedInstallationTransitionTested": false,
+  "measuredHeadsetFpsSupplied": false,
+  "sustainedThermalMeasurementsSupplied": false,
+  "exhaustiveOfflineAndCrossDeviceRecoveryClaimed": false
+}

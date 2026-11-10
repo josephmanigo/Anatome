@@ -1,0 +1,9 @@
+{
+  "capturedUtc": "2026-09-06T00:46:36.5245185Z",
+  "executable": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningVRTest\\ThoraxLab.exe",
+  "nativeLibrary": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningVRTest\\ThoraxLab_Data\\Plugins\\x86_64\\thoraxcut.dll",
+  "nativeSha256": "84e6485eedadf326d789c6876d0ce74ce6f143ca64681dd4c9604e36d5577a9c",
+  "runtimeAssemblySha256": "5b8bfa384bcd3d39d12bf0fa4668f8c2a5b09595714eb7c6aff28838e6417293",
+  "runtimeAssemblyWrittenUtc": "2026-09-06T00:37:37.4095652Z",
+  "scope": "Windows Development QA player -selftest, synthetic native cutting and existing mesh/collider/XRI/undo/bounds regression; no clinical or headset validation."
+}

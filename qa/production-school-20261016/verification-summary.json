@@ -1,0 +1,195 @@
+{
+  "utc": "2026-10-15T17:13:07.389433+00:00",
+  "status": "CLASSROOM_CANDIDATE_LOCALLY_VERIFIED_SIGNING_TRANSITION_AND_DEVICE_ACCEPTANCE_PENDING",
+  "productionReady": false,
+  "version": "1.4.9",
+  "versionCode": 17,
+  "package": "org.thoraxlab.learning",
+  "curriculum": "2026.10.2",
+  "apk": {
+    "path": "builds/AnatomeQuest/Anatome-1.4.9-Classroom-Candidate.apk",
+    "sha256": "6bfd9b01681b32151f65e957e0912df23c1a4c0ba49ace602e8c38e9910b57f1",
+    "bytes": 110970621
+  },
+  "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "signing": "Existing Android Debug identity preserved by owner request. Permanent publisher signing remains open.",
+  "checks": {
+    "core": 896,
+    "content": 1761,
+    "databaseLocal": 263,
+    "anonymousLiveApi": 5,
+    "nativeUnit": 105,
+    "nativePlayerIntegration": 89,
+    "fullXrSimulator": 2411,
+    "isolatedUiAudit": 1048,
+    "learningScenarios": 72,
+    "readinessRegressions": 22,
+    "buildPolicy": 16,
+    "apk": 20,
+    "strictCandidatePassed": 29,
+    "strictCandidateExpectedFailures": 1
+  },
+  "releaseGates": {
+    "windowsCompiledGate": true,
+    "androidCompilerInputGate": true,
+    "physicalQuest2CurrentApk": false,
+    "physicalQuest3CurrentApk": false,
+    "freshAuthenticatedLearnerFlow": false,
+    "permanentPublisherSigning": false
+  },
+  "deviceFeedback": "User reported earlier Quest 2 build without bugs; exact version not explicitly reconfirmed. Not acceptance of 1.4.9 or Quest 3.",
+  "historicalBackendEvidence": {
+    "path": "qa/dissection-overhaul/live-migration-report.json",
+    "sha256": "7ea974149a3374ce242ec44c14c2842bb46f4f34f50a369ee1415cad5ac96123",
+    "bytes": 832
+  },
+  "observations": [
+    "Initial full XR run missed progress/Guide once. Isolated UI audit (1048) and instrumented full rerun (2411) passed without changing production pointer behavior; initial report retained as xr-first-failure.json.",
+    "Legacy native capacity fixture recut empty chunk cavities. Updated fixture cuts distinct tissue and verifies every fragment increment and the 33rd-cut rejection; 89 checks pass. Initial report retained as native-player-old-fixture.json.",
+    "Android manifest merge conflict was fixed with a tools:replace override; final package policy inspected after merge.",
+    "42 fresh desktop QA captures; privacy top/bottom and case station visually inspected. These are not stereo headset captures.",
+    "72-scenario QA player precedes the selftest-only fixture correction; production learning code is unchanged between it and the final builds.",
+    "Final Windows build has one warning for regenerated Unity performance-test metadata; no build errors.",
+    "Android compiler gate inspects CIL input to IL2CPP, not native machine-code behavior.",
+    "Anonymous live probes sent no emails. Historical content deployment is separate from fresh authenticated acceptance."
+  ],
+  "artifacts": [
+    {
+      "path": "builds/AnatomeWindows/Anatome_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "4352cbc0a942b0662f2734378597d3aea551eba8b69772f32b6f888b7c20f7e2",
+      "bytes": 399360
+    },
+    {
+      "path": "builds/AnatomeVRTest/Anatome_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "6ba2a533a082a7eb8e197318b61a092c588315a6da6405f14dd8b3cdb12c6133",
+      "bytes": 444928
+    }
+  ],
+  "evidence": [
+    {
+      "path": "qa/production-school-20261016/core-tests.txt",
+      "sha256": "8a2c42f40db803b0727701f225a742175d886f671c138222a7d4e9f7a3b50da8",
+      "bytes": 122
+    },
+    {
+      "path": "qa/production-school-20261016/content.json",
+      "sha256": "0fd4703d5443d1abd1f9607e20bb7d43aba1dfb8025637e237eded52041dde0a",
+      "bytes": 123
+    },
+    {
+      "path": "qa/production-school-20261016/backend.json",
+      "sha256": "fdaccf5ea2aeef1e469d4af35724aee1ec41584959c891ce8854eabfc120f0a0",
+      "bytes": 154
+    },
+    {
+      "path": "qa/production-school-20261016/live-api.json",
+      "sha256": "9726bfd89d484803bfb2c771293fa75c8db95f8186145592b1364cf17b7ab5bf",
+      "bytes": 821
+    },
+    {
+      "path": "qa/production-school-20261016/native-tests.txt",
+      "sha256": "5f88854d4c112f6e716197b6bb5a7daa2b147203b349b76c3821c17d85eadd72",
+      "bytes": 3826
+    },
+    {
+      "path": "qa/production-school-20261016/native-player.json",
+      "sha256": "65b71112e53baf0a477d6a08432fc79e0d39dbe24031caec6deec596f7748dcb",
+      "bytes": 14919
+    },
+    {
+      "path": "qa/production-school-20261016/native-plugin-hashes.json",
+      "sha256": "43740aab4a1944ddcadf0540ce79f82dd9001d1f7cbd9f6617e61a62c21dc308",
+      "bytes": 593
+    },
+    {
+      "path": "qa/production-school-20261016/build-policy.json",
+      "sha256": "7fe323c74ca296b45a99b3d09142148dd3fe1262fd6fc001b0fa28989931ff62",
+      "bytes": 932
+    },
+    {
+      "path": "qa/production-school-20261016/xr-full.json",
+      "sha256": "20517cedbd8881c8cdbd16c9f33e1a7f9d4dcf29600cb3eab60d09c3217497b7",
+      "bytes": 596670
+    },
+    {
+      "path": "qa/production-school-20261016/xr-ui-audit.json",
+      "sha256": "77c68b216ba59d9ce126d390d24564d3be59879cb22d1cc4f358e6bdbb1b8bd5",
+      "bytes": 291161
+    },
+    {
+      "path": "qa/production-school-20261016/windows-release-gate.json",
+      "sha256": "7067a4e8f7cf72252295a397d9e9917a81af6bd348fa11023adb57484b239b4b",
+      "bytes": 1829
+    },
+    {
+      "path": "qa/production-school-20261016/android-compiler-gate.json",
+      "sha256": "d6352c5ad780c45920b2ffa33e4c9884cdf298d5d386707647d5c4a24e748641",
+      "bytes": 1855
+    },
+    {
+      "path": "qa/production-school-20261016/player/runtime-report.json",
+      "sha256": "761738578fc17bb63350d21c1eab27d94a6448fc47e1495b63259446c01aa096",
+      "bytes": 5132
+    },
+    {
+      "path": "qa/production-school-20261016/player/readiness-regressions.json",
+      "sha256": "e5c0ae103a2941902778fbf0d26e10e3c36f2b8133e99d8f1f42379f51f502f3",
+      "bytes": 2459
+    },
+    {
+      "path": "qa/production-school-20261016/windows-qa-build.txt",
+      "sha256": "eb52be0e1f1e70c1421842afd4682950b991fd8513990627c2be8d77f87a6a11",
+      "bytes": 46
+    },
+    {
+      "path": "qa/production-school-20261016/windows-release-build.txt",
+      "sha256": "4a42811e5054fd9effc3bfa8fc337c528705a28c5a6e6a9eb07dbcad32851157",
+      "bytes": 46
+    },
+    {
+      "path": "qa/production-school-20261016/android-build.txt",
+      "sha256": "7d26ec90b43aa4ba17715d97d031a450fa5c2ed0392dbcd2d25bd5a932676a14",
+      "bytes": 46
+    },
+    {
+      "path": "qa/production-school-20261016/android-graphics.txt",
+      "sha256": "dad98f8267ccfa5c5c4dc0ecd6b687cdc9d18523bca798741910463f39b0fc84",
+      "bytes": 47
+    },
+    {
+      "path": "qa/production-school-20261016/apk/learning-apk-verification.json",
+      "sha256": "91fad1f28aa9edd94102bf8b5381cbdf422502eab94062c5f88f390333759d2b",
+      "bytes": 3467
+    },
+    {
+      "path": "qa/production-school-20261016/apk/learning-apk-signature.txt",
+      "sha256": "d5debff969ba661b79a0b5d78b71134531dbbe1551d4aed3fddb38fd5d0692b8",
+      "bytes": 972
+    },
+    {
+      "path": "qa/production-school-20261016/strict-candidate/learning-apk-verification.json",
+      "sha256": "e53bce86504d257c81905c64289511513319dce72d0bdb18883e0e3c6a2e3f35",
+      "bytes": 4621
+    },
+    {
+      "path": "qa/production-school-20261016/source-hashes.json",
+      "sha256": "1f95e5de7981952bf6ef12fb2fcc325ecf0bdde476300a8662e406a29df3fa63",
+      "bytes": 18173
+    },
+    {
+      "path": "qa/production-school-20261016/signing-missing-credentials.txt",
+      "sha256": "f33d66f590d8c81419e24b66523b451d3f9216b447d3d74c3bd488fa14ed08c3",
+      "bytes": 128
+    },
+    {
+      "path": "qa/production-school-20261016/signing-invalid-fingerprint.txt",
+      "sha256": "bcca274fdba8ff733fd2981595103bb0bde0e6a96631b5081259ef83cd8398c8",
+      "bytes": 774
+    },
+    {
+      "path": "qa/production-school-20261016/signing-missing-fingerprint.txt",
+      "sha256": "dfdd2135ddff4ae2289f63d3b9eef2f33f0b3d40e6f942f414fbe26e1e3a2ffe",
+      "bytes": 795
+    }
+  ]
+}

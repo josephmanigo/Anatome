@@ -1,0 +1,107 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-11T13:03:42.6847462Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "settings_height_draft_changed",
+            "detail": "Controller-dragged values: player=0.5537259 table=0.1763239",
+            "passed": true
+        },
+        {
+            "id": "settings_draft_does_not_apply_early",
+            "detail": "Draft stays separate until Apply.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_height_reaches_profile",
+            "detail": "Apply keeps both requested height values.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_moves_actual_view",
+            "detail": "Eye before=1.65 after=2.203726 boost=0.5537259",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_moves_table_and_specimen",
+            "detail": "Table and specimen use applied offset.",
+            "passed": true
+        },
+        {
+            "id": "settings_reopen_preserves_values",
+            "detail": "Reopening settings shows the committed values.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_master_volume",
+            "detail": "Master slider changes the actual audio listener.",
+            "passed": true
+        },
+        {
+            "id": "panel_grab_header_translates",
+            "detail": "The top-left header is grabbable, including its blank/brand area. Delta=(0.00, 0.00, 0.00)",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: panel_grab_header_translates: The top-left header is grabbable, including its blank/brand area. Delta=(0.00, 0.00, 0.00)\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:189 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyPanelManipulation>d__8.MoveNext () [0x0019c] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Settings.cs:67 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__45.MoveNext () [0x00889] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:238 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:173 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Extra player height (m) world=(-0.23, 1.37, 0.61); screen=(577.30, 305.09, 0.94); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Table height offset (m) world=(-0.23, 1.37, 0.61); screen=(955.97, 344.46, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(-0.23, 1.87, 0.47); screen=(873.95, 644.93, 1.10); button rect=(x:-143.59, y:-32.00, width:287.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Master volume world=(-0.06, 2.14, 0.07); screen=(577.72, 467.96, 0.95); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(0.02, 2.25, -0.05); screen=(873.95, 537.09, 1.10); button rect=(x:-143.59, y:-32.00, width:287.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "failure: head=(0.86, 1.65, 0.67) hand=(0.98, 1.65, 0.67) direction=(-0.26, 0.26, -0.93) plane=True distance=1.224239 screen=(250.71, 782.13, 0.78) hits="
+    ]
+}

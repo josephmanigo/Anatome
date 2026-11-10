@@ -1,0 +1,8 @@
+{
+  "checks": 263,
+  "variants": 72,
+  "result": "pass",
+  "engine": "PGlite PostgreSQL",
+  "liveSupabase": false,
+  "utc": "2026-10-15T16:40:32.754Z"
+}

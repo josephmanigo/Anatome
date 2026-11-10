@@ -1,0 +1,88 @@
+{
+  "capturedUtc": "2026-10-08T11:36:40.3953423Z",
+  "status": "BLOCKED_QUEST_LINK_LOADING_AFTER_RESTART",
+  "testMode": "Windows PC VR via Meta Horizon Link",
+  "standaloneApkTested": false,
+  "applicationStarted": true,
+  "applicationAssemblySha256": "7A1024EA03F6540F371581621F4E768AC1769A7672B3ACFFECB328B460C175C7",
+  "simulatorUsed": false,
+  "automatedLearningQaUsed": false,
+  "headsetModel": "Quest 2",
+  "headsetUsbConnected": true,
+  "bothControllersDetected": true,
+  "headsetBatteryPercent": 1,
+  "usbConnection": "USB 2",
+  "activeOpenXrRuntime": "Meta Horizon Link",
+  "unknownSourcesEnabled": true,
+  "linkVersion": "208.0.0.74.535",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "driverVersion": "32.0.16.1692",
+  "driverWarning": "Meta Horizon Link warns that the installed NVIDIA driver has a known freezing issue and recommends 591.86 or earlier. No driver was changed.",
+  "initialConnectionError": "remoteRenderingTerminatedFlakyCable (-4503), observed before USB reconnection",
+  "observedSessionStates": [
+    "IDLE",
+    "READY",
+    "SYNCHRONIZED"
+  ],
+  "visibleSessionVerified": false,
+  "focusedSessionVerified": false,
+  "functionalHeadsetTestPassed": false,
+  "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\quest2-link-20261008\\player-d3d11-20261008-112232.log",
+  "nextStep": "Charge headset before another physical test. User is considering changing the headset administrator; no reset or GPU driver installation is authorized or performed.",
+  "unknownSourcesVerified": "User confirmed and PC Link switch was visually verified enabled.",
+  "userObservedHeadsetOutput": "Loading screen or black screen.",
+  "libraryRegistration": "Meta Horizon Link Library lists Anatome; Now Playing was verified.",
+  "linkMirrorBaseline": "Oculus Mirror showed black while Anatome was not running.",
+  "testedGraphicsApis": [
+    "Direct3D12",
+    "Direct3D11"
+  ],
+  "currentApplicationRunning": true,
+  "codeOrDriverChangesMade": false,
+  "runs": [
+    {
+      "log": "player-20261008-110610.log",
+      "graphicsApi": "Direct3D12",
+      "visibleStateObserved": false,
+      "focusedStateObserved": false,
+      "errors": [
+        "XR_ERROR_FORM_FACTOR_UNAVAILABLE"
+      ]
+    },
+    {
+      "log": "player-20261008-110828.log",
+      "graphicsApi": "Direct3D12",
+      "visibleStateObserved": false,
+      "focusedStateObserved": false,
+      "errors": []
+    },
+    {
+      "log": "player-20261008-111920.log",
+      "graphicsApi": "Direct3D12",
+      "visibleStateObserved": false,
+      "focusedStateObserved": false,
+      "errors": []
+    },
+    {
+      "log": "player-d3d11-20261008-112232.log",
+      "graphicsApi": "Direct3D11",
+      "visibleStateObserved": false,
+      "focusedStateObserved": false,
+      "errors": []
+    }
+  ],
+  "linkWithoutAnatomeUserResult": "Still loading with Anatome closed.",
+  "linkRestartRequestedUtc": "2026-10-08T11:27:42.6223785Z",
+  "linkRestartCompleted": true,
+  "postRestartHeadset": {
+    "subtype": "quest2",
+    "batteryState": 2,
+    "connectionState": "connected",
+    "rdConnectionState": "disconnected",
+    "operationalState": "operable",
+    "problems": []
+  },
+  "postRestartUserResult": "Still loading or black",
+  "originalFirstLogOverwrittenAfterRestart": true,
+  "driverCandidate": "NVIDIA 591.86 WHQL desktop Windows 10/11; official package supports RTX 3080. Download preparation only; not installed."
+}

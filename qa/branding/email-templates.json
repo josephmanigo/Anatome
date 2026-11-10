@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-06T18:08:24.7333859Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "method": "Saved through Supabase dashboard, then reloaded both template pages and read visible subject/body",
+  "magicLinkSubject": "Your Anatome sign-in code",
+  "confirmationSubject": "Your Anatome sign-in code",
+  "bodyHeading": "Sign in to Anatome",
+  "tokenPlaceholderPreserved": true,
+  "senderDisplayName": "Anatome",
+  "smtpCredentialsChanged": false,
+  "testEmailSent": false,
+  "passed": true
+}

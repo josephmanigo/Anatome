@@ -1,0 +1,172 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-11T12:41:37.5582508Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "measured_floor_eye_height_preserved",
+            "detail": "Seated layout preserves measured Floor eye height=1.65",
+            "passed": true
+        },
+        {
+            "id": "startup_origin_change_keeps_head_above_floor",
+            "detail": "A delayed 1.65m -> 0m origin change must not put the headset under the floor. World eye height=1.25",
+            "passed": true
+        },
+        {
+            "id": "legacy_settings_enable_height_assistance",
+            "detail": "Existing saved profiles receive height assistance without resetting preferences.",
+            "passed": true
+        },
+        {
+            "id": "short_player_raised_to_working_height",
+            "detail": "1.22 m tracked eye height becomes 1.65 m.",
+            "passed": true
+        },
+        {
+            "id": "height_assistance_moves_hands_with_view",
+            "detail": "View and controller share the same rig offset.",
+            "passed": true
+        },
+        {
+            "id": "assisted_player_can_crouch",
+            "detail": "Physical crouching stays relative to the calibrated pose.",
+            "passed": true
+        },
+        {
+            "id": "extra_height_preserves_crouch",
+            "detail": "Extra height lifts both hands and view without flattening movement.",
+            "passed": true
+        },
+        {
+            "id": "late_short_floor_pose_does_not_double_height",
+            "detail": "A delayed 0.9 m floor pose calibrates once; eye=1.65",
+            "passed": true
+        },
+        {
+            "id": "height_preferences_round_trip",
+            "detail": "The preference serializer retains explicit assistance and boost choices.",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_surface",
+            "detail": "The real skin is reachable on the current side.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_continuous_path",
+            "detail": "The regression stroke stays on one unobstructed skin surface.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_trigger_starts_in_air",
+            "detail": "Press trigger before bringing the scalpel to skin.",
+            "passed": true
+        },
+        {
+            "id": "held_trigger_enters_skin_and_draws",
+            "detail": "A held trigger must begin a stroke when it first reaches the current tissue; samples=96 notice=",
+            "passed": true
+        },
+        {
+            "id": "wrong_cut_tool_feedback_visible",
+            "detail": "Wrong tool preserves the skin and displays the reason: Select the scalpel for soft tissue.",
+            "passed": true
+        },
+        {
+            "id": "cut_rejection_visible_without_scrolling",
+            "detail": "Cut feedback must fit inside the visible panel after a stroke; bounds=Center: (0.00, -360.21, 0.00), Extents: (306.00, 14.59, 0.00) viewport=(x:-334.00, y:-274.00, width:668.00, height:548.00)",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: cut_rejection_visible_without_scrolling: Cut feedback must fit inside the visible panel after a stroke; bounds=Center: (0.00, -360.21, 0.00), Extents: (306.00, 14.59, 0.00) viewport=(x:-334.00, y:-274.00, width:668.00, height:548.00)\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:186 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyChestCutEntry>d__3.MoveNext () [0x005b2] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Dissection.cs:94 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__41.MoveNext () [0x009b6] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:240 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:170 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "failure: head=(0.85, 1.65, 0.65) hand=(0.43, 1.42, 1.03) direction=(-0.69, -0.38, 0.61) plane=True distance=1.043917 screen=(1131.08, 224.12, 1.48) hits="
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-06T08:59:46.6199611Z",
+  "command": "pipeline/run-unity.ps1 -Project ThoraxLab -Method ThoraxLab.Editor.LearningVRSimulatorVerification.Run -Target Win64 -Log search-index-red -Graphics -NoQuit",
+  "searchIndexExistedBefore": false,
+  "searchIndexExistedAfter": false,
+  "report": "qa/search-index-repair/before/reproduced-xr-report.json",
+  "log": "qa/search-index-red.log"
+}

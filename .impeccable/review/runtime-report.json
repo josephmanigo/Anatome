@@ -1,0 +1,42 @@
+{
+    "utc": "2026-09-05T23:26:13.0347716Z",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "units": 12,
+    "variants": 72,
+    "sceneAttemptsPassed": 72,
+    "deviceEncryption": true,
+    "xrSliderRayInput": true,
+    "xrReleaseStops": true,
+    "xrButtonRayInput": true,
+    "xrScrollRayInput": true,
+    "sliderBefore": 0.7600008249282837,
+    "sliderAfter": 1.2400001287460328,
+    "screenshots": [
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\career-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\signin-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\case-selection-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\captions-1440.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\career-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-large-text-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\settings-long-profile-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\captions-large-text-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-anatomy-closeup-960.png",
+        "C:\\Users\\My Pc\\Downloads\\new\\.impeccable\\review\\pneumothorax-tools-closeup-960.png"
+    ],
+    "errors": [],
+    "performance": {
+        "utc": "2026-09-05T23:26:13.0418277Z",
+        "device": "B550M Pro4 (To Be Filled By O.E.M.)",
+        "gpu": "NVIDIA GeForce RTX 3080",
+        "platform": "WindowsPlayer",
+        "preset": "Medium",
+        "frames": 5456,
+        "seconds": 95.13526916503906,
+        "averageFps": 57.349918365478519,
+        "onePercentLow": 12.641366004943848,
+        "fifteenMinutes": false
+    }
+}

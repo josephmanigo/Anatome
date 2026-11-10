@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-08T14:44:29.7028502Z",
+  "status": "READY_FOR_CHEST_HEIGHT_RETEST_PHYSICAL_QUEST_PENDING",
+  "applicationVersion": "1.4.2",
+  "versionCode": 10,
+  "contentVersion": "2026.10.2",
+  "apkSha256": "2ff5c560a5e01e276ed39a06fa23de71500087f13afb4b9e525a720f665706eb",
+  "apkBytes": 111988529,
+  "verified": {
+    "xrChecks": 2269,
+    "xrErrors": 0,
+    "xrRuntimeQaBypass": false,
+    "cameraHeightAndLocomotionChecks": 57,
+    "learningCoreAssertions": 889,
+    "sceneVariants": 72,
+    "sceneVariantsPassed": 72,
+    "sceneErrors": 0,
+    "readinessChecks": 22,
+    "apkChecks": 19,
+    "apkFailures": 0,
+    "updateSignerMatchesPrevious": true,
+    "windowsQaBuild": "Succeeded\n0 errors\n0 warnings\n00:00:47.5715993",
+    "windowsBuild": "Succeeded\n0 errors\n0 warnings\n00:00:27.0938025",
+    "androidBuild": "Succeeded\n0 errors\n0 warnings\n00:02:08.0041707"
+  },
+  "changes": [
+    "Holding trigger before first skin contact now starts a real cut on contact",
+    "Cut rejection and processing feedback reaches the learner panel",
+    "Tracking and focus recovery require trigger release before a new cut",
+    "Validated instrument evidence is retained across asynchronous cutting",
+    "Automatic 1.65 m working eye height and optional 0-0.8 m extra player height",
+    "Crouching, delayed floor poses, saved settings and teleport floor detection retain correct behavior"
+  ],
+  "audit": {
+    "scope": "Chest-wall cutting and shared height/input paths, one learner using either controller",
+    "unresolvedLocalCodeFindings": [],
+    "redReproductions": [
+      "Held trigger enters skin: zero samples before fix",
+      "Short player retained 1.22 m eye height before assistance",
+      "Delayed 0.9 m floor pose doubled initial assistance",
+      "Maximum height boost moved teleport probe beyond the ground"
+    ],
+    "initialConcurrentPlayerRun": {
+      "passed": 71,
+      "total": 72,
+      "errors": [
+        "Tool contact diagnostics: pneumothorax-0-2-7-equipment-pleural-fixation-suture-0; canInteract=False; held=True; active=False; visible=True; distance=0; angle=0; objectiveId=pneumothorax-0-2-7-equipment-pleural-fixation-suture-0, contactDuration=0, consumedGesture=False, lastActivation=False",
+        "Scene action failed: pneumothorax-0-2/pneumothorax-0-2-7-equipment-pleural-fixation-suture-0 / Step complete. Follow the next single instruction.",
+        "Scene action failed: pneumothorax-0-2/pneumothorax-0-2-7-equipment-pleural-fixation-suture-0 · Connect the water seal complete.",
+        "Assessment failed: pneumothorax-0-2; score=74.19355; mistakes=0; preservationFailure=False"
+      ],
+      "note": "Retained failed run. One case contact had canInteract=False while the XR test window also ran. All scenarios were rerun in isolation."
+    }
+  },
+  "retained": {
+    "curriculumUnchanged": true,
+    "databaseMigrationRequired": false,
+    "nativeMeshChangedThisUpdate": false,
+    "historicalBackendEvidence": "qa/dissection-overhaul/live-migration-report.json",
+    "backendEvidenceReused": true,
+    "historicalSourceLinks": "qa/case-clarity/source-links-after.json"
+  },
+  "evidence": [
+    "qa/chest-height/xr-before.json",
+    "qa/chest-height/xr-final-report.json",
+    "qa/chest-height/height-after.txt",
+    "qa/chest-height/player-isolated/runtime-report.json",
+    "qa/chest-height/player-isolated/readiness-regressions.json",
+    "qa/chest-height/apk/learning-apk-verification.json",
+    "qa/chest-height/source-hashes.json"
+  ],
+  "physicalQuestTested": false,
+  "authenticatedLearnerCurrentBuildTested": false,
+  "vrPerformanceMeasured": false,
+  "productionRelease": false,
+  "signing": "Android Debug certificate; sideload review, not a store release",
+  "remaining": [
+    "Physical Quest 2 and Quest 3 skin-cut and chunk-lift retest",
+    "Shorter and seated player comfort, reach, crouching and controller alignment",
+    "Physical tracking recovery, latency and sustained performance",
+    "Authenticated learner persistence and synchronization; publisher release signing"
+  ]
+}

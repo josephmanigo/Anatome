@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-07T10:03:25.084Z",
+  "project": "ckefbyhshjrlkheunpgc",
+  "contentVersion": "2026.10.2",
+  "passed": true,
+  "definitions": 72,
+  "definitionDigest": "bfa728009f70c07371d6b8027a21fa5c",
+  "readback": "version\ndefinitions\ndefinition_digest\n2026.09.1\n72\nd1e8919e0d7c3ba6439ec586f9159b6e\n2026.09.2\n72\n2aeff8dd75f229bff264e97f30e12309\n2026.09.3\n72\n92d7508084735a6757e0fd538dfbf839\n2026.10.1\n72\n786da1d1d0539b76a14bddf97062863d\n2026.10.2\n72\nbfa728009f70c07371d6b8027a21fa5c",
+  "oldDefinitionsUnchanged": true,
+  "previousVersions": 4,
+  "mutatedTables": [
+    "thorax_learning_definitions"
+  ],
+  "attemptRecordsModified": false,
+  "authenticatedLearnerTested": false,
+  "method": "Approved additive transaction via Supabase SQL Editor with exact-content and historical-definition checksum guards"
+}

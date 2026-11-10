@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-09T09:48:43.1215865Z",
+  "status": "READY_FOR_GRAB_WALK_RETEST_PHYSICAL_QUEST_PENDING",
+  "applicationVersion": "1.4.3",
+  "versionCode": 11,
+  "contentVersion": "2026.10.2",
+  "package": "org.thoraxlab.learning",
+  "apkSha256": "1591a24fe62855e685601ec28a38b2f6ec5e1d5eeb8b042e9421681aa7e3e99b",
+  "verified": {
+    "xrChecks": 2330,
+    "xrErrors": 0,
+    "runtimeQaBypass": false,
+    "cameraHeightAndLocomotionChecks": 63,
+    "gestureAndInputSwitchChecks": 31,
+    "learningCoreAssertions": 889,
+    "sceneVariants": 72,
+    "sceneVariantsPassed": 72,
+    "readinessChecks": 22,
+    "apkChecks": 19,
+    "apkFailures": 0,
+    "updateSignerMatchesPrevious": true,
+    "builds": {
+      "StandaloneWindows64-QA": "Succeeded\n0 errors\n0 warnings\n00:00:39.2077975",
+      "StandaloneWindows64": "Succeeded\n0 errors\n0 warnings\n00:00:22.7905995",
+      "Android": "Succeeded\n0 errors\n0 warnings\n00:01:59.3470120"
+    }
+  },
+  "changes": [
+    "Inspection grabbing in all four learning modes with pose restoration and no assessment credit",
+    "Current assembly placement and cut-chunk removal retain their validated evidence paths",
+    "Joystick walking default and one-time legacy settings upgrade; saved teleport remains available",
+    "Deadzone, bounded diagonal speed, room-scale startup alignment and floor-aligned collision clearance",
+    "Pause, tracking loss, carrying while walking, handedness and maximum height boost checked through controller input"
+  ],
+  "compatibility": "Settings schema remains 1 for the existing cloud RPC; movementRevision records the one-time walking upgrade. Live authenticated synchronization was not retested.",
+  "audit": {
+    "scope": "Shared anatomy grab and controller movement paths across four learning modes",
+    "unresolvedLocalCodeFindings": [],
+    "reproducedFailures": [
+      "IdentifyEnumerate controller grip rejected by CanManipulate",
+      "Joystick input below the deadzone moved the rig",
+      "Raised capsule hit the ceiling during walking",
+      "Floor-aligned capsule overlapped equipment at the old start",
+      "Repeated floor collision recovery changed calibrated height"
+    ],
+    "initialFailuresRetained": true
+  },
+  "evidence": [
+    "qa/grab-walk/xr-before.json",
+    "qa/grab-walk/height-before.txt",
+    "qa/grab-walk/xr-final-report.json",
+    "qa/grab-walk/player/runtime-report.json",
+    "qa/grab-walk/player/readiness-regressions.json",
+    "qa/grab-walk/apk/learning-apk-verification.json",
+    "qa/grab-walk/source-hashes.json"
+  ],
+  "physicalQuestTested": false,
+  "authenticatedLearnerCurrentBuildTested": false,
+  "vrPerformanceMeasured": false,
+  "productionRelease": false,
+  "signing": "Android Debug certificate; sideload review, not a store release"
+}

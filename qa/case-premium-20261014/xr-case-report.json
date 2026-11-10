@@ -1,0 +1,333 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-14T11:32:55.8934191Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "focus_unpause_cannot_steal_browser_input",
+            "detail": "Unpausing does not override a still-unfocused browser session.",
+            "passed": true
+        },
+        {
+            "id": "focus_gain_cannot_override_pause",
+            "detail": "Input remains blocked until both OS pause and focus recover.",
+            "passed": true
+        },
+        {
+            "id": "focus_returns_after_both_events",
+            "detail": "Both callback orders recover focus.",
+            "passed": true
+        },
+        {
+            "id": "case_has_visible_controls",
+            "detail": "The current case and its controls must be available from the main step.",
+            "passed": true
+        },
+        {
+            "id": "case_has_live_action_feedback",
+            "detail": "Pickup, alignment and action progress must be visible on the main panel.",
+            "passed": true
+        },
+        {
+            "id": "references_return_to_activity",
+            "detail": "References must have a direct return to the retained activity.",
+            "passed": true
+        },
+        {
+            "id": "references_preserve_attempt",
+            "detail": "Viewing references never restarts the current attempt.",
+            "passed": true
+        },
+        {
+            "id": "browser_has_visible_return",
+            "detail": "Opening a website leaves a saved-place screen with a return action.",
+            "passed": true
+        },
+        {
+            "id": "browser_waits_for_real_focus",
+            "detail": "Unpause alone cannot resume the activity behind the browser.",
+            "passed": true
+        },
+        {
+            "id": "browser_resumes_same_step",
+            "detail": "Focus recovery returns to the same step, without rebuilding the case or losing progress.",
+            "passed": true
+        },
+        {
+            "id": "case_reaches_patient_plan",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "pointer_contact_needs_no_trigger",
+            "detail": "A held pointer at the chart completes contact without an unexplained trigger hold.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1/Pause",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1/Pause",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1/Case and controls",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Case and controls; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1/Case and controls",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1/Show me this step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Show me this step; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1/Show me this step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1/Tools and more help",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Tools and more help; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1/Tools and more help",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1.5/Guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Guide; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1.5/Guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1.5/Pause",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1.5/Pause",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1.5/Case and controls",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Case and controls; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1.5/Case and controls",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1.5/Show me this step",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Show me this step; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1.5/Show me this step",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/case-clarity/1.5/Tools and more help",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Tools and more help; callbacks=1; frame delay=0",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/case-clarity/1.5/Tools and more help",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "case_overview_available_without_restart",
+            "detail": "Opening the case overview retains progress.",
+            "passed": true
+        },
+        {
+            "id": "case_lesson_starts_with_briefing",
+            "detail": "New case lessons explain the patient and controls before interaction.",
+            "passed": true
+        },
+        {
+            "id": "case_begins_from_briefing",
+            "detail": "Begin enters the first step without awarding credit.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Return to activity world=(-0.24, 1.79, 0.61); screen=(577.33, 598.19, 0.95); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Case and controls world=(-0.05, 1.49, 0.07); screen=(578.42, 402.12, 0.95); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Return to activity world=(-0.06, 1.79, 0.07); screen=(955.97, 596.93, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Begin this case world=(-0.06, 1.79, 0.07); screen=(955.97, 596.93, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)"
+    ]
+}

@@ -1,0 +1,1 @@
+Restored cloud-compatible schema in 2 local test preference files; checksums verified and originals preserved.

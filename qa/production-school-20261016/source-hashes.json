@@ -1,0 +1,450 @@
+{
+  "scope": "Workspace code/configuration snapshot after final build; not a reproducible-build claim",
+  "files": [
+    {
+      "path": "pipeline/build-school-release.ps1",
+      "sha256": "e5885fbfdda62d438d925ae9a7f56ce666391bdca98623b84ee886d4e06d3a32",
+      "bytes": 1602
+    },
+    {
+      "path": "pipeline/run-unity.ps1",
+      "sha256": "9449ce8a615c429565866bf9eda1be8d231b8bd6284d904697139dd41f527e11",
+      "bytes": 1314
+    },
+    {
+      "path": "pipeline/verify-learning-apk.py",
+      "sha256": "fe2a80f135bbf3861e652507cd0b72c91d2c6dd714809a17d0bf6240dc5ac3e5",
+      "bytes": 8292
+    },
+    {
+      "path": "pipeline/verify-vr-release-gate.ps1",
+      "sha256": "d45dc4bd3420fd7f18559332b5e1546d6c4c183a90bb5692929e9810be3e8f0f",
+      "bytes": 3416
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/Plugins/Android/arm64-v8a/libthoraxcut.so",
+      "sha256": "f4cd7af110bac5d8f51a8b58476024c7fb44339b73d518d7324e08c574371f26",
+      "bytes": 16245312
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/Plugins/x86_64/thoraxcut.dll",
+      "sha256": "aae72c8d73f156bcae58c4cdb6edeebf2af0f22d0e971a3b642fed421cda6dbf",
+      "bytes": 453120
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/AccountCloudRecoveryVerification.cs",
+      "sha256": "6705dfd706e87355d12abb3e14a2b2cf8ed6d9b372ace8a2563536e10faf0363",
+      "bytes": 5097
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/AccountPayloadVerification.cs",
+      "sha256": "8f9d95f4e6ea1b5150d802da34ff90a611037e1e8b608adefea1bb482dc72230",
+      "bytes": 1859
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/BuildProject.cs",
+      "sha256": "2ec2d95540647347281a6df3373f5c49a258842711546bd2a727fad92f9ebf01",
+      "bytes": 21976
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/CaseVisualVerification.cs",
+      "sha256": "e0c5abd00b378851f5fcdb97eb108776566e19703cda901184aeaf864566867e",
+      "bytes": 9488
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/GlovedHandAssets.cs",
+      "sha256": "5d2f5d3c04e91fb429ad6667fcee8e288e52c1b4432f35cfc7b385fc33229450",
+      "bytes": 15701
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/InstrumentVisualVerification.cs",
+      "sha256": "5719e93bd8b2c1aa8327853b6c007c79f440b13b045b36841c3f9de1b3f7c1ae",
+      "bytes": 6398
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningAccountVerification.cs",
+      "sha256": "6b72caacf80124fd770d4b103dfd3c60da9fe5893bdb0456e26e5865f04dc331",
+      "bytes": 28865
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningAndroidPolicy.cs",
+      "sha256": "16b267cb32489be30e3317834dd971f3f08e3fca7b54f23bf02772c5b43668cd",
+      "bytes": 3924
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningBuild.cs",
+      "sha256": "45830e4335c80ecd82c7fff762a29c098b1954b00b2550704e41ca8427d7694d",
+      "bytes": 13393
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningCardArt.cs",
+      "sha256": "093b3877539047b7f18c9b0628fd4aa2212fa3345bd9a30737af3721138844f9",
+      "bytes": 23427
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningCutMeshRepair.cs",
+      "sha256": "3abc227a5a07649973114865f8a2176db5b278cd3530c06727249fb36829c6e5",
+      "bytes": 9203
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningDissectionLayerVerification.cs",
+      "sha256": "740485ff3b35c3aa5fe3906375949b083d89631b038b42dd6f4e27f01fe8d01a",
+      "bytes": 5773
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningEditorHandoff.cs",
+      "sha256": "5870ef5f46f2e87ae6713f6f318a43b3d14bfc646692e7b6a98bfea47aeab560",
+      "bytes": 1673
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningEditorPlayMode.cs",
+      "sha256": "90804892f9833ac29f3729b2818f37740314db8547ea7180f9f68bc72ce63d3e",
+      "bytes": 1705
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningSimulatorSetup.cs",
+      "sha256": "fcc9a36cc449d4cbe412ad7d19179b5710ff20c194182d4f50c6b5c1a60daadf",
+      "bytes": 4411
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Cases.cs",
+      "sha256": "3573f3c4ecbcb3bd5b9c6f66de78e16aca3f6f3fa1bafaa97fab440f0fed8bb7",
+      "bytes": 6541
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.cs",
+      "sha256": "e2874a9d340a3d89644964bbead44533255c8060be645323eded36d79fcef6cf",
+      "bytes": 76749
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Dissection.cs",
+      "sha256": "921468ba0c02a2d443ac8b394a08e06cf86c1504f20fd38f25b05d82a410eb49",
+      "bytes": 11605
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Facing.cs",
+      "sha256": "23c9f3ff4da96ae154dd87f998e14e3ced4c0cbd1c7aa8a8ee9d40fe26eb2771",
+      "bytes": 8095
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Manipulation.cs",
+      "sha256": "d690fd0a930961dfd0318d8af5fb5e47ebd4aef96cfd9aa3025fa4d63befaffd",
+      "bytes": 12845
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Settings.cs",
+      "sha256": "56413a8f1c68d6929bf36c4aeb97c6e20571c9fc0a42091971f0cd45d48716c7",
+      "bytes": 25711
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.UI.cs",
+      "sha256": "33bf304a6846e1113280f7b112212a24abafdcde77a3c63ff05204db629dd401",
+      "bytes": 36054
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.Usability.cs",
+      "sha256": "12dba2e2025bbc4f8a7c8045dcfbd8ce8022ee4139cbc91aaadd262fee303c4e",
+      "bytes": 13407
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/SchoolReleaseVerification.cs",
+      "sha256": "d276bbd5c333076c0e90af63a1bc17a39b61adf886ac6b129d554e23f71397d6",
+      "bytes": 4857
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/VRSpecimenAssets.cs",
+      "sha256": "eba244d94f7b45ada8d8382037fd148b1f0417406c47dc922c1c7bf1a7713037",
+      "bytes": 16199
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/AccountService.cs",
+      "sha256": "d35cd5ce5755f13a64283499b8e5e1e2f7d6f8ad15dd376dee3309045b058061",
+      "bytes": 14399
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/CaseAnatomyWorkbench.cs",
+      "sha256": "4165fda1e19451638efaf452779ac908fb61a33b4fc6a9649f33cac7cdc2d9a1",
+      "bytes": 28985
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/ClinicalReasoningWorkbench.cs",
+      "sha256": "96571eb7aa0864ff5fedcb71ef5be25df2da4a1391eee882c5a021a8c45421c8",
+      "bytes": 11285
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/ComfortVignette.cs",
+      "sha256": "c5893a20f1c270c9c852e5ed27ced03d4aa818dddb72b3ba7115f134a4ade050",
+      "bytes": 1804
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/ControllerVisual.cs",
+      "sha256": "c1c921cb27b075ad76a056c29f759c7b2342e8e2c4a26ef2bae51190b92dcfee",
+      "bytes": 2187
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/AssessmentEngine.cs",
+      "sha256": "438dad0320f793decbceab18083e8040be6af3e241909671e219ed3c7d64f102",
+      "bytes": 13956
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/AtomicFileStore.cs",
+      "sha256": "f409d72d22dda8323a7204f09c627f35aab6307c7a1517e826fda964f8f0f1e0",
+      "bytes": 3558
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/LearningBrand.cs",
+      "sha256": "35f500b78438dcdafd8049405f69505552518abcea28a8821e61f8c63af836d6",
+      "bytes": 1235
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/LearningModels.cs",
+      "sha256": "07bd0c2c84a499bf96181293c3315e5596050179477871cb25d88ea94ef28442",
+      "bytes": 5382
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/SettingsProfile.cs",
+      "sha256": "1d41080c19ff1250c5ad156a5bdb222c21be33e40105371205475df9ef51ddbe",
+      "bytes": 4863
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/XRInteractionGate.cs",
+      "sha256": "af6b6c5aa2182bc5877447f30b5c87235dd962a86e3209786286e27a7ccdf281",
+      "bytes": 1435
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/DiseaseTeachingModel.cs",
+      "sha256": "dd1d925d0eb90af6ee01351623507090ceb32b7c5ea674fce00048749426c47b",
+      "bytes": 10069
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/DissectionContactMonitor.cs",
+      "sha256": "f96e7f8ec4f78c192412296bf511d66b0e55bff7c9f7efaa89a9148b53a1a524",
+      "bytes": 3234
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/EnumerationMarkers.cs",
+      "sha256": "f31af4e1e261a43f785ff05bfad097c48a69fb7df1373c2f092e7e98dff5cdd6",
+      "bytes": 3238
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/GlovedHandVisual.cs",
+      "sha256": "620bd871e487bd8ffab3d303705a698961d26beaa6a82170eb2821a4f73c1d6e",
+      "bytes": 7002
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/GuidedInteractionCoach.cs",
+      "sha256": "e2fec3e579eeb0dbef9939c2d24e84d8426fe50a7328b8287713c18a14f3598a",
+      "bytes": 6988
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/InstrumentGeometry.cs",
+      "sha256": "11332d696f5489bc20d3ac55ae118bbdb9cebb33a6ab9687e0cfe91c50d20f33",
+      "bytes": 30703
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabAudio.cs",
+      "sha256": "ac95aa53784b9d7667f2291663cd2103139188635677d8b146c749bde1e64697",
+      "bytes": 1438
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabRuntime.cs",
+      "sha256": "8d7e063f41a7e5a05bf6b1350a7c531ecfa202240730b63c3faaf177940a26a2",
+      "bytes": 34974
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Cases.cs",
+      "sha256": "a4cb67635e2083d44c2cd2e856661270d6866d01643dcdb4a0982f3406d7af1b",
+      "bytes": 5427
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.cs",
+      "sha256": "7b51afd1c78902a184ce180245b8584d7b01ae306ed5d905501c774859e65ee1",
+      "bytes": 48903
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Guide.cs",
+      "sha256": "bfd18554d40d88386142298f872f365c17b24a0bbd743acd37e12a1a0d996a3e",
+      "bytes": 3497
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Settings.cs",
+      "sha256": "f3cab3e038fec81aa92751985ace11d199d3e2f982b8e8597d29e30c9707b4a1",
+      "bytes": 15894
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUIVisuals.cs",
+      "sha256": "10b61a3e5d2348cc944253bf9da35fda45899d6561bb94a5a766d8bd255b15e9",
+      "bytes": 10142
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabWidgets.cs",
+      "sha256": "002eb8eb623de16ee534de48a8ce299bc1b13eb615c0423500dfbfa138b72ee9",
+      "bytes": 9434
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningBenchmark.cs",
+      "sha256": "0b588df0fd70beb39be967b271bec826ad33c06914dabe618b76ca0f055047fa",
+      "bytes": 2685
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningControls.cs",
+      "sha256": "e61fed830b9f731f1ecd313fe1256c6eb9ec5497285ad269487846ba1a2d1dca",
+      "bytes": 11642
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningPerformanceMonitor.cs",
+      "sha256": "91ed2703fc8e81f271891760f6e0b27d251713291d9cff63a4b0482099048da8",
+      "bytes": 2996
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningReadinessRegression.cs",
+      "sha256": "8c3690519d3736e91a1996a3dbb50ca1b15550ea4b08976de648bca95842e124",
+      "bytes": 8926
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningRuntimeVerification.cs",
+      "sha256": "c9d60eb9e0c74834d595bfb10a773865bea3cba223f96e5b9bc3dcd3e6998866",
+      "bytes": 17754
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningSceneActionFixture.cs",
+      "sha256": "1deb0fd6ad5c67e275159d61c26e2dfa6b4485486e4556ea1dc4937809490013",
+      "bytes": 10597
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningXRInput.cs",
+      "sha256": "353a12fb0a346ec5aae4eab72533170f55c33ad941317509fe5d2993e2e3e6c5",
+      "bytes": 12021
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LessonDemonstrator.cs",
+      "sha256": "620006c7bae719743c11d34e4c1b2c60c43a66c03541caf0ee4352a9d43746d4",
+      "bytes": 4245
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LessonNarrator.cs",
+      "sha256": "eb7b84852fd15abc64c06be99aff54d1101953c2c39093b9ed726e0c4260fe32",
+      "bytes": 2652
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/OrientationGrabConstraint.cs",
+      "sha256": "b72dab1432b25a984dd19d08fb7ab7f40918da92d31f013b5aa088598c7e2e4c",
+      "bytes": 1422
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/ProcedureWorkbench.Coaching.cs",
+      "sha256": "9e73760f368770ce377984310e423721c7bb33d183d73c43e1714d4f690ea854",
+      "bytes": 6946
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/ProcedureWorkbench.cs",
+      "sha256": "2badcf0741ed8a4cfea1b2c824c209e75a486d535e866a022f3e02dd232fec90",
+      "bytes": 33908
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/QuestRefreshFeature.cs",
+      "sha256": "c955cf3479cf23b9009de6fa7c49b0ebec4a7ba3bcb6724b0abe0916d4841e52",
+      "bytes": 2934
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/SettingsService.cs",
+      "sha256": "6f1fa366184c7a243440b5ba4bef0d156667c1b257f777cbf5c08aaca27e71f9",
+      "bytes": 7861
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/TrustedDeviceStore.cs",
+      "sha256": "01dbdfd84a000924e3c1be0cc9ad95d9cb84a110929db970f754dfed1526b9a3",
+      "bytes": 8942
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/VRSpecimenPresentation.cs",
+      "sha256": "c029a1989c7496fd383b2efe6e3ac47ab2f3b2d1933651684db88151210b39eb",
+      "bytes": 22104
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/WorkbenchGeometry.cs",
+      "sha256": "0f047e623fdfcf68c4cc47c4318303c13a03a17e5927fda9b27439a1c492f50e",
+      "bytes": 18387
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/catalog.json",
+      "sha256": "6b012ed1de8484645956b29c7963656bfe5ddf1ae15a3eac56c2f67ca1a3f9a5",
+      "bytes": 704473
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/supabase-config.json",
+      "sha256": "304a9e67f781dadc0ae3b225546ff3bfa4786e89272e9b6f69572375de4e7184",
+      "bytes": 183
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/AnatomyStructure.cs",
+      "sha256": "26053afd9bd0130fcfa35e21474a2c32bc29b1790fec258b420a95ae64ac43dc",
+      "bytes": 5094
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/BoneCutDetail.cs",
+      "sha256": "c84375881e638e6fa661ec2bd1f12e6fddfcdb21f417f16135087a43d4c2663f",
+      "bytes": 2663
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/DissectionSession.cs",
+      "sha256": "46279f222fb82da7d592f24cd8c086d09c1b1e52f832265bed96f373eef28f12",
+      "bytes": 13824
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/DissectionToolVisual.cs",
+      "sha256": "1e742f65e55f3e06d5757d4ba27a688624d7aa7737a89a6454401a3944b30237",
+      "bytes": 1054
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/LabButton.cs",
+      "sha256": "d0968cd4a46a0162fafc1691a13693d70f3f69dd7760a8c24fe9c8be69e51fe5",
+      "bytes": 1213
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/LabControls.cs",
+      "sha256": "52141d6436c7ac8185656ea5aec208e9237c202faf2630ffd4e1ed27cd50f91d",
+      "bytes": 6972
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/LabHandInteractor.cs",
+      "sha256": "d6ff2e6e7dcc76724ad8632c9ec7fc9e633f7fbcedc538553e56c8293abac842",
+      "bytes": 11099
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/NativeCutting.cs",
+      "sha256": "3f4eddc5963451b66fe88e4944346b8549e66c24fdac0a2f18bbfc996cc97a16",
+      "bytes": 5211
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/RuntimeVerification.cs",
+      "sha256": "7e13e12711fde13dcb44e5345790e8c81196275280e4ba8e96f48b6e4b740551",
+      "bytes": 10049
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Scripts/SoftHandling.cs",
+      "sha256": "fa800af7f746ad2cf9ffcf465f990e80b31bf7894df7e25eff83f515b3adefc0",
+      "bytes": 881
+    },
+    {
+      "path": "unity/ThoraxLab/Packages/manifest.json",
+      "sha256": "4391922515ae36866e6d0c569c459a36414f9c7a20de2e6e98fdb223a0ddec73",
+      "bytes": 745
+    },
+    {
+      "path": "unity/ThoraxLab/Packages/packages-lock.json",
+      "sha256": "450fbfa6bf6ea59ac53278ba504aa9ea5cd996805a842cf69c92fda5210447b7",
+      "bytes": 8952
+    },
+    {
+      "path": "unity/ThoraxLab/ProjectSettings/GraphicsSettings.asset",
+      "sha256": "e81fc2d8be6aa0f12f09040d019503c737d9f515561e60ae6a8923be3a4c0fff",
+      "bytes": 2615
+    },
+    {
+      "path": "unity/ThoraxLab/ProjectSettings/ProjectSettings.asset",
+      "sha256": "2d8be15f6f6787028c2b18c77242b77b3b4b7741ff626f8a0fbe30da922cce62",
+      "bytes": 22438
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "utc": "2026-09-19T13:05:47.1369585Z",
+  "apkBuilt": false,
+  "method": "Installed Unity Roslyn compiler and cached Unity build references",
+  "checks": [
+    {
+      "name": "Editor runtime",
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\editor\\Assembly-CSharp.txt"
+    },
+    {
+      "name": "Editor verification",
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\editor\\Assembly-CSharp-Editor.txt"
+    },
+    {
+      "name": "Android managed scripts",
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\android\\Assembly-CSharp.txt"
+    }
+  ],
+  "unityEditorRan": false
+}

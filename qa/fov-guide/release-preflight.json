@@ -1,0 +1,40 @@
+{
+  "checkedUtc": "2026-10-21T23:43:48.9057389Z",
+  "status": "SIGNED_APK_BUILT_LOCAL_CHECKS_PASSED_PHYSICAL_QUEST_PENDING",
+  "preparedVersion": "1.5.1",
+  "preparedVersionCode": 19,
+  "package": "org.thoraxlab.learning",
+  "editorVersion": "6000.3.19f1",
+  "licenseProbeExitCode": 198,
+  "licenseProbeLog": "qa/fov-guide-license-probe.log",
+  "licenseFinding": "Saved license contains no currently valid entitlement; Editor has no refresh access token; Hub remains at Signing in",
+  "storedSigningIdentityReadable": true,
+  "storedPublicCertificateMatchesPreviousApk": true,
+  "previousApk": "builds/AnatomeSchool/Anatome-1.5.0-Production.apk",
+  "previousApkPreserved": true,
+  "newApkBuilt": true,
+  "physicalQuestConnected": false,
+  "newApkTested": "Package and simulator checks passed; no physical Quest test",
+  "previousFeatureEvidence": "qa/fov-guide/player-verified/report.json",
+  "sources": [
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningBuild.cs",
+      "sha256": "ab1c1712fa8ece6425f74aa27a06f296bccf550f2ebd094f726044cac9cfb353"
+    },
+    {
+      "path": "unity/ThoraxLab/ProjectSettings/ProjectSettings.asset",
+      "sha256": "40a2e6319d3a9f6eae9e7c0dd04d115e92fa98c0f97017b80e693c9e919386fe"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/GuidedInteractionCoach.Dissection.cs",
+      "sha256": "58729738ffb32ad201b4c0e794859ca97c99104140685cb7275668c8a4ba14ee"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/SettingsProfile.cs",
+      "sha256": "ae46efe1deef74dbced6c1f9586356e26ebaff309e1c9dafcaa66b470d788424"
+    }
+  ],
+  "completedUtc": "2026-10-21T23:55:57.569302+00:00",
+  "licenseResolution": "Editor build and simulator succeeded after the user completed Unity Hub sign-in",
+  "finalReport": "qa/fov-guide/verification-summary.json"
+}

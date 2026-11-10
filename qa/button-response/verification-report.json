@@ -1,0 +1,99 @@
+{
+  "verifiedUtc": "2026-10-07T07:10:53.5986472Z",
+  "applicationVersion": "1.2.1",
+  "androidVersionCode": 5,
+  "revision": "immediate-buttons-20261007",
+  "contentVersion": "2026.10.1",
+  "localValidationPassed": true,
+  "physicalQuestCurrentBuildTested": false,
+  "checks": {
+    "originalDelayReproduced": true,
+    "fullXrPassed": true,
+    "allButtonTargetsImmediate": true,
+    "allPlayerScenarios": true,
+    "playerWidgets": true,
+    "readiness": true,
+    "curriculum": true,
+    "windowsBuild": true,
+    "androidBuild": true,
+    "apk": true,
+    "updateSigningIdentity": true,
+    "archive": true,
+    "inputAdapterUnchanged": true
+  },
+  "verification": {
+    "xrChecks": 2059,
+    "xrUtc": "2026-10-07T07:01:52.3862631Z",
+    "buttonTargets": 554,
+    "pressToCallbackFrames": 1,
+    "pointerDownToClickFrames": 0,
+    "playerScenariosPassed": 72,
+    "playerTrackingBypass": true,
+    "playerUtc": "2026-10-07T07:08:52.3073751Z",
+    "readinessChecks": 22,
+    "coreAssertions": 826,
+    "contentChecks": 1669,
+    "apkChecks": 16
+  },
+  "builds": {
+    "windowsDevelopment": "Succeeded\n0 errors\n0 warnings\n00:00:40.9187829",
+    "android": "Succeeded\n0 errors\n0 warnings\n00:01:52.6897049"
+  },
+  "artifacts": {
+    "utc": "2026-10-07T07:09:46.8037643Z",
+    "archive": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-Responsive-Buttons-Quest3-Test-Kit-20261007-150942.zip",
+    "archiveSha256": "c24f84fb3b8ebc666333e4259e9d5a4662ff0e61a4c81e8bfc7a564704e63c94",
+    "apkSha256": "e7c9d03b4c9f1c274ccb899485a5a4cb85d19bc0a27cb5f1fd93b510e774cfa6",
+    "verified": true
+  },
+  "apk": {
+    "path": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome.apk",
+    "bytes": 109097081,
+    "sha256": "e7c9d03b4c9f1c274ccb899485a5a4cb85d19bc0a27cb5f1fd93b510e774cfa6",
+    "signing": "Android Debug certificate; sideload review, not a store release"
+  },
+  "sourceHashes": [
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.cs",
+      "sha256": "b2172e8e1972b53a39353a7fa99f27d6b2f334a836d30c4818eb39d92fdc6f80"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabWidgets.cs",
+      "sha256": "002eb8eb623de16ee534de48a8ce299bc1b13eb615c0423500dfbfa138b72ee9"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUIVisuals.cs",
+      "sha256": "10b61a3e5d2348cc944253bf9da35fda45899d6561bb94a5a766d8bd255b15e9"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningXRInput.cs",
+      "sha256": "353a12fb0a346ec5aae4eab72533170f55c33ad941317509fe5d2993e2e3e6c5"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.cs",
+      "sha256": "82d5069caabc67030510f8c40af49795c177cf745ee7fe5544169329fe4a27ee"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.UI.cs",
+      "sha256": "1c2911975231df60e893cd9c6b4822417ba53037e0c5a65833a32f2b6c4b1251"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningBuild.cs",
+      "sha256": "d5c52ebb6fffec263f25c0b12bebb5697b5fae2d9066746e6081bcb90a5be591"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/how-to-play.json",
+      "sha256": "a364792eb052d4eda1f353c551c91ecd9063694a5ed2122cc5996fe56b1b774e"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/Voice/guide-point.wav",
+      "sha256": "5c914f5970f187bdbfdeab5e23675e572a983535b45e2d7a70dce7c4d064e53e"
+    }
+  ],
+  "historicalEvidenceRetained": [
+    "qa/guide-voice-audit/assets-report.json",
+    "qa/clinical-learning/live-migration-report.json",
+    "qa/clinical-learning/learning-live-api-report.json"
+  ],
+  "boundary": "Unity and Windows software verification only. No connected Quest: physical response, sustained frame rate, thermals, and camera hand tracking need the school retest. Existing October 4 backend evidence was reused; no backend deployment was changed."
+}

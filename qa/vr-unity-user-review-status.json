@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-06T01:08:01.7644771Z",
+  "unityPid": 4064,
+  "launch": "Non-batch visible launch requested, OpenVRReview, Windows target",
+  "scene": "Assets/ThoraxLab/Scenes/ThoraxLab.unity",
+  "simulatorActiveInPlayMode": true,
+  "evidence": "qa/vr-unity-user-review.log: official XRI XR Device Simulator active",
+  "separateEditorStartupIssue": "UnityEditor.Search.SearchDatabase.EnumerateAll ArgumentOutOfRangeException during startup indexing",
+  "physicalXrRuntime": "Unavailable on this host; official Editor simulator initialized successfully",
+  "userVisualReview": "Pending"
+}

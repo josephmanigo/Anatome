@@ -1,0 +1,74 @@
+[
+  {
+    "id": "FMA9756",
+    "axis": 0,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9756",
+    "axis": 1,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9756",
+    "axis": 2,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9757",
+    "axis": 0,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9757",
+    "axis": 1,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9757",
+    "axis": 2,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9758",
+    "axis": 0,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9758",
+    "axis": 1,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9758",
+    "axis": 2,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  }
+]

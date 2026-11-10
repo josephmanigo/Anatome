@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-07T08:49:43.6163026Z",
+  "applicationVersion": "1.3.1",
+  "versionCode": 7,
+  "localValidationPassed": true,
+  "checks": {
+    "xr": true,
+    "compiledPlayer": true,
+    "readiness": true,
+    "importedMeshes": true,
+    "windowsBuild": true,
+    "androidBuild": true,
+    "apk": true,
+    "upgrade": true,
+    "package": true
+  },
+  "verification": {
+    "xrChecks": 2141,
+    "samePressFrameButtonTargets": 558,
+    "compiledScenarios": 72,
+    "readinessChecks": 22,
+    "importedMeshChecks": 39,
+    "apkChecks": 16
+  },
+  "rootCause": "Accepted layers and fragments stayed visible beside the specimen; checkpoint restoration offset completed intact shells into the same work area.",
+  "change": "Retire completed layers after accepted exposure, retain their hidden state in Undo snapshots, and restore checkpoints without floating offset shells.",
+  "regressionBefore": "xr-red-report.json",
+  "regressionAfter": "xr-final-report.json",
+  "visualReview": [
+    "before.png",
+    "after-grab-REC_fascia.png",
+    "player/vr-dissection-muscles-revealed.png"
+  ],
+  "artifact": {
+    "utc": "2026-10-07T08:49:12.6648849Z",
+    "archive": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-Dissection-Fix-Quest3-Test-Kit-20261007-164908.zip",
+    "archiveSha256": "eacc89434ee3dfac7139a1700d5ef9849fe9b655e93c83fef77ad143114a2469",
+    "apkSha256": "fdb0adc1d75e2fcf6e0854fc038e9ee647a1121e500896b2f410f9d3bc6ace98",
+    "verified": true
+  },
+  "physicalQuestTested": false,
+  "questPerformanceMeasured": false,
+  "productionReady": false,
+  "signing": "Android Debug certificate; sideload review, not a store release",
+  "remainingAcceptance": "Install 1.3.1 on Quest 3 and repeat cut, grip, lift, release, Undo, Restore and Continue. No headset was connected for this local run."
+}

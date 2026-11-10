@@ -1,0 +1,19 @@
+{
+    "utc": "2026-09-06T17:07:32.1543823Z",
+    "status": "passed",
+    "passed": [
+        "repeated_profile_read_is_read_only",
+        "profile_delete_creates_no_replacement",
+        "isolation_test_preserved_account_a_attempts",
+        "server_reset_increments_generation",
+        "stale_client_cannot_restore_reset_records",
+        "transport_interruption_preserves_pending_progress",
+        "reconnection_retries_pending_sync",
+        "sign_out_cancels_inflight_sync_application",
+        "account_reconnects_after_cancelled_sync"
+    ],
+    "errors": [],
+    "profilesBefore": 4,
+    "oldGeneration": 0,
+    "newGeneration": 1
+}

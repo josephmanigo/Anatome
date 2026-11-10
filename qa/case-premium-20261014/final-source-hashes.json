@@ -1,0 +1,57 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0F047E623FDFCF68C4CC47C4318303C13A03A17E5927FDA9B27439A1C492F50E",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\WorkbenchGeometry.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "4165FDA1E19451638EFAF452779AC908FB61A33B4FC6A9649F33CAC7CDC2D9A1",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\CaseAnatomyWorkbench.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1D41080C19FF1250C5AD156A5BDB222C21BE33E40105371205475DF9EF51DDBE",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\Core\\SettingsProfile.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6F1FA366184C7A243440B5BA4BEF0D156667C1B257F777CBF5C08AACA27E71F9",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\SettingsService.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C955CF3479CF23B9009DE6FA7C49B0EBEC4A7BA3BCB6724B0ABE0916D4841E52",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\QuestRefreshFeature.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "76CCCEB8FE375F22E0C4F2B7CEA78D4BAAC12B5B971D20C0482B9AED5063F6A3",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LearningPerformanceMonitor.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "42DDCE6AC749FCC7A154C73E1DF09B5A749398E6B0A80E28A331B9EB45D3D299",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LabUI.Settings.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E0C5ABD00B378851F5FCDB97EB108776566E19703CDA901184AEAF864566867E",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\CaseVisualVerification.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7D989FBFE687FA8D88289B8A30E47A7A7681B24C7B0BD25282D90EA4752D972D",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningBuild.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6F6BC83DC7900B830B64C195247BCBEF21ACE7919C7B93134FC2C7C51D578A70",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Settings.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "CB6F1822982FDA2C5896D7027BE94678B2906202D1906C54502452493F93F612",
+    "Path": "C:\\Users\\My Pc\\Downloads\\new\\qa\\learning-tests\\Program.cs"
+  }
+]

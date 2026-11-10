@@ -1,0 +1,161 @@
+{
+  "utc": "2026-09-06T17:30:52.070974+00:00",
+  "project": "unity/ThoraxLab",
+  "verificationProject": "unity/ThoraxLabReview",
+  "unity": "6000.3.19f1",
+  "status": "Software checks passed; release signing and remaining acceptance checks outstanding",
+  "productionAccepted": false,
+  "performance": "Excluded at user request",
+  "tests": {
+    "liveAccounts": 38,
+    "liveCloudRecovery": 9,
+    "sceneVariants": 72,
+    "playerRegressions": 22,
+    "officialXrSimulator": 74,
+    "coreAssertions": 769,
+    "contentAssertions": 1451,
+    "postgresChecks": 251,
+    "nativeChecks": 81,
+    "sideloadApkChecks": 11,
+    "releaseIsolationPassed": true,
+    "strictReleaseSigningPassed": false
+  },
+  "accountCleanup": "Both approved temporary accounts reset and permanently deleted; normal account not used",
+  "source": {
+    "assetFiles": 1943,
+    "exactMatches": 1942,
+    "allCodeAndAnatomyMatch": true,
+    "allowedGeneratedCacheDifferences": [
+      {
+        "path": "ThoraxLab/Resources/Fonts/SourceSans3-SDF.asset",
+        "sha256": "8a133bec27d4d424b251043b0aba885be8da70f8aa9fd55649972b5f469ec7c4",
+        "reviewSha256": "c78fbf20c940794c3d8beeb4ec7e954bc5cf6bd66b70530328c9bdb5abcae0f3",
+        "matchesReview": false,
+        "allowedDifference": "Generated TMP font feature cache only; every other serialized field matches"
+      }
+    ],
+    "unexpectedReviewAssets": [],
+    "qaAssemblySha256": "fa48dea8d6fbe2b2af72b682a01518cf02ca59f0b20e459a325ebbe0a73e9b78"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\ThoraxLab-VR-Windows-20260907-012854.zip",
+      "bytes": 112102317,
+      "sha256": "071d4c72f207dfd2bc397c417b86f6cea488bb94bb86064a1dda314639f5583b"
+    },
+    {
+      "path": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningQuest\\ThoraxLab.apk",
+      "bytes": 109054622,
+      "sha256": "353be45612802c99cdf826b11d974bc76a95e196f0bdcd2d35d0d7ba11077983"
+    }
+  ],
+  "reports": [
+    {
+      "path": "qa/non-performance-verification/live-account-report.json",
+      "bytes": 5388,
+      "sha256": "460c96464b324205d8ff6a849042d8dcf47a91a8856b8c65ec92da0a86f591eb"
+    },
+    {
+      "path": "qa/non-performance-verification/cloud-recovery-report.json",
+      "bytes": 642,
+      "sha256": "3a83778bd94d5720787c30902c1a83e24b5412f208395145afd74644d80c038e"
+    },
+    {
+      "path": "qa/non-performance-verification/profile-payload-report.json",
+      "bytes": 251,
+      "sha256": "f24ad8335bf530ce15767910f8099dc72c0e053d3845e3230c109d9912f9576c"
+    },
+    {
+      "path": "qa/non-performance-verification/player/runtime-report.json",
+      "bytes": 3950,
+      "sha256": "c46d2c338b0bccb15c5a16d0dfee80fc6d5b1658f03d348a3bd3cc2b991a3cef"
+    },
+    {
+      "path": "qa/non-performance-verification/player/readiness-regressions.json",
+      "bytes": 2459,
+      "sha256": "6555f93e6d687d4bf6a6c766d321f5ef5d945a6b8639ca281b8d11d482ffe137"
+    },
+    {
+      "path": "qa/non-performance-verification/core-tests.txt",
+      "bytes": 122,
+      "sha256": "0e936f652c88f36055c32c2bbeba38c65952c377b45a4019914d5cde779a85e5"
+    },
+    {
+      "path": "qa/non-performance-verification/native-tests.txt",
+      "bytes": 2576,
+      "sha256": "7df9ea96f9092321f5537fc7930decaea0c451a42f1b4130c952b7a26423d632"
+    },
+    {
+      "path": "qa/non-performance-verification/source-assets-snapshot.json",
+      "bytes": 559043,
+      "sha256": "b670e04efc825bca7b6a1408fead33f2cba85ed58aa4cc0c44f6cf97a401708c"
+    },
+    {
+      "path": "qa/non-performance-verification/packaging/learning-apk-verification.json",
+      "bytes": 2275,
+      "sha256": "a6f19d89ff1994eb8e1c9214362b546c5b4f027b5a434a271b3ddad4ef2db18a"
+    },
+    {
+      "path": "qa/vr-xr-simulator-report.json",
+      "bytes": 19741,
+      "sha256": "af327bd659bac4cf7e009c1440a37325479fd2a1fe5ccf2c7ca3e9640a4cc4cc"
+    },
+    {
+      "path": "qa/vr-content-report.json",
+      "bytes": 121,
+      "sha256": "c0d78d7ac59d76b50f44efc2cb4b87a8dd26bcb95fdfca1fd96ed836c2a5617f"
+    },
+    {
+      "path": "qa/learning-backend-report.json",
+      "bytes": 152,
+      "sha256": "0c71e9c455cd0b900e2bde78938f9bfbbe58bea282db38c5b5fbfeb85d325541"
+    },
+    {
+      "path": "qa/vr-release-gate-report.json",
+      "bytes": 1824,
+      "sha256": "93c8953ea19bb54cae1b1e38612dbc1c079ff53fc9071c17d68f4529f072f23b"
+    },
+    {
+      "path": "qa/learning-apk-verification.json",
+      "bytes": 2159,
+      "sha256": "9762eaf8a18b8b71ae0348c77adb357563572f7e4358b0baa516162d94588edb"
+    },
+    {
+      "path": "qa/vr-learning-delivery-manifest.json",
+      "bytes": 211697,
+      "sha256": "e78e215a1050ccc8a7d3d1227b00aa8436b907c118ea3f510f8e4cdb3f4e070e"
+    },
+    {
+      "path": "qa/learning-build-StandaloneWindows64.txt",
+      "bytes": 46,
+      "sha256": "0a5fc5e272ae6e41ed5d6813c0cd7f0dd1e87720ceedb529fe41ab8ff7769c55"
+    },
+    {
+      "path": "qa/learning-build-StandaloneWindows64-QA.txt",
+      "bytes": 46,
+      "sha256": "9ae0132ec351256bd3da0d12edeafff69a5f0dcf301d679fa50e763d4d1a9f0c"
+    },
+    {
+      "path": "qa/learning-build-Android.txt",
+      "bytes": 46,
+      "sha256": "f033e9fb50eae387fe5c9ad17c7403397389ea83eafb7d8c888269752a0edc5c"
+    }
+  ],
+  "fix": "Omit optional profile object on reads/deletes to prevent JsonUtility-created default profiles",
+  "scope": {
+    "physicalDeviceTested": false,
+    "independentAuthenticatedSessionsOnOneWindowsComputer": true,
+    "recipientInboxObserved": false,
+    "codesObtainedFromSenderSentCopies": true,
+    "timedUnredeemedCodeExpiryTested": false,
+    "humanFirstTimeUsabilityAccepted": false
+  },
+  "remaining": [
+    "Unity OTP login and concurrent authenticated sessions passed; recipient Inbox placement was not observed because codes were read from sender Sent copies",
+    "Live sessions ran on one Windows computer; Android Keystore, physical headset interaction and cross-platform recovery remain device checks",
+    "A live unredeemed-code ten-minute expiration boundary was not timed",
+    "Researched procedural teaching includes documented anatomical and mechanical simplifications",
+    "User visual and first-time ease-of-use acceptance pending",
+    "Quest APK uses a debug certificate; no publisher release keystore exists yet"
+  ]
+}

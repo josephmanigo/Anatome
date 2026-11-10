@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-06T09:19:24.4258207Z",
+  "exitCode": 0,
+  "passed": true,
+  "method": "Unity-bundled Roslyn with current Editor response-file references; outputs redirected to qa",
+  "editorClosed": false,
+  "liveEditorReloadVerified": false,
+  "accountServiceSha256": "0fb148d927c5ddccfe44a41d60de56231544486a93879e98004bcddd30c62068"
+}

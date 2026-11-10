@@ -1,0 +1,54 @@
+{
+  "utc": "2026-09-19T13:06:24.7517811Z",
+  "status": "SOURCE_FIXED_APK_BUILD_BLOCKED_BY_UNITY_LICENSE",
+  "reproducedOldEyeHeightMetres": -0.4,
+  "fixedEyeHeightMetres": 1.25,
+  "cameraComponentChecks": 28,
+  "engineDoubles": true,
+  "coreAssertions": 775,
+  "managedCompilation": {
+    "passed": true,
+    "utc": "2026-09-19T13:05:47.1369585Z",
+    "apkBuilt": false,
+    "method": "Installed Unity Roslyn compiler and cached Unity build references",
+    "checks": [
+      {
+        "name": "Editor runtime",
+        "exitCode": 0,
+        "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\editor\\Assembly-CSharp.txt"
+      },
+      {
+        "name": "Editor verification",
+        "exitCode": 0,
+        "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\editor\\Assembly-CSharp-Editor.txt"
+      },
+      {
+        "name": "Android managed scripts",
+        "exitCode": 0,
+        "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\floor-height\\compile\\android\\Assembly-CSharp.txt"
+      }
+    ],
+    "unityEditorRan": false
+  },
+  "unitySceneVerificationCompleted": false,
+  "newApkBuilt": false,
+  "currentApkStillContainsBug": true,
+  "currentApkSha256": "acce99a73c87c7a8b434859ad3a3d118c8118de9e0e8dd3a7521c31f99f6a7a8",
+  "blocker": "Unity Editor exits 198: No valid Unity Editor license found",
+  "mainAndReviewSourcesMatch": true,
+  "source": [
+    {
+      "sha256": "2832905623665b4c86dd79a696ec641331d8a21a21383dc835d4183cebbbe477",
+      "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LearningControls.cs"
+    },
+    {
+      "sha256": "b99e36e2c83a0f2dc436876adc755170434bcccbe1b047983d499ce2e1d5288c",
+      "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Learning\\LabUI.Settings.cs"
+    },
+    {
+      "sha256": "79bd741faf2271958803af2c60cf695de0784779605338fd86afa2ffa558fe00",
+      "path": "unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs"
+    }
+  ],
+  "physicalRetestRequired": true
+}

@@ -1,0 +1,9 @@
+{
+  "matchesPreviousSchoolBuild": true,
+  "samePackage": "org.thoraxlab.learning",
+  "applicationVersion": "1.3.1",
+  "versionCode": 7,
+  "previousVersion": "1.3.0",
+  "previousArtifactSha256": "351b5578d5371e5c32a9f6070cf76674157255f03701edbc6c024c3ccebc785f",
+  "certificateMatches": true
+}

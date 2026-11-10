@@ -1,0 +1,15 @@
+{
+    "utc": "2026-09-06T10:58:29.8055373Z",
+    "source": "Assets/ThoraxLab/Models/Thorax.fbx",
+    "anatomyId": "FMA7163",
+    "derived": "Assets/ThoraxLab/Resources/Learning/Specimen/FMA7163-smooth-shading.asset",
+    "adaptation": "Normals-only shading correction across duplicate UV seam vertices. Original positions, triangles, UVs and anatomical surface remain unchanged; sharp wall boundaries are preserved.",
+    "vertices": 5606,
+    "triangles": 8000,
+    "changedNormals": 0,
+    "meanNormalChange": 0.0,
+    "maximumNormalChange": 0.0,
+    "positionsUnchanged": true,
+    "trianglesUnchanged": true,
+    "uvUnchanged": true
+}

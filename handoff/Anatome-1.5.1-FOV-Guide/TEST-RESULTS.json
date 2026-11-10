@@ -1,0 +1,53 @@
+{
+  "verifiedUtc": "2026-10-21T23:55:57.569302+00:00",
+  "status": "SIGNED_APK_BUILT_LOCAL_CHECKS_PASSED_PHYSICAL_QUEST_PENDING",
+  "artifact": {
+    "file": "Anatome-1.5.1-Production.apk",
+    "version": "1.5.1",
+    "versionCode": 19,
+    "package": "org.thoraxlab.learning",
+    "bytes": 110979413,
+    "sha256": "7d033d45040065acc6d2669abd70c531aff9b8d7352f722a68e0e384dd48af14",
+    "certificateSha256": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910"
+  },
+  "unityLicense": "Editor build and simulator succeeded after the user completed Unity Hub sign-in",
+  "checks": {
+    "androidBuild": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "duration": "00:02:22.6768161"
+    },
+    "coreAssertions": 905,
+    "controlsWithEngineDoubles": 65,
+    "focusedOfficialXrChecks": 49,
+    "fullOfficialXrChecks": 2976,
+    "xrErrors": [],
+    "xrRuntimeQaBypass": false,
+    "strictApkChecks": 30,
+    "packagedFeatureChecks": 11,
+    "releaseTrackingGatePassed": true
+  },
+  "signing": {
+    "existingReleaseCertificate": true,
+    "previous150ApkUnchanged": true,
+    "payloadEntriesUnchanged": 1346,
+    "lineageApiLevels": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "installedDataCapability": true
+  },
+  "physicalDeviceTested": false,
+  "limits": [
+    "No Quest was connected through ADB.",
+    "On-device installation, retained progress, controller usability, stereo comfort and sustained performance are pending.",
+    "Simulator FOV is Editor-only; Quest receives the movement comfort aperture control."
+  ]
+}

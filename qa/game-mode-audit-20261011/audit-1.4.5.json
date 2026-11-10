@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-11T13:56:00Z",
+  "auditedVersion": "1.4.5",
+  "auditedVersionCode": 13,
+  "apk": "builds/AnatomeQuest/Anatome-1.4.5.apk",
+  "apkSha256": "c66a2106f000338d912480f753e9f987220b4db2f9c6c1c42f69ac7a2ccdd1df",
+  "assumedLoad": "One learner per standalone Quest; local saved progress with optional account synchronization.",
+  "scope": [
+    "All 72 activity variants",
+    "All four learning modes at Easy, Medium and Hard",
+    "Clinical choices and instrument procedures",
+    "Detached chunk cutting and pickup",
+    "Settings and panel movement/rotation",
+    "Pause, focus and tracking recovery",
+    "Assessment scoring, ordering, mastery, checkpoints and account isolation",
+    "Local storage recovery and PostgreSQL access rules",
+    "Large-text screenshots and overflow checks"
+  ],
+  "checks": {
+    "coreAssertions": 889,
+    "contentChecks": 1761,
+    "nativeCuttingChecks": 105,
+    "localPostgreSQLChecks": 263,
+    "sceneAttemptsPassed": 72,
+    "sceneAttempts": 72,
+    "readinessChecksPassed": 22,
+    "playerRuntimeErrors": [
+      "12 header text-bound overflow reports, across six large-text pages"
+    ],
+    "sceneReport": "player/runtime-report.json",
+    "readinessReport": "player/readiness-regressions.json",
+    "playerTrackingBypass": true,
+    "physicalDeviceTested": false
+  },
+  "findings": [
+    {
+      "id": "clinical-hint-toggle",
+      "priority": "P2",
+      "reproduction": "In Anatomy Cases practice, reveal a clinical-choice hint. Apply Practice hints off while remaining on the same decision.",
+      "problem": "Already-visible choice and dock cue spheres remain active.",
+      "evidence": "ClinicalReasoningWorkbench.ShowHint activates hintMarkers; its Update never observes the hints preference. ProcedureWorkbench.RefreshPresentation only toggles its instrument marker and pathRoot.",
+      "smallestFix": "Synchronize existing clinical cue visibility when the hint preference turns off. Keep revealing an answer an explicit practice request."
+    },
+    {
+      "id": "large-text-header-bounds",
+      "priority": "P2",
+      "reproduction": "Apply text scale 1.5, then open settings, mode cards, case cards, captions, guide or keyboard.",
+      "problem": "Anatome and Grip to move / rotate exceed their allocated text bounds. The player QA therefore fails despite all activities completing. These samples still render the header text; the finding is inadequate bounds, not missing controls.",
+      "evidence": "player/runtime-report.json records 12 overflow reports. Screenshot player/vr-large-text-settings.png.",
+      "smallestFix": "Give the existing header sufficient vertical space for both scaled text rows and padding."
+    },
+    {
+      "id": "anchored-layer-instructions",
+      "priority": "P2",
+      "reproduction": "Read a Guided Dissection exposure instruction or the feedback after separating a chunk.",
+      "problem": "Messages still tell the learner whole tissue can be inspected and returned, while whole layers are deliberately anchored.",
+      "evidence": "LabRuntime.CurrentInstruction line 54 and OnCutCommitted line 334 conflict with CanManipulate and chunk-only controls.",
+      "smallestFix": "Remove obsolete whole-layer inspection wording from both messages."
+    }
+  ],
+  "notChecked": [
+    "Physical Quest input, comfort and live casting: 1.4.5 has not been loaded by the user and USB debugging is unauthorized.",
+    "Sustained Quest performance and actual display refresh-rate negotiation.",
+    "Live email delivery, hosted account synchronization and Android Keystore acceptance.",
+    "Publisher release signing; the delivered retest APK uses an Android Debug certificate."
+  ],
+  "productionCodeChangedDuringAudit": false,
+  "status": "AUDIT_COMPLETE_THREE_CONFIRMED_FINDINGS_FIX_PHASE_FOLLOWS"
+}

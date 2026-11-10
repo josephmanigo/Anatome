@@ -1,0 +1,89 @@
+{
+  "verifiedUtc": "2026-09-06T17:25:48.302028+00:00",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\LearningQuest\\ThoraxLab.apk",
+  "artifactSha256": "353be45612802c99cdf826b11d974bc76a95e196f0bdcd2d35d0d7ba11077983",
+  "bytes": 109054622,
+  "package": "org.thoraxlab.learning",
+  "checks": [
+    {
+      "name": "Archive integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ARM64 libraries only",
+      "passed": true,
+      "detail": [
+        "lib/arm64-v8a/libUnityOpenXR.so",
+        "lib/arm64-v8a/lib_burst_generated.so",
+        "lib/arm64-v8a/libc++_shared.so",
+        "lib/arm64-v8a/libgame.so",
+        "lib/arm64-v8a/libil2cpp.so",
+        "lib/arm64-v8a/libmain.so",
+        "lib/arm64-v8a/libopenxr_loader.so",
+        "lib/arm64-v8a/libswappywrapper.so",
+        "lib/arm64-v8a/libthoraxcut.so",
+        "lib/arm64-v8a/libunity.so"
+      ]
+    },
+    {
+      "name": "Native cutting AArch64",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16 KB native load alignment",
+      "passed": true,
+      "detail": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "Packaged ATTRIBUTION.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged MAL-Atlas-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Manifold-Apache-2.0.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-License.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Packaged Unity-XR-Hands-Third-Party-Notices.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Learning package identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "APK signature verifies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Non-debug release signing certificate",
+      "passed": false,
+      "detail": null
+    }
+  ],
+  "failures": 1,
+  "physicalDeviceTested": false,
+  "releaseSigningRequired": true,
+  "nonDebugSigner": false,
+  "signing": "Android Debug certificate; sideload review, not a store release"
+}

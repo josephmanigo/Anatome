@@ -1,0 +1,79 @@
+{
+  "version": "1.5.0",
+  "versionCode": 18,
+  "utc": "2026-10-18T22:29:46.9700385Z",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeSchool\\Anatome-1.5.0-Production.apk",
+  "apkSha256": "247963317147078fe18fde7084458d4cebefa7a21d3bff8cdafa00a3e6d93188",
+  "bytes": 110979413,
+  "coreAssertions": 105,
+  "playerChecks": 1014,
+  "playerErrors": 0,
+  "captures": 17,
+  "xrChecks": 1555,
+  "xrErrors": 0,
+  "xrRuntimeQaBypass": false,
+  "apkChecks": 30,
+  "signingAclAssertions": 8,
+  "windowsBuildErrors": 0,
+  "windowsBuildWarnings": 0,
+  "androidBuildErrors": 0,
+  "androidBuildWarnings": 0,
+  "physicalHeadsetTested": false,
+  "physicalInstallationTested": false,
+  "liveCloudSignInRetested": false,
+  "logoutScope": "Current device session; existing PIN-protected offline enrollment retained",
+  "sourceHashes": [
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabWidgets.cs",
+      "sha256": "6d62fc3118ab1d70793ee6387b7b8078d533857b9ed76e1a8d7e5d2bc8a956d2"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUIVisuals.cs",
+      "sha256": "27b4c8075b0397fc06f33b8e491e9c424457c34ffb22c2710fc34357576f75d8"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.cs",
+      "sha256": "f64d38e09ab9193fba56e8cfb5f7170f44b44db56f672a37f4f010090c81fcbf"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Settings.cs",
+      "sha256": "1b1b9005d47cb82cedc3759dba0c3fba58f22953d61ddb9c92f3dfa72e7c139c"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Guide.cs",
+      "sha256": "85c4a2994bdb269a4d5e6e75ce1566a44d1c27fba8061f3380b7c28808ac02e0"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabRuntime.cs",
+      "sha256": "e4b2bd120328a5ba74d5531054b396e609b39ba785801a683866e2b7b52aa898"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningGlassUIVerification.cs",
+      "sha256": "edcbd17ce6ab403c91a367008d4afd55e119742a5797d7bca67c2c9c5a5746c8"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningRuntimeVerification.cs",
+      "sha256": "f8303fba7d077a9299f0e61ba45f842f3d6a524c726117ff629a5134f0af5a05"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningBuild.cs",
+      "sha256": "1ae1e44f8a7335afb273092cc0858f6e5a8e16a0354421182d4f8f9fc0fd482d"
+    },
+    {
+      "path": "unity/ThoraxLab/Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.UI.cs",
+      "sha256": "1c1b9c91c27e5d248e32a20d7adc54a4e843c5c71adb13680c8695963b8b349f"
+    },
+    {
+      "path": "pipeline/sign-classroom-apk.ps1",
+      "sha256": "28849cf4d13a513a121c72b24d3936d052fa8e99fd41d99ba0d0b1e4e58ebe2d"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "f66cc5b569ede57225242ff1e16ef487cfe1d8a6d6b1f1aeb9cad90b0a6ce73a"
+    },
+    {
+      "path": ".impeccable/design.json",
+      "sha256": "47f71901f5e9b8f2945641ef17b8d20e4192e9f435534ac37d667b5b0af19224"
+    }
+  ]
+}

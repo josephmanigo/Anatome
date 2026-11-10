@@ -1,0 +1,19 @@
+{
+  "capturedUtc": "2026-10-08T13:12:31.9731489Z",
+  "headset": "Quest 2",
+  "installedVersion": "1.4.1",
+  "apkSha256": "32e9d78d2f8c14c45c26b34da7a333b52391a9d6e66af674ce9e756f4b7ceac3",
+  "userReports": [
+    "Quest 2 view at floor",
+    "Quest 3 works",
+    "Quest 2 cannot click using X"
+  ],
+  "lastObservedHeightMetres": 1.219949,
+  "trackingOrigin": "Floor",
+  "visibleAndFocusedObserved": true,
+  "oculusTouchProfileEnabled": true,
+  "currentSelectionBinding": "Index-finger trigger; X face button is not read by selection code",
+  "codeChanged": false,
+  "status": "AWAITING_PHYSICAL_TRIGGER_AND_POINTER_REPRO",
+  "physicalAcceptancePassed": false
+}

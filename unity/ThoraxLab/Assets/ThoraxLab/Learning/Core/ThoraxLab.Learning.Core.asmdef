@@ -1,0 +1,6 @@
+{
+  "name": "ThoraxLab.Learning.Core",
+  "rootNamespace": "ThoraxLab.Learning",
+  "autoReferenced": true,
+  "noEngineReferences": true
+}

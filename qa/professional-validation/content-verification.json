@@ -1,0 +1,13 @@
+{
+  "checksPassed": [
+    "all 645 objectives mapped exactly once",
+    "all 72 variants present",
+    "all task titles prompts and feedback preserved",
+    "all decision labels answer keys and rationales preserved",
+    "all lessons briefings debriefs and guide text preserved",
+    "difficulty grouping and prerequisite chains checked"
+  ],
+  "document": "C:\\Users\\My Pc\\Downloads\\new\\docs\\professional-validation\\ANATOME-Professional-Validation.docx",
+  "reviewEntries": 247,
+  "distinctDecisionQuestions": 13
+}

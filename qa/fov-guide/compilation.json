@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\editor\\ThoraxLab.Learning.Core.txt",
+      "name": "editor/ThoraxLab.Learning.Core"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\editor\\Assembly-CSharp.txt",
+      "name": "editor/Assembly-CSharp"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\editor\\Assembly-CSharp-Editor.txt",
+      "name": "editor/Assembly-CSharp-Editor"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\android\\ThoraxLab.Learning.Core.txt",
+      "name": "android/ThoraxLab.Learning.Core"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\android\\Assembly-CSharp.txt",
+      "name": "android/Assembly-CSharp"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\player\\ThoraxLab.Learning.Core.txt",
+      "name": "player/ThoraxLab.Learning.Core"
+    },
+    {
+      "exitCode": 0,
+      "log": "C:\\Users\\My Pc\\Downloads\\new\\qa\\fov-guide\\compile\\player\\Assembly-CSharp.txt",
+      "name": "player/Assembly-CSharp"
+    }
+  ],
+  "apkBuilt": false,
+  "method": "Unity Roslyn with installed cached references; player assembly uses isolated QA fixture",
+  "editorSceneRan": false,
+  "utc": "2026-10-21T23:25:52.8685037Z"
+}

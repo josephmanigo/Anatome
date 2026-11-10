@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Anatome Classroom Release
+Signer #1 certificate SHA-256 digest: 36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910
+Signer #1 certificate SHA-1 digest: 41c61d2262144ee1bdc0d2e2d6f6e97d70b80021
+Signer #1 certificate MD5 digest: 22ce83af9859a43bfd41ff44385384c7
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 1fe3075ecdc95a43911235b4ef21709ae4b2cfda0161fcd6b67642bfa3ef4b6a
+Signer #1 public key SHA-1 digest: 03f491802870a12bcb2f2349ff03368894898118
+Signer #1 public key MD5 digest: 05fcdee6cb6b04fcb90382d3e69348ef

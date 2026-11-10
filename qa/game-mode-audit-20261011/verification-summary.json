@@ -1,0 +1,113 @@
+{
+  "verifiedUtc": "2026-10-11T14:16:09.8375618Z",
+  "status": "LOCAL_AUDIT_FIXES_VERIFIED_MANUAL_DEVELOPER_HUB_UPDATE_PHYSICAL_RETEST_PENDING",
+  "version": "1.4.6",
+  "versionCode": 14,
+  "package": "org.thoraxlab.learning",
+  "curriculum": "2026.10.2",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome-1.4.6.apk",
+  "sha256": "0c057190c62c8f3263f77f1005aab0277fa56d6b53fddd8d063883244b2ffb08",
+  "bytes": 111991713,
+  "confirmedFindings": 3,
+  "confirmedFindingsFixed": 3,
+  "baseline": {
+    "report": "audit-1.4.5.json",
+    "failedRegressions": 3,
+    "originalPlayerTextOverflowReports": 12,
+    "regressionReport": "settings-baseline.json"
+  },
+  "xr": {
+    "report": "xr-final.json",
+    "checks": 2349,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "runtimeQaBypass": false
+  },
+  "player": {
+    "modeCoverage": [
+      {
+        "easy": 6,
+        "hard": 6,
+        "mode": "Anatomy Cases",
+        "medium": 6
+      },
+      {
+        "easy": 6,
+        "hard": 6,
+        "mode": "Identify and Enumerate",
+        "medium": 6
+      },
+      {
+        "easy": 6,
+        "hard": 6,
+        "mode": "Assemble Anatomy",
+        "medium": 6
+      },
+      {
+        "easy": 6,
+        "hard": 6,
+        "mode": "Guided Dissection",
+        "medium": 6
+      }
+    ],
+    "assemblySha256": "4acbbcdf55d6ac8e2fca07c76d7e3a69606812b411d35dd94338da2bfd6891c9",
+    "runtimeErrors": 0,
+    "readinessChecks": 22,
+    "readinessReport": "player-fixed/readiness-regressions.json",
+    "sceneAttemptsPassed": 72,
+    "report": "player-fixed/runtime-report.json",
+    "trackingBypass": true,
+    "textOverflowReports": 0,
+    "variants": 72
+  },
+  "auditChecks": {
+    "coreAssertions": 889,
+    "backendReport": "backend-report.json",
+    "contentReport": "content-report.json",
+    "liveSupabase": false,
+    "contentChecks": 1761,
+    "note": "Core, native, content and database checks ran during the audit; their implementation and curriculum were unchanged by the three repairs.",
+    "nativeCutting": 105,
+    "localPostgreSQL": 263
+  },
+  "androidBuild": {
+    "report": "android-final-build-summary.txt",
+    "duration": "00:02:03.7207936",
+    "status": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  },
+  "windowsQABuild": {
+    "report": "windows-fixed-build-summary.txt",
+    "duration": "00:00:18.9044709",
+    "status": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  },
+  "apkChecks": {
+    "report": "apk-1.4.6/learning-apk-verification.json",
+    "checks": 19,
+    "failed": 0
+  },
+  "signing": {
+    "kind": "Android Debug",
+    "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+    "report": "apk-1.4.6/learning-apk-signature.txt",
+    "matchesPrevious": true,
+    "publisherReleaseVerified": false
+  },
+  "installation": {
+    "installed": false,
+    "reason": "User requested manual update through Developer Hub.",
+    "launched": false
+  },
+  "physicalDeviceTested": false,
+  "visualRetestObservation": "Long clinical tool names looked crowded from an oblique desktop QA view in pneumonia; verify readability from normal working positions in the headset.",
+  "notChecked": [
+    "Physical Quest controller feel, comfort, tracking and supported refresh rates",
+    "Sustained headset performance",
+    "Live email/cloud operations and Android Keystore behavior",
+    "Publisher release signing"
+  ],
+  "zeroBugGuarantee": false
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "FMA7163",
+    "axis": 0,
+    "triangles": 8000,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA7163",
+    "axis": 1,
+    "triangles": 8000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA7163",
+    "axis": 2,
+    "triangles": 8000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fat",
+    "axis": 0,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fat",
+    "axis": 1,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fat",
+    "axis": 2,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fascia",
+    "axis": 0,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fascia",
+    "axis": 1,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "REC_fascia",
+    "axis": 2,
+    "triangles": 4000,
+    "status": 0,
+    "pieces": 2,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA79979",
+    "axis": 0,
+    "triangles": 3998,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA79979",
+    "axis": 1,
+    "triangles": 3998,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA79979",
+    "axis": 2,
+    "triangles": 3998,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA13375",
+    "axis": 0,
+    "triangles": 3996,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA13375",
+    "axis": 1,
+    "triangles": 3996,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA13375",
+    "axis": 2,
+    "triangles": 3996,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9756",
+    "axis": 0,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9756",
+    "axis": 1,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9756",
+    "axis": 2,
+    "triangles": 3940,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9757",
+    "axis": 0,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9757",
+    "axis": 1,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9757",
+    "axis": 2,
+    "triangles": 3976,
+    "status": 4,
+    "pieces": 0,
+    "message": "An enclosed void has no containing tissue shell; previous mesh preserved. Void volume=-2.81167e-15, triangles=6, tissue components=18, maximum containment=0"
+  },
+  {
+    "id": "FMA9758",
+    "axis": 0,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9758",
+    "axis": 1,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  },
+  {
+    "id": "FMA9758",
+    "axis": 2,
+    "triangles": 3978,
+    "status": 0,
+    "pieces": 1,
+    "message": "Cut validated."
+  }
+]

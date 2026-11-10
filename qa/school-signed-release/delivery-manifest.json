@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "apk": {
+    "path": "builds/AnatomeSchool/Anatome-1.4.9-Production.apk",
+    "sha256": "bb3d3bf8a82a5e1b150ffc4d9429fe0de4ebf0720697dd6bee269f1e95e47dbc",
+    "bytes": 110971221
+  },
+  "zip": {
+    "path": "builds/Anatome-1.4.9-Production-Classroom.zip",
+    "sha256": "e6ae698ea572965c50a4f4da8ecd6bf0382d17e94b68b869a9af67e0524d1626",
+    "bytes": 105252984
+  },
+  "entries": 42,
+  "zipCrcPassed": true,
+  "allEntryHashesVerified": true,
+  "explicitFileAllowlist": true,
+  "privateKeysOrPasswordsIncluded": false,
+  "originalCandidateApkUnchanged": true
+}

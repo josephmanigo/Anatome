@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "verifiedUtc": "2026-10-21T23:49:06.6369473Z",
+  "method": "Read-only managed IL inspection using Unity-bundled Mono.Cecil; no Unity or player launch.",
+  "assembly": "C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Library\\Bee\\artifacts\\Android\\ManagedStripped\\Assembly-CSharp.dll",
+  "assemblySha256": "4c9b55ffaa05fdb08bbd16852e23f86e96e4a18fa46866e1bb25435faa3e078e",
+  "assemblyWrittenUtc": "2026-10-21T23:47:24.9906602Z",
+  "passed": true,
+  "verificationRunning": {
+    "method": "System.Boolean ThoraxLab.Learning.LabRuntime::get_VerificationRunning()",
+    "unconditionallyFalse": true,
+    "instructions": [
+      "IL_0000: ldc.i4.0",
+      "IL_0001: ret"
+    ]
+  },
+  "editorSimulation": {
+    "method": "System.Boolean ThoraxLab.Learning.LearningXRInput::get_SimulationAllowed()",
+    "unconditionallyFalse": true,
+    "instructions": [
+      "IL_0000: ldc.i4.0",
+      "IL_0001: ret"
+    ]
+  },
+  "canInteractReferences": [
+    "ThoraxLab.Learning.LabUI ThoraxLab.Learning.LabRuntime::get_UI()",
+    "System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)",
+    "ThoraxLab.Learning.LabUI ThoraxLab.Learning.LabRuntime::get_UI()",
+    "System.Boolean ThoraxLab.Learning.LabUI::get_WorkspaceVisible()",
+    "System.Boolean ThoraxLab.Learning.LabRuntime::get_Paused()",
+    "System.Boolean ThoraxLab.Learning.LabRuntime::get_Focused()",
+    "System.Boolean ThoraxLab.Learning.LabRuntime::get_XRReady()",
+    "System.Boolean ThoraxLab.Learning.LabRuntime::get_VerificationRunning()"
+  ],
+  "editorAssemblyAbsent": true,
+  "editorTransportHookAbsent": true,
+  "conclusion": "The inspected release assembly retains the XR tracking gate, compiles simulator and runtime verification bypasses to false, and excludes the Editor-only network interruption hook."
+}

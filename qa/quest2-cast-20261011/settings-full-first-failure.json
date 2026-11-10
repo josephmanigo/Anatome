@@ -1,0 +1,480 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-11T13:12:45.9833699Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "button_responds_on_press",
+            "detail": "A queued controller press invokes the actual confirmation by the next input frame while still held. Callbacks=1; frames=1",
+            "passed": true
+        },
+        {
+            "id": "ui_press_captured_until_release",
+            "detail": "Moving off the dismissed button while held cannot leak its trigger into anatomy or cutting.",
+            "passed": true
+        },
+        {
+            "id": "held_button_does_not_repeat",
+            "detail": "Holding through modal dismissal must not repeat or activate the underlying page.",
+            "passed": true
+        },
+        {
+            "id": "button_release_does_not_repeat",
+            "detail": "Release after immediate activation must not send another click.",
+            "passed": true
+        },
+        {
+            "id": "ui_release_restores_world_input",
+            "detail": "Release ends UI capture so the next anatomy action remains available.",
+            "passed": true
+        },
+        {
+            "id": "navigation_responds_on_press",
+            "detail": "Ordinary page navigation responds while the trigger remains held.",
+            "passed": true
+        },
+        {
+            "id": "navigation_hold_does_not_replay",
+            "detail": "Replacing a page during the press cannot replay its click.",
+            "passed": true
+        },
+        {
+            "id": "button_feedback_has_no_fade",
+            "detail": "Buttons change visual feedback immediately.",
+            "passed": true
+        },
+        {
+            "id": "disabled_button_does_not_activate",
+            "detail": "Immediate activation preserves disabled-control protection.",
+            "passed": true
+        },
+        {
+            "id": "card_feedback_has_no_fade",
+            "detail": "All four activity cards also give immediate visual feedback.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_opens_from_controller/1",
+            "detail": "A real controller ray opens the in-world keyboard without an Android keyboard covering the email.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_preview_is_pinned/1",
+            "detail": "Entered email remains in a dedicated fixed display.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_stays_in_panel_when_keys_scroll/1",
+            "detail": "Scrolling the keys cannot scroll the email out of the console.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_cursor_edits_middle/1",
+            "detail": "Delete removes the character before the caret, not always the last character.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_insert_at_caret/1",
+            "detail": "Typing repairs the address at the selected caret position.",
+            "passed": true
+        },
+        {
+            "id": "vr_keyboard_back_keeps_email/1",
+            "detail": "Back closes the keyboard and preserves input.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_survives_page_return/1",
+            "detail": "Returning to sign-in restores the draft address.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_opens_from_controller/1.5",
+            "detail": "A real controller ray opens the in-world keyboard without an Android keyboard covering the email.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_preview_is_pinned/1.5",
+            "detail": "Entered email remains in a dedicated fixed display.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_stays_in_panel_when_keys_scroll/1.5",
+            "detail": "Scrolling the keys cannot scroll the email out of the console.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_cursor_edits_middle/1.5",
+            "detail": "Delete removes the character before the caret, not always the last character.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_insert_at_caret/1.5",
+            "detail": "Typing repairs the address at the selected caret position.",
+            "passed": true
+        },
+        {
+            "id": "vr_keyboard_back_keeps_email/1.5",
+            "detail": "Back closes the keyboard and preserves input.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_survives_page_return/1.5",
+            "detail": "Returning to sign-in restores the draft address.",
+            "passed": true
+        },
+        {
+            "id": "vr_long_email_window_keeps_caret",
+            "detail": "Maximum-length input uses a readable window around the caret.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_character_limit",
+            "detail": "The keyboard cannot exceed the email character limit.",
+            "passed": true
+        },
+        {
+            "id": "vr_empty_email_edit_is_safe",
+            "detail": "Clear, Left and Delete safely handle empty input.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_uses_numeric_keyboard",
+            "detail": "The six-digit code uses a numeric keyboard.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_retains_leading_zero_and_limit",
+            "detail": "The code preserves zero at the start and rejects a seventh digit.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_back_returns_to_email",
+            "detail": "Code entry can return to the editable email without sending another email.",
+            "passed": true
+        },
+        {
+            "id": "measured_floor_eye_height_preserved",
+            "detail": "Seated layout preserves measured Floor eye height=1.65",
+            "passed": true
+        },
+        {
+            "id": "startup_origin_change_keeps_head_above_floor",
+            "detail": "A delayed 1.65m -> 0m origin change must not put the headset under the floor. World eye height=1.25",
+            "passed": true
+        },
+        {
+            "id": "legacy_settings_enable_height_assistance",
+            "detail": "Existing saved profiles receive height assistance without resetting preferences.",
+            "passed": true
+        },
+        {
+            "id": "short_player_raised_to_working_height",
+            "detail": "1.22 m tracked eye height becomes 1.65 m.",
+            "passed": true
+        },
+        {
+            "id": "height_assistance_moves_hands_with_view",
+            "detail": "View and controller share the same rig offset.",
+            "passed": true
+        },
+        {
+            "id": "assisted_player_can_crouch",
+            "detail": "Physical crouching stays relative to the calibrated pose.",
+            "passed": true
+        },
+        {
+            "id": "extra_height_preserves_crouch",
+            "detail": "Extra height lifts both hands and view without flattening movement.",
+            "passed": true
+        },
+        {
+            "id": "late_short_floor_pose_does_not_double_height",
+            "detail": "A delayed 0.9 m floor pose calibrates once; eye=1.65",
+            "passed": true
+        },
+        {
+            "id": "height_preferences_round_trip",
+            "detail": "The preference serializer retains explicit assistance and boost choices.",
+            "passed": true
+        },
+        {
+            "id": "controller_slider_drag_changes_value",
+            "detail": "Actual controller trigger-drag changes a visible slider. Before=0.1999997; after=0.7999988",
+            "passed": true
+        },
+        {
+            "id": "controller_slider_release_stops_drag",
+            "detail": "Pointing after trigger release cannot continue changing a slider.",
+            "passed": true
+        },
+        {
+            "id": "controller_thumbstick_scrolls_panel",
+            "detail": "Controller thumbstick scrolling moves the actual content. Before=1; after=0.3035905",
+            "passed": true
+        },
+        {
+            "id": "controller_empty_area_drag_scrolls",
+            "detail": "Dragging the empty panel margin still scrolls content. Before=160.8249; after=228.4965",
+            "passed": true
+        },
+        {
+            "id": "settings_height_draft_changed",
+            "detail": "Controller-dragged values: player=0.5537301 table=0.1763263",
+            "passed": true
+        },
+        {
+            "id": "settings_draft_does_not_apply_early",
+            "detail": "Draft stays separate until Apply.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_height_reaches_profile",
+            "detail": "Apply keeps both requested height values.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_moves_actual_view",
+            "detail": "Eye before=1.65 after=2.20373 boost=0.5537301",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_moves_table_and_specimen",
+            "detail": "Table and specimen use applied offset.",
+            "passed": true
+        },
+        {
+            "id": "settings_reopen_preserves_values",
+            "detail": "Reopening settings shows the committed values.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_master_volume",
+            "detail": "Master slider changes the actual audio listener.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_always_visible/VR comfort",
+            "detail": "Apply remains in the fixed footer after editing the last control.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_applies_all_fields/VR comfort",
+            "detail": "Every edited preference reaches the committed profile through the actual Apply button.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_reopens_saved_values/VR comfort",
+            "detail": "Returning to settings preserves every field in this category.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_always_visible/Audio",
+            "detail": "Apply remains in the fixed footer after editing the last control.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_applies_all_fields/Audio",
+            "detail": "Every edited preference reaches the committed profile through the actual Apply button.",
+            "passed": true
+        },
+        {
+            "id": "settings_audio_reaches_all_sources",
+            "detail": "Master, narration volume/speed, effects and ambience update their real audio sources.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_reopens_saved_values/Audio",
+            "detail": "Returning to settings preserves every field in this category.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_always_visible/Controls",
+            "detail": "Apply remains in the fixed footer after editing the last control.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_applies_all_fields/Controls",
+            "detail": "Every edited preference reaches the committed profile through the actual Apply button.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_reopens_saved_values/Controls",
+            "detail": "Returning to settings preserves every field in this category.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_always_visible/Graphics & display",
+            "detail": "Apply remains in the fixed footer after editing the last control.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_applies_all_fields/Graphics & display",
+            "detail": "Every edited preference reaches the committed profile through the actual Apply button.",
+            "passed": true
+        },
+        {
+            "id": "settings_graphics_reaches_renderer",
+            "detail": "Scale, MSAA, shadows, texture detail and brightness reach rendering.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_reopens_saved_values/Graphics & display",
+            "detail": "Returning to settings preserves every field in this category.",
+            "passed": true
+        },
+        {
+            "id": "settings_apply_always_visible/Learning & accessibility",
+            "detail": "Apply remains in the fixed footer after editing the last control.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_applies_all_fields/Learning & accessibility",
+            "detail": "Every edited preference reaches the committed profile through the actual Apply button.",
+            "passed": true
+        },
+        {
+            "id": "settings_accessibility_rebuilds_ui",
+            "detail": "Rebuilt UI uses the saved text size and contrast.",
+            "passed": true
+        },
+        {
+            "id": "settings_category_reopens_saved_values/Learning & accessibility",
+            "detail": "Returning to settings preserves every field in this category.",
+            "passed": true
+        },
+        {
+            "id": "panel_grab_header_translates",
+            "detail": "The top-left header is grabbable, including its blank/brand area. Delta=(0.00, 0.00, 0.00)",
+            "passed": false
+        }
+    ],
+    "errors": [
+        "System.InvalidOperationException: panel_grab_header_translates: The top-left header is grabbable, including its blank/brand area. Delta=(0.00, 0.00, 0.00)\r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Require (System.String id, System.Boolean passed, System.String detail) [0x0003f] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:189 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<VerifyPanelManipulation>d__8.MoveNext () [0x001a0] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.Settings.cs:67 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner+<Verify>d__47.MoveNext () [0x011cb] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:275 \r\n  at ThoraxLab.Editor.LearningVRSimulatorVerificationRunner.Update () [0x00027] in C:\\Users\\My Pc\\Downloads\\new\\unity\\ThoraxLab\\Assets\\ThoraxLab\\Editor\\LearningVRSimulatorVerification.cs:173 "
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Response probe world=(-0.24, 1.85, 0.55); screen=(528.10, 617.70, 0.93); button rect=(x:-308.00, y:-32.00, width:616.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Menu world=(-0.27, 1.95, 0.77); screen=(1087.96, 690.04, 1.10); button rect=(x:-72.50, y:-32.00, width:145.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Disabled probe world=(-0.24, 1.85, 0.55); screen=(955.97, 628.52, 1.10); button rect=(x:-308.00, y:-32.00, width:616.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.24, 1.72, 0.55); screen=(528.16, 527.45, 0.93); button rect=(x:-306.00, y:-34.00, width:612.00, height:68.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.79, 0.34); screen=(830.51, 592.76, 1.11); button rect=(x:-73.56, y:-32.00, width:147.11, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.25, 1.79, 0.62); screen=(997.77, 593.07, 1.10); button rect=(x:-86.42, y:-32.00, width:172.83, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed r world=(-0.23, 1.64, 0.47); screen=(907.08, 507.47, 1.11); button rect=(x:-31.05, y:-32.00, width:62.10, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.40); screen=(869.79, 690.81, 1.10); button rect=(x:-152.83, y:-32.00, width:305.66, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.24, 1.54, 0.55); screen=(956.00, 445.19, 1.11); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.77, 0.33); screen=(828.90, 580.92, 1.11); button rect=(x:-70.21, y:-35.87, width:140.42, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.25, 1.77, 0.62); screen=(996.19, 581.18, 1.10); button rect=(x:-89.50, y:-35.87, width:179.01, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed r world=(-0.23, 1.67, 0.47); screen=(907.66, 526.56, 1.11); button rect=(x:-30.96, y:-35.87, width:61.91, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.39); screen=(859.53, 688.80, 1.10); button rect=(x:-132.37, y:-35.87, width:264.74, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.24, 1.54, 0.55); screen=(956.00, 445.19, 1.11); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed q world=(-0.22, 1.60, 0.30); screen=(809.90, 482.81, 1.11); button rect=(x:-30.96, y:-35.87, width:61.91, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Clear world=(-0.26, 1.77, 0.76); screen=(1084.97, 581.31, 1.10); button rect=(x:-80.26, y:-35.87, width:160.53, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.77, 0.33); screen=(828.90, 580.92, 1.11); button rect=(x:-70.21, y:-35.87, width:140.42, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.25, 1.77, 0.62); screen=(996.19, 581.18, 1.10); button rect=(x:-89.50, y:-35.87, width:179.01, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.39); screen=(859.53, 688.80, 1.10); button rect=(x:-132.37, y:-35.87, width:264.74, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Six-digit code world=(-0.24, 1.66, 0.55); screen=(956.01, 515.42, 1.11); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 0 world=(-0.23, 1.46, 0.55); screen=(955.91, 403.10, 1.11); button rect=(x:-324.00, y:-35.87, width:648.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 1 world=(-0.22, 1.67, 0.36); screen=(847.50, 522.57, 1.11); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 2 world=(-0.24, 1.67, 0.55); screen=(955.94, 522.54, 1.11); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 3 world=(-0.25, 1.67, 0.73); screen=(1065.09, 522.52, 1.10); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 4 world=(-0.22, 1.60, 0.36); screen=(847.67, 482.75, 1.11); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 5 world=(-0.24, 1.60, 0.55); screen=(955.93, 482.60, 1.11); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 6 world=(-0.25, 1.60, 0.73); screen=(1064.90, 482.45, 1.10); button rect=(x:-107.00, y:-35.87, width:214.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Done world=(-0.23, 1.32, 0.55); screen=(958.88, 319.45, 1.11); button rect=(x:-330.00, y:-46.00, width:660.00, height:92.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back to email world=(-0.24, 1.38, 0.55); screen=(955.97, 354.74, 1.12); button rect=(x:-306.00, y:-35.87, width:612.00, height:71.74); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Extra player height (m) world=(-0.24, 1.41, 0.59); screen=(577.30, 334.59, 0.94); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Table height offset (m) world=(-0.24, 1.41, 0.59); screen=(955.97, 369.71, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(-0.23, 1.33, 0.44); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Master volume world=(-0.07, 2.21, 0.05); screen=(577.24, 513.59, 0.95); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(0.02, 1.89, -0.07); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Seated fallback height world=(0.36, 1.68, -0.33); screen=(577.04, 532.23, 0.95); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Automatic height assistance world=(0.36, 1.49, -0.33); screen=(955.97, 415.22, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Movement   Smooth world=(0.36, 1.41, -0.33); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Turning   Snap world=(0.36, 1.41, -0.33); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Comfort vignette world=(0.36, 1.41, -0.33); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Extra player height (m) world=(0.36, 1.87, -0.34); screen=(955.97, 642.40, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Table height offset (m) world=(0.36, 1.72, -0.33); screen=(955.97, 552.59, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Movement speed world=(0.36, 1.57, -0.33); screen=(955.97, 462.78, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Turn speed world=(0.36, 1.41, -0.33); screen=(955.97, 369.71, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Snap angle world=(0.36, 1.41, -0.33); screen=(955.97, 369.71, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(0.49, 1.33, -0.39); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Captions world=(0.92, 1.92, -0.44); screen=(579.03, 344.26, 0.95); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Master volume world=(0.92, 2.32, -0.45); screen=(955.97, 603.21, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Narration world=(0.92, 2.23, -0.45); screen=(955.97, 552.79, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Effects world=(0.92, 2.15, -0.45); screen=(955.97, 502.37, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Ambience world=(0.92, 2.06, -0.44); screen=(955.97, 451.95, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Narration speed world=(0.92, 1.98, -0.44); screen=(955.97, 401.52, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(1.06, 1.85, -0.43); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Off   Left dominant hand world=(0.92, 2.19, -0.45); screen=(955.97, 529.51, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Off   Toggle grip world=(0.92, 2.13, -0.45); screen=(955.97, 490.12, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Controller vibration world=(0.92, 2.06, -0.44); screen=(955.97, 450.73, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(1.06, 1.85, -0.43); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Graphics preset   Medium world=(0.92, 2.19, -0.45); screen=(955.97, 529.51, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Texture mip limit   0 world=(0.92, 1.96, -0.44); screen=(955.97, 389.28, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Anti-aliasing   4 world=(0.92, 1.92, -0.44); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Shadows world=(0.92, 1.92, -0.44); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Off   VSync world=(0.92, 1.92, -0.44); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Show FPS world=(0.92, 1.92, -0.44); screen=(955.97, 367.18, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Scene render scale world=(0.92, 2.38, -0.45); screen=(955.97, 642.40, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Brightness world=(0.92, 2.30, -0.45); screen=(955.97, 591.98, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Shadow distance (m) world=(0.92, 2.02, -0.44); screen=(955.97, 423.39, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(1.06, 1.85, -0.43); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Practice hints world=(0.92, 2.19, -0.45); screen=(955.97, 529.51, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed On   Structure labels world=(0.92, 2.13, -0.45); screen=(955.97, 490.12, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Off   High contrast world=(0.92, 2.06, -0.44); screen=(955.97, 450.73, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Off   Reduced motion world=(0.92, 2.00, -0.44); screen=(955.97, 411.35, 1.10); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Text size world=(0.92, 1.93, -0.44); screen=(955.97, 369.71, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Caption size world=(0.92, 1.93, -0.44); screen=(955.97, 369.71, 1.10); button rect=(x:-306.00, y:-22.00, width:612.00, height:44.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Apply world=(1.06, 1.85, -0.43); screen=(870.92, 323.76, 1.10); button rect=(x:-155.59, y:-32.00, width:311.17, height:64.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "failure: head=(0.85, 1.65, 0.65) hand=(0.97, 1.65, 0.65) direction=(0.68, 0.26, -0.69) plane=True distance=1.096679 screen=(286.90, 749.27, 0.80) hits="
+    ]
+}

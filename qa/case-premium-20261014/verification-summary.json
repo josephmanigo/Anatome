@@ -1,0 +1,75 @@
+{
+  "verifiedUtc": "2026-10-14T11:46:59.091486+00:00",
+  "status": "LOCAL_CHECKS_PASSED_PHYSICAL_HEADSET_RETEST_PENDING",
+  "version": "1.4.8",
+  "versionCode": 16,
+  "package": "org.thoraxlab.learning",
+  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome-1.4.8.apk",
+  "sha256": "91c15230b4bc49d6b3dc49b6decedc83444e7736843f47ecf15ad21a2ecedc1c",
+  "bytes": 110973193,
+  "visual": {
+    "stations": 6,
+    "anchorsAndRoutesUnchanged": 38,
+    "geometryVerticesChecked": 12377,
+    "geometryTrianglesChecked": 23456,
+    "stationTriangleRange": [
+      15296,
+      34936
+    ],
+    "maxRenderers": 21,
+    "errors": 0,
+    "sideToolsSourceUnchanged": true
+  },
+  "refresh": {
+    "default": "Auto - highest supported",
+    "unityQuestFrameTarget": -1,
+    "legacy72MigratedOnce": true,
+    "schemaVersion": 1,
+    "hardwareRequestVerified": false
+  },
+  "core": {
+    "assertions": 896,
+    "command": "dotnet run --project qa/learning-tests/LearningTests.csproj -- unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/catalog.json"
+  },
+  "player": {
+    "report": "player-final/runtime-report.json",
+    "passed": 72,
+    "variants": 72,
+    "errors": 0,
+    "readinessChecks": 22,
+    "trackingBypass": true
+  },
+  "xrCase": {
+    "report": "xr-case-report.json",
+    "checks": 61,
+    "errors": 0,
+    "runtimeQaBypass": false
+  },
+  "xrRefreshGraphics": {
+    "report": "xr-refresh-report.json",
+    "checks": 46,
+    "errors": 0,
+    "runtimeQaBypass": false,
+    "nativeResponsesSimulated": true
+  },
+  "apkChecks": {
+    "checks": 19,
+    "failures": 0
+  },
+  "builds": {
+    "android": "Succeeded\n0 errors\n0 warnings\n00:03:18.5139930",
+    "windowsQA": "Succeeded\n0 errors\n0 warnings\n00:00:28.2210085"
+  },
+  "signing": "Android Debug certificate; sideload review, not a store release",
+  "signingCertificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "sameSignerAs1_4_7": true,
+  "graphicsWorkaround": "OpenGLES3 only; Vulkan buffer discards disabled",
+  "installedOnHeadset": false,
+  "physicalAcceptance": false,
+  "limits": [
+    "Desktop and simulator evidence does not establish physical headset appearance, comfort, native refresh acceptance or sustained FPS.",
+    "Focused XR case check precedes the final vascular bends and refresh edits; final compiled-player replay covers all 72 activities and separate refresh/graphics checks cover the settings change.",
+    "Initial refresh test hit a test-only Text versus TMP component mismatch; retained as xr-refresh-first.json, fixed before final passing run.",
+    "No new cloud integration test or publisher release signing."
+  ]
+}

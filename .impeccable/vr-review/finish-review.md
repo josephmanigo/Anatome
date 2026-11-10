@@ -1,0 +1,18 @@
+# VR specimen visual review — one bounded pass
+
+Final interface verification: the 00:56:16Z curriculum-2026.09.3 player run completed 72/72 practical assessment variants with no runtime exceptions or text-overflow flags. The final large-text virtual keyboard has an opaque forward-offset modal surface; underlying page text no longer bleeds through. Input-field height scales with typography. The inspected treatment workspace keeps the current equipment on a separate right-hand station, and the actual cut-and-lift capture exposes source musculature beneath the opened outer layers. A fixed evidence-camera orientation prevents later fixture observer movements from producing misleading overhead captures; it does not change the player's HMD pose.
+
+Initial review used the actual 2026-09-06 revision-2 captures `vr-skin.png`, `vr-fat-fascia.png`, `vr-muscles.png`, `vr-inner-anatomy.png`, and `qa/vr-xr-simulator-world-ui.png`. Bounded follow-up reviewed the regenerated `vr-fat-fascia.png`, `vr-muscles.png` and `vr-inner-anatomy.png` captured at 08:38:16–17 local time with appearance revision 3. These are rendered Unity outputs, not visual comps. This pass concerns specimen appearance only; enlarged-UI header/footer, keyboard-modal and camera-framing work is handled separately.
+
+## Concrete findings
+
+| Severity | Finding and evidence | Correction and status |
+|---|---|---|
+| Medium | Applying a settings profile restores the old examination-light intensity. Fat/fascia and skeletal surfaces in the layer captures lose surface/color separation in bright yellow-white regions. `SettingsService.Apply` set `2f * brightness`, overriding the `.52f` presentation calibration. | A shared `VRSpecimenPresentation.ExaminationIntensity` constant now controls initialization and the settings brightness multiplier. **Resolved in revision-3 rendered evidence:** fat retains gold/brown shading and bone remains distinguishable without the earlier broad yellow-white washout. |
+| Medium | The muscle/diaphragm maps read as regular raised bands at normal inspection distance. The earlier muscle and inner-anatomy captures showed illustrative texture competing with actual anatomical shape and implying fibre direction that source UVs do not establish. | Appearance revision 3 lowers muscle/cardiac bump scale from 1 to .2 and striation color amplitude from .11 to .025. **Resolved in revision-3 rendered evidence:** muscle relief is subdued, source contours lead, and the diaphragm no longer reads as strongly ridged material. The remaining pattern is illustrative, not measured fibre orientation. |
+
+## Scope and outcome
+
+Revision 2 visibly removed the severe triangular skin bump artifacts seen in the earlier XR capture. Original mesh faceting remains, particularly at the cropped skin boundary and oblique silhouette; changing material detail cannot recover absent source geometry. The subcutaneous/fascia reconstruction also shows irregular clearances against pectoral geometry in the layer view. Its documented authored-envelope approximation must remain explicit; this pass does not claim it is patient-specific or a continuous measured tissue segmentation.
+
+The two exact findings are resolved for the reviewed revision-3 captures. No further lighting, palette or geometry changes are recommended from this bounded follow-up. This is acceptance of those two corrections, not acceptance of every later binary or a “10/10” graphics result. It establishes neither physical headset comfort nor stereo/frame-rate acceptance. Original source faceting and authored-layer clearances remain visible limitations.

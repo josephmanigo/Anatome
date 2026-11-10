@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T22:24:05Z",
+  "title": "Design System: Anatome VR learning interface",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Smoked-blue ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.0199 248.94)",
+          "oklch(26.43% 0.0199 248.94)",
+          "oklch(37.86% 0.0199 248.94)",
+          "oklch(49.29% 0.0199 248.94)",
+          "oklch(60.71% 0.0199 248.94)",
+          "oklch(72.14% 0.0199 248.94)",
+          "oklch(83.57% 0.0199 248.94)",
+          "oklch(95.00% 0.0199 248.94)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Raised blue glass",
+        "tonalRamp": [
+          "oklch(15.00% 0.0306 239.48)",
+          "oklch(26.43% 0.0306 239.48)",
+          "oklch(37.86% 0.0306 239.48)",
+          "oklch(49.29% 0.0306 239.48)",
+          "oklch(60.71% 0.0306 239.48)",
+          "oklch(72.14% 0.0306 239.48)",
+          "oklch(83.57% 0.0306 239.48)",
+          "oklch(95.00% 0.0306 239.48)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Recessed input navy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0103 240.07)",
+          "oklch(26.43% 0.0103 240.07)",
+          "oklch(37.86% 0.0103 240.07)",
+          "oklch(49.29% 0.0103 240.07)",
+          "oklch(60.71% 0.0103 240.07)",
+          "oklch(72.14% 0.0103 240.07)",
+          "oklch(83.57% 0.0103 240.07)",
+          "oklch(95.00% 0.0103 240.07)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Cool ivory",
+        "tonalRamp": [
+          "oklch(15.00% 0.0064 228.84)",
+          "oklch(26.43% 0.0064 228.84)",
+          "oklch(37.86% 0.0064 228.84)",
+          "oklch(49.29% 0.0064 228.84)",
+          "oklch(60.71% 0.0064 228.84)",
+          "oklch(72.14% 0.0064 228.84)",
+          "oklch(83.57% 0.0064 228.84)",
+          "oklch(95.00% 0.0064 228.84)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Mist blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.0327 229.32)",
+          "oklch(26.43% 0.0327 229.32)",
+          "oklch(37.86% 0.0327 229.32)",
+          "oklch(49.29% 0.0327 229.32)",
+          "oklch(60.71% 0.0327 229.32)",
+          "oklch(72.14% 0.0327 229.32)",
+          "oklch(83.57% 0.0327 229.32)",
+          "oklch(95.00% 0.0327 229.32)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Sea-glass accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0996 181.11)",
+          "oklch(26.43% 0.0996 181.11)",
+          "oklch(37.86% 0.0996 181.11)",
+          "oklch(49.29% 0.0996 181.11)",
+          "oklch(60.71% 0.0996 181.11)",
+          "oklch(72.14% 0.0996 181.11)",
+          "oklch(83.57% 0.0996 181.11)",
+          "oklch(95.00% 0.0996 181.11)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Slate divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.0245 242.55)",
+          "oklch(26.43% 0.0245 242.55)",
+          "oklch(37.86% 0.0245 242.55)",
+          "oklch(49.29% 0.0245 242.55)",
+          "oklch(60.71% 0.0245 242.55)",
+          "oklch(72.14% 0.0245 242.55)",
+          "oklch(83.57% 0.0245 242.55)",
+          "oklch(95.00% 0.0245 242.55)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Ordinary native Unity page headings: 40 canvas units, TMP bold, before user text scale."
+      },
+      "headline": {
+        "displayName": "Page heading",
+        "purpose": "40-unit bold title, including settings category pages; preferred wrapped height controls layout."
+      },
+      "title": {
+        "displayName": "Workspace or category title",
+        "purpose": "Workspace and current objective: 31 canvas units, TMP bold."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default TextMeshPro reading text; source helper uses lineSpacing 3 and user text scale."
+      },
+      "label": {
+        "displayName": "Control label",
+        "purpose": "24-unit bold button labels; native sibling heights follow the longest wrapped label."
+      },
+      "caption": {
+        "displayName": "Narration caption",
+        "purpose": "20-unit narration caption with independent caption scale, in a reserved non-scrolling band."
+      },
+      "status": {
+        "displayName": "Save status",
+        "purpose": "18-unit persistent save and tracking status."
+      },
+      "card-title": {
+        "displayName": "Anatomy card title",
+        "purpose": "28-unit bold activity/unit name; wraps and grows the card."
+      },
+      "card-description": {
+        "displayName": "Anatomy card description",
+        "purpose": "21-unit muted description; 20-unit optional availability text is separate."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "Immediate control tint",
+        "value": "0 seconds",
+        "purpose": "Native button/card hover, selected, pressed and disabled tint; no animated transforms."
+      }
+    ],
+    "breakpoints": [],
+    "nativeMaterial": {
+      "source": "LabUIVisuals.cs / LabUI.cs",
+      "gradientBottomMultiplier": [
+        0.62,
+        0.72,
+        0.82
+      ],
+      "gradientTopMultiplier": [
+        1.36,
+        1.33,
+        1.28
+      ],
+      "backdropAlpha": 0.97,
+      "outerEdgeOffsetCanvasUnits": [
+        5,
+        -7,
+        7
+      ],
+      "highContrast": "Skips the vertical vertex gradient; black main panels and white text/border tint. Shared masks remain.",
+      "runtimeBlur": false,
+      "screenSpaceRefraction": false,
+      "previewNote": "CSS gradients and inset shadows approximate native vertex shading and bevel masks. They are documentation previews, not runtime shaders. Synthesized tonal ramps are swatch previews, not additional runtime tokens."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary glass button",
+      "kind": "button",
+      "description": "Documentation-only translation. 76-unit baseline at text scale 1; native sibling measurement grows all buttons to the longest wrapped label. Browser line metrics approximate TMP.",
+      "html": "<button class=\"ds-primary\">Learn step by step<svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(3.5% 6.5% 9.5%);background:linear-gradient(to top,rgb(29.76% 63.36% 66.42%),rgb(65.28% 100% 100%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-primary:hover,.ds-primary:focus-visible{background:linear-gradient(to top,rgb(23.808% 63.36% 66.42%),rgb(52.224% 100% 100%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-primary:active{background:linear-gradient(to top,rgb(18.4512% 50.688% 51.8076%),rgb(40.4736% 93.632% 80.8704%))}.ds-primary:disabled{background:linear-gradient(to top,rgb(12.7968% 30.4128% 33.21%),rgb(28.0704% 56.1792% 51.84%));cursor:default;outline:none}.ds-primary svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary glass button",
+      "kind": "button",
+      "description": "Documentation-only translation. Bold label and polished bevel. Native height and equal sibling width come from shared helpers.",
+      "html": "<button class=\"ds-secondary\">Choose an activity<svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-secondary{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-secondary:hover,.ds-secondary:focus-visible{background:linear-gradient(to top,rgb(5.208% 12.24% 17.63%),rgb(11.424% 22.61% 27.52%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-secondary:active{background:linear-gradient(to top,rgb(4.0362% 9.792% 13.7514%),rgb(8.8536% 18.088% 21.4656%))}.ds-secondary:disabled{background:linear-gradient(to top,rgb(2.7993% 5.8752% 8.815%),rgb(6.1404% 10.8528% 13.76%));cursor:default;outline:none}.ds-secondary svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "description": "Documentation-only translation. Native TMP input has a 68-unit default height, 14-unit inset and native caret/selection behavior.",
+      "html": "<label class=\"ds-field-label\">Email<input class=\"ds-field\" type=\"email\" placeholder=\"Email address\" /></label>",
+      "css": ".ds-field-label{font-family:\"Source Sans 3\",sans-serif;display:grid;gap:10px;color:rgb(72% 82% 87%);font-size:22px}.ds-field{font-family:\"Source Sans 3\",sans-serif;font-size:22px;min-height:40px;padding:14px;border:1px solid rgb(63% 83% 92% / .65);border-radius:15px;background:linear-gradient(to top,rgb(1.116% 2.232% 3.526%),rgb(2.448% 4.123% 5.504%));color:rgb(95% 97% 98%)}.ds-field::placeholder{color:rgb(72% 82% 87%)}.ds-field:hover{border-color:rgb(95% 97% 98%)}.ds-field:focus-visible{outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-field:disabled{opacity:.5}",
+      "refersTo": "input"
+    },
+    {
+      "name": "Signed-in console navigation",
+      "kind": "nav",
+      "description": "Documentation-only translation. Separate brand/grip and equal navigation rows. Log out is shown only for a signed-in account; this browser preview does not sign out.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-brand\"><strong>Anatome</strong><span>Grip to move / rotate</span></div><nav class=\"ds-nav-row\" aria-label=\"Console\"><button class=\"ds-nav-key\">Guide</button><button class=\"ds-nav-key\">Menu</button><button class=\"ds-nav-key\">Log out<svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M10 4H4v16h6m-1-8h12m-5-5 5 5-5 5\"/></svg></button></nav></header>",
+      "css": ".ds-nav{padding:20px;background:linear-gradient(to top,rgb(2.17% 4.68% 7.79%),rgb(4.76% 8.645% 12.16%));border-radius:15px;color:rgb(95% 97% 98%);max-width:660px}.ds-brand{font-family:\"Source Sans 3\",sans-serif;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;margin-bottom:12px}.ds-brand strong{font-size:28px}.ds-brand span{font-size:16px;color:rgb(72% 82% 87%)}.ds-nav-row{display:flex;gap:12px}.ds-nav-key{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-nav-key:hover,.ds-nav-key:focus-visible{background:linear-gradient(to top,rgb(5.208% 12.24% 17.63%),rgb(11.424% 22.61% 27.52%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-nav-key:active{background:linear-gradient(to top,rgb(4.0362% 9.792% 13.7514%),rgb(8.8536% 18.088% 21.4656%))}.ds-nav-key:disabled{background:linear-gradient(to top,rgb(2.7993% 5.8752% 8.815%),rgb(6.1404% 10.8528% 13.76%));cursor:default;outline:none}.ds-nav-key svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}"
+    },
+    {
+      "name": "Labeled toggle",
+      "kind": "button",
+      "description": "Documentation-only translation. On/Off remains explicit. Native live values participate in shared button sizing.",
+      "html": "<button class=\"ds-toggle\" aria-pressed=\"true\">On&nbsp; Controller vibration</button>",
+      "css": ".ds-toggle{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-toggle:hover,.ds-toggle:focus-visible{background:linear-gradient(to top,rgb(5.208% 12.24% 17.63%),rgb(11.424% 22.61% 27.52%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-toggle:active{background:linear-gradient(to top,rgb(4.0362% 9.792% 13.7514%),rgb(8.8536% 18.088% 21.4656%))}.ds-toggle:disabled{background:linear-gradient(to top,rgb(2.7993% 5.8752% 8.815%),rgb(6.1404% 10.8528% 13.76%));cursor:default;outline:none}.ds-toggle svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Settings slider",
+      "kind": "custom",
+      "description": "Documentation-only translation. Native 44-unit row constrains a 20-unit handle inside an inset travel parent. Browser range is illustrative.",
+      "html": "<label class=\"ds-slider\">Scene render scale&nbsp; 1.00<input type=\"range\" min=\"0.6\" max=\"1.4\" step=\"0.05\" value=\"1\" /></label>",
+      "css": ".ds-slider{font-family:\"Source Sans 3\",sans-serif;font-size:21px;color:rgb(72% 82% 87%);display:grid;gap:10px;min-width:260px}.ds-slider input{height:44px;width:100%;margin:0;accent-color:rgb(48% 88% 81%);cursor:pointer}.ds-slider input:hover{filter:brightness(1.12)}.ds-slider input:focus-visible{outline:2px solid rgb(48% 88% 81%);outline-offset:2px}"
+    },
+    {
+      "name": "One-step glass console",
+      "kind": "custom",
+      "description": "Documentation-only translation. Native canvas stays 700 × 860. Small preview illustrates material and instruction hierarchy, not the full layout.",
+      "html": "<section class=\"ds-console\"><p class=\"ds-step\">Step 1 of 4</p><h2>Find the manubrium</h2><p>Point at the highlighted structure and squeeze the trigger.</p><button class=\"ds-help\">Show me this step<svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></section>",
+      "css": ".ds-console{font-family:\"Source Sans 3\",sans-serif;display:grid;gap:14px;max-width:480px;padding:28px;border:1px solid rgb(71% 89% 96% / .8);border-radius:15px;background:linear-gradient(to top,rgb(2.17% 4.68% 7.79%),rgb(4.76% 8.645% 12.16%));color:rgb(95% 97% 98%);box-shadow:5px 7px 0 rgb(12% 25% 31%)}.ds-console h2{font-size:31px;margin:0}.ds-console p{font-size:22px;line-height:1.35;margin:0}.ds-console .ds-step{color:rgb(48% 88% 81%)}.ds-help{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-help:hover,.ds-help:focus-visible{background:linear-gradient(to top,rgb(5.208% 12.24% 17.63%),rgb(11.424% 22.61% 27.52%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-help:active{background:linear-gradient(to top,rgb(4.0362% 9.792% 13.7514%),rgb(8.8536% 18.088% 21.4656%))}.ds-help:disabled{background:linear-gradient(to top,rgb(2.7993% 5.8752% 8.815%),rgb(6.1404% 10.8528% 13.76%));cursor:default;outline:none}.ds-help svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}",
+      "refersTo": "activity-rail"
+    },
+    {
+      "name": "Reserved narration caption",
+      "kind": "custom",
+      "description": "Documentation-only translation. Native caption band reserves 112 × captionScale units outside scrolling controls.",
+      "html": "<div class=\"ds-caption\" role=\"status\">Air in the pleural space can separate the lung from the chest wall and reduce lung expansion.</div>",
+      "css": ".ds-caption{font-family:\"Source Sans 3\",sans-serif;font-size:20px;line-height:1.35;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));border:1px solid rgb(63% 83% 92% / .65);padding:16px;min-height:80px;max-width:600px;border-radius:15px}",
+      "refersTo": "narration-caption"
+    },
+    {
+      "name": "Confirmation panel",
+      "kind": "custom",
+      "description": "Documentation-only translation. Native confirmation preserves named actions, Cancel and scrolling. Browser preview does not execute an attempt.",
+      "html": "<section class=\"ds-confirm\" aria-label=\"Finish this attempt?\"><h2>Finish this attempt?</h2><p>Incomplete essential objectives prevent a pass. Your recorded actions will be saved.</p><div><button class=\"ds-confirm-primary\">Finish attempt</button><button class=\"ds-confirm-secondary\">Cancel</button></div></section>",
+      "css": ".ds-confirm{font-family:\"Source Sans 3\",sans-serif;display:grid;gap:14px;padding:28px;max-width:500px;background:linear-gradient(to top,rgb(2.17% 4.68% 7.79%),rgb(4.76% 8.645% 12.16%));border:1px solid rgb(63% 83% 92% / .65);border-radius:15px;color:rgb(95% 97% 98%)}.ds-confirm h2{font-size:36px;margin:0}.ds-confirm p{font-size:24px;line-height:1.35;margin:0}.ds-confirm>div{display:flex;align-items:stretch;gap:10px}.ds-confirm-primary{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(3.5% 6.5% 9.5%);background:linear-gradient(to top,rgb(29.76% 63.36% 66.42%),rgb(65.28% 100% 100%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-confirm-primary:hover,.ds-confirm-primary:focus-visible{background:linear-gradient(to top,rgb(23.808% 63.36% 66.42%),rgb(52.224% 100% 100%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-confirm-primary:active{background:linear-gradient(to top,rgb(18.4512% 50.688% 51.8076%),rgb(40.4736% 93.632% 80.8704%))}.ds-confirm-primary:disabled{background:linear-gradient(to top,rgb(12.7968% 30.4128% 33.21%),rgb(28.0704% 56.1792% 51.84%));cursor:default;outline:none}.ds-confirm-primary svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}.ds-confirm-secondary{font-family:\"Source Sans 3\",sans-serif;font-size:24px;font-weight:700;line-height:1.25;min-height:76px;padding:12px 20px;border:1px solid rgb(56% 76% 85% / .5);border-radius:15px;color:rgb(95% 97% 98%);background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));box-shadow:inset 0 1px 0 rgb(80% 100% 100% / .4),inset 0 -3px 4px rgb(0 0 0 / .25);text-align:left;white-space:normal;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.ds-confirm-secondary:hover,.ds-confirm-secondary:focus-visible{background:linear-gradient(to top,rgb(5.208% 12.24% 17.63%),rgb(11.424% 22.61% 27.52%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-confirm-secondary:active{background:linear-gradient(to top,rgb(4.0362% 9.792% 13.7514%),rgb(8.8536% 18.088% 21.4656%))}.ds-confirm-secondary:disabled{background:linear-gradient(to top,rgb(2.7993% 5.8752% 8.815%),rgb(6.1404% 10.8528% 13.76%));cursor:default;outline:none}.ds-confirm-secondary svg{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}"
+    },
+    {
+      "name": "Activity card",
+      "kind": "card",
+      "description": "Documentation-only translation. Native cards are at least 148 units with proportional 144 × 104 source-art frames, narrowed at large text scale. Preview uses the supported no-art icon variant and invents no anatomy picture.",
+      "html": "<button class=\"ds-card\"><span class=\"ds-card-symbol\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></span><span class=\"ds-card-copy\"><strong>Guided Dissection</strong><span>Follow one coached step.</span><small>Easy</small></span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-card{font-family:\"Source Sans 3\",sans-serif;display:flex;align-items:center;gap:20px;min-height:148px;padding:16px 20px 16px 16px;max-width:620px;text-align:left;border:1px solid rgb(63% 83% 92% / .65);border-radius:15px;background:linear-gradient(to top,rgb(6.51% 12.24% 17.63%),rgb(14.28% 22.61% 27.52%));color:rgb(95% 97% 98%);cursor:pointer}.ds-card-copy{display:grid;gap:7px;flex:1;min-width:0}.ds-card strong{font-size:28px}.ds-card-copy>span{font-size:21px;color:rgb(72% 82% 87%)}.ds-card small{font-size:20px;color:rgb(48% 88% 81%)}.ds-card svg{width:24px;height:24px;fill:none;stroke:rgb(48% 88% 81%);stroke-width:2;flex-shrink:0}.ds-card-symbol svg{width:32px;height:32px}.ds-card:hover,.ds-card:focus-visible{background:linear-gradient(to top,rgb(5.0127% 11.7504% 16.5722%),rgb(10.9956% 21.7056% 25.8688%));outline:2px solid rgb(48% 88% 81%);outline-offset:2px}.ds-card:active{background:linear-gradient(to top,rgb(3.5805% 9.4248% 13.2225%),rgb(7.854% 17.4097% 20.64%))}.ds-card:disabled{background:linear-gradient(to top,rgb(3.5805% 7.0992% 10.7543%),rgb(7.854% 13.1138% 16.7872%));cursor:default;outline:none}",
+      "refersTo": "anatomy-card"
+    }
+  ],
+  "narrative": {
+    "northStar": "A floating glass instrument console",
+    "overview": "The specimen leads. A floating smoked-blue glass console teaches one action at a time beside the learner's hands. Polished edges, stationary vertical shading, cool ivory Source Sans 3 text and sea-glass primary controls give the interface a dimensional material. Source anatomy pictures make learning choices recognizable before the learner reads their descriptions. Neutral tissue lighting carries anatomical form separately from the UI palette.\n\nThe user-pinned 3D glass direction governs version 1.5.0 and supersedes seed 4eb97167. The build remains code-led (.impeccable/config.json sets buildPath to code). Equal sibling button geometry, separated navigation and reserved controls support operation inside VR; material effects remain subordinate to readable instructions.",
+    "keyCharacteristics": [
+      "One practical action at a time",
+      "Smoked-blue glass with stationary bevels and a dimensional outer edge",
+      "Equal sibling controls that grow with wrapped labels",
+      "Native controller input and reserved status, captions and settings actions",
+      "Source anatomy artwork with recorded provenance"
+    ],
+    "rules": [
+      {
+        "name": "Read the whole instruction",
+        "body": "Use preferred text heights and scroll overflow; never overlap essential text.",
+        "section": "typography"
+      },
+      {
+        "name": "One current action",
+        "body": "Keep advanced tools and mode changes on separate pages.",
+        "section": "layout"
+      },
+      {
+        "name": "Stationary glass",
+        "body": "Build material depth from the shared gradient, bevel masks and outer edge; keep readability and high contrast intact.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use shared glass surfaces and button sizing instead of page-specific copies.",
+      "Do keep navigation, status, captions and fixed actions outside the scrolling content they control.",
+      "Do show difficulty locks, availability and account state in words.",
+      "Do preserve source anatomy proportions, provenance and actual controller press, hold, drag, release and scroll.",
+      "Do separate source checks, player captures, simulator checks and physical-headset acceptance."
+    ],
+    "donts": [
+      "Don't let wrapped text or slider handles draw over adjacent controls.",
+      "Don't add runtime blur, screen-space refraction or animated panel motion to simulate glass.",
+      "Don't restore the desktop anatomy gameplay path or let camera fitting move the learner's headset.",
+      "Don't award credit from a UI finish button or a teaching aid.",
+      "Don't infer comfort, clinical validity or headset FPS from screenshots or simulator tests."
+    ]
+  },
+  "vrRevision": {
+    "flow": "One current action; practical orientation; Easy mastery before Medium and Hard",
+    "canvas": {
+      "width": 700,
+      "height": 860,
+      "scale": 0.00085,
+      "forwardMetres": 0.95,
+      "leftMetres": 0.55,
+      "verticalOffsetFromEyesMetres": -0.02,
+      "horizontalForwardProjection": true,
+      "minimumCentreY": "skin.Renderer.bounds.min.y + (860 * 0.00085 / 2) + 0.04",
+      "rotation": "Faces headset position with world up; looking down does not lower the panel into the support surface."
+    },
+    "review": ".impeccable/review/glass-ui-final",
+    "historicalReview": [
+      ".impeccable/review/glass-ui",
+      ".impeccable/vr-craft",
+      ".impeccable/vr-review",
+      ".impeccable/review"
+    ],
+    "source": "DESIGN.md",
+    "status": "Implemented native glass system. Read the final player and simulator reports for their tested revisions. Physical-headset acceptance, wearer comfort and headset performance remain separate.",
+    "header": {
+      "brand": "Anatome",
+      "brandFontSize": 28,
+      "brandWeight": 700,
+      "iconSize": 30,
+      "iconSquare": true,
+      "rows": [
+        "brand / grip instruction",
+        "Guide / Menu or Pause / signed-in Log out"
+      ],
+      "navigationWidths": "equal flexible widths",
+      "height": "ControlHeight + 58 * textScale + 34",
+      "defaultHeight": 168
+    },
+    "footer": {
+      "statusFontSize": 18,
+      "height": "max(68, 32 * textScale + 40)"
+    },
+    "nativeComponents": {
+      "surface": {
+        "sourceMaskSize": 64,
+        "sourceCornerRadius": 15,
+        "nineSliceBorder": 17,
+        "edge": "bright upper outline, darkened fill perimeter and separate offset outer edge",
+        "shadows": false,
+        "material": "LabGlassTint stationary vertex gradient and shared bevel masks",
+        "runtimeBlur": false,
+        "screenSpaceRefraction": false
+      },
+      "button": {
+        "baseHeight": "ceil(48 * textScale + 28)",
+        "defaultBaseHeight": 76,
+        "labelSize": 24,
+        "paddingHorizontal": 20,
+        "paddingVertical": 12,
+        "iconGap": 12,
+        "iconSize": 24,
+        "primaryWeight": 700,
+        "secondaryWeight": 700,
+        "siblingHeight": "LabButtonHeight measures the longest active sibling label at its actual available width",
+        "siblingWidth": "equal flexible widths with zero minimum/preferred width",
+        "stateTintSeconds": 0
+      },
+      "input": {
+        "minimumHeight": 64,
+        "defaultHeight": 68,
+        "height": "max(64, 40 * textScale + 28)",
+        "padding": 14
+      },
+      "anatomyCard": {
+        "minimumHeight": 148,
+        "padding": {
+          "top": 16,
+          "right": 20,
+          "bottom": 16,
+          "left": 16
+        },
+        "spacing": 20,
+        "titleSize": 28,
+        "descriptionSize": 21,
+        "statusSize": 20,
+        "previewFrame": {
+          "width": 144,
+          "largeTextWidth": 112,
+          "largeTextCondition": "textScale > 1.2",
+          "height": 104,
+          "mode": "AspectRatioFitter.FitInParent"
+        },
+        "actionIconSize": 24
+      },
+      "instruction": {
+        "padding": 22,
+        "spacing": 12,
+        "targetSize": 31,
+        "targetWeight": 700,
+        "instructionSize": 25
+      },
+      "icons": {
+        "source": "LabGlyph / LabIcon",
+        "method": "Authored vector geometry with consistent stroke and minimum-rectangle-side square sizing",
+        "essentialStateAlsoWritten": true
+      },
+      "slider": {
+        "rowHeight": 44,
+        "handleWidth": 20,
+        "travelParentHorizontalInset": 10,
+        "travelParentVerticalInset": 7
+      },
+      "guide": {
+        "fixedTop": "Close guide",
+        "fixedFooter": [
+          "Previous",
+          "page counter",
+          "Next"
+        ],
+        "controlHeight": "ControlHeight",
+        "body": "clipped scrolling between fixed controls"
+      },
+      "settings": {
+        "fixedFooter": [
+          "Apply",
+          "Cancel",
+          "save/tracking status"
+        ],
+        "footerHeight": "ControlHeight + 28 * textScale + 30"
+      }
+    },
+    "artwork": {
+      "count": 16,
+      "width": 512,
+      "height": 320,
+      "resources": "Learning/CardArt/<mode-or-unit-id>",
+      "generator": "LearningCardArt.Prepare()",
+      "provenance": "unity/ThoraxLab/Assets/ThoraxLab/Resources/Learning/CardArt/card-art-provenance.json",
+      "source": "Temporary URP preview-scene instances of the existing Thorax.fbx",
+      "interpretation": "Healthy source anatomy; selection tint is interface emphasis. Omitted coverings and exploded translations are recorded. No fabricated diagnostic or treatment images.",
+      "windowsCompression": "BC7",
+      "androidCompression": "ASTC_6x6",
+      "mipmaps": true,
+      "runtimeCameras": 0
+    },
+    "historyPolicy": "Prior review folders are retained in place as historical evidence. Their captures and benchmarks do not establish acceptance of the current revision.",
+    "implementationSources": [
+      "LabWidgets.cs",
+      "LabUIVisuals.cs",
+      "LabUI.cs",
+      "LabUI.Settings.cs",
+      "LabUI.Guide.cs",
+      "LabRuntime.cs",
+      "LearningCardArt.cs"
+    ],
+    "documentationOnlyHTML": true,
+    "version": "1.5.0",
+    "account": {
+      "logout": "Header visible only when Account.UserId exists; calls LabRuntime.LogOut",
+      "guards": [
+        "current cut",
+        "account request",
+        "save failure"
+      ],
+      "scope": "Current-device session through AccountService.SignOut; save first, retain account-isolated progress and PIN-protected offline access",
+      "notice": "Signed-in account state replaces guest-session notice",
+      "backendSchemaChanges": false
+    }
+  }
+}

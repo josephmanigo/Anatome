@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-15T17:38:51.152410+00:00",
+  "status": "PRODUCTION_SIGNED_CLASSROOM_RELEASE_FUNCTIONALLY_ACCEPTED",
+  "distribution": "Private school/classroom APK",
+  "productionPackageReady": true,
+  "fleetInstallationTransitionConfirmed": false,
+  "version": "1.4.9",
+  "versionCode": 17,
+  "package": "org.thoraxlab.learning",
+  "curriculum": "2026.10.2",
+  "apk": {
+    "path": "builds/AnatomeSchool/Anatome-1.4.9-Production.apk",
+    "sha256": "bb3d3bf8a82a5e1b150ffc4d9429fe0de4ebf0720697dd6bee269f1e95e47dbc",
+    "bytes": 110971221
+  },
+  "certificateSha256": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910",
+  "strictReleaseChecks": {
+    "passed": 30,
+    "failed": 0
+  },
+  "payloadEquivalence": {
+    "passed": true,
+    "entries": 1346,
+    "changed": [],
+    "sourceSha256": "6bfd9b01681b32151f65e957e0912df23c1a4c0ba49ace602e8c38e9910b57f1",
+    "signedSha256": "bb3d3bf8a82a5e1b150ffc4d9429fe0de4ebf0720697dd6bee269f1e95e47dbc",
+    "method": "SHA-256 comparison of every ZIP entry except JAR signing metadata; includes manifest, code, resources and native libraries"
+  },
+  "signingLineage": {
+    "passed": true,
+    "androidApiLevels": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "activeSignerMatches": true,
+    "rotationProofValid": true,
+    "installedDataCapability": true,
+    "oldKeyRollbackAllowed": false,
+    "physicalInstallationTested": false
+  },
+  "userAcceptance": {
+    "recordedUtc": "2026-10-15T17:38:51.151409+00:00",
+    "source": "Direct user messages in this task; user-reported, not independently observed by the agent",
+    "version": "1.4.9",
+    "versionCode": 17,
+    "userConfirmedVersion": true,
+    "versionCodeInferredFromNamedRelease": true,
+    "headsetConfirmationQuote": "Both Quest 2 and Quest 3 \u2014 version 1.4.9",
+    "functionalConfirmationQuote": "i test it already and there is no problem",
+    "loginConfirmationQuote": "the login is working also",
+    "quest2FunctionalPassed": true,
+    "quest3FunctionalPassed": true,
+    "loginPassed": true,
+    "associatedCandidateSha256": "6bfd9b01681b32151f65e957e0912df23c1a4c0ba49ace602e8c38e9910b57f1",
+    "hashAssociation": "Project artifact for the version named by the user; the user did not independently supply an APK hash.",
+    "productionPayloadUnchanged": true,
+    "signedInstallationTransitionTested": false,
+    "measuredHeadsetFpsSupplied": false,
+    "sustainedThermalMeasurementsSupplied": false,
+    "exhaustiveOfflineAndCrossDeviceRecoveryClaimed": false
+  },
+  "automatedApplicationBaseline": {
+    "path": "qa/production-school-20261016/verification-summary.json",
+    "sha256": "c326d052b9833733e0b9fe220480a854834e6e387bf1b7cecdd34cab131513f5",
+    "bytes": 8228,
+    "counts": {
+      "core": 896,
+      "content": 1761,
+      "databaseLocal": 263,
+      "anonymousLiveApi": 5,
+      "nativeUnit": 105,
+      "nativePlayerIntegration": 89,
+      "fullXrSimulator": 2411,
+      "isolatedUiAudit": 1048,
+      "learningScenarios": 72,
+      "readinessRegressions": 22,
+      "buildPolicy": 16,
+      "apk": 20,
+      "strictCandidatePassed": 29,
+      "strictCandidateExpectedFailures": 1
+    },
+    "interpretation": "Existing application checks, not rerun during signing; application entries are unchanged. Historical pending-signing/device statements and expected candidate debug-signing failure are superseded by this record."
+  },
+  "evidence": [
+    {
+      "path": "qa/school-signed-release/learning-apk-verification.json",
+      "sha256": "ffbd6edc5cefcdf325299b4baa20cef67c627d47b68e663d02cc87c85819654f",
+      "bytes": 4636
+    },
+    {
+      "path": "qa/school-signed-release/learning-apk-signature.txt",
+      "sha256": "06dd6c6d9b14bfd8dcebe14763edd22215c2216d6825be915332961bbffe6644",
+      "bytes": 967
+    },
+    {
+      "path": "qa/school-signed-release/payload-equivalence.json",
+      "sha256": "bd4b3b0984dc02516f13286b7d2fc4c5970d06c5db69559f5028ec63ce1fa4d2",
+      "bytes": 373
+    },
+    {
+      "path": "qa/school-signed-release/signing-lineage.json",
+      "sha256": "b0b95200c0def1a2a6b81c778b2ad607523efb82d7fef2eb5f96ebc406f66174",
+      "bytes": 211
+    },
+    {
+      "path": "qa/school-signed-release/signing-receipt.json",
+      "sha256": "72fa6e0334860782bbb48f392e70b82781822f5436af1468ee76f165d9a88001",
+      "bytes": 747
+    },
+    {
+      "path": "qa/school-signed-release/signing-checks.json",
+      "sha256": "96236af7d25855adb3472b00ea4ea8428d05df5011cc82c00800aec92c562916",
+      "bytes": 335
+    },
+    {
+      "path": "qa/school-signed-release/user-acceptance.json",
+      "sha256": "eb8d1c6085c583c2971b8b11eee685b1fa4ed6efe8d3a58de568e0b2d4e78244",
+      "bytes": 1067
+    },
+    {
+      "path": "qa/school-signed-release/release-certificate.der",
+      "sha256": "36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910",
+      "bytes": 1009
+    },
+    {
+      "path": "qa/school-signed-release/previous-certificate.der",
+      "sha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+      "bytes": 744
+    },
+    {
+      "path": "qa/school-signed-release/debug-to-release.lineage",
+      "sha256": "a8d73007eedbcb536d37310d450a7bdfdc8fd8330dee4fed8ece12d37bc9dd16",
+      "bytes": 2081
+    }
+  ],
+  "remainingOperations": [
+    "Confirm one in-place installation of this production-signed APK and retained progress before fleet rollout; do not uninstall or clear data.",
+    "Owner must complete and verify portable signing-key/password backup."
+  ],
+  "limits": [
+    "No measured headset FPS or sustained thermal report supplied.",
+    "General login success does not establish every offline or cross-device recovery path.",
+    "No public-store submission or clinical certification claimed."
+  ],
+  "noFixed72FpsCap": true
+}

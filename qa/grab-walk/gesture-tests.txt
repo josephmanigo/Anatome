@@ -1,0 +1,33 @@
+[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
+PASS open hand is neutral
+PASS index pinch selects without grabbing
+PASS pinch hysteresis avoids chatter
+PASS pinch release clears selection
+PASS three-finger grasp holds without activating tool
+PASS index can activate while remaining fingers hold
+PASS grasp hysteresis holds through minor noise
+PASS opening releases the object
+PASS tracking loss clears held gestures
+PASS invalid pinch cancels both gestures NaN
+PASS invalid grasp cancels both gestures NaN
+PASS invalid pinch cancels both gestures ∞
+PASS invalid grasp cancels both gestures ∞
+PASS invalid pinch cancels both gestures -∞
+PASS invalid grasp cancels both gestures -∞
+PASS held controller at launch cannot select
+PASS controller neutral arms inputs
+PASS new controller press works
+PASS switch to closed bare hand cancels old action
+PASS held hand after switch stays blocked
+PASS open hand arms gestures
+PASS new pinch selects
+PASS new grasp is independent
+PASS tracking/system gesture cancellation releases
+PASS closed hand at recovery stays blocked
+PASS release only trigger re-arms only trigger
+PASS trigger can work while stale grip remains blocked
+PASS switch back to held controller does not grab
+PASS controller release arms again
+PASS controller works again
+PASS no source releases everything
+PASS 31 gesture and input-switch checks.

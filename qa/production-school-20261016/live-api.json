@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-15T16:40:30.038Z",
+  "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+  "checks": [
+    {
+      "name": "public auth configuration",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "anonymous progress sync denied",
+      "status": 401,
+      "expected": 401,
+      "passed": true
+    },
+    {
+      "name": "anonymous attempt read denied",
+      "status": 401,
+      "expected": 401,
+      "passed": true
+    },
+    {
+      "name": "account deletion without a session denied",
+      "status": 401,
+      "expected": 401,
+      "passed": true
+    },
+    {
+      "name": "account deletion rejects GET",
+      "status": 405,
+      "expected": 405,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "emailsSent": 0,
+  "authenticatedUserTests": false
+}

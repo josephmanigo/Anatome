@@ -1,0 +1,6 @@
+{
+  "windowsArchive": "handoff/ThoraxLab-Learning-Windows-20260906-070609.zip",
+  "sha256": "4bb76b66e8bebf2dbdcc3fd4160925b16bf6b905d6f7933da5ae9cc68668d3fc",
+  "report": "qa/learning-performance/windows-15-minute-benchmark.json",
+  "relationshipToLatestBuild": "Benchmark preceded the objective-reward correction. Graphics code, preset settings and benchmark workload are unchanged. Latest build receives the runtime regression checks separately."
+}

@@ -1,0 +1,14 @@
+C:\Users\My Pc\Downloads\new\qa\natural-vr\bin\Debug\net10.0\GestureTests.exe
+C:\Users\My Pc\Downloads\new\qa\natural-vr\bin\Debug\net10.0\GestureTests.deps.json
+C:\Users\My Pc\Downloads\new\qa\natural-vr\bin\Debug\net10.0\GestureTests.runtimeconfig.json
+C:\Users\My Pc\Downloads\new\qa\natural-vr\bin\Debug\net10.0\GestureTests.dll
+C:\Users\My Pc\Downloads\new\qa\natural-vr\bin\Debug\net10.0\GestureTests.pdb
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.AssemblyInfoInputs.cache
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.AssemblyInfo.cs
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.csproj.CoreCompileInputs.cache
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.dll
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\refint\GestureTests.dll
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.pdb
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\GestureTests.genruntimeconfig.cache
+C:\Users\My Pc\Downloads\new\qa\natural-vr\obj\Debug\net10.0\ref\GestureTests.dll

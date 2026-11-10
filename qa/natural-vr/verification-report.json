@@ -1,0 +1,210 @@
+{
+  "utc": "2026-09-19T13:41:50.886426+00:00",
+  "status": "READY_FOR_SCHOOL_FUNCTIONAL_RETEST_PHYSICAL_QUEST_PENDING",
+  "product": "Anatome",
+  "xrHandsVersion": "1.8.1",
+  "packageIdentity": "org.thoraxlab.learning",
+  "mainAndReviewMatch": true,
+  "sourceFilesCompared": 64,
+  "sourceSha256": {
+    "Assets/ThoraxLab/Editor/AccountCloudRecoveryVerification.cs": "6705dfd706e87355d12abb3e14a2b2cf8ed6d9b372ace8a2563536e10faf0363",
+    "Assets/ThoraxLab/Editor/AccountPayloadVerification.cs": "8f9d95f4e6ea1b5150d802da34ff90a611037e1e8b608adefea1bb482dc72230",
+    "Assets/ThoraxLab/Editor/BuildProject.cs": "2ec2d95540647347281a6df3373f5c49a258842711546bd2a727fad92f9ebf01",
+    "Assets/ThoraxLab/Editor/GlovedHandAssets.cs": "5d2f5d3c04e91fb429ad6667fcee8e288e52c1b4432f35cfc7b385fc33229450",
+    "Assets/ThoraxLab/Editor/InstrumentVisualVerification.cs": "5719e93bd8b2c1aa8327853b6c007c79f440b13b045b36841c3f9de1b3f7c1ae",
+    "Assets/ThoraxLab/Editor/LearningAccountVerification.cs": "6b72caacf80124fd770d4b103dfd3c60da9fe5893bdb0456e26e5865f04dc331",
+    "Assets/ThoraxLab/Editor/LearningBuild.cs": "8e842f03d87798b4878ae74e60b480bdc5355ce4f7df619df5e1a86ceed19b25",
+    "Assets/ThoraxLab/Editor/LearningCardArt.cs": "093b3877539047b7f18c9b0628fd4aa2212fa3345bd9a30737af3721138844f9",
+    "Assets/ThoraxLab/Editor/LearningCutMeshRepair.cs": "3abc227a5a07649973114865f8a2176db5b278cd3530c06727249fb36829c6e5",
+    "Assets/ThoraxLab/Editor/LearningEditorHandoff.cs": "5870ef5f46f2e87ae6713f6f318a43b3d14bfc646692e7b6a98bfea47aeab560",
+    "Assets/ThoraxLab/Editor/LearningEditorPlayMode.cs": "90804892f9833ac29f3729b2818f37740314db8547ea7180f9f68bc72ce63d3e",
+    "Assets/ThoraxLab/Editor/LearningSimulatorSetup.cs": "fcc9a36cc449d4cbe412ad7d19179b5710ff20c194182d4f50c6b5c1a60daadf",
+    "Assets/ThoraxLab/Editor/LearningVRSimulatorVerification.cs": "3716369eb69ee2aff7f43d9ce2b3dd340cf05f54c112a8465cf07f4d10bb97a6",
+    "Assets/ThoraxLab/Editor/VRSpecimenAssets.cs": "eba244d94f7b45ada8d8382037fd148b1f0417406c47dc922c1c7bf1a7713037",
+    "Assets/ThoraxLab/Learning/AccountService.cs": "d35cd5ce5755f13a64283499b8e5e1e2f7d6f8ad15dd376dee3309045b058061",
+    "Assets/ThoraxLab/Learning/CaseAnatomyWorkbench.cs": "d33af915a7099ff3994d27256fbca99e1f7a6fd26954a42253ed07dd8f9f330a",
+    "Assets/ThoraxLab/Learning/ComfortVignette.cs": "c5893a20f1c270c9c852e5ed27ced03d4aa818dddb72b3ba7115f134a4ade050",
+    "Assets/ThoraxLab/Learning/Core/AssessmentEngine.cs": "849c4bb0e5dbaaac57e2404d825788a41204e4e62ebdf3bacc4b64bfcdf0053a",
+    "Assets/ThoraxLab/Learning/Core/AtomicFileStore.cs": "f409d72d22dda8323a7204f09c627f35aab6307c7a1517e826fda964f8f0f1e0",
+    "Assets/ThoraxLab/Learning/Core/LearningBrand.cs": "35f500b78438dcdafd8049405f69505552518abcea28a8821e61f8c63af836d6",
+    "Assets/ThoraxLab/Learning/Core/LearningModels.cs": "888a1eef60c476abf8c37f14596936b253c7fc591f31cb3baab90850b4c24e15",
+    "Assets/ThoraxLab/Learning/Core/SettingsProfile.cs": "62fda1b2e21007c2aea5dc829b5412767e628e72dea13212883bb846fb4d3c71",
+    "Assets/ThoraxLab/Learning/Core/XRInteractionGate.cs": "af6b6c5aa2182bc5877447f30b5c87235dd962a86e3209786286e27a7ccdf281",
+    "Assets/ThoraxLab/Learning/DiseaseTeachingModel.cs": "dd1d925d0eb90af6ee01351623507090ceb32b7c5ea674fce00048749426c47b",
+    "Assets/ThoraxLab/Learning/DissectionContactMonitor.cs": "5c44e101f682a53476614782996b1462cca3bd7d4e9bcb5462d0208dd48a4915",
+    "Assets/ThoraxLab/Learning/EnumerationMarkers.cs": "f31af4e1e261a43f785ff05bfad097c48a69fb7df1373c2f092e7e98dff5cdd6",
+    "Assets/ThoraxLab/Learning/GlovedHandVisual.cs": "620bd871e487bd8ffab3d303705a698961d26beaa6a82170eb2821a4f73c1d6e",
+    "Assets/ThoraxLab/Learning/GuidedInteractionCoach.cs": "b8d83fa870a608ef2a0240721a2a55a57520b2f30857da488144196a4efe3201",
+    "Assets/ThoraxLab/Learning/InstrumentGeometry.cs": "e07c876dc889368d0a88855b174a0f4db4264894fdb986b6abe51c8007fe1532",
+    "Assets/ThoraxLab/Learning/LabAudio.cs": "ac95aa53784b9d7667f2291663cd2103139188635677d8b146c749bde1e64697",
+    "Assets/ThoraxLab/Learning/LabRuntime.cs": "73498e5d7dac43e08e61da5bf1c406f945fbca1df89110d6f1cffc33066f69e7",
+    "Assets/ThoraxLab/Learning/LabUI.cs": "f066c274597e80972d5efcd33258d97158b79d4971e868e4f526896ad07cd82a",
+    "Assets/ThoraxLab/Learning/LabUI.Settings.cs": "88cbe65cca4160e5caf56be029084769d5f1d46ba4b49104d25157089710d622",
+    "Assets/ThoraxLab/Learning/LabUIVisuals.cs": "53ea2047a398cf1909a4952b6d183d49b2d112b785656d7963f9c41eb25e9cb4",
+    "Assets/ThoraxLab/Learning/LabWidgets.cs": "605e4f73043daa26c90cd2121ceba98248503c605d9ef7589230951cb472b8ad",
+    "Assets/ThoraxLab/Learning/LearningBenchmark.cs": "0b588df0fd70beb39be967b271bec826ad33c06914dabe618b76ca0f055047fa",
+    "Assets/ThoraxLab/Learning/LearningControls.cs": "afd256f05a81862ed6f5aa597386fb671fd9cdaa7a9e9d56ff2a665ee1927de8",
+    "Assets/ThoraxLab/Learning/LearningPerformanceMonitor.cs": "1e3419ef9d54a539f3cb64138bc93f11d630bdd4b1afec0d1064d517d98a2352",
+    "Assets/ThoraxLab/Learning/LearningReadinessRegression.cs": "8c3690519d3736e91a1996a3dbb50ca1b15550ea4b08976de648bca95842e124",
+    "Assets/ThoraxLab/Learning/LearningRuntimeVerification.cs": "3f34690cc64a9af06d133693c4fbab7d452dcaf8921f591a95de36a51da748df",
+    "Assets/ThoraxLab/Learning/LearningSceneActionFixture.cs": "dd3207c2164674573d134153ca3f2d6e7dbe4b85b3bcb9c6549b0861405e49d1",
+    "Assets/ThoraxLab/Learning/LearningXRInput.cs": "18b0c5ef1587be8d46475931d9c4b3e37ad08746809e07daf0598b1a1bcbbe25",
+    "Assets/ThoraxLab/Learning/LessonDemonstrator.cs": "85393253561afab56381fe710753a8a9e30a43e81aa1fcfd012dcac8d88e1e46",
+    "Assets/ThoraxLab/Learning/LessonNarrator.cs": "6d9a4f4c317423a00486f172a49aa0b1c34736c033787c2e3d9610c611c77a33",
+    "Assets/ThoraxLab/Learning/OrientationGrabConstraint.cs": "b72dab1432b25a984dd19d08fb7ab7f40918da92d31f013b5aa088598c7e2e4c",
+    "Assets/ThoraxLab/Learning/ProcedureWorkbench.cs": "250cc17316b3372afaa33e39ff594a175b41d0f69c8d37364a0b195c0d00c3e6",
+    "Assets/ThoraxLab/Learning/QuestRefreshFeature.cs": "9ce3202aec0e05609bcd49ebf5576ee989d7db9814f73e8cb746f3c6bbbe3c2f",
+    "Assets/ThoraxLab/Learning/SettingsService.cs": "49320766eb9f27226b6070fa0dfd7b46a6a9aa914fd892197ca421b0b414dbd6",
+    "Assets/ThoraxLab/Learning/TrustedDeviceStore.cs": "01dbdfd84a000924e3c1be0cc9ad95d9cb84a110929db970f754dfed1526b9a3",
+    "Assets/ThoraxLab/Learning/VRSpecimenPresentation.cs": "a7e31bde8d91f261186be4a78b3e58382b7d7b3847439acad5be46b19b85aa37",
+    "Assets/ThoraxLab/Learning/WorkbenchGeometry.cs": "baddbca3ad0e33225d7400730df002b8c666dc869661190fd8b8212ec605feb4",
+    "Assets/ThoraxLab/Scripts/AnatomyStructure.cs": "7e3c7dabd96d3ab2d6e16dcd69033b01c01eda06fb7d387927fce5b572e7f4fd",
+    "Assets/ThoraxLab/Scripts/BoneCutDetail.cs": "c84375881e638e6fa661ec2bd1f12e6fddfcdb21f417f16135087a43d4c2663f",
+    "Assets/ThoraxLab/Scripts/DissectionSession.cs": "72232b5fdd1d5652427771530368d3d8a72ab6503f1594e291cef7c857952017",
+    "Assets/ThoraxLab/Scripts/DissectionToolVisual.cs": "bb98173d159e0a20c13123e69416a2322a05fc972c678d2dfd22aa78dddba801",
+    "Assets/ThoraxLab/Scripts/LabButton.cs": "d0968cd4a46a0162fafc1691a13693d70f3f69dd7760a8c24fe9c8be69e51fe5",
+    "Assets/ThoraxLab/Scripts/LabControls.cs": "52141d6436c7ac8185656ea5aec208e9237c202faf2630ffd4e1ed27cd50f91d",
+    "Assets/ThoraxLab/Scripts/LabHandInteractor.cs": "34b5fd182da05ae9425259d91dd575c910de935f0595cdb3b46b8780f82672f6",
+    "Assets/ThoraxLab/Scripts/NativeCutting.cs": "637844297df3b9f0e5d57b670aa7a97953c42c82a9df1ce8be1f7b2ce6a338ff",
+    "Assets/ThoraxLab/Scripts/RuntimeVerification.cs": "1fde18161122b83e022810c458d3f86f3d1e28e243131933dc1ffe34474e9598",
+    "Assets/ThoraxLab/Scripts/SoftHandling.cs": "fa800af7f746ad2cf9ffcf465f990e80b31bf7894df7e25eff83f515b3adefc0",
+    "Packages/manifest.json": "4391922515ae36866e6d0c569c459a36414f9c7a20de2e6e98fdb223a0ddec73",
+    "Packages/packages-lock.json": "450fbfa6bf6ea59ac53278ba504aa9ea5cd996805a842cf69c92fda5210447b7",
+    "Assets/XR/Settings/OpenXR Package Settings.asset": "a934944e57d08243a79bab6b4640675d671ef78002a89e05f0315816e6a95bc3"
+  },
+  "localChecks": {
+    "cameraAndLocomotion": 39,
+    "gestureAndSourceGate": 31,
+    "coreAndCurriculum": 775,
+    "unityScene": 83,
+    "unityScenePassed": true,
+    "unityErrors": [],
+    "bareHandSamples": "Synthetic joints through real Unity XR Hands subsystem and Meta aim Input System devices"
+  },
+  "editorLog": "qa/natural-vr-unity-verified.log",
+  "androidBuildLog": "qa/natural-vr-android-build.log",
+  "physicalQuestTested": false,
+  "vrPerformanceMeasured": false,
+  "productionRelease": false,
+  "apkBuilt": true,
+  "newSchoolZip": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-School-Quest3-Test-Kit-20260919-214108.zip",
+  "oldApkSha256": "acce99a73c87c7a8b434859ad3a3d118c8118de9e0e8dd3a7521c31f99f6a7a8",
+  "limitations": [
+    "Real Quest hand cameras, gesture comfort, reach and cold-start origin behavior need school headset verification.",
+    "XR Device Simulator tests controllers; the additional automated hand tests use synthetic joint samples.",
+    "School artifacts use the existing debug signing certificate.",
+    "Previous Windows player and September 7 school ZIP are not updated by source changes."
+  ],
+  "apkVerification": {
+    "verifiedUtc": "2026-09-19T13:40:28.527008+00:00",
+    "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome.apk",
+    "artifactSha256": "e44549da08a1f83c63136716e5c1810cf4828c77757043adeb3474325851f6d3",
+    "bytes": 109548232,
+    "package": "org.thoraxlab.learning",
+    "checks": [
+      {
+        "name": "Archive integrity",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "ARM64 libraries only",
+        "passed": true,
+        "detail": [
+          "lib/arm64-v8a/libUnityOpenXR.so",
+          "lib/arm64-v8a/libUnityOpenXRHands.so",
+          "lib/arm64-v8a/lib_burst_generated.so",
+          "lib/arm64-v8a/libc++_shared.so",
+          "lib/arm64-v8a/libgame.so",
+          "lib/arm64-v8a/libil2cpp.so",
+          "lib/arm64-v8a/libmain.so",
+          "lib/arm64-v8a/libopenxr_loader.so",
+          "lib/arm64-v8a/libswappywrapper.so",
+          "lib/arm64-v8a/libthoraxcut.so",
+          "lib/arm64-v8a/libunity.so"
+        ]
+      },
+      {
+        "name": "XR Hands ARM64 provider",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Native cutting AArch64",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "16 KB native load alignment",
+        "passed": true,
+        "detail": [
+          16384,
+          16384,
+          16384
+        ]
+      },
+      {
+        "name": "Packaged ATTRIBUTION.txt",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Packaged MAL-Atlas-License.txt",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Packaged Manifold-Apache-2.0.txt",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Packaged Unity-XR-Hands-License.txt",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Packaged Unity-XR-Hands-Third-Party-Notices.txt",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Learning package identity",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Application display name",
+        "passed": true,
+        "detail": "Anatome"
+      },
+      {
+        "name": "Hand tracking permission",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Optional hand tracking preserves controller support",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "APK signature verifies",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "failures": 0,
+    "physicalDeviceTested": false,
+    "releaseSigningRequired": false,
+    "nonDebugSigner": false,
+    "signing": "Android Debug certificate; sideload review, not a store release"
+  },
+  "androidBuildSummary": "Succeeded\n0 errors\n0 warnings\n00:04:20.0988475",
+  "updateSigningCertificateMatches": true,
+  "editorWarnings": "Existing XRDeviceSimulator deprecation warnings; Android BuildReport has 0 warnings.",
+  "schoolZipSha256": "669687606470b77f5499b942dadaf0949945330041f15fb48ba82eff855a51ef",
+  "schoolZipBytes": 104058311,
+  "schoolArchiveVerified": true,
+  "schoolZipContentsVerified": true
+}

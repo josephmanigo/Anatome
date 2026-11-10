@@ -1,0 +1,9 @@
+{
+    "utc": "2026-09-06T17:05:35.2412607Z",
+    "readPayload": "{}",
+    "deletePayload": "{\"delete_id\":\"test-profile\"}",
+    "readOmitsProfile": true,
+    "deleteOmitsProfile": true,
+    "saveContainsRequestedProfile": true,
+    "passed": true
+}

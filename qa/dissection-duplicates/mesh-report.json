@@ -1,0 +1,245 @@
+{
+    "passed": true,
+    "checks": [
+        {
+            "id": "FMA7163/one-original",
+            "detail": "Original objects=1",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/cut-1390",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-detached-cavity-1390",
+            "detail": "Individual piece volumes=9.9024963596167428E-10,9.90233504791971E-10",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-duplicated-volume-1390",
+            "detail": "Before=1.98061463020461E-09; after=1.98048314075365E-09",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/single-cut-renderer-1390",
+            "detail": "A_FMA7163=True mesh=Validated dissection fragment; LOD1=False mesh=A_FMA7163; LOD2=False mesh=A_FMA7163",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-stale-renderer-after-reactivation-1390",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/cut-5376",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-detached-cavity-5376",
+            "detail": "Individual piece volumes=9.9024964686386616E-10,9.9023398874940113E-10",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-duplicated-volume-5376",
+            "detail": "Before=1.98061463020461E-09; after=1.98048363561327E-09",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/single-cut-renderer-5376",
+            "detail": "A_FMA7163=True mesh=Validated dissection fragment; LOD1=False mesh=A_FMA7163; LOD2=False mesh=A_FMA7163",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-stale-renderer-after-reactivation-5376",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/cut-1398",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-detached-cavity-1398",
+            "detail": "Individual piece volumes=9.90250601415795E-10,9.9023308072558264E-10",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-duplicated-volume-1398",
+            "detail": "Before=1.98061463020461E-09; after=1.98048368214138E-09",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/single-cut-renderer-1398",
+            "detail": "A_FMA7163=True mesh=Validated dissection fragment; LOD1=False mesh=A_FMA7163; LOD2=False mesh=A_FMA7163",
+            "passed": true
+        },
+        {
+            "id": "FMA7163/no-stale-renderer-after-reactivation-1398",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/one-original",
+            "detail": "Original objects=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/cut-1529",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-detached-cavity-1529",
+            "detail": "Individual piece volumes=1.326529215539656E-09,1.2640512183861698E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-duplicated-volume-1529",
+            "detail": "Before=2.59074594309552E-09; after=2.59058043392583E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/single-cut-renderer-1529",
+            "detail": "A_REC_fat=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fat; LOD2=False mesh=A_REC_fat",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-stale-renderer-after-reactivation-1529",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/cut-1511",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-detached-cavity-1511",
+            "detail": "Individual piece volumes=1.3265295179081631E-09,1.2640515228877299E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-duplicated-volume-1511",
+            "detail": "Before=2.59074594309552E-09; after=2.59058104079589E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/single-cut-renderer-1511",
+            "detail": "A_REC_fat=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fat; LOD2=False mesh=A_REC_fat",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-stale-renderer-after-reactivation-1511",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/cut-1516",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-detached-cavity-1516",
+            "detail": "Individual piece volumes=1.3265254536073481E-09,1.2640547813737092E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-duplicated-volume-1516",
+            "detail": "Before=2.59074594309552E-09; after=2.59058023498106E-09",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/single-cut-renderer-1516",
+            "detail": "A_REC_fat=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fat; LOD2=False mesh=A_REC_fat",
+            "passed": true
+        },
+        {
+            "id": "REC_fat/no-stale-renderer-after-reactivation-1516",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/one-original",
+            "detail": "Original objects=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/cut-2296",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-detached-cavity-2296",
+            "detail": "Individual piece volumes=2.7350240172359663E-10,2.6443466367654776E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-duplicated-volume-2296",
+            "detail": "Before=5.37975481587676E-10; after=5.37937065400144E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/single-cut-renderer-2296",
+            "detail": "A_REC_fascia=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fascia; LOD2=False mesh=A_REC_fascia",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-stale-renderer-after-reactivation-2296",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/cut-2278",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-detached-cavity-2278",
+            "detail": "Individual piece volumes=2.7350238737672178E-10,2.6443488227031776E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-duplicated-volume-2278",
+            "detail": "Before=5.37975481587676E-10; after=5.37937269647039E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/single-cut-renderer-2278",
+            "detail": "A_REC_fascia=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fascia; LOD2=False mesh=A_REC_fascia",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-stale-renderer-after-reactivation-2278",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/cut-2274",
+            "detail": "Cut validated.; pieces=2",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-detached-cavity-2274",
+            "detail": "Individual piece volumes=2.7350213962621167E-10,2.6443439915062219E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-duplicated-volume-2274",
+            "detail": "Before=5.37975481587676E-10; after=5.37936538776834E-10",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/single-cut-renderer-2274",
+            "detail": "A_REC_fascia=True mesh=Validated dissection fragment; LOD1=False mesh=A_REC_fascia; LOD2=False mesh=A_REC_fascia",
+            "passed": true
+        },
+        {
+            "id": "REC_fascia/no-stale-renderer-after-reactivation-2274",
+            "detail": "Enabled renderers=1",
+            "passed": true
+        }
+    ]
+}

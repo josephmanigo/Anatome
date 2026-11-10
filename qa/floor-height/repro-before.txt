@@ -1,0 +1,3 @@
+Startup Floor pose: eye=1.25m; requested=Device
+Delayed Device pose: eye=-0.40m; expected=1.25m
+FAIL: startup origin change leaves POV under the floor

@@ -1,0 +1,136 @@
+{
+  "recordedUtc": "2026-10-04T13:17:58.663Z",
+  "applicationVersion": "1.2.0",
+  "contentVersion": "2026.10.1",
+  "revision": "guide-female-voice-20261004",
+  "localValidationPassed": true,
+  "productionReady": false,
+  "checks": {
+    "assets": true,
+    "controllerIntegration": true,
+    "mutedAudioStartup": true,
+    "allScenarios": true,
+    "currentPlayer": true,
+    "playerWidgets": true,
+    "readiness": true,
+    "content": true,
+    "backend": true,
+    "unchangedDeployedRubrics": true,
+    "releaseGate": true,
+    "apk": true,
+    "sourceParity": true,
+    "zip": true
+  },
+  "guide": {
+    "pages": 10,
+    "entry": "Guide in the shared top navigation",
+    "exit": "Close guide or controller Menu",
+    "illustrated": true,
+    "narrated": true,
+    "preservesActivity": true
+  },
+  "narration": {
+    "voice": "Microsoft Zira Desktop",
+    "gender": "Female",
+    "clips": 321,
+    "rate": -1,
+    "synthetic": true,
+    "headsetListeningReviewed": false
+  },
+  "anatomy": {
+    "total": 249,
+    "tissues": 243,
+    "references": 6,
+    "selectedSources": 152,
+    "groups": {
+      "aortic_valve": 3,
+      "atrial_walls": 2,
+      "azygos_system": 3,
+      "cardiac_chambers": 4,
+      "cardiac_septa": 2,
+      "coronary_vessels": 5,
+      "costal_cartilages": 24,
+      "diaphragm": 1,
+      "esophagus": 1,
+      "great_vessels": 10,
+      "intercostal_layers": 5,
+      "intercostal_neurovascular_bundles": 66,
+      "intercostal_vessels": 9,
+      "lobar_bronchial_trees": 5,
+      "lung_lobes": 5,
+      "main_bronchi": 2,
+      "mitral_valve": 2,
+      "papillary_muscles": 5,
+      "pectoralis_major": 6,
+      "pectoralis_minor": 2,
+      "pericardium": 1,
+      "phrenic_nerves": 2,
+      "pleural_layers": 4,
+      "pulmonary_valve": 3,
+      "pulmonary_vessels": 7,
+      "remaining_airway_branches": 1,
+      "ribs": 24,
+      "serratus_anterior": 2,
+      "shoulder_girdle": 4,
+      "sternum": 3,
+      "sympathetic_trunks": 2,
+      "thoracic_discs": 11,
+      "thoracic_duct": 1,
+      "thoracic_fascia": 1,
+      "thoracic_fat": 1,
+      "thoracic_skin": 1,
+      "thoracic_vertebrae": 12,
+      "trachea": 1,
+      "tricuspid_valve": 3,
+      "vagus_nerves": 2,
+      "ventricular_walls": 1
+    },
+    "scope": "Gross thorax; source-backed and documented reconstructions. Septa are region annotations, not separate segmented tissue. No whole-body or microscopic-completeness claim."
+  },
+  "verification": {
+    "assetChecks": 1907,
+    "xrChecks": 2048,
+    "xrUtc": "2026-10-04T13:16:22.1593196Z",
+    "runtimeScenarios": 72,
+    "readinessChecks": 22,
+    "coreAssertions": 826,
+    "contentChecks": 1669,
+    "postgresChecks": 254,
+    "apkChecks": 16,
+    "sourceParityFiles": 397
+  },
+  "reviews": {
+    "standardsRemaining": 0,
+    "specInitialP2": 1,
+    "specResolved": 1,
+    "specRemaining": 0,
+    "fix": "Assembly guide now distinguishes outlines in Easy/practice from independent advanced assessments; narration regenerated."
+  },
+  "failedEvidence": [
+    "xr-fixture-initial-failure.json",
+    "xr-muted-startup-failure.json"
+  ],
+  "backend": {
+    "curriculumUnchanged": true,
+    "deploymentEvidence": "qa/clinical-learning/live-migration-report.json",
+    "authenticatedCurrentLearnerValidated": false
+  },
+  "artifacts": {
+    "apkSha256": "60e79330767668ac2618cfdbe552f507fd89893c02b72e9fd1ccd1482a8c34d4",
+    "signing": "Android Debug certificate; sideload review, not a store release",
+    "kit": {
+      "utc": "2026-10-04T13:17:56.7515741Z",
+      "archive": "C:\\Users\\My Pc\\Downloads\\new\\handoff\\Anatome-Guide-Voice-Quest3-Test-Kit-20261004-211752.zip",
+      "archiveSha256": "57901b9be302635d8d4914c0839e00c143e056a882788ea0f3250edc852290c0",
+      "apkSha256": "60e79330767668ac2618cfdbe552f507fd89893c02b72e9fd1ccd1482a8c34d4",
+      "verified": true
+    }
+  },
+  "openGates": [
+    "Physical Quest 3 interaction, guide legibility, controller/hand transitions, narrator intelligibility and comfort: headset unavailable per user.",
+    "At least 15 minutes of measured on-headset sustained native 72 Hz performance.",
+    "Publisher-owned non-debug release signing.",
+    "Authenticated current-learner sign-in, save/reopen, offline recovery and cross-platform synchronization."
+  ],
+  "limitation": "Complete against the selected gross-thorax source inventory and installed catalog, not every anatomical subdivision or a whole human body. Synthetic narration and simulated scenarios do not establish clinical competency."
+}

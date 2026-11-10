@@ -1,0 +1,102 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-07T06:53:08.4738058Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "button_responds_on_press",
+            "detail": "A queued controller press invokes the actual confirmation by the next input frame while still held. Callbacks=1; frames=1",
+            "passed": true
+        },
+        {
+            "id": "held_button_does_not_repeat",
+            "detail": "Holding through modal dismissal must not repeat or activate the underlying page.",
+            "passed": true
+        },
+        {
+            "id": "button_release_does_not_repeat",
+            "detail": "Release after immediate activation must not send another click.",
+            "passed": true
+        },
+        {
+            "id": "navigation_responds_on_press",
+            "detail": "Ordinary page navigation responds while the trigger remains held.",
+            "passed": true
+        },
+        {
+            "id": "navigation_hold_does_not_replay",
+            "detail": "Replacing a page during the press cannot replay its click.",
+            "passed": true
+        },
+        {
+            "id": "button_feedback_has_no_fade",
+            "detail": "Buttons change visual feedback immediately.",
+            "passed": true
+        },
+        {
+            "id": "disabled_button_does_not_activate",
+            "detail": "Immediate activation preserves disabled-control protection.",
+            "passed": true
+        },
+        {
+            "id": "card_feedback_has_no_fade",
+            "detail": "Activity cards also give immediate visual feedback.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "Aimed Response probe world=(-0.38, 1.51, 0.90); screen=(-68.22, 352.92, 0.91); button rect=(x:-308.00, y:-32.00, width:616.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Menu world=(-0.40, 1.61, 1.12); screen=(228.87, 366.23, 1.10); button rect=(x:-72.50, y:-32.00, width:145.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Disabled probe world=(-0.38, 1.51, 0.90); screen=(158.81, 333.48, 1.10); button rect=(x:-308.00, y:-32.00, width:616.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)"
+    ]
+}

@@ -1,0 +1,340 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-09-06T08:57:35.8507310Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "failed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-xr-simulator-world-ui.png",
+    "firstPersonHandsScreenshot": "C:\\Users\\My Pc\\Downloads\\new\\qa\\vr-gloved-hands-first-person.png",
+    "passed": false,
+    "runtimeQaBypass": false,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "two_tracked_gloved_hands",
+            "detail": "Both official tracked controller devices have one visible left/right glove representation.",
+            "passed": true
+        },
+        {
+            "id": "RightHand_five_rigged_fingers",
+            "detail": "The rendered glove is a weighted mesh with five distinct proximal finger bones (thumb, index, middle, ring, little).",
+            "passed": true
+        },
+        {
+            "id": "RightHand_visuals_do_not_add_physics",
+            "detail": "The hand appearance has no colliders or rigidbodies that could intercept selection, cutting or instrument contact.",
+            "passed": true
+        },
+        {
+            "id": "RightHand_replaces_controller_geometry",
+            "detail": "Visible tracked hand geometry belongs only to the glove; no controller model or inactive dissection tool is rendered at sign-in.",
+            "passed": true
+        },
+        {
+            "id": "LeftHand_five_rigged_fingers",
+            "detail": "The rendered glove is a weighted mesh with five distinct proximal finger bones (thumb, index, middle, ring, little).",
+            "passed": true
+        },
+        {
+            "id": "LeftHand_visuals_do_not_add_physics",
+            "detail": "The hand appearance has no colliders or rigidbodies that could intercept selection, cutting or instrument contact.",
+            "passed": true
+        },
+        {
+            "id": "LeftHand_replaces_controller_geometry",
+            "detail": "Visible tracked hand geometry belongs only to the glove; no controller model or inactive dissection tool is rendered at sign-in.",
+            "passed": true
+        },
+        {
+            "id": "both_gloves_follow_handed_device_poses",
+            "detail": "Each glove follows the position and rotation of its own tracked controller root without altering the interaction origin.",
+            "passed": true
+        },
+        {
+            "id": "first_person_camera_remains_head_tracked",
+            "detail": "Moving the visible hands does not replace, offset, or detach the learner's HMD camera.",
+            "passed": true
+        },
+        {
+            "id": "trigger_bends_rendered_index_independently",
+            "detail": "An actual right trigger event bends the rendered index while the middle finger and opposite hand stay at rest.",
+            "passed": true
+        },
+        {
+            "id": "analog_grip_has_intermediate_finger_pose",
+            "detail": "A partial grip produces an intermediate visible finger curl from the same analog input used by the official simulator.",
+            "passed": true
+        },
+        {
+            "id": "grip_closes_rendered_fingers",
+            "detail": "Full right grip curls middle, ring and little fingers further than partial grip while leaving the left hand independent.",
+            "passed": true
+        },
+        {
+            "id": "released_glove_returns_to_rest",
+            "detail": "Releasing the real analog controls returns the rendered fingers to their relaxed pose without a stale clenched hand.",
+            "passed": true
+        },
+        {
+            "id": "left_glove_animates_independently",
+            "detail": "The left trigger and grip animate the left glove without driving the right glove.",
+            "passed": true
+        },
+        {
+            "id": "lost_hand_tracking_hides_only_that_glove",
+            "detail": "When only the left device loses tracking, its glove disappears instead of freezing in space; the right glove stays visible.",
+            "passed": true
+        },
+        {
+            "id": "lost_hmd_tracking_hides_both_gloves",
+            "detail": "Loss of HMD tracking hides both glove renderers and retains the existing interaction pause.",
+            "passed": true
+        },
+        {
+            "id": "lost_hmd_tracking_blocks_ui_press",
+            "detail": "A still-tracked controller aimed at the actual guest button cannot send pointer-down or click events while HMD tracking and hand visibility are lost.",
+            "passed": true
+        },
+        {
+            "id": "lost_hmd_tracking_blocks_panel_drag",
+            "detail": "Actual grip and controller movement across the console header cannot drag the panel while the learner's HMD tracking is unavailable.",
+            "passed": true
+        },
+        {
+            "id": "tracking_restores_gloves_without_input_replay",
+            "detail": "Tracking recovery restores both visuals without replaying a held trigger as a new Menu press or later click; appearance checks have not activated UI or gameplay.",
+            "passed": true
+        },
+        {
+            "id": "sign_in_screen",
+            "detail": "Initial screen=Sign in",
+            "passed": true
+        },
+        {
+            "id": "queued_trigger_reaches_hand_adapter",
+            "detail": "Actual adapter trigger=True",
+            "passed": true
+        },
+        {
+            "id": "controller_trigger_activates_guest_button",
+            "detail": "Queued trigger down/up must activate the actual world-space guest button. Screen=Career",
+            "passed": true
+        },
+        {
+            "id": "controller_trigger_starts_orientation",
+            "detail": "The actual orientation UI button opens its first guarded step.",
+            "passed": true
+        },
+        {
+            "id": "orientation_skin_grab_available",
+            "detail": "Original skin must be an active mesh collider and XRI grab interactable.",
+            "passed": true
+        },
+        {
+            "id": "visible_skin_surface",
+            "detail": "The actual outer skin must be exposed from the simulated learner's view.",
+            "passed": true
+        },
+        {
+            "id": "controller_ray_hits_original_skin",
+            "detail": "First physics hit=A_FMA7163",
+            "passed": true
+        },
+        {
+            "id": "controller_trigger_selects_skin",
+            "detail": "A real trigger selects the skin, advances only to the grip instruction, and does not complete orientation.",
+            "passed": true
+        },
+        {
+            "id": "controller_menu_preserves_orientation",
+            "detail": "Holding the actual controller Menu button opens one pause menu without interrupting orientation or clearing its current step.",
+            "passed": true
+        },
+        {
+            "id": "pause_menu_blocks_body_interaction",
+            "detail": "A real grip and hand movement while the menu is open cannot acquire or move anatomy or grant orientation credit.",
+            "passed": true
+        },
+        {
+            "id": "controller_menu_resumes_same_orientation",
+            "detail": "The next controller Menu press returns to the same workspace, selected skin and orientation step without restarting or completing it.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_blocks_body_grip",
+            "detail": "With HMD tracking false, grip cannot acquire or move anatomy and cannot complete orientation.",
+            "passed": true
+        },
+        {
+            "id": "tracking_recovers",
+            "detail": "Restoring the real tracked device state restores the normal interaction gate; focused=True",
+            "passed": true
+        },
+        {
+            "id": "tracking_recovery_does_not_replay_grip",
+            "detail": "A released controller must not reacquire anatomy from a stale grip when HMD tracking returns. Acquires=0 releases=0",
+            "passed": true
+        },
+        {
+            "id": "controller_grip_acquires_skin",
+            "detail": "XRI selectEntered count=1; interactor selected=1",
+            "passed": true
+        },
+        {
+            "id": "grip_preserves_anatomical_pose",
+            "detail": "Stationary grip must not snap the skin pivot to the controller. Displacement=0.0000 m.",
+            "passed": true
+        },
+        {
+            "id": "stationary_release_does_not_complete_orientation",
+            "detail": "A real grab/release with no deliberate hand displacement leaves orientation on its lift step.",
+            "passed": true
+        },
+        {
+            "id": "controller_regrip_acquires_skin",
+            "detail": "The learner can regrip after a stationary release; XRI acquires=2",
+            "passed": true
+        },
+        {
+            "id": "held_skin_follows_controller_without_credit",
+            "detail": "Commanded hand lift=0.1200 m; measured skin displacement=0.1200 m. Lifting alone must not complete orientation.",
+            "passed": true
+        },
+        {
+            "id": "controller_release_completes_orientation",
+            "detail": "Only the actual XRI selectExited release completes orientation. Releases=2",
+            "passed": true
+        },
+        {
+            "id": "orientation_restores_intact_skin",
+            "detail": "The real skin returns to its anatomical rest pose after the introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "world_space_interface",
+            "detail": "Captured interface is the actual world-space Unity canvas.",
+            "passed": true
+        },
+        {
+            "id": "procedure_practice_uses_normal_tracking_gate",
+            "detail": "The ordinary StartActivity entry point opens unlocked Easy pneumothorax practice with actual tracked simulator devices.",
+            "passed": true
+        },
+        {
+            "id": "procedure_initial_finding_available",
+            "detail": "The real case begins at its anatomical finding; no objective completion has been injected.",
+            "passed": true
+        },
+        {
+            "id": "procedure_finding_physically_visible",
+            "detail": "Initial case target MAL_RUL has a physically exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "procedure_controller_ray_hits_finding",
+            "detail": "First actual case ray hit=A_MAL_RUL",
+            "passed": true
+        },
+        {
+            "id": "procedure_trigger_reveals_current_instrument",
+            "detail": "The real trigger records the finding and reveals the current assessment pointer on its tray.",
+            "passed": true
+        },
+        {
+            "id": "instrument_grab_box_reachable",
+            "detail": "The unchanged grab collider is physically reachable and dynamic attachment preserves the held instrument pose.",
+            "passed": true
+        },
+        {
+            "id": "controller_ray_hits_instrument",
+            "detail": "First instrument ray hit=Assessment pointer",
+            "passed": true
+        },
+        {
+            "id": "controller_grip_acquires_instrument",
+            "detail": "The actual queued controller grip causes one XRI selectEntered on the current procedure instrument.",
+            "passed": true
+        },
+        {
+            "id": "instrument_pickup_preserves_pose_and_working_end",
+            "detail": "Stationary instrument pickup: body displacement=0.0000 m, working-end displacement=0.0000 m, rotation=0.00 degrees.",
+            "passed": true
+        },
+        {
+            "id": "held_instrument_and_tip_follow_translation",
+            "detail": "Commanded translation=(0.04, 0.07, -0.03); body error=0.0000 m and working-end error=0.0000 m.",
+            "passed": true
+        },
+        {
+            "id": "held_instrument_rotates_around_grip",
+            "detail": "A 22 degree hand turn preserves the dynamic grip offset: body error=0.0000 m, working-end error=0.0000 m, angle error=0.00 degrees.",
+            "passed": true
+        },
+        {
+            "id": "controller_release_leaves_instrument_at_release_pose",
+            "detail": "Real grip release causes one XRI selectExited. The kinematic instrument stays at the released pose when the controller moves away.",
+            "passed": true
+        },
+        {
+            "id": "instrument_handling_alone_cannot_complete_procedure",
+            "detail": "Pickup, translation, rotation and release without treatment activation cannot grant procedure credit or append clinical actions.",
+            "passed": true
+        }
+    ],
+    "errors": [
+        "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\nSystem.Collections.Generic.List`1[T].get_Item (System.Int32 index) (at <41d29b352f6a475ab1bf7c6628b82790>:0)\nUnityEditor.Search.SearchDatabase+<EnumerateAll>d__80.MoveNext () (at <5b34bb5dc7a045aaaa697e17baf62c78>:0)\nSystem.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) (at <80564d689e48448fa2a7101993ee7201>:0)\nSystem.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) (at <80564d689e48448fa2a7101993ee7201>:0)\nUnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () (at <5b34bb5dc7a045aaaa697e17baf62c78>:0)\nUnityEditor.Search.SearchInit.IndexationOnStartup () (at <5b34bb5dc7a045aaaa697e17baf62c78>:0)\nUnityEditor.EditorApplication.Internal_CallDelayFunctions () (at <cf2607b209aa47de987ba5ed55932aa8>:0)\n"
+    ],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.70, 1.25, 1.00); world panel=(-0.39, 1.30, 0.90)",
+        "RightHand glove: vertices=1616, bones=26, local bounds=Center: (-0.01, -0.02, 0.08), Extents: (0.09, 0.06, 0.10)",
+        "LeftHand glove: vertices=1616, bones=26, local bounds=Center: (0.01, -0.02, 0.08), Extents: (0.08, 0.06, 0.10)",
+        "Aimed Try your first VR lesson world=(-0.39, 1.26, 0.90); screen=(-155.88, 256.62, 0.93); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Try your first VR lesson world=(-0.39, 1.26, 0.90); screen=(158.31, 251.51, 1.11); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "before_guest_trigger: head=(0.71, 1.28, 1.02) hand=(0.70, 1.20, 1.10) direction=(-0.98, 0.06, -0.18) plane=True distance=1.115821 screen=(158.31, 251.51, 1.11) hits=Try your first VR lesson/Try your first VR lesson, Viewport/",
+        "held_guest_trigger: head=(0.71, 1.28, 1.02) hand=(0.70, 1.20, 1.10) direction=(-0.98, 0.06, -0.18) plane=True distance=1.115821 screen=(158.31, 251.51, 1.11) hits=Try your first VR lesson/Try your first VR lesson, Viewport/",
+        "Aimed Learn the VR controls world=(-0.40, 1.23, 0.90); screen=(158.33, 237.16, 1.11); button rect=(x:-306.00, y:-32.00, width:612.00, height:64.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "XRI selectEntered #1 frame=588 tracked=True rawGrip=True",
+        "XRI selectExited #1 frame=604 tracked=True rawGrip=False",
+        "XRI selectEntered #2 frame=620 tracked=True rawGrip=True",
+        "XRI selectExited #2 frame=664 tracked=True rawGrip=False"
+    ]
+}

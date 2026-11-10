@@ -1,0 +1,22 @@
+project_id = "thorax-lab"
+
+[auth]
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+otp_expiry = 600
+otp_length = 6
+max_frequency = "60s"
+
+[auth.email.template.magic_link]
+subject = "Your Anatome sign-in code"
+content_path = "./supabase/templates/email-code.html"
+
+[auth.email.template.confirmation]
+subject = "Your Anatome sign-in code"
+content_path = "./supabase/templates/email-code.html"
+
+[functions.thorax-delete-account]
+verify_jwt = false

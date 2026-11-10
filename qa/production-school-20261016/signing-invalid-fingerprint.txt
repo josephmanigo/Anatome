@@ -1,0 +1,11 @@
+[rtk] /!\ No hook installed — run `rtk init -g` for automatic token savings
+usage: verify-learning-apk.py [-h] [--apk APK]
+                              [--expected-label EXPECTED_LABEL]
+                              [--expected-package EXPECTED_PACKAGE]
+                              [--expected-certificate-sha256 EXPECTED_CERTIFICATE_SHA256]
+                              [--require-school-policy]
+                              [--expected-version EXPECTED_VERSION]
+                              [--expected-version-code EXPECTED_VERSION_CODE]
+                              [--output-dir OUTPUT_DIR]
+                              [--require-release-signing]
+verify-learning-apk.py: error: Expected certificate SHA-256 must contain 64 hexadecimal characters.

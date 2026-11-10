@@ -1,0 +1,107 @@
+ANATOME - SCHOOL QUEST 3 TEST RESULTS
+
+Date:
+Tester / anonymous participant ID:
+Headset model and OS version:
+Build SHA-256: see BUILD-INFO.json
+
+For each item write PASS, ISSUE, or NOT TESTED.
+[ ] Version 1.4.2 (code 10) is installed as an update
+[ ] A shorter or seated player starts above the work area with aligned hands
+[ ] Automatic height assistance can be disabled; extra player height applies and persists
+[ ] Hold trigger in empty space, aim onto skin, sweep and release: a small chunk separates
+[ ] Wrong instrument displays the reason without changing the skin
+[ ] Both skin regions require their own cut and verified chunk lift
+[ ] Tracking recovery while trigger is held cannot restart a cancelled cut
+[ ] BodyParts3D reference opens without a 404
+[ ] Source details remain readable inside VR without opening the browser
+[ ] Closing the browser and resuming Anatome returns to the same activity and step
+[ ] Browser return does not replay a held trigger or grip
+[ ] Each new case lesson starts with a patient briefing and Begin this case
+[ ] Case and controls explains choices, tool pickup, placement and activation
+[ ] Tool names, working ends, numbered routes and live alignment feedback are readable
+[ ] Contact, connection and route steps work with grip and movement without trigger
+[ ] Active tool controls require trigger and do not repeat from a held press
+[ ] Tool demonstration grants no credit; choice feedback explains the selected answer
+[ ] Coronary radial band, pneumonia IV connector and monitoring finger are recognizable
+[ ] Withdrawal starts at the retained working-end position; returning loose tools preserves it
+[ ] Pleural catheter moves out without turning around; coronary withdrawal includes the treated branch
+[ ] APK installs and starts as Anatome in VR
+[ ] Cold start applies the selected height assistance above the floor
+[ ] Leaning/crouching follows the headset without artificial zoom or height jumps
+[ ] Both tracked controllers are visible at startup and follow each hand
+[ ] Both pointer rays remain visible; a target marker identifies the aimed panel or anatomy
+[ ] Buttons act as soon as trigger is pressed, before release
+[ ] Holding trigger for two seconds performs exactly one action; releasing does not repeat it
+[ ] Move from a button toward anatomy while holding trigger: no accidental selection or cut
+[ ] Thumbstick, scrollbar, and dragging an empty panel margin still scroll
+[ ] Sliders drag smoothly and stop changing on release
+[ ] Both controllers reach sign-in, menu, settings, keyboard, all modes and confirmations
+[ ] Email stays visible while typing and scrolling keys at normal and maximum text sizes
+[ ] Back and Done retain the email; Left/Right/Delete can repair the middle of an address
+[ ] Six-digit VR keypad preserves a leading zero; Back to email restores the address
+[ ] Guide opens before sign-in and during each learning mode
+[ ] All ten guide pages scroll and Next/Previous/Close remain reachable at maximum text size
+[ ] Closing/reopening preserves the guide page and current activity objective
+[ ] Held controls across guide dismissal cannot cause an accidental grab, cut or answer
+[ ] Female narration is audible, comfortable and anatomically intelligible
+[ ] Guide pause/replay works; closing resumes only previously playing lesson narration
+[ ] Focus loss pauses audio; a manually paused clip stays paused after return
+[ ] Both controllers can select, grip, move, rotate and release objects
+[ ] Bare-hand pinch selects; curl middle/ring/little holds; opening releases
+[ ] Bare-hand pointing and pinch-drag reach buttons, keyboard and scrolling
+[ ] Bare hands can hold and operate an instrument without unwanted actions
+[ ] Switching controllers/hands never replays held select/grip/teleport input
+[ ] Hand loss, headset loss and system hand menu cancel active actions
+[ ] Tracking recovery requires release before a fresh action
+[ ] Orientation skin stays upright, lifts slightly and returns
+[ ] Easy instructions are understandable without coaching
+[ ] Identify & Enumerate accepts the intended visible target
+[ ] Assembly piece is reachable and placement is understandable
+[ ] Each dissection topic has its own anatomy; pleura/heart/airways do not repeat the skin lesson
+[ ] Easy, Medium and Hard cover the same full topic with stricter requirements and fewer cues
+[ ] A cut separates a small chunk and leaves a matching hole in one anchored remainder
+[ ] Skin, fat, fascia, muscle, lung and ribs do not create full-sized moving duplicates
+[ ] Cutting alone or releasing without lifting gives no removal credit
+[ ] Chest wall requires both sides; left-only work does not complete it
+[ ] Both fourth ribs automatically equip a visible Bone saw; its ray can cut from a comfortable distance
+[ ] Undo cannot restore a collected chunk; Continue preserves completed regional openings
+[ ] Scalpel ray reaches the visible layer from a comfortable distance; hold/move/release applies the cut
+[ ] An occluder, missed surface or pause cancels the ray stroke without cutting through hidden tissue
+[ ] Case practice makes the next action/tool clear
+[ ] Case tray stays visible before grabbing, while holding, and after release
+[ ] Choice dock highlights and says Release grip to place before accepting a deliberate release
+[ ] Out-of-dock choices return to their original position and orientation
+[ ] Every case offers three grabbable mechanism models and predicted-response models
+[ ] Wrong reasoning choice gives a specific explanation; correction remains possible
+[ ] Practice spatial help marks the correct model and dock without answering
+[ ] Assessment hides answer guidance and offers alternative instruments
+[ ] Unheld placement and out-of-dock release never submit a clinical answer
+[ ] Interrupted clinical grip requires release and a new deliberate action
+[ ] Aspiration safety error remains a failed assessment after correction
+[ ] Maximum text size keeps every model/dock label readable and separated
+[ ] Debrief shows actual choices and their anatomical rationales
+[ ] Repeated credited objectives cannot award duplicate XP or skip mastery
+[ ] Text, captions and menus are readable and reachable
+[ ] Pause/tracking interruption recovers without unwanted actions
+[ ] Email sign-in completes with Anatome-branded code email
+[ ] Administrator confirmed current 2026.10.2 rubrics and safety grading are deployed
+[ ] Completed assessment saves and remains after reopening
+[ ] Medium stays locked until its Easy assessment is passed
+[ ] Progress matches the same account in Windows/Unity
+
+PRODUCTION PERFORMANCE CHECK (current APK on physical Quest 3)
+[ ] Run representative activities for at least 15 minutes without crashes or thermal degradation
+[ ] Record headset refresh rate, average FPS, 1% low FPS and tracking interruptions
+[ ] Confirm sustained native 72 FPS target with an on-device profiler
+Profiler/report filename:
+Production release also requires publisher-owned non-debug signing and final acceptance of this APK hash.
+
+ISSUE RECORD (repeat for each issue)
+Mode / unit:
+Difficulty / lesson-practice-assessment:
+Steps to reproduce:
+Expected result:
+Actual result:
+Repeated on retry? Yes / No / Not tried
+Screenshot/video filename, if available:

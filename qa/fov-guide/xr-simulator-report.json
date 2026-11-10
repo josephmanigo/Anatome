@@ -1,0 +1,269 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-10-21T23:46:17.3271252Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "interrupted_orientation_visible_target",
+            "detail": "Fresh guest orientation has a visible skin surface.",
+            "passed": true
+        },
+        {
+            "id": "tracking_loss_restores_held_orientation_skin",
+            "detail": "Loss of tracking releases and returns the lifted skin without granting credit.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_on_tracking_recovery",
+            "detail": "A grip held through tracking recovery remains disarmed until a release.",
+            "passed": true
+        },
+        {
+            "id": "pause_restores_held_orientation_skin",
+            "detail": "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.",
+            "passed": true
+        },
+        {
+            "id": "held_grip_does_not_reacquire_after_pause",
+            "detail": "Closing Pause while still holding grip does not pick the chest up automatically.",
+            "passed": true
+        },
+        {
+            "id": "orientation_lift_stays_within_comfort_bound",
+            "detail": "An excessive 35 cm hand movement produces at most the declared 12 cm introductory lift.",
+            "passed": true
+        },
+        {
+            "id": "orientation_can_finish_after_interruption",
+            "detail": "A fresh deliberate grip/lift/release completes the interrupted orientation normally.",
+            "passed": true
+        },
+        {
+            "id": "fov/legacy_unity_json",
+            "detail": "Actual Unity JSON imports old profiles with usable FOV defaults.",
+            "passed": true
+        },
+        {
+            "id": "fov/draft_only",
+            "detail": "Sliders edit a draft until Apply.",
+            "passed": true
+        },
+        {
+            "id": "fov/apply_camera",
+            "detail": "Apply persists both controls and updates the simulator lens.",
+            "passed": true
+        },
+        {
+            "id": "fov/round_trip",
+            "detail": "Unity serialization retains both controls.",
+            "passed": true
+        },
+        {
+            "id": "fov/comfort_aperture",
+            "detail": "Narrowing the comfort aperture leaves camera projection unchanged.",
+            "passed": true
+        },
+        {
+            "id": "fov/vignette_off",
+            "detail": "Disabling vignette removes the mask.",
+            "passed": true
+        },
+        {
+            "id": "fov/category_reset",
+            "detail": "Reset category includes both FOV controls.",
+            "passed": true
+        },
+        {
+            "id": "guide/practice_visible",
+            "detail": "Start at the ring. Hold trigger, sweep along the arrow, then release. The guide does not cut for you.",
+            "passed": true
+        },
+        {
+            "id": "guide/no_colliders",
+            "detail": "Teaching guides cannot intercept controller hits.",
+            "passed": true
+        },
+        {
+            "id": "guide/left_surface",
+            "detail": "A continuous real left surface exists.",
+            "passed": true
+        },
+        {
+            "id": "guide/left_side",
+            "detail": "Every guide point remains on anatomical left.",
+            "passed": true
+        },
+        {
+            "id": "guide/right_surface",
+            "detail": "A continuous real right surface exists.",
+            "passed": true
+        },
+        {
+            "id": "guide/right_side",
+            "detail": "Every guide point remains on anatomical right.",
+            "passed": true
+        },
+        {
+            "id": "guide/hints_off",
+            "detail": "Turning hints off hides the guide without submitting actions.",
+            "passed": true
+        },
+        {
+            "id": "guide/route_cuts_real_chunk",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "guide/lift_stage",
+            "detail": "A cut shows lift guidance but earns no removal credit.",
+            "passed": true
+        },
+        {
+            "id": "guide/undo_restores_sweep",
+            "detail": "Undo replaces stale lift guidance with the current surface route.",
+            "passed": true
+        },
+        {
+            "id": "guide/assessment_hidden",
+            "detail": "No added route or lift answers appear in Easy assessments.",
+            "passed": true
+        },
+        {
+            "id": "guide/sandbox_cleanup",
+            "detail": "Leaving an activity destroys its guide.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)"
+    ]
+}
