@@ -1,0 +1,107 @@
+name: Build downloadable APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: anatome-production-apk
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and verify on the Windows PC
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, windows, x64, anatome-apk]
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: powershell
+    outputs:
+      version: ${{ steps.package.outputs.version }}
+      artifact_name: ${{ steps.package.outputs.artifact_name }}
+    steps:
+      - name: Download the project and model assets
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          lfs: true
+          persist-credentials: false
+
+      - name: Build with the existing local signing identity
+        run: .\pipeline\build-current-apk.ps1 -NoExplorer
+
+      - name: Prepare the verified download
+        id: package
+        run: |
+          .\pipeline\package-github-apk.ps1
+          $taskInfo = Get-Content -LiteralPath builds/github-apk/build-info.json -Raw | ConvertFrom-Json
+          "version=$($taskInfo.version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "artifact_name=Anatome-APK-$($env:GITHUB_RUN_ID)-$($env:GITHUB_RUN_ATTEMPT)" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+
+      - name: Upload the APK and checksum
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ${{ steps.package.outputs.artifact_name }}
+          path: builds/github-apk/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Keep build diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: Anatome-build-logs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            qa/current-apk/*.json
+            qa/current-apk-*.log
+            qa/school-release-build.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+  publish:
+    name: Add the APK to GitHub Releases
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Download the verified APK
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: ${{ needs.build.outputs.artifact_name }}
+          path: apk
+
+      - name: Publish a headset test download
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          APK_VERSION: ${{ needs.build.outputs.version }}
+          BUILD_COMMIT: ${{ github.sha }}
+          BUILD_NUMBER: ${{ github.run_number }}
+          BUILD_ATTEMPT: ${{ github.run_attempt }}
+          BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd apk
+          sha256sum --check -- *.apk.sha256
+          tag="v${APK_VERSION}-test.${BUILD_NUMBER}.${BUILD_ATTEMPT}"
+          cat > release-notes.md <<EOF
+          Anatome ${APK_VERSION}, built from commit ${BUILD_COMMIT}.
+
+          Download the .apk file in Assets below and install it on a Quest headset.
+
+          Includes the Thorax Museum, model zoom, focused anatomy identification, and accessibility updates.
+          Unity simulator checks and production-signing verification passed. Physical headset testing remains pending.
+
+          Build details: ${BUILD_URL}
+          EOF
+          release_url=$(gh release create "$tag" --repo "$GH_REPO" \
+            --target "$BUILD_COMMIT" --title "Anatome ${APK_VERSION} - headset test ${BUILD_NUMBER}.${BUILD_ATTEMPT}" \
+            --prerelease --notes-file release-notes.md \
+            -- *.apk *.apk.sha256 build-info.json)
+          printf 'Download the new APK: %s\n' "$release_url" >> "$GITHUB_STEP_SUMMARY"

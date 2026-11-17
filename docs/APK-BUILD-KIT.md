@@ -1,5 +1,7 @@
 # Build Anatome 1.6.0 on the existing Windows PC
 
+To start the build from GitHub and download the APK from Releases, follow [Build and download the APK on GitHub](GITHUB-APK.md). The workflow downloads the project automatically after the Windows build PC is connected.
+
 For a Git checkout, pull the current branch, run `git lfs pull`, then double-click `Build-New-APK.cmd`. The launcher checks for unresolved asset pointers before building the current checkout. ZIP deliveries additionally verify every file against the included build-kit manifest.
 
 This download is a source/build kit, not an APK. It contains the current draft's museum, controller zoom, focused identification models and accessibility updates. It targets **version 1.6.0 / Android code 20**, package **org.thoraxlab.learning**.

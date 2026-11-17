@@ -1,5 +1,7 @@
 # Anatome
 
+For the updated **1.6.0 APK** (Museum, model zoom, focused identification and accessibility), use [Build downloadable APK on GitHub](docs/GITHUB-APK.md). Connect the existing Windows build PC once; a successful workflow run adds the APK to [Releases](https://github.com/josephmanigo/Anatome/releases). The workflow downloads the project automatically, so the old project folder is not required.
+
 A VR anatomy learning game with four practical modes, mastery-based difficulty and a layered thorax specimen. Test it in Unity with the official XR Device Simulator.
 
 Production-signed classroom release **1.4.9 / code 17**, curriculum **2026.10.2**, preserves package `org.thoraxlab.learning`. The user confirmed 1.4.9 works on **Quest 2 and Quest 3**, including login. The release has the same 1,346 application entries as that tested candidate, a permanent release key and a verified Android key-rotation proof. All **30 strict APK checks pass**. Learner privacy guidance, shared-headset instructions, backup/transfer exclusions, the head/skin visual refresh and automatic highest-supported refresh remain; there is **no fixed 72 FPS cap**. Get the exact production APK and ZIP from [the classroom release guide](docs/CLASSROOM-RELEASE.md). The new signing transition needs one in-place installation check before a fleet rollout; no headset was connected for that check.

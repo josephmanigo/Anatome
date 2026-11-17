@@ -1,6 +1,7 @@
 param(
     [string]$Python = '',
-    [switch]$PreflightOnly
+    [switch]$PreflightOnly,
+    [switch]$NoExplorer
 )
 $ErrorActionPreference = 'Stop'
 $taskRoot = Split-Path $PSScriptRoot -Parent
@@ -134,8 +135,10 @@ try {
         Write-Host "APK READY: $taskOutput"
         Write-Host "SHA-256: $taskHash"
         Write-Host 'Update the existing headset app with this APK. Physical headset validation remains to be done.'
-        try { Start-Process explorer.exe -ArgumentList ('/select,"' + $taskOutput + '"') }
-        catch { Write-Host 'The APK is ready. Open the output folder manually to copy it.' }
+        if (!$NoExplorer) {
+            try { Start-Process explorer.exe -ArgumentList ('/select,"' + $taskOutput + '"') }
+            catch { Write-Host 'The APK is ready. Open the output folder manually to copy it.' }
+        }
     } finally {
         Pop-Location
     }
