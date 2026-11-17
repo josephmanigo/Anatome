@@ -50,6 +50,21 @@ namespace ThoraxLab.Learning
         public Vector3 Approach => approach;
         public IReadOnlyList<Vector3> TrainingRoute => route;
         public IEnumerable<Renderer> VisibleRenderers => workbench?workbench.GetComponentsInChildren<Renderer>():Array.Empty<Renderer>();
+        // Include the models used by the current case step, without its tray,
+        // instruments, labels, dock or answer guidance.
+        public IEnumerable<Renderer> InspectionRenderers
+        {
+            get
+            {
+                if(stationRoot&&stationRoot.activeInHierarchy)
+                    foreach(var renderer in stationRoot.GetComponentsInChildren<MeshRenderer>())yield return renderer;
+                if(mechanismRoot&&mechanismRoot.activeInHierarchy)
+                    foreach(var renderer in mechanismRoot.GetComponentsInChildren<MeshRenderer>())yield return renderer;
+                if(Reasoning&&Reasoning.gameObject.activeInHierarchy)
+                    foreach(var model in Reasoning.GetComponentsInChildren<DiseaseTeachingModel>())
+                        foreach(var renderer in model.GetComponentsInChildren<MeshRenderer>())yield return renderer;
+            }
+        }
         public IReadOnlyDictionary<string, ProcedureTool> Tools => tools;
         public bool Inspiration => Mathf.Sin(Time.time * 1.15f) > 0;
 

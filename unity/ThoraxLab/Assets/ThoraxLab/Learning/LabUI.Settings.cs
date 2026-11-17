@@ -17,7 +17,7 @@ namespace ThoraxLab.Learning
             Page("Settings",settingCategory);
             Text(content,draft.name,23,Muted);
             Button(content,"Choose a settings category",ShowSettingsCategories);
-            float actionHeight=ControlHeight,statusHeight=28*TextScale+10;
+            float actionHeight=ControlHeight,statusHeight=52*TextScale+12;
             footer.sizeDelta=new Vector2(0,actionHeight+statusHeight+20);rail.offsetMin=new Vector2(10,footer.sizeDelta.y+8);
             status.rectTransform.anchorMin=status.rectTransform.anchorMax=Vector2.zero;status.rectTransform.anchorMax=Vector2.right;status.rectTransform.pivot=new Vector2(.5f,0);status.rectTransform.sizeDelta=new Vector2(-40,statusHeight);status.rectTransform.anchoredPosition=new Vector2(0,4);
             var actions=Row(footer);actions.anchorMin=new Vector2(0,1);actions.anchorMax=Vector2.one;actions.pivot=new Vector2(.5f,1);actions.sizeDelta=new Vector2(-40,actionHeight);actions.anchoredPosition=new Vector2(0,-10);
@@ -25,6 +25,14 @@ namespace ThoraxLab.Learning
             Rule(content);
             switch(settingCategory)
             {
+                case "Quick setup":
+                    Text(content,"Make the lab comfortable before you start. Apply saves your choices; Cancel keeps your current settings.",24,Muted);
+                    ReadabilitySettings(false);
+                    Button(content,"Move panel in front of me",RecenterPanel);
+                    Rule(content);
+                    MovementSettings();
+                    Toggle(content,"Left dominant hand",()=>draft.leftHanded,v=>draft.leftHanded=v);
+                    Text(content,"For sitting height, table height, grip and audio options, choose a settings category above.",22,Muted);break;
                 case "Graphics & display":
                     Cycle(content,"Graphics preset",(GraphicsPreset[])Enum.GetValues(typeof(GraphicsPreset)),()=>draft.preset,v=>{draft.SetPreset(v);RenderSettingsPage();});
                     Slider(content,"Scene render scale",.6f,1.4f,()=>draft.renderScale,v=>draft.renderScale=v);
@@ -54,7 +62,8 @@ namespace ThoraxLab.Learning
                 case "Controls":
                     Toggle(content,"Left dominant hand",()=>draft.leftHanded,v=>draft.leftHanded=v);
                     Toggle(content,"Toggle grip",()=>draft.toggleGrip,v=>draft.toggleGrip=v);Toggle(content,"Controller vibration",()=>draft.vibration,v=>draft.vibration=v);
-                    Text(content,"Controller: trigger selects or uses a tool; grip holds a part. Bare hand: pinch thumb and index to select or use; curl your other three fingers to hold. Open to release. Pinch and drag to scroll a panel.",24,Muted);break;
+                    Text(content,"Controller: trigger selects or uses a tool; grip holds a part. Bare hand: pinch thumb and index to select or use; curl your other three fingers to hold. Open to release. Pinch and drag to scroll a panel.",24,Muted);
+                    Text(content,"Model inspection in every mode: A on the right controller (X on the left with Left dominant hand) opens and closes inspection. Point away from the panel; that stick up/down zooms and sideways rotates. You can also use Inspect / zoom model and the panel's zoom buttons.",24,Muted);break;
                 case "VR comfort":
                     if(LearningXRInput.IsSimulated)Slider(content,"Simulator FOV (degrees)",50,110,()=>draft.simulatorFov,v=>draft.simulatorFov=v,"0");
                     Toggle(content,"Comfort vignette",()=>draft.vignette,v=>{draft.vignette=v;RenderSettingsPage();});
@@ -67,13 +76,12 @@ namespace ThoraxLab.Learning
                     Slider(content,"Extra player height (m)",0,.8f,()=>draft.heightBoost,v=>draft.heightBoost=v);
                     Button(content,"Recenter view and height",()=>{var controls=FindFirstObjectByType<LearningControls>();if(controls)controls.RecenterTracking();});
                     Slider(content,"Table height offset (m)",-.2f,.25f,()=>draft.tableHeight,v=>draft.tableHeight=v);
-                    Cycle(content,"Movement",new[]{MoveStyle.Teleport,MoveStyle.Smooth},()=>draft.movement,v=>draft.movement=v);Slider(content,"Movement speed",.2f,1.5f,()=>draft.moveSpeed,v=>draft.moveSpeed=v);
-                    Text(content,"Smooth: left stick walks; right stick turns or scrolls the panel. Left dominant hand swaps the sticks. Pointing at the panel still allows walking. After a panel grab or click, release the stick before moving again.",21,Muted);
-                    Cycle(content,"Turning",new[]{TurnStyle.Snap,TurnStyle.Smooth},()=>draft.turning,v=>draft.turning=v);Slider(content,"Turn speed",15,120,()=>draft.turnSpeed,v=>draft.turnSpeed=v);Slider(content,"Snap angle",15,60,()=>draft.snapAngle,v=>draft.snapAngle=v);break;
+                    MovementSettings();
+                    Slider(content,"Turn speed",15,120,()=>draft.turnSpeed,v=>draft.turnSpeed=v);Slider(content,"Snap angle",15,60,()=>draft.snapAngle,v=>draft.snapAngle=v);break;
                 case "Learning & accessibility":
                     Text(content,"Practice hints include a dissection start ring, sweep arrow and chunk-lift guide. These guides stay hidden during assessments.",20,Muted);
-                    Toggle(content,"Practice hints",()=>draft.hints,v=>draft.hints=v);Toggle(content,"Structure labels",()=>draft.labels,v=>draft.labels=v);Toggle(content,"High contrast",()=>draft.highContrast,v=>draft.highContrast=v);Toggle(content,"Reduced motion",()=>draft.reducedMotion,v=>draft.reducedMotion=v);
-                    Slider(content,"Text size",.85f,1.5f,()=>draft.textScale,v=>draft.textScale=v);Slider(content,"Caption size",.85f,1.7f,()=>draft.captionScale,v=>draft.captionScale=v);
+                    Toggle(content,"Practice hints",()=>draft.hints,v=>draft.hints=v);Toggle(content,"Structure labels",()=>draft.labels,v=>draft.labels=v);Toggle(content,"Reduced motion",()=>draft.reducedMotion,v=>draft.reducedMotion=v);
+                    ReadabilitySettings(true);
                     Text(content,"Completion always includes a written status. Demonstrations can be replayed in lessons and practice. There is no mandatory countdown.",21,Muted);break;
                 case "Profiles":
                     var name=Field("Profile name",draft.name);name.characterLimit=48;name.onValueChanged.AddListener(v=>draft.name=v);
@@ -108,10 +116,44 @@ namespace ThoraxLab.Learning
             ErrorArea();
 
         }
+        void MovementSettings()
+        {
+            Cycle(content,"Movement",new[]{MoveStyle.Teleport,MoveStyle.Smooth},()=>draft.movement,v=>draft.movement=v);
+            Slider(content,"Movement speed",.2f,1.5f,()=>draft.moveSpeed,v=>draft.moveSpeed=v);
+            Cycle(content,"Turning",new[]{TurnStyle.Snap,TurnStyle.Smooth},()=>draft.turning,v=>draft.turning=v);
+            Slider(content,"Stick deadzone",.1f,.45f,()=>draft.stickDeadzone,v=>draft.stickDeadzone=v);
+            Text(content,"Left stick moves; right stick turns or scrolls a pointed-at panel. Left dominant hand swaps them. Smooth walks in the direction you look; use a lower speed for gentler movement.",22,Muted);
+            Text(content,"Teleport: push the movement stick forward, then center it to step ahead onto clear floor. Snap: push the turning stick sideways once per turn, then center it before turning again.",22,Muted);
+            Text(content,"A larger deadzone ignores more movement near the stick center. After a pause, panel interaction or tracking interruption, center both sticks before moving again. Teleport and Snap avoid continuous virtual motion.",22,Muted);
+        }
+
+        void ReadabilitySettings(bool captions)
+        {
+            var sampleSurface=Panel(content,"Readability preview",Ground);
+            var sampleColumn=sampleSurface.gameObject.AddComponent<VerticalLayoutGroup>();
+            sampleColumn.padding=new RectOffset(20,20,18,18);sampleColumn.spacing=12;
+            sampleColumn.childControlWidth=sampleColumn.childControlHeight=true;
+            sampleColumn.childForceExpandWidth=true;sampleColumn.childForceExpandHeight=false;
+            var sample=Text(sampleSurface.transform,"Readability preview: point at the skin, press trigger to select, then grip to hold.",24);
+            var hint=Text(sampleSurface.transform,"Text wraps to fit. Apply uses this size throughout the interface.",22,Muted);
+            var captionSample=captions?Text(sampleSurface.transform,"Caption preview: lift the skin gently, then release.",22):null;
+            void Preview()
+            {
+                sample.fontSize=24*draft.textScale;hint.fontSize=22*draft.textScale;
+                sample.color=draft.highContrast?Color.white:Ink;hint.color=draft.highContrast?Color.white:Muted;
+                sampleSurface.color=draft.highContrast?Color.black:Ground;
+                if(captionSample){captionSample.fontSize=22*draft.captionScale;captionSample.color=sample.color;}
+            }
+            Slider(content,"Text size",.85f,1.5f,()=>draft.textScale,v=>{draft.textScale=v;Preview();});
+            if(captions)Slider(content,"Caption size",.85f,1.7f,()=>draft.captionScale,v=>{draft.captionScale=v;Preview();});
+            Toggle(content,"High contrast",()=>draft.highContrast,v=>{draft.highContrast=v;Preview();});
+            Text(content,"Grip the panel's top bar to bring it closer or rotate it toward you. Use the stick while pointing at the panel to scroll longer instructions.",22,Muted);
+            Preview();
+        }
         void ShowSettingsCategories()
         {
             Page("Settings categories","What would you like to change?");
-            foreach(var category in new[]{"VR comfort","Audio","Learning & accessibility","Graphics & display","Controls","Profiles","Account & saves"})
+            foreach(var category in new[]{"Quick setup","VR comfort","Audio","Learning & accessibility","Graphics & display","Controls","Profiles","Account & saves"})
             {var selected=category;Button(content,category,()=>{settingCategory=selected;RenderSettingsPage();},category==settingCategory);}
             Button(content,"Back to settings",RenderSettingsPage);
         }
@@ -135,7 +177,7 @@ namespace ThoraxLab.Learning
         void ResetCategory()
         {
             var defaults=new SettingsProfile{platform=draft.platform};defaults.SetPreset(GraphicsPreset.Medium);
-            string fields=settingCategory=="Graphics & display"?"preset renderScale brightness shadowDistance textureLimit msaa width height frameCap refreshRate fullscreen vsync shadows showFps":settingCategory=="Audio"?"masterVolume narrationVolume effectsVolume ambienceVolume narrationSpeed captions":settingCategory=="Controls"?"sensitivity invertLook leftHanded toggleGrip vibration forward backward left right up down reset undo tool":settingCategory=="VR comfort"?"seated autoHeight heightBoost tableHeight movement moveSpeed turning turnSpeed snapAngle vignette simulatorFov comfortFov":"hints labels highContrast reducedMotion textScale captionScale";
+            string fields=settingCategory=="Quick setup"?"textScale highContrast movement moveSpeed turning stickDeadzone leftHanded":settingCategory=="Graphics & display"?"preset renderScale brightness shadowDistance textureLimit msaa width height frameCap refreshRate fullscreen vsync shadows showFps":settingCategory=="Audio"?"masterVolume narrationVolume effectsVolume ambienceVolume narrationSpeed captions":settingCategory=="Controls"?"sensitivity invertLook leftHanded toggleGrip vibration forward backward left right up down reset undo tool":settingCategory=="VR comfort"?"seated autoHeight heightBoost tableHeight movement moveSpeed turning turnSpeed snapAngle stickDeadzone vignette simulatorFov comfortFov":"hints labels highContrast reducedMotion textScale captionScale";
             foreach(string name in fields.Split(' ')){var field=typeof(SettingsProfile).GetField(name);field.SetValue(draft,field.GetValue(defaults));}RenderSettingsPage();
         }
     }

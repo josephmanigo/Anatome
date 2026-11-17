@@ -234,6 +234,15 @@ namespace ThoraxLab.Editor
 
             foreach(int frames in VerifyStartupFacing())yield return frames;
             foreach(int frames in VerifySchoolPrivacy())yield return frames;
+            if(Environment.GetCommandLineArgs().Contains("--thorax-museum-only")){
+                foreach(int frames in VerifyThoraxMuseum())yield return frames;yield break;
+            }
+            if(Environment.GetCommandLineArgs().Contains("--model-inspection-only")){
+                foreach(int frames in VerifyModelInspection())yield return frames;yield break;
+            }
+            if(Environment.GetCommandLineArgs().Contains("--identification-focus-only")){
+                foreach(int frames in VerifyIdentificationFocus())yield return frames;yield break;
+            }
             if(Environment.GetCommandLineArgs().Contains("--fov-guide-only")){
                 foreach(int frames in VerifyInterruptedOrientation())yield return frames;
                 foreach(int frames in VerifyFovAndDissectionGuide())yield return frames;yield break;
@@ -294,6 +303,7 @@ namespace ThoraxLab.Editor
             foreach (int frames in VerifyPanelManipulation()) yield return frames;
             VerifyNarrationStartup();
             VerifyAnatomyInventory();
+            foreach(int frames in VerifyIdentificationFocus())yield return frames;
             if(Environment.GetCommandLineArgs().Contains("--ui-widgets-only"))yield break;
             foreach (int frames in VerifyButtonJitter()) yield return frames;
             foreach (int frames in VerifyFocusAndMonitor()) yield return frames;
@@ -406,6 +416,8 @@ namespace ThoraxLab.Editor
             foreach(int frames in VerifyPanelHoverWalking())yield return frames;
             foreach(int frames in VerifyRuntimeSettings())yield return frames;
             foreach(int frames in VerifyGraphicsTransitions())yield return frames;
+            foreach(int frames in VerifyModelInspection())yield return frames;
+            foreach(int frames in VerifyThoraxMuseum())yield return frames;
         }
 
         IEnumerable<int> VerifyButtonJitter()

@@ -33,6 +33,7 @@ namespace ThoraxLab.Learning
         readonly Dictionary<Mesh, Vector3[]> surfaceSamples = new Dictionary<Mesh, Vector3[]>();
         readonly HashSet<string> preparedContext = new HashSet<string>();
         LearningMode preparedMode;
+        IdentificationFocus identificationFocus;
         bool initialized;
 
         public void Initialize(DissectionSession dissection)
@@ -64,10 +65,11 @@ namespace ThoraxLab.Learning
         public void ShowIntact() => ShowLayer(SpecimenLayer.Skin);
 
         /// <summary>Contextual display; call after restoring the original specimen and before staging movable assembly pieces.</summary>
-        public void Prepare(LearningMode mode, IEnumerable<string> targetIds, IEnumerable<string> protectedIds)
+        public void Prepare(LearningMode mode, IEnumerable<string> targetIds, IEnumerable<string> protectedIds, LearningUnit unit = null)
         {
             if (!session) return;
             RefreshMaterials();
+            identificationFocus = mode == LearningMode.IdentifyEnumerate ? new IdentificationFocus(unit, targetIds) : null;
             var required = new HashSet<string>((targetIds ?? Array.Empty<string>()).Concat(protectedIds ?? Array.Empty<string>()));
             var targets = session.originals.Where(s => s && required.Contains(s.record.id)).ToArray();
             int firstLayer = targets.Length == 0 ? 0 : targets.Min(s => s.record.layer);
@@ -77,6 +79,7 @@ namespace ThoraxLab.Learning
                 var record = structure.record;
                 bool visible;
                 if (record.reference_region) visible = false;
+                else if (identificationFocus != null) visible = identificationFocus.Includes(record.id, record.required_group, record.reference_region);
                 else if (mode == LearningMode.GuidedDissection) visible = true;
                 else if (mode == LearningMode.AssembleAnatomy)
                     visible = required.Contains(record.id) || (record.tissue == "bone" && record.layer >= firstLayer);
@@ -85,7 +88,7 @@ namespace ThoraxLab.Learning
                 else visible = required.Contains(record.id) || (record.layer >= firstLayer && record.tissue != "membrane");
                 structure.gameObject.SetActive(visible);
             }
-            preparedMode=mode;preparedContext.Clear();CurrentWindowLabel=null;
+            preparedMode=mode;preparedContext.Clear();CurrentWindowLabel=identificationFocus?.Label;
             foreach(var structure in session.originals.Where(s=>s&&s.gameObject.activeSelf))preparedContext.Add(structure.record.id);
         }
 
@@ -109,6 +112,17 @@ namespace ThoraxLab.Learning
         public void PrepareTeachingWindow(AnatomyStructure target)
         {
             if(!target||!session||(preparedMode!=LearningMode.IdentifyEnumerate&&preparedMode!=LearningMode.AnatomyCases&&preparedMode!=LearningMode.GuidedDissection))return;
+            if(preparedMode==LearningMode.IdentifyEnumerate&&identificationFocus!=null)
+            {
+                identificationFocus.SetTarget(target.record.id,target.record.tissue,target.record.layer);
+                foreach(var structure in session.originals.Where(s=>s))
+                {
+                    var record=structure.record;
+                    structure.gameObject.SetActive(identificationFocus.IsVisible(record.id,record.required_group,record.tissue,record.layer,record.reference_region));
+                }
+                CurrentWindowLabel=identificationFocus.Label;
+                Physics.SyncTransforms();return;
+            }
             string id=target.record.id,tissue=target.record.tissue;
             bool pleura=tissue=="membrane"&&id.Contains("Pleura"),lung=tissue=="lung",airway=tissue=="airway";
             bool valve=tissue=="cardiac"&&target.record.layer>=6;
@@ -153,6 +167,7 @@ namespace ThoraxLab.Learning
         {
             if (!session || session.busy) return;
             CurrentLayer = layer;
+            identificationFocus=null;
             CurrentWindowLabel=null;
             RefreshMaterials();
             foreach (var structure in session.originals.Where(s => s))

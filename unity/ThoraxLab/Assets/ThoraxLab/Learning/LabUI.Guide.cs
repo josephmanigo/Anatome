@@ -37,13 +37,14 @@ namespace ThoraxLab.Learning
             var bottom=Rect("Guide page controls",modal);bottom.anchorMin=Vector2.zero;bottom.anchorMax=new Vector2(1,0);bottom.pivot=new Vector2(.5f,0);bottom.sizeDelta=new Vector2(-32,controlHeight);bottom.anchoredPosition=new Vector2(0,16);
             var controls=Row(bottom);controls.GetComponent<UnityEngine.UI.HorizontalLayoutGroup>().childForceExpandWidth=false;Fill(controls);
             Button(controls,"Previous",()=>ChangeGuidePage(-1),false,guideIndex>0);
-            var pageNumber=Text(controls,(guideIndex+1)+" / "+playGuide.pages.Length,18,Muted);pageNumber.alignment=TextAlignmentOptions.Center;Size(pageNumber,width:72);
+            var pageNumber=Text(controls,(guideIndex+1)+" / "+playGuide.pages.Length,22,Muted);pageNumber.alignment=TextAlignmentOptions.Center;Size(pageNumber,width:72*TextScale);
             Button(controls,"Next",()=>ChangeGuidePage(1),true,guideIndex<playGuide.pages.Length-1);
             var area=Rect("Guide body",modal);Fill(area);area.offsetMin=new Vector2(8,controlHeight+40);area.offsetMax=new Vector2(-8,-controlHeight-32);
             var column=Scroll(area);var page=playGuide.pages[guideIndex];
             Text(column,page.title,31).fontStyle=FontStyles.Bold;
             LabUIVisuals.Hero(column,page.art,140);
             Text(column,page.text,23);
+            if(page.id=="guide-grip")Text(column,InspectionInstructions,23);
             Button(column,"Pause / resume guide voice",guideNarrator.TogglePause);
             Button(column,"Replay guide voice",guideNarrator.Replay);
             Text(column,"Female synthetic learning guide",18,Muted);

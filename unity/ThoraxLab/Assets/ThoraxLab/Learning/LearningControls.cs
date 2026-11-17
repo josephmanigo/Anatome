@@ -8,7 +8,7 @@ namespace ThoraxLab.Learning
     public sealed class LearningControls : MonoBehaviour
     {
         LabRuntime app; Camera view; Transform rig; ComfortVignette comfort;
-        float turnCooldown; bool tracked, teleportArmed, menuWasPressed;
+        bool tracked, teleportArmed, menuWasPressed;
         readonly List<XRInputSubsystem> inputSystems=new List<XRInputSubsystem>();
         XRInputSubsystem inputSystem;
         TrackingOriginModeFlags originMode=TrackingOriginModeFlags.Unknown;
@@ -17,8 +17,8 @@ namespace ThoraxLab.Learning
         float floorHeightLift, lastHeightBoost;
         int originChangedFrame=-1;
         float previousHeadHeight, nextOriginRequest;
-        XRInteractionSource moveSource,turnSource;
-        bool moveInputReady,turnInputReady;
+        readonly VRStickInput moveInput=new VRStickInput(),turnInput=new VRStickInput();
+        readonly SnapTurnLatch snapTurn=new SnapTurnLatch();
         public void Initialize(LabRuntime value)
         {
             app=value; view=Camera.main; rig=view.transform.parent;
@@ -71,14 +71,13 @@ namespace ThoraxLab.Learning
             var p=app.Settings.Current;
             var left=LearningXRInput.Read(p.leftHanded?XRNode.RightHand:XRNode.LeftHand);
             var right=LearningXRInput.Read(p.leftHanded?XRNode.LeftHand:XRNode.RightHand);
-            if(!left.tracked||moveSource!=left.source){moveInputReady=false;teleportArmed=false;moveSource=left.source;}
-            if(!right.tracked||turnSource!=right.source){turnInputReady=false;turnCooldown=0;turnSource=right.source;}
-            if(left.tracked&&left.axis.magnitude<.2f)moveInputReady=true;
-            if(right.tracked&&right.axis.magnitude<.2f)turnInputReady=true;
-            Vector2 move=left.tracked&&moveInputReady?left.axis:default;
-            Vector2 turn=right.tracked&&turnInputReady?right.axis:default;
-            move=move.magnitude>.2f?Vector2.ClampMagnitude(move,1):Vector2.zero;
-            comfort.SetMoving((p.movement==MoveStyle.Smooth&&move.magnitude>.2f)||(p.turning==TurnStyle.Smooth&&Mathf.Abs(turn.x)>.2f));
+            Vector2 move=left.axis,turn=right.axis;
+            moveInput.Filter(left.source,left.tracked,p.stickDeadzone,ref move.x,ref move.y);
+            turnInput.Filter(right.source,right.tracked,p.stickDeadzone,ref turn.x,ref turn.y);
+            if(!moveInput.Ready||moveInput.Interrupted)teleportArmed=false;
+            if(!turnInput.Ready||turnInput.Interrupted)snapTurn.Reset();
+            bool smoothTurn=p.turning==TurnStyle.Smooth&&Mathf.Abs(turn.x)>Mathf.Abs(turn.y);
+            comfort.SetMoving((p.movement==MoveStyle.Smooth&&move.magnitude>0)||smoothTurn);
             var forward=Vector3.ProjectOnPlane(view.transform.forward,Vector3.up).normalized;
             if(forward.sqrMagnitude<.01f)forward=Vector3.ProjectOnPlane(rig.forward,Vector3.up).normalized;
             if(p.movement==MoveStyle.Smooth)
@@ -96,7 +95,8 @@ namespace ThoraxLab.Learning
             else
             {
                 if(move.y>.7f)teleportArmed=true;
-                if(teleportArmed&&Mathf.Abs(move.y)<.2f)
+                if(move.y<-.7f||Mathf.Abs(move.x)>.7f)teleportArmed=false;
+                if(teleportArmed&&move.magnitude==0)
                 {
                     var target=rig.position+forward*1.2f;var floor=new Ray(new Vector3(target.x,2,target.z),Vector3.down);
                     if(Physics.Raycast(floor,out var hit,3)&&hit.normal.y>.8f&&hit.point.y<.3f)
@@ -104,14 +104,17 @@ namespace ThoraxLab.Learning
                     teleportArmed=false;
                 }
             }
-            turnCooldown-=Time.deltaTime;
-            if(p.turning==TurnStyle.Smooth&&Mathf.Abs(turn.x)>.2f)rig.RotateAround(view.transform.position,Vector3.up,turn.x*p.turnSpeed*Time.deltaTime);
-            else if(p.turning==TurnStyle.Snap&&Mathf.Abs(turn.x)>.7f&&turnCooldown<=0){rig.RotateAround(view.transform.position,Vector3.up,Mathf.Sign(turn.x)*p.snapAngle);turnCooldown=.35f;}
-            if(Mathf.Abs(turn.x)<.2f)turnCooldown=0;
+            if(smoothTurn)rig.RotateAround(view.transform.position,Vector3.up,turn.x*p.turnSpeed*Time.deltaTime);
+            if(p.turning==TurnStyle.Snap)
+            {
+                int direction=snapTurn.Read(turn.x,turn.y);
+                if(direction!=0)rig.RotateAround(view.transform.position,Vector3.up,direction*p.snapAngle);
+            }
         }
-        void ResetLocomotion(){teleportArmed=false;moveInputReady=turnInputReady=false;turnCooldown=0;}
+        void ResetLocomotion(){teleportArmed=false;moveInput.Reset();turnInput.Reset();snapTurn.Reset();}
         public void ApplyComfort()
         {
+            ResetLocomotion();
             if(!tracked)return;
             // Seated layout keeps real floor height and never changes the runtime's origin.
             // Switching Floor -> Device here used a stale floor pose to calculate

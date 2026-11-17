@@ -25,6 +25,9 @@ namespace ThoraxLab.Learning
         public LessonNarrator Narrator { get; private set; }
         public LessonDemonstrator Demonstrator {get;private set;}
         public VRSpecimenPresentation Presentation { get; private set; }
+        public ModelInspection Inspector { get; private set; }
+        public ThoraxMuseum Museum { get; private set; }
+        public bool MuseumActive => Museum && Museum.IsActive;
         public GuidedInteractionCoach Coach { get; private set; }
         public EnumerationMarkers Markers { get; private set; }
         LabAudio audioFeedback;
@@ -57,7 +60,7 @@ namespace ThoraxLab.Learning
         }
         public string Notice { get; private set; } = "Welcome to " + LearningBrand.Name + ".";
         public string SyncStatus { get; private set; } = "Sign in to save your learning.";
-        public bool CanInteract => UI && UI.WorkspaceVisible && !Paused && Focused && (XRReady || VerificationRunning);
+        public bool CanInteract => UI && UI.WorkspaceVisible && (!Inspector || !Inspector.IsOpen) && (!Museum || !Museum.ChangingGallery) && !Paused && Focused && (XRReady || VerificationRunning);
         public bool CanUseCuttingTool => CanInteract && !Session.busy && (Sandbox || (Variant?.mode == LearningMode.GuidedDissection && Engine?.Current?.action == ActionKind.Expose));
         public bool CanCut => CanUseCuttingTool && (Sandbox || (Session.selected && !Session.selected.fragment && Session.selected.record.id == Engine.Current.targetId));
         public static bool VerificationRunning
@@ -120,6 +123,8 @@ namespace ThoraxLab.Learning
                 {if(renderer.name.Contains("Light")||renderer.name.Contains("MainTable"))continue;var tint=new MaterialPropertyBlock();renderer.GetPropertyBlock(tint);tint.SetColor("_BaseColor",new Color(.13f,.18f,.23f));renderer.SetPropertyBlock(tint);}
                 var light = GameObject.Find("Specimen examination light")?.GetComponent<Light>(); if (light) { light.intensity = 2f; light.color = new Color(1f,.96f,.9f); }
                 Presentation = gameObject.AddComponent<VRSpecimenPresentation>(); Presentation.Initialize(Session); Presentation.ShowIntact();
+                Inspector = gameObject.AddComponent<ModelInspection>(); Inspector.Initialize(this);
+                Museum = gameObject.AddComponent<ThoraxMuseum>(); Museum.Initialize(this);
                 Settings.ApplySceneSettings();
                 if (!string.IsNullOrEmpty(Settings.RecoveryNotice)) Message(Settings.RecoveryNotice);
                 Coach = gameObject.AddComponent<GuidedInteractionCoach>(); Coach.Initialize(this);
@@ -210,7 +215,7 @@ namespace ThoraxLab.Learning
             var selected = new HashSet<string>(Unit.anatomyIds.Concat(Unit.protectedIds));
             foreach (var pair in structures) { pair.Value.RestoreOriginal(); pair.Value.gameObject.SetActive(selected.Contains(pair.Key)); pair.Value.Highlight(false); }
             removedStrokes.Clear();removedChunks.Clear();
-            Presentation.Prepare(Variant.mode, Variant.objectives.Select(o=>o.targetId), Unit.protectedIds);
+            Presentation.Prepare(Variant.mode, Variant.objectives.Select(o=>o.targetId), Unit.protectedIds, Unit);
             UpdateTeachingWindow();
             RestoreCompletedLayers();Coach.Prepare();Markers.Rebuild();
         }
@@ -231,9 +236,17 @@ namespace ThoraxLab.Learning
             Interrupt(); Unit = null; Variant = null; Sandbox = true; Session.SetMode(LabMode.Free); Presentation.ShowIntact(); UI.ShowWorkspace();
             Notice = "Dissection sandbox · cuts are temporary. Use Undo or Restore specimen.";
         }
+        public void StartMuseum()
+        {
+            if(Session.busy){Message("Wait for the current cut to finish before entering the museum.");return;}
+            if(!XRReady&&!VerificationRunning){Message(XRStatus);return;}
+            Interrupt(); Unit=null; Variant=null; Paused=false;
+            Museum.Open(); UI.ShowWorkspace(); UI.RecenterPanel();
+            Notice="Thorax Museum · select, hold and enlarge any labeled exhibit.";
+        }
         public void Select(AnatomyStructure structure, Vector3? contact = null)
         {
-            if (!CanInteract || !structure || !structure.gameObject.activeInHierarchy || structure.record.reference_region) return;
+            if (!CanInteract || MuseumActive || !structure || !structure.gameObject.activeInHierarchy || structure.record.reference_region) return;
             Physics.SyncTransforms();
             Vector3 surface=structure.Renderer.bounds.center;
             if(Presentation&&!Presentation.TryGetExposedSurface(structure,Camera.main.transform.position,out surface))
@@ -298,7 +311,7 @@ namespace ThoraxLab.Learning
 
         public bool CanManipulate(AnatomyStructure structure)
         {
-            if(!CanInteract||Session.busy||!structure||!structure.gameObject.activeInHierarchy||structure.record.reference_region)return false;
+            if(!CanInteract||MuseumActive||Session.busy||!structure||!structure.gameObject.activeInHierarchy||structure.record.reference_region)return false;
             if(Sandbox)return structure.fragment;
             if(OrientationActive)return OrientationStep==1&&structure.record.id=="FMA7163";
             if(Engine==null)return false;
@@ -354,6 +367,8 @@ namespace ThoraxLab.Learning
         }
         public void Interrupt()
         {
+            if(Inspector)Inspector.Close();
+            if(Museum)Museum.Close();
             if(Markers)Markers.Clear();
             if (Engine != null && Engine.Attempt.status == AttemptStatus.Active) { Save(); Engine.Attempt.status = AttemptStatus.Interrupted; }
             Engine = null; Sandbox = false; OrientationActive=false; if(Coach)Coach.Clear();removedStrokes.Clear();removedChunks.Clear();if(Demonstrator)Demonstrator.Stop();if (Procedure) Procedure.Clear(); if (Narrator) Narrator.Stop();
@@ -393,6 +408,8 @@ namespace ThoraxLab.Learning
         public async void RestoreActivity()
         {
             if(Session.busy){Message("Wait for the current cut or saved opening to finish.");return;}
+            if(Inspector)Inspector.ReturnToActivity();
+            if(MuseumActive){Museum.ResetExhibits();return;}
             Session.ResetSpecimen();if(Engine!=null){PrepareSpecimen();Procedure.Configure(Unit,Variant);Procedure.RestoreCheckpoint();}
             else if(Presentation)Presentation.ShowIntact();
             if(!await RestoreCheckpointGeometry())return;
@@ -432,7 +449,7 @@ namespace ThoraxLab.Learning
                 await Account.Sync(accountProgress, Engine?.Attempt.id);
                 if (ReferenceEquals(Progress, accountProgress))
                 {
-                    if(Engine!=null&&Engine.Attempt.resetGeneration!=Progress.resetGeneration){Engine=null;Session.ResetSpecimen();Procedure.Clear();UI.ShowHub();Notice="Progress was reset on another device. This old attempt has been closed.";}
+                    if(Engine!=null&&Engine.Attempt.resetGeneration!=Progress.resetGeneration){if(Inspector)Inspector.Close();Engine=null;Session.ResetSpecimen();Procedure.Clear();UI.ShowHub();Notice="Progress was reset on another device. This old attempt has been closed.";}
                     progressStore.Save(Progress); SyncStatus = Progress.pendingSync||Progress.attempts.Any(a=>!a.synced&&a.status==AttemptStatus.Completed)?"Saved locally · sync pending":"Synced"; Changed?.Invoke();
                 }
             }
@@ -454,6 +471,7 @@ namespace ThoraxLab.Learning
         void OnApplicationPause(bool paused) { applicationPaused=paused;RefreshApplicationAvailability(); }
         void RefreshApplicationAvailability()
         {
+            if(!Focused&&Inspector)Inspector.ReturnToActivity();
             if(!Focused)Save();
             if(UI)UI.ApplicationAvailabilityChanged(Focused);
         }

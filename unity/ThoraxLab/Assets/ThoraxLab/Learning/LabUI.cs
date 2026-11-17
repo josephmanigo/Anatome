@@ -25,7 +25,7 @@ namespace ThoraxLab.Learning
         LearningUnit chosenUnit;
         Difficulty chosenDifficulty;
         SettingsProfile draft;
-        string currentScreen,settingCategory="VR comfort",email="";
+        string currentScreen,settingCategory="Quick setup",email="";
         Action previousScreen;
         bool xrLayout,runningAction;
         float xrCaptureUntil;
@@ -53,6 +53,9 @@ namespace ThoraxLab.Learning
         }
         void Page(string name,string title,bool workspace=false)
         {
+            if(name!="Model inspection"&&app.Inspector)app.Inspector.Close();
+            inspectionZoom=null;
+            museumSelection=null;
             CloseGuide();
             foreach(var pointer in xrPointers.Values){ReleasePointer(pointer,null);Hover(pointer,null);}panelDragPointer=-1;
             if(modal)Destroy(modal.gameObject);modal=null;
@@ -62,13 +65,13 @@ namespace ThoraxLab.Learning
             var edge=LabUIVisuals.Surface(screen,"Glass thickness",new Color(.12f,.25f,.31f));edge.raycastTarget=false;Fill(edge.rectTransform);edge.rectTransform.anchoredPosition=new Vector2(5,-7);edge.rectTransform.localPosition+=Vector3.forward*7;LabUIVisuals.Border(edge.rectTransform);
             var glassColor=HighContrast?Color.black:new Color(Ground.r,Ground.g,Ground.b,.97f);
             var backdrop=LabUIVisuals.Surface(screen,"VR console surface",glassColor);backdrop.raycastTarget=false;Fill(backdrop.rectTransform);LabUIVisuals.Border(backdrop.rectTransform,new Color(.71f,.89f,.96f,.8f));
-            float headerHeight=ControlHeight+58*TextScale+34,footerHeight=Mathf.Max(68,32*TextScale+40);
+            float headerHeight=ControlHeight+58*TextScale+34,footerHeight=Mathf.Max(84,60*TextScale+40);
             var tr=Rect("Top navigation",screen);tr.anchorMin=new Vector2(0,1);tr.anchorMax=Vector2.one;tr.pivot=new Vector2(.5f,1);tr.sizeDelta=new Vector2(0,headerHeight);tr.anchoredPosition=Vector2.zero;
             tr.gameObject.AddComponent<Image>().color=Color.clear;
             var header=Column(tr,"Console navigation",20,12);Fill(header);
             var brandRow=Row(header,"Panel grip",12);brandRow.GetComponent<HorizontalLayoutGroup>().childForceExpandWidth=false;Size(brandRow,58*TextScale-18);LabUIVisuals.Icon(brandRow,LabGlyph.Layers,Accent,30);
             var brand=Text(brandRow,LearningBrand.Name,28);brand.fontStyle=FontStyles.Bold;Size(brand,flexible:1).minWidth=0;
-            var grip=Text(brandRow,"Grip to move / rotate",16,Muted);grip.alignment=TextAlignmentOptions.MidlineRight;Size(grip,flexible:1).minWidth=0;
+            var grip=Text(brandRow,"Grip to move",22,Muted);grip.alignment=TextAlignmentOptions.MidlineRight;Size(grip,flexible:1).minWidth=0;
             var row=Row(header,"Navigation buttons",12);Size(row,ControlHeight);
             Button(row,"Guide",ShowGuide);Button(row,workspace?"Pause":"Menu",ShowPauseMenu);
             if(app.Account.UserId!=null)Button(row,"Log out",app.LogOut);
@@ -91,20 +94,22 @@ namespace ThoraxLab.Learning
         public void TogglePauseMenu()
         {
             if(GuideOpen){CloseGuide();return;}
-            if(currentScreen=="Menu"&&(app.Engine!=null||app.Sandbox||app.OrientationActive))ShowWorkspace();
+            if(currentScreen=="Menu"&&(app.Engine!=null||app.Sandbox||app.OrientationActive||app.MuseumActive))ShowWorkspace();
             else ShowPauseMenu();
         }
         void ShowPauseMenu()
         {
-            bool working=app.Engine!=null||app.Sandbox||app.OrientationActive;
+            bool working=app.Engine!=null||app.Sandbox||app.OrientationActive||app.MuseumActive;
             Page("Menu",working?"Take your time":"Your lab");
+            if(app.MuseumActive)RecenterPanel();
             if(working)Button(content,"Return to activity",ShowWorkspace,true);
             else if(app.Account.UserId!=null||app.Preview)Button(content,"Return to lab",ShowHub,true);
             else Button(content,"Return to sign-in",ShowSignIn,true);
             Button(content,"Settings",()=>{previousScreen=working?(Action)ShowWorkspace:ShowHub;ShowSettings();});
+            Button(content,"How to play & unlock levels",()=>ShowLearningGuidelines(ShowPauseMenu));
             if(app.Account.UserId!=null||app.Preview)Button(content,"Your progress",()=>Leave(ShowProgress));
             Button(content,"Move panel in front of me",RecenterPanel);
-            if(working)Button(content,"Save step and leave activity",()=>Leave(ShowHub));
+            if(working)Button(content,app.MuseumActive?"Leave museum":"Save step and leave activity",()=>Leave(ShowHub));
             Text(content,"Point to a button and squeeze the trigger. Hold grip on the top bar to move the panel; turn your wrist to rotate it. Release grip to leave it in place.",21,Muted);
         }
         void Leave(Action destination)
@@ -115,6 +120,8 @@ namespace ThoraxLab.Learning
         public void ShowSignIn()
         {
             Page("Sign in","Step into the anatomy lab");
+            Button(content,"Before you begin",()=>ShowLearningGuidelines(ShowSignIn));
+            Button(content,"VR comfort & text size",()=>OpenAccessibilitySetup(ShowSignIn));
             Text(content,"Sign in with an email code to save your progress.",23,Muted);
             Text(content,"Email address",23);
             var field=Field("Email address",email);field.contentType=TMP_InputField.ContentType.EmailAddress;
@@ -170,10 +177,10 @@ namespace ThoraxLab.Learning
             Page("Career",app.Progress.orientationCompleted?"What will you discover next?":"Welcome to your lab");
             if(!app.Progress.orientationCompleted)
             {
-                LabUIVisuals.Hero(content,"mode-dissect",172);
-                Text(content,"Start with your hands. Learn to point, hold and release before your first Easy activity.",27,Muted);
+                LearningGuidelines(content);
+                Button(content,"VR comfort & text size",()=>OpenAccessibilitySetup(ShowHub));
                 Button(content,"Learn the VR controls",ShowOrientation,true);
-                Text(content,"Three short actions. No timer.",22,Muted);
+                Text(content,"Point and trigger-select the skin. Grip, lift slightly, then release. These three actions open your first Easy activity.",24,Muted);
             }
             else
             {
@@ -184,7 +191,10 @@ namespace ThoraxLab.Learning
                 else LabUIVisuals.Card(content,"Chest wall","Build your first map of the thorax.","chest-wall",()=>{chosenMode=LearningMode.IdentifyEnumerate;chosenDifficulty=Difficulty.Easy;app.StartActivity(next.variants.First(v=>v.mode==chosenMode&&v.difficulty==Difficulty.Easy),SessionPhase.Lesson);},"Start an Easy lesson","Start an Easy lesson");
                 Button(content,"Choose an activity",ShowModes,!canContinue);
                 Text(content,"Medium opens after you pass Easy. Hard opens after Medium.",22,Muted);
+                Button(content,"How to play & unlock levels",()=>ShowLearningGuidelines(ShowHub));
+                Button(content,"VR comfort & text size",()=>OpenAccessibilitySetup(ShowHub));
             }
+            Button(content,"Visit the Thorax Museum",app.StartMuseum);
             if(app.Preview)Button(content,"Sign in to save progress",()=>{app.Interrupt();ShowSignIn();});
             ErrorArea();
         }
@@ -195,6 +205,7 @@ namespace ThoraxLab.Learning
             Mode("Assemble Anatomy","Grip, rotate and reconstruct anatomical relationships.",LearningMode.AssembleAnatomy);
             Mode("Guided Dissection","Cut and reflect layers while preserving protected anatomy.",LearningMode.GuidedDissection);
             Mode("Anatomy Cases","Explain mechanisms, perform procedures and predict responses.",LearningMode.AnatomyCases);
+            LabUIVisuals.Card(content,"Thorax Museum","Explore every thorax part in labeled system galleries. Grab and enlarge exhibits to examine their shape.","chest-wall",app.StartMuseum,"Visit the Thorax Museum");
             Button(content,"Back to lab",ShowHub);
         }
         void Mode(string title,string description,LearningMode mode)
@@ -234,16 +245,16 @@ namespace ThoraxLab.Learning
             foreach(Difficulty level in Enum.GetValues(typeof(Difficulty)))
             {
                 var variant=chosenUnit.variants.First(v=>v.mode==chosenMode&&v.difficulty==level);bool unlocked=app.Unlocked(variant);var selected=level;
-                string guidance=unlocked?(level==Difficulty.Easy?"One step at a time with clear guides.":level==Difficulty.Medium?"More independence and anatomical relationships.":"Precise work and more complex decisions."):(level==Difficulty.Easy?"Complete the VR introduction first.":"Pass "+(level==Difficulty.Medium?"Easy":"Medium")+" in this activity first.");
+                string guidance=unlocked?(level==Difficulty.Easy?"One step at a time with clear guides.":level==Difficulty.Medium?"More independence and anatomical relationships.":"Precise work and more complex decisions."):(level==Difficulty.Easy?"Complete the VR introduction first.":"Pass the "+(level==Difficulty.Medium?"Easy":"Medium")+" assessment in this unit and mode first.");
                 LabUIVisuals.Card(content,level.ToString(),guidance,null,()=>{chosenDifficulty=selected;ShowUnit(chosenUnit);},level+(unlocked?"":" · locked"),unlocked?(level==chosenDifficulty?"Selected":"Available"):"Locked",unlocked,unlocked?LabGlyph.Layers:LabGlyph.Lock);
             }
-            Text(content,"Pass with at least 80% and every essential step. There is no time limit.",21,Muted);Button(content,"Back",()=>ShowUnit(chosenUnit));
+            Text(content,AssessmentRequirements,24,Muted);Text(content,"Lessons, practice and XP do not unlock levels. No time limit; unlimited retries.",22,Muted);Button(content,"Back",()=>ShowUnit(chosenUnit));
         }
         void ShowPhaseChoice(ScenarioVariant variant)
         {
             Page("Learning phase",chosenUnit.title+" · "+variant.difficulty);
             LabUIVisuals.Card(content,"Practice with guidance","Replay demonstrations and use placement guides.",null,()=>app.StartActivity(variant,SessionPhase.Practice),symbol:LabGlyph.Play);
-            LabUIVisuals.Card(content,"Take the assessment","Pass with 80% and every essential step. Unlimited retries.",null,()=>app.StartActivity(variant,SessionPhase.Assessment),symbol:LabGlyph.Check);
+            LabUIVisuals.Card(content,"Take the assessment",AssessmentRequirements+" Unlimited retries.",null,()=>app.StartActivity(variant,SessionPhase.Assessment),symbol:LabGlyph.Check);
             Button(content,"Read the anatomy and sources",()=>ShowReferences(chosenUnit));Button(content,"Back",()=>ShowUnit(chosenUnit));
         }
         void ShowReferences(LearningUnit unit)
@@ -253,7 +264,8 @@ namespace ThoraxLab.Learning
         }
         public void ShowWorkspace()
         {
-            Page("Workspace",app.OrientationActive?"Learn the VR controls":app.Sandbox?"Dissection sandbox":app.Unit?.title??"Anatomy workspace",true);
+            Page("Workspace",app.MuseumActive?"Thorax Museum":app.OrientationActive?"Learn the VR controls":app.Sandbox?"Dissection sandbox":app.Unit?.title??"Anatomy workspace",true);
+            if(app.MuseumActive){MuseumWorkspace();RecenterPanel();return;}
             if(app.OrientationActive)
             {
                 stepLabel=Text(content,"",23,Accent);
@@ -277,20 +289,23 @@ namespace ThoraxLab.Learning
                 if(app.Unit.isCase){caseHandling=Text(instruction,"",24,Accent);caseHandling.name="Tool handling feedback";}
                 windowLabel=Text(content,"",20,Muted);
                 if(app.Variant.mode!=LearningMode.GuidedDissection)notice=Text(content,"",22,Accent);
+                Button(content,"Inspect / zoom model",app.Inspector.Open);
                 if(app.Unit.isCase)Button(content,"Case and controls",ShowCaseControls);
                 if(app.Engine.Attempt.phase!=SessionPhase.Assessment)
                     Button(content,"Show me this step",()=>{app.RevealHint();app.Demonstrator.Play();app.Narrator.Replay();});
                 finishButton=Button(content,app.Engine.Attempt.phase==SessionPhase.Assessment?"Finish assessment":"Finish activity",app.Finish,true);
                 selectedLabel=Text(content,"",21,Muted);
                 Button(content,"Tools and more help",ShowActivityTools);
-                Text(content,(app.Variant.mode==LearningMode.GuidedDissection?"Cut a chunk, then grip that separated piece to lift and turn it. Whole layers stay on the table. ":"Grip visible anatomy to lift and turn it. Inspection parts return on release. ")+"Left stick walks; right stick turns. Left dominant hand swaps the sticks. Aim away from the panel to walk.",21,Muted);
+                Text(content,(app.Variant.mode==LearningMode.GuidedDissection?"Cut a chunk, then grip that separated piece to lift and turn it. Whole layers stay on the table. ":"Grip visible anatomy to lift and turn it. Inspection parts return on release. ")+MovementSummary(),22,Muted);
             }
             else
             {
                 Text(content,"Choose a layer, cut a chunk, then grip the separated piece to lift and turn it. Whole layers stay on the table.",26,Muted);
                 selectedLabel=Text(content,"",23,Muted);notice=Text(content,app.Notice,22,Accent);
                 Button(content,"Tools and layers",ShowActivityTools,true);
+                Button(content,"Inspect / zoom model",app.Inspector.Open);
             }
+            if(!app.OrientationActive)Text(content,InspectionInstructions,22,Muted);
             float captionHeight=112*app.Settings.Current.captionScale;
             captionPanel=LabUIVisuals.Surface(screen,"Narration captions",Surface).rectTransform;
             captionPanel.anchorMin=Vector2.zero;captionPanel.anchorMax=new Vector2(1,0);captionPanel.pivot=new Vector2(.5f,0);
@@ -403,7 +418,7 @@ namespace ThoraxLab.Learning
             }
             if(windowLabel){windowLabel.text=app.TeachingWindowLabel??"";windowLabel.gameObject.SetActive(!string.IsNullOrEmpty(windowLabel.text));}
             if(selectedLabel)selectedLabel.text=(app.Variant?.mode==LearningMode.GuidedDissection||app.Sandbox?(app.Session.saw?"Equipped: BONE SAW":"Equipped: SCALPEL")+" · ray reach 3 m\n":"")+(app.Variant?.mode==LearningMode.IdentifyEnumerate&&app.Markers?"Marked "+app.Markers.Count+" of "+app.Variant.objectives.Length+" in this set.\n":"")+(app.Session.selected&&app.Settings.Current.labels?"Selected: "+app.Session.selected.record.name:"");
-            if(caption){caption.text=app.Settings.Current.captions?app.Narrator.Caption:"";caption.fontSize=20*app.Settings.Current.captionScale;captionPanel.gameObject.SetActive(!string.IsNullOrEmpty(caption.text));}
+            if(caption){caption.text=app.Settings.Current.captions?app.Narrator.Caption:"";caption.fontSize=22*app.Settings.Current.captionScale;captionPanel.gameObject.SetActive(!string.IsNullOrEmpty(caption.text));}
         }
         void Update()
         {
@@ -419,7 +434,8 @@ namespace ThoraxLab.Learning
             if(forward.sqrMagnitude<.1f)forward=Vector3.ProjectOnPlane(Camera.main.transform.up,Vector3.up).normalized;
             var right=Vector3.Cross(Vector3.up,forward);
             var position=Camera.main.transform.position+forward*.95f-right*.55f-Vector3.up*.02f;
-            if(app.Structures.TryGetValue("FMA7163",out var skin))position.y=Mathf.Max(position.y,skin.Renderer.bounds.min.y+screen.rect.height*screen.localScale.y*.5f+.04f);
+            if(app.MuseumActive)position=Camera.main.transform.position+forward*.45f-right*1.1f-Vector3.up*.05f;
+            if(!app.MuseumActive&&app.Structures.TryGetValue("FMA7163",out var skin))position.y=Mathf.Max(position.y,skin.Renderer.bounds.min.y+screen.rect.height*screen.localScale.y*.5f+.04f);
             screen.position=position;
             screen.rotation=Quaternion.LookRotation(screen.position-Camera.main.transform.position,Vector3.up);
         }

@@ -72,8 +72,55 @@ class Program
         foreach(int invalid in new[]{-1,999}){fresh.refreshRate=invalid;fresh.Validate();Check(fresh.refreshRate==0,"Invalid refresh preference must return to automatic.");}
     }
 
+    static void CheckVRAccessibility()
+    {
+        var legacy=new SettingsProfile{stickDeadzone=0,textScale=.95f,captionScale=1.3f,movementRevision=1,movement=MoveStyle.Teleport};legacy.Validate();
+        Check(legacy.stickDeadzone==.2f&&legacy.textScale==.95f&&legacy.captionScale==1.3f&&legacy.movement==MoveStyle.Teleport,"Adding drift protection must preserve saved reading and movement choices.");
+        legacy.stickDeadzone=.4f;
+        var restored=JsonSerializer.Deserialize<SettingsProfile>(JsonSerializer.Serialize(legacy,Json),Json);restored.Validate();
+        Check(restored.stickDeadzone==.4f&&restored.textScale==.95f,"Accessibility preferences must survive saving.");
+        legacy.stickDeadzone=1;legacy.Validate();Check(legacy.stickDeadzone==.45f,"Deadzone must leave usable stick travel.");
+        legacy.stickDeadzone=-1;legacy.Validate();Check(legacy.stickDeadzone==.1f,"Deadzone must protect against center drift.");
+        foreach(float bad in new[]{float.NaN,float.PositiveInfinity,float.NegativeInfinity})
+        {
+            var invalid=new SettingsProfile{stickDeadzone=bad};bool rejected=false;
+            try{invalid.Validate();}catch(ArgumentException){rejected=true;}
+            Check(rejected,"Non-finite deadzone must not reach locomotion.");
+        }
+        var stick=new VRStickInput();
+        (float x,float y) Read(float x,float y,bool tracked=true,XRInteractionSource source=XRInteractionSource.Controller,float zone=.2f)
+        {stick.Filter(source,tracked,zone,ref x,ref y);return (x,y);}
+        Check(Read(0,1)==(0,0),"A held stick at startup cannot walk.");
+        Check(Read(.1f,.1f)==(0,0)&&stick.Ready,"Centered drift should arm the stick without moving.");
+        var edge=Read(0,.201f);Check(edge.y>0&&edge.y<.01f,"Crossing the deadzone must start gently, without a speed jump.");
+        Check(Math.Abs(Read(0,.6f).y-.5f)<.0001f,"Remaining travel must provide proportional movement.");
+        Check(Read(0,-1)==(0,-1),"Full backward travel should retain full configured speed.");
+        var diagonal=Read(1,1);Check(Math.Abs(diagonal.x*diagonal.x+diagonal.y*diagonal.y-1)<.0001f,"Diagonal travel must not increase walking speed.");
+        Check(Read(0,.3f,zone:.4f)==(0,0),"The learner's larger deadzone must suppress drift.");
+        Check(Read(0,1,false)==(0,0)&&!stick.Ready,"Tracking loss must clear readiness.");
+        Check(Read(0,1)==(0,0),"Restored tracking cannot replay a held stick.");
+        Read(0,0);Check(Read(0,1)==(0,1),"Centering after recovery should restore movement.");
+        Check(Read(0,1,source:XRInteractionSource.Simulator)==(0,0),"Switching input sources must require neutral.");
+        Read(0,0,source:XRInteractionSource.Simulator);
+        Check(Read(0,1,source:XRInteractionSource.Simulator)==(0,1),"The simulator must use the same release gate.");
+        stick.Reset();Check(Read(0,1,source:XRInteractionSource.Simulator)==(0,0),"Pause or panel capture must require fresh input.");
+        Read(0,0);Check(Read(float.NaN,1)==(0,0)&&!stick.Ready,"Invalid input must stop movement.");
+        Check(Read(0,1)==(0,0),"Recovery from invalid input must also require neutral.");
+        var snap=new SnapTurnLatch();
+        Check(snap.Read(1,0)==0,"Snap turn must wait for an initial release.");snap.Read(0,0);
+        Check(snap.Read(.1f,1)==0,"Vertical stick input must not turn the view.");
+        Check(snap.Read(1,0)==1,"A deliberate side press must turn once.");
+        int repeatedTurns=0;for(int frame=0;frame<120;frame++)repeatedTurns+=snap.Read(1,0);
+        Check(repeatedTurns==0,"Holding the stick must not repeat snap turns.");
+        Check(snap.Read(-1,0)==0,"Changing sides without centering must not turn again.");
+        snap.Read(0,0);Check(snap.Read(-1,0)==-1,"Centering must enable one fresh turn in either direction.");
+        snap.Reset();Check(snap.Read(1,0)==0,"Resetting snap turn must discard held input.");
+    }
+
     static void Main(string[] args)
     {
+        CheckVRAccessibility();
+        InspectionZoomTests.Run(Check);
         CheckFieldOfViewPreferences();
         CheckRefreshPreferences();
         CheckClinicalDecisions();
@@ -209,6 +256,8 @@ class Program
         if (args.Length > 0)
         {
             var catalog = JsonSerializer.Deserialize<LearningCatalog>(File.ReadAllText(args[0]), Json);
+            IdentificationFocusTests.Run(catalog,Path.Combine(Path.GetDirectoryName(args[0]),"..","..","anatomy-catalog.json"),Check);
+            MuseumCollectionTests.Run(Path.Combine(Path.GetDirectoryName(args[0]),"..","..","anatomy-catalog.json"),Check);
             Check(catalog.units.Length == 12, "Expected six anatomy units and six cases.");
             var variants = catalog.units.SelectMany(u => u.variants).ToArray();
             Check(variants.Length == 72 && variants.Select(v => v.id).Distinct().Count() == 72, "Curriculum coverage is incomplete.");

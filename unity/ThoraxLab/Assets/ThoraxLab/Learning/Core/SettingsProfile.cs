@@ -19,13 +19,14 @@ namespace ThoraxLab.Learning
         public float masterVolume = .8f, narrationVolume = 1, effectsVolume = .6f, ambienceVolume = .2f, narrationSpeed = 1;
         public bool captions = true, invertLook, leftHanded, toggleGrip, vibration = true;
         public float sensitivity = .12f, moveSpeed = .8f, turnSpeed = 60, snapAngle = 30;
+        public float stickDeadzone = .2f;
         public MoveStyle movement = MoveStyle.Smooth;
         public TurnStyle turning = TurnStyle.Snap;
         public bool seated = true, vignette = true;
         public float simulatorFov = 75, comfortFov = 55;
         public bool autoHeight = true;
         public float heightBoost;
-        public float tableHeight, textScale = 1, captionScale = 1;
+        public float tableHeight, textScale = 1.15f, captionScale = 1.15f;
         public bool hints = true, labels = true, highContrast, reducedMotion;
         public string forward = "W", backward = "S", left = "A", right = "D", up = "E", down = "Q", reset = "R", undo = "Z", tool = "B";
 
@@ -41,6 +42,7 @@ namespace ThoraxLab.Learning
             renderScale = Clamp(renderScale, .6f, 1.4f); brightness = Clamp(brightness, .5f, 1.5f);
             textScale = Clamp(textScale, .85f, 1.5f); captionScale = Clamp(captionScale, .85f, 1.7f);
             sensitivity = Clamp(sensitivity, .03f, .4f); moveSpeed = Clamp(moveSpeed, .2f, 1.5f);
+            stickDeadzone = Clamp(stickDeadzone == 0 ? .2f : stickDeadzone, .1f, .45f);
             turnSpeed = Clamp(turnSpeed, 15, 120); snapAngle = Clamp(snapAngle, 15, 60); tableHeight = Clamp(tableHeight, -.2f, .25f);
             heightBoost = Clamp(heightBoost, 0, .8f);
             // Missing fields in older Unity JSON profiles deserialize as zero.

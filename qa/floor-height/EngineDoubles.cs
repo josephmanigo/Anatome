@@ -14,7 +14,8 @@ namespace UnityEngine {
   public Vector3 InverseTransformPoint(Vector3 world)=>world-position;
   public T GetComponent<T>() where T:class=>null;
   public void SetLocalPositionAndRotation(Vector3 p,Quaternion q){localPosition=p;localRotation=q;}
-  public void RotateAround(Vector3 p,Vector3 axis,float angle){}
+  public float turnedDegrees;public int turnCalls;
+  public void RotateAround(Vector3 p,Vector3 axis,float angle){turnedDegrees+=angle;turnCalls++;}
  }
  public class Camera:Component {public static Camera main;public float fieldOfView=58;}
  public class CharacterController:Component {public bool enabled=true;public float radius=.18f,skinWidth=.08f,height,stepOffset;public Vector3 center;public void Move(Vector3 delta){transform.position+=delta;}}

@@ -14,8 +14,8 @@ namespace ThoraxLab.Editor
         {
             PlayerSettings.companyName=Learning.LearningBrand.Name;
             PlayerSettings.productName=Learning.LearningBrand.Name;
-            PlayerSettings.bundleVersion="1.5.1";
-            PlayerSettings.Android.bundleVersionCode=Mathf.Max(PlayerSettings.Android.bundleVersionCode,19);
+            PlayerSettings.bundleVersion="1.6.0";
+            PlayerSettings.Android.bundleVersionCode=Mathf.Max(PlayerSettings.Android.bundleVersionCode,20);
             var accountConfiguration=Resources.Load<TextAsset>("Learning/supabase-config");
             LearningAndroidPolicy.ValidateConfiguration(accountConfiguration?JsonUtility.FromJson<Learning.SupabaseConfiguration>(accountConfiguration.text):null);
             AssetDatabase.Refresh();

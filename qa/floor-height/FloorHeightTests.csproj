@@ -3,6 +3,7 @@
   <ItemGroup>
     <Compile Include="../../unity/ThoraxLab/Assets/ThoraxLab/Learning/LearningControls.cs" />
     <Compile Include="../../unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/XRInteractionGate.cs" />
+    <Compile Include="../../unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/VRStickInput.cs" />
     <Compile Include="../../unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/SettingsProfile.cs" />
     <Compile Include="Program.cs" /><Compile Include="EngineDoubles.cs" />
   </ItemGroup>

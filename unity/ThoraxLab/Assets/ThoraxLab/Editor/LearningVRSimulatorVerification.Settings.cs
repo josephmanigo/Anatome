@@ -100,6 +100,7 @@ namespace ThoraxLab.Editor
         }
         IEnumerable<int> VerifySettingsApply()
         {
+            foreach(int frames in VerifyAccessibilityOnboarding())yield return frames;
             var saved=app.Settings.Draft();var category=typeof(LabUI).GetField("settingCategory",BindingFlags.Instance|BindingFlags.NonPublic);
             try
             {
@@ -128,6 +129,50 @@ namespace ThoraxLab.Editor
             finally{app.Settings.Apply(saved);category.SetValue(app.UI,"VR comfort");app.UI.ShowSignIn();}
             yield return 6;
         }
+        IEnumerable<int> VerifyAccessibilityOnboarding()
+        {
+            var saved=app.Settings.Draft();
+            var category=typeof(LabUI).GetField("settingCategory",BindingFlags.Instance|BindingFlags.NonPublic);
+            string previousCategory=(string)category.GetValue(app.UI);
+            string progress=JsonUtility.ToJson(app.Progress);
+            try
+            {
+                app.UI.ShowSignIn();yield return 4;
+                foreach(int frames in GuideClick("Before you begin"))yield return frames;
+                string rules=string.Join("\n",app.UI.Root.GetComponentsInChildren<TMPro.TMP_Text>().Select(t=>t.text));
+                Require("accessibility/rules_before_signin",rules.Contains("80%")&&rules.Contains("essential step")&&rules.Contains("critical safety")&&rules.Contains("Easy → Medium → Hard")&&rules.Contains("same unit and mode")&&rules.Contains("do not unlock levels"),"Opening instructions explain the actual assessment and progression requirements before an account is needed.");
+                foreach(int frames in GuideClick("VR comfort & text size"))yield return frames;
+                Require("accessibility/early_setup",app.UI.ScreenName=="Settings"&&(string)category.GetValue(app.UI)=="Quick setup","Comfort and reading controls are accessible before the first activity.");
+                string before=JsonUtility.ToJson(app.Settings.Current);
+                foreach(float scale in new[]{.85f,1.15f,1.5f})
+                {
+                    app.UI.Root.GetComponentsInChildren<Slider>().Single(s=>s.name=="Text size").value=scale;
+                    yield return 4;Canvas.ForceUpdateCanvases();
+                    var sample=app.UI.Root.GetComponentsInChildren<RectTransform>().Single(t=>t.name=="Readability preview");
+                    var labels=sample.GetComponentsInChildren<TMPro.TMP_Text>();
+                    foreach(var label in labels)label.ForceMeshUpdate();
+                    Require("accessibility/preview_wraps/"+scale,Mathf.Approximately(labels[0].fontSize,24*scale)&&labels.All(t=>t.preferredHeight<=t.rectTransform.rect.height+1&&!t.enableAutoSizing),"The preview uses the chosen size and grows for wrapped text without shrinking it.");
+                }
+                var contrast=app.UI.Root.GetComponentsInChildren<Button>().Single(b=>b.name.EndsWith("High contrast"));
+                contrast.onClick.Invoke();yield return 4;
+                var draft=(SettingsProfile)typeof(LabUI).GetField("draft",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(app.UI);
+                var surface=app.UI.Root.GetComponentsInChildren<Image>().Single(i=>i.name=="Readability preview");
+                Require("accessibility/contrast_preview",surface.color==(draft.highContrast?Color.black:LabWidgets.Ground),"Contrast preview updates before committing preferences.");
+                Require("accessibility/preview_is_not_saved",JsonUtility.ToJson(app.Settings.Current)==before,"Previewing size and contrast cannot silently change saved settings.");
+                foreach(int frames in GuideClick("Cancel"))yield return frames;
+                Require("accessibility/cancel_returns_to_rules",app.UI.ScreenName=="Getting started"&&JsonUtility.ToJson(app.Settings.Current)==before,"Cancel restores the calling screen and retains the saved settings.");
+                foreach(int frames in GuideClick("Back"))yield return frames;
+                foreach(int frames in GuideClick("VR comfort & text size"))yield return frames;
+                app.UI.Root.GetComponentsInChildren<Slider>().Single(s=>s.name=="Text size").value=1.5f;
+                app.UI.Root.GetComponentsInChildren<Slider>().Single(s=>s.name=="Stick deadzone").value=.35f;
+                foreach(int frames in ApplySettingsButton())yield return frames;
+                Require("accessibility/apply_returns_to_signin",app.UI.ScreenName=="Sign in"&&Mathf.Approximately(app.Settings.Current.textScale,1.5f)&&Mathf.Approximately(app.Settings.Current.stickDeadzone,.35f)&&Mathf.Approximately(LabWidgets.TextScale,1.5f),"Apply commits comfort/readability settings and rebuilds the original sign-in screen.");
+                Require("accessibility/help_cannot_unlock_levels",JsonUtility.ToJson(app.Progress)==progress,"Reading guidelines and changing preferences cannot complete orientation or award mastery.");
+                foreach(int frames in AuditButtons("accessibility/signin-large"))yield return frames;
+            }
+            finally{app.Settings.Apply(saved);category.SetValue(app.UI,previousCategory);app.UI.ShowSignIn();}
+            yield return 4;
+        }
         IEnumerable<int> VerifyPanelManipulation()
         {
             app.UI.ShowSignIn();app.UI.RecenterPanel();yield return 5;
@@ -152,7 +197,7 @@ namespace ThoraxLab.Editor
             var saved=app.Settings.Draft();var category=typeof(LabUI).GetField("settingCategory",BindingFlags.Instance|BindingFlags.NonPublic);
             try
             {
-                foreach(var name in new[]{"VR comfort","Audio","Controls","Graphics & display","Learning & accessibility"})
+                foreach(var name in new[]{"Quick setup","VR comfort","Audio","Controls","Graphics & display","Learning & accessibility"})
                 {
                     app.UI.ShowSettings();category.SetValue(app.UI,name);InvokeUI("RenderSettingsPage");yield return 5;
                     // Presets rebuild the page and supply values for its remaining controls.

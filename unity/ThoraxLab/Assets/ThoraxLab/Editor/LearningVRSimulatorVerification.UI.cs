@@ -279,7 +279,7 @@ namespace ThoraxLab.Editor
             foreach(int frames in AuditButtons("menu"))yield return frames;
             app.UI.ShowSettings();yield return 4;
             var category=typeof(LabUI).GetField("settingCategory",BindingFlags.Instance|BindingFlags.NonPublic);
-            foreach(string name in new[]{"VR comfort","Audio","Controls","Graphics & display","Learning & accessibility","Profiles","Account & saves"})
+            foreach(string name in new[]{"Quick setup","VR comfort","Audio","Controls","Graphics & display","Learning & accessibility","Profiles","Account & saves"})
             {
                 category.SetValue(app.UI,name);InvokeUI("RenderSettingsPage");yield return 4;
                 foreach(int frames in AuditButtons("settings/"+name))yield return frames;

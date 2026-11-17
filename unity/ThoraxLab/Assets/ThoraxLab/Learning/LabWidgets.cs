@@ -42,7 +42,7 @@ namespace ThoraxLab.Learning
         }
         public static TextMeshProUGUI Text(Transform parent,string value,float size=22,Color? color=null)
         {
-            var rt=Rect("Text · "+(value??""),parent);var t=rt.gameObject.AddComponent<TextMeshProUGUI>();t.font=Font;t.text=value;t.fontSize=size*TextScale;t.color=HighContrast&&(color==null||color==Muted)?Color.white:color??Ink;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Overflow;t.raycastTarget=false;t.richText=false;t.lineSpacing=3;return t;
+            var rt=Rect("Text · "+(value??""),parent);var t=rt.gameObject.AddComponent<TextMeshProUGUI>();t.font=Font;t.text=value;t.fontSize=Mathf.Max(22,size)*TextScale;t.color=HighContrast&&(color==null||color==Muted)?Color.white:color??Ink;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Overflow;t.raycastTarget=false;t.richText=false;t.lineSpacing=3;return t;
         }
         public static Button Button(Transform parent,string value,Action action,bool primary=false,bool enabled=true)
         {

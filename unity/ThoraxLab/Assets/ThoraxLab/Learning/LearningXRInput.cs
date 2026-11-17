@@ -14,7 +14,7 @@ namespace ThoraxLab.Learning
     {
         public struct State
         {
-            public bool tracked, trigger, grip, menu;
+            public bool tracked, trigger, grip, menu, inspect;
             public float triggerValue, gripValue;
             public Vector3 position;
             public Quaternion rotation;
@@ -90,6 +90,7 @@ namespace ThoraxLab.Learning
                     state.trigger=device.TryGetChildControl<ButtonControl>("triggerPressed")?.isPressed??state.triggerValue>=.55f;
                     state.grip=device.TryGetChildControl<ButtonControl>("gripPressed")?.isPressed??state.gripValue>=.55f;
                     state.menu=device.TryGetChildControl<ButtonControl>("menu")?.isPressed??false;
+                    state.inspect=device.TryGetChildControl<ButtonControl>("primaryButton")?.isPressed??false;
                     state.axis=device.TryGetChildControl<Vector2Control>("thumbstick")?.ReadValue()??Vector2.zero;
                     if(!Finite(state.axis.x)||!Finite(state.axis.y))state.axis=Vector2.zero;
                     var aimPosition=device.TryGetChildControl<Vector3Control>("pointerPosition");var aimRotation=device.TryGetChildControl<QuaternionControl>("pointerRotation");
@@ -113,6 +114,7 @@ namespace ThoraxLab.Learning
                 state.gripValue = Mathf.Clamp01(state.gripValue);
                 if(!hasTrigger)state.trigger=state.triggerValue>=.55f;if(!hasGrip)state.grip=state.gripValue>=.55f;
                 physical.TryGetFeatureValue(XRUsages.menuButton, out state.menu);
+                physical.TryGetFeatureValue(XRUsages.primaryButton, out state.inspect);
                 physical.TryGetFeatureValue(XRUsages.primary2DAxis, out state.axis);
                 if(state.tracked||node==XRNode.Head)return state;
             }
@@ -129,6 +131,7 @@ namespace ThoraxLab.Learning
                 triggerValue = Analog(simulated,"trigger","triggerButton"),
                 gripValue = Analog(simulated,"grip","gripButton"),
                 menu = simulated.TryGetChildControl<ButtonControl>("menuButton")?.isPressed ?? false,
+                inspect = simulated.TryGetChildControl<ButtonControl>("primaryButton")?.isPressed ?? false,
                 axis = simulated.TryGetChildControl<Vector2Control>("primary2DAxis")?.ReadValue() ?? Vector2.zero
             };
         }
