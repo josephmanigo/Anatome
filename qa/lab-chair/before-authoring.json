@@ -1,0 +1,30 @@
+{
+  "objectCount": 685,
+  "chairObjects": [],
+  "packedTextures": [
+    "Brushed stainless.png",
+    "Glazed scrub tile.png",
+    "Quarter sawn oak.png",
+    "Sealed ceiling tile.png",
+    "Washable coating.png",
+    "Welded sheet flooring.png",
+    "Woven linen.png"
+  ],
+  "engine": "CYCLES",
+  "camera": [
+    {
+      "view": "station",
+      "position": [
+        3.61,
+        -1.2,
+        1.28
+      ],
+      "target": [
+        4.48,
+        0.82,
+        0.51
+      ],
+      "lensMm": 45
+    }
+  ]
+}

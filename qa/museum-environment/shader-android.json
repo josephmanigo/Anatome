@@ -1,0 +1,124 @@
+{
+  "unityVersion": "6000.3.19f1",
+  "buildTarget": "Android",
+  "configuredGraphicsApis": [
+    "OpenGLES3"
+  ],
+  "shader": "ThoraxLab/Museum finish",
+  "pass": "Gallery",
+  "method": "UnityEditor.ShaderData.Pass.CompileVariant",
+  "checks": [
+    {
+      "compiler": "Vulkan",
+      "keywords": [],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 2975,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "keywords": [],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 3250,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 3189,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 6939,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 8256,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "stage": "Vertex",
+      "success": true,
+      "returnedByteCount": 8060,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "stage": "Fragment",
+      "success": true,
+      "returnedByteCount": 0,
+      "diagnostics": ""
+    }
+  ]
+}

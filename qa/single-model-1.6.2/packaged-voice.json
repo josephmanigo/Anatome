@@ -1,0 +1,58 @@
+{
+  "apk": "Anatome-1.6.2.apk",
+  "sha256": "5ff1bb831813a79e7293e63ad559a37c3e6d89d28cd1fe4b848f4391c4bc3d68",
+  "verifiedUtc": "2026-11-20T15:52:57.238091+00:00",
+  "expected": 346,
+  "decodedNonSilent": 346,
+  "guidePages": 10,
+  "passed": true,
+  "method": "Resolved each runtime Resources key and AudioClip object in the APK, decoded its FMOD bank to PCM, measured RMS and peak, and compared duration to the source WAV.",
+  "examples": [
+    {
+      "id": "intro-chest-wall-1-0",
+      "seconds": 4.974,
+      "rmsDbFS": -20.9
+    },
+    {
+      "id": "anatomy-chest-wall-1-0-all",
+      "seconds": 9.788,
+      "rmsDbFS": -20.4
+    },
+    {
+      "id": "guide-welcome",
+      "seconds": 29.87,
+      "rmsDbFS": -20.5
+    },
+    {
+      "id": "guide-grip",
+      "seconds": 48.812,
+      "rmsDbFS": -20.7
+    },
+    {
+      "id": "lab-welcome",
+      "seconds": 11.593,
+      "rmsDbFS": -20.5
+    },
+    {
+      "id": "orientation-select",
+      "seconds": 8.168,
+      "rmsDbFS": -21.8
+    },
+    {
+      "id": "orientation-lift",
+      "seconds": 10.278,
+      "rmsDbFS": -20.5
+    },
+    {
+      "id": "museum-intro",
+      "seconds": 12.937,
+      "rmsDbFS": -21.1
+    },
+    {
+      "id": "sandbox-intro",
+      "seconds": 14.362,
+      "rmsDbFS": -21.0
+    }
+  ],
+  "failures": {}
+}

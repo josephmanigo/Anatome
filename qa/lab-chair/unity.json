@@ -1,0 +1,27 @@
+{
+    "utc": "2026-11-21T10:41:14.4410258Z",
+    "finishes": [
+        "Black",
+        "Guard",
+        "Stainless"
+    ],
+    "triangles": 3524,
+    "roomRenderers": 38,
+    "prefabRenderers": 38,
+    "roomMaterials": 23,
+    "lightProbes": 168,
+    "lightmaps": 3,
+    "ceilingLights": 12,
+    "boundsCenter": {
+        "x": -4.515057563781738,
+        "y": 0.5124999284744263,
+        "z": -0.8096170425415039
+    },
+    "boundsSize": {
+        "x": 0.6102333068847656,
+        "y": 1.0249998569488526,
+        "z": 0.6170213222503662
+    },
+    "seatContactHeight": 0.540920615196228,
+    "passed": true
+}

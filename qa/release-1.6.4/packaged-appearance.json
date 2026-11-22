@@ -1,0 +1,162 @@
+{
+  "previous": "Anatome-1.6.3.apk",
+  "updated": "Anatome-1.6.4.apk",
+  "appearanceRevision": "vr-tissue-appearance-2026.11.21.5",
+  "passed": true,
+  "checks": [
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_skin.mat",
+      "previous": "ffd9e58af44ce605cba8978599b46c554dee8794ebf3b19403589a9fbd696223",
+      "updated": "87b64782fcc32dd7056afd0a0cfcb1a2e8d7995b3d5fef7b35d427c9c9b8cedd",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_skin_Albedo.png",
+      "previous": "0b3c6283b52c2074c778d74c2a463a35393cbc2bf26e3d07d7241904c9ea2146",
+      "updated": "c3f37c8a0f4a61a359406c4c3620426e64a44f5ff16715c04547c56b32bcb01b",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_skin.mat",
+      "previous": "cfcd1f1261e83544b12514a7b48bfc738781a67596214846fa4b0c53e9efc073",
+      "updated": "2d2477aa32238a720d1f0a1870fcb2b2f225074b4af0ddc4d6765cb2f388164c",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_skin_Albedo.png",
+      "previous": "bf458223a7c0cea3976d09b48e8a1761633bd9961e8aa2d14b4af5ed6946118a",
+      "updated": "59b2dd032cd71816c935ef0a8bc91cdac0c21614fa615ef52bb459060ce5fa9a",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_fat.mat",
+      "previous": "d016e8737622d71411f33c3c013763d5f8fda4179de8cdbefb171427cb0f6104",
+      "updated": "6d1425c22672c58ce754fef55267379a7f506f4e4edf9b05925e494b7bb34bfa",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_fat_Albedo.png",
+      "previous": "da758235430b2c7126193a0cf83ffed3512911cd835642dfe39aaaa2bd45a1b7",
+      "updated": "f574de2f3ad03cbcebe09e96c4565366c8e7f5f62995a92c8ea009cc4c5b3c76",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_fat.mat",
+      "previous": "b3662d41cfeff6ff1f3fbb7d9e2849ff809c7f0e55d64610371c886e6337f2dc",
+      "updated": "3460fd3c55cc8517c9ae9e197c3dd6a5ab9f2714c46a33c2f9dd94917a12eadd",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_fat_Albedo.png",
+      "previous": "51f49bf79f14db10726d3a5a6396e876ec93951b41628b89e100a5b4c4fda25a",
+      "updated": "c5fb37fe91f4127d1ae491586e1e2051b4eb4ba210c199a7b2f11605b55f711d",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_fascia.mat",
+      "previous": "247cb0bdbbaf12d33ed78f8b2f8f0413adeabfee36d2e680f0dfae95f7b7e537",
+      "updated": "f5bb1c0dea072b25dc5f2ba3f2c1febb44a118598a7fd0cf02a692eaafe9cce0",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_fascia_Albedo.png",
+      "previous": "a5ab0b9a005a5fa11fcee3e28e86b505fe708d59905efb31634daba82030b34c",
+      "updated": "6ab21aafe7f82ffe3d997ec4c5f6ff1cf3bb787af7a5685c6834bd1294008170",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_fascia.mat",
+      "previous": "8437459a4e9d849bc2d603219f76854b2ae913de5feef721978214272247bd15",
+      "updated": "098dae8f6e8ee317c60a342569197e73b913f4183e3e2cd00b8438ad3b0cb7a9",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_fascia_Albedo.png",
+      "previous": "67770d208e44a24736be56339ba8f5f3c58f2041ae868a847ec940cd778936a1",
+      "updated": "4949f802568f4cbf945c31b308a2e1ef01600f9b65d33a89019a941e5efe8c4b",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_muscle.mat",
+      "previous": "bf44ab2187a524f9c0a046f771f372eaf3c3d86f659017a9c0db009236021006",
+      "updated": "b6b48a600e27aee66c7dd0619eb94a97b369f48a228bc88c358bd7e1ea0b3fcc",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Tissue_muscle_Albedo.png",
+      "previous": "e9ef6ff7c8c510302b2d16ec0a8562ee4452c8004b41d2b227cb6055cb641409",
+      "updated": "674d9d196999831c91cf5586902fffc62168e27215f45e5bd8263b5daa3cfefe",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_muscle.mat",
+      "previous": "db2b1cfb915de9494d512d05c8bfca01529c73fe859696ce719a991d9dbc8f26",
+      "updated": "7f9931a24a32c690b455f1ab6e76a093912b7f3ffa37360b801c6832e68957d4",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/Specimen/Interior_muscle_Albedo.png",
+      "previous": "91eb8701d9ddf11c3e5ecd27c4ae60c6a624469ed323334730026e6e2e7f7bca",
+      "updated": "9f8c7f18a3c17abb0c7004cdb2f6b987e54faafc1a9fc07244b9ea97d04aed00",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/CaseSkin/Surface_Albedo.png",
+      "previous": "ff157c777aad6fa58e6480ac56ac464228777137f5a8cd3dc03392108a31f571",
+      "updated": "50bb712685374bddbc3d9360ff5a814a7c2690e4afc2c5b6475aec7c026de156",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/CaseSkin/CutFace_Albedo.png",
+      "previous": "06b919c965fd252a29d25afa447093d246d54a5336977d7b4984edae512d6b45",
+      "updated": "72f6ec039be0ebc7d96366206a28aa98ed3cb6c520daeee06a4aeb9518277bed",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "Resources/Learning/InstrumentFinishes/Brushed relief.png",
+      "previous": "0c8f27367765337b2edececaef1bec51215089a78d9c7bcc904d29dfe709a995",
+      "updated": "0c8f27367765337b2edececaef1bec51215089a78d9c7bcc904d29dfe709a995",
+      "expectedChange": false,
+      "passed": true
+    },
+    {
+      "asset": "Museum/Honed terrazzo.png",
+      "previous": "91dacbfdaf73519fef1856a095e5782df90b6110bb0859f1c70df56cc9fe1d35",
+      "updated": "91dacbfdaf73519fef1856a095e5782df90b6110bb0859f1c70df56cc9fe1d35",
+      "expectedChange": false,
+      "passed": true
+    },
+    {
+      "asset": "lib/arm64-v8a/libil2cpp.so",
+      "previous": "e0d4e299ffb395da07b3db1849b5b445424df68d60cdfa412e55aa9524fa1dd6",
+      "updated": "b11b6dae98d5f92e1ab95f281fd1d893d0734a9cedd3bf2405e077b66bd4e09f",
+      "expectedChange": true,
+      "passed": true
+    },
+    {
+      "asset": "assets/bin/Data/Managed/Metadata/global-metadata.dat",
+      "previous": "1cec20f66020631dfc90d2d854a22974b7900066c9d4d6c85de84a303cb232d2",
+      "updated": "b5e15949bd40876e6acb835eedb5e5140871411e66da3cb1cade9017e06554a0",
+      "expectedChange": true,
+      "passed": true
+    }
+  ]
+}

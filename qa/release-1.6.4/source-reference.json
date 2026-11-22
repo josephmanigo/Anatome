@@ -1,0 +1,14 @@
+﻿[
+    {
+        "file":  "unity/ThoraxLab/Assets/ThoraxLab/Models/Thorax.fbx",
+        "sha256":  "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a"
+    },
+    {
+        "file":  "unity/ThoraxLab/Assets/ThoraxLab/anatomy-catalog.json",
+        "sha256":  "b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141"
+    },
+    {
+        "file":  "unity/ThoraxLab/Assets/ThoraxLab/Models/LaboratoryChair.fbx",
+        "sha256":  "1dfd66ebd0f44889dab255fca0d9aa7d37af5a29a797cce46afa50f04db258e0"
+    }
+]

@@ -1,0 +1,91 @@
+{
+  "source": "Mauritanian Anatomy Laboratory thoracic atlas, January 2021",
+  "method": "Full original segmentation triangles with smooth vertex normals, using the existing two shared transforms. Distances compare atlas vertices and working triangles in both directions within each lobe. These compare representations of the same segmentation, not anatomical accuracy across donors.",
+  "lobes": [
+    {
+      "id": "MAL_RUL",
+      "source": "source/references/open-anatomy/models/superior lobe of right lung.vtk",
+      "sourceSha256": "d7c970c3b282cffccbbc6493bc4ffb1df17ba3c062c5e6f3cc1f1097de3fb72a",
+      "sourceTriangles": 30247,
+      "workingTriangles": 6500,
+      "sourceVerticesToWorkingSurfaceMm": {
+        "median": 0.03030414336535614,
+        "p95": 0.09720547350298138,
+        "max": 1.0194875067099929
+      },
+      "workingVerticesToSourceSurfaceMm": {
+        "median": 0.028291788112255745,
+        "p95": 0.08166451043507549,
+        "max": 0.16998114006128162
+      }
+    },
+    {
+      "id": "MAL_RML",
+      "source": "source/references/open-anatomy/models/middle lobe of right lung.vtk",
+      "sourceSha256": "159a374c6df89faa811b57ea6696f3ad07abaee529e8d93955833bfe14e9016a",
+      "sourceTriangles": 14214,
+      "workingTriangles": 6500,
+      "sourceVerticesToWorkingSurfaceMm": {
+        "median": 0.019958320081059355,
+        "p95": 0.07321521879930508,
+        "max": 1.2678098864853382
+      },
+      "workingVerticesToSourceSurfaceMm": {
+        "median": 0.015165657714533154,
+        "p95": 0.04709316763182867,
+        "max": 0.11298911704216152
+      }
+    },
+    {
+      "id": "MAL_RLL",
+      "source": "source/references/open-anatomy/models/inferior lobe of right lung.vtk",
+      "sourceSha256": "9d7b58bab62a03a75a0524bf534510c6eaf94ded3beaf365f3b235fcc266f6ff",
+      "sourceTriangles": 28894,
+      "workingTriangles": 6500,
+      "sourceVerticesToWorkingSurfaceMm": {
+        "median": 0.03278455187682994,
+        "p95": 0.09404420998180281,
+        "max": 0.20664973999373615
+      },
+      "workingVerticesToSourceSurfaceMm": {
+        "median": 0.03605087476898916,
+        "p95": 0.09431110920559148,
+        "max": 0.16110512660816312
+      }
+    },
+    {
+      "id": "MAL_LUL",
+      "source": "source/references/open-anatomy/models/superior lobe of left lung.vtk",
+      "sourceSha256": "5884dea72556c084ac413996bd5c90068c10e1d556b19c0bee4333503f8e1cb7",
+      "sourceTriangles": 30769,
+      "workingTriangles": 6500,
+      "sourceVerticesToWorkingSurfaceMm": {
+        "median": 0.02460014366079122,
+        "p95": 0.07909182386356396,
+        "max": 0.8746915846131742
+      },
+      "workingVerticesToSourceSurfaceMm": {
+        "median": 0.023482012693420984,
+        "p95": 0.06843420014774888,
+        "max": 0.139039519126527
+      }
+    },
+    {
+      "id": "MAL_LLL",
+      "source": "source/references/open-anatomy/models/inferior lobe of left lung.vtk",
+      "sourceSha256": "6ded3642eae835913445536322f402f401d80796250fb1410e1185ec23ec84da",
+      "sourceTriangles": 31510,
+      "workingTriangles": 6500,
+      "sourceVerticesToWorkingSurfaceMm": {
+        "median": 0.03459296567598358,
+        "p95": 0.09627143808756954,
+        "max": 0.7621750119142234
+      },
+      "workingVerticesToSourceSurfaceMm": {
+        "median": 0.037680913010262884,
+        "p95": 0.10191432265855836,
+        "max": 0.20496877550613135
+      }
+    }
+  ]
+}

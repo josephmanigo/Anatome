@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "utc": "2026-11-20T23:38:35.6531199Z",
+  "unity": "6000.3.19f1",
+  "screen": "Career",
+  "visibleAnatomy": 243,
+  "qaBypass": false,
+  "roomBatches": 18,
+  "prefabBatches": 18,
+  "materialCount": 16,
+  "shaders": [
+    "Universal Render Pipeline/Lit"
+  ],
+  "runtimeTintOverrides": 0,
+  "glassOpacity": 0.13,
+  "diffuserEmission": true,
+  "alignedBakedPanels": 12,
+  "lightProbes": 120,
+  "lightmaps": [
+    "512x512",
+    "512x512"
+  ],
+  "reflection": "Assets/ThoraxLab/Scenes/ThoraxLab/ReflectionProbe-0.exr",
+  "drapeClearances": [
+    {
+      "tableOffsetM": -0.2,
+      "surfaceHeightM": 0.6900002,
+      "drapeMinimumHeightM": 0.6914002,
+      "clearanceMm": 1.3999939
+    },
+    {
+      "tableOffsetM": 0.0,
+      "surfaceHeightM": 0.890000165,
+      "drapeMinimumHeightM": 0.891400158,
+      "clearanceMm": 1.3999939
+    },
+    {
+      "tableOffsetM": 0.25,
+      "surfaceHeightM": 1.14000022,
+      "drapeMinimumHeightM": 1.14140022,
+      "clearanceMm": 1.3999939
+    }
+  ],
+  "textureImports": [
+    {
+      "map": "Woven linen",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Sealed ceiling tile",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Brushed stainless",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Welded sheet flooring",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Washable coating",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Quarter sawn oak",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    },
+    {
+      "map": "Glazed scrub tile",
+      "width": 512,
+      "height": 512,
+      "mipmaps": true,
+      "android": "ASTC_6x6"
+    }
+  ],
+  "checks": {
+    "roomBatchesPresent": true,
+    "prefabMatchesRoomBatchCount": true,
+    "meshColliderAndSupportedShaderOnEveryBatch": true,
+    "twelveBakedLightsAlignedWithDiffusers": true,
+    "noRuntimeBaseColorOverride": true,
+    "cabinetGlassTransparent": true,
+    "diffuserEmissionEnabled": true,
+    "drapeUsesLinenAndHasNoCollider": true,
+    "drapeClearsTableAtAllThreeHeights": true,
+    "roomReflectionPresentAndBoxProjected": true,
+    "directionalLightmapPairsPresent": true,
+    "oneHundredTwentyLightProbes": true,
+    "allFinishMapsMipmappedWithAndroidASTC6x6": true
+  }
+}

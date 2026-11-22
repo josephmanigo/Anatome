@@ -1,0 +1,20 @@
+{
+  "supportedDevices": [
+    "quest2",
+    "questpro",
+    "quest3",
+    "quest3s"
+  ],
+  "androidDebuggable": false,
+  "apkAlignment16KiB": true,
+  "xrLaunchCategory": true,
+  "sameSignerAs1_6_4": true,
+  "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "apkSha256": "1f1c61977f169eeb77e8a54d15be0b37838c0c5217c4b55c76aae49ab897e68f",
+  "versionedAndUnityOutputMatch": true,
+  "bytes": 250481035,
+  "adbAtVerification": [
+    "List of devices attached"
+  ],
+  "verifiedUtc": "2026-11-21T13:56:56.489999+00:00"
+}

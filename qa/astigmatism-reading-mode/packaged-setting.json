@@ -1,0 +1,16 @@
+{
+  "sha256": "be81646c77ed5edbbc30dd9dbea3ba963a6a70d487e879bc738fe2aabcf1ca19",
+  "matchesUnityExport": true,
+  "matchesVerifiedPackage": true,
+  "embedded": {
+    "If you have astigmatism, try Astigmatism reading mode": true,
+    "Astigmatism reading mode is on.": true,
+    "Reading brightness (%)": true,
+    "Raise brightness if tissue detail is hard to see.": true,
+    "_ReadingDim": true,
+    "readingBrightnessPercent": true
+  },
+  "questModelManifest": "A: android:value(0x01010024)=\"quest2|questpro|quest3|quest3s\" (Raw: \"quest2|questpro|quest3|quest3s\")",
+  "zipAligned": true,
+  "passed": true
+}

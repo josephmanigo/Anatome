@@ -1,0 +1,36 @@
+{
+  "reference": "Anatome-1.6.4.apk",
+  "candidate": "Anatome-1.6.5.apk",
+  "groups": {
+    "full": {
+      "beforeMeshes": 249,
+      "afterMeshes": 249,
+      "sameNames": true,
+      "readableBefore": 249,
+      "readableAfter": 249,
+      "identicalPlayerGeometry": 249,
+      "packedVertexAndIndexBytes": 27864720
+    },
+    "LOD1": {
+      "beforeMeshes": 249,
+      "afterMeshes": 249,
+      "sameNames": true,
+      "readableBefore": 249,
+      "readableAfter": 0,
+      "identicalPlayerGeometry": 249,
+      "packedVertexAndIndexBytes": 15271842
+    },
+    "LOD2": {
+      "beforeMeshes": 249,
+      "afterMeshes": 249,
+      "sameNames": true,
+      "readableBefore": 249,
+      "readableAfter": 0,
+      "identicalPlayerGeometry": 249,
+      "packedVertexAndIndexBytes": 8550474
+    }
+  },
+  "bakedVolumesMatchBefore": 249,
+  "bakedVolumeMismatches": [],
+  "passed": true
+}

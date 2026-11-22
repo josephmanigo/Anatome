@@ -1,0 +1,235 @@
+{
+  "unity": "6000.3.19f1",
+  "shader": "Universal Render Pipeline/Lit",
+  "pass": "ForwardLit",
+  "configured": [
+    "OpenGLES3"
+  ],
+  "checks": [
+    {
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "LIGHTMAP_ON",
+        "DIRLIGHTMAP_COMBINED",
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "LIGHTMAP_ON",
+        "DIRLIGHTMAP_COMBINED",
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "_SURFACE_TYPE_TRANSPARENT",
+        "_ALPHAPREMULTIPLY_ON",
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "_SURFACE_TYPE_TRANSPARENT",
+        "_ALPHAPREMULTIPLY_ON",
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "_EMISSION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "_EMISSION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "LIGHTMAP_ON",
+        "DIRLIGHTMAP_COMBINED",
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "LIGHTMAP_ON",
+        "DIRLIGHTMAP_COMBINED",
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_MULTIVIEW_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A",
+        "_REFLECTION_PROBE_BOX_PROJECTION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "_SURFACE_TYPE_TRANSPARENT",
+        "_ALPHAPREMULTIPLY_ON",
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "_SURFACE_TYPE_TRANSPARENT",
+        "_ALPHAPREMULTIPLY_ON",
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "_EMISSION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "_EMISSION",
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_REFLECTION_PROBE_BOX_PROJECTION"
+      ],
+      "success": true,
+      "diagnostics": ""
+    }
+  ],
+  "failures": 0
+}

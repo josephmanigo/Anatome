@@ -1,0 +1,603 @@
+{
+  "kind": "Offline typesetting proof and horizontal word-wrap audit",
+  "runtimeStatus": "Unity/TextMeshPro renderer, actual high-contrast shader, world-space projection and physical headset readability are pending.",
+  "copySource": "Instantiated MuseumCollection and MuseumEntry from the current MuseumCollection.cs against the native catalog.",
+  "font": "Source Sans 3 Regular. Widths use the shipped TMP asset's glyph advances, kerning pairs and 7% synthesized-bold tracking. The PNG draws the shipped OTF outlines with FreeType. Rasterized bold, plate bevels and panel edges are approximations.",
+  "wrapping": "Greedy wrapping at spaces. Hyphenated terms remain whole. Measures include trailing bold tracking. TMP line-breaking may choose different breaks. Heights use face ascender, descender and line advance plus 3% line spacing.",
+  "meaningOfFit": "Every original title and description reconstructs from its measured lines; no line advances beyond the width available to it. This does not test glyph culling, scrolling, occlusion, contrast after color grading or stereo sightlines.",
+  "sources": {
+    "unity/ThoraxLab/Assets/ThoraxLab/anatomy-catalog.json": "b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141",
+    "unity/ThoraxLab/Assets/ThoraxLab/Learning/Core/MuseumCollection.cs": "641e78498286e8f62f78902d0c4af25877ce64ddcbab60ebbc7555b072361bbf",
+    "unity/ThoraxLab/Assets/ThoraxLab/Resources/Fonts/SourceSans3-Regular.otf": "08df266400933d3178d081a45f94a08814c3e55b4b7dd2e0ff69cb1329f13ab6",
+    "unity/ThoraxLab/Assets/ThoraxLab/Resources/Fonts/SourceSans3-SDF.asset": "c57e5edafb4c29796a05b819bd6d6afca4129b82f86d6a87ceb4cfed6286bf1f",
+    "unity/ThoraxLab/Assets/ThoraxLab/Learning/MuseumExhibit.cs": "cfe67882c4840de341f2f2d5be66f66356b134a228a8c74e35039404ba1efd70",
+    "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.Museum.cs": "d39da3ba72973d8e2e9e816af9212156cfbc53ad24b57af9c6a8dc2cfe4adcd1",
+    "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabWidgets.cs": "b1f2f9aeeb626dceaf4fbd921de8a9f9a838e8a06c282c478046390018ac695a",
+    "unity/ThoraxLab/Assets/ThoraxLab/Learning/LabUI.cs": "f7e61bf65a1faa2148a0932fd78c24d0fe0d3daf8c47dcb039614a56e48705a7"
+  },
+  "counts": {
+    "catalogEntries": 249,
+    "galleries": 8,
+    "referenceAnnotations": 6,
+    "uniqueCatalogCharacters": 54,
+    "shippedGlyphCharactersMissing": 0,
+    "worldPlaqueLayouts": 1992,
+    "readingPanelLayouts": 996,
+    "totalLayouts": 2988,
+    "totalTitleDescriptionFields": 5976,
+    "widthOverflows": 0
+  },
+  "sizes": [
+    0.85,
+    1.0,
+    1.15,
+    1.5
+  ],
+  "layoutUnits": "Unity canvas units. World plaque width is 670–760 units (0.724–0.821 m at local scale 0.00108). The console reading panel is 612 units wide with 568 available for copy.",
+  "sharedWorldGeometry": {
+    "padding": 22,
+    "stackSpacing": 9,
+    "dividerHeight": 3,
+    "selectedCheckAt100Percent": 38,
+    "selectedCheckGap": 12
+  },
+  "palette": {
+    "unselectedFace": [
+      245,
+      235,
+      209
+    ],
+    "unselectedTitle": [
+      19,
+      48,
+      43
+    ],
+    "unselectedBody": [
+      36,
+      54,
+      48
+    ],
+    "selectedFace": [
+      19,
+      48,
+      43
+    ],
+    "selectedTitle": [
+      245,
+      235,
+      209
+    ],
+    "selectedBody": [
+      242,
+      247,
+      250
+    ],
+    "ruleAndCheck": [
+      207,
+      176,
+      122
+    ],
+    "highContrastFace": [
+      0,
+      0,
+      0
+    ],
+    "highContrastText": [
+      255,
+      255,
+      255
+    ]
+  },
+  "examples": {
+    "lungId": "MAL_LUL",
+    "unselectedAt115Percent": {
+      "surfaceWidth": 697.0,
+      "estimatedHeight": 377.446,
+      "title": {
+        "size": 48.3,
+        "availableWidth": 653.0,
+        "lines": [
+          "superior lobe of left lung"
+        ]
+      },
+      "description": {
+        "size": 36.8,
+        "availableWidth": 653.0,
+        "lines": [
+          "CT lobe from the Mauritanian Anatomy",
+          "Laboratory. Three lobes form the right",
+          "lung and two form the left. The lab's",
+          "airways and vessels come from a different",
+          "donor."
+        ]
+      }
+    },
+    "selectedAt115Percent": {
+      "surfaceWidth": 697.0,
+      "estimatedHeight": 377.446,
+      "title": {
+        "size": 48.3,
+        "availableWidth": 597.3,
+        "lines": [
+          "superior lobe of left lung"
+        ]
+      },
+      "description": {
+        "size": 36.8,
+        "availableWidth": 653.0,
+        "lines": [
+          "CT lobe from the Mauritanian Anatomy",
+          "Laboratory. Three lobes form the right",
+          "lung and two form the left. The lab's",
+          "airways and vessels come from a different",
+          "donor."
+        ]
+      }
+    },
+    "readingPanelAt115Percent": {
+      "surfaceWidth": 612,
+      "estimatedHeight": 317.725,
+      "title": {
+        "size": 41.4,
+        "availableWidth": 568,
+        "lines": [
+          "superior lobe of left lung"
+        ]
+      },
+      "description": {
+        "size": 29.9,
+        "availableWidth": 568,
+        "lines": [
+          "CT lobe from the Mauritanian Anatomy",
+          "Laboratory. Three lobes form the right lung",
+          "and two form the left. The lab's airways and",
+          "vessels come from a different donor."
+        ]
+      }
+    },
+    "longestNameId": "FMA7265",
+    "longestNameCharacters": 64,
+    "highContrastAt150Percent": {
+      "surfaceWidth": 760,
+      "estimatedHeight": 663.734,
+      "title": {
+        "size": 63.0,
+        "availableWidth": 647.0,
+        "lines": [
+          "anterolateral head of",
+          "lateral papillary",
+          "muscle of left",
+          "ventricle"
+        ]
+      },
+      "description": {
+        "size": 48.0,
+        "availableWidth": 716,
+        "lines": [
+          "Muscle inside a ventricle that",
+          "tensions the chordae tendineae. It",
+          "helps keep valve leaflets from",
+          "prolapsing during contraction."
+        ]
+      }
+    }
+  },
+  "states": [
+    {
+      "surface": "world plaque",
+      "textScale": 0.85,
+      "selected": false,
+      "entries": 249,
+      "surfaceWidth": 670,
+      "longestWrappedLine": {
+        "title": {
+          "used": 619.128,
+          "available": 626,
+          "exampleId": "FMA13507"
+        },
+        "body": {
+          "used": 625.53,
+          "available": 626,
+          "exampleId": "FMA10951"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 2,
+          "exampleId": "FMA4112"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 270.58,
+        "exampleId": "FMA7260"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 0.85,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 670,
+      "longestWrappedLine": {
+        "title": {
+          "used": 580.083,
+          "available": 581.7,
+          "exampleId": "FMA31744"
+        },
+        "body": {
+          "used": 625.53,
+          "available": 626,
+          "exampleId": "FMA10951"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 2,
+          "exampleId": "FMA7252"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 270.58,
+        "exampleId": "FMA7260"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "reading panel",
+      "textScale": 0.85,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 612,
+      "longestWrappedLine": {
+        "title": {
+          "used": 567.377,
+          "available": 568,
+          "exampleId": "FMA13504"
+        },
+        "body": {
+          "used": 567.129,
+          "available": 568,
+          "exampleId": "FMA7260"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 2,
+          "exampleId": "FMA4112"
+        },
+        "body": {
+          "lines": 3,
+          "exampleId": "FMA9531"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 264.11,
+        "exampleId": "FMA7260"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.0,
+      "selected": false,
+      "entries": 249,
+      "surfaceWidth": 670,
+      "longestWrappedLine": {
+        "title": {
+          "used": 617.654,
+          "available": 626,
+          "exampleId": "FMA66242"
+        },
+        "body": {
+          "used": 625.091,
+          "available": 626,
+          "exampleId": "REC_Left_Vagus_nerve"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "REC_Pericardium"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 363.81,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.0,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 670,
+      "longestWrappedLine": {
+        "title": {
+          "used": 575.835,
+          "available": 576.0,
+          "exampleId": "FMA7250"
+        },
+        "body": {
+          "used": 625.091,
+          "available": 626,
+          "exampleId": "REC_Left_Vagus_nerve"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "REC_Pericardium"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 363.81,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "reading panel",
+      "textScale": 1.0,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 612,
+      "longestWrappedLine": {
+        "title": {
+          "used": 566.509,
+          "available": 568,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "used": 566.188,
+          "available": 568,
+          "exampleId": "FMA49913"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 2,
+          "exampleId": "FMA7254"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 298.71,
+        "exampleId": "FMA7260"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.15,
+      "selected": false,
+      "entries": 249,
+      "surfaceWidth": 697.0,
+      "longestWrappedLine": {
+        "title": {
+          "used": 649.36,
+          "available": 653.0,
+          "exampleId": "FMA7260"
+        },
+        "body": {
+          "used": 649.47,
+          "available": 653.0,
+          "exampleId": "FMA7394"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 5,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 458.53,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.15,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 697.0,
+      "longestWrappedLine": {
+        "title": {
+          "used": 595.436,
+          "available": 597.3,
+          "exampleId": "FMA8070"
+        },
+        "body": {
+          "used": 649.47,
+          "available": 653.0,
+          "exampleId": "FMA7394"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 5,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 458.53,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "reading panel",
+      "textScale": 1.15,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 612,
+      "longestWrappedLine": {
+        "title": {
+          "used": 567.608,
+          "available": 568,
+          "exampleId": "FMA7250"
+        },
+        "body": {
+          "used": 566.894,
+          "available": 568,
+          "exampleId": "FMA9991"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 4,
+          "exampleId": "FMA5011"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 389.46,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.5,
+      "selected": false,
+      "entries": 249,
+      "surfaceWidth": 760,
+      "longestWrappedLine": {
+        "title": {
+          "used": 715.993,
+          "available": 716,
+          "exampleId": "FMA31744"
+        },
+        "body": {
+          "used": 714.107,
+          "available": 716,
+          "exampleId": "FMA9762"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 3,
+          "exampleId": "FMA7260"
+        },
+        "body": {
+          "lines": 6,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 623.05,
+        "exampleId": "MAL_LLL"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "world plaque",
+      "textScale": 1.5,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 760,
+      "longestWrappedLine": {
+        "title": {
+          "used": 644.794,
+          "available": 647.0,
+          "exampleId": "FMA13505"
+        },
+        "body": {
+          "used": 714.107,
+          "available": 716,
+          "exampleId": "FMA9762"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 4,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 6,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 663.73,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    },
+    {
+      "surface": "reading panel",
+      "textScale": 1.5,
+      "selected": true,
+      "entries": 249,
+      "surfaceWidth": 612,
+      "longestWrappedLine": {
+        "title": {
+          "used": 566.858,
+          "available": 568,
+          "exampleId": "FMA45874"
+        },
+        "body": {
+          "used": 566.543,
+          "available": 568,
+          "exampleId": "FMA7396"
+        }
+      },
+      "mostLines": {
+        "title": {
+          "lines": 4,
+          "exampleId": "FMA7265"
+        },
+        "body": {
+          "lines": 6,
+          "exampleId": "MAL_LLL"
+        }
+      },
+      "tallestEstimatedLayout": {
+        "height": 613.4,
+        "exampleId": "FMA7265"
+      },
+      "horizontalFailures": []
+    }
+  ],
+  "image": {
+    "file": "museum-typography-proof.png",
+    "sizePixels": [
+      1578,
+      1504
+    ],
+    "sha256": "a396385ab15b4bacae54364936032088eb9fc2e3327f109311c4dfebd2bf6357"
+  }
+}

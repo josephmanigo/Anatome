@@ -1,0 +1,46 @@
+{
+    "utc": "2026-11-21T01:32:08.1710088Z",
+    "appearanceVersion": "vr-tissue-appearance-2026.11.21.5",
+    "views": [
+        {
+            "id": "FMA7163",
+            "source": "source_mesh_with_authored_wall",
+            "surfaceShader": "ThoraxLab/Organ Surface",
+            "cutShader": "ThoraxLab/Organ Surface",
+            "sourceTriangles": 8000,
+            "exposedTriangles": 60
+        },
+        {
+            "id": "REC_fat",
+            "source": "authored_reconstruction",
+            "surfaceShader": "ThoraxLab/Organ Surface",
+            "cutShader": "ThoraxLab/Organ Surface",
+            "sourceTriangles": 4000,
+            "exposedTriangles": 58
+        },
+        {
+            "id": "REC_fascia",
+            "source": "authored_reconstruction",
+            "surfaceShader": "ThoraxLab/Organ Surface",
+            "cutShader": "ThoraxLab/Organ Surface",
+            "sourceTriangles": 4000,
+            "exposedTriangles": 40
+        },
+        {
+            "id": "FMA79979",
+            "source": "source_mesh",
+            "surfaceShader": "ThoraxLab/Organ Surface",
+            "cutShader": "ThoraxLab/Organ Surface",
+            "sourceTriangles": 3998,
+            "exposedTriangles": 101
+        },
+        {
+            "id": "case-insert",
+            "source": "Virtual training insert",
+            "surfaceShader": "Universal Render Pipeline/Lit",
+            "cutShader": "Universal Render Pipeline/Lit",
+            "sourceTriangles": 340,
+            "exposedTriangles": 204
+        }
+    ]
+}

@@ -1,0 +1,2939 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-11-20T15:25:40.5905824Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "museum/voice",
+            "detail": "Entering the gallery automatically starts its spoken controls.",
+            "passed": true
+        },
+        {
+            "id": "museum/entry",
+            "detail": "The museum opens from guest access without orientation, assessment or dissection permissions.",
+            "passed": true
+        },
+        {
+            "id": "museum/collection",
+            "detail": "All 249 catalog entries, including reference annotations, belong to one of eight galleries.",
+            "passed": true
+        },
+        {
+            "id": "museum/space",
+            "detail": "The learner enters a separate gallery with a real floor for walking and teleportation.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7253",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7253",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7254",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7254",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7252",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7252",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9531",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9531",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9457",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9457",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA5011",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA5011",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/1",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4838",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4838",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4944",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4944",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9465",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9465",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9466",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9466",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA11359",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA11359",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9291",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9291",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/2",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REGION_InteratrialSeptum",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REGION_InteratrialSeptum",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REGION_InterventricularSeptum",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REGION_InterventricularSeptum",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4706",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4706",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4707",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4707",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA50040",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA50040",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4712",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4712",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/3",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA50039",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA50039",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA3768",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA3768",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA3736",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA3736",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA3932",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA3932",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA87217",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA87217",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10951",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10951",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/4",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4761",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4761",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4694",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4694",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4751",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4751",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA3953",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA3953",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4720",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4720",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC1_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC1_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/5",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC10_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC10_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC11_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC11_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC2_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC2_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC3_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC3_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC4_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC4_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC5_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC5_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/6",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC6_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC6_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC7_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC7_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC8_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC8_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC9_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC9_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC1_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC1_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC10_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC10_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/7",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC11_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC11_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC2_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC2_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC3_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC3_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC4_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC4_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC5_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC5_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC6_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC6_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/8",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC7_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC7_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC8_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC8_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC9_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC9_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC1_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC1_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC10_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC10_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC11_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC11_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/9",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC2_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC2_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC3_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC3_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC4_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC4_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC5_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC5_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC6_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC6_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC7_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC7_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/10",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC8_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC8_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC9_Artery",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC9_Artery",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC1_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC1_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC10_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC10_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC11_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC11_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC2_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC2_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/11",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC3_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC3_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC4_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC4_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC5_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC5_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC6_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC6_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC7_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC7_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC8_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC8_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/12",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC9_Vein",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC9_Vein",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA66243",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA66243",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4068",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4068",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4112",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4112",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4797",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4797",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA66242",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA66242",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/13",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA3969",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA3969",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4758",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4758",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA5041",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA5041",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA4877",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA4877",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7242",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7242",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7243",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7243",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/14",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7260",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7260",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7265",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7265",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7264",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7264",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7261",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7261",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7262",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7262",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Pericardium",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Pericardium",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/15",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7247",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7247",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7250",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7250",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7249",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7249",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA49913",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA49913",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA50873",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA50873",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA49916",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA49916",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/16",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8612",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8612",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA49911",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA49911",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA50872",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA50872",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA49914",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA49914",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7238",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7238",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7239",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7239",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Cardiovascular/17",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7240",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7240",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13884",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13884",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Digestive/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7131",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7131",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Integumentary/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_fascia",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_fascia",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_fat",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_fat",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7163",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7163",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Lymphatic/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_ThoracicDuct",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_ThoracicDuct",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Muscular/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13295",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13295",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9756",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9756",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9758",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9758",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9757",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9757",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9762",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9762",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9761",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9761",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Muscular/1",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA45875",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA45875",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA45874",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA45874",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA34691",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA34691",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA34690",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA34690",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA79980",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA79980",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA79979",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA79979",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Muscular/2",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13376",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13376",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13375",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13375",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13399",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13399",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13398",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13398",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Nervous/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC1_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC1_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC10_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC10_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC11_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC11_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC2_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC2_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC3_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC3_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC4_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC4_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Nervous/1",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC5_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC5_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC6_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC6_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC7_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC7_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC8_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC8_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_IC9_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_IC9_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC1_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC1_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Nervous/2",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC10_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC10_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC11_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC11_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC2_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC2_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC3_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC3_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC4_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC4_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC5_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC5_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Nervous/3",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC6_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC6_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC7_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC7_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC8_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC8_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_IC9_Nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_IC9_Nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_Phrenic_nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_Phrenic_nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_Phrenic_nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_Phrenic_nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Nervous/4",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_Sympathetic_trunk",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_Sympathetic_trunk",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_Sympathetic_trunk",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_Sympathetic_trunk",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_Vagus_nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_Vagus_nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_Vagus_nerve",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_Vagus_nerve",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Respiratory/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA31748",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA31748",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA31747",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA31747",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA31741",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA31741",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA31746",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA31746",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA31744",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA31744",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/MAL_LLL",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/MAL_LLL",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Respiratory/1",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/MAL_RLL",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/MAL_RLL",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/MAL_RML",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/MAL_RML",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/MAL_LUL",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/MAL_LUL",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/MAL_RUL",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/MAL_RUL",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7396",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7396",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA68418",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA68418",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Respiratory/2",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_Parietal_Pleura",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_Parietal_Pleura",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Left_Visceral_Pleura",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Left_Visceral_Pleura",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_Parietal_Pleura",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_Parietal_Pleura",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_Right_Visceral_Pleura",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_Right_Visceral_Pleura",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA12224",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA12224",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7394",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7394",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/0",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_left_costal_cartilage_10",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_left_costal_cartilage_10",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_left_costal_cartilage_11",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_left_costal_cartilage_11",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_left_costal_cartilage_12",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_left_costal_cartilage_12",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_left_costal_cartilage_8",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_left_costal_cartilage_8",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_left_costal_cartilage_9",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_left_costal_cartilage_9",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8112",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8112",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/1",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8005",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8005",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8167",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8167",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8031",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8031",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8275",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8275",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8221",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8221",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8058",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8058",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/2",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_right_costal_cartilage_10",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_right_costal_cartilage_10",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_right_costal_cartilage_11",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_right_costal_cartilage_11",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_right_costal_cartilage_12",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_right_costal_cartilage_12",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_right_costal_cartilage_8",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_right_costal_cartilage_8",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/REC_right_costal_cartilage_9",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/REC_right_costal_cartilage_9",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8070",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8070",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/3",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7875",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7875",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7976",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7976",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7886",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7886",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8248",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8248",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8194",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8194",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7913",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7913",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/4",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8310",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8310",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8532",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8532",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8093",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8093",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7987",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7987",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8148",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8148",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8391",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8391",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/5",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8012",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8012",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8256",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8256",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8202",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8202",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8472",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8472",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8039",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8039",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8534",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8534",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/6",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8283",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8283",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8531",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8531",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8066",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8066",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7857",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7857",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7957",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7957",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8364",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8364",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/7",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7882",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7882",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8229",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8229",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8175",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8175",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8445",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8445",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7909",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7909",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA8533",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA8533",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/8",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13323",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13323",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13396",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13396",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13322",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13322",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13395",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13395",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7487",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7487",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7486",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7486",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/9",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA7488",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA7488",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13505",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13505",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13508",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13508",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13502",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13502",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10458",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10458",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13501",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13501",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/10",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13506",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13506",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13495",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13495",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13504",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13504",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13503",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13503",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13507",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13507",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA13500",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA13500",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/11",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9991",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9991",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10059",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10059",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9922",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9922",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9165",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9165",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9248",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9248",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10014",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10014",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/display/Skeletal/12",
+            "detail": "Each display groups at most six separate models from the selected body system.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9187",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9187",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9968",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9968",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9945",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9945",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10037",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10037",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA9209",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA9209",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/label/FMA10081",
+            "detail": "Each physical exhibit has its structure name and brief description, without an ID in its label.",
+            "passed": true
+        },
+        {
+            "id": "museum/model/FMA10081",
+            "detail": "The museum uses the catalog geometry in an independent grabbable display, never an assessment target.",
+            "passed": true
+        },
+        {
+            "id": "museum/reachable",
+            "detail": "Every catalog model is reachable through gallery pagination.",
+            "passed": true
+        },
+        {
+            "id": "museum/select",
+            "detail": "The normal controller trigger selects the museum exhibit.",
+            "passed": true
+        },
+        {
+            "id": "museum/grab",
+            "detail": "Normal XRI grip picks up a museum model.",
+            "passed": true
+        },
+        {
+            "id": "museum/lift",
+            "detail": "The held exhibit follows the tracked controller.",
+            "passed": true
+        },
+        {
+            "id": "museum/release",
+            "detail": "Releasing grip returns the model to its stand.",
+            "passed": true
+        },
+        {
+            "id": "museum/zoom",
+            "detail": "Zoom focuses on the selected exhibit while its real collider stays available in the gallery.",
+            "passed": true
+        },
+        {
+            "id": "museum/zoom_grip",
+            "detail": "The exhibit can be picked up in the enlarged gallery.",
+            "passed": true
+        },
+        {
+            "id": "museum/zoom_return",
+            "detail": "Closing inspection restores the same museum display and selection.",
+            "passed": true
+        },
+        {
+            "id": "museum/pause",
+            "detail": "Menu pauses gallery interaction without leaving the museum.",
+            "passed": true
+        },
+        {
+            "id": "museum/resume",
+            "detail": "The menu shortcut returns to the museum workspace.",
+            "passed": true
+        },
+        {
+            "id": "museum/no_source_mutation",
+            "detail": "Museum movement, gripping and zoom do not change the source specimen.",
+            "passed": true
+        },
+        {
+            "id": "museum/no_credit",
+            "detail": "Museum exploration cannot add assessment actions, unlock levels or activate cutting tools.",
+            "passed": true
+        },
+        {
+            "id": "museum/exit",
+            "detail": "Leaving removes the gallery and restores the saved lab position and heading.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)"
+    ]
+}

@@ -1,0 +1,74 @@
+{
+  "before": "vr-tissue-appearance-2026.11.21.3",
+  "after": "vr-tissue-appearance-2026.11.21.5",
+  "geometry": {
+    "FMA7163": [
+      8000,
+      60
+    ],
+    "REC_fat": [
+      4000,
+      58
+    ],
+    "REC_fascia": [
+      4000,
+      40
+    ],
+    "FMA79979": [
+      3998,
+      101
+    ],
+    "case-insert": [
+      340,
+      204
+    ]
+  },
+  "meanAbsoluteChannelChange_0_255": {
+    "case-insert.png": [
+      2.12,
+      1.922,
+      1.682
+    ],
+    "FMA7163-cut.png": [
+      2.192,
+      2.872,
+      3.336
+    ],
+    "FMA7163.png": [
+      4.925,
+      5.439,
+      5.35
+    ],
+    "FMA79979-cut.png": [
+      3.239,
+      2.697,
+      2.145
+    ],
+    "FMA79979.png": [
+      4.786,
+      4.586,
+      3.569
+    ],
+    "REC_fascia-cut.png": [
+      0.084,
+      0.086,
+      0.103
+    ],
+    "REC_fascia.png": [
+      2.106,
+      1.652,
+      2.639
+    ],
+    "REC_fat-cut.png": [
+      1.012,
+      1.177,
+      1.579
+    ],
+    "REC_fat.png": [
+      3.96,
+      3.806,
+      5.759
+    ]
+  },
+  "isolatedOpeningMatchesNoShadowControl": true
+}

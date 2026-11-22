@@ -1,0 +1,127 @@
+{
+  "unity": "6000.3.19f1",
+  "catalog": 249,
+  "tissue": 243,
+  "annotations": 6,
+  "organSurfaceCount": 117,
+  "profiles": [
+    {
+      "profile": "airway",
+      "structures": 9,
+      "outer": "VR presentation Tissue_airway",
+      "inner": "VR presentation Interior_airway",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.44,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "artery",
+      "structures": 39,
+      "outer": "VR presentation Tissue_artery",
+      "inner": "VR presentation Interior_artery",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.51,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "cardiac",
+      "structures": 8,
+      "outer": "VR presentation Tissue_cardiac",
+      "inner": "VR presentation Interior_cardiac",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.53,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "esophagus",
+      "structures": 1,
+      "outer": "VR presentation Tissue_esophagus",
+      "inner": "VR presentation Interior_esophagus",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.44,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "lung",
+      "structures": 5,
+      "outer": "VR presentation Tissue_lung",
+      "inner": "VR presentation Interior_lung",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.61,
+      "innerSmoothness": 0.32,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "membrane",
+      "structures": 5,
+      "outer": "VR presentation Tissue_membrane",
+      "inner": "VR presentation Interior_membrane",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.62,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "valve",
+      "structures": 11,
+      "outer": "VR presentation Tissue_valve",
+      "inner": "VR presentation Interior_valve",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.54,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    },
+    {
+      "profile": "vein",
+      "structures": 39,
+      "outer": "VR presentation Tissue_vein",
+      "inner": "VR presentation Interior_vein",
+      "shader": "ThoraxLab/Organ Surface",
+      "outerSmoothness": 0.54,
+      "innerSmoothness": 0.43,
+      "innerTiling": 2.5,
+      "allMatch": true,
+      "lodRenderersMatch": true
+    }
+  ],
+  "valves": [
+    {
+      "group": "tricuspid_valve",
+      "count": 3
+    },
+    {
+      "group": "pulmonary_valve",
+      "count": 3
+    },
+    {
+      "group": "mitral_valve",
+      "count": 2
+    },
+    {
+      "group": "aortic_valve",
+      "count": 3
+    }
+  ],
+  "actualCutUndoRestoredSourceMesh": true,
+  "fullResetRestoredOrganMaterials": true,
+  "shaderSupported": true,
+  "runtimeQaBypass": false
+}

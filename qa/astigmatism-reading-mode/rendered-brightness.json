@@ -1,0 +1,98 @@
+{
+  "width": 1440,
+  "height": 1000,
+  "source": "Fixed Unity simulator camera, 100% versus 65% reading brightness, motion vignette off",
+  "measurement": "Median dim/full ratio of linearized sRGB luminance for pixels above 0.025 baseline luminance, sampled on a 10 px grid per region.",
+  "regions": [
+    {
+      "row": 1,
+      "column": 1,
+      "samples": 1395,
+      "medianRelativeLuminance": 0.6528,
+      "passed": true
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "samples": 1287,
+      "medianRelativeLuminance": 0.652,
+      "passed": true
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "samples": 1395,
+      "medianRelativeLuminance": 0.6521,
+      "passed": true
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "samples": 1214,
+      "medianRelativeLuminance": 0.6518,
+      "passed": true
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "samples": 565,
+      "medianRelativeLuminance": 0.6514,
+      "passed": true
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "samples": 1393,
+      "medianRelativeLuminance": 0.6519,
+      "passed": true
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "samples": 1389,
+      "medianRelativeLuminance": 0.6516,
+      "passed": true
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "samples": 1263,
+      "medianRelativeLuminance": 0.6519,
+      "passed": true
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "samples": 1391,
+      "medianRelativeLuminance": 0.6517,
+      "passed": true
+    }
+  ],
+  "brightTargets": [
+    {
+      "target": "ceiling light",
+      "baselineToDimPixelBox": [
+        1300,
+        94,
+        1380,
+        116
+      ],
+      "samples": 492,
+      "medianRelativeLuminance": 0.6522,
+      "passed": true
+    },
+    {
+      "target": "Apply button",
+      "baselineToDimPixelBox": [
+        637,
+        651,
+        684,
+        672
+      ],
+      "samples": 264,
+      "medianRelativeLuminance": 0.6498,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,1374 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-11-20T15:24:55.9082431Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "voice/welcome",
+            "detail": "The first tracked sign-in screen starts its spoken welcome.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "voice/orientation_select",
+            "detail": "Orientation speaks the selection instruction.",
+            "passed": true
+        },
+        {
+            "id": "voice/orientation_lift",
+            "detail": "Selecting the skin starts the spoken lift instruction.",
+            "passed": true
+        },
+        {
+            "id": "voice/output",
+            "detail": "The narration source produces non-silent output with an active listener.",
+            "passed": true
+        },
+        {
+            "id": "voice/briefing",
+            "detail": "Starting guided practice speaks its briefing.",
+            "passed": true
+        },
+        {
+            "id": "voice/first_step",
+            "detail": "The first objective follows the briefing without a button press.",
+            "passed": true
+        },
+        {
+            "id": "inspection/open/IdentifyEnumerate",
+            "detail": "A keeps the same activity workspace, tools and voice active.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_in/IdentifyEnumerate",
+            "detail": "Both the tracked eyes and the working hand use the enlarged view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_out/IdentifyEnumerate",
+            "detail": "Pulling the stick down shrinks the view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/panel_scroll/IdentifyEnumerate",
+            "detail": "Scrolling the workspace cannot also zoom the model.",
+            "passed": true
+        },
+        {
+            "id": "inspection/reset/IdentifyEnumerate",
+            "detail": "Reset restores the normal view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/live_target/IdentifyEnumerate",
+            "detail": "Actual visible anatomy and colliders retain the original pose and metric scale.",
+            "passed": true
+        },
+        {
+            "id": "inspection/no_credit/IdentifyEnumerate",
+            "detail": "Changing zoom alone cannot score an action.",
+            "passed": true
+        },
+        {
+            "id": "inspection/exposed/IdentifyEnumerate",
+            "detail": "A real surface of the current target is reachable.",
+            "passed": true
+        },
+        {
+            "id": "inspection/score/IdentifyEnumerate",
+            "detail": "The controller trigger completes the current objective while zoomed. manubrium examined.",
+            "passed": true
+        },
+        {
+            "id": "voice/next_step/IdentifyEnumerate",
+            "detail": "The next spoken instruction starts while zoom remains open.",
+            "passed": true
+        },
+        {
+            "id": "inspection/return/IdentifyEnumerate",
+            "detail": "Closing zoom restores normal tracking while keeping the same workspace.",
+            "passed": true
+        },
+        {
+            "id": "inspection/held_button/IdentifyEnumerate",
+            "detail": "Holding A after returning cannot reopen zoom.",
+            "passed": true
+        },
+        {
+            "id": "inspection/open/AssembleAnatomy",
+            "detail": "A keeps the same activity workspace, tools and voice active.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_in/AssembleAnatomy",
+            "detail": "Both the tracked eyes and the working hand use the enlarged view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_out/AssembleAnatomy",
+            "detail": "Pulling the stick down shrinks the view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/panel_scroll/AssembleAnatomy",
+            "detail": "Scrolling the workspace cannot also zoom the model.",
+            "passed": true
+        },
+        {
+            "id": "inspection/reset/AssembleAnatomy",
+            "detail": "Reset restores the normal view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/live_target/AssembleAnatomy",
+            "detail": "Actual visible anatomy and colliders retain the original pose and metric scale.",
+            "passed": true
+        },
+        {
+            "id": "inspection/no_credit/AssembleAnatomy",
+            "detail": "Changing zoom alone cannot score an action.",
+            "passed": true
+        },
+        {
+            "id": "inspection/return/AssembleAnatomy",
+            "detail": "Closing zoom restores normal tracking while keeping the same workspace.",
+            "passed": true
+        },
+        {
+            "id": "inspection/held_button/AssembleAnatomy",
+            "detail": "Holding A after returning cannot reopen zoom.",
+            "passed": true
+        },
+        {
+            "id": "inspection/open/GuidedDissection",
+            "detail": "A keeps the same activity workspace, tools and voice active.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_in/GuidedDissection",
+            "detail": "Both the tracked eyes and the working hand use the enlarged view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_out/GuidedDissection",
+            "detail": "Pulling the stick down shrinks the view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/panel_scroll/GuidedDissection",
+            "detail": "Scrolling the workspace cannot also zoom the model.",
+            "passed": true
+        },
+        {
+            "id": "inspection/reset/GuidedDissection",
+            "detail": "Reset restores the normal view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/live_target/GuidedDissection",
+            "detail": "Actual visible anatomy and colliders retain the original pose and metric scale.",
+            "passed": true
+        },
+        {
+            "id": "inspection/no_credit/GuidedDissection",
+            "detail": "Changing zoom alone cannot score an action.",
+            "passed": true
+        },
+        {
+            "id": "inspection/return/GuidedDissection",
+            "detail": "Closing zoom restores normal tracking while keeping the same workspace.",
+            "passed": true
+        },
+        {
+            "id": "inspection/held_button/GuidedDissection",
+            "detail": "Holding A after returning cannot reopen zoom.",
+            "passed": true
+        },
+        {
+            "id": "inspection/open/AnatomyCases",
+            "detail": "A keeps the same activity workspace, tools and voice active.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_in/AnatomyCases",
+            "detail": "Both the tracked eyes and the working hand use the enlarged view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_out/AnatomyCases",
+            "detail": "Pulling the stick down shrinks the view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/panel_scroll/AnatomyCases",
+            "detail": "Scrolling the workspace cannot also zoom the model.",
+            "passed": true
+        },
+        {
+            "id": "inspection/reset/AnatomyCases",
+            "detail": "Reset restores the normal view.",
+            "passed": true
+        },
+        {
+            "id": "inspection/live_target/AnatomyCases",
+            "detail": "Actual visible anatomy and colliders retain the original pose and metric scale.",
+            "passed": true
+        },
+        {
+            "id": "inspection/no_credit/AnatomyCases",
+            "detail": "Changing zoom alone cannot score an action.",
+            "passed": true
+        },
+        {
+            "id": "inspection/exposed/AnatomyCases",
+            "detail": "A real surface of the current target is reachable.",
+            "passed": true
+        },
+        {
+            "id": "inspection/score/AnatomyCases",
+            "detail": "The controller trigger completes the current objective while zoomed. Find the collapsed lung complete.",
+            "passed": true
+        },
+        {
+            "id": "voice/next_step/AnatomyCases",
+            "detail": "The next spoken instruction starts while zoom remains open.",
+            "passed": true
+        },
+        {
+            "id": "inspection/return/AnatomyCases",
+            "detail": "Closing zoom restores normal tracking while keeping the same workspace.",
+            "passed": true
+        },
+        {
+            "id": "inspection/held_button/AnatomyCases",
+            "detail": "Holding A after returning cannot reopen zoom.",
+            "passed": true
+        },
+        {
+            "id": "inspection/left_handed_mapping",
+            "detail": "With left dominant hand, A does not toggle inspection.",
+            "passed": true
+        },
+        {
+            "id": "inspection/x_button",
+            "detail": "X opens inspection with left dominant hand.",
+            "passed": true
+        },
+        {
+            "id": "inspection/tracking_loss",
+            "detail": "Tracking loss closes the preview and restores the activity model.",
+            "passed": true
+        },
+        {
+            "id": "inspection/tracking_recovery",
+            "detail": "A held X after tracking recovery cannot reopen inspection.",
+            "passed": true
+        },
+        {
+            "id": "inspection/menu_cleanup",
+            "detail": "Navigating to Menu also clears the preview.",
+            "passed": true
+        },
+        {
+            "id": "voice/sandbox",
+            "detail": "Free dissection starts with spoken controls.",
+            "passed": true
+        },
+        {
+            "id": "inspection/sandbox",
+            "detail": "The dissection sandbox also offers model enlargement.",
+            "passed": true
+        },
+        {
+            "id": "inspection/orientation_guard",
+            "detail": "Inspection cannot bypass the introductory controls exercise.",
+            "passed": true
+        },
+        {
+            "id": "assembly_piece_is_reachable",
+            "detail": "The real staged Easy part has an exposed surface.",
+            "passed": true
+        },
+        {
+            "id": "assembly_grip_keeps_specimen_reference",
+            "detail": "Real XRI pickup keeps the specimen parent. Target=FMA7486; selected=A_FMA7486; parent unchanged=True; canInteract=True; grip=True; selectActive=True",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_while_holding",
+            "detail": "The thumbstick adjusts zoom mid-grip without dropping or placing the held piece.",
+            "passed": true
+        },
+        {
+            "id": "assembly_allows_deliberate_rotation",
+            "detail": "The orientation-only constraint does not restrict assembly rotation, and the live guide remains available while holding the part.",
+            "passed": true
+        },
+        {
+            "id": "assembly_guide_recognizes_held_alignment",
+            "detail": "The guide recognizes anatomical alignment through actual held-controller movement.",
+            "passed": true
+        },
+        {
+            "id": "assembly_grip_release_places_current_piece",
+            "detail": "The real XRI release places the Easy part and advances to the next piece without errors.",
+            "passed": true
+        },
+        {
+            "id": "inspection/assembly_placement",
+            "detail": "The part was placed at magnification through a real grip and release.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_surface",
+            "detail": "The real skin is reachable on the current side.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_continuous_path",
+            "detail": "The regression stroke stays on one unobstructed skin surface.",
+            "passed": true
+        },
+        {
+            "id": "chest_entry_trigger_starts_in_air",
+            "detail": "Press trigger before bringing the scalpel to skin.",
+            "passed": true
+        },
+        {
+            "id": "held_trigger_enters_skin_and_draws",
+            "detail": "A held trigger must begin a stroke when it first reaches the current tissue; samples=96 notice=",
+            "passed": true
+        },
+        {
+            "id": "wrong_cut_tool_feedback_visible",
+            "detail": "Wrong tool preserves the skin and displays the reason: Select the scalpel for soft tissue.",
+            "passed": true
+        },
+        {
+            "id": "cut_rejection_visible_without_scrolling",
+            "detail": "Cut feedback must fit inside the visible panel after a stroke; bounds=Center: (0.00, -13.28, 0.00), Extents: (306.00, 14.59, 0.00) viewport=(x:-334.00, y:-217.60, width:668.00, height:435.20)",
+            "passed": true
+        },
+        {
+            "id": "inspection/zoom_during_stroke",
+            "detail": "Zoom can change mid-stroke without moving the blade contact on the skin.",
+            "passed": true
+        },
+        {
+            "id": "held_trigger_skin_cut_commits",
+            "detail": "Cut complete · 2 pieces · 1/32 detached pieces.",
+            "passed": true
+        },
+        {
+            "id": "inspection/cut",
+            "detail": "The native cut completes while the enlarged workspace stays interactive.",
+            "passed": true
+        },
+        {
+            "id": "cut_feedback_reaches_learner",
+            "detail": "Chunk separated. Grip the small detached piece, lift it clear and release. Whole layers stay anchored.",
+            "passed": true
+        },
+        {
+            "id": "cut_feedback_matches_chunk_only_grab",
+            "detail": "Chunk separated. Grip the small detached piece, lift it clear and release. Whole layers stay anchored.",
+            "passed": true
+        },
+        {
+            "id": "guide_respects_mute_from_first_sample",
+            "detail": "A newly opened guide applies saved mute and speed before starting playback. Volume=0; pitch=0.8",
+            "passed": true
+        },
+        {
+            "id": "guide_opens_before_sign_in",
+            "detail": "The guide opens before an account or orientation without replacing the page.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/0",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/0/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/0/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/0/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/0/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/0/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/0/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/0/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/0/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/0/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/0/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/0/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/0/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/1",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/1/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/1/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/1/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/1/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/1/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/1/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/1/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/1/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/1/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/1/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/1/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/1/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/1/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/1/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/1/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/2",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/2/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/2/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/2/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/2/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/2/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/2/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/2/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/2/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/2/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/2/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/2/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/2/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/2/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/2/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/2/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/3",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/3/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/3/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/3/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/3/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/3/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/3/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/3/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/3/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/3/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/3/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/3/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/3/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/3/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/3/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/3/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/4",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/4/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/4/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/4/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/4/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/4/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/4/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/4/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/4/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/4/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/4/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/4/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/4/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/4/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/4/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/4/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/5",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/5/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/5/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/5/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/5/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/5/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/5/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/5/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/5/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/5/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/5/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/5/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/5/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/5/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/5/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/5/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/6",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/6/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/6/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/6/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/6/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/6/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/6/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/6/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/6/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/6/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/6/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/6/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/6/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/6/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/6/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/6/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/7",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/7/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/7/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/7/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/7/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/7/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/7/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/7/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/7/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/7/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/7/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/7/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/7/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/7/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/7/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/7/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/8",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/8/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/8/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/8/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/8/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/8/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/8/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/8/Next",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/8/Next",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Next; callbacks=1; frame delay=0; aimed=(-0.14, 1.33, 0.22); current=(-0.14, 1.33, 0.22); ray=(-0.86, -0.28, -0.43)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/8/Next",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/8/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/8/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/8/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/8/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/8/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/8/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_voice/9",
+            "detail": "Bundled female guide clip loads and plays with its visible transcript.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/9/Close guide",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/9/Close guide",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Close guide; callbacks=1; frame delay=0; aimed=(-0.06, 1.93, 0.07); current=(-0.06, 1.93, 0.07); ray=(-0.79, 0.25, -0.56)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/9/Close guide",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/9/Previous",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/9/Previous",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Previous; callbacks=1; frame delay=0; aimed=(0.04, 1.33, -0.06); current=(0.04, 1.33, -0.06); ray=(-0.69, -0.28, -0.67)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/9/Previous",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/9/Pause / resume guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/9/Pause / resume guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Pause / resume guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/9/Pause / resume guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "ui_pose/guide/9/Replay guide voice",
+            "detail": "The focused simulator must apply its queued controller pose before a click is audited.",
+            "passed": true
+        },
+        {
+            "id": "ui_target/guide/9/Replay guide voice",
+            "detail": "Actual controller press activates this rendered button in the same frame. Target=Replay guide voice; callbacks=1; frame delay=0; aimed=(-0.05, 1.44, 0.07); current=(-0.05, 1.44, 0.07); ray=(-0.80, -0.19, -0.57)",
+            "passed": true
+        },
+        {
+            "id": "ui_no_repeat/guide/9/Replay guide voice",
+            "detail": "Cancellation and release cannot repeat an already activated button.",
+            "passed": true
+        },
+        {
+            "id": "guide_last_page_bounds",
+            "detail": "Last page disables Next.",
+            "passed": true
+        },
+        {
+            "id": "guide_audio_pauses_on_focus_loss",
+            "detail": "Guide narration stops while the application loses focus.",
+            "passed": true
+        },
+        {
+            "id": "guide_audio_resumes_after_focus",
+            "detail": "Automatic focus pause resumes only the previously playing clip.",
+            "passed": true
+        },
+        {
+            "id": "guide_manual_pause_survives_focus",
+            "detail": "Focus recovery respects a manual narration pause.",
+            "passed": true
+        },
+        {
+            "id": "guide_replay_restarts_audio",
+            "detail": "Replay starts the guide clip again after a manual pause.",
+            "passed": true
+        },
+        {
+            "id": "guide_closes_to_original_page",
+            "detail": "Close stops guide audio and preserves the original screen.",
+            "passed": true
+        },
+        {
+            "id": "guide_reopens_at_saved_page",
+            "detail": "Reopening retains the guide page.",
+            "passed": true
+        },
+        {
+            "id": "guide_menu_shortcut_closes",
+            "detail": "The controller Menu action closes the guide without replacing the underlying page.",
+            "passed": true
+        },
+        {
+            "id": "guide_pauses_lesson_and_interaction",
+            "detail": "Activity audio and anatomy interaction pause while the guide is open.",
+            "passed": true
+        },
+        {
+            "id": "guide_held_grip_not_replayed",
+            "detail": "A held grip across guide dismissal cannot manipulate anatomy or award progress.",
+            "passed": true
+        },
+        {
+            "id": "guide_preserves_attempt_and_resumes_audio",
+            "detail": "Close returns to the same objective and resumes the interrupted lesson.",
+            "passed": true
+        },
+        {
+            "id": "guide_preserves_manual_audio_pause",
+            "detail": "Opening and closing help does not override the learner's manual pause.",
+            "passed": true
+        },
+        {
+            "id": "guide_does_not_reveal_assessment_answers",
+            "detail": "Generic controls help does not submit actions, award mastery, or start answer narration.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Zoom in + world=(-0.18, 1.40, 0.79); screen=(-41.98, 216.92, 0.72); button rect=(x:-99.33, y:-44.50, width:198.67, height:89.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Zoom in + world=(-0.18, 1.40, 0.80); screen=(158.89, 229.95, 0.83); button rect=(x:-99.33, y:-44.50, width:198.67, height:89.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Zoom in + world=(-0.18, 1.40, 0.79); screen=(158.89, 229.95, 0.83); button rect=(x:-99.33, y:-44.50, width:198.67, height:89.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Zoom in + world=(-0.18, 1.40, 0.80); screen=(158.89, 229.95, 0.83); button rect=(x:-99.33, y:-44.50, width:198.67, height:89.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Guide world=(0.02, 1.90, -0.05); screen=(-675.50, 470.52, 0.43); button rect=(x:-162.00, y:-38.00, width:324.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Next world=(-0.14, 1.33, 0.22); screen=(212.98, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Pause / resume guide voice world=(-0.05, 1.53, 0.07); screen=(158.89, 234.82, 1.09); button rect=(x:-300.00, y:-50.00, width:600.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Replay guide voice world=(-0.05, 1.44, 0.07); screen=(158.89, 204.14, 1.09); button rect=(x:-300.00, y:-50.00, width:600.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Previous world=(0.04, 1.33, -0.06); screen=(108.02, 169.69, 1.09); button rect=(x:-131.00, y:-50.00, width:262.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Close guide world=(-0.06, 1.93, 0.07); screen=(160.50, 361.31, 1.09); button rect=(x:-326.00, y:-50.00, width:652.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Guide world=(0.02, 1.90, -0.05); screen=(115.50, 351.22, 1.10); button rect=(x:-162.00, y:-38.00, width:324.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)",
+        "Aimed Guide world=(0.02, 1.90, -0.05); screen=(115.50, 351.22, 1.10); button rect=(x:-162.00, y:-38.00, width:324.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:321.00, height:531.00)"
+    ]
+}

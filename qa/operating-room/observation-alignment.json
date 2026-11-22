@@ -1,0 +1,197 @@
+{
+  "utc": "2026-11-21T12:48:23.7806756Z",
+  "unity": "6000.3.19f1",
+  "scene": "Assets/ThoraxLab/Scenes/ThoraxLab.unity",
+  "mode": "Unity Editor Play mode",
+  "passed": true,
+  "sourceAndPrefabMeshes": {
+    "mode": "Edit mode before Play-mode static batching",
+    "scene": "Assets/ThoraxLab/Scenes/ThoraxLab.unity",
+    "modelSHA256": "021d198907460ea61450822656227940a2b1a1aeb38cc687da8b58e65a5e80e2",
+    "matched": [
+      "Lab_Glass",
+      "Lab_Stainless",
+      "Lab_Black",
+      "Lab_DarkSteel",
+      "Lab_EquipmentBlue",
+      "Lab_Display",
+      "Lab_MonitorAtlas"
+    ],
+    "passed": true
+  },
+  "comparisonBeforeMove": {
+    "seat": "left",
+    "eyeHeightM": 1.19,
+    "leanTowardWindowCentreM": 0.1,
+    "eyeXM": 7.75,
+    "eyeZM": -1.158,
+    "specimenRays": 170,
+    "blockedByWindowFrame": 129
+  },
+  "lightmaps": 3,
+  "lightProbes": 168,
+  "stations": [
+    {
+      "seat": "left",
+      "seatSurfaceHeightM": 0.540706635,
+      "screenFrontXM": 6.4569993,
+      "eyeXM": 7.35,
+      "eyeZM": -1.258,
+      "eyeHeightM": 1.19,
+      "headPositions": [
+        {
+          "offsetXM": -0.1,
+          "offsetZM": -0.1,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": -0.1,
+          "offsetZM": 0.0,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": -0.1,
+          "offsetZM": 0.1,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": -0.1,
+          "specimenRays": 171,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": 0.0,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": 0.1,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": -0.1,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": 0.0,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": 0.1,
+          "specimenRays": 170,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        }
+      ],
+      "specimenRays": 1531,
+      "blockedAtWindow": 0,
+      "blockedByTheatreEquipment": 0
+    },
+    {
+      "seat": "right",
+      "seatSurfaceHeightM": 0.5407068,
+      "screenFrontXM": 6.4569993,
+      "eyeXM": 7.35,
+      "eyeZM": 0.138,
+      "eyeHeightM": 1.19,
+      "headPositions": [
+        {
+          "offsetXM": -0.1,
+          "offsetZM": -0.1,
+          "specimenRays": 172,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": -0.1,
+          "offsetZM": 0.0,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": -0.1,
+          "offsetZM": 0.1,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": -0.1,
+          "specimenRays": 172,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": 0.0,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.0,
+          "offsetZM": 0.1,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": -0.1,
+          "specimenRays": 171,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": 0.0,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        },
+        {
+          "offsetXM": 0.1,
+          "offsetZM": 0.1,
+          "specimenRays": 174,
+          "blockedAtWindow": 0,
+          "blockedByTheatreEquipment": 0
+        }
+      ],
+      "specimenRays": 1559,
+      "blockedAtWindow": 0,
+      "blockedByTheatreEquipment": 0
+    }
+  ],
+  "aisle": {
+    "route": "Staff corridor through doorway, behind both seats, back to corridor",
+    "controllerDiameterM": 0.36,
+    "controllerHeightM": 1.7,
+    "clearDoorWidthM": 0.9759997,
+    "steps": 158,
+    "sideContact": false,
+    "maxWaypointErrorM": 2.98023224E-08,
+    "passed": true
+  }
+}

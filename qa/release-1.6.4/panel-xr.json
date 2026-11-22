@@ -1,0 +1,387 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-11-21T01:22:43.7036789Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "lab_cabinet_glass_transmits",
+            "detail": "The runtime keeps the cabinet glass transparent.",
+            "passed": true
+        },
+        {
+            "id": "lab_ceiling_emission_and_bake",
+            "detail": "The twelve modeled ceiling panels use baked room lighting and visible diffusers.",
+            "passed": true
+        },
+        {
+            "id": "lab_drape_at_startup",
+            "detail": "Examination linen clearance above the adjustable metal top is 1.40 mm.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "button_responds_on_press",
+            "detail": "A queued controller press invokes the actual confirmation by the next input frame while still held. Callbacks=1; frames=1",
+            "passed": true
+        },
+        {
+            "id": "ui_press_captured_until_release",
+            "detail": "Moving off the dismissed button while held cannot leak its trigger into anatomy or cutting.",
+            "passed": true
+        },
+        {
+            "id": "held_button_does_not_repeat",
+            "detail": "Holding through modal dismissal must not repeat or activate the underlying page.",
+            "passed": true
+        },
+        {
+            "id": "button_release_does_not_repeat",
+            "detail": "Release after immediate activation must not send another click.",
+            "passed": true
+        },
+        {
+            "id": "ui_release_restores_world_input",
+            "detail": "Release ends UI capture so the next anatomy action remains available.",
+            "passed": true
+        },
+        {
+            "id": "navigation_responds_on_press",
+            "detail": "Ordinary page navigation responds while the trigger remains held.",
+            "passed": true
+        },
+        {
+            "id": "navigation_hold_does_not_replay",
+            "detail": "Replacing a page during the press cannot replay its click.",
+            "passed": true
+        },
+        {
+            "id": "button_feedback_has_no_fade",
+            "detail": "Buttons change visual feedback immediately.",
+            "passed": true
+        },
+        {
+            "id": "disabled_button_does_not_activate",
+            "detail": "Immediate activation preserves disabled-control protection.",
+            "passed": true
+        },
+        {
+            "id": "card_feedback_has_no_fade",
+            "detail": "All four activity cards also give immediate visual feedback.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/page/normal",
+            "detail": "Back stays on the panel, outside scrolling content. Controller target (115.00, 58.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/page/normal",
+            "detail": "The leading arrow and complete one-line label fit at 1 text scale. Label Back.",
+            "passed": true
+        },
+        {
+            "id": "back/page_pinned/normal",
+            "detail": "Back stays fixed when the reading panel scrolls to its last line.",
+            "passed": true
+        },
+        {
+            "id": "back/hover/normal",
+            "detail": "Ray hover changes the rendered face immediately; pressing has its own tint.",
+            "passed": true
+        },
+        {
+            "id": "back/grip_keeps_panel_still/normal",
+            "detail": "Gripping the Back control does not move the panel or navigate.",
+            "passed": true
+        },
+        {
+            "id": "back/press/normal",
+            "detail": "Trigger press returns to the originating page while the trigger remains down.",
+            "passed": true
+        },
+        {
+            "id": "back/one_page/normal",
+            "detail": "Holding and releasing the trigger cannot replay Back on the destination.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/keyboard/normal",
+            "detail": "Back stays on the panel, outside scrolling content. Controller target (115.00, 58.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/keyboard/normal",
+            "detail": "The leading arrow and complete one-line label fit at 1 text scale. Label Back.",
+            "passed": true
+        },
+        {
+            "id": "back/keyboard_pinned/normal",
+            "detail": "The field heading clears Back. Scrolling keys leaves Back and the typed address fixed.",
+            "passed": true
+        },
+        {
+            "id": "back/keyboard_retains_input/normal",
+            "detail": "Closing the keyboard preserves edits without sending a code.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/page/large-high-contrast",
+            "detail": "Back stays on the panel, outside scrolling content. Controller target (157.00, 72.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/page/large-high-contrast",
+            "detail": "The leading arrow and complete one-line label fit at 1.5 text scale. Label Back.",
+            "passed": true
+        },
+        {
+            "id": "back/page_pinned/large-high-contrast",
+            "detail": "Back stays fixed when the reading panel scrolls to its last line.",
+            "passed": true
+        },
+        {
+            "id": "back/hover/large-high-contrast",
+            "detail": "Ray hover changes the rendered face immediately; pressing has its own tint.",
+            "passed": true
+        },
+        {
+            "id": "back/grip_keeps_panel_still/large-high-contrast",
+            "detail": "Gripping the Back control does not move the panel or navigate.",
+            "passed": true
+        },
+        {
+            "id": "back/press/large-high-contrast",
+            "detail": "Trigger press returns to the originating page while the trigger remains down.",
+            "passed": true
+        },
+        {
+            "id": "back/one_page/large-high-contrast",
+            "detail": "Holding and releasing the trigger cannot replay Back on the destination.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/keyboard/large-high-contrast",
+            "detail": "Back stays on the panel, outside scrolling content. Controller target (157.00, 72.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/keyboard/large-high-contrast",
+            "detail": "The leading arrow and complete one-line label fit at 1.5 text scale. Label Back.",
+            "passed": true
+        },
+        {
+            "id": "back/keyboard_pinned/large-high-contrast",
+            "detail": "The field heading clears Back. Scrolling keys leaves Back and the typed address fixed.",
+            "passed": true
+        },
+        {
+            "id": "back/keyboard_retains_input/large-high-contrast",
+            "detail": "Closing the keyboard preserves edits without sending a code.",
+            "passed": true
+        },
+        {
+            "id": "back/unit_parent",
+            "detail": "The unit page returns to its mode's units.",
+            "passed": true
+        },
+        {
+            "id": "back/mode_parent",
+            "detail": "The unit list returns one level to the activity choices.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/guide",
+            "detail": "Close guide stays on the panel, outside scrolling content. Controller target (168.00, 72.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/guide",
+            "detail": "The leading arrow and complete one-line label fit at 1.5 text scale. Label Close.",
+            "passed": true
+        },
+        {
+            "id": "back/guide_underlying_page",
+            "detail": "Closing the guide returns to the same page and scroll position.",
+            "passed": true
+        },
+        {
+            "id": "back/layout/confirmation",
+            "detail": "Cancel stays on the panel, outside scrolling content. Controller target (189.00, 72.00) canvas units.",
+            "passed": true
+        },
+        {
+            "id": "back/text/confirmation",
+            "detail": "The leading arrow and complete one-line label fit at 1.5 text scale. Label Cancel.",
+            "passed": true
+        },
+        {
+            "id": "back/cancel_preserves_page",
+            "detail": "Cancel dismisses the active confirmation without activating the action below.",
+            "passed": true
+        },
+        {
+            "id": "back/menu_dismisses_keyboard",
+            "detail": "The controller Menu control dismisses the keyboard and retains the field.",
+            "passed": true
+        },
+        {
+            "id": "back/menu_opens",
+            "detail": "The next separate Menu press opens the panel menu.",
+            "passed": true
+        },
+        {
+            "id": "back/menu_closes",
+            "detail": "A second separate Menu press leaves the pause menu outside an activity.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Response probe world=(-0.23, 1.77, 0.61); screen=(577.31, 584.36, 0.95); button rect=(x:-308.00, y:-38.00, width:616.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Menu world=(-0.25, 1.90, 0.76); screen=(1043.84, 662.09, 1.10); button rect=(x:-162.00, y:-38.00, width:324.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Disabled probe world=(-0.23, 1.77, 0.61); screen=(955.96, 584.94, 1.09); button rect=(x:-308.00, y:-38.00, width:616.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Before you begin world=(-0.24, 1.73, 0.61); screen=(955.97, 561.58, 1.10); button rect=(x:-306.00, y:-38.00, width:612.00, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.38); screen=(821.39, 692.90, 1.10); button rect=(x:-57.50, y:-29.00, width:115.00, height:58.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.38); screen=(821.39, 692.90, 1.10); button rect=(x:-57.50, y:-29.00, width:115.00, height:58.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.23, 1.51, 0.61); screen=(955.97, 427.76, 1.10); button rect=(x:-306.00, y:-34.00, width:612.00, height:68.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.22, 1.95, 0.38); screen=(820.75, 693.80, 1.09); button rect=(x:-57.50, y:-29.00, width:115.00, height:58.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Before you begin world=(-0.23, 1.59, 0.61); screen=(955.97, 474.28, 1.10); button rect=(x:-306.00, y:-50.00, width:612.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.40); screen=(832.00, 689.36, 1.10); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.23, 1.95, 0.40); screen=(832.00, 689.36, 1.10); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.23, 1.42, 0.61); screen=(955.97, 377.28, 1.10); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.22, 1.95, 0.40); screen=(831.40, 690.25, 1.09); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back to units world=(-0.23, 1.95, 0.40); screen=(832.00, 689.36, 1.10); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back to activities world=(-0.23, 1.95, 0.40); screen=(832.00, 689.36, 1.10); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Guide world=(-0.23, 1.86, 0.47); screen=(874.16, 639.88, 1.10); button rect=(x:-162.00, y:-50.00, width:324.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Close guide world=(-0.23, 1.94, 0.41); screen=(836.22, 688.22, 1.09); button rect=(x:0.00, y:-72.00, width:168.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Cancel world=(-0.23, 1.94, 0.42); screen=(841.55, 688.22, 1.09); button rect=(x:0.00, y:-72.00, width:189.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)"
+    ]
+}

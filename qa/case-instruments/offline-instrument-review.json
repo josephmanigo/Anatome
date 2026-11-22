@@ -1,0 +1,85 @@
+{
+  "image": "offline-instrument-review.png",
+  "imageSha256": "0807ce611a4e0d2faafdc8f39b643875724a8ca45140965999509a80e4a5684f",
+  "createdUtc": "2026-11-21T00:36:52+00:00",
+  "source": "unity/ThoraxLab/Assets/ThoraxLab/Learning/InstrumentGeometry.cs",
+  "sourceSha256": "9653119133874594d95b49e33790092b18d5b246e7ba454b982fe7ba6f57f42c",
+  "capture": "Compiled the unchanged InstrumentGeometry.cs with the Unity 6000.3.19f1 managed vector math. A temporary .NET mesh/scene adapter used Unity.Mathematics for transforms and recorded the Builder's vertices, smooth normals, metric UVs, per-finish triangles and child offsets. Blender calculated tangent frames from the exported UVs.",
+  "captureAudit": {
+    "modelsIncludingRadialBand": 24,
+    "totalTriangles": 47142,
+    "maximumTriangles": 4494,
+    "metricTriangleUVCheck": "passed",
+    "exportSha256": "6f3c3e7ddd60abaddfa592f1823bb2087bafc271e64dfede66c1871b7144cf5d"
+  },
+  "meshMeasurements": {
+    "scalpelTipDistanceToNominalMm": 0.0,
+    "centerSawToothDistanceToNominalMm": 1e-05,
+    "sawPivotLocalM": [
+      0,
+      0,
+      0.082
+    ],
+    "maskSealPlaneLocalZM": 0.067,
+    "maskStrapRearLocalZM": 0.22465,
+    "maskOpeningClearSamples": 5
+  },
+  "shown": [
+    {
+      "id": "scalpel",
+      "triangles": 1504,
+      "meshParts": 1
+    },
+    {
+      "id": "dissection-saw",
+      "triangles": 2556,
+      "meshParts": 2
+    },
+    {
+      "id": "oxygen",
+      "triangles": 2304,
+      "meshParts": 1
+    },
+    {
+      "id": "suture",
+      "triangles": 1458,
+      "meshParts": 1
+    },
+    {
+      "id": "spacer",
+      "triangles": 2560,
+      "meshParts": 1
+    },
+    {
+      "id": "dressing",
+      "triangles": 640,
+      "meshParts": 1
+    }
+  ],
+  "render": {
+    "version": "Blender 5.2.0 LTS",
+    "engine": "Cycles",
+    "backend": "OPTIX",
+    "samples": 36,
+    "studio": "studio.exr",
+    "studioSha256": "c36c7fd390b2cdf8693360cf3662cb1d710c95fa799d9f822f42997167839b56",
+    "materialMapping": "Principled BSDF reads the authored URP/Lit base-colour tint, metallic value, smoothness, packed smoothness alpha, normal strength and UV tiling. Clear shell uses alpha plus grazing-angle reflection. These are offline studio images. Unity rendering, XR input and headset performance require their own checks."
+  },
+  "materials": {
+    "Absorbent fibre": "0799a393c34af13c744d2f55fb784ffe8b2a63b4afc34bf47ba8d5693f3064da",
+    "Clear shell": "d9cd64268e15048632b1cb2a1fb2d8d3248da528b7065bff2b5a774c00137549",
+    "Grip rubber": "2104c43544c57341b553c40aef49caa2b2c72587dd9ce498733fb4fcd80ff067",
+    "Honed edge": "cbfe1780b61cee1bb9036cd1f687fe88107418303299a54a4a4ee3770140cfe5",
+    "Moulded ivory": "0f64b0c8638c5da1cca4df323ca18af4e1c315382294625daf3c6694738f31fa",
+    "Moulded teal": "4a2c63ad0c57c2d167e12fb2c77a0b89f2577857c68e286faee43ebe18494221",
+    "Satin steel": "cf06ffe21a93a815a3cf0e5e7b988a350e649acf22774021accf79ecd818421f"
+  },
+  "maps": {
+    "Brushed relief.png": "4562e7e7e891d0f7529a2125dff763c80d89103a76142182776afb6133eca11e",
+    "Brushed stainless.png": "64ae3174b11930eaa1240e8e8df759b330a6957f31c78da472e1e42d1f31744a",
+    "Mould grain.png": "acc336dc0204e5c4cde69c0a63b92773a944dbab4cb1d3548f9aa43e13f31bde",
+    "Mould relief.png": "5f144fb89b130462e7316a5593c59414bd88edc58375abb0d9ea194c67b7584d",
+    "Woven linen.png": "e2f25bd1dbc9e02c97e9902660c57a1d076ed159e66c9151c173b702010840fa",
+    "Woven relief.png": "370c6819bd77e15a33086e9644d854981adb64a88aaf60b26eb3d4cbcb9239c5"
+  }
+}

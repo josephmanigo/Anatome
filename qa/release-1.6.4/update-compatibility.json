@@ -1,0 +1,31 @@
+﻿{
+    "utc":  "2026-11-21T01:35:11.0569461Z",
+    "previousApk":  "builds/Anatome-1.6.2.apk",
+    "apk":  "builds/Anatome-1.6.4.apk",
+    "package":  "org.thoraxlab.learning",
+    "previousVersion":  "1.6.2",
+    "previousCode":  22,
+    "version":  "1.6.4",
+    "versionCode":  24,
+    "intermediateVersion":  "1.6.3",
+    "intermediateCode":  23,
+    "bytes":  116982927,
+    "sha256":  "5128da8af20b83aad8dd027b8d3a26ee0ddb01ba7d9ea27224912de294b3cf36",
+    "signerSha256":  "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+    "physicalDeviceTested":  false,
+    "adbDevices":  [
+                       "List of devices attached",
+                       ""
+                   ],
+    "checks":  {
+                   "previousFileMatchesOriginalHash":  true,
+                   "newFileMatchesUnityOutput":  true,
+                   "samePackageIncreasingVersion":  true,
+                   "sameSigningCertificate":  true,
+                   "androidV2SignaturesVerified":  true,
+                   "appNotDebuggable":  true,
+                   "nativeAndArchiveAlignment":  true,
+                   "alsoMatchesVersion163":  true
+               },
+    "passed":  true
+}

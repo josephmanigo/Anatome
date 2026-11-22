@@ -1,0 +1,289 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-11-21T01:04:03.2981467Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "lab_cabinet_glass_transmits",
+            "detail": "The runtime keeps the cabinet glass transparent.",
+            "passed": true
+        },
+        {
+            "id": "lab_ceiling_emission_and_bake",
+            "detail": "The twelve modeled ceiling panels use baked room lighting and visible diffusers.",
+            "passed": true
+        },
+        {
+            "id": "lab_drape_at_startup",
+            "detail": "Examination linen clearance above the adjustable metal top is 1.40 mm.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "refresh/no_session",
+            "detail": "Automatic refresh waits for an XR session.",
+            "passed": true
+        },
+        {
+            "id": "refresh/auto_highest",
+            "detail": "Auto requests 120 Hz from an unsorted 72/90/120 Hz runtime list.",
+            "passed": true
+        },
+        {
+            "id": "refresh/manual_supported",
+            "detail": "A supported manual rate reaches the native request.",
+            "passed": true
+        },
+        {
+            "id": "refresh/unsupported_rejected",
+            "detail": "Unsupported rates never reach the native API.",
+            "passed": true
+        },
+        {
+            "id": "refresh/runtime_rejection",
+            "detail": "A rejected native request retains the last accepted target.",
+            "passed": true
+        },
+        {
+            "id": "refresh/auto_headset_specific",
+            "detail": "Auto uses this headset's maximum, without assuming 120 Hz support.",
+            "passed": true
+        },
+        {
+            "id": "refresh/ui_auto_label",
+            "detail": "Quest settings expose automatic maximum refresh.",
+            "passed": true
+        },
+        {
+            "id": "refresh/ui_manual_choice",
+            "detail": "The refresh selector still offers runtime-supported manual choices.",
+            "passed": true
+        },
+        {
+            "id": "refresh/ui_returns_to_auto",
+            "detail": "Cycling supported rates returns to automatic.",
+            "passed": true
+        },
+        {
+            "id": "refresh/empty_supported",
+            "detail": "An unavailable rate list has no invented fallback.",
+            "passed": true
+        },
+        {
+            "id": "refresh/session_cleanup",
+            "detail": "Session destruction clears its previous refresh target.",
+            "passed": true
+        },
+        {
+            "id": "graphics/quest_driver_workaround",
+            "detail": "Quest 1.4.6 crashed four times in vulkan.adreno.so/vkCreateImageView; compatibility build must select only OpenGLES3. Configured: OpenGLES3",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/0/High",
+            "detail": "Active renderer after Apply: scale=1; MSAA=4; shadow distance=3; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/0/Extreme",
+            "detail": "Active renderer after Apply: scale=1.2; MSAA=4; shadow distance=8; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/0/Low",
+            "detail": "Active renderer after Apply: scale=0.72; MSAA=2; shadow distance=0; mip limit=2",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/0/Medium",
+            "detail": "Active renderer after Apply: scale=0.85; MSAA=2; shadow distance=0; mip limit=1",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/0/VeryHigh",
+            "detail": "Active renderer after Apply: scale=1.1; MSAA=4; shadow distance=5; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/1/High",
+            "detail": "Active renderer after Apply: scale=1; MSAA=4; shadow distance=3; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/1/Extreme",
+            "detail": "Active renderer after Apply: scale=1.2; MSAA=4; shadow distance=8; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/1/Low",
+            "detail": "Active renderer after Apply: scale=0.72; MSAA=2; shadow distance=0; mip limit=2",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/1/Medium",
+            "detail": "Active renderer after Apply: scale=0.85; MSAA=2; shadow distance=0; mip limit=1",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/1/VeryHigh",
+            "detail": "Active renderer after Apply: scale=1.1; MSAA=4; shadow distance=5; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/2/High",
+            "detail": "Active renderer after Apply: scale=1; MSAA=4; shadow distance=3; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/2/Extreme",
+            "detail": "Active renderer after Apply: scale=1.2; MSAA=4; shadow distance=8; mip limit=0",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/2/Low",
+            "detail": "Active renderer after Apply: scale=0.72; MSAA=2; shadow distance=0; mip limit=2",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/2/Medium",
+            "detail": "Active renderer after Apply: scale=0.85; MSAA=2; shadow distance=0; mip limit=1",
+            "passed": true
+        },
+        {
+            "id": "graphics/preset_transition/2/VeryHigh",
+            "detail": "Active renderer after Apply: scale=1.1; MSAA=4; shadow distance=5; mip limit=0",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)"
+    ]
+}

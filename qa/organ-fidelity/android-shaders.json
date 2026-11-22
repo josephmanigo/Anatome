@@ -1,0 +1,420 @@
+{
+  "unity": "6000.3.19f1",
+  "configured": [
+    "OpenGLES3"
+  ],
+  "checks": [
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "OrganForward",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "ShadowCaster",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "ShadowCaster",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "ShadowCaster",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "ShadowCaster",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthOnly",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthOnly",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthOnly",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthOnly",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthNormals",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthNormals",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthNormals",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "ThoraxLab/Organ Surface",
+      "pass": "DepthNormals",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "GLES3x",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_INSTANCING_ON",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_INSTANCING_ON",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Vertex",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    },
+    {
+      "shader": "Universal Render Pipeline/Lit",
+      "pass": "ForwardLit",
+      "compiler": "Vulkan",
+      "stage": "Fragment",
+      "keywords": [
+        "STEREO_MULTIVIEW_ON",
+        "_ADDITIONAL_LIGHTS",
+        "_MAIN_LIGHT_SHADOWS",
+        "_NORMALMAP"
+      ],
+      "success": true,
+      "diagnostics": ""
+    }
+  ]
+}

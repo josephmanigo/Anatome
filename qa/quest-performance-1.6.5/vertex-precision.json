@@ -1,0 +1,45 @@
+{
+  "matchedNonAnatomyDisplayMeshesWithHigherPrecision": {
+    "Lab_Chair_Stainless": {
+      "beforeBytes": 43264,
+      "afterBytes": 64896,
+      "vertices": 1352
+    },
+    "Lab_Chair_Guard": {
+      "beforeBytes": 18176,
+      "afterBytes": 27264,
+      "vertices": 568
+    },
+    "Lab_Chair_Black": {
+      "beforeBytes": 58816,
+      "afterBytes": 88224,
+      "vertices": 1838
+    },
+    "MAL_LLL": {
+      "beforeBytes": 315100,
+      "afterBytes": 378120,
+      "vertices": 15755
+    },
+    "MAL_LUL": {
+      "beforeBytes": 307740,
+      "afterBytes": 369288,
+      "vertices": 15387
+    },
+    "MAL_RLL": {
+      "beforeBytes": 288980,
+      "afterBytes": 346776,
+      "vertices": 14449
+    },
+    "MAL_RML": {
+      "beforeBytes": 142200,
+      "afterBytes": 170640,
+      "vertices": 7110
+    },
+    "MAL_RUL": {
+      "beforeBytes": 302480,
+      "afterBytes": 362976,
+      "vertices": 15124
+    }
+  },
+  "extraVertexBytes": 331428
+}

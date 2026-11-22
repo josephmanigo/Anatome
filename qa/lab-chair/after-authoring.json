@@ -1,0 +1,87 @@
+{
+  "objectCount": 727,
+  "chairObjects": [
+    "Lab chair - station pivot",
+    "Lab chair - moulded waterfall seat",
+    "Lab chair - underside pan",
+    "Lab chair - lumbar back and open hand grip",
+    "Lab chair - formed back support",
+    "Lab chair - back fixing",
+    "Lab chair - back fixing.001",
+    "Lab chair - height adjustment paddle stem",
+    "Lab chair - height adjustment paddle",
+    "Lab chair - gas lift barrel",
+    "Lab chair - exposed lift piston",
+    "Lab chair - five-star hub",
+    "Lab chair - foot ring clamp",
+    "Lab chair - continuous foot ring",
+    "Lab chair - foot ring stay",
+    "Lab chair - foot ring stay.001",
+    "Lab chair - foot ring stay.002",
+    "Lab chair - tapered base arm",
+    "Lab chair - swivel caster fork",
+    "Lab chair - twin caster tyre",
+    "Lab chair - twin caster tyre.001",
+    "Lab chair - caster axle",
+    "Lab chair - tapered base arm.001",
+    "Lab chair - swivel caster fork.001",
+    "Lab chair - twin caster tyre.002",
+    "Lab chair - twin caster tyre.003",
+    "Lab chair - caster axle.001",
+    "Lab chair - tapered base arm.002",
+    "Lab chair - swivel caster fork.002",
+    "Lab chair - twin caster tyre.004",
+    "Lab chair - twin caster tyre.005",
+    "Lab chair - caster axle.002",
+    "Lab chair - tapered base arm.003",
+    "Lab chair - swivel caster fork.003",
+    "Lab chair - twin caster tyre.006",
+    "Lab chair - twin caster tyre.007",
+    "Lab chair - caster axle.003",
+    "Lab chair - tapered base arm.004",
+    "Lab chair - swivel caster fork.004",
+    "Lab chair - twin caster tyre.008",
+    "Lab chair - twin caster tyre.009",
+    "Lab chair - caster axle.004"
+  ],
+  "packedTextures": [
+    "Brushed stainless.png",
+    "Glazed scrub tile.png",
+    "Quarter sawn oak.png",
+    "Sealed ceiling tile.png",
+    "Washable coating.png",
+    "Welded sheet flooring.png",
+    "Woven linen.png"
+  ],
+  "engine": "CYCLES",
+  "camera": [
+    {
+      "view": "station",
+      "position": [
+        3.61,
+        -1.2,
+        1.28
+      ],
+      "target": [
+        4.48,
+        0.82,
+        0.51
+      ],
+      "lensMm": 45
+    },
+    {
+      "view": "back",
+      "position": [
+        5.62,
+        -0.69,
+        1.04
+      ],
+      "target": [
+        4.48,
+        0.82,
+        0.51
+      ],
+      "lensMm": 39
+    }
+  ]
+}

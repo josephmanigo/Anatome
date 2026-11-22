@@ -1,0 +1,16 @@
+{
+  "structure": "MAL_LUL",
+  "method": "Live ungraded lab. DissectionSession.Cut used the app's simulated scalpel dimensions and two poses. The capture isolates the actual detached fragment mesh with both original assigned material slots.",
+  "library": "ThoraxCut/1.1 chunk-extraction Manifold/3.5.2 11235e6b8ebea2dbed8aec4285685aafd3d95667",
+  "sessionMessage": "Cut complete · 2 pieces · 1/32 detached pieces.",
+  "pieces": 2,
+  "undoCount": 1,
+  "exteriorTriangles": 229,
+  "cutFaceTriangles": 123,
+  "outerMaterial": "VR presentation Tissue_lung",
+  "innerMaterial": "VR presentation Interior_lung",
+  "innerShader": "ThoraxLab/Organ Surface",
+  "cutMapScale": 2.5,
+  "hmdTrackedAtReadback": false,
+  "runtimeQaBypass": false
+}

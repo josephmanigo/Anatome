@@ -1,0 +1,218 @@
+{
+  "1.6.4": {
+    "textures": 39,
+    "sceneTextureDataBytes": 3381392,
+    "atLeast4K": 0,
+    "largeTextures": [],
+    "lightmaps": [
+      {
+        "name": "Lightmap-1_comp_dir",
+        "width": 512,
+        "height": 512,
+        "format": 47,
+        "bytes": 349552
+      },
+      {
+        "name": "Lightmap-0_comp_dir",
+        "width": 512,
+        "height": 512,
+        "format": 47,
+        "bytes": 349552
+      },
+      {
+        "name": "Lightmap-0_comp_light",
+        "width": 512,
+        "height": 512,
+        "format": 45,
+        "bytes": 174776
+      },
+      {
+        "name": "Lightmap-1_comp_light",
+        "width": 512,
+        "height": 512,
+        "format": 45,
+        "bytes": 174776
+      }
+    ],
+    "apkBytes": 116982927
+  },
+  "1.6.5": {
+    "textures": 53,
+    "sceneTextureDataBytes": 177445880,
+    "atLeast4K": 18,
+    "largeTextures": [
+      {
+        "name": "Brushed alloy normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Brushed stainless",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Glazed scrub tile",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Glazed scrub tile normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Medical equipment coating",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Medical equipment coating normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Perforated diffuser",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Sealed ceiling tile",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Sealed ceiling tile normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Surgical nonwoven",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Surgical textile normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Theatre ceramic normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Theatre ceramic panels",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Theatre monitors",
+        "width": 4096,
+        "height": 2048,
+        "format": 50,
+        "bytes": 4988080
+      },
+      {
+        "name": "Theatre resin",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Theatre resin normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Woven linen",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      },
+      {
+        "name": "Woven linen normal",
+        "width": 4096,
+        "height": 4096,
+        "format": 50,
+        "bytes": 9961536
+      }
+    ],
+    "lightmaps": [
+      {
+        "name": "Lightmap-1_comp_dir",
+        "width": 512,
+        "height": 512,
+        "format": 47,
+        "bytes": 349552
+      },
+      {
+        "name": "Lightmap-0_comp_dir",
+        "width": 512,
+        "height": 512,
+        "format": 47,
+        "bytes": 349552
+      },
+      {
+        "name": "Lightmap-0_comp_light",
+        "width": 512,
+        "height": 512,
+        "format": 45,
+        "bytes": 174776
+      },
+      {
+        "name": "Lightmap-2_comp_dir",
+        "width": 512,
+        "height": 512,
+        "format": 47,
+        "bytes": 349552
+      },
+      {
+        "name": "Lightmap-1_comp_light",
+        "width": 512,
+        "height": 512,
+        "format": 45,
+        "bytes": 174776
+      },
+      {
+        "name": "Lightmap-2_comp_light",
+        "width": 512,
+        "height": 512,
+        "format": 45,
+        "bytes": 174776
+      }
+    ],
+    "apkBytes": 250481035
+  },
+  "candidateSha256": "1f1c61977f169eeb77e8a54d15be0b37838c0c5217c4b55c76aae49ab897e68f"
+}

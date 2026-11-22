@@ -1,0 +1,36 @@
+{
+  "method": "72 Hz samples from the compiled CaseIncisionStroke and vertex arrays from CaseIncisionSurface.ShapeInsert. The instrument uses the application builder geometry. Rendered in Blender Cycles with normal maps and a URP material approximation, outside Unity.",
+  "measuredStates": [
+    {
+      "progress": 0.0,
+      "vertices": 210,
+      "largestOpeningMm": 0.0
+    },
+    {
+      "progress": 0.5,
+      "vertices": 210,
+      "largestOpeningMm": 3.0406
+    },
+    {
+      "progress": 1.0,
+      "vertices": 210,
+      "largestOpeningMm": 4.3
+    }
+  ],
+  "maps": {
+    "Surface": {
+      "Albedo": "df65487d24a3a43454762cf85837c56e03ec7d77afa09bd4b8e75939e87c81b2",
+      "Normal": "dfa472ab9bc151c591dad1f086d85d7ed878b8c3a6c95ffc9f0e374a2482096d"
+    },
+    "CutFace": {
+      "Albedo": "01e809cb7fac7cd0c50ca3125f2422a5769cc169f6365fd6cb478df341efd6a5",
+      "Normal": "f48e02861646d9a403350218ac388880269f1436a4314a7ad12ddc0f56be71a7"
+    }
+  },
+  "source": {
+    "CaseIncisionSurface.cs": "81769e57a34e020f7b2a7b77fd61d0bfcb276daedef564d654ac1b136b91b489",
+    "Core/CaseIncisionStroke.cs": "53b24eb2a1341ddb27cab43cf577e486f5792df2125adc5fa15ed75506996301",
+    "InstrumentGeometry.cs": "9653119133874594d95b49e33790092b18d5b246e7ba454b982fe7ba6f57f42c"
+  },
+  "previewSha256": "05d1fffed3cc51482d27da83799c111a21268a135c65140f63ace06bd1536580"
+}

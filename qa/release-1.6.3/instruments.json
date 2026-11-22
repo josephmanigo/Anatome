@@ -1,0 +1,466 @@
+{
+    "utc": "2026-11-21T00:54:04.5957223Z",
+    "status": "passed",
+    "sharedFinishes": 7,
+    "instruments": [
+        {
+            "id": "scalpel",
+            "vertices": 2088,
+            "triangles": 1504,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.01269999984651804,
+                "y": 0.006369089707732201,
+                "z": 0.1550000011920929
+            }
+        },
+        {
+            "id": "suture",
+            "vertices": 1416,
+            "triangles": 1458,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.03739501163363457,
+                "y": 0.006000000052154064,
+                "z": 0.15406033396720887
+            }
+        },
+        {
+            "id": "inhaler",
+            "vertices": 1455,
+            "triangles": 1536,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.041840001940727237,
+                "y": 0.11249999701976776,
+                "z": 0.08174999803304672
+            }
+        },
+        {
+            "id": "spacer",
+            "vertices": 2602,
+            "triangles": 2560,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.057999998331069949,
+                "y": 0.057999998331069949,
+                "z": 0.1917000114917755
+            }
+        },
+        {
+            "id": "oxygen",
+            "vertices": 2337,
+            "triangles": 2304,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.1631125658750534,
+                "y": 0.12359999120235443,
+                "z": 0.24017949402332307
+            }
+        },
+        {
+            "id": "cap",
+            "vertices": 482,
+            "triangles": 464,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.03700000047683716,
+                "y": 0.025309232994914056,
+                "z": 0.028200000524520875
+            }
+        },
+        {
+            "id": "dressing",
+            "vertices": 608,
+            "triangles": 640,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.08500000089406967,
+                "y": 0.06400000303983689,
+                "z": 0.008700000122189522
+            }
+        },
+        {
+            "id": "ultrasound",
+            "vertices": 1660,
+            "triangles": 1612,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.0560000017285347,
+                "y": 0.024207845330238344,
+                "z": 0.15869569778442384
+            }
+        },
+        {
+            "id": "probe",
+            "vertices": 1662,
+            "triangles": 1612,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.03394058719277382,
+                "y": 0.024207845330238344,
+                "z": 0.15869569778442384
+            }
+        },
+        {
+            "id": "swab",
+            "vertices": 1370,
+            "triangles": 1416,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.032999999821186069,
+                "y": 0.024000000208616258,
+                "z": 0.17550000548362733
+            }
+        },
+        {
+            "id": "connector",
+            "vertices": 1062,
+            "triangles": 960,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.06785000115633011,
+                "y": 0.03310000151395798,
+                "z": 0.10300000011920929
+            }
+        },
+        {
+            "id": "anaesthetic",
+            "vertices": 2028,
+            "triangles": 1968,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.04699999839067459,
+                "y": 0.026211190968751909,
+                "z": 0.1979999989271164
+            }
+        },
+        {
+            "id": "needle",
+            "vertices": 2028,
+            "triangles": 1968,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.04699999839067459,
+                "y": 0.026211190968751909,
+                "z": 0.1979999989271164
+            }
+        },
+        {
+            "id": "aspirator",
+            "vertices": 2348,
+            "triangles": 2304,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.04699999839067459,
+                "y": 0.026211190968751909,
+                "z": 0.1979999989271164
+            }
+        },
+        {
+            "id": "medication",
+            "vertices": 1786,
+            "triangles": 1840,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.04699999839067459,
+                "y": 0.026211190968751909,
+                "z": 0.13699999451637269
+            }
+        },
+        {
+            "id": "guidewire",
+            "vertices": 2352,
+            "triangles": 2256,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.027000000700354577,
+                "y": 0.027000000700354577,
+                "z": 0.19119636714458466
+            }
+        },
+        {
+            "id": "dilator",
+            "vertices": 2473,
+            "triangles": 2440,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.027000000700354577,
+                "y": 0.027000000700354577,
+                "z": 0.19050000607967378
+            }
+        },
+        {
+            "id": "drain",
+            "vertices": 2874,
+            "triangles": 2804,
+            "materialPasses": 4,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.027000000700354577,
+                "y": 0.027000000700354577,
+                "z": 0.19050000607967378
+            }
+        },
+        {
+            "id": "balloon",
+            "vertices": 2952,
+            "triangles": 2820,
+            "materialPasses": 6,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.027000000700354577,
+                "y": 0.027000000700354577,
+                "z": 0.18950000405311585
+            }
+        },
+        {
+            "id": "stent",
+            "vertices": 3802,
+            "triangles": 3650,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.027000000700354577,
+                "y": 0.027000000700354577,
+                "z": 0.18950000405311585
+            }
+        },
+        {
+            "id": "valve",
+            "vertices": 4826,
+            "triangles": 4494,
+            "materialPasses": 5,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.03909999877214432,
+                "y": 0.03898971155285835,
+                "z": 0.18950000405311585
+            }
+        },
+        {
+            "id": "dissection-scalpel",
+            "vertices": 2080,
+            "triangles": 1504,
+            "materialPasses": 3,
+            "renderers": 1,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.006369089707732201,
+                "y": 0.012699998915195465,
+                "z": 0.11300000548362732
+            }
+        },
+        {
+            "id": "dissection-saw",
+            "vertices": 3016,
+            "triangles": 2556,
+            "materialPasses": 6,
+            "renderers": 2,
+            "colliders": 0,
+            "finite": true,
+            "metricUVs": true,
+            "tangentFrames": true,
+            "authoredFinishes": true,
+            "tipAligned": true,
+            "size": {
+                "x": 0.037300001829862598,
+                "y": 0.03892499953508377,
+                "z": 0.13999998569488526
+            }
+        }
+    ],
+    "radialBand": {
+        "id": "radial-band",
+        "vertices": 458,
+        "triangles": 472,
+        "materialPasses": 3,
+        "renderers": 1,
+        "colliders": 0,
+        "finite": true,
+        "metricUVs": true,
+        "tangentFrames": true,
+        "authoredFinishes": true,
+        "tipAligned": true,
+        "size": {
+            "x": 0.11999999731779099,
+            "y": 0.0560000017285347,
+            "z": 0.012000000104308129
+        }
+    },
+    "oxygenMask": {
+        "sealPlaneZ": 0.06700000166893006,
+        "strapRearZ": 0.22465001046657563,
+        "sealFacesForward": true,
+        "openingClear": true,
+        "strapBehind": true
+    },
+    "renders": [
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\scalpel.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\dissection-saw.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\suture.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\anaesthetic.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\inhaler.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\spacer.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\ultrasound.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\valve.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\scalpel-three-quarter.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\scalpel-bevel.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\saw-three-quarter.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\saw-teeth.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\dissection-scalpel.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\dressing.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\swab.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\radial-band.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\oxygen.png",
+        "C:\\Users\\My Pc\\Downloads\\Anatome\\.impeccable\\instrument-review\\oxygen-seal.png"
+    ]
+}

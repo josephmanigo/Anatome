@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "sourceMasterBeforeSHA256": "ba52288d1d4a74f38612dbfd7370852d66ce8232e42e69ec5360b2c1692db738",
+  "sourceMasterAfterSHA256": "728574573563e44ae3fac74ce7b8a9c41ce136feae6f9f72f0849bb2ff1eee82",
+  "oldAuthoredObjectsCompared": 685,
+  "changedOrMissingOldObjects": [],
+  "addedObjects": 42,
+  "addedMeshObjects": 41,
+  "originalRoomAndLightAssetsMatchPreChairSHA256": true,
+  "retainedAssetHashes": {
+    "exports/Laboratory.fbx": "6b0fe826d4fa3fe460bae101a87cd77aa969971acdcc7b0c133d14559d7d20a3",
+    "unity/ThoraxLab/Assets/ThoraxLab/Models/Laboratory.fbx": "6b0fe826d4fa3fe460bae101a87cd77aa969971acdcc7b0c133d14559d7d20a3",
+    "unity/ThoraxLab/Assets/ThoraxLab/Models/Laboratory.fbx.meta": "62ca9b48400551077385293b10e3f297be8adff74d44908850e8c4a3caa300cb",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/LightingData.asset": "fce6aa325cec68b338528d89c935e8c2c2ade697062441314b6367a78fca4d81",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/LightingData.asset.meta": "5864a5bbf356d06544d260b9520309542e066d38b5083a77e10630ea28362bcc",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-0_comp_dir.png": "f406d525b4b29dfd1e0a9b56b7cdb4b322e0bc8f500df53115b70e083558e9b3",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-0_comp_dir.png.meta": "43970d153e5e32535e60d82c421ded8b6b0c1298cd5aeb740e9034e8ea29cb52",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-0_comp_light.exr": "3378931226bc2475d21d88600cb9689b0c7efc90e30553d12431ad79051a4367",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-0_comp_light.exr.meta": "372809d948d82db9d36e87d03b13d99840c9eefd9d14fa97fd8412cd75a837fc",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-1_comp_dir.png": "b6f3c98bfc4901892ae470ef2fcba94c19133f2c26c82ae5742d87580ec0b1b1",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-1_comp_dir.png.meta": "f6100162cd548baaa3ee3aca763c3ed9f6c04967f61762f21b4482f51a0b166b",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-1_comp_light.exr": "f89215e6fa93a8b640b9490508184f2078f31cd9a3ef7c874f17e20bdbe35818",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/Lightmap-1_comp_light.exr.meta": "d985bfa52e53a9e9942f05291f79b7c74c9e30bcd61a79e8df117efc4d792cfd",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/ReflectionProbe-0.exr": "625d63c80a68bdeda4c420695f9af6cfe085004a93aedd7301298b94f0e4eddb",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/ReflectionProbe-0.exr.meta": "5c577683932fa4bacc53852b3b57f31999a655f2ac0c8ceaff22668319aeae31",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/ReflectionProbe-1.exr": "5d2f02fffa47ffdb07ad9e161b2ba244c4f66a2837c03ec0ac45efd40a51017e",
+    "unity/ThoraxLab/Assets/ThoraxLab/Scenes/ThoraxLab/ReflectionProbe-1.exr.meta": "55662d30d205257bbeadbdb5b931df99f4d4714c55cafdd6a14060c27e2868b6"
+  },
+  "roomMeshReferencesMatchPreChairInSceneAndPrefab": true,
+  "originalRoomMeshIdsCompared": 18,
+  "chairGuid": "855650de7fe0b17499c3a46c0163f0bb",
+  "chairMeshReferencesMatchInSceneAndPrefab": true,
+  "chairFileIds": {
+    "Lab_Chair_Guard": {
+      "meshFilter": "1275864445266953078",
+      "meshCollider": "1275864445266953078"
+    },
+    "Lab_Chair_Black": {
+      "meshFilter": "3250210525226966350",
+      "meshCollider": "3250210525226966350"
+    },
+    "Lab_Chair_Stainless": {
+      "meshFilter": "-3340240541542589129",
+      "meshCollider": "-3340240541542589129"
+    }
+  },
+  "fbxBytes": 110380,
+  "isolatedFullBuildAndRepeatedChairOnlyUpdate": {
+    "passed": true,
+    "fullBuildChecksPassed": 24,
+    "chairOnlyRebuildChecksPassed": 24,
+    "chairMeshesAfterSecondUpdate": 41,
+    "matchingCandidateImportedGeometrySHA256": "b5bf26d83c5fcdc88511debba54a4fefc32e7aa25020eee8e074b013b1544e5f"
+  }
+}

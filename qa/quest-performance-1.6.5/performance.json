@@ -1,0 +1,188 @@
+{
+  "apkSha256": "1f1c61977f169eeb77e8a54d15be0b37838c0c5217c4b55c76aae49ab897e68f",
+  "editor": "Unity 6000.3.19f1 on Windows",
+  "cpuMethod": "Main-thread Unity Editor timings on an already loaded copy of the current operating room. Same records and app state. One warm-up, seven full initialization samples; five idle samples of 120 full sweeps. Each idle sweep calls all 206 tissue scripts, including normally inactive ones. Frame rate and full loading time were not measured.",
+  "anatomyInitialization": {
+    "structures": 249,
+    "millisecondsBefore": [
+      23.430600000000002,
+      24.595200000000002,
+      23.114,
+      23.1952,
+      32.431000000000004,
+      23.1618,
+      24.2013
+    ],
+    "millisecondsAfter": [
+      2.5592,
+      2.1355,
+      2.6849000000000003,
+      2.4490000000000003,
+      2.0553,
+      2.3267,
+      2.128
+    ],
+    "medianBeforeMs": 23.430600000000002,
+    "medianAfterMs": 2.3267,
+    "reductionPercent": 90.06982322262341
+  },
+  "idleHandling": {
+    "structures": 206,
+    "millisecondsBefore": [
+      0.112415,
+      0.1118775,
+      0.11349833333333334,
+      0.11134333333333334,
+      0.11181833333333334
+    ],
+    "millisecondsAfter": [
+      0.023585833333333337,
+      0.02318833333333333,
+      0.023865000000000004,
+      0.03387916666666667,
+      0.0249725
+    ],
+    "medianBeforeMs": 0.1118775,
+    "medianAfterMs": 0.023865000000000004,
+    "reductionPercent": 78.66863310317088
+  },
+  "memory": {
+    "renderOnlyMeshes": 498,
+    "removedCpuVertexAndIndexCopyBytes": 23822316,
+    "removedCpuCopyMiB": 22.718730926513672,
+    "scope": "Raw buffer sizes and player readability flags. Total process or peak headset memory was not measured.",
+    "otherPackedVertexBytesAddedForFullPrecision": 331428
+  },
+  "editorMeshes": [
+    {
+      "model": "Thorax",
+      "meshCount": 249,
+      "cpuReadable": 249,
+      "referencedByColliders": 248,
+      "vertices": 502337,
+      "indices": 1876272,
+      "vertexAndIndexBytes": 27864720,
+      "geometrySha256": "2c959806067b8c60ef410f41e60333ddc74804982cf1d2d22debf1636695349f"
+    },
+    {
+      "model": "Thorax_LOD1",
+      "meshCount": 249,
+      "cpuReadable": 0,
+      "referencedByColliders": 0,
+      "vertices": 280642,
+      "indices": 900513,
+      "vertexAndIndexBytes": 15271842,
+      "geometrySha256": "260191ed92aafe44c1f4a6876d4d56d21534ec4677ba452ee57c29933fbc61f8"
+    },
+    {
+      "model": "Thorax_LOD2",
+      "meshCount": 249,
+      "cpuReadable": 0,
+      "referencedByColliders": 0,
+      "vertices": 160060,
+      "indices": 433797,
+      "vertexAndIndexBytes": 8550474,
+      "geometrySha256": "41624f05be14b6d85cb3d2799843b344dab9ff0b1d8cc100566d3d711d48a953"
+    }
+  ],
+  "precomputedSourceVolumes": {
+    "sceneParts": 249,
+    "bakedMatchDirect": 249,
+    "liveVolumesMatchDirect": 249,
+    "workingMeshSubstitutions": 1
+  },
+  "volumeBitsMatchBefore": {
+    "sceneStructures": 249,
+    "allOriginalAssetsPlusValidatedRepair": 250
+  },
+  "qualityInputs": {
+    "filesChecked": 2010,
+    "identical": 2009,
+    "changedPaths": [
+      "Assets/ThoraxLab/Resources/Learning/Specimen/FMA9757-validated-working-mesh.provenance.json"
+    ],
+    "selectedVisualInputsIdentical": 282,
+    "combinedVisualInputSha256": "55bb89ac2c9dacf121e69042d918ad774c65e9d91c5d0cfb7885b8595f964c97",
+    "identicalAudioFiles": 346,
+    "identicalImmediatelyAfterBuild": 2008,
+    "changedPathsImmediatelyAfterBuild": [
+      "Assets/ThoraxLab/Resources/Learning/Specimen/FMA9757-validated-working-mesh.provenance.json",
+      "Assets/XR/Settings/OpenXR Package Settings.asset"
+    ],
+    "openXRVerification": "The only serialized XR difference was the order of the Standalone feature list. All Android settings matched byte for byte. The original ordering was restored after the simulator exited."
+  },
+  "visualComparison": {
+    "method": "Two fixed-camera baseline captures matched exactly. Compared RGB at 1440 by 900 in Unity Play mode with the same clock digits, camera poses, lighting and preset. UI and hands were hidden for the three room views.",
+    "repeatIdentical": true,
+    "views": [
+      {
+        "view": "lab",
+        "dimensions": [
+          1440,
+          900
+        ],
+        "pixels": 1296000,
+        "changedPixels": 27,
+        "largestChannelDifference": 43,
+        "meanAbsoluteChannelDifference": 0.0003140432098765432,
+        "differenceBounds": [
+          536,
+          231,
+          1317,
+          569
+        ],
+        "beforeRgbSha256": "17ffafa37ff69cdac06fa8f80457d8aecf50cc3789a3758585fa494f53ad82fb",
+        "afterRgbSha256": "d70e989dc8912b99d16abde7b726cb2e07c86bc3543c181aebee255458a84ad6"
+      },
+      {
+        "view": "specimen",
+        "dimensions": [
+          1440,
+          900
+        ],
+        "pixels": 1296000,
+        "changedPixels": 10,
+        "largestChannelDifference": 57,
+        "meanAbsoluteChannelDifference": 0.0002029320987654321,
+        "differenceBounds": [
+          392,
+          11,
+          1093,
+          626
+        ],
+        "beforeRgbSha256": "49059923db13426bcaeef30439d78701738b09c09f19ff732dc034984b8592e4",
+        "afterRgbSha256": "51c76043d7171f9ebfca348d681325f79ca7cd7187eab6fa7e6396144b9e1147"
+      },
+      {
+        "view": "observation",
+        "dimensions": [
+          1440,
+          900
+        ],
+        "pixels": 1296000,
+        "changedPixels": 14,
+        "largestChannelDifference": 30,
+        "meanAbsoluteChannelDifference": 0.00014506172839506173,
+        "differenceBounds": [
+          201,
+          247,
+          708,
+          526
+        ],
+        "beforeRgbSha256": "c023d1bac0e823af5a032153e1048dd714519230a551a82e9c20d2c48c07e75f",
+        "afterRgbSha256": "6cb799bb968e030f8fd61e09a9dc74f42618d1a0bcf9f3bff68f1ab2a1ff3a5d"
+      }
+    ],
+    "afterSource": "Final source including the calibrated walking capsule and full-precision Android vertex settings."
+  },
+  "assistedWalking": {
+    "userReachBoostM": 0.8,
+    "beforeCapsuleM": 2.45,
+    "afterCapsuleM": 1.65,
+    "beforeVerticalDisplacementM": -0.00243,
+    "afterVerticalDisplacementM": 0.0,
+    "beforeFirstMovingFrame": "Side collision on the first stick movement after raising the view",
+    "focusedSimulatorChecks": 113,
+    "focusedPassed": true
+  }
+}
