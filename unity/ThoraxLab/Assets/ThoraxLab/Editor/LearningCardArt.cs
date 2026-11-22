@@ -55,7 +55,7 @@ namespace ThoraxLab.Editor
             public string revision = Revision, generatedUtc, dependencyFingerprint, sourceSha256, catalogSha256;
             public string method = "Unity URP PreviewRenderUtility. Source FBX mesh instances only, isolated in a temporary preview scene. Curated visibility and, where recorded, translated components; no vertex, normal, boundary or source material changes.";
             public string interpretation = "Healthy anatomical subject previews, not diagnostic images or representations of disease severity. Teal is interface emphasis. Exploded assembly views are presentation only. No labels or physiological claims are baked into the pixels.";
-            public string attribution = "BodyParts3D / The Database Center for Life Science (CC BY 4.0), Medical Augmented Learning source lung models, and existing authored teaching reconstructions. Exact source kinds and source records are recorded for every depicted component; anatomy-catalog.json remains authoritative.";
+            public string attribution = "BodyParts3D / The Database Center for Life Science (CC BY 4.0), Mauritanian Anatomy Laboratory thoracic atlas lung models, and authored teaching reconstructions. Each component lists its source record.";
             public string runtime = "16 static 512 x 320 textures; mipmaps; trilinear filtering; BC7 on Windows, ASTC 6x6 on Android. No runtime render textures, live cameras, or anatomical colliders are added.";
             public bool sourceFileUnchanged;
             public CardEntry[] cards;
@@ -126,16 +126,15 @@ namespace ThoraxLab.Editor
                         throw new InvalidDataException("Card " + composition.id + " is missing source mesh " + record.id);
                     var renderer = filter.GetComponent<MeshRenderer>();
                     if (!renderer) throw new InvalidDataException("Card source has no renderer: " + record.id);
-                    var sourceMaterial = AssetDatabase.LoadAssetAtPath<Material>(MaterialRoot + "/Tissue_" + record.tissue + ".mat");
+                    var sourceMaterial = AssetDatabase.LoadAssetAtPath<Material>(MaterialRoot + "/Tissue_" + record.AppearanceTissue + ".mat");
                     if (!sourceMaterial) throw new InvalidDataException("Prepare VRSpecimenAssets before card artwork: " + record.tissue);
                     var material = new Material(sourceMaterial) { name = "Temporary artwork " + record.tissue, hideFlags = HideFlags.HideAndDontSave };
                     bool selected = composition.emphasis?.Invoke(record) == true;
                     // The tint is a selection cue. Tissue colour/texture stays visible,
                     // and no invented vessels, lesions or histological marks are added.
                     material.SetColor("_BaseColor", selected ? new Color(.66f, 1f, .92f) : new Color(.93f, .89f, .82f));
-                    material.SetFloat("_Smoothness", Mathf.Min(.35f, material.GetFloat("_Smoothness")));
                     material.DisableKeyword("_EMISSION");
-                    material.SetColor("_EmissionColor", Color.black);
+                    if (material.HasProperty("_EmissionColor")) material.SetColor("_EmissionColor", Color.black);
                     renderer.sharedMaterials = Enumerable.Repeat(material, Math.Max(1, filter.sharedMesh.subMeshCount)).ToArray();
                     renderer.shadowCastingMode = ShadowCastingMode.On;
                     renderer.receiveShadows = true;
@@ -183,7 +182,7 @@ namespace ThoraxLab.Editor
             }
         }
 
-        static void ConfigureCamera(Camera camera, Bounds bounds, Vector3 view)
+        internal static void ConfigureCamera(Camera camera, Bounds bounds, Vector3 view)
         {
             Vector3 direction = view.normalized;
             // Imported specimen lies supine: anterior is +Y, superior is -Z.
@@ -210,7 +209,7 @@ namespace ThoraxLab.Editor
             data.volumeLayerMask = 0; data.antialiasing = AntialiasingMode.FastApproximateAntialiasing;
         }
 
-        static void ConfigureLight(Light light, Camera camera, Vector3 positionRelativeToView, float intensity, Color color)
+        internal static void ConfigureLight(Light light, Camera camera, Vector3 positionRelativeToView, float intensity, Color color)
         {
             light.type = LightType.Directional; light.intensity = intensity; light.color = color;
             light.shadows = LightShadows.Soft;

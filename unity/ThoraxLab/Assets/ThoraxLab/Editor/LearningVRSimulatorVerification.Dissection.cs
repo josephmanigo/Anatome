@@ -24,6 +24,21 @@ namespace ThoraxLab.Editor {
     for(int attempt=0;attempt<3&&target.Filter.sharedMesh==before;attempt++){
      var direction=Quaternion.AngleAxis(attempt*120,forward)*tangent;
      SetHandWorld(origin,rotation);yield return 6;Trigger(true);yield return 4;
+     if(attempt==0){
+      bool saw=app.Session.saw;
+      var mesh=hand.GetComponentsInChildren<MeshFilter>().FirstOrDefault(m=>m.sharedMesh&&m.sharedMesh.name=="Detailed dissection-"+(saw?"saw":"scalpel"));
+      float tipGap=mesh?Vector3.Distance(mesh.transform.TransformPoint(Vector3.forward*(saw?InstrumentGeometry.SawTipZ:InstrumentGeometry.ScalpelTipZ)),hand.RayCutPoint):float.PositiveInfinity;
+      Require("visible_edge_meets_native_contact/"+id,mesh&&hand.DrivingBlade&&tipGap<.0002f,
+       "The tool's nominal working end meets this tracked surface. Mesh="+(mesh?mesh.name:"missing")+", driving="+hand.DrivingBlade+", ray="+hand.HasRayCutTarget+", tip gap (m)="+tipGap.ToString("F6")+", can cut="+app.CanCut+", notice="+app.Notice);
+      if(saw){
+       var blade=mesh.transform.Find(InstrumentGeometry.SawBladeName);float excursion=0;
+       bool reduced=app.Settings.Current.reducedMotion;app.Settings.Current.reducedMotion=false;
+       for(int frame=0;frame<8;frame++){yield return 1;excursion=Mathf.Max(excursion,Quaternion.Angle(Quaternion.identity,blade.localRotation));}
+       app.Settings.Current.reducedMotion=true;yield return 2;
+       Require("saw_contact_and_reduced_motion/"+id,excursion>.1f&&excursion<=1.6f&&Quaternion.Angle(Quaternion.identity,blade.localRotation)<.01f,"Only the blade moves under contact. Reduced motion retains the resting pose.");
+       app.Settings.Current.reducedMotion=reduced;
+      }
+     }
      for(int i=1;i<=6;i++){SetHandWorld(origin,Quaternion.LookRotation(surface.point+direction*(.0015f*i)-origin,Vector3.up));yield return 3;}
      report.observations.Add(id+" attempt="+attempt+" canCut="+app.CanCut+" ray="+hand.HasRayCutTarget+" notice="+app.Notice+" strokes="+((List<float>)typeof(LabHandInteractor).GetField("stroke",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).GetValue(hand)).Count);
      Trigger(false);yield return 5;for(int frame=0;frame<900&&app.Session.busy;frame++)yield return 2;
@@ -63,9 +78,10 @@ namespace ThoraxLab.Editor {
    Require("repeated_restore_preserves_opening",Math.Abs(CutMeshData.Capture(skin.Filter.sharedMesh).Volume()-cutVolume)<skin.SourceVolume*.00001,"Repeated Restore keeps one reconstructed remainder with the accepted opening.");
    app.Interrupt();app.UI.ShowHub();yield return 5;
   }
-  IEnumerable<int> VerifyChestCutEntry(){
+  IEnumerable<int> VerifyChestCutEntry(bool zoom=false){
    var chest=app.Catalog.units.First(u=>u.id=="chest-wall").variants.First(v=>v.mode==LearningMode.GuidedDissection&&v.difficulty==Difficulty.Easy);
    app.StartActivity(chest,SessionPhase.Practice);yield return 12;
+   if(zoom){app.Inspector.Open();app.Inspector.ZoomIn();yield return 4;}
    var skin=app.Structures["FMA7163"];var before=skin.Filter.sharedMesh;
    Require("chest_entry_surface",LearningSceneActionFixture.TryCutSurface(app,skin,"left",out var surface),"The real skin is reachable on the current side.");
    var forward=(surface.point-Camera.main.transform.position).normalized;var origin=surface.point-forward*.7f;
@@ -88,6 +104,7 @@ namespace ThoraxLab.Editor {
    for(int i=1;i<=6;i++){SetHandWorld(origin,Quaternion.LookRotation(surface.point+tangent*(.0015f*i)-origin,Vector3.up));yield return 3;}
    var strokes=(List<float>)typeof(LabHandInteractor).GetField("stroke",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).GetValue(hand);
    Require("held_trigger_enters_skin_and_draws",strokes.Count>=48&&app.Session.selected==skin,"A held trigger must begin a stroke when it first reaches the current tissue; samples="+strokes.Count+" notice="+app.Notice);
+   // Exercise a tool change on the release frame, while the samples still belong to the scalpel.
    app.Session.saw=true;Trigger(false);yield return 5;
    Require("wrong_cut_tool_feedback_visible",skin.Filter.sharedMesh==before&&app.Notice=="Select the scalpel for soft tissue.","Wrong tool preserves the skin and displays the reason: "+app.Notice);
    app.UI.RefreshLive();Canvas.ForceUpdateCanvases();yield return 2;
@@ -95,11 +112,25 @@ namespace ThoraxLab.Editor {
    var feedbackScroll=feedback.GetComponentInParent<UnityEngine.UI.ScrollRect>();
    var feedbackBounds=RectTransformUtility.CalculateRelativeRectTransformBounds(feedbackScroll.viewport,feedback.rectTransform);
    Require("cut_rejection_visible_without_scrolling",feedbackBounds.min.y>=feedbackScroll.viewport.rect.yMin&&feedbackBounds.max.y<=feedbackScroll.viewport.rect.yMax,"Cut feedback must fit inside the visible panel after a stroke; bounds="+feedbackBounds+" viewport="+feedbackScroll.viewport.rect);
-   app.Session.saw=false;SetHandWorld(origin,Quaternion.LookRotation(Vector3.up,Vector3.forward));yield return 5;Trigger(true);yield return 4;
+   foreach(int frames in GuideClick("Bone saw"))yield return frames;
+   SetHandWorld(origin,Quaternion.LookRotation(forward,Vector3.up));yield return 5;Trigger(true);yield return 4;
+   Require("saw_on_skin_rejects_at_contact",app.Session.saw&&hand.HasRayCutTarget&&!hand.DrivingBlade&&strokes.Count==0&&app.Notice=="Select the scalpel for soft tissue.","A new trigger press with the saw touching skin gives the tool-specific guidance without driving the blade.");
+   Trigger(false);yield return 4;
+   Require("saw_on_skin_release_preserves_mesh",skin.Filter.sharedMesh==before&&!app.Session.busy&&app.Notice=="Select the scalpel for soft tissue.","Releasing the rejected saw leaves the original tissue and the feedback intact.");
+   foreach(int frames in GuideClick("Scalpel"))yield return frames;
+   SetHandWorld(origin,Quaternion.LookRotation(Vector3.up,Vector3.forward));yield return 5;Trigger(true);yield return 4;
    SetHandWorld(origin,Quaternion.LookRotation(forward,Vector3.up));yield return 4;
+   if(zoom){
+    float size=app.Inspector.Magnification;var point=hand.RayCutPoint;
+    rightState.primary2DAxis=Vector2.up;QueueAll();yield return 10;
+    rightState.primary2DAxis=Vector2.zero;QueueAll();yield return 3;
+    Require("inspection/zoom_during_stroke",app.Inspector.Magnification>size&&hand.HasRayCutTarget&&Vector3.Distance(hand.RayCutPoint,point)<.002f,
+        "Zoom can change mid-stroke without moving the blade contact on the skin.");
+   }
    for(int i=1;i<=6;i++){SetHandWorld(origin,Quaternion.LookRotation(surface.point+tangent*(.0015f*i)-origin,Vector3.up));yield return 3;}
    Trigger(false);yield return 5;for(int frame=0;frame<900&&app.Session.busy;frame++)yield return 2;
    Require("held_trigger_skin_cut_commits",!app.Session.busy&&skin.Filter.sharedMesh!=before,app.Session.message);
+   if(zoom)Require("inspection/cut",app.Inspector.IsOpen&&app.Inspector.Magnification>1&&app.CanUseCuttingTool,"The native cut completes while the enlarged workspace stays interactive.");
    Require("cut_feedback_reaches_learner",app.Notice.StartsWith("Chunk separated."),app.Notice);
    Require("cut_feedback_matches_chunk_only_grab",app.Notice.Contains("Whole layers stay anchored.")&&!app.Notice.Contains("Whole tissue can be inspected"),app.Notice);
    app.Interrupt();app.UI.ShowHub();yield return 5;

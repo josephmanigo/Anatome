@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -19,13 +18,16 @@ namespace ThoraxLab.Learning
                 var objective=app.Engine?.Current;if(objective==null||unit?.isCase!=true)return "";
                 if(objective.action==ActionKind.ClinicalDecision)return Reasoning?Reasoning.PlacementFeedback:"Grip a choice and move it to the answer dock.";
                 if(objective.action==ActionKind.InspectFinding||objective.action==ActionKind.Select)return "Point at the anatomy on the specimen. Press trigger once to select it.";
-                var held=tools.Values.FirstOrDefault(t=>t.Held&&t.activating)??tools.Values.FirstOrDefault(t=>t.Held);
+                var held=HeldTool();
                 string needed=Guided?ToolName(objective.toolId):"a tool for your plan";
+                if(!held&&Guided&&objective.toolId=="cap")return "Grip the cap on the model and draw it away from the mouthpiece.";
                 if(!held)return objective.targetId.EndsWith("withdrawal",System.StringComparison.Ordinal)?"Hold GRIP on the retained "+needed+" at the model, then move it back along the route.":"Hold GRIP to pick up "+needed+" from the tray.";
                 if(held.toolId!=objective.toolId)return Guided?"Holding "+ToolName(held.toolId)+". Return it, then grip "+needed+".":"Holding "+ToolName(held.toolId)+". Match the tool to your plan before using it.";
+                if(objective.action==ActionKind.Trace&&held.toolId=="scalpel"&&Incision)
+                    return (Guided?Incision.Feedback:Incision.Touching?"Blade in contact":"Blade out of contact")+" · "+Mathf.RoundToInt(Incision.Progress*100)+"%";
                 if(objective.action==ActionKind.Trace&&routeIndex<route.Count)return ToolName(held.toolId)+" · move the working end through the route in order.\n"+(Guided?"Next point: "+(routeIndex+1)+" of "+route.Count+". ":"")+"Keep holding grip. No trigger needed.";
                 float distance=Vector3.Distance(held.Tip,targetPoint),angle=Vector3.Angle(held.transform.forward,approach);
-                if(distance>objective.maxDistance)return ToolName(held.toolId)+" · move the working end to "+TargetName(objective.targetId)+".";
+                if(distance>ContactRadius(objective,held.toolId))return ToolName(held.toolId)+" · move the working end to "+TargetName(objective.targetId)+".";
                 if(angle>objective.maxAngle)return "Working end is at the target. Rotate your wrist to align the tool with the entry direction.";
                 if(objective.equipmentState=="inspiration"&&!Inspiration)return "Keep the mouthpiece sealed. Wait for the virtual patient to breathe in.";
                 if(consumedGesture)return "Step recorded. Release grip, or move away before the next contact.";
@@ -50,13 +52,14 @@ namespace ThoraxLab.Learning
         {
             var label=WorldLabel(tool.transform,ToolName(tool.toolId),new Vector3(0,.045f,-.06f),.17f);
             label.gameObject.name="Instrument name";toolLabels.Add(label);
+            if(tool.toolId=="scalpel")return;
             var end=Shape(tool.transform,"Working end marker",PrimitiveType.Sphere,tool.tip.localPosition,Vector3.one*.005f,teal,false);
             end.GetComponent<Renderer>().shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
         }
         TextMeshPro WorldLabel(Transform parent,string text,Vector3 position,float width)
         {
             var label=new GameObject(text).AddComponent<TextMeshPro>();label.transform.SetParent(parent,false);label.transform.localPosition=position;
-            label.font=LabWidgets.Font;label.text=text;label.fontSize=.14f*app.Settings.Current.textScale;label.color=LabWidgets.Ink;
+            label.font=LabWidgets.Font;label.text=text;label.fontSize=.14f*app.Settings.Current.EffectiveTextScale;label.color=LabWidgets.Ink;
             label.alignment=TextAlignmentOptions.Center;label.textWrappingMode=TextWrappingModes.Normal;label.richText=false;
             label.rectTransform.sizeDelta=new Vector2(width,.06f);return label;
         }
@@ -80,7 +83,7 @@ namespace ThoraxLab.Learning
         void LateUpdate()
         {
             if(!app||!Camera.main)return;
-            foreach(var label in toolLabels)if(label){label.transform.rotation=Camera.main.transform.rotation;label.fontSize=.14f*app.Settings.Current.textScale;}
+            foreach(var label in toolLabels)if(label){label.transform.rotation=Camera.main.transform.rotation;label.fontSize=.14f*app.Settings.Current.EffectiveTextScale;}
         }
         public void ReturnLooseTools()
         {
@@ -88,7 +91,7 @@ namespace ThoraxLab.Learning
                 int slot=offeredSlots.TryGetValue(pair.Key,out var value)?value:1;
                 pair.Value.transform.SetPositionAndRotation(toolRest+Vector3.right*((slot-1)*.075f),Quaternion.Euler(65,0,0));
                 pair.Value.activating=false;
-                RestoreWithdrawalTool(pair.Value);
+                PositionRetainedTool(pair.Value);
             }
             app.Message("Loose tools returned to the tray. Release a held tool before returning it.");
         }

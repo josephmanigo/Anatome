@@ -69,7 +69,7 @@ namespace ThoraxLab.Learning
         }
         void Update()
         {
-            if (app && (labelScale != app.Settings.Current.textScale || labelContrast != app.Settings.Current.highContrast)) RefreshLabels();
+            if (app && (labelScale != app.Settings.Current.EffectiveTextScale || labelContrast != app.Settings.Current.highContrast)) RefreshLabels();
             if(app && hints!=app.Settings.Current.hints)
             {
                 hints=app.Settings.Current.hints;
@@ -132,7 +132,7 @@ namespace ThoraxLab.Learning
         }
         void RefreshLabels()
         {
-            labelScale = app.Settings.Current.textScale; labelContrast = app.Settings.Current.highContrast;
+            labelScale = app.Settings.Current.EffectiveTextScale; labelContrast = app.Settings.Current.highContrast;
             foreach (var label in labels)
             {
                 label.fontSize = .16f * labelScale; label.color = labelContrast ? Color.white : LabWidgets.Ink;

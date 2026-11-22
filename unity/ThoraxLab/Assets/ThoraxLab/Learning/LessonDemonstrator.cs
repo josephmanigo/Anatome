@@ -5,7 +5,7 @@ namespace ThoraxLab.Learning
 {
     public sealed class LessonDemonstrator : MonoBehaviour
     {
-        GameObject ghost;Material material;Coroutine sequence;
+        GameObject visual;Material material;Coroutine sequence;
         public bool Playing {get;private set;}
         public void Play()
         {
@@ -22,13 +22,30 @@ namespace ThoraxLab.Learning
                 anatomy.Highlight(true);
                 if(objective.action==ActionKind.Place)
                 {
-                    ghost=new GameObject("Teaching demonstration · no collision");ghost.AddComponent<MeshFilter>().sharedMesh=anatomy.Filter.sharedMesh;
-                    material=new Material(Shader.Find("Universal Render Pipeline/Lit"));material.color=new Color(.2f,.78f,.70f);ghost.AddComponent<MeshRenderer>().sharedMaterial=material;
-                    ghost.transform.SetParent(anatomy.transform.parent,false);ghost.transform.localScale=anatomy.transform.localScale;
-                    var start=anatomy.transform.position;var end=objective.action==ActionKind.Place?anatomy.transform.parent.TransformPoint(anatomy.RestPosition):start+Vector3.up*.18f;
-                    var initial=anatomy.transform.rotation;var final=objective.action==ActionKind.Place?anatomy.transform.parent.rotation*anatomy.RestRotation:initial;
-                    float time=0;while(time<3&&app.Engine!=null&&app.Engine.Current==objective)
-                    {if(app.CanInteract&&!app.Narrator.Paused)time+=Time.deltaTime;float t=app.Settings.Current.reducedMotion?1:Mathf.SmoothStep(0,1,time/3);ghost.transform.SetPositionAndRotation(Vector3.Lerp(start,end,t),Quaternion.Slerp(initial,final,t));yield return null;}
+                    visual = new GameObject("Placement guide line");
+                    var destination = visual.transform;
+                    destination.SetParent(anatomy.transform.parent, false);
+                    destination.SetLocalPositionAndRotation(anatomy.RestPosition, anatomy.RestRotation);
+                    destination.localScale = anatomy.transform.localScale;
+                    var line = visual.AddComponent<LineRenderer>();
+                    line.sharedMaterial = Resources.Load<Material>("Learning/GuidanceLine");
+                    line.useWorldSpace = true;
+                    line.positionCount = 2;
+                    line.startWidth = .004f;
+                    line.endWidth = .002f;
+                    line.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    line.receiveShadows = false;
+                    var meshCenter = anatomy.SourceBounds.center;
+                    float time = 0;
+                    while (time < 3 && app.Engine?.Current == objective)
+                    {
+                        if (app.CanInteract && !app.Narrator.Paused) time += Time.deltaTime;
+                        float t = app.Settings.Current.reducedMotion ? 1 : Mathf.SmoothStep(0, 1, time / 3);
+                        var start = anatomy.transform.TransformPoint(meshCenter);
+                        line.SetPosition(0, start);
+                        line.SetPosition(1, Vector3.Lerp(start, destination.TransformPoint(meshCenter), t));
+                        yield return null;
+                    }
                 }
                 else{app.Procedure.ShowHint();yield return new WaitForSeconds(2);}
                 if(anatomy)anatomy.Highlight(false);
@@ -36,25 +53,32 @@ namespace ThoraxLab.Learning
             else if(app.Procedure.Tools.TryGetValue(objective.toolId,out var tool))
             {
                 app.Procedure.ShowHint();
-                ghost=new GameObject("Tool demonstration - no collision or scoring");
-                var model=InstrumentGeometry.Create(ghost.transform,objective.toolId);
+                visual=new GameObject("Tool demonstration - no collision or scoring");
+                var model=InstrumentGeometry.Create(visual.transform,objective.toolId);
                 material=new Material(Resources.Load<Material>("Learning/GuidanceSocket"));
                 material.SetColor("_BaseColor",new Color(.2f,.85f,.77f,.35f));
                 var renderer=model.GetComponent<MeshRenderer>();var finishes=renderer.sharedMaterials;for(int i=0;i<finishes.Length;i++)finishes[i]=material;renderer.sharedMaterials=finishes;
-                var rotation=Quaternion.LookRotation(app.Procedure.Approach);var points=app.Procedure.TrainingRoute;
+                var rotation=objective.toolId=="scalpel"&&app.Procedure.Incision?app.Procedure.Incision.WorkingRotation:Quaternion.LookRotation(app.Procedure.Approach);var points=app.Procedure.TrainingRoute;
                 float time=0;while(time<4&&app.Engine!=null&&app.Engine.Current==objective){
                     if(app.CanInteract&&!app.Narrator.Paused)time+=Time.deltaTime;
                     float t=app.Settings.Current.reducedMotion?1:Mathf.Clamp01(time/3);
                     Vector3 end=app.Procedure.TargetPoint;
                     if(objective.action==ActionKind.Trace&&points.Count>1){float index=t*(points.Count-1);int from=Mathf.Min(points.Count-2,Mathf.FloorToInt(index));end=Vector3.Lerp(points[from],points[from+1],index-from);}
                     else end=Vector3.Lerp(end-app.Procedure.Approach*.09f,end,t);
-                    ghost.transform.SetPositionAndRotation(end-rotation*tool.tip.localPosition,rotation);yield return null;
+                    visual.transform.SetPositionAndRotation(end-rotation*tool.tip.localPosition,rotation);yield return null;
                 }
             }
             else app.Procedure.ShowHint();
             app.Message("Your turn. Follow the current step; grip holds the tool and the panel explains its action.");Stop();
         }
-        public void Stop(){if(sequence!=null)StopCoroutine(sequence);sequence=null;if(ghost)Destroy(ghost);if(material)Destroy(material);Playing=false;}
+        public void Stop()
+        {
+            if(sequence!=null)StopCoroutine(sequence);
+            sequence=null;
+            if(visual){visual.SetActive(false);Destroy(visual);visual=null;}
+            if(material){Destroy(material);material=null;}
+            Playing=false;
+        }
         void OnDestroy()=>Stop();
     }
 }

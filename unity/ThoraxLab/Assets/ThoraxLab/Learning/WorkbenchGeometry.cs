@@ -224,9 +224,10 @@ namespace ThoraxLab.Learning
                 surface.triangles.Add(a+1);surface.triangles.Add(side>0?b+1:b);surface.triangles.Add(side>0?b:b+1);
             }
         }
-        public void TissueBand(float centerX, float front, float back, Material material, float width = .085f)
+        public void TissueBand(float centerX, float front, float back, Material material, float width = .085f, Material cutFace = null)
         {
             var surface = For(material);
+            var section = cutFace ? For(cutFace) : surface;
             // A gently convex skin envelope with rounded corners, shared by every layer.
             const int count = 32;
             var leftFront = new Vector3[count + 1]; var rightFront = new Vector3[count + 1];
@@ -244,26 +245,27 @@ namespace ThoraxLab.Learning
             const int columns=8;
             for(int face=0;face<2;face++)
             {
-                int start=surface.vertices.Count;
+                var side = face == 0 ? surface : section;
+                int start=side.vertices.Count;
                 for(int row=0;row<=count;row++)for(int col=0;col<=columns;col++)
                 {
                     float u=(float)col/columns;
                     var point=Vector3.Lerp(face==0?leftFront[row]:leftBack[row],face==0?rightFront[row]:rightBack[row],u);
                     point.z-=.0035f*Mathf.Sin(u*Mathf.PI);
                     var normal=new Vector3(-.0035f*Mathf.PI*Mathf.Cos(u*Mathf.PI)/(rightFront[row].x-leftFront[row].x),-.065f*Mathf.Sin(point.y*13),-1).normalized;
-                    surface.vertices.Add(point);surface.normals.Add(face==0?normal:-normal);surface.uv.Add(new Vector2(u,(float)row/count));
+                    side.vertices.Add(point);side.normals.Add(face==0?normal:-normal);side.uv.Add(new Vector2(u,(float)row/count));
                 }
                 for(int row=0;row<count;row++)for(int col=0;col<columns;col++)
                 {
                     int a=start+row*(columns+1)+col,b=a+columns+1;
-                    surface.triangles.Add(a);surface.triangles.Add(face==0?b:a+1);surface.triangles.Add(face==0?a+1:b);
-                    surface.triangles.Add(a+1);surface.triangles.Add(face==0?b:b+1);surface.triangles.Add(face==0?b+1:b);
+                    side.triangles.Add(a);side.triangles.Add(face==0?b:a+1);side.triangles.Add(face==0?a+1:b);
+                    side.triangles.Add(a+1);side.triangles.Add(face==0?b:b+1);side.triangles.Add(face==0?b+1:b);
                 }
             }
             for (int i = 0; i < count; i++)
             {
-                Quad(surface, leftFront[i], leftBack[i], leftBack[i + 1], leftFront[i + 1], Vector3.left);
-                Quad(surface, rightFront[i], rightFront[i + 1], rightBack[i + 1], rightBack[i], Vector3.right);
+                Quad(section, leftFront[i], leftBack[i], leftBack[i + 1], leftFront[i + 1], Vector3.left);
+                Quad(section, rightFront[i], rightFront[i + 1], rightBack[i + 1], rightBack[i], Vector3.right);
             }
             for(int col=0;col<columns;col++)for(int end=0;end<=1;end++)
             {
@@ -271,22 +273,36 @@ namespace ThoraxLab.Learning
                 Vector3 Edge(Vector3 a,Vector3 b,float t)=>Vector3.Lerp(a,b,t)-Vector3.forward*(.0035f*Mathf.Sin(t*Mathf.PI));
                 var a=Edge(leftFront[row],rightFront[row],u);var b=Edge(leftFront[row],rightFront[row],v);
                 var c=Edge(leftBack[row],rightBack[row],v);var d=Edge(leftBack[row],rightBack[row],u);
-                if(end==0)Quad(surface,a,b,c,d,Vector3.down);else Quad(surface,a,d,c,b,Vector3.up);
+                if(end==0)Quad(section,a,b,c,d,Vector3.down);else Quad(section,a,d,c,b,Vector3.up);
             }
         }
-        public void Build(Transform parent, string title)
+        public void Build(Transform parent, string title, params Material[] metreMapped)
         {
             foreach (var pair in surfaces)
             {
                 var source = pair.Value;
                 var mesh = new Mesh { name = title + " / " + pair.Key.name, indexFormat = source.vertices.Count > 65535 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
+                if (Array.IndexOf(metreMapped, pair.Key) >= 0)
+                    for (int i = 0; i < source.vertices.Count; i++)
+                    {
+                        var p = source.vertices[i]; var n = source.normals[i];
+                        if (Mathf.Abs(n.z) >= Mathf.Max(Mathf.Abs(n.x), Mathf.Abs(n.y))) source.uv[i] = new Vector2(p.x, p.y);
+                        else if (Mathf.Abs(n.y) >= Mathf.Abs(n.x)) source.uv[i] = new Vector2(p.x, p.z);
+                        else source.uv[i] = new Vector2(p.z, p.y);
+                    }
                 mesh.SetVertices(source.vertices); mesh.SetNormals(source.normals); mesh.SetUVs(0, source.uv); mesh.SetTriangles(source.triangles, 0); mesh.RecalculateBounds();
+                if (pair.Key.IsKeywordEnabled("_NORMALMAP")) mesh.RecalculateTangents();
                 mesh.UploadMeshData(true); meshes.Add(mesh); TriangleCount += source.triangles.Count / 3;
                 var go = new GameObject(mesh.name); go.transform.SetParent(parent, false); go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 var renderer = go.AddComponent<MeshRenderer>(); renderer.sharedMaterial = pair.Key; renderer.shadowCastingMode = ShadowCastingMode.Off; renderer.receiveShadows = true;
             }
             surfaces.Clear();
         }
-        public void Dispose() { foreach (var mesh in meshes) if (mesh) UnityEngine.Object.Destroy(mesh); meshes.Clear(); }
+        internal static void Release(UnityEngine.Object generated)
+        {
+            if(!generated)return;
+            if(Application.isPlaying)UnityEngine.Object.Destroy(generated);else UnityEngine.Object.DestroyImmediate(generated);
+        }
+        public void Dispose() { foreach (var mesh in meshes) Release(mesh); meshes.Clear(); }
     }
 }

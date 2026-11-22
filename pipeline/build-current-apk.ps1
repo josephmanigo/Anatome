@@ -5,8 +5,8 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $taskRoot = Split-Path $PSScriptRoot -Parent
-$taskVersion = '1.6.0'
-$taskCode = 20
+$taskVersion = '1.6.6'
+$taskCode = 26
 $taskCertificate = '36b13699d72d8f159e19881ea5fa368f593677a2b218d0082ba1a871dd23e910'
 $taskUnity = 'C:\Program Files\Unity\Hub\Editor\6000.3.19f1\Editor'
 $taskOutput = Join-Path $taskRoot "builds/AnatomeSchool/Anatome-$taskVersion-Production.apk"

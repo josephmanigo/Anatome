@@ -19,9 +19,10 @@ namespace ThoraxLab.Learning
         public static readonly Color Muted = new Color(.72f,.82f,.87f,1);
         public static readonly Color Accent = new Color(.48f,.88f,.81f,1);
         public static float ControlHeight => Mathf.Ceil(48*TextScale+28);
+        public static float BackHeight => Mathf.Max(58,Mathf.Ceil(36*TextScale+18));
         public static TMP_FontAsset Font;
         public static float TextScale = 1;
-        public static bool HighContrast;
+        public static bool HighContrast, AstigmatismReadingMode;
         public static RectTransform Rect(string name, Transform parent)
         {
             var rt = new GameObject(name, typeof(RectTransform)).GetComponent<RectTransform>(); rt.SetParent(parent,false); return rt;
@@ -40,6 +41,12 @@ namespace ThoraxLab.Learning
         {
             var rt=Rect(name,parent);var l=rt.gameObject.AddComponent<HorizontalLayoutGroup>();l.spacing=spacing;l.childControlWidth=true;l.childControlHeight=true;l.childForceExpandHeight=true;l.childForceExpandWidth=true;return rt;
         }
+        public static RectTransform NavigationRow(Transform parent,string name)
+        {
+            var row=Row(parent,name,12);var layout=row.GetComponent<HorizontalLayoutGroup>();
+            layout.childForceExpandWidth=layout.childForceExpandHeight=false;layout.childAlignment=TextAnchor.MiddleLeft;
+            return row;
+        }
         public static TextMeshProUGUI Text(Transform parent,string value,float size=22,Color? color=null)
         {
             var rt=Rect("Text · "+(value??""),parent);var t=rt.gameObject.AddComponent<TextMeshProUGUI>();t.font=Font;t.text=value;t.fontSize=Mathf.Max(22,size)*TextScale;t.color=HighContrast&&(color==null||color==Muted)?Color.white:color??Ink;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Overflow;t.raycastTarget=false;t.richText=false;t.lineSpacing=3;return t;
@@ -55,6 +62,25 @@ namespace ThoraxLab.Learning
             if(value.Length>5&&value!="Delete"&&!value.StartsWith("Shift "))LabUIVisuals.Icon(image.transform,LabUIVisuals.ButtonGlyph(value),primary?Ground:Muted,24);
             LabUIVisuals.Border(image.rectTransform,primary?new Color(.8f,1,1,.7f):new Color(.56f,.76f,.85f,.5f));
             b.onClick.AddListener(()=>action?.Invoke());return b;
+        }
+        public static Button BackButton(Transform parent,Action action,string name="Back",string label="Back")
+        {
+            var face=LabUIVisuals.Surface(parent,name,Color.white);
+            var button=face.gameObject.AddComponent<Button>();button.targetGraphic=face;
+            var colors=button.colors;colors.normalColor=Surface;colors.highlightedColor=Color.Lerp(Surface,Accent,.22f);
+            colors.selectedColor=colors.highlightedColor;colors.pressedColor=Color.Lerp(Surface,Accent,.38f);colors.fadeDuration=0;button.colors=colors;
+            var layout=face.gameObject.AddComponent<HorizontalLayoutGroup>();layout.spacing=6*TextScale;
+            layout.childAlignment=TextAnchor.MiddleCenter;layout.childControlWidth=layout.childControlHeight=true;
+            layout.childForceExpandWidth=layout.childForceExpandHeight=false;
+            var ink=HighContrast?Color.white:Ink;float iconSize=24*TextScale;
+            LabUIVisuals.Icon(face.transform,LabGlyph.Back,ink,iconSize);
+            var caption=Text(face.transform,label,24,ink);caption.fontStyle=FontStyles.Bold;
+            caption.textWrappingMode=TextWrappingModes.NoWrap;caption.alignment=TextAlignmentOptions.Center;
+            float labelWidth=Mathf.Ceil(caption.GetPreferredValues(label).x)+2;Size(caption,width:labelWidth);
+            float width=Mathf.Max(108,labelWidth+iconSize+layout.spacing+28);
+            Size(face,BackHeight,width);face.rectTransform.sizeDelta=new Vector2(width,BackHeight);
+            LabUIVisuals.Border(face.rectTransform);
+            button.onClick.AddListener(()=>action());return button;
         }
         public static TMP_InputField Input(Transform parent,string placeholder,string value="",bool secret=false)
         {

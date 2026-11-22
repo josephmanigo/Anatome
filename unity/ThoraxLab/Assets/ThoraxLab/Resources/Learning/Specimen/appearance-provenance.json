@@ -1,8 +1,8 @@
 {
-    "version": "vr-tissue-appearance-2026.09.06.3",
+    "version": "vr-tissue-appearance-2026.11.21.5",
     "role": "Derived appearance assets for the original Anatome specimen",
-    "anatomy": "No mesh, tissue boundary, collider or anatomical landmark is changed. BodyParts3D and Medical Augmented Learning source attribution remains in anatomy-catalog.json and source manifests.",
-    "method": "Original deterministic procedural albedo and height-derived normal maps. Pores, fine striation and lobular texture are illustrative surface appearance, not segmented histology or patient measurements.",
+    "anatomy": "Anatomical geometry is sourced separately from BodyParts3D and the Mauritanian Anatomy Laboratory thoracic atlas. Specimen materials do not displace anatomy.",
+    "method": "Organ and chest-wall exteriors and cut faces use separate object-space colour, smoothness and relief maps. Chest-wall maps depict a thin-skin surface, cut dermal connective tissue, adipose lobules, a collagen sheet and skeletal muscle fascicles. Pigmentation, strand directions and cut texture are authored gross appearance cues. Source references and limits are in docs/SUPERFICIAL-TISSUE-APPEARANCE.md.",
     "reconstruction": "FMA7163 skin has an authored wall; REC_fat and REC_fascia remain authored envelope-based teaching layers. Their measured thickness and exact microstructure are not claimed.",
     "bone": "The existing bone-cap shader and distance-derived cortical/cancellous teaching contrast are retained.",
     "preservation": "Materials and PNGs are stored separately under Resources/Learning/Specimen. Original source maps, meshes, LODs and geometry provenance remain unchanged.",

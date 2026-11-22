@@ -73,7 +73,7 @@ namespace ThoraxLab.Learning
             var right=LearningXRInput.Read(p.leftHanded?XRNode.LeftHand:XRNode.RightHand);
             Vector2 move=left.axis,turn=right.axis;
             moveInput.Filter(left.source,left.tracked,p.stickDeadzone,ref move.x,ref move.y);
-            turnInput.Filter(right.source,right.tracked,p.stickDeadzone,ref turn.x,ref turn.y);
+            turnInput.Filter(right.source,right.tracked && !(app.Inspector && app.Inspector.IsOpen),p.stickDeadzone,ref turn.x,ref turn.y);
             if(!moveInput.Ready||moveInput.Interrupted)teleportArmed=false;
             if(!turnInput.Ready||turnInput.Interrupted)snapTurn.Reset();
             bool smoothTurn=p.turning==TurnStyle.Smooth&&Mathf.Abs(turn.x)>Mathf.Abs(turn.y);
@@ -85,9 +85,10 @@ namespace ThoraxLab.Learning
                 var delta=(forward*move.y+Vector3.Cross(Vector3.up,forward)*move.x)*p.moveSpeed*Time.deltaTime;
                 var controller=rig.GetComponent<CharacterController>();
                 if(controller){
-                    // Keep the capsule above floor collision skin even when height assistance raises the rig.
-                    controller.height=Mathf.Max(controller.radius*2,view.transform.position.y);
-                    controller.center=rig.InverseTransformPoint(new Vector3(view.transform.position.x,controller.height*.5f+controller.skinWidth+.01f,view.transform.position.z));
+                    // The reach adjustment raises the view. Keep the walking capsule at the learner's calibrated height.
+                    var physicalHead=rig.TransformPoint(view.transform.localPosition);
+                    controller.height=Mathf.Max(controller.radius*2,physicalHead.y-p.heightBoost);
+                    controller.center=rig.InverseTransformPoint(new Vector3(physicalHead.x,controller.height*.5f+controller.skinWidth+.01f,physicalHead.z));
                     controller.stepOffset=0;
                     controller.Move(delta);
                 }else rig.position+=delta;

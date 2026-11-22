@@ -15,6 +15,9 @@ namespace ThoraxLab.Learning
         readonly List<WorkbenchGeometry> geometry = new List<WorkbenchGeometry>();
         WorkbenchGeometry solid;
         Material skin, fat, muscle, bone, artery, nerve, lung, polymer, steel, dark, fluid, teal, tissueLight, vesselLining, screen, vein, manikin, lips, crease;
+        Material[] equipmentFinishes;
+        public CaseIncisionSurface Incision { get; private set; }
+        public const float CapTipZ = .0141f;
         Transform field, retainedDevice, cap, seal, collection, fixation;
         string disease;
         public IReadOnlyDictionary<string, Transform> Targets => targets;
@@ -23,32 +26,45 @@ namespace ThoraxLab.Learning
         public void Build(string condition)
         {
             disease=condition;
-            skin=Mat("Skin cross-section",new Color(.53f,.32f,.235f),0,.28f);fat=Mat("Adipose cross-section",new Color(.77f,.57f,.27f),0,.3f);muscle=Mat("Intercostal muscle",new Color(.39f,.11f,.12f),0,.34f);bone=Mat("Rib cortex",new Color(.72f,.66f,.52f),0,.3f);artery=Mat("Arterial wall",new Color(.44f,.095f,.09f));nerve=Mat("Intercostal nerve",new Color(.80f,.66f,.35f));lung=Mat("Lung tissue",new Color(.46f,.235f,.26f),0,.34f);polymer=Mat("Medical polymer",new Color(.69f,.75f,.73f),0,.32f);steel=Mat("Satin stainless steel",new Color(.44f,.51f,.55f),.8f,.48f);dark=Mat("Graphite equipment housing",new Color(.035f,.052f,.066f),.2f,.28f);fluid=Mat("Pleural fluid",new Color(.59f,.40f,.16f),0,.56f);
-            teal=Mat("Sterile teal detail",new Color(.12f,.32f,.31f),.12f,.35f);tissueLight=Mat("Tissue cut detail",new Color(.66f,.39f,.29f),0,.3f);vesselLining=Mat("Vessel inner wall",new Color(.70f,.30f,.26f),0,.38f);screen=Mat("Monitor display",new Color(.008f,.024f,.030f),0,.18f);vein=Mat("Intercostal vein",new Color(.12f,.19f,.29f),0,.36f);
+            skin=Mat("Skin cross-section",new Color(.53f,.32f,.235f),0,.28f);fat=Mat("Adipose cross-section",new Color(.77f,.57f,.27f),0,.3f);muscle=Mat("Intercostal muscle",new Color(.39f,.11f,.12f),0,.34f);bone=Mat("Rib cortex",new Color(.72f,.66f,.52f),0,.3f);artery=Mat("Arterial wall",new Color(.44f,.095f,.09f));nerve=Mat("Intercostal nerve",new Color(.80f,.66f,.35f));lung=Mat("Lung tissue",new Color(.46f,.235f,.26f),0,.34f);fluid=Mat("Pleural fluid",new Color(.59f,.40f,.16f),0,.56f);
+            polymer=InstrumentGeometry.FinishMaterial(InstrumentGeometry.Ivory);steel=InstrumentGeometry.FinishMaterial(InstrumentGeometry.Satin);
+            dark=InstrumentGeometry.FinishMaterial(InstrumentGeometry.Ink);teal=InstrumentGeometry.FinishMaterial(InstrumentGeometry.Teal);
+            var drape=new Material(InstrumentGeometry.FinishMaterial(InstrumentGeometry.Fibre)){name="Woven sterile drape",color=new Color(.17f,.46f,.47f)};
+            materials.Add(drape);equipmentFinishes=new[]{polymer,steel,dark,teal,drape};
+            tissueLight=Mat("Tissue cut detail",new Color(.66f,.39f,.29f),0,.3f);vesselLining=Mat("Vessel inner wall",new Color(.70f,.30f,.26f),0,.38f);screen=Mat("Monitor display",new Color(.008f,.024f,.030f),0,.18f);vein=Mat("Intercostal vein",new Color(.12f,.19f,.29f),0,.36f);
             ApplyTissue(skin,"skin");ApplyTissue(fat,"fat");ApplyTissue(muscle,"muscle");ApplyTissue(lung,"lung");ApplyTissue(bone,"bone");
+            ApplyTissue(artery,"artery");ApplyTissue(vein,"vein");ApplyTissue(nerve,"nerve");ApplyTissue(vesselLining,"artery",true);
             manikin=Mat("Warm silicone training manikin",new Color(.72f,.49f,.38f),0,.25f);ApplyTissue(manikin,"skin");manikin.color=new Color(1.24f,1.25f,1.25f);
             lips=Mat("Muted silicone lip detail",new Color(.43f,.22f,.18f),0,.25f);crease=Mat("Soft facial recess",new Color(.20f,.105f,.081f),0,.16f);
             solid=new WorkbenchGeometry();geometry.Add(solid);
             BuildStation();
-            if(condition=="pneumothorax"||condition=="pleural-effusion")BuildPleural();
+            if(condition=="pneumothorax"||condition=="pleural-effusion")BuildPleural(drape);
             else if(condition=="coronary-disease"||condition=="aortic-stenosis")BuildVascular(condition=="aortic-stenosis");
             else BuildAirwayCare();
             BuildChart();
-            solid.Build(transform,"Merged clinical workstation");
+            solid.Build(transform,"Merged clinical workstation",equipmentFinishes);
             foreach(var part in geometry){VisualTriangleCount+=part.TriangleCount;VisualRendererCount+=part.RendererCount;}
+            if(Incision){VisualTriangleCount+=Incision.GetComponent<MeshFilter>().sharedMesh.triangles.Length/3;VisualRendererCount++;}
+            if(cap){
+                var capMesh=cap.GetComponent<MeshFilter>().sharedMesh;
+                for(int i=0;i<capMesh.subMeshCount;i++)VisualTriangleCount+=(int)capMesh.GetIndexCount(i)/3;
+                VisualRendererCount++;
+            }
         }
         Material Mat(string title,Color color,float metallic=0,float smoothness=.4f){var m=new Material(Shader.Find("Universal Render Pipeline/Lit")){name=title,color=color};m.SetFloat("_Metallic",metallic);m.SetFloat("_Smoothness",smoothness);materials.Add(m);return m;}
-        static void ApplyTissue(Material material,string tissue)
+        static void ApplyTissue(Material material,string tissue,bool interior=false)
         {
-            var source=Resources.Load<Material>("Learning/Specimen/Tissue_"+tissue);
+            var source=Resources.Load<Material>("Learning/Specimen/"+(interior?"Interior_":"Tissue_")+tissue);
             if(!source)return;
+            material.shader=source.shader;
             material.CopyPropertiesFromMaterial(source);
-            // Small station meshes use continuous UVs; retain the existing subtle albedo.
-            material.SetFloat("_Smoothness",.25f);material.DisableKeyword("_NORMALMAP");
+            // The source FBX has a 100x transform. The trainer is built directly in metres.
+            if(source.shader.name=="ThoraxLab/Organ Surface")
+                material.SetTextureScale("_BaseMap",source.GetTextureScale("_BaseMap")*.01f);
         }
         Transform Group(string title,Action<WorkbenchGeometry> author)
         {
-            var root=new GameObject(title).transform;root.SetParent(transform,false);var parts=new WorkbenchGeometry();geometry.Add(parts);author(parts);parts.Build(root,title);return root;
+            var root=new GameObject(title).transform;root.SetParent(transform,false);var parts=new WorkbenchGeometry();geometry.Add(parts);author(parts);parts.Build(root,title,equipmentFinishes);return root;
         }
         void Box(Vector3 p,Vector3 size,Material mat,float radius=.004f)=>solid.Box(p,size,radius,mat);
         void Tube(Vector3 a,Vector3 b,float diameter,Material mat)=>solid.Tube(new[]{a,b},diameter*.5f,mat);
@@ -80,17 +96,23 @@ namespace ThoraxLab.Learning
         void Route(string id,params Vector3[] points){routes["equipment:"+id]=points;}
         void Protect(Transform t,string id)
         {var b=t.gameObject.AddComponent<BoxCollider>();b.size=Vector3.one;var p=t.gameObject.AddComponent<ProcedureProtectedRegion>();p.anatomyId=id;}
-        void BuildPleural()
+        void BuildPleural(Material drape)
         {
+            var pleura=Mat("Pleural lining",Color.white);ApplyTissue(pleura,"membrane");
+            var dermis=Mat("Exposed dermis",Color.white);ApplyTissue(dermis,"skin",true);
+            var fascia=Mat("Thoracic fascial sheet",Color.white);ApplyTissue(fascia,"fascia");
+            var cutMuscle=Mat("Sectioned muscle fascicles",Color.white);ApplyTissue(cutMuscle,"muscle",true);
+            ApplyTissue(fat,"fat",true);
             // Authored, enlarged cutaway. The continuous contour and differentiated cut
             // surfaces show layer order without pretending to be a segmented patient scan.
             for(int side=-1;side<=1;side+=2)
             {
                 float x=side*.093f;
-                solid.TissueBand(x,-.0445f,-.0355f,skin);
+                solid.TissueBand(x,-.0445f,-.0355f,skin,cutFace:dermis);
                 solid.TissueBand(x,-.035f,-.007f,fat);
-                solid.TissueBand(x,-.006f,.010f,muscle);
-                solid.TissueBand(x,.022f,.026f,polymer);
+                solid.TissueBand(x,-.0069f,-.0061f,fascia);
+                solid.TissueBand(x,-.006f,.010f,muscle,cutFace:cutMuscle);
+                solid.TissueBand(x,.022f,.026f,pleura);
                 // Lobules are on the adipose cut edge only, not scattered over intact skin.
                 for(int row=0;row<15;row++)
                 {
@@ -127,15 +149,23 @@ namespace ThoraxLab.Learning
             {
                 foreach(int side in new[]{-1,1})
                 {
-                    g.Box(new Vector3(side*.17f,0,-.055f),new Vector3(.04f,.25f,.006f),.009f,teal);
+                    g.Box(new Vector3(side*.17f,0,-.055f),new Vector3(.04f,.25f,.006f),.009f,drape);
                     g.Tube(new[]{new Vector3(side*.181f,-.11f,-.060f),new Vector3(side*.176f,0,-.060f),new Vector3(side*.181f,.11f,-.060f)},.001f,polymer,6);
                 }
-                g.Box(new Vector3(0,.127f,-.055f),new Vector3(.36f,.018f,.006f),.004f,teal);
+                g.Box(new Vector3(0,.127f,-.055f),new Vector3(.36f,.018f,.006f),.004f,drape);
             });field.gameObject.SetActive(false);
             Anchor("pleural-site",new Vector3(0,-.014f,-.048f),Vector3.forward);
             Anchor("pleural-end",new Vector3(0,-.014f,.047f),Vector3.forward);
             Anchor("pleural-incision",new Vector3(.012f,-.014f,-.048f),Vector3.right);
             Route("pleural-incision",new Vector3(-.012f,-.014f,-.048f),new Vector3(0,-.014f,-.048f),new Vector3(.012f,-.014f,-.048f));
+            if(disease=="pneumothorax")
+            {
+                var incision=new GameObject("Working skin insert");incision.transform.SetParent(transform,false);
+                Incision=incision.AddComponent<CaseIncisionSurface>();
+                var surface=Resources.Load<Material>("Learning/CaseSkin/Surface");
+                var cut=Resources.Load<Material>("Learning/CaseSkin/CutFace");
+                var path=routes["equipment:pleural-incision"];Incision.Build(path[0],path[path.Length-1],surface?surface:skin,cut?cut:tissueLight);
+            }
             Anchor("pleural-fixation",new Vector3(0,-.014f,-.055f),Vector3.down);
             Route("pleural-fixation",new Vector3(-.014f,-.014f,-.055f),new Vector3(0,.005f,-.055f),new Vector3(.014f,-.014f,-.055f),new Vector3(0,-.031f,-.055f),new Vector3(0,-.014f,-.055f));
             Route("pleural-end",new Vector3(0,-.014f,-.092f),new Vector3(0,-.014f,-.04f),new Vector3(0,-.014f,.014f),new Vector3(0,-.014f,.047f));
@@ -311,11 +341,9 @@ namespace ThoraxLab.Learning
                 Anchor("spacer",new Vector3(-.14f,-.105f,-.045f),Vector3.forward);
                 Anchor("inhaler-cap",new Vector3(-.14f,-.09f,-.15f),Vector3.back);Route("inhaler-cap",new Vector3(-.14f,-.09f,-.065f),new Vector3(-.14f,-.09f,-.11f),new Vector3(-.14f,-.09f,-.15f));
                 Anchor("inhaler-prep",new Vector3(-.14f,-.015f,-.08f),Vector3.forward);Route("inhaler-prep",new Vector3(-.14f,-.11f,-.08f),new Vector3(-.14f,-.015f,-.08f),new Vector3(-.14f,-.11f,-.08f),new Vector3(-.14f,-.015f,-.08f));
-                cap=Group("Inhaler mouthpiece cap",g=>
-                {
-                    g.Box(new Vector3(-.14f,-.105f,-.05f),new Vector3(.052f,.039f,.02f),.012f,teal);
-                    for(int i=0;i<5;i++)g.Box(new Vector3(-.157f+i*.0085f,-.105f,-.061f),new Vector3(.0012f,.020f,.001f),.0004f,dark);
-                });
+                cap=InstrumentGeometry.Create(transform,"cap").transform;cap.name="Fitted mouthpiece cap";
+                cap.localRotation=Quaternion.LookRotation(Vector3.back,Vector3.up);
+                cap.localPosition=routes["equipment:inhaler-cap"][0]-cap.localRotation*Vector3.forward*CapTipZ;
             }
             else
             {
@@ -367,15 +395,17 @@ namespace ThoraxLab.Learning
         }
         public bool TryRoute(string id,List<Vector3> worldPoints)
         {if(!routes.TryGetValue(id,out var local))return false;foreach(var p in local)worldPoints.Add(transform.TransformPoint(p));return true;}
+        public void HideFittedCap(){if(cap)cap.gameObject.SetActive(false);}
         public void UpdateCompleted(Func<string,bool> completed)
         {
             if(field)field.gameObject.SetActive(completed("swab"));
+            if(Incision)Incision.Restore(completed("scalpel"));
             if(cap)cap.gameObject.SetActive(!completed("cap"));
             if(retainedDevice)retainedDevice.gameObject.SetActive(completed(disease=="pneumothorax"?"drain":disease=="coronary-disease"?"stent":"valve"));
             if(seal)seal.gameObject.SetActive(completed("dressing"));
             if(fixation)fixation.gameObject.SetActive(completed("suture"));
         }
         public void SetResponse(float response){if(collection)collection.localScale=new Vector3(.21f,.08f*Mathf.Lerp(1,.25f,response),.018f);}
-        void OnDestroy(){foreach(var part in geometry)part.Dispose();foreach(var m in materials)if(m)Destroy(m);}
+        void OnDestroy(){foreach(var part in geometry)part.Dispose();foreach(var m in materials)WorkbenchGeometry.Release(m);}
     }
 }

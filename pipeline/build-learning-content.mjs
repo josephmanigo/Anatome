@@ -94,6 +94,7 @@ for(const value of units){
 }
 const guide=JSON.parse(fs.readFileSync(path.join(destination,'how-to-play.json'),'utf8'));
 for(const page of guide.pages)say(page.id,page.title+'. '+page.text);
+for(const prompt of guide.prompts)say(prompt.id,prompt.text);
 const speech=[...speechById].map(([id,text])=>({id,text}));
 fs.writeFileSync(path.join(root,'pipeline/learning-narration.json'),JSON.stringify({voice:'Microsoft Zira Desktop',gender:'Female',rate:-1,style:'Calm nurse-style educational guide; synthetic narration',clips:speech},null,2)+'\n');
 const seed=units.flatMap(u=>u.variants).map(v=>`INSERT INTO public.thorax_learning_definitions (id, version, definition) VALUES ('${v.id}', '${version}', '${JSON.stringify(v).replaceAll("'","''")}'::jsonb) ON CONFLICT (id,version) DO UPDATE SET definition=excluded.definition;`).join('\n');

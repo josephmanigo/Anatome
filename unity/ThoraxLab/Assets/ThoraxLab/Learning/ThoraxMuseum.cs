@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static ThoraxLab.Learning.LabWidgets;
 
 namespace ThoraxLab.Learning
 {
@@ -13,13 +11,14 @@ namespace ThoraxLab.Learning
         LabRuntime app;
         readonly Dictionary<string, AnatomyStructure> originals = new Dictionary<string, AnatomyStructure>();
         readonly List<MuseumExhibit> exhibits = new List<MuseumExhibit>();
-        readonly List<Material> materials = new List<Material>();
+        Dictionary<string, Mesh> lungDetail;
         GameObject room, displays;
+        GameObject galleryPrefab, standPrefab;
+        TextMeshPro gallerySign;
         Coroutine entering;
         Transform rig;
         Vector3 savedRigPosition, savedPanelPosition;
         Quaternion savedRigRotation, savedPanelRotation;
-        Material plinthMaterial;
         int blockedUntil;
         float labelScale;
         bool labelContrast;
@@ -43,24 +42,26 @@ namespace ThoraxLab.Learning
         public void Open()
         {
             if (IsActive || Collection.Entries.Count == 0) return;
+            if (!galleryPrefab) galleryPrefab = Resources.Load<GameObject>("Learning/Museum/Gallery");
+            if (!standPrefab) standPrefab = Resources.Load<GameObject>("Learning/Museum/Plinth");
+            if (!galleryPrefab || !standPrefab) { Debug.LogError("Museum gallery or plinth prefab is missing."); return; }
             rig = Camera.main.transform.parent;
             savedRigPosition = rig.position; savedRigRotation = rig.rotation;
             savedPanelPosition = app.UI.Root.position; savedPanelRotation = app.UI.Root.rotation;
             var forward = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up).normalized;
             if (forward.sqrMagnitude < .01f) forward = Vector3.forward;
-            room = new GameObject("Thorax Museum galleries");
-            room.transform.SetPositionAndRotation(new Vector3(20, 0, 0), Quaternion.LookRotation(forward));
-            var floorMaterial = SurfaceMaterial("Museum floor", new Color(.055f, .09f, .12f));
-            var wallMaterial = SurfaceMaterial("Museum walls", new Color(.12f, .18f, .22f));
-            plinthMaterial = SurfaceMaterial("Museum exhibit stands", new Color(.08f, .23f, .25f));
-            Solid("Gallery floor", new Vector3(0, -.06f, 2), new Vector3(8, .12f, 9), floorMaterial);
-            Solid("Left wall", new Vector3(-4, 2, 2), new Vector3(.12f, 4, 9), wallMaterial);
-            Solid("Right wall", new Vector3(4, 2, 2), new Vector3(.12f, 4, 9), wallMaterial);
-            Solid("Back wall", new Vector3(0, 2, 6.5f), new Vector3(8, 4, .12f), wallMaterial);
-            Solid("Entry wall", new Vector3(0, 2, -2.5f), new Vector3(8, 4, .12f), wallMaterial);
-            var light = new GameObject("Museum exhibit light").AddComponent<Light>();
-            light.transform.SetParent(room.transform, false); light.transform.localPosition = new Vector3(0, 3.3f, 2);
-            light.type = LightType.Point; light.range = 12; light.intensity = 2.2f; light.shadows = LightShadows.None;
+            room = Instantiate(galleryPrefab, new Vector3(20, 0, 0), Quaternion.LookRotation(forward));
+            room.name = "Thorax Museum galleries";
+            gallerySign = new GameObject("Gallery directory").AddComponent<TextMeshPro>();
+            gallerySign.transform.SetParent(room.transform, false);
+            gallerySign.transform.localPosition = new Vector3(0, 2.05f, 6.21f);
+            gallerySign.rectTransform.sizeDelta = new Vector2(4.35f, 2.15f);
+            if (LabWidgets.Font) gallerySign.font = LabWidgets.Font;
+            gallerySign.fontSize = 4.25f;
+            gallerySign.alignment = TextAlignmentOptions.Center;
+            gallerySign.textWrappingMode = TextWrappingModes.NoWrap;
+            gallerySign.raycastTarget = false;
+            gallerySign.color = new Color(.99f, .96f, .87f);
             IsActive = true;
             blockedUntil = Time.frameCount + 3;
             entering = StartCoroutine(EnterAfterRelease());
@@ -82,17 +83,6 @@ namespace ThoraxLab.Learning
             else app.UI.RecenterPanel();
         }
 
-        Material SurfaceMaterial(string name, Color color)
-        {
-            var material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = name, color = color };
-            material.SetFloat("_Smoothness", .2f); materials.Add(material); return material;
-        }
-        GameObject Solid(string name, Vector3 position, Vector3 size, Material material)
-        {
-            var part = GameObject.CreatePrimitive(PrimitiveType.Cube); part.name = name;
-            part.transform.SetParent(room.transform, false); part.transform.localPosition = position; part.transform.localScale = size;
-            part.GetComponent<Renderer>().sharedMaterial = material; return part;
-        }
         void MoveRig(Vector3 position, Quaternion rotation)
         {
             if (!rig) return;
@@ -131,50 +121,67 @@ namespace ThoraxLab.Learning
             displays = new GameObject("Labeled museum exhibits"); displays.transform.SetParent(room.transform, false);
             float top = Mathf.Clamp(Camera.main.transform.position.y - .65f, .7f, 1.2f);
             var entries = Collection.Page(SystemName, PageIndex);
+            Vector3 localHead = displays.transform.InverseTransformPoint(Camera.main.transform.position);
+            gallerySign.text = $"<size=39%><cspace=0.18em>THORAX MUSEUM</cspace></size>\n{SystemName}\n<size=40%>Display {PageIndex + 1} of {Collection.PageCount(SystemName)}</size>";
             for (int i = 0; i < entries.Length; i++)
             {
                 var entry = entries[i]; var source = originals[entry.Id];
                 var position = new Vector3((i % 3 - 1) * 1.4f, top, 2 + (i / 3) * 2.1f);
-                var stand = Solid("Stand · " + entry.Name, position - Vector3.up * top * .5f, new Vector3(.8f, top, .65f), plinthMaterial);
-                stand.transform.SetParent(displays.transform, true);
+                var stand = Instantiate(standPrefab, displays.transform);
+                stand.name = "Stand · " + entry.Name;
+                stand.transform.localPosition = new Vector3(position.x, 0, position.z);
+                stand.transform.localScale = new Vector3(1, top, 1);
                 var model = new GameObject("Exhibit · " + entry.Id);
                 model.transform.SetParent(displays.transform, false);
                 model.AddComponent<MeshFilter>().sharedMesh = source.Filter.sharedMesh;
                 var renderer = model.AddComponent<MeshRenderer>(); renderer.sharedMaterials = source.Renderer.sharedMaterials;
                 var bounds = source.Filter.sharedMesh.bounds;
-                float scale = .24f / Mathf.Max(.001f, bounds.extents.magnitude);
+                // The imported catalog includes valid sub-millimetre mesh bounds before its source transform.
+                float radius = bounds.extents.magnitude;
+                float scale = radius > 0 ? .24f / radius : 1f;
                 model.transform.localScale = Vector3.one * scale;
                 model.transform.localRotation = Quaternion.Inverse(room.transform.rotation) * source.transform.rotation;
                 model.transform.position = room.transform.TransformPoint(position + Vector3.up * .32f) - model.transform.TransformVector(bounds.center);
                 var collider = model.AddComponent<MeshCollider>(); collider.sharedMesh = source.Filter.sharedMesh;
-                var exhibit = model.AddComponent<MuseumExhibit>(); exhibit.Initialize(this, entry);
+                var exhibit = model.AddComponent<MuseumExhibit>(); exhibit.Initialize(this, entry, position);
                 exhibits.Add(exhibit);
-                MakeLabel(exhibit, position);
+                exhibit.BuildLabel(displays.transform);
+                FaceLabel(exhibit, localHead);
             }
-            labelScale = app.Settings.Current.textScale; labelContrast = app.Settings.Current.highContrast;
+            labelScale = app.Settings.Current.EffectiveTextScale; labelContrast = app.Settings.Current.highContrast;
             if (exhibits.Count > 0) Select(exhibits[0]);
             Physics.SyncTransforms();
         }
 
-        void MakeLabel(MuseumExhibit exhibit, Vector3 standTop)
+        static void FaceLabel(MuseumExhibit exhibit, Vector3 localHead)
         {
-            if (exhibit.Label) { exhibit.Label.gameObject.SetActive(false); Destroy(exhibit.Label.gameObject); }
-            var plate = Rect("Label · " + exhibit.Entry.Name, displays.transform);
-            plate.pivot = new Vector2(.5f, 1); plate.sizeDelta = new Vector2(880, 0); plate.localScale = Vector3.one * .0012f;
-            plate.localPosition = standTop + new Vector3(0, -.02f, -.39f); plate.localRotation = Quaternion.identity;
-            var canvas = plate.gameObject.AddComponent<Canvas>(); canvas.renderMode = RenderMode.WorldSpace; canvas.worldCamera = Camera.main;
-            var backing = plate.gameObject.AddComponent<Image>(); backing.color = app.Settings.Current.highContrast ? Color.black : new Color(.018f, .035f, .045f); backing.raycastTarget = false;
-            var layout = plate.gameObject.AddComponent<VerticalLayoutGroup>(); layout.padding = new RectOffset(26, 26, 20, 20);
-            layout.spacing = 10; layout.childControlHeight = layout.childControlWidth = true; layout.childForceExpandHeight = false;
-            var fit = plate.gameObject.AddComponent<ContentSizeFitter>(); fit.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
-            var name = Text(plate, exhibit.Entry.Name, 34, Color.white); name.fontStyle = FontStyles.Bold; name.raycastTarget = false;
-            var description = Text(plate, exhibit.Entry.Description, 26, Color.white); description.raycastTarget = false;
-            exhibit.Label = plate;
+            Vector3 outward = Vector3.ProjectOnPlane(localHead - exhibit.StandTop, Vector3.up).normalized;
+            if (outward.sqrMagnitude < .01f) outward = Vector3.back;
+            // The support distance keeps the entire plaque outside the beveled stand, even from a corner.
+            float clearance = Mathf.Abs(outward.x) * .415f + Mathf.Abs(outward.z) * .335f + .016f;
+            var position = exhibit.StandTop + outward * clearance;
+            float labelHeight = exhibit.Label.rect.height * exhibit.Label.localScale.y;
+            position.y = Mathf.Max(position.y - .025f, labelHeight + .03f);
+            exhibit.Label.localPosition = position;
+            exhibit.Label.localRotation = Quaternion.LookRotation(-outward, Vector3.up) * Quaternion.Euler(12, 0, 0);
         }
 
         public void Select(MuseumExhibit exhibit)
         {
             if (!IsActive || !exhibits.Contains(exhibit)) return;
+            if (Selected && Selected != exhibit)
+            {
+                Selected.ApplyLabelStyle(false);
+                if (Selected.Entry.Group == "lung_lobes")
+                    Selected.GetComponent<MeshFilter>().sharedMesh = originals[Selected.Entry.Id].Filter.sharedMesh;
+            }
+            if (exhibit.Entry.Group == "lung_lobes")
+            {
+                lungDetail ??= Resources.LoadAll<Mesh>("Learning/AtlasLungDetail").ToDictionary(m => m.name);
+                if (lungDetail.TryGetValue(exhibit.Entry.Id, out var mesh))
+                    exhibit.GetComponent<MeshFilter>().sharedMesh = mesh;
+            }
+            if (Selected != exhibit) exhibit.ApplyLabelStyle(true);
             Selected = exhibit;
             if (app.UI) app.UI.RefreshMuseumSelection();
         }
@@ -186,20 +193,15 @@ namespace ThoraxLab.Learning
         void LateUpdate()
         {
             if (!IsActive || !displays || !Camera.main) return;
-            bool inspecting = app.Inspector && app.Inspector.IsOpen && app.UI.ScreenName == "Model inspection";
-            if (displays.activeSelf == inspecting) displays.SetActive(!inspecting);
-            bool refresh = labelScale != app.Settings.Current.textScale || labelContrast != app.Settings.Current.highContrast;
+            bool refresh = labelScale != app.Settings.Current.EffectiveTextScale || labelContrast != app.Settings.Current.highContrast;
+            Vector3 localHead = displays.transform.InverseTransformPoint(Camera.main.transform.position);
             foreach (var exhibit in exhibits)
             {
                 if (!exhibit) continue;
-                if (refresh)
-                {
-                    var position = displays.transform.InverseTransformPoint(exhibit.Label.position) - new Vector3(0, -.02f, -.39f);
-                    MakeLabel(exhibit, position);
-                }
-                if (exhibit.Label) exhibit.Label.rotation = Quaternion.LookRotation(exhibit.Label.position - Camera.main.transform.position, Vector3.up);
+                if (refresh) exhibit.ApplyLabelStyle(exhibit == Selected);
+                FaceLabel(exhibit, localHead);
             }
-            labelScale = app.Settings.Current.textScale; labelContrast = app.Settings.Current.highContrast;
+            labelScale = app.Settings.Current.EffectiveTextScale; labelContrast = app.Settings.Current.highContrast;
         }
         public void Close()
         {
@@ -209,8 +211,7 @@ namespace ThoraxLab.Learning
             if (app && app.Inspector) app.Inspector.Close();
             IsActive = false; Selected = null; exhibits.Clear();
             if (room) { room.SetActive(false); Destroy(room); } room = displays = null;
-            foreach (var material in materials) if (material) Destroy(material);
-            materials.Clear();
+            gallerySign = null;
             MoveRig(savedRigPosition, savedRigRotation);
             if (app && app.UI) app.UI.Root.SetPositionAndRotation(savedPanelPosition, savedPanelRotation);
         }

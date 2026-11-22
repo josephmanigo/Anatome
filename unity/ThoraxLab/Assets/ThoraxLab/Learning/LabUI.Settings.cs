@@ -26,7 +26,6 @@ namespace ThoraxLab.Learning
             switch(settingCategory)
             {
                 case "Quick setup":
-                    Text(content,"Make the lab comfortable before you start. Apply saves your choices; Cancel keeps your current settings.",24,Muted);
                     ReadabilitySettings(false);
                     Button(content,"Move panel in front of me",RecenterPanel);
                     Rule(content);
@@ -63,7 +62,7 @@ namespace ThoraxLab.Learning
                     Toggle(content,"Left dominant hand",()=>draft.leftHanded,v=>draft.leftHanded=v);
                     Toggle(content,"Toggle grip",()=>draft.toggleGrip,v=>draft.toggleGrip=v);Toggle(content,"Controller vibration",()=>draft.vibration,v=>draft.vibration=v);
                     Text(content,"Controller: trigger selects or uses a tool; grip holds a part. Bare hand: pinch thumb and index to select or use; curl your other three fingers to hold. Open to release. Pinch and drag to scroll a panel.",24,Muted);
-                    Text(content,"Model inspection in every mode: A on the right controller (X on the left with Left dominant hand) opens and closes inspection. Point away from the panel; that stick up/down zooms and sideways rotates. You can also use Inspect / zoom model and the panel's zoom buttons.",24,Muted);break;
+                    Text(content,InspectionInstructions+" The workspace also has zoom buttons.",24,Muted);break;
                 case "VR comfort":
                     if(LearningXRInput.IsSimulated)Slider(content,"Simulator FOV (degrees)",50,110,()=>draft.simulatorFov,v=>draft.simulatorFov=v,"0");
                     Toggle(content,"Comfort vignette",()=>draft.vignette,v=>{draft.vignette=v;RenderSettingsPage();});
@@ -79,9 +78,9 @@ namespace ThoraxLab.Learning
                     MovementSettings();
                     Slider(content,"Turn speed",15,120,()=>draft.turnSpeed,v=>draft.turnSpeed=v);Slider(content,"Snap angle",15,60,()=>draft.snapAngle,v=>draft.snapAngle=v);break;
                 case "Learning & accessibility":
+                    ReadabilitySettings(true);
                     Text(content,"Practice hints include a dissection start ring, sweep arrow and chunk-lift guide. These guides stay hidden during assessments.",20,Muted);
                     Toggle(content,"Practice hints",()=>draft.hints,v=>draft.hints=v);Toggle(content,"Structure labels",()=>draft.labels,v=>draft.labels=v);Toggle(content,"Reduced motion",()=>draft.reducedMotion,v=>draft.reducedMotion=v);
-                    ReadabilitySettings(true);
                     Text(content,"Completion always includes a written status. Demonstrations can be replayed in lessons and practice. There is no mandatory countdown.",21,Muted);break;
                 case "Profiles":
                     var name=Field("Profile name",draft.name);name.characterLimit=48;name.onValueChanged.AddListener(v=>draft.name=v);
@@ -93,9 +92,22 @@ namespace ThoraxLab.Learning
                         Button(content,"Save this profile to account",()=>Run(async()=>{draft.Validate();await app.Account.SyncProfiles(draft);app.Message("Profile saved to your account.");}));
                         Button(content,"Load account profiles",()=>Run(async()=>
                         {
-                            var profiles=await app.Account.SyncProfiles();Page("Account profiles","Your saved profiles");
-                            foreach(var profile in profiles){var p=profile;Button(content,p.name+" · "+p.platform,()=>{if(p.platform==app.Settings.Platform)draft=SettingsService.Clone(p);else{draft.hints=p.hints;draft.labels=p.labels;draft.textScale=p.textScale;draft.captionScale=p.captionScale;draft.highContrast=p.highContrast;draft.reducedMotion=p.reducedMotion;draft.captions=p.captions;}RenderSettingsPage();});Button(content,"Remove account copy · "+p.name,()=>Confirm("Delete account profile?","This removes "+p.name+" from your account. Profiles already stored on a device remain available there.","Delete account copy",()=>Run(async()=>{await app.Account.SyncProfiles(deleteId:p.id);RenderSettingsPage();app.Message("Account profile deleted.");})));}
-                            Text(content,"Selecting a profile from another platform copies only learning and accessibility preferences. Choose Apply to keep those changes.",21,Muted);Button(content,"Back to settings",RenderSettingsPage);
+                            var profiles=await app.Account.SyncProfiles();Page("Account profiles","Your saved profiles",back:RenderSettingsPage,backName:"Back to settings");
+                            foreach(var p in profiles)
+                            {
+                                Button(content,p.name+" · "+p.platform,()=>{
+                                    if(p.platform==app.Settings.Platform)draft=SettingsService.Clone(p);
+                                    else
+                                    {
+                                        draft.hints=p.hints;draft.labels=p.labels;draft.reducedMotion=p.reducedMotion;
+                                        draft.textScale=p.textScale;draft.captionScale=p.captionScale;draft.captions=p.captions;draft.highContrast=p.highContrast;
+                                        draft.astigmatismReadingMode=p.astigmatismReadingMode;draft.readingBrightnessPercent=p.readingBrightnessPercent;
+                                    }
+                                    RenderSettingsPage();
+                                });
+                                Button(content,"Remove account copy · "+p.name,()=>Confirm("Delete account profile?","This removes "+p.name+" from your account. Profiles already stored on a device remain available there.","Delete account copy",()=>Run(async()=>{await app.Account.SyncProfiles(deleteId:p.id);RenderSettingsPage();app.Message("Account profile deleted.");})));
+                            }
+                            Text(content,"Selecting a profile from another platform copies only learning and accessibility preferences. Choose Apply to keep those changes.",21,Muted);
                         }));
                     }
                     Button(content,"Delete this device's copy",()=>Confirm("Delete local settings profile?",draft.name+" will be removed from this device. Keep at least one local profile. Account copies can be removed in Load account profiles.","Delete local profile",()=>Run(()=>{app.Settings.Delete(draft.id);ShowSettings();return Task.CompletedTask;})));break;
@@ -129,7 +141,9 @@ namespace ThoraxLab.Learning
 
         void ReadabilitySettings(bool captions)
         {
-            var sampleSurface=Panel(content,"Readability preview",Ground);
+            var modeControls=Column(content,"Reading mode",spacing:4);
+            var sampleSurface=LabUIVisuals.Surface(content,"Readability preview",Ground);
+            var sampleTint=sampleSurface.GetComponent<LabGlassTint>();
             var sampleColumn=sampleSurface.gameObject.AddComponent<VerticalLayoutGroup>();
             sampleColumn.padding=new RectOffset(20,20,18,18);sampleColumn.spacing=12;
             sampleColumn.childControlWidth=sampleColumn.childControlHeight=true;
@@ -137,13 +151,21 @@ namespace ThoraxLab.Learning
             var sample=Text(sampleSurface.transform,"Readability preview: point at the skin, press trigger to select, then grip to hold.",24);
             var hint=Text(sampleSurface.transform,"Text wraps to fit. Apply uses this size throughout the interface.",22,Muted);
             var captionSample=captions?Text(sampleSurface.transform,"Caption preview: lift the skin gently, then release.",22):null;
+            RectTransform brightnessControls=null;
             void Preview()
             {
-                sample.fontSize=24*draft.textScale;hint.fontSize=22*draft.textScale;
+                sample.fontSize=24*draft.EffectiveTextScale;hint.fontSize=22*draft.EffectiveTextScale;
                 sample.color=draft.highContrast?Color.white:Ink;hint.color=draft.highContrast?Color.white:Muted;
-                sampleSurface.color=draft.highContrast?Color.black:Ground;
-                if(captionSample){captionSample.fontSize=22*draft.captionScale;captionSample.color=sample.color;}
+                sampleSurface.color=LabUIVisuals.ConsoleColor(draft);
+                sampleTint.enabled=!draft.astigmatismReadingMode&&!draft.highContrast;
+                brightnessControls.gameObject.SetActive(draft.astigmatismReadingMode);
+                if(captionSample){captionSample.fontSize=22*draft.EffectiveCaptionScale;captionSample.color=sample.color;}
             }
+            Toggle(modeControls,"Astigmatism reading mode",()=>draft.astigmatismReadingMode,v=>{draft.astigmatismReadingMode=v;Preview();});
+            Text(modeControls,"Softens bright areas and removes the glass shine on menus. Text is at least 135% and captions are at least 150%.",22,Muted);
+            brightnessControls=Column(modeControls,"Reading light adjustment",spacing:4);
+            Slider(brightnessControls,"Reading brightness (%)",65f,100f,()=>draft.readingBrightnessPercent,v=>draft.readingBrightnessPercent=v,"0");
+            Text(brightnessControls,"Raise brightness if tissue detail is hard to see. Take a break if your eyes feel sore.",22,Muted);
             Slider(content,"Text size",.85f,1.5f,()=>draft.textScale,v=>{draft.textScale=v;Preview();});
             if(captions)Slider(content,"Caption size",.85f,1.7f,()=>draft.captionScale,v=>{draft.captionScale=v;Preview();});
             Toggle(content,"High contrast",()=>draft.highContrast,v=>{draft.highContrast=v;Preview();});
@@ -152,10 +174,9 @@ namespace ThoraxLab.Learning
         }
         void ShowSettingsCategories()
         {
-            Page("Settings categories","What would you like to change?");
+            Page("Settings categories","What would you like to change?",back:RenderSettingsPage,backName:"Back to settings");
             foreach(var category in new[]{"Quick setup","VR comfort","Audio","Learning & accessibility","Graphics & display","Controls","Profiles","Account & saves"})
             {var selected=category;Button(content,category,()=>{settingCategory=selected;RenderSettingsPage();},category==settingCategory);}
-            Button(content,"Back to settings",RenderSettingsPage);
         }
         void ApplySettings()
         {
@@ -167,17 +188,18 @@ namespace ThoraxLab.Learning
         {
             bool kept=false;Confirm("Keep these display settings?","The previous display returns automatically in 15 seconds.","Keep settings",()=>{kept=true;app.Settings.Apply(draft);(previousScreen??ShowHub)();});
             float deadline=Time.realtimeSinceStartup+15;while(!kept&&modal&&Time.realtimeSinceStartup<deadline)yield return null;
-            if(!kept){app.Settings.RevertDisplay();if(modal)Destroy(modal.gameObject);modal=null;RenderSettingsPage();app.Message("Previous display restored.");}
+            if(!kept){app.Settings.RevertDisplay();DismissModal();RenderSettingsPage();app.Message("Previous display restored.");}
         }
         IEnumerator Rebind(string name)
         {
-            Confirm("Rebind "+name,"Press a keyboard key. Escape cancels.","Cancel",()=>{});yield return null;
-            while(modal){if(Keyboard.current!=null)foreach(var key in Keyboard.current.allKeys)if(key.wasPressedThisFrame){if(key.keyCode!=Key.Escape)typeof(SettingsProfile).GetField(name).SetValue(draft,key.keyCode.ToString());Destroy(modal.gameObject);modal=null;RenderSettingsPage();yield break;}yield return null;}
+            Confirm("Rebind "+name,"Press a keyboard key. Escape cancels.",null,null);yield return null;
+            while(modal){if(Keyboard.current!=null)foreach(var key in Keyboard.current.allKeys)if(key.wasPressedThisFrame){if(key.keyCode!=Key.Escape)typeof(SettingsProfile).GetField(name).SetValue(draft,key.keyCode.ToString());DismissModal();RenderSettingsPage();yield break;}yield return null;}
         }
         void ResetCategory()
         {
             var defaults=new SettingsProfile{platform=draft.platform};defaults.SetPreset(GraphicsPreset.Medium);
-            string fields=settingCategory=="Quick setup"?"textScale highContrast movement moveSpeed turning stickDeadzone leftHanded":settingCategory=="Graphics & display"?"preset renderScale brightness shadowDistance textureLimit msaa width height frameCap refreshRate fullscreen vsync shadows showFps":settingCategory=="Audio"?"masterVolume narrationVolume effectsVolume ambienceVolume narrationSpeed captions":settingCategory=="Controls"?"sensitivity invertLook leftHanded toggleGrip vibration forward backward left right up down reset undo tool":settingCategory=="VR comfort"?"seated autoHeight heightBoost tableHeight movement moveSpeed turning turnSpeed snapAngle stickDeadzone vignette simulatorFov comfortFov":"hints labels highContrast reducedMotion textScale captionScale";
+            const string readingFields="astigmatismReadingMode readingBrightnessPercent textScale highContrast";
+            string fields=settingCategory=="Quick setup"?readingFields+" movement moveSpeed turning stickDeadzone leftHanded":settingCategory=="Graphics & display"?"preset renderScale brightness shadowDistance textureLimit msaa width height frameCap refreshRate fullscreen vsync shadows showFps":settingCategory=="Audio"?"masterVolume narrationVolume effectsVolume ambienceVolume narrationSpeed captions":settingCategory=="Controls"?"sensitivity invertLook leftHanded toggleGrip vibration forward backward left right up down reset undo tool":settingCategory=="VR comfort"?"seated autoHeight heightBoost tableHeight movement moveSpeed turning turnSpeed snapAngle stickDeadzone vignette simulatorFov comfortFov":readingFields+" hints labels reducedMotion captionScale";
             foreach(string name in fields.Split(' ')){var field=typeof(SettingsProfile).GetField(name);field.SetValue(draft,field.GetValue(defaults));}RenderSettingsPage();
         }
     }

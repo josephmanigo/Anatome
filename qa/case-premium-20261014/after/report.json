@@ -1,12 +1,17 @@
 {
-    "utc": "2026-10-14T11:39:16.7735674Z",
+    "utc": "2026-11-21T01:27:02.2414381Z",
     "geometryVerticesChecked": 12377,
     "geometryTrianglesChecked": 23456,
+    "incisionSamplingRates": [
+        30,
+        72,
+        120
+    ],
     "cases": [
         {
             "disease": "asthma",
-            "triangles": 33028,
-            "renderers": 9,
+            "triangles": 32052,
+            "renderers": 8,
             "colliders": 0,
             "anchors": [
                 {
@@ -184,8 +189,8 @@
         },
         {
             "disease": "pneumothorax",
-            "triangles": 31696,
-            "renderers": 20,
+            "triangles": 34404,
+            "renderers": 25,
             "colliders": 3,
             "anchors": [
                 {
@@ -402,8 +407,8 @@
         },
         {
             "disease": "pleural-effusion",
-            "triangles": 31936,
-            "renderers": 21,
+            "triangles": 34304,
+            "renderers": 25,
             "colliders": 3,
             "anchors": [
                 {

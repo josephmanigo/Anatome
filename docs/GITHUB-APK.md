@@ -20,7 +20,7 @@ The original signing files are expected in `%LOCALAPPDATA%\Anatome\Signing`: `id
 1. Open [Actions → Build downloadable APK](https://github.com/josephmanigo/Anatome/actions/workflows/build-apk.yml).
 2. Click **Run workflow**, choose **main**, then click the green **Run workflow** button.
 3. Keep the Windows PC running until both jobs finish. Initial Unity import and Android compilation can take time.
-4. Open [Releases](https://github.com/josephmanigo/Anatome/releases). Open the new **Anatome 1.6.0 - headset test** release and download **`Anatome-1.6.0-Production.apk`** under **Assets**.
+4. Open [Releases](https://github.com/josephmanigo/Anatome/releases) after the workflow finishes. Select the release for the version you built and download its **Production.apk** under **Assets**.
 
 Successful runs also retain the APK under the run's **Artifacts** for 30 days. If publishing fails after a successful build, that artifact is still available; rerun the failed publishing job to retry. Build diagnostics are retained for 7 days.
 

@@ -85,9 +85,11 @@ namespace ThoraxLab.Editor
                         preferences.leftHanded=true;rightState.primary2DAxis=Vector2.up;QueueAll();yield return 10;
                         Require("all_mode_walk/left_handed",Vector3.Distance(rig.position,rigPosition)>.015f,"Left-handed controls walk with the right stick.");
                         preferences.leftHanded=false;rightState.primary2DAxis=Vector2.zero;QueueAll();yield return 4;
+                        var capsule=rig.GetComponent<CharacterController>();float calibratedHeight=capsule.height;
                         var controls=FindFirstObjectByType<LearningControls>();preferences.heightBoost=.8f;controls.ApplyComfort();yield return 8;
                         rigPosition=rig.position;leftState.primary2DAxis=Vector2.down;QueueAll();yield return 12;
-                        Require("all_mode_walk/maximum_height_boost",Vector3.Distance(rig.position,rigPosition)>.015f&&Mathf.Abs(rig.position.y-rigPosition.y)<.001f,"Walking preserves the maximum assisted height instead of colliding with the ceiling.");
+                        Require("all_mode_walk/maximum_height_boost",Vector3.Distance(rig.position,rigPosition)>.015f&&Mathf.Abs(rig.position.y-rigPosition.y)<.001f&&Mathf.Abs(capsule.height-calibratedHeight)<.001f,
+                            $"Maximum reach assistance preserves walking height. Movement={rig.position-rigPosition:F5}, capsule before={calibratedHeight:F4} m, after={capsule.height:F4} m.");
                         leftState.primary2DAxis=Vector2.zero;QueueAll();yield return 6;
                         preferences.heightBoost=savedBoost;controls.ApplyComfort();yield return 8;
                         SetHandWorld(start,rotation);yield return 6;Grip(true);yield return 8;

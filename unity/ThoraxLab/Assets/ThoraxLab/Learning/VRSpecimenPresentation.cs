@@ -300,11 +300,12 @@ namespace ThoraxLab.Learning
             if (!session) return;
             foreach (var structure in session.originals.Where(s => s && !s.record.reference_region))
             {
-                var outer = MaterialFor(structure.record.tissue, false);
-                var inner = MaterialFor(structure.record.tissue, true);
+                var outer = MaterialFor(structure.record.AppearanceTissue, false);
+                var inner = MaterialFor(structure.record.AppearanceTissue, true);
                 // Bone caps retain the existing depth-derived cortical/cancellous shader.
                 if (inner && structure.record.tissue != "bone") structure.interiorMaterial = inner;
                 if (!outer) continue;
+                structure.SetRestingMaterials(outer, structure.interiorMaterial);
                 foreach (var renderer in structure.GetComponentsInChildren<Renderer>(true))
                 {
                     var materials = renderer.sharedMaterials;
@@ -344,7 +345,7 @@ namespace ThoraxLab.Learning
             RenderSettings.ambientSkyColor = new Color(.19f, .21f, .23f);
             RenderSettings.ambientEquatorColor = new Color(.105f, .12f, .14f);
             RenderSettings.ambientGroundColor = new Color(.045f, .05f, .055f);
-            RenderSettings.reflectionIntensity = .32f;
+
             var key = GameObject.Find("Specimen examination light")?.GetComponent<Light>();
             if (key)
             {
@@ -369,35 +370,63 @@ namespace ThoraxLab.Learning
             var bounds = SpecimenBounds();
             var go = new GameObject("Reusable examination drape — equipment, not anatomy");
             go.transform.SetParent(session.specimen, true);
-            go.transform.position = new Vector3(bounds.center.x, bounds.min.y - .006f, bounds.center.z);
+            float surface = bounds.min.y;
+            var tabletop = session.TabletopCollider;
+            if (tabletop && tabletop.Raycast(new Ray(bounds.center + Vector3.up, Vector3.down), out var hit, 2f))
+                surface = hit.point.y;
+            go.transform.position = new Vector3(bounds.center.x, surface + .0025f, bounds.center.z);
             var mesh = new Mesh { name = "Drape surrounding original specimen boundary" };
             const int segments = 48;
-            var vertices = new Vector3[segments * 2]; var uv = new Vector2[segments * 2]; var indices = new int[segments * 6];
+            const int rings = 4;
+            int center = segments * rings;
+            var vertices = new Vector3[center + 1]; var uv = new Vector2[vertices.Length]; var indices = new int[segments * ((rings - 1) * 6 + 3)];
             float innerX = bounds.extents.x + .012f, innerZ = bounds.extents.z + .018f;
             for (int i = 0; i < segments; i++)
             {
                 float angle = i * Mathf.PI * 2 / segments;
                 float x = Mathf.Cos(angle), z = Mathf.Sin(angle);
-                float fold = Mathf.Sin(angle * 7) * .0035f;
-                vertices[i * 2] = new Vector3(x * innerX, .002f + fold, z * innerZ);
-                vertices[i * 2 + 1] = new Vector3(x * (innerX + .13f), -.002f + fold, z * (innerZ + .12f));
-                uv[i * 2] = new Vector2(i / (float)segments, 0); uv[i * 2 + 1] = new Vector2(i / (float)segments, 1);
-                int next = ((i + 1) % segments) * 2, offset = i * 6;
-                indices[offset] = i * 2; indices[offset + 1] = next; indices[offset + 2] = i * 2 + 1;
-                indices[offset + 3] = i * 2 + 1; indices[offset + 4] = next; indices[offset + 5] = next + 1;
+                var inner = new Vector2(x * innerX, z * innerZ);
+                var outer = new Vector2(.405f * Mathf.Sign(x) * Mathf.Pow(Mathf.Abs(x), .38f),
+                    .54f * Mathf.Sign(z) * Mathf.Pow(Mathf.Abs(z), .38f));
+                int cap = segments * (rings - 1) * 6 + i * 3;
+                indices[cap] = center; indices[cap + 1] = ((i + 1) % segments) * rings; indices[cap + 2] = i * rings;
+                for (int ring = 0; ring < rings; ring++)
+                {
+                    float t = ring == 0 ? 0 : ring == 1 ? .08f : ring == 2 ? .94f : 1;
+                    var point = Vector2.Lerp(inner, outer, t);
+                    float fold = .0011f * Mathf.Sin(7 * angle + 2 * t);
+                    int a = i * rings + ring;
+                    vertices[a] = new Vector3(point.x, fold + (ring == 1 || ring == 2 ? .0016f : 0), point.y);
+                    uv[a] = point;
+                    if (ring == rings - 1) continue;
+                    int b = ((i + 1) % segments) * rings + ring, offset = (i * (rings - 1) + ring) * 6;
+                    indices[offset] = a; indices[offset + 1] = b; indices[offset + 2] = a + 1;
+                    indices[offset + 3] = a + 1; indices[offset + 4] = b; indices[offset + 5] = b + 1;
+                }
             }
             mesh.vertices = vertices; mesh.uv = uv; mesh.triangles = indices; mesh.RecalculateNormals(); mesh.RecalculateBounds();
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var renderer = go.AddComponent<MeshRenderer>(); renderer.shadowCastingMode = ShadowCastingMode.Off;
-            var material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "Matte examination drape", color = new Color(.055f, .19f, .21f) };
-            material.SetFloat("_Smoothness", .12f); material.SetFloat("_Cull", 0); renderer.sharedMaterial = material;
-            generated.Add(mesh); generated.Add(material); fixtures.Add(go);
+            var linen = session.table && session.table.parent ? session.table.parent.Find("Lab_Blue")?.GetComponent<Renderer>() : null;
+            if (linen) renderer.sharedMaterial = linen.sharedMaterial;
+            else
+            {
+                var material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "Examination linen", color = new Color(.18f, .42f, .41f) };
+                material.SetFloat("_Smoothness", .12f); renderer.sharedMaterial = material; generated.Add(material);
+            }
+            generated.Add(mesh); fixtures.Add(go);
         }
 
         void OnDestroy()
         {
             foreach (var entry in originalMaterials) if (entry.Key) entry.Key.sharedMaterials = entry.Value;
-            foreach (var entry in originalInteriors) if (entry.Key) entry.Key.interiorMaterial = entry.Value;
+            foreach (var entry in originalInteriors)
+            {
+                if (!entry.Key) continue;
+                entry.Key.interiorMaterial = entry.Value;
+                if (originalMaterials.TryGetValue(entry.Key.Renderer, out var resting) && resting.Length > 0)
+                    entry.Key.SetRestingMaterials(resting[0], resting.Length > 1 ? resting[1] : null);
+            }
             foreach (var fixture in fixtures) if (fixture) Destroy(fixture);
             foreach (var asset in generated) if (asset) Destroy(asset);
         }

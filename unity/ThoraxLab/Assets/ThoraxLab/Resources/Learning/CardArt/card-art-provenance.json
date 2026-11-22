@@ -1,19 +1,19 @@
 {
     "revision": "source-card-art-2026.09.06.2",
-    "generatedUtc": "2026-10-14T11:26:47.1018934Z",
-    "dependencyFingerprint": "source-card-art-2026.09.06.2|ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a|b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141|305d510217a05684ba40f52aea7b1f47|Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_airway.mat:89dc6b29fada17c7cc6d1bd92c9c554e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_artery.mat:5f8ed60c1e5dfe310329b24dac4a4152;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cardiac.mat:f772ca655c34636382321deb1ad54a51;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cartilage.mat:ff253320c501237627fa8db32276536f;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_duct.mat:c09ef0ba0ce2d96f1a7ca1a601654152;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fascia.mat:3e0aebf74e52ecace7063d4232ce16f4;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fat.mat:557e43f13e8979d00caa0054059d98cc;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_lung.mat:53f1f21a0e10409a963a7420c508762c;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_membrane.mat:a9fe213cdd457f4598ebcc5d317f119a;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_muscle.mat:45015836e6711a86204b2827d28e2412;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_nerve.mat:d00ddb62aecf2dc17474dc2283f9bcc5;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_skin.mat:c092691fad13e3e2ab6406014ea912bc;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_vein.mat:afaef6c277f12ff17a802fb6f52b2c4b;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_airway.mat:990f59455eacfbe187a2a4b1e4451f9e;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_artery.mat:b75cf301b0fd0fb18daa3d27c80e13c0;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_bone.mat:a4800dc60a88f8cb5ceb61a93eda8ca3;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cardiac.mat:5d7221b82f59f234fc6683961fa161a5;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cartilage.mat:8c7dc80fe9d71e572f7ca802bb09b57d;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_duct.mat:0a4bd7c0c80a702f975eb1b707a1402f;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fascia.mat:b247b6459993c2bec869869a65f70b95;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fat.mat:0dc35f0d4f2892d1d7701ec15bb52cfc;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_lung.mat:dda7c9ff0c2774112a74ea85e19124bc;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_membrane.mat:4b6958a435bff69c3677a307c111d86f;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_muscle.mat:546a6719f1f22cd78622103b90397deb;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_nerve.mat:16c36d2cd55d3c04c4b1082615c9be2e;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_skin.mat:524f6b9d4cd4d2e9de77c58ea2eee511;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_vein.mat:91acdffd216e4cf983c4b049f8f0bab5",
+    "generatedUtc": "2026-11-21T01:32:22.6287853Z",
+    "dependencyFingerprint": "source-card-art-2026.09.06.2|ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a|b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141|2352232dd4b94984f7800913ae160037|Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_airway.mat:92984f5a60b9b0ae26017d160d2c3cef;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_artery.mat:c8b4a278fb630e6fd22c1328fa5212ab;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cardiac.mat:04dfa61f4ba6df99a385275ddb5be0ff;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_cartilage.mat:3e02bba05b044b5be296d4dfa10880c1;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_duct.mat:03c37abd6e166935bde39546a8aae6f0;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_esophagus.mat:3342b7ac0f1af61ca72c8e7c0ccfc33c;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fascia.mat:bd42e2c2ec6a4a2a964ee6aab7a4071f;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_fat.mat:4b2be557ad8f4538db2c1004dcc1d0cf;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_lung.mat:bbf46affa96b2e52b6f7de534efe120e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_membrane.mat:7a5ec79388a9fa4a0213331cf2a3c377;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_muscle.mat:ef984e67a888207f4c83b00e470e0a9e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_nerve.mat:b5c80e37f54b0984284df7b323275c70;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_skin.mat:cc33cfe06f72c2798ec3078261222f8e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_valve.mat:87b19be0516c26357bf702df604dab7e;Assets/ThoraxLab/Resources/Learning/Specimen\\Interior_vein.mat:cafd2e077dde4f48181586ccd51234d6;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_airway.mat:ac3de2011df7dc7dde97a1d8185994b9;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_artery.mat:b73f8f59e2cf8f0c90889fc4b9a93450;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_bone.mat:dd26deb07ec113c86ea099e12c14a38e;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cardiac.mat:71ae6abefd8182702d24fd7cf4a7f5c7;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_cartilage.mat:42842be4ac77178954a92c31a8d52422;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_duct.mat:70cfbbebd9ceaffe8f00e9174398a717;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_esophagus.mat:f0e531dfae51786471d8b95b6fd5ea51;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fascia.mat:9068c1514fb4b477159066122d4b7c69;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_fat.mat:f39400e097c7ce224cc26fc0e4b4af13;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_lung.mat:b209ad32f1f9f993346bde9e32f81619;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_membrane.mat:ef31bfaa5a35e11d320003d67b0b4622;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_muscle.mat:6ce016146a2fb0badbd8a769294b88e3;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_nerve.mat:ff61990dff32d442c79d0e8656465694;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_skin.mat:7bf48e6a0c46adcf6f88ad199218ce57;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_valve.mat:79d4ceeb067864c35ed3163335f54352;Assets/ThoraxLab/Resources/Learning/Specimen\\Tissue_vein.mat:b6137cbe856421f090de60845acdc961",
     "sourceSha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a",
     "catalogSha256": "b06c834c6589f0908c33ae81fe5f6f23a6033c44a35cf3794cdf6f574288b141",
     "method": "Unity URP PreviewRenderUtility. Source FBX mesh instances only, isolated in a temporary preview scene. Curated visibility and, where recorded, translated components; no vertex, normal, boundary or source material changes.",
     "interpretation": "Healthy anatomical subject previews, not diagnostic images or representations of disease severity. Teal is interface emphasis. Exploded assembly views are presentation only. No labels or physiological claims are baked into the pixels.",
-    "attribution": "BodyParts3D / The Database Center for Life Science (CC BY 4.0), Medical Augmented Learning source lung models, and existing authored teaching reconstructions. Exact source kinds and source records are recorded for every depicted component; anatomy-catalog.json remains authoritative.",
+    "attribution": "BodyParts3D / The Database Center for Life Science (CC BY 4.0), Mauritanian Anatomy Laboratory thoracic atlas lung models, and authored teaching reconstructions. Each component lists its source record.",
     "runtime": "16 static 512 x 320 textures; mipmaps; trilinear filtering; BC7 on Windows, ASTC 6x6 on Android. No runtime render textures, live cameras, or anatomical colliders are added.",
     "sourceFileUnchanged": true,
     "cards": [
         {
             "id": "mode-cases",
             "resourceKey": "Learning/CardArt/mode-cases",
-            "imageSha256": "978e7def9829e591108af91fc0c5cd681523b8fc2967564b16c6b1a3a6bed104",
+            "imageSha256": "4454bcea15b34793f689e2539bfd5c70127c45288c2e25c020c0b3f1f538dbcf",
             "composition": "Anterior oblique lungs and exposed heart, with superficial coverings omitted. Healthy reference subject for case investigation.",
             "width": 512,
             "height": 320,
@@ -812,7 +812,7 @@
         {
             "id": "mode-assemble",
             "resourceKey": "Learning/CardArt/mode-assemble",
-            "imageSha256": "f88bb02ba52560b3385b7c8b4bfc71c697109a11e0ab519ae327a6f847603a85",
+            "imageSha256": "8c0a783ac7011222554107e2efc1d6adf2b038564b7cedcee2f8c9a684b29157",
             "composition": "Five lung lobes and bronchial tree, in a small exploded teaching composition. Every translation is recorded; source geometry is unchanged.",
             "width": 512,
             "height": 320,
@@ -1010,7 +1010,7 @@
         {
             "id": "mode-dissect",
             "resourceKey": "Learning/CardArt/mode-dissect",
-            "imageSha256": "41c2fedd941186333936b68a6f3ab87eecee55d6473b61358bc4eef649891e97",
+            "imageSha256": "04d0c82a12aa77f55438356ab312cebd2922ea55c1590e53bde84b616af665ef",
             "composition": "One-sided chest wall exposure with right pectoral muscle translated anteriorly to reveal ribs. No cut or histology is depicted.",
             "width": 512,
             "height": 320,
@@ -1809,7 +1809,7 @@
         {
             "id": "pleura-lungs",
             "resourceKey": "Learning/CardArt/pleura-lungs",
-            "imageSha256": "0fb6b8c5584d565276bd1db4782a2065157f8b9a7bb262cae24e8de3fbd91d22",
+            "imageSha256": "fda7612a42615b031f3314ca7ea90fda840443007f54c6f609517f8c870cd4fb",
             "composition": "Lung lobes, trachea and diaphragm. Pleural coverings are omitted for clear lobe relationships.",
             "width": 512,
             "height": 320,
@@ -1916,7 +1916,7 @@
         {
             "id": "airways",
             "resourceKey": "Learning/CardArt/airways",
-            "imageSha256": "b18e4f58dbc88266cb0faf63f00857c5ec211a4863bb8f2138cf7a9676dbe175",
+            "imageSha256": "7318d49dc8d06cbbf2589b610c49a6d9a082b1ea9c26e4a6e547d5d7f0df5351",
             "composition": "Source trachea and bronchial tree isolated from the lungs, retaining their shared source coordinates.",
             "width": 512,
             "height": 320,
@@ -2049,7 +2049,7 @@
         {
             "id": "heart-coronaries",
             "resourceKey": "Learning/CardArt/heart-coronaries",
-            "imageSha256": "c6f25cdb1a2f01d081c24ea8fc18a75ebb06363ef636ead6772988f519e065af",
+            "imageSha256": "8c38cbe07a3d868edefd75f919e053c21122a31e575486638744592f55c3a85a",
             "composition": "Heart walls, coronary vessels and proximal outflow, with the pericardial covering omitted.",
             "width": 512,
             "height": 320,
@@ -2390,7 +2390,7 @@
         {
             "id": "vessels-valves",
             "resourceKey": "Learning/CardArt/vessels-valves",
-            "imageSha256": "012fbe8c6416359a31a92e38484123d2d7df857298edd8cb49bd54b0c97c2049",
+            "imageSha256": "67d148da0170a7814676622811db04fdc8dc470107e678819c7f33210e9e9fc8",
             "composition": "Central great vessels in their original spatial arrangement. The aortic arch is emphasised. Peripheral subclavian/pulmonary branches and long descending vessels are omitted to keep the central relationships readable at card size.",
             "width": 512,
             "height": 320,
@@ -2497,7 +2497,7 @@
         {
             "id": "mediastinum",
             "resourceKey": "Learning/CardArt/mediastinum",
-            "imageSha256": "97a74d58d445424037c604342105cb571ad77641ffd2280535f25dc1b20ddd7b",
+            "imageSha256": "7a9f0ccce16c92285799e63369d1e806eda523cdbad84f8fea5b654d2d1b8989",
             "composition": "Central airway, esophagus, central great vessels and existing authored phrenic/vagus nerve models; peripheral branches, lung and chest-wall coverings omitted for thumbnail readability.",
             "width": 512,
             "height": 320,
@@ -2682,7 +2682,7 @@
         {
             "id": "pneumothorax",
             "resourceKey": "Learning/CardArt/pneumothorax",
-            "imageSha256": "4f3dd94124553489b3daabf64c0f5375976e53c46103db5dcc2d147b1bc80e9f",
+            "imageSha256": "07f4a2934e86241794125b7e1c160acd32eba096b072abb37aa45bcf11ac9015",
             "composition": "Right lung lobes with selected lateral ribs, showing the case's anatomical region. Healthy reference geometry; no invented collapse or drain placement.",
             "width": 512,
             "height": 320,
@@ -2776,7 +2776,7 @@
         {
             "id": "asthma",
             "resourceKey": "Learning/CardArt/asthma",
-            "imageSha256": "4e66b8d2e69d784e8649c251568cadd41267e96bc2f3dc29cd37eb548c13511a",
+            "imageSha256": "b6c350d0f4d884f6f153150b6fc685d32cb34b8d797695d81bc4a07aabbe40c6",
             "composition": "Bronchial tree isolated at an anterior oblique angle. Major bronchi emphasised; no invented narrowing or alveolar segmentation.",
             "width": 512,
             "height": 320,
@@ -2909,7 +2909,7 @@
         {
             "id": "coronary-disease",
             "resourceKey": "Learning/CardArt/coronary-disease",
-            "imageSha256": "af01018a0243d11ce05c01318dac83c5d82ca64a52f366f45121c140324b48b1",
+            "imageSha256": "86facf2db3db2b14a7f99e6d2987fed06a41a3f42d63c8acfc535fa0df32a497",
             "composition": "Exposed healthy heart and source coronary vessels. Interface emphasis does not claim a lesion location.",
             "width": 512,
             "height": 320,
@@ -3250,7 +3250,7 @@
         {
             "id": "pneumonia",
             "resourceKey": "Learning/CardArt/pneumonia",
-            "imageSha256": "684fabb141aad39ea4ca3c02c9be845a7e595bd2660edfc6b388f36f605b8ed7",
+            "imageSha256": "a8dfe90d4ee41298e49e8651335c4402d595b59a1857f25adfc4c56bd2232a64",
             "composition": "Posterior-lateral view of the complete right lung lobes, with the lower lobe emphasised and bronchial meshes omitted. This is a healthy subject preview, not an infection map.",
             "width": 512,
             "height": 320,
@@ -3305,7 +3305,7 @@
         {
             "id": "pleural-effusion",
             "resourceKey": "Learning/CardArt/pleural-effusion",
-            "imageSha256": "29617c21ae005ed3a0d24a67f12571de0f808bceecf738b0786b03c382d6e8a3",
+            "imageSha256": "9af48491f41578ee1b511bc5f99d5c08eb44d7987a41f119ef19ec95519c461e",
             "composition": "Right lung lobes, diaphragm and existing parietal pleura translated laterally as a layer relationship preview. No fluid volume is implied.",
             "width": 512,
             "height": 320,
@@ -3386,7 +3386,7 @@
         {
             "id": "aortic-stenosis",
             "resourceKey": "Learning/CardArt/aortic-stenosis",
-            "imageSha256": "c162cd96a415a0949392a9162319aadfc84aa9343788009fb9d75d199d3b3505",
+            "imageSha256": "3322972155c6449881caf87a4cf548a6b83fad585ab31b2241582bf307d2d522",
             "composition": "The three original aortic valve cusps, isolated and enlarged equally for recognition. Healthy source shapes, not a fabricated stenosis or treatment result.",
             "width": 512,
             "height": 320,

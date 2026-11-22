@@ -100,6 +100,7 @@ namespace ThoraxLab.Editor
         }
         IEnumerable<int> VerifySettingsApply()
         {
+            foreach(int frames in VerifyAstigmatismReadingMode())yield return frames;
             foreach(int frames in VerifyAccessibilityOnboarding())yield return frames;
             var saved=app.Settings.Draft();var category=typeof(LabUI).GetField("settingCategory",BindingFlags.Instance|BindingFlags.NonPublic);
             try
@@ -117,6 +118,7 @@ namespace ThoraxLab.Editor
                 Require("settings_apply_height_reaches_profile",Mathf.Approximately(app.Settings.Current.heightBoost,boost)&&Mathf.Approximately(app.Settings.Current.tableHeight,table),"Apply keeps both requested height values.");
                 Require("settings_apply_moves_actual_view",Mathf.Abs(Camera.main.transform.position.y-eyeBefore-(boost-boostBefore))<.01f,"Eye before="+eyeBefore+" after="+Camera.main.transform.position.y+" boost="+boost);
                 Require("settings_apply_moves_table_and_specimen",Mathf.Abs(app.Session.specimen.position.y-table)<.001f&&Mathf.Abs(app.Session.table.position.y-table)<.001f,"Table and specimen use applied offset.");
+                VerifyDrapeOnTable("lab_drape_after_height_adjustment");
                 app.UI.ShowSettings();yield return 4;
                 draft=(SettingsProfile)typeof(LabUI).GetField("draft",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(app.UI);
                 Require("settings_reopen_preserves_values",Mathf.Approximately(draft.heightBoost,boost)&&Mathf.Approximately(draft.tableHeight,table),"Reopening settings shows the committed values.");
@@ -128,6 +130,82 @@ namespace ThoraxLab.Editor
             }
             finally{app.Settings.Apply(saved);category.SetValue(app.UI,"VR comfort");app.UI.ShowSignIn();}
             yield return 6;
+        }
+        IEnumerable<int> VerifyAstigmatismReadingMode()
+        {
+            const string mode = "Astigmatism reading mode";
+            var saved = app.Settings.Draft();
+            var baseline = app.Settings.Draft();
+            baseline.textScale = 1f;
+            baseline.captionScale = 1.1f;
+            baseline.highContrast = false;
+            baseline.astigmatismReadingMode = false;
+            baseline.readingBrightnessPercent = 80f;
+            baseline.vignette = false;
+            var category = typeof(LabUI).GetField("settingCategory", BindingFlags.Instance | BindingFlags.NonPublic);
+            string previousCategory = (string)category.GetValue(app.UI);
+            try
+            {
+                app.Settings.Apply(baseline);
+                app.UI.ShowSignIn(); yield return 4;
+                var note = app.UI.Root.GetComponentsInChildren<TMPro.TMP_Text>().Single(t => t.text.StartsWith("If you have astigmatism"));
+                var viewport = note.GetComponentInParent<ScrollRect>().viewport;
+                var noteBounds = RectTransformUtility.CalculateRelativeRectTransformBounds(viewport, note.rectTransform);
+                Require("reading-mode/opening-note", note.text.Contains(mode) && note.text.Contains("VR comfort & text size")
+                    && noteBounds.min.y >= viewport.rect.yMin - 1 && noteBounds.max.y <= viewport.rect.yMax + 1,
+                    "Before sign-in or scrolling, the note names the reading mode and tells the player where to enable it.");
+                AimAtControl(note.rectTransform); yield return 4;
+                RestHandsForCaseCapture(); yield return 4;
+                CaptureWorldInterface("astigmatism-reading-mode/opening-note.png");
+                foreach(int frames in GuideClick("VR comfort & text size"))yield return frames;
+                Require("reading-mode/quick-setup", app.UI.Root.GetComponentsInChildren<Button>().Any(b => b.name == "Off   " + mode),
+                    "A single reading mode switch is available before sign-in.");
+                foreach(int frames in GuideClick("Off   " + mode))yield return frames;
+                var sample = app.UI.Root.GetComponentsInChildren<Image>().Single(i => i.name == "Readability preview");
+                Require("reading-mode/live-preview", Mathf.Approximately(sample.GetComponentInChildren<TMPro.TMP_Text>().fontSize, 24f * 1.35f)
+                    && Mathf.Approximately(LabWidgets.TextScale, 1f), "The larger reading sample previews without applying the draft.");
+                var brightness = app.UI.Root.GetComponentsInChildren<Slider>().SingleOrDefault(s => s.name == "Reading brightness (%)");
+                Require("reading-mode/brightness-control", brightness && brightness.minValue == 65f && brightness.maxValue == 100f
+                    && Mathf.Approximately(brightness.value, 80f), "Reading mode offers a moderate initial dimming level and adjustable brightness.");
+                var shade = Camera.main.GetComponent<ComfortVignette>().GetComponentInChildren<MeshRenderer>();
+                RestHandsForCaseCapture(); yield return 4;
+                brightness.value = 100f; yield return 80;
+                CaptureWorldInterface("astigmatism-reading-mode/brightness-100.png");
+                Require("reading-mode/full-brightness", !shade.enabled, "At 100% the stationary view returns to full brightness.");
+                brightness.value = 65f; yield return 80;
+                CaptureWorldInterface("astigmatism-reading-mode/brightness-65.png");
+                Require("reading-mode/dim-preview", shade.enabled && Mathf.Approximately(shade.sharedMaterial.GetFloat("_ReadingDim"), .35f)
+                    && shade.sortingOrder > app.UI.Root.GetComponent<Canvas>().sortingOrder,
+                    "The preview dims the stationary room and its bright console even with the movement vignette disabled.");
+                foreach(int frames in GuideClick("Cancel"))yield return frames;
+                yield return 80;
+                Require("reading-mode/cancel-brightness", !shade.enabled, "Cancelling the preview restores the preceding brightness.");
+                foreach(int frames in GuideClick("VR comfort & text size"))yield return frames;
+                foreach(int frames in GuideClick("Off   " + mode))yield return frames;
+                foreach(int frames in ApplySettingsButton())yield return frames;
+                yield return 80;
+                Require("reading-mode/saved-brightness", shade.enabled && Mathf.Approximately(shade.sharedMaterial.GetFloat("_ReadingDim"), .2f)
+                    && app.UI.Root.GetComponentsInChildren<TMPro.TMP_Text>().Any(t => t.text.StartsWith("Astigmatism reading mode is on")),
+                    "The saved mode dims the actual view and the opening note confirms it is on.");
+                var panel = app.UI.Root.GetComponentsInChildren<Image>().Single(i => i.name == "VR console surface");
+                Require("reading-mode/applied", app.UI.ScreenName == "Sign in" && Mathf.Approximately(LabWidgets.TextScale, 1.35f)
+                    && panel.color.a == 1f && !panel.GetComponent<LabGlassTint>().isActiveAndEnabled && !LabWidgets.HighContrast,
+                    "The saved mode enlarges the interface and uses an opaque, flat console with the player's chosen contrast.");
+                foreach(int frames in GuideClick("VR comfort & text size"))yield return frames;
+                foreach(int frames in GuideClick("Choose a settings category"))yield return frames;
+                foreach(int frames in GuideClick("Learning & accessibility"))yield return frames;
+                sample = app.UI.Root.GetComponentsInChildren<Image>().Single(i => i.name == "Readability preview");
+                var caption = sample.GetComponentsInChildren<TMPro.TMP_Text>().Single(t => t.text.StartsWith("Caption preview"));
+                Require("reading-mode/captions", Mathf.Approximately(caption.fontSize, 22f * 1.5f), "The caption preview uses the mode's larger size.");
+                foreach(int frames in GuideClick("On   " + mode))yield return frames;
+                foreach(int frames in ApplySettingsButton())yield return frames;
+                yield return 80;
+                panel = app.UI.Root.GetComponentsInChildren<Image>().Single(i => i.name == "VR console surface");
+                Require("reading-mode/restore", Mathf.Approximately(LabWidgets.TextScale, 1f) && app.Settings.Current.captionScale == 1.1f
+                    && panel.color.a < 1f && panel.GetComponent<LabGlassTint>().isActiveAndEnabled && !shade.enabled,
+                    "Turning the mode off from Learning & accessibility restores the original sizes and console finish.");
+            }
+            finally { app.Settings.Apply(saved); category.SetValue(app.UI, previousCategory); app.UI.ShowSignIn(); }
         }
         IEnumerable<int> VerifyAccessibilityOnboarding()
         {
@@ -157,7 +235,9 @@ namespace ThoraxLab.Editor
                 contrast.onClick.Invoke();yield return 4;
                 var draft=(SettingsProfile)typeof(LabUI).GetField("draft",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(app.UI);
                 var surface=app.UI.Root.GetComponentsInChildren<Image>().Single(i=>i.name=="Readability preview");
-                Require("accessibility/contrast_preview",surface.color==(draft.highContrast?Color.black:LabWidgets.Ground),"Contrast preview updates before committing preferences.");
+                var previewBase=LabWidgets.Ground;
+                previewBase.a=.97f;
+                Require("accessibility/contrast_preview",surface.color==(draft.highContrast?Color.black:previewBase),"Contrast preview updates before committing preferences.");
                 Require("accessibility/preview_is_not_saved",JsonUtility.ToJson(app.Settings.Current)==before,"Previewing size and contrast cannot silently change saved settings.");
                 foreach(int frames in GuideClick("Cancel"))yield return frames;
                 Require("accessibility/cancel_returns_to_rules",app.UI.ScreenName=="Getting started"&&JsonUtility.ToJson(app.Settings.Current)==before,"Cancel restores the calling screen and retains the saved settings.");
@@ -233,7 +313,7 @@ namespace ThoraxLab.Editor
                         var light=GameObject.Find("Specimen examination light").GetComponent<Light>();
                         Require("settings_graphics_reaches_renderer",Mathf.Approximately(pipeline.renderScale,expected.renderScale)&&pipeline.msaaSampleCount==expected.msaa&&Mathf.Approximately(pipeline.shadowDistance,expected.shadows?expected.shadowDistance:0)&&QualitySettings.globalTextureMipmapLimit==expected.textureLimit&&Mathf.Approximately(light.intensity,VRSpecimenPresentation.ExaminationIntensity*expected.brightness),"Scale, MSAA, shadows, texture detail and brightness reach rendering.");
                     }
-                    if(name=="Learning & accessibility")Require("settings_accessibility_rebuilds_ui",Mathf.Approximately(LabWidgets.TextScale,expected.textScale)&&LabWidgets.HighContrast==expected.highContrast,"Rebuilt UI uses the saved text size and contrast.");
+                    if(name=="Learning & accessibility")Require("settings_accessibility_rebuilds_ui",Mathf.Approximately(LabWidgets.TextScale,expected.EffectiveTextScale)&&LabWidgets.HighContrast==expected.highContrast,"Rebuilt UI uses the saved text size and contrast.");
                     app.UI.ShowSettings();yield return 4;
                     var reopened=(SettingsProfile)typeof(LabUI).GetField("draft",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(app.UI);
                     Require("settings_category_reopens_saved_values/"+name,JsonUtility.ToJson(reopened)==JsonUtility.ToJson(expected),"Returning to settings preserves every field in this category.");

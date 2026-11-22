@@ -45,6 +45,7 @@ namespace ThoraxLab.Editor
             Require("disabled_button_does_not_activate",callbacks==1&&app.UI.HasModal,"Immediate activation preserves disabled-control protection.");
             InvokeUI("ShowModes");yield return 5;
             Require("card_feedback_has_no_fade",app.UI.ScreenName=="Modes"&&app.UI.Root.GetComponentsInChildren<Button>().All(b=>b.colors.fadeDuration==0),"All four activity cards also give immediate visual feedback.");
+            foreach(int frames in VerifyBackNavigation())yield return frames;
             app.UI.ShowSignIn();headState=originalHead;leftState=originalLeft;rightState=originalRight;QueueAll();yield return 5;
         }
 

@@ -81,16 +81,29 @@ namespace ThoraxLab.Learning
             if(VisualRoot.gameObject.activeSelf!=tracked)VisualRoot.gameObject.SetActive(tracked);
             if(!tracked)
             {
-                GripCurl=IndexCurl=0;
-                foreach(var joint in joints)joint.bone.localRotation=joint.rest;
+                if(GripCurl!=0||IndexCurl!=0)
+                {
+                    GripCurl=IndexCurl=0;
+                    foreach(var joint in joints)joint.bone.localRotation=joint.rest;
+                }
                 if(pointer)pointer.enabled=false;
                 return;
             }
             float grip=input.gripValue;
             if(interactor.interactablesSelected.Count>0)grip=Mathf.Max(grip,.86f);
             if(interactor.session&&interactor.session.mode==LabMode.Free&&LabRuntime.Instance&&LabRuntime.Instance.CanUseCuttingTool)grip=Mathf.Max(grip,.74f);
-            GripCurl=Mathf.MoveTowards(GripCurl,grip,Time.unscaledDeltaTime*9);
-            IndexCurl=Mathf.MoveTowards(IndexCurl,Mathf.Max(input.triggerValue,grip*.9f),Time.unscaledDeltaTime*9);
+            float nextGrip=Mathf.MoveTowards(GripCurl,grip,Time.unscaledDeltaTime*9);
+            float nextIndex=Mathf.MoveTowards(IndexCurl,Mathf.Max(input.triggerValue,grip*.9f),Time.unscaledDeltaTime*9);
+            if(nextGrip!=GripCurl||nextIndex!=IndexCurl)
+            {
+                GripCurl=nextGrip;
+                IndexCurl=nextIndex;
+                ApplyCurl();
+            }
+            UpdatePointer();
+        }
+        void ApplyCurl()
+        {
             foreach(var joint in joints)
             {
                 float curl=joint.finger==1?IndexCurl:GripCurl;
@@ -98,7 +111,6 @@ namespace ThoraxLab.Learning
                 if(joint.oppositionDegrees>0)bend=Quaternion.AngleAxis(joint.oppositionDegrees*curl,joint.oppositionAxis)*bend;
                 joint.bone.localRotation=joint.rest*bend;
             }
-            UpdatePointer();
         }
         void UpdatePointer()
         {

@@ -16,14 +16,37 @@ These references informed component recognition. They did not change treatment
 instructions, scoring, working-end position, contact tolerance or tool interactions.
 Graduations are decorative divisions without volume or dose values.
 
-The implementation creates 23 instrument variants with a cached mesh per variant.
-All details are merged by surface into one renderer per instrument, using six shared
-finishes across the kit: cutting steel, satin steel, ivory polymer, teal polymer,
-graphite elastomer and translucent polymer. Thin wire and scaffold details use
-bounded polygonal tubes; no refraction, screen-copy effects or per-detail renderers
-are used. Only the required instrument remains visible during a normal activity.
+The case and dissection tools use 23 named instrument models. The coronary case
+also has a radial compression band. Each model shares cached meshes across instances.
+The saw uses two renderers so its blade can oscillate about the spindle while the
+grip stays steady. Each other model, including the band, uses one renderer. Only
+finishes present on a mesh get a material slot.
 
-`InstrumentGeometry.Create(parent, id)` creates visual children only. The caller
-retains its original interaction collider, working-end transform and rigid-body
-configuration. Dissection scalpel and saw variants retain the existing cutting-plane
-orientation and nominal visual extents.
+Seven shared URP/Lit materials distinguish honed steel, satin stainless, ivory
+polymer, teal polymer, graphite elastomer, clear polymer and absorbent fibre.
+The metals share a directional stainless texture. The rigid plastics and rubber
+share a mould-grain texture with different roughness and relief. The gauze and
+swab use the woven surface. The six opaque finishes use normal maps. The clear
+shell uses alpha blending so the plunger or fittings can be seen through it.
+These material assets live in `Resources/Learning/InstrumentFinishes`. Tool meshes
+use metre-scale UVs, so the grain stays attached as instruments turn in the hand.
+
+`InstrumentGeometry.Create(parent, id)` creates the visual model. The caller owns
+the grab collider, rigid body and contact checks. The scalpel has a separate
+ground bevel and an open tang slot. The saw has a slotted plate and a curved tooth
+row. The scalpel point and middle saw tooth lie 108 mm and 129 mm along local +Z,
+respectively, with the saw at rest. The saw blade rotates about its local X axis at
+the spindle.
+
+The oxygen mask presents its broad open rim 67 mm along local +Z. The shell and
+nose clip sit in front of that plane, and the elastic runs beside the cheeks and
+around the back of the training head.
+
+`InstrumentVisualVerification.Capture()` renders the original eight comparison
+views with their fixed orthographic camera. It also renders the working ends in
+close-up and the cloth and clear parts under the laboratory reflection. Its JSON
+report records tool-tip alignment, UV scale, tangent frames, material references,
+renderer counts and triangle counts. The radial band has its own entry alongside
+the 23 instrument IDs. The mask check measures the rim plane and tests the center
+and four surrounding points for obstructions. Headset appearance and controller
+feel require a device run.

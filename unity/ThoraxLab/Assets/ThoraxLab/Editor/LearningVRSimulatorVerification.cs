@@ -34,7 +34,10 @@ namespace ThoraxLab.Editor
         const string EditorErrors = "ThoraxLab.XRVerification.EditorErrors";
         const string InitialIndex = "ThoraxLab.XRVerification.InitialIndex";
         const string IndexBeforePlay = "ThoraxLab.XRVerification.IndexBeforePlay";
-        internal static string Output => Path.GetFullPath(Path.Combine(Application.dataPath, "../../../qa/vr-xr-simulator-report.json"));
+        const string MuseumReview = "ThoraxLab.XRVerification.MuseumReview";
+        internal static bool MuseumOnly => SessionState.GetBool(MuseumReview, false) || Environment.GetCommandLineArgs().Contains("--thorax-museum-only");
+        internal static string Output => Path.GetFullPath(Path.Combine(Application.dataPath, SessionState.GetBool(MuseumReview, false)
+            ? "../../../qa/museum-environment/simulator.json" : "../../../qa/vr-xr-simulator-report.json"));
 
         [Serializable] internal sealed class Check
         {
@@ -61,10 +64,16 @@ namespace ThoraxLab.Editor
         }
 
         [MenuItem("Anatome/Verify XR Device Simulator integration")]
-        public static void Run()
+        public static void Run() => Begin(false);
+
+        [MenuItem("Anatome/Art/Verify museum in XR simulator")]
+        public static void RunMuseum() => Begin(true);
+
+        static void Begin(bool museumReview)
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Start the simulator verification outside Play mode.");
             if (Environment.GetCommandLineArgs().Contains("--learning-qa")) throw new InvalidOperationException("Do not combine the XR integration check with --learning-qa: tracking loss must exercise the real gate.");
+            SessionState.SetBool(MuseumReview, museumReview);
             Directory.CreateDirectory(Path.GetDirectoryName(Output));
             File.WriteAllText(Output, JsonUtility.ToJson(new Report { utc = DateTime.UtcNow.ToString("o"), unityVersion = Application.unityVersion }, true));
             SessionState.SetBool(Pending, true);
@@ -126,6 +135,7 @@ namespace ThoraxLab.Editor
             Directory.CreateDirectory(Path.GetDirectoryName(Output));
             File.WriteAllText(Output, JsonUtility.ToJson(report, true));
             Debug.Log("Thorax XR simulator integration: " + report.status + " · " + Output);
+            SessionState.EraseBool(MuseumReview);
             if (SessionState.GetBool(Exit, false)) EditorApplication.Exit(report.passed ? 0 : 1);
             else EditorApplication.ExitPlaymode();
         }
@@ -188,11 +198,80 @@ namespace ThoraxLab.Editor
             if (!passed) throw new InvalidOperationException(id + ": " + detail);
         }
 
+        void VerifyDrapeOnTable(string check)
+        {
+            Physics.SyncTransforms();
+            var table = app.Session.table;
+            var linen = table.parent.Find("Lab_Blue").GetComponent<MeshRenderer>().sharedMaterial;
+            var top = app.Session.TabletopCollider;
+            var drape = app.Session.specimen.GetComponentsInChildren<MeshRenderer>(true)
+                .FirstOrDefault(r => r.name.StartsWith("Reusable examination drape", StringComparison.Ordinal));
+            var gap = float.NaN;
+            if (drape && top.Raycast(new Ray(drape.bounds.center + Vector3.up, Vector3.down), out var hit, 2))
+                gap = drape.bounds.min.y - hit.point.y;
+            Require(check, drape && !drape.GetComponent<Collider>() && drape.sharedMaterial == linen && gap > 0 && gap < .006f,
+                $"Examination linen clearance above the adjustable tabletop is {gap * 1000:F2} mm.");
+        }
+
+        void VerifyAnatomyMeshStorage()
+        {
+            var parts = app.Session.originals;
+            Require("anatomy_working_mesh_volume", parts.Count > 0 && parts.All(p => p.Filter.sharedMesh.isReadable &&
+                p.SourceVolume == CutMeshData.Capture(p.Filter.sharedMesh).Volume()),
+                "Each working mesh has its original volume, including the validated replacement.");
+            Require("anatomy_display_mesh_cpu_copies", parts.All(p => new[] { "LOD1", "LOD2" }.All(name =>
+                !p.transform.Find(name).GetComponent<MeshFilter>().sharedMesh.isReadable)),
+                "Both display distances release their CPU-side vertex and index buffers.");
+            var settings = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/ProjectSettings.asset")[0]);
+            var packed = (VertexChannelCompressionFlags)settings.FindProperty("VertexChannelCompressionMask").intValue;
+            var anatomyChannels = VertexChannelCompressionFlags.Position | VertexChannelCompressionFlags.Normal |
+                VertexChannelCompressionFlags.Tangent | VertexChannelCompressionFlags.TexCoord0;
+            Require("anatomy_player_vertex_precision", (packed & anatomyChannels) == 0,
+                "The Android build preserves full precision for the anatomy's positions, normals, tangents and UVs.");
+        }
+
+        void VerifyLaboratorySurfaces()
+        {
+            var room = app.Session.table.parent;
+            var glass = room.Find("Lab_Glass").GetComponent<MeshRenderer>();
+            var block = new MaterialPropertyBlock();
+            glass.GetPropertyBlock(block);
+            Require("lab_cabinet_glass_transmits", glass.sharedMaterial.IsKeywordEnabled("_SURFACE_TYPE_TRANSPARENT") &&
+                glass.sharedMaterial.GetColor("_BaseColor").a < .25f && !block.HasColor("_BaseColor"),
+                "The runtime keeps the cabinet glass transparent.");
+            var lamp = room.Find("Lab_Light").GetComponent<MeshRenderer>();
+            Require("lab_ceiling_emission_and_bake", lamp.sharedMaterial.IsKeywordEnabled("_EMISSION") && LightmapSettings.lightmaps.Length > 0 &&
+                FindObjectsByType<Light>(FindObjectsSortMode.None).Count(l => l.name.StartsWith("Ceiling illumination") && l.type == LightType.Rectangle && l.lightmapBakeType == LightmapBakeType.Baked) == 12 &&
+                FindObjectsByType<Light>(FindObjectsSortMode.None).Count(l => l.name.StartsWith("Scrub and observation light") && l.lightmapBakeType == LightmapBakeType.Baked) == 4,
+                "The twelve theatre luminaires and four adjoining lobby and observation lights provide baked illumination.");
+            var floor = room.Find("Lab_Floor").GetComponent<MeshRenderer>().sharedMaterial;
+            Require("theatre_floor_clear_coat", floor.IsKeywordEnabled("_CLEARCOAT") && floor.GetTexture("_DetailAlbedoMap"),
+                "The resin uses the clear-coat shader and spatially baked contact shadows.");
+            foreach (var name in new[] { "Floor", "Wall", "Blue", "Stainless", "Ceramic", "Cloth", "Ceiling", "VentFace", "White", "EquipmentBlue", "CylinderGreen", "Guard", "Black", "Red" })
+            {
+                var material = room.Find("Lab_" + name).GetComponent<MeshRenderer>().sharedMaterial;
+                var albedo = material.GetTexture("_BaseMap");
+                var normal = material.HasProperty("_BumpMap") ? material.GetTexture("_BumpMap") : null;
+                Require("theatre_native_4k/" + name, albedo && albedo.width == 4096 && albedo.height == 4096 &&
+                    (name == "VentFace" || normal && normal.width == 4096 && normal.height == 4096),
+                    name + " uses native 4096-pixel finishes in the running scene.");
+            }
+            var atlas = room.Find("Lab_MonitorAtlas").GetComponent<MeshRenderer>().sharedMaterial.GetTexture("_BaseMap");
+            Require("theatre_diagnostic_display_4k", atlas && atlas.width == 4096 && atlas.height == 2048,
+                "The monitor atlas was drawn at 4096 by 2048.");
+            var clock = room.GetComponentInChildren<OperatingRoomClock>();
+            Require("theatre_wall_clock_running", clock && clock.ClockSeconds >= 0 && clock.ElapsedSeconds == 0,
+                "The digital clock runs in local time and the case timer starts at zero.");
+            VerifyDrapeOnTable("lab_drape_at_startup");
+        }
+
         IEnumerable<int> Verify()
         {
             for (int frame = 0; frame < 300 && (!LabRuntime.Instance || LabRuntime.Instance.UI == null); frame++) yield return 1;
             app = LabRuntime.Instance;
             Require("runtime_ready", app && app.UI && app.Presentation && app.Structures.ContainsKey("FMA7163"), "Runtime, world-space UI and original skin structure must initialize.");
+            VerifyAnatomyMeshStorage();
+            VerifyLaboratorySurfaces();
             Require("no_tracking_bypass", !LabRuntime.VerificationRunning, "The test runs without --learning-qa and must depend on actual XR tracking.");
             simulator = FindFirstObjectByType<XRDeviceSimulator>();
             Require("official_simulator_installed", simulator && simulator.enabled && simulator.deviceSimulatorActionAsset && simulator.controllerActionAsset && simulator.handActionAsset,
@@ -231,14 +310,21 @@ namespace ThoraxLab.Editor
                 Quaternion.Angle(Camera.main.transform.localRotation, headState.deviceRotation) < .5f &&
                 Vector3.Distance(hand.transform.localPosition, rightState.devicePosition) < .005f,
                 "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=" + app.Focused);
+            foreach (var frames in VerifyScrubEntry()) yield return frames;
 
+            if(Environment.GetCommandLineArgs().Contains("--model-inspection-only"))
+                Require("voice/welcome",app.Narrator.IsPlaying && app.Narrator.Caption.StartsWith("Welcome to Anatome"),"The first tracked sign-in screen starts its spoken welcome.");
             foreach(int frames in VerifyStartupFacing())yield return frames;
             foreach(int frames in VerifySchoolPrivacy())yield return frames;
-            if(Environment.GetCommandLineArgs().Contains("--thorax-museum-only")){
+            if(LearningVRSimulatorVerification.MuseumOnly){
                 foreach(int frames in VerifyThoraxMuseum())yield return frames;yield break;
             }
             if(Environment.GetCommandLineArgs().Contains("--model-inspection-only")){
-                foreach(int frames in VerifyModelInspection())yield return frames;yield break;
+                foreach(int frames in VerifyModelInspection())yield return frames;
+                foreach(int frames in VerifyAssemblyGrip(true))yield return frames;
+                foreach(int frames in VerifyChestCutEntry(true))yield return frames;
+                VerifyNarrationStartup();
+                foreach(int frames in VerifyGuide())yield return frames;yield break;
             }
             if(Environment.GetCommandLineArgs().Contains("--identification-focus-only")){
                 foreach(int frames in VerifyIdentificationFocus())yield return frames;yield break;
@@ -285,6 +371,7 @@ namespace ThoraxLab.Editor
             }
             if(Environment.GetCommandLineArgs().Contains("--dissection-layers-only")){
                 foreach(int frames in VerifyInterruptedOrientation())yield return frames;
+                foreach(int frames in VerifyChestCutEntry())yield return frames;
                 foreach(int frames in VerifyDissectionLayerCopies())yield return frames;yield break;
             }
             foreach (int frames in VerifyButtonResponse()) yield return frames;
@@ -353,10 +440,20 @@ namespace ThoraxLab.Editor
                 Vector3.Distance(skin.transform.position,beforePause)<.005f && app.OrientationStep==1 && !app.Progress.orientationCompleted,
                 "A real grip and hand movement while the menu is open cannot acquire or move anatomy or grant orientation credit.");
             Grip(false); SetHandWorld(startPosition,Quaternion.LookRotation(toward,Vector3.up)); yield return 8;
-            Menu(true); yield return 8; Menu(false); yield return 8;
+            bool focusBeforeResume=app.Focused;
+            // The batch Editor can lose OS focus while its Windows display settings change.
+            if(Application.isBatchMode&&!focusBeforeResume)app.SendMessage("OnApplicationFocus",true);
+            var neutral=LearningXRInput.Read(XRNode.RightHand);
+            Require("orientation_menu_resume_neutral",app.Focused&&app.XRReady&&neutral.tracked&&!neutral.menu&&!neutral.grip&&!LearningXRInput.Read(XRNode.LeftHand).menu&&app.UI.ScreenName=="Menu",
+                $"Before the fresh press: initial focus={focusBeforeResume}, current focus={app.Focused}, tracking={app.XRReady}, menu={neutral.menu}, grip={neutral.grip}, screen={app.UI.ScreenName}.");
+            Menu(true); yield return 8;
+            var pressed=LearningXRInput.Read(XRNode.RightHand);
+            Require("orientation_menu_resume_down",app.Focused&&pressed.tracked&&pressed.menu,
+                $"Queued resume press reached the controller: focus={app.Focused}, source={pressed.source}, menu={pressed.menu}, screen={app.UI.ScreenName}.");
+            Menu(false); yield return 8;
             Require("controller_menu_resumes_same_orientation", app.UI.ScreenName=="Workspace" && app.CanInteract && app.OrientationActive &&
                 app.OrientationStep==1 && !app.Progress.orientationCompleted && app.Session.selected==skin && selectedEvents==0,
-                "The next controller Menu press returns to the same workspace, selected skin and orientation step without restarting or completing it.");
+                $"After release: screen={app.UI.ScreenName}, focus={app.Focused}, interact={app.CanInteract}, orientation={app.OrientationActive}, step={app.OrientationStep}, completed={app.Progress.orientationCompleted}, selected skin={app.Session.selected==skin}, grabs={selectedEvents}.");
 
             SetHead(headState.devicePosition, headState.deviceRotation, false); QueueAll(); yield return 8;
             var rest = skin.transform.position;
@@ -435,11 +532,33 @@ namespace ThoraxLab.Editor
             app.Account.SignOut(); yield return 8;
         }
 
-        IEnumerable<int> VerifyAssemblyGrip()
+        IEnumerable<int> VerifyAssemblyGrip(bool zoom=false)
         {
             var variant=app.Catalog.units.First(u=>u.id=="chest-wall").variants.First(v=>v.mode==LearningMode.AssembleAnatomy&&v.difficulty==Difficulty.Easy);
-            app.StartActivity(variant,SessionPhase.Practice);yield return 16;
+            app.StartActivity(variant,zoom?SessionPhase.Lesson:SessionPhase.Practice);yield return zoom?4:16;
             var objective=app.Engine.Current;var target=app.Structures[objective.targetId];var parent=target.transform.parent;
+            if(zoom){
+                app.Inspector.Open();app.Inspector.ZoomIn();yield return 4;
+                float midpoint=Time.time+1.4f;
+                while(Time.time<midpoint)yield return 1;
+                Require("inspection/assembly_demo_active",app.Inspector.IsOpen&&app.Inspector.Magnification>1&&app.Demonstrator.Playing,"The automatic assembly demonstration is playing at magnification.");
+                VerifySingleSolidModel("inspection/single_solid/assembly_lesson",target.Renderer);
+                var path=GameObject.Find("Placement guide line")?.GetComponent<LineRenderer>();
+                var socket=GameObject.Find("Correct anatomical shape and orientation").GetComponent<MeshRenderer>();
+                var startCenter=target.Renderer.bounds.center;var endCenter=socket.bounds.center;
+                Require("inspection/assembly_placement_line",path&&path.GetComponent<Collider>()==null&&
+                    Vector3.Distance(path.GetPosition(0),startCenter)<.005f&&
+                    Vector3.Distance(path.GetPosition(1),endCenter)<Vector3.Distance(startCenter,endCenter)-.02f,
+                    "The guide runs from the solid piece toward its matching outline and cannot intercept the controller.");
+                app.Inspector.Close();yield return 2;
+                app.Inspector.Open();app.Inspector.ZoomIn();yield return 4;
+                float deadline=Time.realtimeSinceStartup+6;
+                while(app.Demonstrator.Playing&&Time.realtimeSinceStartup<deadline)yield return 1;
+                Require("inspection/assembly_hint_finishes",!app.Demonstrator.Playing,"The automatic hint finishes while zoomed.");
+                AimAtButton("Show me this step");yield return 4;Trigger(true);yield return 4;Trigger(false);yield return 4;
+                Require("inspection/assembly_demo_replay",app.Demonstrator.Playing&&app.Narrator.IsPlaying&&!app.Engine.IsComplete(objective.id),"Replaying the hint while zoomed keeps the spoken step and the current piece active.");
+                VerifySingleSolidModel("inspection/single_solid/assembly_replay",target.Renderer);
+            }
             Physics.SyncTransforms();
             Require("assembly_piece_is_reachable",app.Presentation.TryGetExposedSurface(target,Camera.main.transform.position,out var surface),"The real staged Easy part has an exposed surface.");
             var toward=(surface-Camera.main.transform.position).normalized;var start=surface-toward*.06f;var rotation=Quaternion.LookRotation(toward,Vector3.up);
@@ -448,6 +567,13 @@ namespace ThoraxLab.Editor
             Grip(true);yield return 16;
             Require("assembly_grip_keeps_specimen_reference",hand.interactablesSelected.Any(x=>ReferenceEquals(x,target.Grab))&&target.transform.parent==parent,
                 "Real XRI pickup keeps the specimen parent. Target="+target.record.id+"; selected="+string.Join(",",hand.interactablesSelected.Select(x=>(x as Component)?.name))+"; parent unchanged="+(target.transform.parent==parent)+"; canInteract="+app.CanInteract+"; grip="+LearningXRInput.Read(XRNode.RightHand).grip+"; selectActive="+hand.isSelectActive);
+            if(zoom){
+                float size=app.Inspector.Magnification;
+                rightState.primary2DAxis=Vector2.up;QueueAll();yield return 10;
+                rightState.primary2DAxis=Vector2.zero;QueueAll();yield return 3;
+                Require("inspection/zoom_while_holding",app.Inspector.Magnification>size&&target.Grab.isSelected&&Vector3.Distance(initial,target.transform.position)<.005f&&!app.Engine.IsComplete(objective.id),
+                    "The thumbstick adjusts zoom mid-grip without dropping or placing the held piece.");
+            }
             SetHandWorld(start,Quaternion.AngleAxis(25,Vector3.up)*rotation);yield return 16;
             Require("assembly_allows_deliberate_rotation",Quaternion.Angle(target.transform.rotation,initialRotation)>20&&!app.Engine.IsComplete(objective.id)&&!string.IsNullOrEmpty(app.AssemblyPlacementFeedback),
                 "The orientation-only constraint does not restrict assembly rotation, and the live guide remains available while holding the part.");
@@ -459,6 +585,7 @@ namespace ThoraxLab.Editor
             Grip(false);yield return 16;
             Require("assembly_grip_release_places_current_piece",app.Engine.IsComplete(objective.id)&&app.Engine.Attempt.mistakes==0&&Vector3.Distance(target.transform.position,parent.TransformPoint(target.RestPosition))<.005f,
                 "The real XRI release places the Easy part and advances to the next piece without errors.");
+            if(zoom)Require("inspection/assembly_placement",app.Inspector.IsOpen&&app.Inspector.Magnification>1,"The part was placed at magnification through a real grip and release.");
             CaptureWorldInterface("vr-assembly-controller-verified.png");
         }
 
@@ -482,7 +609,7 @@ namespace ThoraxLab.Editor
                 "Opening Pause while holding the lifted skin restores its pose and keeps the lesson unfinished.");
             Menu(true);yield return 8;Menu(false);yield return 8;
             Require("held_grip_does_not_reacquire_after_pause",app.CanInteract&&hand.interactablesSelected.Count==0&&!app.Progress.orientationCompleted,
-                "Closing Pause while still holding grip does not pick the chest up automatically.");
+                $"Closing Pause while still holding grip keeps the chest released. Screen={app.UI.ScreenName}, workspace={app.UI.WorkspaceVisible}, paused={app.Paused}, focused={app.Focused}, tracked={app.XRReady}, selected={hand.interactablesSelected.Count}, completed={app.Progress.orientationCompleted}.");
             Grip(false);SetHandWorld(start,rotation);yield return 8;Grip(true);yield return 12;
             SetHandWorld(start+Vector3.up*.35f,rotation);yield return 12;
             Require("orientation_lift_stays_within_comfort_bound",Vector3.Distance(skin.transform.position,skin.transform.parent.TransformPoint(skin.RestPosition))<=.121f,
@@ -490,6 +617,47 @@ namespace ThoraxLab.Editor
             Grip(false);yield return 12;
             Require("orientation_can_finish_after_interruption",app.Progress.orientationCompleted&&!app.OrientationActive&&app.UI.ScreenName=="Career",
                 "A fresh deliberate grip/lift/release completes the interrupted orientation normally.");
+        }
+
+        void CaptureOperatingRoomView(string filename, Vector3 position, Vector3 target, float fieldOfView)
+        {
+            var camera = new GameObject("Operating room verification camera").AddComponent<Camera>();
+            try
+            {
+                camera.enabled = false;
+                camera.stereoTargetEye = StereoTargetEyeMask.None;
+                camera.transform.position = position;
+                camera.transform.LookAt(target);
+                camera.fieldOfView = fieldOfView;
+                CaptureWorldInterface("operating-room/" + filename, 3840, 2160, camera);
+            }
+            finally { Destroy(camera.gameObject); }
+        }
+
+        IEnumerable<int> VerifyScrubEntry()
+        {
+            var door = app.Session.table.parent.GetComponent<ScrubLobbyDoor>();
+            Require("scrub_entry_installed", door && door.northLeaf && door.southLeaf, "Both automatic scrub door leaves exist.");
+            var previous = headState;
+            var eye = Camera.main.transform;
+            SetHead(eye.parent.InverseTransformPoint(new Vector3(5.28f, 1.65f, 2.52f)), previous.deviceRotation, true);
+            QueueAll();
+            for (double stop = Time.realtimeSinceStartupAsDouble + 1.35; Time.realtimeSinceStartupAsDouble < stop;) yield return 1;
+            Physics.SyncTransforms();
+            var crossing = new Ray(new Vector3(5.22f, 1.12f, 2.73f), Vector3.right);
+            bool blocked = Physics.RaycastAll(crossing, 2.12f).Any(hit => hit.transform.IsChildOf(app.Session.table.parent));
+            Require("scrub_entry_opens_clear_route", door.southLeaf.localPosition.z > 1f && door.northLeaf.localPosition.z < -1f && !blocked,
+                "Approaching from theatre opens both leaves and clears a route into the external scrub lobby.");
+            CaptureOperatingRoomView("scrub-entry.png", new Vector3(4.34f, 1.58f, 2.02f), new Vector3(7.67f, 1.31f, 3.21f), 63);
+            SetHead(eye.parent.InverseTransformPoint(new Vector3(6.78f, 1.65f, 2.52f)), previous.deviceRotation, true);
+            QueueAll(); yield return 4;
+            Require("scrub_entry_holds_from_lobby", door.southLeaf.localPosition.z > 1f, "The lobby-side sensor holds the entry open.");
+            headState = previous; QueueAll();
+            for (double stop = Time.realtimeSinceStartupAsDouble + 1.35; Time.realtimeSinceStartupAsDouble < stop;) yield return 1;
+            Physics.SyncTransforms();
+            Require("scrub_entry_closes_after_departure", door.southLeaf.localPosition.z < .005f &&
+                Physics.RaycastAll(crossing, 2.12f).Any(hit => hit.transform.IsChildOf(door.southLeaf) || hit.transform.IsChildOf(door.northLeaf)),
+                "Both leaves return to the doorway after the learner leaves.");
         }
 
         IEnumerable<int> VerifyProcedureGrip()
@@ -501,6 +669,19 @@ namespace ThoraxLab.Editor
             app.StartActivity(variant,SessionPhase.Practice);yield return 16;
             Require("procedure_practice_uses_normal_tracking_gate",app.XRReady&&app.CanInteract&&app.Engine!=null&&app.Variant==variant&&!LabRuntime.VerificationRunning,
                 "The ordinary StartActivity entry point opens unlocked Easy pneumothorax practice with actual tracked simulator devices.");
+            var theatreClock=app.Session.table.parent.GetComponentInChildren<OperatingRoomClock>();
+            int t0=theatreClock.ElapsedSeconds;
+            // The digital face redraws on wall-clock seconds, independently of when the case started.
+            double tickDeadline=Time.realtimeSinceStartupAsDouble+3;
+            while(theatreClock.ElapsedSeconds==t0&&Time.realtimeSinceStartupAsDouble<tickDeadline)yield return 1;
+            Require("theatre_elapsed_time_advances",theatreClock.ElapsedSeconds>t0,
+                $"Elapsed display {t0} to {theatreClock.ElapsedSeconds}. Focused={app.Focused}, interactive={app.CanInteract}.");
+            CaptureOperatingRoomView("digital-timer.png", new Vector3(.82f, 1.93f, -2.54f), theatreClock.transform.position, 33);
+            app.Paused=true; yield return 4;
+            int held=theatreClock.ElapsedSeconds;
+            for (double stop=Time.realtimeSinceStartupAsDouble+1.25; Time.realtimeSinceStartupAsDouble<stop;) yield return 1;
+            app.Paused=false;
+            Require("theatre_elapsed_time_holds_when_paused",theatreClock.ElapsedSeconds==held,"Pausing the case holds the surgical elapsed display.");
             var finding=app.Engine.Current;
             Require("procedure_initial_finding_available",finding!=null&&finding.action==ActionKind.InspectFinding&&app.Structures.ContainsKey(finding.targetId),
                 "The real case begins at its anatomical finding; no objective completion has been injected.");
@@ -519,17 +700,9 @@ namespace ThoraxLab.Editor
             var tool=app.Procedure.Tools["probe"];int toolSelected=0,toolReleased=0;
             tool.grab.selectEntered.AddListener(_=>toolSelected++);tool.grab.selectExited.AddListener(_=>toolReleased++);
             var collider=tool.GetComponent<BoxCollider>();Physics.SyncTransforms();
-            var bounds=collider.bounds;bool foundRay=false;Vector3 handStart=default;Quaternion handRotation=default;
-            // Find a clear physical approach to the retained grab box. The controller is
-            // moved into that pose; the tool and collider remain on the real tray.
-            foreach(var outward in new[]{(Camera.main.transform.position-bounds.center).normalized,Vector3.up,Vector3.right,Vector3.left,Vector3.forward,Vector3.back})
-            {
-                var start=bounds.center+outward*(bounds.extents.magnitude+.055f);var ray=new Ray(start,-outward);
-                if(!Physics.Raycast(ray,out var candidate,.5f)||candidate.collider.GetComponentInParent<ProcedureTool>()!=tool)continue;
-                handStart=start;handRotation=Quaternion.LookRotation(-outward,Mathf.Abs(outward.y)>.9f?Vector3.forward:Vector3.up);foundRay=true;break;
-            }
+            bool foundRay=TryAimAtTrayTool(tool,out var handStart,out var handRotation);
             Require("instrument_grab_box_reachable",foundRay&&tool.grab.useDynamicAttach&&tool.grab.matchAttachPosition&&tool.grab.matchAttachRotation&&!tool.grab.snapToColliderVolume,
-                "The unchanged grab collider is physically reachable and dynamic attachment preserves the held instrument pose.");
+                "The instrument grab collider is physically reachable and dynamic attachment preserves the held instrument pose.");
             SetHandWorld(handStart,handRotation);yield return 10;
             bool toolHit=Physics.Raycast(hand.transform.position,hand.transform.forward,out var toolRay,.5f)&&toolRay.collider.GetComponentInParent<ProcedureTool>()==tool;
             Require("controller_ray_hits_instrument",toolHit,"First instrument ray hit="+(toolRay.collider?toolRay.collider.name:"none"));
@@ -821,7 +994,9 @@ namespace ThoraxLab.Editor
         void AimAtButton(string label)
         {
             Canvas.ForceUpdateCanvases();
-            var button = app.UI.Root.GetComponentsInChildren<Button>().SingleOrDefault(b => b.GetComponentInChildren<TMP_Text>()?.text == label);
+            var surface=app.UI.HasModal?app.UI.Root.Cast<Transform>().Last(child=>child.gameObject.activeSelf):app.UI.Root;
+            var buttons=surface.GetComponentsInChildren<Button>();
+            var button=buttons.SingleOrDefault(b=>b.name==label)??buttons.SingleOrDefault(b=>b.GetComponentInChildren<TMP_Text>()?.text==label);
             if (!button || !button.interactable) throw new InvalidOperationException("Visible interactive button missing: " + label);
             var rect = (RectTransform)button.transform;
             AimAtControl(rect);
@@ -854,21 +1029,22 @@ namespace ThoraxLab.Editor
             var hits=new List<RaycastResult>(); EventSystem.current.RaycastAll(data,hits);
             report.observations.Add(moment+": head="+Camera.main.transform.position+" hand="+hand.transform.position+" direction="+hand.transform.forward+" plane="+intersection+" distance="+distance+" screen="+screenPoint+" hits="+string.Join(", ",hits.Select(h=>h.gameObject.name+"/"+h.gameObject.GetComponentInParent<Button>()?.GetComponentInChildren<TMP_Text>()?.text)));
         }
-        string CaptureWorldInterface(string filename = "vr-xr-simulator-world-ui.png")
+        string CaptureWorldInterface(string filename = "vr-xr-simulator-world-ui.png", int width = 1440, int height = 1000, Camera camera = null)
         {
             Canvas.ForceUpdateCanvases();
-            var camera = Camera.main;
+            if (!camera) camera = Camera.main;
             var oldTarget = camera.targetTexture;
             var oldActive = RenderTexture.active;
-            var texture = new RenderTexture(1440, 1000, 24);
-            var pixels = new Texture2D(1440, 1000, TextureFormat.RGB24, false);
+            var texture = new RenderTexture(width, height, 24);
+            var pixels = new Texture2D(width, height, TextureFormat.RGB24, false);
             try
             {
                 camera.targetTexture = texture;
                 camera.Render();
                 RenderTexture.active = texture;
-                pixels.ReadPixels(new Rect(0, 0, 1440, 1000), 0, 0); pixels.Apply();
+                pixels.ReadPixels(new Rect(0, 0, width, height), 0, 0); pixels.Apply();
                 var path = Path.Combine(Path.GetDirectoryName(LearningVRSimulatorVerification.Output), filename);
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
                 File.WriteAllBytes(path, pixels.EncodeToPNG());
                 if (filename == "vr-xr-simulator-world-ui.png") report.screenshot = path;
                 return path;

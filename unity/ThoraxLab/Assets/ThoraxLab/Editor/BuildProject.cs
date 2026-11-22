@@ -28,11 +28,12 @@ public static class BuildProject {
  }
  public static void Configure(){
   foreach(var folder in new[]{"Scenes","Prefabs","Settings","Models","Materials","Textures"})Directory.CreateDirectory(Base+"/"+folder);
-  foreach(var f in new[]{"Laboratory.fbx","Thorax.fbx","Thorax_LOD1.fbx","Thorax_LOD2.fbx"})File.Copy(Path.Combine(Root,"exports",f),Base+"/Models/"+f,true);
+  var modelFiles=new[]{"Laboratory.fbx","LaboratoryChair.fbx","Thorax.fbx","Thorax_LOD1.fbx","Thorax_LOD2.fbx"};
+  foreach(var f in modelFiles)File.Copy(Path.Combine(Root,"exports",f),Base+"/Models/"+f,true);
   File.Copy(Path.Combine(Root,"exports/anatomy-catalog.json"),Base+"/anatomy-catalog.json",true);
   if(Directory.Exists(Path.Combine(Root,"exports/textures")))foreach(var file in Directory.GetFiles(Path.Combine(Root,"exports/textures"),"*.png"))File.Copy(file,Base+"/Textures/"+Path.GetFileName(file),true);
   AssetDatabase.Refresh();
-  foreach(var f in new[]{"Laboratory.fbx","Thorax.fbx","Thorax_LOD1.fbx","Thorax_LOD2.fbx"}){var importer=(ModelImporter)AssetImporter.GetAtPath(Base+"/Models/"+f);importer.isReadable=true;importer.globalScale=1;importer.importAnimation=false;importer.materialImportMode=ModelImporterMaterialImportMode.None;importer.generateSecondaryUV=f=="Laboratory.fbx";importer.SaveAndReimport();}
+  foreach(var f in modelFiles){var importer=(ModelImporter)AssetImporter.GetAtPath(Base+"/Models/"+f);importer.isReadable=!f.StartsWith("Thorax_LOD",StringComparison.Ordinal);importer.globalScale=1;importer.importAnimation=false;importer.materialImportMode=ModelImporterMaterialImportMode.None;importer.generateSecondaryUV=f=="Laboratory.fbx";importer.SaveAndReimport();}
   foreach(var guid in AssetDatabase.FindAssets("t:Texture2D",new[]{Base+"/Textures"})){var importer=(TextureImporter)AssetImporter.GetAtPath(AssetDatabase.GUIDToAssetPath(guid));importer.maxTextureSize=1024;importer.mipmapEnabled=true;importer.textureCompression=TextureImporterCompression.Compressed;importer.SaveAndReimport();}
   var renderer=Asset<UniversalRendererData>("Settings/LabRenderer.asset");if(!renderer){renderer=ScriptableObject.CreateInstance<UniversalRendererData>();AssetDatabase.CreateAsset(renderer,Base+"/Settings/LabRenderer.asset");}
   var pipeline=Asset<UniversalRenderPipelineAsset>("Settings/LabURP.asset");if(!pipeline){pipeline=UniversalRenderPipelineAsset.Create(renderer);AssetDatabase.CreateAsset(pipeline,Base+"/Settings/LabURP.asset");}pipeline.msaaSampleCount=4;pipeline.renderScale=1;pipeline.supportsHDR=false;pipeline.shadowDistance=3;GraphicsSettings.defaultRenderPipeline=pipeline;QualitySettings.renderPipeline=pipeline;
@@ -57,14 +58,7 @@ public static class BuildProject {
   RenderSettings.ambientMode=AmbientMode.Flat;RenderSettings.ambientLight=new Color(.48f,.5f,.51f);RenderSettings.reflectionIntensity=.8f;
   var env=(GameObject)PrefabUtility.InstantiatePrefab(Asset<GameObject>("Models/Laboratory.fbx"));PrefabUtility.UnpackPrefabInstance(env,PrefabUnpackMode.Completely,InteractionMode.AutomatedAction);env.name="Laboratory";
   var table=new GameObject("Adjustable main table");table.transform.SetParent(env.transform,false);
-  var materialColors=new System.Collections.Generic.Dictionary<string,Color>{{"Wall",new(.74f,.735f,.7f)},{"Floor",new(.31f,.335f,.34f)},{"Stainless",new(.30f,.34f,.37f)},{"DarkSteel",new(.07f,.085f,.09f)},{"Cloth",new(.89f,.90f,.90f)},{"Blue",new(.13f,.34f,.43f)},{"Ceiling",new(.77f,.77f,.74f)},{"Wood",new(.35f,.21f,.095f)},{"Glass",new(.17f,.245f,.265f)},{"Black",new(.018f,.022f,.024f)},{"White",new(.91f,.91f,.87f)},{"Red",new(.46f,.035f,.025f)},{"Light",new(.96f,.96f,.91f)},{"Sign",new(.11f,.15f,.17f)}};
-  foreach(var mesh in env.GetComponentsInChildren<MeshFilter>()){
-   bool mainTable=mesh.name.StartsWith("Lab_MainTable_");var key=mesh.name.Replace("Lab_MainTable_","").Replace("Lab_","");if(!materialColors.TryGetValue(key,out var color))color=Color.gray;
-   var mat=MakeMaterial(key,color,key.Contains("Steel")||key=="Stainless"?.9f:0,key=="Stainless"?.7f:.3f);
-   if(key=="Light"){mat.EnableKeyword("_EMISSION");mat.SetColor("_EmissionColor",new Color(1,.95f,.85f)*1.5f);mat.globalIlluminationFlags=MaterialGlobalIlluminationFlags.BakedEmissive;}
-   mesh.GetComponent<Renderer>().sharedMaterial=mat;var col=mesh.gameObject.AddComponent<MeshCollider>();col.sharedMesh=mesh.sharedMesh;
-   if(mainTable)mesh.transform.SetParent(table.transform,true);else GameObjectUtility.SetStaticEditorFlags(mesh.gameObject,StaticEditorFlags.BatchingStatic|StaticEditorFlags.ContributeGI|StaticEditorFlags.OccludeeStatic);
-  }
+  LaboratoryFinishes.PrepareMaterials();LaboratoryFinishes.ApplyRoom(env);
   var model=(GameObject)PrefabUtility.InstantiatePrefab(Asset<GameObject>("Models/Thorax.fbx"));model.name="ThoraxSpecimen";
   var lodModels=new[]{Asset<GameObject>("Models/Thorax_LOD1.fbx"),Asset<GameObject>("Models/Thorax_LOD2.fbx")};
   var catalog=JsonUtility.FromJson<AnatomyCatalog>(Asset<TextAsset>("anatomy-catalog.json").text);
@@ -91,9 +85,6 @@ public static class BuildProject {
    var hand=new GameObject(side.ToString());hand.transform.SetParent(rig.transform,false);var interactor=hand.AddComponent<LabHandInteractor>();interactor.hand=side;interactor.session=session;
    var line=hand.AddComponent<LineRenderer>();line.positionCount=2;line.startWidth=.0015f;line.endWidth=.0008f;line.material=MakeMaterial("Pointer",new Color(.08f,.55f,.48f));
   }
-  for(int x=-1;x<=1;x++)for(int z=-1;z<=1;z++){
-   var go=new GameObject("Ceiling illumination");go.transform.position=new Vector3(x*3,2.85f,z*2.8f);go.transform.rotation=Quaternion.Euler(90,0,0);var light=go.AddComponent<Light>();light.type=LightType.Point;light.range=5;light.intensity=1.4f;light.shadows=LightShadows.None;light.lightmapBakeType=LightmapBakeType.Baked;
-  }
   var examLight=new GameObject("Specimen examination light");examLight.transform.position=bounds.center+new Vector3(.25f,.8f,-.2f);var kl=examLight.AddComponent<Light>();kl.type=LightType.Point;kl.range=2.6f;kl.intensity=1.8f;kl.shadows=LightShadows.None;
   var probes=new GameObject("Laboratory light probes").AddComponent<LightProbeGroup>();var positions=new System.Collections.Generic.List<Vector3>();for(int x=-5;x<=5;x+=2)for(int z=-4;z<=4;z+=2)foreach(float y in new[]{.4f,1.1f,1.8f,2.6f})positions.Add(new Vector3(x,y,z));probes.probePositions=positions.ToArray();
   var probe=new GameObject("Laboratory reflection").AddComponent<ReflectionProbe>();probe.transform.position=new Vector3(0,1.5f,0);probe.size=new Vector3(12,3,9);probe.mode=ReflectionProbeMode.Baked;probe.resolution=128;
@@ -103,7 +94,7 @@ public static class BuildProject {
   string[] actions={"Explore","Guided","Free","Next","Scalpel","Saw","Undo","Reset","Hide","Isolate","Return","All","Previous","Browse","Systems","Height +","Height -","Open chest"};for(int i=0;i<actions.Length;i++){var b=GameObject.CreatePrimitive(PrimitiveType.Cube);b.name=actions[i];b.transform.SetParent(board.transform,false);b.transform.localPosition=new Vector3((i%3)*.19f,-(i/3)*.09f,0);b.transform.localScale=new Vector3(.18f,.073f,.009f);b.GetComponent<Renderer>().sharedMaterial=MakeMaterial("UIButton",new Color(.045f,.12f,.14f));var a=b.AddComponent<LabButton>();a.action=actions[i];a.session=session;Text(actions[i],board.transform,b.transform.localPosition+new Vector3(0,0,-.008f),.008f);}
   PrefabUtility.SaveAsPrefabAsset(model,Base+"/Prefabs/Thorax.prefab");PrefabUtility.SaveAsPrefabAsset(env,Base+"/Prefabs/Laboratory.prefab");
   var lighting=Asset<LightingSettings>("Settings/Lighting.asset");if(!lighting){lighting=new LightingSettings();AssetDatabase.CreateAsset(lighting,Base+"/Settings/Lighting.asset");}lighting.name="Laboratory baked lighting";lighting.lightmapper=LightingSettings.Lightmapper.ProgressiveCPU;lighting.lightmapResolution=12;lighting.lightmapMaxSize=1024;lighting.bakedGI=true;lighting.realtimeGI=false;lighting.indirectSampleCount=32;lighting.directSampleCount=16;lighting.environmentSampleCount=32;Lightmapping.lightingSettings=lighting;
-  EditorSceneManager.SaveScene(scene,Base+"/Scenes/ThoraxLab.unity");EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene(Base+"/Scenes/ThoraxLab.unity",true)};
+  LaboratoryFinishes.ConfigureLights();EditorSceneManager.SaveScene(scene,Base+"/Scenes/ThoraxLab.unity");EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene(Base+"/Scenes/ThoraxLab.unity",true)};
   File.WriteAllText(Path.Combine(Root,"qa/reports/unity-scene.json"),JsonUtility.ToJson(new SceneReport{structures=catalog.records.Length,anatomyCenter=bounds.center,anatomySize=bounds.size,renderers=UnityEngine.Object.FindObjectsByType<MeshRenderer>(FindObjectsSortMode.None).Length},true));
  }
  [Serializable] class SceneReport{public int structures,renderers;public Vector3 anatomyCenter,anatomySize;}
@@ -126,9 +117,7 @@ public static class BuildProject {
  }
  public static void PolishScene(){
   SyncAnatomy();
-  foreach(var light in UnityEngine.Object.FindObjectsByType<Light>(FindObjectsSortMode.None))light.intensity=light.lightmapBakeType==LightmapBakeType.Baked?4.5f:.30f;
-  var glass=Asset<Material>("Materials/Glass.mat");glass.SetFloat("_Surface",1);glass.SetFloat("_ZWrite",0);glass.SetInt("_SrcBlend",(int)BlendMode.SrcAlpha);glass.SetInt("_DstBlend",(int)BlendMode.OneMinusSrcAlpha);glass.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");glass.SetColor("_BaseColor",new Color(.85f,.94f,1,.16f));glass.SetFloat("_Smoothness",.75f);glass.renderQueue=3000;glass.SetShaderPassEnabled("ShadowCaster",false);EditorUtility.SetDirty(glass);
-  var steel=Asset<Material>("Materials/Stainless.mat");steel.SetFloat("_Smoothness",.50f);EditorUtility.SetDirty(steel);
+  LaboratoryFinishes.UpdateEnvironment();
   // Re-save reusable anatomy prefab with the same catalog and native cutting flags.
   var session=UnityEngine.Object.FindFirstObjectByType<DissectionSession>();PrefabUtility.SaveAsPrefabAsset(session.specimen.gameObject,Base+"/Prefabs/Thorax.prefab");
   EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());EditorSceneManager.SaveOpenScenes();AssetDatabase.SaveAssets();Bake();Render();

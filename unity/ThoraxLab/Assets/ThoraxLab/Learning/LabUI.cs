@@ -15,6 +15,7 @@ namespace ThoraxLab.Learning
 {
     public sealed partial class LabUI : MonoBehaviour
     {
+        internal const int ConsoleSortingOrder = 20;
         LabRuntime app;
         Canvas canvas;
         RectTransform screen,body,content,rail,footer,modal,captionPanel;
@@ -26,7 +27,7 @@ namespace ThoraxLab.Learning
         Difficulty chosenDifficulty;
         SettingsProfile draft;
         string currentScreen,settingCategory="Quick setup",email="";
-        Action previousScreen;
+        Action previousScreen,modalBack;
         bool xrLayout,runningAction;
         float xrCaptureUntil;
         int panelDragPointer=-1;
@@ -37,6 +38,8 @@ namespace ThoraxLab.Learning
         public bool XRPanelCaptured => Time.unscaledTime<xrCaptureUntil;
         public bool WorkspaceVisible => currentScreen=="Workspace" && !modal;
         public string ScreenName => currentScreen;
+        internal float PreviewReadingDim => (draft != null && (currentScreen == "Settings" || currentScreen == "Settings categories")
+            ? draft : app.Settings.Current).ReadingDimAmount;
         public RectTransform Root => screen;
         public bool HasModal => modal;
         public void Initialize(LabRuntime runtime)
@@ -46,34 +49,47 @@ namespace ThoraxLab.Learning
             if(!LabWidgets.Font)throw new InvalidOperationException("Source Sans 3 is missing from the installation.");
             if(!EventSystem.current){var ev=new GameObject("Learning event system");ev.AddComponent<EventSystem>();ev.AddComponent<InputSystemUIInputModule>();}
             foreach(var module in EventSystem.current.GetComponents<BaseInputModule>())module.enabled=false;
-            screen=Rect(LearningBrand.Name+" interface",transform);canvas=screen.gameObject.AddComponent<Canvas>();canvas.renderMode=RenderMode.WorldSpace;canvas.sortingOrder=20;screen.gameObject.AddComponent<TrackedDeviceGraphicRaycaster>();xrLayout=true;
+            screen=Rect(LearningBrand.Name+" interface",transform);canvas=screen.gameObject.AddComponent<Canvas>();canvas.renderMode=RenderMode.WorldSpace;canvas.sortingOrder=ConsoleSortingOrder;screen.gameObject.AddComponent<TrackedDeviceGraphicRaycaster>();xrLayout=true;
             var scaler=screen.gameObject.AddComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1440,1000);scaler.matchWidthOrHeight=.5f;
-            app.Changed+=RefreshLive;app.Settings.Changed+=()=>{TextScale=app.Settings.Current.textScale;HighContrast=app.Settings.Current.highContrast;};TextScale=app.Settings.Current.textScale;HighContrast=app.Settings.Current.highContrast;
+            app.Changed+=RefreshLive;
+            app.Settings.Changed+=ApplyReadingStyle;
+            ApplyReadingStyle();
             ShowSignIn();
         }
-        void Page(string name,string title,bool workspace=false)
+        void ApplyReadingStyle()
         {
-            if(name!="Model inspection"&&app.Inspector)app.Inspector.Close();
-            inspectionZoom=null;
+            var settings=app.Settings.Current;
+            TextScale=settings.EffectiveTextScale;
+            HighContrast=settings.highContrast;
+            AstigmatismReadingMode=settings.astigmatismReadingMode;
+        }
+        void Page(string name,string title,bool workspace=false,Action back=null,string backName="Back")
+        {
+            if(name!="Workspace"&&app.Inspector)app.Inspector.Close();
+            if(currentScreen=="Sign in"&&name!="Sign in"&&welcomeSpoken)app.Narrator.Stop();
+            inspectionZoom=null;inspectionButtons=null;inspectionToggle=null;
             museumSelection=null;
             CloseGuide();
             foreach(var pointer in xrPointers.Values){ReleasePointer(pointer,null);Hover(pointer,null);}panelDragPointer=-1;
-            if(modal)Destroy(modal.gameObject);modal=null;
+            DismissModal();
             foreach(Transform child in screen){child.gameObject.SetActive(false);Destroy(child.gameObject);}
             currentScreen=name;objectiveStatus=objectiveHeading=notice=caption=selectedLabel=stepLabel=windowLabel=null;captionPanel=null;finishButton=null;progressFill=null;
             Camera.main.rect=new Rect(0,0,1,1);
             var edge=LabUIVisuals.Surface(screen,"Glass thickness",new Color(.12f,.25f,.31f));edge.raycastTarget=false;Fill(edge.rectTransform);edge.rectTransform.anchoredPosition=new Vector2(5,-7);edge.rectTransform.localPosition+=Vector3.forward*7;LabUIVisuals.Border(edge.rectTransform);
-            var glassColor=HighContrast?Color.black:new Color(Ground.r,Ground.g,Ground.b,.97f);
+            var glassColor=LabUIVisuals.ConsoleColor(app.Settings.Current);
             var backdrop=LabUIVisuals.Surface(screen,"VR console surface",glassColor);backdrop.raycastTarget=false;Fill(backdrop.rectTransform);LabUIVisuals.Border(backdrop.rectTransform,new Color(.71f,.89f,.96f,.8f));
-            float headerHeight=ControlHeight+58*TextScale+34,footerHeight=Mathf.Max(84,60*TextScale+40);
+            float brandHeight=Mathf.Max(58*TextScale-18,back!=null?BackHeight:0);
+            float headerHeight=ControlHeight+brandHeight+52,footerHeight=Mathf.Max(84,60*TextScale+40);
             var tr=Rect("Top navigation",screen);tr.anchorMin=new Vector2(0,1);tr.anchorMax=Vector2.one;tr.pivot=new Vector2(.5f,1);tr.sizeDelta=new Vector2(0,headerHeight);tr.anchoredPosition=Vector2.zero;
             tr.gameObject.AddComponent<Image>().color=Color.clear;
             var header=Column(tr,"Console navigation",20,12);Fill(header);
-            var brandRow=Row(header,"Panel grip",12);brandRow.GetComponent<HorizontalLayoutGroup>().childForceExpandWidth=false;Size(brandRow,58*TextScale-18);LabUIVisuals.Icon(brandRow,LabGlyph.Layers,Accent,30);
+            var brandRow=NavigationRow(header,"Panel grip");Size(brandRow,brandHeight);
+            if(back!=null)BackButton(brandRow,back,backName);
+            LabUIVisuals.Icon(brandRow,LabGlyph.Layers,Accent,30);
             var brand=Text(brandRow,LearningBrand.Name,28);brand.fontStyle=FontStyles.Bold;Size(brand,flexible:1).minWidth=0;
             var grip=Text(brandRow,"Grip to move",22,Muted);grip.alignment=TextAlignmentOptions.MidlineRight;Size(grip,flexible:1).minWidth=0;
             var row=Row(header,"Navigation buttons",12);Size(row,ControlHeight);
-            Button(row,"Guide",ShowGuide);Button(row,workspace?"Pause":"Menu",ShowPauseMenu);
+            Button(row,"Guide",ShowGuide);Button(row,workspace?"Pause":"Menu",TogglePauseMenu);
             if(app.Account.UserId!=null)Button(row,"Log out",app.LogOut);
             rail=Rect("Learning content",screen);rail.anchorMin=Vector2.zero;rail.anchorMax=Vector2.one;rail.offsetMin=new Vector2(10,footerHeight+8);rail.offsetMax=new Vector2(-10,-headerHeight-8);
             body=Rect("Body",rail);Fill(body);content=Scroll(body);
@@ -93,19 +109,24 @@ namespace ThoraxLab.Learning
         }
         public void TogglePauseMenu()
         {
-            if(GuideOpen){CloseGuide();return;}
-            if(currentScreen=="Menu"&&(app.Engine!=null||app.Sandbox||app.OrientationActive||app.MuseumActive))ShowWorkspace();
+            if(modal){modalBack?.Invoke();return;}
+            if(currentScreen=="Menu")ReturnFromMenu();
             else ShowPauseMenu();
+        }
+        bool InActivity => app.Engine!=null||app.Sandbox||app.OrientationActive||app.MuseumActive;
+        void ReturnFromMenu()
+        {
+            if(InActivity)ShowWorkspace();
+            else if(app.Account.UserId!=null||app.Preview)ShowHub();
+            else ShowSignIn();
         }
         void ShowPauseMenu()
         {
-            bool working=app.Engine!=null||app.Sandbox||app.OrientationActive||app.MuseumActive;
+            bool working=InActivity;
             Page("Menu",working?"Take your time":"Your lab");
             if(app.MuseumActive)RecenterPanel();
-            if(working)Button(content,"Return to activity",ShowWorkspace,true);
-            else if(app.Account.UserId!=null||app.Preview)Button(content,"Return to lab",ShowHub,true);
-            else Button(content,"Return to sign-in",ShowSignIn,true);
-            Button(content,"Settings",()=>{previousScreen=working?(Action)ShowWorkspace:ShowHub;ShowSettings();});
+            Button(content,working?"Return to activity":app.Account.UserId!=null||app.Preview?"Return to lab":"Return to sign-in",ReturnFromMenu,true);
+            Button(content,"Settings",()=>{previousScreen=ReturnFromMenu;ShowSettings();});
             Button(content,"How to play & unlock levels",()=>ShowLearningGuidelines(ShowPauseMenu));
             if(app.Account.UserId!=null||app.Preview)Button(content,"Your progress",()=>Leave(ShowProgress));
             Button(content,"Move panel in front of me",RecenterPanel);
@@ -119,9 +140,12 @@ namespace ThoraxLab.Learning
         }
         public void ShowSignIn()
         {
-            Page("Sign in","Step into the anatomy lab");
-            Button(content,"Before you begin",()=>ShowLearningGuidelines(ShowSignIn));
+            Page("Sign in","Step into the anatomy lab",back:app.Preview?(Action)ShowHub:null,backName:"Back to lab");
+            Text(content,AstigmatismReadingMode
+                ? "Astigmatism reading mode is on. You can adjust it in VR comfort & text size."
+                : "If you have astigmatism, try Astigmatism reading mode for softer lighting and larger text. Turn it on in VR comfort & text size.",25);
             Button(content,"VR comfort & text size",()=>OpenAccessibilitySetup(ShowSignIn));
+            Button(content,"Before you begin",()=>ShowLearningGuidelines(ShowSignIn));
             Text(content,"Sign in with an email code to save your progress.",23,Muted);
             Text(content,"Email address",23);
             var field=Field("Email address",email);field.contentType=TMP_InputField.ContentType.EmailAddress;
@@ -141,20 +165,19 @@ namespace ThoraxLab.Learning
             {
                 var accountCopy=account;Button(content,"Offline access · "+account.email,()=>ShowOffline(accountCopy.userId,accountCopy.email));
             }
-            Button(content,app.Preview?"Back to lab":"Back to menu",app.Preview?(Action)ShowHub:ShowPauseMenu);
         }
         void ShowCode()
         {
-            Page("Email code","Check your email");Text(content,"Enter the six-digit code sent to "+email+".",23,Muted);
+            Page("Email code","Check your email",back:ShowSignIn,backName:"Back to email");Text(content,"Enter the six-digit code sent to "+email+".",23,Muted);
             var code=Field("Six-digit code");code.characterLimit=6;code.characterValidation=TMP_InputField.CharacterValidation.Digit;
             Button(content,"Verify and continue",()=>Run(()=>app.Account.VerifyCode(email,code.text)),true);
             Button(content,"Resend code",()=>Run(async()=>{await app.Account.SendCode(email);app.Message("A new code has been sent.");}));
             Text(content,"Codes expire after ten minutes. Wait sixty seconds before requesting another. Check spam if it hasn’t arrived.",21,Muted);
-            Button(content,"Back to email",ShowSignIn);ErrorArea();
+            ErrorArea();
         }
         void ShowPrivacy(Action back)
         {
-            Page("Privacy","Your learning data");
+            Page("Privacy","Your learning data",back:back);
             Text(content,"Guest practice needs no account. Progress lasts only for that session.",23,Muted);
             Text(content,"Email sign-in stores your email with the account service. Learning attempts, results, safe checkpoints and account settings are saved on this device and synchronized to your account when online.",23);
             Text(content,"A device PIN enables offline access only on this headset. Trusted account email addresses appear on its sign-in screen. On a shared headset, use offline access only with your school's permission and keep your PIN private.",23);
@@ -162,11 +185,10 @@ namespace ThoraxLab.Learning
             Text(content,"Account & saves also lets you export your learning record, reset progress or delete your account. Account deletion removes cloud records and this app's account files on the current device; other devices and exported copies must be cleared separately.",23);
             Text(content,"This app teaches anatomy using simplified fictional cases. Results are learning feedback and do not certify clinical competence. Ask your instructor about classroom use and school data handling.",21,Muted);
             Text(content,"App "+Application.version+" · Curriculum "+app.Catalog.version,18,Muted);
-            Button(content,"Back",back,true);
         }
         void ShowOffline(string id,string address)
         {
-            Page("Offline access","Welcome back");Text(content,address,23,Muted);var pin=Field("Device PIN","",true);pin.characterLimit=6;pin.characterValidation=TMP_InputField.CharacterValidation.Digit;
+            Page("Offline access","Welcome back",back:ShowSignIn,backName:"Back to email");Text(content,address,23,Muted);var pin=Field("Device PIN","",true);pin.characterLimit=6;pin.characterValidation=TMP_InputField.CharacterValidation.Digit;
             Button(content,"Unlock saved progress",()=>Run(()=>{app.Account.UnlockOffline(id,pin.text);return Task.CompletedTask;}),true);
             Text(content,"Forgot your PIN? Sign in online with a fresh email code to replace it.",21,Muted);Button(content,"Email sign-in",ShowSignIn);ErrorArea();
         }
@@ -174,7 +196,7 @@ namespace ThoraxLab.Learning
         {
             if(app.Account.UserId==null&&!app.Preview){ShowSignIn();return;}
             if(!app.Session.busy){app.Interrupt();app.Session.SetMode(LabMode.Explore);if(app.Presentation)app.Presentation.ShowIntact();}
-            Page("Career",app.Progress.orientationCompleted?"What will you discover next?":"Welcome to your lab");
+            Page("Career",app.Progress.orientationCompleted?"What will you discover next?":"Your operating room");
             if(!app.Progress.orientationCompleted)
             {
                 LearningGuidelines(content);
@@ -200,13 +222,12 @@ namespace ThoraxLab.Learning
         }
         void ShowModes()
         {
-            Page("Modes","Choose how to learn");
+            Page("Modes","Choose how to learn",back:ShowHub,backName:"Back to lab");
             Mode("Identify & Enumerate","Locate anatomy in 3D and mark each structure.",LearningMode.IdentifyEnumerate);
             Mode("Assemble Anatomy","Grip, rotate and reconstruct anatomical relationships.",LearningMode.AssembleAnatomy);
             Mode("Guided Dissection","Cut and reflect layers while preserving protected anatomy.",LearningMode.GuidedDissection);
             Mode("Anatomy Cases","Explain mechanisms, perform procedures and predict responses.",LearningMode.AnatomyCases);
             LabUIVisuals.Card(content,"Thorax Museum","Explore every thorax part in labeled system galleries. Grab and enlarge exhibits to examine their shape.","chest-wall",app.StartMuseum,"Visit the Thorax Museum");
-            Button(content,"Back to lab",ShowHub);
         }
         void Mode(string title,string description,LearningMode mode)
         { LabUIVisuals.Card(content,title,description,ModeArt(mode),()=>ShowUnits(mode),title); }
@@ -217,7 +238,7 @@ namespace ThoraxLab.Learning
         }
         public void ShowUnits(LearningMode mode)
         {
-            chosenMode=mode;chosenDifficulty=Difficulty.Easy;Page("Units",ModeName(mode));Text(content,"Choose a unit. Start on Easy.",23,Muted);
+            chosenMode=mode;chosenDifficulty=Difficulty.Easy;Page("Units",ModeName(mode),back:ShowModes,backName:"Back to activities");Text(content,"Choose a unit. Start on Easy.",23,Muted);
             foreach(var unit in app.Catalog.units.Where(u=>u.isCase==(mode==LearningMode.AnatomyCases)))
             {
                 var selected=unit;var easy=unit.variants.First(v=>v.mode==mode&&v.difficulty==Difficulty.Easy);
@@ -225,11 +246,10 @@ namespace ThoraxLab.Learning
                 LabUIVisuals.Card(content,unit.title,unit.summary,unit.id,()=>ShowUnit(selected),unit.title,best==null?"Begin on Easy":best.difficulty+" mastered");
             }
             if(mode==LearningMode.GuidedDissection){Rule(content);Button(content,"Free dissection sandbox",app.StartSandbox);}
-            Button(content,"Back to activities",ShowModes);
         }
         public void ShowUnit(LearningUnit unit)
         {
-            chosenUnit=unit;Page("Unit",unit.title);LabUIVisuals.Hero(content,unit.id,158);Text(content,unit.summary,24,Muted);
+            chosenUnit=unit;Page("Unit",unit.title,back:()=>ShowUnits(chosenMode),backName:"Back to units");LabUIVisuals.Hero(content,unit.id,158);Text(content,unit.summary,24,Muted);
             var variant=unit.variants.First(v=>v.mode==chosenMode&&v.difficulty==chosenDifficulty);
             if(!app.Unlocked(variant)){chosenDifficulty=Difficulty.Easy;variant=unit.variants.First(v=>v.mode==chosenMode&&v.difficulty==chosenDifficulty);}
             var selected=variant;Text(content,chosenDifficulty+" · "+variant.objectives.Length+" hands-on steps",25,Accent);
@@ -237,29 +257,28 @@ namespace ThoraxLab.Learning
             Button(content,"Learn step by step",()=>app.StartActivity(selected,SessionPhase.Lesson),true,app.Unlocked(selected));
             Button(content,"Practice or assessment",()=>ShowPhaseChoice(selected),false,app.Unlocked(selected));
             Button(content,"Change difficulty",ShowDifficultyChoice);
-            Button(content,"Back to units",()=>ShowUnits(chosenMode));
         }
         void ShowDifficultyChoice()
         {
-            Page("Difficulty",chosenUnit.title);
+            Page("Difficulty",chosenUnit.title,back:()=>ShowUnit(chosenUnit));
             foreach(Difficulty level in Enum.GetValues(typeof(Difficulty)))
             {
                 var variant=chosenUnit.variants.First(v=>v.mode==chosenMode&&v.difficulty==level);bool unlocked=app.Unlocked(variant);var selected=level;
                 string guidance=unlocked?(level==Difficulty.Easy?"One step at a time with clear guides.":level==Difficulty.Medium?"More independence and anatomical relationships.":"Precise work and more complex decisions."):(level==Difficulty.Easy?"Complete the VR introduction first.":"Pass the "+(level==Difficulty.Medium?"Easy":"Medium")+" assessment in this unit and mode first.");
                 LabUIVisuals.Card(content,level.ToString(),guidance,null,()=>{chosenDifficulty=selected;ShowUnit(chosenUnit);},level+(unlocked?"":" · locked"),unlocked?(level==chosenDifficulty?"Selected":"Available"):"Locked",unlocked,unlocked?LabGlyph.Layers:LabGlyph.Lock);
             }
-            Text(content,AssessmentRequirements,24,Muted);Text(content,"Lessons, practice and XP do not unlock levels. No time limit; unlimited retries.",22,Muted);Button(content,"Back",()=>ShowUnit(chosenUnit));
+            Text(content,AssessmentRequirements,24,Muted);Text(content,"Lessons, practice and XP do not unlock levels. No time limit; unlimited retries.",22,Muted);
         }
         void ShowPhaseChoice(ScenarioVariant variant)
         {
-            Page("Learning phase",chosenUnit.title+" · "+variant.difficulty);
+            Page("Learning phase",chosenUnit.title+" · "+variant.difficulty,back:()=>ShowUnit(chosenUnit));
             LabUIVisuals.Card(content,"Practice with guidance","Replay demonstrations and use placement guides.",null,()=>app.StartActivity(variant,SessionPhase.Practice),symbol:LabGlyph.Play);
             LabUIVisuals.Card(content,"Take the assessment",AssessmentRequirements+" Unlimited retries.",null,()=>app.StartActivity(variant,SessionPhase.Assessment),symbol:LabGlyph.Check);
-            Button(content,"Read the anatomy and sources",()=>ShowReferences(chosenUnit));Button(content,"Back",()=>ShowUnit(chosenUnit));
+            Button(content,"Read the anatomy and sources",()=>ShowReferences(chosenUnit));
         }
         void ShowReferences(LearningUnit unit)
         {
-            Page("References",unit.title+" · references");ReferenceBack(unit);Text(content,unit.limitations,22,Muted);
+            Page("References",unit.title+" · references",back:ReferenceDestination(unit),backName:app.Engine!=null?"Return to activity":"Back to unit");Text(content,unit.limitations,22,Muted);
             foreach(var id in unit.sourceIds){var source=app.Catalog.sources.First(s=>s.id==id);Text(content,source.title,24);Text(content,source.usage,21,Muted);Button(content,"Read source details",()=>ShowSourceDetails(unit,source));}
         }
         public void ShowWorkspace()
@@ -272,6 +291,7 @@ namespace ThoraxLab.Learning
                 var instruction=InstructionSurface();LabUIVisuals.Icon(instruction,LabGlyph.Hand,Accent,38);objectiveStatus=Text(instruction,"",28);
                 Text(content,app.XRSimulation?"XR simulator: left mouse selects. Hold G to grip; release G to let go.":"Controller: trigger selects, grip holds. Bare hand: pinch to select, close your fingers to hold; open to release.",23,Muted);
                 selectedLabel=Text(content,"",23,Muted);notice=Text(content,app.Notice,22,Accent);
+                Button(content,"Replay instruction",app.NarrateCurrentStep);
             }
             else if(!app.Sandbox&&app.Engine!=null)
             {
@@ -289,10 +309,10 @@ namespace ThoraxLab.Learning
                 if(app.Unit.isCase){caseHandling=Text(instruction,"",24,Accent);caseHandling.name="Tool handling feedback";}
                 windowLabel=Text(content,"",20,Muted);
                 if(app.Variant.mode!=LearningMode.GuidedDissection)notice=Text(content,"",22,Accent);
-                Button(content,"Inspect / zoom model",app.Inspector.Open);
+                InspectionControls();
                 if(app.Unit.isCase)Button(content,"Case and controls",ShowCaseControls);
                 if(app.Engine.Attempt.phase!=SessionPhase.Assessment)
-                    Button(content,"Show me this step",()=>{app.RevealHint();app.Demonstrator.Play();app.Narrator.Replay();});
+                    Button(content,"Show me this step",()=>{app.RevealHint();app.Demonstrator.Play();app.NarrateCurrentStep();});
                 finishButton=Button(content,app.Engine.Attempt.phase==SessionPhase.Assessment?"Finish assessment":"Finish activity",app.Finish,true);
                 selectedLabel=Text(content,"",21,Muted);
                 Button(content,"Tools and more help",ShowActivityTools);
@@ -303,10 +323,10 @@ namespace ThoraxLab.Learning
                 Text(content,"Choose a layer, cut a chunk, then grip the separated piece to lift and turn it. Whole layers stay on the table.",26,Muted);
                 selectedLabel=Text(content,"",23,Muted);notice=Text(content,app.Notice,22,Accent);
                 Button(content,"Tools and layers",ShowActivityTools,true);
-                Button(content,"Inspect / zoom model",app.Inspector.Open);
+                InspectionControls();
             }
             if(!app.OrientationActive)Text(content,InspectionInstructions,22,Muted);
-            float captionHeight=112*app.Settings.Current.captionScale;
+            float captionHeight=112*app.Settings.Current.EffectiveCaptionScale;
             captionPanel=LabUIVisuals.Surface(screen,"Narration captions",Surface).rectTransform;
             captionPanel.anchorMin=Vector2.zero;captionPanel.anchorMax=new Vector2(1,0);captionPanel.pivot=new Vector2(.5f,0);
             captionPanel.sizeDelta=new Vector2(-28,captionHeight);captionPanel.anchoredPosition=new Vector2(0,footer.sizeDelta.y+8);
@@ -320,8 +340,7 @@ namespace ThoraxLab.Learning
         }
         void ShowActivityTools()
         {
-            Page("Activity tools","Tools and help");
-            Button(content,"Return to your step",ShowWorkspace,true);
+            Page("Activity tools","Tools and help",back:ShowWorkspace,backName:"Return to your step");
             bool assessment=app.Engine!=null&&app.Engine.Attempt.phase==SessionPhase.Assessment;
             if(!assessment&&app.Engine!=null)
             {
@@ -341,21 +360,20 @@ namespace ThoraxLab.Learning
         }
         void ShowTranscript()
         {
-            Page("Teaching",app.Unit.title);Text(content,app.Unit.lesson,24);
+            Page("Teaching",app.Unit.title,back:ShowWorkspace,backName:"Return to specimen");Text(content,app.Unit.lesson,24);
             if(app.Engine.Attempt.phase!=SessionPhase.Assessment)foreach(var o in app.Variant.objectives){Text(content,o.title,25,Accent);Text(content,o.instruction+" "+o.explanation,22);}
             else Text(content,"Assessment targets follow your declared rubric. Answer-revealing demonstrations are available in practice.",22,Muted);
-            Button(content,"Return to specimen",ShowWorkspace,true);
         }
         void ShowBrowse()
         {
-            Page("Browse","Anatomy collection");var search=Field("Find a structure");var results=Column(content);
+            Page("Browse","Anatomy collection",back:ShowWorkspace,backName:"Return to specimen");var search=Field("Find a structure");var results=Column(content);
             Action update=()=>{foreach(Transform child in results)Destroy(child.gameObject);foreach(var s in app.Session.originals.Where(s=>!s.record.reference_region&&(string.IsNullOrEmpty(search.text)||s.record.name.IndexOf(search.text,StringComparison.OrdinalIgnoreCase)>=0)).OrderBy(s=>s.record.name).Take(60))
-                Button(results,s.record.name,()=>{app.Session.Inspect(s);ShowWorkspace();});};search.onValueChanged.AddListener(_=>update());update();Button(content,"Return to specimen",ShowWorkspace);
+                Button(results,s.record.name,()=>{app.Session.Inspect(s);ShowWorkspace();});};search.onValueChanged.AddListener(_=>update());update();
         }
         public void ShowResults()
         {
             var attempt=app.Engine.Attempt;var variant=app.Variant;
-            Page("Results",attempt.passed?"Step by step, you got there":"Let's try that again");
+            Page("Results",attempt.passed?"Step by step, you got there":"Let's try that again",back:()=>Leave(ShowHub),backName:"Return to lab");
             var resultRow=Row(content,"Assessment result",18);LabUIVisuals.Icon(resultRow,attempt.passed?LabGlyph.Check:LabGlyph.Target,Accent,52);var score=Text(resultRow,attempt.score.ToString("0")+"% · "+(attempt.passed?"Completed":"Keep practising"),34,Accent);score.fontStyle=FontStyles.Bold;
             if(attempt.passed&&attempt.phase==SessionPhase.Assessment&&attempt.difficulty!=Difficulty.Hard)
                 Text(content,(attempt.difficulty==Difficulty.Easy?"Medium":"Hard")+" is now open for this activity.",24);
@@ -364,11 +382,11 @@ namespace ThoraxLab.Learning
             else if(attempt.passed&&attempt.phase==SessionPhase.Practice)Button(content,"Take the "+variant.difficulty+" assessment",()=>app.StartActivity(variant,SessionPhase.Assessment),true);
             else if(!attempt.passed)Button(content,"Practise this step again",()=>app.StartActivity(variant,SessionPhase.Practice),true);
             else Button(content,"Choose your next activity",()=>Leave(ShowModes),true);
-            Button(content,"Review your steps",ShowAttemptFeedback);Button(content,"Return to lab",()=>Leave(ShowHub));
+            Button(content,"Review your steps",ShowAttemptFeedback);
         }
         void ShowAttemptFeedback()
         {
-            Page("Feedback","Your recorded steps");
+            Page("Feedback","Your recorded steps",back:ShowResults,backName:"Back to results");
             var reasoning=app.Variant.objectives.Where(o=>o.action==ActionKind.ClinicalDecision).ToArray();
             if(reasoning.Length>0)Text(content,"Clinical reasoning: "+reasoning.Count(o=>app.Engine.IsComplete(o.id))+" / "+reasoning.Length+" essential decisions completed",24,Accent);
             foreach(var objective in app.Variant.objectives){bool complete=app.Engine.IsComplete(objective.id);Text(content,(complete?"Completed · ":"Revise · ")+objective.title,25,complete?Ink:Accent);if(!complete)Text(content,objective.explanation,22,Muted);}
@@ -378,11 +396,10 @@ namespace ThoraxLab.Learning
                 {var choice=objective.choices.FirstOrDefault(c=>c.id==action.toolId);if(choice!=null)Text(content,"Your choice: "+choice.label+". "+(action.toolId==objective.toolId?objective.explanation:choice.rationale),22,Muted);}
             }
             Text(content,"Recorded errors: "+app.Engine.Attempt.mistakes+(app.Engine.Attempt.criticalFailure?". A protected structure or essential procedure step needs another attempt.":"."),22,Muted);
-            Button(content,"Back to results",ShowResults,true);
         }
         public void ShowProgress()
         {
-            Page("Progress","Your learning record");Text(content,ProgressRules.CareerChapter(app.Progress),28,Accent);
+            Page("Progress","Your learning record",back:ShowPauseMenu,backName:"Back to menu");Text(content,ProgressRules.CareerChapter(app.Progress),28,Accent);
             Text(content,app.Progress.rewards.Sum(r=>r.xp)+" XP earned across "+app.Progress.rewards.Count+" mastered objectives. Each objective rewards once per difficulty.",23,Muted);
             Text(content,"Career titles describe your in-game learning progress. They are not qualifications.",20,Muted);Rule(content);
             if(app.Progress.attempts.Count==0)Text(content,"Complete an activity to start your record.",24);
@@ -396,7 +413,12 @@ namespace ThoraxLab.Learning
         async void Run(Func<Task> action){if(runningAction)return;runningAction=true;try{await action();RefreshLive();}catch(Exception ex){app.Message(ex.Message);RefreshLive();}finally{runningAction=false;}}
         public void Confirm(string title,string description,string action,Action accepted)
         {
-            if(modal)Destroy(modal.gameObject);modal=ModalSurface("Confirmation");Fill(modal,8);var c=Scroll(modal);Text(c,title,36);Text(c,description,24);Button(c,action,()=>{Destroy(modal.gameObject);modal=null;accepted();},true);Button(c,"Cancel",()=>{Destroy(modal.gameObject);modal=null;});
+            if(modal)modalBack?.Invoke();
+            modal=ModalSurface("Confirmation",DismissModal);Fill(modal,8);
+            PinnedModalBack("Cancel",DismissModal);
+            var area=Rect("Confirmation body",modal);Fill(area);area.offsetMax=new Vector2(0,-BackHeight-24);
+            var c=Scroll(area);Text(c,title,36);Text(c,description,24);
+            if(accepted!=null)Button(c,action,()=>{DismissModal();accepted();},true);
         }
         public void RefreshLive()
         {
@@ -418,11 +440,17 @@ namespace ThoraxLab.Learning
             }
             if(windowLabel){windowLabel.text=app.TeachingWindowLabel??"";windowLabel.gameObject.SetActive(!string.IsNullOrEmpty(windowLabel.text));}
             if(selectedLabel)selectedLabel.text=(app.Variant?.mode==LearningMode.GuidedDissection||app.Sandbox?(app.Session.saw?"Equipped: BONE SAW":"Equipped: SCALPEL")+" · ray reach 3 m\n":"")+(app.Variant?.mode==LearningMode.IdentifyEnumerate&&app.Markers?"Marked "+app.Markers.Count+" of "+app.Variant.objectives.Length+" in this set.\n":"")+(app.Session.selected&&app.Settings.Current.labels?"Selected: "+app.Session.selected.record.name:"");
-            if(caption){caption.text=app.Settings.Current.captions?app.Narrator.Caption:"";caption.fontSize=22*app.Settings.Current.captionScale;captionPanel.gameObject.SetActive(!string.IsNullOrEmpty(caption.text));}
+            if(caption){caption.text=app.Settings.Current.captions?app.Narrator.Caption:"";caption.fontSize=22*app.Settings.Current.EffectiveCaptionScale;captionPanel.gameObject.SetActive(!string.IsNullOrEmpty(caption.text));}
         }
+        bool welcomeSpoken;
         void Update()
         {
             if(app&&app.Settings!=null&&currentScreen=="Headset"&&app.XRReady)ShowSignIn();
+            if(!welcomeSpoken && currentScreen=="Sign in" && !modal && app.Focused && app.XRReady)
+            {
+                welcomeSpoken=true;
+                app.Narrator.Play("lab-welcome",PromptText("lab-welcome"));
+            }
             if(Time.frameCount%15==0)RefreshLive();
         }
         void SetXRLayout()
@@ -463,7 +491,7 @@ namespace ThoraxLab.Learning
             if(press||pointer.captured)xrCaptureUntil=Time.unscaledTime+.15f;
             if(Mathf.Abs(scroll.y)>.2f){data.scrollDelta=new Vector2(0,scroll.y*.8f);if(ExecuteEvents.ExecuteHierarchy(result.gameObject,data,ExecuteEvents.scrollHandler))xrCaptureUntil=Time.unscaledTime+.15f;}
             var local=(Vector2)screen.InverseTransformPoint(result.worldPosition);
-            if(gripDown&&panelDragPointer<0&&!modal&&local.y>screen.rect.yMax-Mathf.Max(100,48*TextScale+48))
+            if(gripDown&&panelDragPointer<0&&!modal&&local.y>screen.rect.yMax-Mathf.Max(100,48*TextScale+48)&&!result.gameObject.GetComponentInParent<Button>())
             {ReleasePointer(pointer,null);panelGrabOffset=Quaternion.Inverse(rotation)*(screen.position-ray.origin);panelGrabRotation=Quaternion.Inverse(rotation)*screen.rotation;panelDragPointer=pointerId;xrCaptureUntil=Time.unscaledTime+.15f;return true;}
             if(press)
             {
@@ -509,20 +537,32 @@ namespace ThoraxLab.Learning
         public void EnableXRLayoutForQA(){if(!Environment.GetCommandLineArgs().Contains("--learning-qa"))return;xrLayout=true;SetXRLayout();RenderSettingsPage();}
         public bool PointerOverUI => EventSystem.current&&EventSystem.current.IsPointerOverGameObject();
         static string ModeName(LearningMode mode)=>new[]{"Anatomy Cases","Identify & Enumerate","Assemble Anatomy","Guided Dissection"}[(int)mode];
-        RectTransform ModalSurface(string title)
+        void DismissModal()
+        {
+            if(modal){modal.gameObject.SetActive(false);Destroy(modal.gameObject);}
+            modal=null;modalBack=null;
+        }
+        RectTransform ModalSurface(string title,Action back)
         {
             // Opaque and slightly in front of the page: world-space TMP must not bleed through a modal.
             var surface=LabUIVisuals.Surface(screen,title,new Color(Ground.r,Ground.g,Ground.b,1)).rectTransform;LabUIVisuals.Border(surface);
-            surface.localPosition=new Vector3(0,0,-6);return surface;
+            modalBack=back;surface.localPosition=new Vector3(0,0,-6);return surface;
+        }
+        void PinnedModalBack(string name,Action action,string label=null)
+        {
+            var button=(RectTransform)BackButton(modal,action,name,label??name).transform;
+            button.anchorMin=button.anchorMax=button.pivot=Vector2.up;button.anchoredPosition=new Vector2(16,-16);
         }
         void OpenKeyboard(TMP_InputField field)
         {
-            if(modal)return;modal=ModalSurface("VR keyboard");Fill(modal,8);
+            if(modal)return;
+            void Close(){EventSystem.current.SetSelectedGameObject(null);field.DeactivateInputField();DismissModal();}
+            modal=ModalSurface("VR keyboard",Close);Fill(modal,8);
             // Keep the current text, editing controls and Done outside the scrolling keys.
-            float headerHeight=2*ControlHeight+126+24*TextScale,footerHeight=ControlHeight+24;
+            float headerHeight=BackHeight+ControlHeight+126+24*TextScale,footerHeight=ControlHeight+24;
             var header=Column(modal,"Keyboard input",12,8);header.anchorMin=new Vector2(0,1);header.anchorMax=Vector2.one;header.pivot=new Vector2(.5f,1);header.sizeDelta=new Vector2(0,headerHeight);
-            void Close(){EventSystem.current.SetSelectedGameObject(null);field.DeactivateInputField();modal.gameObject.SetActive(false);Destroy(modal.gameObject);modal=null;}
-            var navigation=Row(header);Size(Button(navigation,"Back",Close),width:125);Size(Text(navigation,field.name,28),flexible:1);
+            var navigation=NavigationRow(header,"Keyboard navigation");Size(navigation,BackHeight);
+            BackButton(navigation,Close);var heading=Text(navigation,field.name,28);heading.alignment=TextAlignmentOptions.MidlineLeft;Size(heading,flexible:1).minWidth=0;
             var display=Panel(header,"Typed value",Surface);Size(display,82);
             var preview=Text(display.transform,"",28,Ink);preview.name="Visible input";Fill(preview.rectTransform,12);preview.alignment=TextAlignmentOptions.MidlineLeft;preview.textWrappingMode=TextWrappingModes.NoWrap;
             var positionLabel=Text(header,"",18,Muted);

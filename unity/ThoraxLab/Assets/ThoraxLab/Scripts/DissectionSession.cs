@@ -10,6 +10,9 @@ namespace ThoraxLab {
 public enum LabMode { Explore, Guided, Free }
 public class DissectionSession : MonoBehaviour {
  public LabMode mode;public bool saw;public Transform specimen,table;public AnatomyStructure selected;
+ public MeshCollider TabletopCollider => table
+     ? (table.Find("Lab_MainTable_Cushion") ?? table.Find("Lab_MainTable_Stainless"))?.GetComponent<MeshCollider>()
+     : null;
  public string message="Select a structure to inspect its anatomy and source.";public bool busy;public int guidedLayer;
  public string systemFilter="All";int browseIndex;
  public List<AnatomyStructure> originals=new();
@@ -73,6 +76,11 @@ public class DissectionSession : MonoBehaviour {
   finally{if(this!=null&&token==revision)busy=false;}
  }
  void CutFeedback(string value){message=value;Learning.LabRuntime.Instance?.Message(value);}
+ internal bool ValidateCutTool(AnatomyStructure target){
+  bool bone=target.record.tissue=="bone";
+  if(bone==saw)return true;
+  CutFeedback(bone?"Select the bone saw for this structure.":"Select the scalpel for soft tissue.");return false;
+ }
  public async void Cut(List<float> poses){
   if(busy||mode!=LabMode.Free||selected==null||poses.Count<48)return;
   if(Learning.LabRuntime.Instance&&!Learning.LabRuntime.Instance.CanCut)return;
@@ -84,8 +92,8 @@ public class DissectionSession : MonoBehaviour {
    var source=originals.First(s=>s.record.id==target.parentId);float midline=source.SourceBounds.center.x;
    for(int i=0;i<poses.Count;i+=3)if(objective.region=="left"?poses[i]>midline:poses[i]<midline){message="Keep the whole blade on the specimen's "+objective.region+" side. Move farther from the midline.";Learning.LabRuntime.Instance.Message(message);return;}
   }
-  bool bone=target.record.tissue=="bone";
-  if(bone!=saw){CutFeedback(bone?"Select the bone saw for this structure.":"Select the scalpel for soft tissue.");return;}
+  if(!ValidateCutTool(target))return;
+  bool bone=saw;
   if(target.Grab&&target.Grab.isSelected){CutFeedback("Release the structure before cutting.");return;}
   var deformation=target.GetComponent<SoftHandling>();if(deformation)deformation.Freeze();
   var capture=CutMeshData.Capture(target.Filter.sharedMesh);var saved=Snapshot();int token=++revision;int available=Math.Min(32,33-fragments.Count);

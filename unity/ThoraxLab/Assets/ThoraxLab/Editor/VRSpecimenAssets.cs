@@ -15,31 +15,43 @@ namespace ThoraxLab.Editor
     public static class VRSpecimenAssets
     {
         const string Root = "Assets/ThoraxLab/Resources/Learning/Specimen";
-        const string Revision = "vr-tissue-appearance-2026.09.06.3";
+        const string OrganRevision = "vr-tissue-appearance-2026.11.21.3";
+        const string FirstWallRevision = "vr-tissue-appearance-2026.11.21.4";
+        const string Revision = "vr-tissue-appearance-2026.11.21.5";
         const int Size = 512;
         readonly struct Tissue
         {
             public readonly string id;
             public readonly Color color;
-            public readonly float smoothness, relief;
-            public Tissue(string id, Color color, float smoothness, float relief)
-            { this.id = id; this.color = color; this.smoothness = smoothness; this.relief = relief; }
+            public readonly float smoothness, relief, outerMm, innerMm, cutSmoothness, cutRelief;
+            public bool Superficial => outerMm > 0;
+            public bool OrganSurface => id is "lung" or "cardiac" or "valve" or "artery" or "vein" or "esophagus" or "membrane" or "airway";
+            public Tissue(string id, Color color, float smoothness, float relief,
+                float outerMm = 0, float innerMm = 0, float cutSmoothness = 0, float cutRelief = 0)
+            {
+                this.id = id; this.color = color; this.smoothness = smoothness; this.relief = relief;
+                this.outerMm = outerMm; this.innerMm = innerMm; this.cutSmoothness = cutSmoothness; this.cutRelief = cutRelief;
+            }
+            public float MapScale(bool interior) => Superficial ? 125f / (interior ? innerMm : outerMm) : interior ? 2.5f : 1f;
         }
         static readonly Tissue[] Tissues =
         {
-            new Tissue("skin", new Color(.56f,.37f,.29f), .16f, .035f),
-            new Tissue("fat", new Color(.80f,.68f,.43f), .23f, .20f),
-            new Tissue("fascia", new Color(.80f,.78f,.69f), .37f, .17f),
-            new Tissue("muscle", new Color(.43f,.125f,.105f), .34f, .35f),
-            new Tissue("cardiac", new Color(.42f,.12f,.11f), .40f, .25f),
-            new Tissue("lung", new Color(.63f,.34f,.32f), .32f, .30f),
+            // Maps in pipeline/build_superficial_tissues.py. Tile periods are millimetres in the specimen frame.
+            new Tissue("skin", Color.white, .41f, .013f, 64, 55, .57f, .048f),
+            new Tissue("fat", Color.white, .48f, .050f, 83, 70, .54f, .055f),
+            new Tissue("fascia", Color.white, .55f, .017f, 91, 74, .51f, .024f),
+            new Tissue("muscle", Color.white, .49f, .046f, 103, 80, .55f, .050f),
+            new Tissue("cardiac", new Color(.50f,.235f,.20f), .53f, .13f),
+            new Tissue("valve", new Color(.79f,.745f,.685f), .54f, .06f),
+            new Tissue("esophagus", new Color(.65f,.425f,.36f), .44f, .10f),
+            new Tissue("lung", new Color(.72f,.48f,.465f), .61f, .21f),
             new Tissue("bone", new Color(.83f,.76f,.60f), .20f, .09f),
             new Tissue("cartilage", new Color(.74f,.77f,.69f), .36f, .08f),
-            new Tissue("membrane", new Color(.73f,.69f,.61f), .42f, .08f),
-            new Tissue("artery", new Color(.59f,.13f,.105f), .36f, .11f),
-            new Tissue("vein", new Color(.19f,.30f,.45f), .34f, .10f),
+            new Tissue("membrane", new Color(.82f,.755f,.68f), .62f, .06f),
+            new Tissue("artery", new Color(.68f,.415f,.35f), .51f, .11f),
+            new Tissue("vein", new Color(.49f,.335f,.37f), .54f, .10f),
             new Tissue("nerve", new Color(.86f,.73f,.38f), .23f, .11f),
-            new Tissue("airway", new Color(.75f,.58f,.43f), .28f, .09f),
+            new Tissue("airway", new Color(.77f,.625f,.53f), .44f, .09f),
             new Tissue("duct", new Color(.66f,.67f,.38f), .31f, .08f)
         };
 
@@ -48,10 +60,12 @@ namespace ThoraxLab.Editor
         {
             Directory.CreateDirectory(Root);
             string stamp = Root + "/appearance-version.txt";
-            bool rebuild = !File.Exists(stamp) || File.ReadAllText(stamp) != Revision;
+            string previous = File.Exists(stamp) ? File.ReadAllText(stamp) : "";
             foreach (var tissue in Tissues)
             {
-                if (rebuild || !File.Exists(Root + "/Tissue_" + tissue.id + ".mat"))
+                bool rebuild = previous != Revision && (tissue.Superficial || (previous != OrganRevision && previous != FirstWallRevision));
+                if (rebuild || !File.Exists(Root + "/Tissue_" + tissue.id + ".mat") ||
+                    (tissue.id != "bone" && !File.Exists(Root + "/Interior_" + tissue.id + ".mat")))
                 {
                     Create(tissue, false);
                     if (tissue.id != "bone") Create(tissue, true);
@@ -61,6 +75,7 @@ namespace ThoraxLab.Editor
             File.WriteAllText(Root + "/appearance-provenance.json", JsonUtility.ToJson(new Provenance(), true));
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             AssetDatabase.SaveAssets();
+            ValidateSuperficialMaterials();
             ValidateSourceMeshChannels();
         }
 
@@ -115,8 +130,8 @@ namespace ThoraxLab.Editor
         {
             public string version = Revision;
             public string role = "Derived appearance assets for the original Anatome specimen";
-            public string anatomy = "No mesh, tissue boundary, collider or anatomical landmark is changed. BodyParts3D and Medical Augmented Learning source attribution remains in anatomy-catalog.json and source manifests.";
-            public string method = "Original deterministic procedural albedo and height-derived normal maps. Pores, fine striation and lobular texture are illustrative surface appearance, not segmented histology or patient measurements.";
+            public string anatomy = "Anatomical geometry is sourced separately from BodyParts3D and the Mauritanian Anatomy Laboratory thoracic atlas. Specimen materials do not displace anatomy.";
+            public string method = "Organ and chest-wall exteriors and cut faces use separate object-space colour, smoothness and relief maps. Chest-wall maps depict a thin-skin surface, cut dermal connective tissue, adipose lobules, a collagen sheet and skeletal muscle fascicles. Pigmentation, strand directions and cut texture are authored gross appearance cues. Source references and limits are in docs/SUPERFICIAL-TISSUE-APPEARANCE.md.";
             public string reconstruction = "FMA7163 skin has an authored wall; REC_fat and REC_fascia remain authored envelope-based teaching layers. Their measured thickness and exact microstructure are not claimed.";
             public string bone = "The existing bone-cap shader and distance-derived cortical/cancellous teaching contrast are retained.";
             public string preservation = "Materials and PNGs are stored separately under Resources/Learning/Specimen. Original source maps, meshes, LODs and geometry provenance remain unchanged.";
@@ -126,14 +141,81 @@ namespace ThoraxLab.Editor
         static void Create(Tissue tissue, bool interior)
         {
             string name = (interior ? "Interior_" : "Tissue_") + tissue.id;
+            string colorPath = Root + "/" + name + "_Albedo.png", normalPath = Root + "/" + name + "_Normal.png";
+            bool projected = tissue.OrganSurface || tissue.Superficial;
+            if (tissue.Superficial)
+            {
+                if (!File.Exists(colorPath)) throw new FileNotFoundException("Run pipeline/build_superficial_tissues.py to author the chest-wall maps.", colorPath);
+                AssetDatabase.ImportAsset(colorPath, ImportAssetOptions.ForceSynchronousImport);
+            }
+            else GenerateMaps(tissue, interior, colorPath, normalPath);
+            string path = Root + "/" + name + ".mat";
+            var shader = Shader.Find(projected ? "ThoraxLab/Organ Surface" : "Universal Render Pipeline/Lit");
+            if (!shader) throw new InvalidDataException("Missing presentation shader for " + name);
+            var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+            if (!material) { material = new Material(shader); AssetDatabase.CreateAsset(material, path); }
+            else if (material.shader != shader)
+            {
+                if (projected && material.HasProperty("_BumpMap")) material.SetTexture("_BumpMap", null);
+                material.shader = shader;
+            }
+            material.name = name;
+            material.SetColor("_BaseColor", Color.white);
+            material.SetTexture("_BaseMap", AssetDatabase.LoadAssetAtPath<Texture2D>(colorPath));
+            float gloss = tissue.smoothness;
+            if (interior) gloss = tissue.Superficial ? tissue.cutSmoothness : tissue.id == "lung" ? .32f : Mathf.Min(.43f, gloss + .04f);
+            material.SetFloat("_Smoothness", gloss);
+            if (projected)
+            {
+                material.SetTextureScale("_BaseMap", Vector2.one * tissue.MapScale(interior));
+                float relief = tissue.Superficial ? (interior ? tissue.cutRelief : tissue.relief) : tissue.relief * (interior ? .38f : .17f);
+                material.SetFloat("_BumpScale", relief);
+            }
+            else
+            {
+                material.SetTexture("_BumpMap", AssetDatabase.LoadAssetAtPath<Texture2D>(normalPath));
+                material.SetFloat("_BumpScale", 1);
+                material.SetFloat("_Metallic", 0);
+                material.SetFloat("_SmoothnessTextureChannel", 0);
+                material.DisableKeyword("_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A");
+                material.SetColor("_EmissionColor", Color.black);
+            }
+            material.SetFloat("_Cull", 2);
+            material.SetFloat("_Surface", 0); material.SetFloat("_ZWrite", 1);
+            if(projected) material.DisableKeyword("_NORMALMAP");
+            else material.EnableKeyword("_NORMALMAP");
+            material.DisableKeyword("_EMISSION");
+            material.enableInstancing = true;
+            EditorUtility.SetDirty(material);
+        }
+
+        static void ValidateSuperficialMaterials()
+        {
+            foreach (var tissue in Tissues.Where(t => t.Superficial))
+            foreach (bool interior in new[] { false, true })
+            {
+                string path = Root + "/" + (interior ? "Interior_" : "Tissue_") + tissue.id;
+                var material = AssetDatabase.LoadAssetAtPath<Material>(path + ".mat");
+                string png = path + "_Albedo.png";
+                var importer = AssetImporter.GetAtPath(png) as TextureImporter;
+                if (!material || material.shader.name != "ThoraxLab/Organ Surface" ||
+                    material.GetTexture("_BaseMap") != AssetDatabase.LoadAssetAtPath<Texture2D>(png) ||
+                    material.GetTextureScale("_BaseMap") != Vector2.one * tissue.MapScale(interior) ||
+                    !importer || !importer.DoesSourceTextureHaveAlpha() || !importer.sRGBTexture || !importer.mipmapEnabled ||
+                    importer.GetPlatformTextureSettings("Android").format != TextureImporterFormat.ASTC_6x6)
+                    throw new InvalidDataException("Invalid chest-wall appearance asset: " + path);
+            }
+        }
+
+        static void GenerateMaps(Tissue tissue, bool interior, string colorPath, string normalPath)
+        {
             var height = new float[Size * Size]; var albedo = new Color[height.Length];
             Color baseColor = tissue.color;
             if (interior)
             {
-                if (tissue.id == "skin") baseColor = new Color(.73f,.43f,.34f);
-                else if (tissue.id == "fat") baseColor = new Color(.86f,.73f,.45f);
-                else if (tissue.id == "lung") baseColor = new Color(.61f,.28f,.26f);
-                else if (tissue.id == "muscle" || tissue.id == "cardiac") baseColor *= .86f;
+                if (tissue.id == "lung") baseColor = new Color(.57f,.285f,.28f);
+                else if (tissue.id == "valve") baseColor = new Color(.81f,.72f,.61f);
+                else if (tissue.id == "cardiac") baseColor *= .86f;
                 else baseColor = Color.Lerp(baseColor, new Color(.67f,.36f,.29f), .16f);
                 baseColor.a = 1;
             }
@@ -143,70 +225,38 @@ namespace ThoraxLab.Editor
                 float u = x / (float)Size, v = y / (float)Size;
                 float broad = Noise(u, v, 6, seed), fine = Noise(u, v, 91, seed + 7);
                 float pattern = fine, variation = (broad - .5f) * .065f + (fine - .5f) * .026f;
-                if (tissue.id == "muscle" || tissue.id == "cardiac")
+                if (tissue.id == "lung" && interior)
                 {
-                    // An appearance cue only: source UVs do not establish fibre orientation.
-                    float strand = .5f + .5f * Mathf.Sin((u * 88 + .35f * Mathf.Sin(v * Mathf.PI * 8)) * Mathf.PI * 2);
-                    float bundles = .5f + .5f * Mathf.Sin(u * Mathf.PI * 2 * 13);
-                    pattern = strand * .52f + bundles * .20f + fine * .28f;
-                    variation += (pattern - .5f) * .025f;
+                    // Gross cut-face grain. Its scale does not resolve individual alveoli.
+                    float grain = Mathf.Clamp01(1 - CellDistance(u, v, 80, seed) * 2.2f);
+                    pattern = .64f - grain * .52f + (fine - .5f) * .16f;
+                    variation += (.2f - grain) * .083f;
                 }
-                else if (tissue.id == "fat")
+                else if (tissue.OrganSurface)
                 {
-                    float cell = CellDistance(u, v, 19, seed);
-                    pattern = Mathf.SmoothStep(1, 0, Mathf.Clamp01(cell));
-                    variation += (pattern - .5f) * .12f;
-                }
-                else if (tissue.id == "skin")
-                {
-                    float pore = Mathf.Pow(Mathf.Clamp01(1 - CellDistance(u, v, 58, seed) * 4), 2);
-                    pattern = .5f - pore * .5f + (fine - .5f) * .25f;
-                    // The source's packed UV islands need nearly uniform skin albedo.
-                    // Visible tangent-space pores produced triangular island artifacts
-                    // in the actual XR render; exterior skin deliberately has no bump.
-                    variation = (broad - .5f) * .010f + (fine - .5f) * .003f - pore * .0015f;
-                }
-                else if (tissue.id == "lung")
-                {
-                    float lobule = CellDistance(u, v, 31, seed);
-                    pattern = .5f + (fine - .5f) * .5f + (lobule - .5f) * .3f;
-                    variation += (lobule - .5f) * .11f;
-                }
-                else if (tissue.id == "fascia")
-                {
-                    pattern = .5f + .20f * Mathf.Sin(u * Mathf.PI * 96) * Mathf.Sin(v * Mathf.PI * 68);
-                    variation += (pattern - .5f) * .06f;
+                    float middle = Noise(u, v, 17, seed + 37);
+                    pattern = .5f + (middle - .5f) * .38f + (fine - .5f) * .18f;
+                    float contrast = tissue.id == "lung" ? .115f : tissue.id == "valve" ? .055f : .085f;
+                    variation = (broad - .5f) * contrast + (middle - .5f) * .032f + (fine - .5f) * .012f;
                 }
                 height[y * Size + x] = pattern;
-                albedo[y * Size + x] = new Color(Mathf.Clamp01(baseColor.r + variation), Mathf.Clamp01(baseColor.g + variation * .72f), Mathf.Clamp01(baseColor.b + variation * .60f), 1);
+                float gloss = tissue.OrganSurface ? Mathf.Clamp01(.86f + (broad - .5f) * .22f + (pattern - .5f) * .23f) : 1f;
+                float warmth = tissue.OrganSurface ? (broad - .5f) * (tissue.id == "lung" ? .048f : .025f) : 0f;
+                albedo[y * Size + x] = new Color(Mathf.Clamp01(baseColor.r + variation + warmth), Mathf.Clamp01(baseColor.g + variation * .72f), Mathf.Clamp01(baseColor.b + variation * .60f - warmth), gloss);
             }
-            var normals = new Color[height.Length];
-            for (int y = 0; y < Size; y++) for (int x = 0; x < Size; x++)
+            WriteTexture(colorPath, albedo, false);
+            if (!tissue.OrganSurface)
             {
-                float dx = height[y * Size + (x + 1) % Size] - height[y * Size + (x + Size - 1) % Size];
-                float dy = height[((y + 1) % Size) * Size + x] - height[((y + Size - 1) % Size) * Size + x];
-                var normal = new Vector3(-dx * tissue.relief * 2.5f, -dy * tissue.relief * 2.5f, 1).normalized;
-                normals[y * Size + x] = new Color(normal.x * .5f + .5f, normal.y * .5f + .5f, normal.z * .5f + .5f, 1);
+                var normals = new Color[height.Length];
+                for (int y = 0; y < Size; y++) for (int x = 0; x < Size; x++)
+                {
+                    float dx = height[y * Size + (x + 1) % Size] - height[y * Size + (x + Size - 1) % Size];
+                    float dy = height[((y + 1) % Size) * Size + x] - height[((y + Size - 1) % Size) * Size + x];
+                    var normal = new Vector3(-dx * tissue.relief * 2.5f, -dy * tissue.relief * 2.5f, 1).normalized;
+                    normals[y * Size + x] = new Color(normal.x * .5f + .5f, normal.y * .5f + .5f, normal.z * .5f + .5f, 1);
+                }
+                WriteTexture(normalPath, normals, true);
             }
-            string colorPath = Root + "/" + name + "_Albedo.png", normalPath = Root + "/" + name + "_Normal.png";
-            WriteTexture(colorPath, albedo, false); WriteTexture(normalPath, normals, true);
-            string path = Root + "/" + name + ".mat";
-            var material = AssetDatabase.LoadAssetAtPath<Material>(path);
-            if (!material) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(material, path); }
-            material.name = name;
-            material.SetColor("_BaseColor", Color.white);
-            material.SetTexture("_BaseMap", AssetDatabase.LoadAssetAtPath<Texture2D>(colorPath));
-            material.SetTexture("_BumpMap", AssetDatabase.LoadAssetAtPath<Texture2D>(normalPath));
-            material.SetFloat("_BumpScale", tissue.id == "muscle" || tissue.id == "cardiac" ? .2f : 1);
-            material.SetFloat("_Smoothness", interior ? Mathf.Min(.43f, tissue.smoothness + .04f) : tissue.smoothness);
-            material.SetFloat("_Metallic", 0);
-            material.SetFloat("_Cull", 2);
-            material.SetFloat("_Surface", 0); material.SetFloat("_ZWrite", 1);
-            if(tissue.id == "skin" && !interior) material.DisableKeyword("_NORMALMAP");
-            else material.EnableKeyword("_NORMALMAP");
-            material.DisableKeyword("_EMISSION");
-            material.SetColor("_EmissionColor", Color.black); material.enableInstancing = true;
-            EditorUtility.SetDirty(material);
         }
 
         static void WriteTexture(string path, Color[] pixels, bool normal)

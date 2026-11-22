@@ -66,7 +66,7 @@ namespace ThoraxLab.Learning
             var back=end-(end-start).normalized*.007f;
             directionArrow.SetPosition(0,back+across*.005f);directionArrow.SetPosition(1,end);directionArrow.SetPosition(2,back-across*.005f);
             guideLabel.transform.position=end+camera.up*.06f;guideLabel.transform.rotation=camera.rotation;
-            guideLabel.fontSize=.14f*app.Settings.Current.textScale;
+            guideLabel.fontSize=.14f*app.Settings.Current.EffectiveTextScale;
             guideLabel.color=app.Settings.Current.highContrast?Color.white:LabWidgets.Ink;
             guideBacking.localScale=new Vector3(Mathf.Min(.35f,guideLabel.preferredWidth+.02f),Mathf.Max(.035f,guideLabel.preferredHeight+.012f),1);
             guideBackingMaterial.SetColor("_BaseColor",app.Settings.Current.highContrast?Color.black:LabWidgets.Ground);

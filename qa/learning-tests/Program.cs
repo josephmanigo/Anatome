@@ -74,6 +74,34 @@ class Program
 
     static void CheckVRAccessibility()
     {
+        var reading = JsonSerializer.Deserialize<SettingsProfile>("{\"textScale\":0.95,\"captionScale\":1.1}", Json);
+        reading.Validate();
+        Check(!reading.astigmatismReadingMode && reading.EffectiveTextScale == .95f && reading.EffectiveCaptionScale == 1.1f,
+            "Profiles from before reading mode must retain their original sizes.");
+        reading.astigmatismReadingMode = true;
+        using var storedReading = JsonDocument.Parse(JsonSerializer.Serialize(reading, Json));
+        Check(storedReading.RootElement.TryGetProperty("readingBrightnessPercent", out var brightness) && brightness.GetSingle() == 80f,
+            "Reading mode needs a saved, adjustable 80% starting brightness for existing profiles.");
+        var reloaded = JsonSerializer.Deserialize<SettingsProfile>(JsonSerializer.Serialize(reading, Json), Json);
+        reloaded.Validate();
+        Check(reloaded.astigmatismReadingMode && reloaded.EffectiveTextScale == 1.35f && reloaded.EffectiveCaptionScale == 1.5f,
+            "A saved reading mode must reopen with larger text and captions.");
+        reloaded.astigmatismReadingMode = false;
+        Check(reloaded.EffectiveTextScale == .95f && reloaded.EffectiveCaptionScale == 1.1f,
+            "Switching off must restore the player's own sizes after reloading.");
+        reading.textScale = 1.5f;
+        reading.captionScale = 1.7f;
+        Check(reading.EffectiveTextScale == 1.5f && reading.EffectiveCaptionScale == 1.7f,
+            "Reading mode must preserve larger personal sizes.");
+        reading.readingBrightnessPercent = 10f; reading.Validate();
+        Check(reading.readingBrightnessPercent == 65f && Math.Abs(reading.ReadingDimAmount - .35f) < .0001f,
+            "The dimmest reading setting must preserve scene detail.");
+        reading.readingBrightnessPercent = 150f; reading.Validate();
+        Check(reading.readingBrightnessPercent == 100f && reading.ReadingDimAmount == 0f,
+            "Players must be able to keep full brightness while using the other reading aids.");
+        reading.readingBrightnessPercent = 72f; reading.astigmatismReadingMode = false;
+        Check(reading.ReadingDimAmount == 0f && reading.readingBrightnessPercent == 72f,
+            "Disabling the mode must restore normal brightness and retain the reading adjustment.");
         var legacy=new SettingsProfile{stickDeadzone=0,textScale=.95f,captionScale=1.3f,movementRevision=1,movement=MoveStyle.Teleport};legacy.Validate();
         Check(legacy.stickDeadzone==.2f&&legacy.textScale==.95f&&legacy.captionScale==1.3f&&legacy.movement==MoveStyle.Teleport,"Adding drift protection must preserve saved reading and movement choices.");
         legacy.stickDeadzone=.4f;
@@ -256,6 +284,7 @@ class Program
         if (args.Length > 0)
         {
             var catalog = JsonSerializer.Deserialize<LearningCatalog>(File.ReadAllText(args[0]), Json);
+            CaseIncisionTests.Run(catalog, Check);
             IdentificationFocusTests.Run(catalog,Path.Combine(Path.GetDirectoryName(args[0]),"..","..","anatomy-catalog.json"),Check);
             MuseumCollectionTests.Run(Path.Combine(Path.GetDirectoryName(args[0]),"..","..","anatomy-catalog.json"),Check);
             Check(catalog.units.Length == 12, "Expected six anatomy units and six cases.");
@@ -269,13 +298,18 @@ class Program
                 {
                     var ev = Hit(objective.targetId, objective.action); ev.toolId = objective.toolId; ev.equipmentState = objective.equipmentState;
                     ev.contactSeconds = objective.minContactSeconds; ev.pathFraction = objective.minPathFraction;
+                    if(objective.toolId=="scalpel"&&objective.action==ActionKind.Trace){
+                        var stroke=new CaseIncisionStroke(.024f);
+                        for(int frame=0;frame<=144;frame++)stroke.Sample(.024f*frame/144,0,0,true,true,1f/72);
+                        ev.contactVerified=stroke.Touching;ev.contactSeconds=stroke.ContactSeconds;ev.pathFraction=stroke.Progress;
+                    }
                     Check(test.Apply(ev), "Authored positive path failed: " + variant.id + "/" + objective.id);
                 }
                 test.Finish(); Check(test.Attempt.passed && test.Attempt.score == 100, "Complete variant failed.");
                 var replay = new AssessmentEngine(variant, attempt); Check(replay.Attempt.score == 100, "Checkpoint evidence replay diverged.");
             }
         }
-        Console.WriteLine("PASS " + assertions + " assertions: scoring, order, evidence, mastery, idempotence, account isolation, reset and durable save recovery.");
+        Console.WriteLine("PASS " + assertions + " assertions: scoring, incision contact, order, evidence, mastery, idempotence, account isolation, reset and durable save recovery.");
     }
 
     static void CheckClinicalDecisions()

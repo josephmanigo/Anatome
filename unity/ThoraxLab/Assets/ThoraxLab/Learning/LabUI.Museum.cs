@@ -2,26 +2,41 @@ using System;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using static ThoraxLab.Learning.LabWidgets;
 
 namespace ThoraxLab.Learning
 {
     public sealed partial class LabUI
     {
-        TextMeshProUGUI museumSelection;
+        TextMeshProUGUI museumSelection, museumDescription;
 
         void MuseumWorkspace()
         {
             var museum = app.Museum;
+            var reader = InstructionSurface();
+            reader.name = "Exhibit reading panel";
+            reader.GetComponent<Image>().color = HighContrast ? Color.black : MuseumExhibit.Enamel;
+            museumSelection = Text(reader, "", 36, HighContrast ? Color.white : MuseumExhibit.Ivory);
+            museumSelection.fontStyle = FontStyles.Bold;
+            museumDescription = Text(reader, "", 26);
+            var state = Row(reader, "Exhibit selection", 8);
+            var stateLayout = state.GetComponent<HorizontalLayoutGroup>();
+            stateLayout.childForceExpandWidth = stateLayout.childForceExpandHeight = false;
+            stateLayout.childAlignment = TextAnchor.MiddleLeft;
+            var markColor = HighContrast ? Color.white : MuseumExhibit.Brass;
+            LabUIVisuals.Icon(state, LabGlyph.Check, markColor, 24 * TextScale);
+            Text(state, "Selected exhibit", 22, markColor);
+            RefreshMuseumSelection();
+            InspectionControls();
+
             Text(content, museum.SystemName + " · " + museum.Collection.InSystem(museum.SystemName).Length + " exhibits", 27, Accent);
+            Text(content, "Display " + (museum.PageIndex + 1) + " of " + museum.Collection.PageCount(museum.SystemName) +
+                " · " + museum.Collection.Entries.Count + " exhibits across all galleries", 22, Muted);
             var pages = Row(content, "Museum display pages", 10);
             Button(pages, "Previous", () => { museum.TurnPage(-1); ShowWorkspace(); }, false, museum.PageIndex > 0);
             Button(pages, "Next", () => { museum.TurnPage(1); ShowWorkspace(); }, false, museum.PageIndex + 1 < museum.Collection.PageCount(museum.SystemName));
-            Text(content, "Display " + (museum.PageIndex + 1) + " of " + museum.Collection.PageCount(museum.SystemName) +
-                " · " + museum.Collection.Entries.Count + " exhibits across all galleries", 22, Muted);
             Button(content, "Choose a gallery / find a part", ShowMuseumCollection, true);
-            museumSelection = Text(content, "", 25, Accent); RefreshMuseumSelection();
-            Button(content, "Inspect / zoom selected exhibit", app.Inspector.Open);
             Button(content, "Return exhibits to their stands", museum.ResetExhibits);
             Text(content, "Every exhibit has its name and a brief description. Point and press trigger to select; grip to lift and turn. Release to return it to its stand. Models are resized for viewing.", 23, Muted);
             Text(content, InspectionInstructions + " " + MovementSummary(), 22, Muted);
@@ -32,14 +47,17 @@ namespace ThoraxLab.Learning
 
         public void RefreshMuseumSelection()
         {
-            if (museumSelection && app.Museum && app.Museum.Selected)
-                museumSelection.text = "Selected: " + app.Museum.Selected.Entry.Name + "\n" + app.Museum.Selected.Entry.Description;
+            if (!museumSelection) return;
+            var selected = app.Museum.Selected;
+            museumSelection.transform.parent.gameObject.SetActive(selected);
+            if (!selected) return;
+            museumSelection.text = selected.Entry.Name;
+            museumDescription.text = selected.Entry.Description;
         }
 
         void ShowMuseumCollection()
         {
-            Page("Museum collection", "Find an anatomy exhibit");
-            Button(content, "Return to gallery", ShowWorkspace, true);
+            Page("Museum collection", "Find an anatomy exhibit", back: ShowWorkspace, backName: "Return to gallery");
             var search = Field("Search structure name or description");
             var results = Column(content, "Museum search and galleries");
             int page = 0;

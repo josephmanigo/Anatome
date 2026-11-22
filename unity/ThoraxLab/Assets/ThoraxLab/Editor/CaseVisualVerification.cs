@@ -17,7 +17,7 @@ namespace ThoraxLab.Editor
     {
         [Serializable] sealed class Anchor { public string id; public Vector3 position, forward; public Vector3[] route; }
         [Serializable] sealed class Entry { public string disease; public int triangles, renderers, colliders; public Anchor[] anchors; }
-        [Serializable] sealed class Report { public string utc; public int geometryVerticesChecked, geometryTrianglesChecked; public List<Entry> cases = new(); public List<string> errors = new(); }
+        [Serializable] sealed class Report { public string utc; public int geometryVerticesChecked, geometryTrianglesChecked; public List<int> incisionSamplingRates = new(); public List<Entry> cases = new(); public List<string> errors = new(); }
         public static void Capture()
         {
             string root = Path.GetFullPath(Path.Combine(Application.dataPath, "../../.."));
@@ -26,22 +26,29 @@ namespace ThoraxLab.Editor
             var report = new Report { utc = DateTime.UtcNow.ToString("o") };
             if(pass!="before")VerifySurfaces(report);
             var original = SceneManager.GetActiveScene();
-            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+            if (Application.isBatchMode && string.IsNullOrEmpty(original.path))
+                original = EditorSceneManager.OpenScene("Assets/ThoraxLab/Scenes/ThoraxLab.unity");
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
             SceneManager.SetActiveScene(scene);
             RenderSettings.ambientMode = AmbientMode.Flat; RenderSettings.ambientLight = new Color(.36f, .40f, .44f); RenderSettings.fog = false;
             try
             {
                 var camera = new GameObject("Review camera").AddComponent<Camera>();
+                const int reviewLayer = 31;
+                camera.cullingMask = 1 << reviewLayer;
                 camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(.045f, .063f, .077f);
                 camera.orthographic = true; camera.orthographicSize = .26f; camera.nearClipPlane = .01f; camera.farClipPlane = 5;
                 foreach (var light in new[] { new Vector4(35, -30, 0, 1.2f), new Vector4(15, 140, 0, .65f) })
                 {
                     var lamp = new GameObject("Review soft light").AddComponent<Light>(); lamp.type = LightType.Directional;
                     lamp.transform.rotation = Quaternion.Euler(light.x, light.y, light.z); lamp.intensity = light.w;
+                    lamp.cullingMask = 1 << reviewLayer;
                 }
                 foreach (string disease in new[] { "asthma", "pneumonia", "pneumothorax", "pleural-effusion", "coronary-disease", "aortic-stenosis" })
                 {
                     var station = new GameObject(disease).AddComponent<CaseAnatomyWorkbench>(); station.Build(disease);
+                    foreach (var part in station.GetComponentsInChildren<Transform>(true)) part.gameObject.layer = reviewLayer;
+                    if(station.Incision)VerifyIncisionSampling(station,report);
                     var entry = new Entry { disease = disease, triangles = station.VisualTriangleCount, renderers = station.VisualRendererCount, colliders = station.GetComponentsInChildren<Collider>(true).Length };
                     entry.anchors = station.Targets.OrderBy(p => p.Key).Select(p => {
                         var points = new List<Vector3>(); station.TryRoute(p.Key, points);
@@ -81,10 +88,27 @@ namespace ThoraxLab.Editor
                     }
                 }
             }
-            finally { EditorSceneManager.CloseScene(scene, true); if (original.IsValid()) SceneManager.SetActiveScene(original); }
+            finally { if (original.IsValid()) SceneManager.SetActiveScene(original); EditorSceneManager.CloseScene(scene, true); }
             File.WriteAllText(Path.Combine(output, "report.json"), JsonUtility.ToJson(report, true));
             if (report.errors.Count > 0) throw new Exception(string.Join("; ", report.errors));
             Debug.Log("Case visual verification passed: " + report.cases.Count + " stations; " + output);
+        }
+        static void VerifyIncisionSampling(CaseAnatomyWorkbench station,Report report)
+        {
+            var skin=station.Incision;var path=new List<Vector3>();station.TryRoute("equipment:pleural-incision",path);
+            var renderer=skin.GetComponent<MeshRenderer>();
+            if(renderer.shadowCastingMode!=ShadowCastingMode.Off || !renderer.receiveShadows)
+                report.errors.Add("The skin insert must receive tool shadows without casting on itself.");
+            var mesh=skin.GetComponent<MeshFilter>().sharedMesh;var closed=mesh.vertices;
+            foreach(int hz in new[]{30,72,120}){
+                skin.Restore(false);
+                for(int i=0;i<=hz;i++)skin.Sample(Vector3.Lerp(path[0],path[path.Count-1],(float)i/hz),skin.WorkingRotation,55,1f/hz);
+                if(skin.Progress!=1||Mathf.Abs(skin.ContactSeconds-1)>.001f||mesh.vertices.SequenceEqual(closed))
+                    report.errors.Add("Skin movement, elapsed time or opening differed at "+hz+" Hz");
+                else report.incisionSamplingRates.Add(hz);
+                skin.Restore(false);
+                if(!mesh.vertices.SequenceEqual(closed)||skin.Touching||skin.ContactSeconds!=0)report.errors.Add("Skin reset did not restore this insert");
+            }
         }
         static void VerifySurfaces(Report report)
         {
@@ -96,8 +120,11 @@ namespace ThoraxLab.Editor
             {
                 type.GetMethod("AirwayManikin").Invoke(geometry,new object[]{material});
                 foreach(int side in new[]{-1,1})type.GetMethod("ManikinEar").Invoke(geometry,new object[]{side,material});
-                type.GetMethod("TissueBand").Invoke(geometry,new object[]{.093f,-.0445f,-.0355f,material,.085f});
+                var cutFace=Resources.Load<Material>("Learning/Specimen/Interior_skin");
+                if(!cutFace) throw new InvalidDataException("Missing exposed dermis material");
+                type.GetMethod("TissueBand").Invoke(geometry,new object[]{.093f,-.0445f,-.0355f,material,.085f,cutFace});
                 var surfaces=(IDictionary)type.GetField("surfaces",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(geometry);
+                if(!surfaces.Contains(cutFace)) throw new InvalidDataException("The wall band lost its separate cut face");
                 foreach(object surface in surfaces.Values)
                 {
                     var vertices=(List<Vector3>)surface.GetType().GetField("vertices").GetValue(surface);
@@ -120,7 +147,7 @@ namespace ThoraxLab.Editor
             }
             finally{((IDisposable)geometry).Dispose();UnityEngine.Object.DestroyImmediate(material);}
         }
-        static void Render(Camera camera, string path)
+        internal static void Render(Camera camera, string path)
         {
             var previous = RenderTexture.active; var target = new RenderTexture(1200, 1000, 24) { antiAliasing = 4 };
             var image = new Texture2D(1200, 1000, TextureFormat.RGB24, false);

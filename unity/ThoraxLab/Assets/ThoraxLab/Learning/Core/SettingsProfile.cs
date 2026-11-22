@@ -28,6 +28,11 @@ namespace ThoraxLab.Learning
         public float heightBoost;
         public float tableHeight, textScale = 1.15f, captionScale = 1.15f;
         public bool hints = true, labels = true, highContrast, reducedMotion;
+        public bool astigmatismReadingMode;
+        public float readingBrightnessPercent = 80f;
+        public float ReadingDimAmount => astigmatismReadingMode ? 1f - readingBrightnessPercent / 100f : 0f;
+        public float EffectiveTextScale => astigmatismReadingMode ? Math.Max(textScale, 1.35f) : textScale;
+        public float EffectiveCaptionScale => astigmatismReadingMode ? Math.Max(captionScale, 1.5f) : captionScale;
         public string forward = "W", backward = "S", left = "A", right = "D", up = "E", down = "Q", reset = "R", undo = "Z", tool = "B";
 
         public void Validate()
@@ -41,6 +46,7 @@ namespace ThoraxLab.Learning
             if(refreshRate<0||refreshRate>240)refreshRate=0;
             renderScale = Clamp(renderScale, .6f, 1.4f); brightness = Clamp(brightness, .5f, 1.5f);
             textScale = Clamp(textScale, .85f, 1.5f); captionScale = Clamp(captionScale, .85f, 1.7f);
+            readingBrightnessPercent = Clamp(readingBrightnessPercent == 0 ? 80f : readingBrightnessPercent, 65f, 100f);
             sensitivity = Clamp(sensitivity, .03f, .4f); moveSpeed = Clamp(moveSpeed, .2f, 1.5f);
             stickDeadzone = Clamp(stickDeadzone == 0 ? .2f : stickDeadzone, .1f, .45f);
             turnSpeed = Clamp(turnSpeed, 15, 120); snapAngle = Clamp(snapAngle, 15, 60); tableHeight = Clamp(tableHeight, -.2f, .25f);

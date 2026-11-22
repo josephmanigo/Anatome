@@ -14,8 +14,8 @@ namespace ThoraxLab.Editor
         {
             PlayerSettings.companyName=Learning.LearningBrand.Name;
             PlayerSettings.productName=Learning.LearningBrand.Name;
-            PlayerSettings.bundleVersion="1.6.0";
-            PlayerSettings.Android.bundleVersionCode=Mathf.Max(PlayerSettings.Android.bundleVersionCode,20);
+            PlayerSettings.bundleVersion="1.6.6";
+            PlayerSettings.Android.bundleVersionCode=Mathf.Max(PlayerSettings.Android.bundleVersionCode,26);
             var accountConfiguration=Resources.Load<TextAsset>("Learning/supabase-config");
             LearningAndroidPolicy.ValidateConfiguration(accountConfiguration?JsonUtility.FromJson<Learning.SupabaseConfiguration>(accountConfiguration.text):null);
             AssetDatabase.Refresh();
@@ -182,6 +182,18 @@ namespace ThoraxLab.Editor
             var result=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{"Assets/ThoraxLab/Scenes/ThoraxLab.unity"},locationPathName=output,target=target,options=options});
             File.WriteAllText(Path.Combine(root,"qa","learning-build-"+target+(options.HasFlag(BuildOptions.Development)?"-QA":"")+".txt"),result.summary.result+"\n"+result.summary.totalErrors+" errors\n"+result.summary.totalWarnings+" warnings\n"+result.summary.totalTime);
             if(result.summary.result!=BuildResult.Succeeded)throw new Exception("Learning release build failed: "+result.summary.result);
+        }
+    }
+
+    sealed class BakeAnatomyVolumes : UnityEditor.Build.IProcessSceneWithReport
+    {
+        public int callbackOrder => 0;
+
+        public void OnProcessScene(UnityEngine.SceneManagement.Scene scene, BuildReport report)
+        {
+            foreach (var root in scene.GetRootGameObjects())
+                foreach (var part in root.GetComponentsInChildren<AnatomyStructure>(true))
+                    part.BakeSourceVolume();
         }
     }
 }

@@ -1,170 +1,170 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.XR;
 
 namespace ThoraxLab.Learning
 {
-    // Observe A/X before hand tools and locomotion can consume this frame's input.
     [DefaultExecutionOrder(-50)]
     public sealed class ModelInspection : MonoBehaviour
     {
         LabRuntime app;
+        Transform rig, head, viewSpace;
+        LabHandInteractor[] hands;
+        Vector3 focus;
         readonly InspectionZoom zoom = new InspectionZoom();
         readonly InspectionButton button = new InspectionButton();
         readonly VRStickInput stick = new VRStickInput();
-        readonly Dictionary<Renderer, bool> hidden = new Dictionary<Renderer, bool>();
-        GameObject visual;
-        Coroutine opening;
-        float fitScale;
         bool leftHanded;
-        bool resumeNarration;
         XRInteractionSource activeSource;
 
-        public bool IsOpen { get; private set; }
+        public bool IsOpen => viewSpace;
         public float Magnification => zoom.Value;
-        public Transform Visual => visual ? visual.transform : null;
         public XRNode ControlHand => app.Settings.Current.leftHanded ? XRNode.LeftHand : XRNode.RightHand;
-        bool Available => app && app.UI && app.Focused && !app.Paused && app.XRReady &&
-            !app.UI.HasModal && app.Session && !app.Session.busy;
-        public bool CanOpen => Available && app.UI.WorkspaceVisible && !app.OrientationActive &&
+        bool Available => app && app.UI && app.UI.WorkspaceVisible && app.Focused && !app.Paused &&
+            app.XRReady && app.Session && !app.Session.busy;
+        public bool CanOpen => Available && !app.OrientationActive &&
             (!app.MuseumActive || (!app.Museum.ChangingGallery && app.Museum.Selected)) &&
             (app.Engine != null || app.Sandbox || app.MuseumActive);
 
-        public void Initialize(LabRuntime runtime) { app = runtime; leftHanded = app.Settings.Current.leftHanded; }
+        public void Initialize(LabRuntime runtime)
+        {
+            app = runtime;
+            head = Camera.main.transform;
+            rig = head.parent;
+            hands = rig.GetComponentsInChildren<LabHandInteractor>();
+            leftHanded = app.Settings.Current.leftHanded;
+        }
 
         void Update()
         {
             if (!app || app.Settings == null) return;
-            bool changedHand = leftHanded != app.Settings.Current.leftHanded;
-            leftHanded = app.Settings.Current.leftHanded;
             var input = LearningXRInput.Read(ControlHand);
             bool tracked = app.Focused && app.XRReady && input.tracked;
-            if (changedHand) { button.Reset(); stick.Reset(); }
-            if (!tracked || (IsOpen && input.source != activeSource))
+            if (leftHanded != app.Settings.Current.leftHanded || !tracked || (IsOpen && activeSource != input.source))
             {
-                button.Reset(); stick.Reset();
-                if (IsOpen) ReturnToActivity();
-                return;
+                leftHanded = app.Settings.Current.leftHanded;
+                Close(); button.Reset(); stick.Reset(); return;
             }
-            if (IsOpen && (app.Paused || app.Session.busy || (visual && app.Engine == null && !app.Sandbox && !app.MuseumActive)))
-            { ReturnToActivity(); return; }
-            if (IsOpen && !Available) stick.Reset();
-            if (button.Press(input.source, tracked && Available && (IsOpen || CanOpen), input.inspect))
-            {
-                if (IsOpen) ReturnToActivity(); else Open();
-            }
+            if (IsOpen && (app.Paused || app.UI.ScreenName != "Workspace")) { Close(); return; }
+            if (button.Press(input.source, tracked && CanOpen, input.inspect)) Toggle();
         }
+
+        public void Toggle() { if (IsOpen) Close(); else Open(); }
 
         public void Open()
         {
             if (IsOpen || !CanOpen) return;
-            IsOpen = true;
+            var renderers = app.MuseumActive ? app.Museum.InspectionRenderers :
+                app.Procedure.InspectionRenderers.Where(r => r && r.enabled && !r.forceRenderingOff).ToArray();
+            if (!renderers.Any())
+                renderers = app.Session.originals.Concat(app.Session.Fragments)
+                    .Where(s => s && s.gameObject.activeInHierarchy && !s.record.reference_region)
+                    .Select(s => (Renderer)s.Renderer);
+            var visible = renderers.Where(r => r && r.enabled && r.gameObject.activeInHierarchy && !r.forceRenderingOff).ToArray();
+            if (visible.Length == 0) { app.Message("Choose a visible model to zoom."); return; }
+            var bounds = visible[0].bounds;
+            foreach (var renderer in visible) bounds.Encapsulate(renderer.bounds);
+            focus = bounds.center;
+
+            // Transform the tracked eyes and hands together. All tissue, cut meshes,
+            // sockets and instrument paths stay in their original metric space.
+            viewSpace = new GameObject("Live model zoom").transform;
+            viewSpace.SetParent(rig, false);
+            head.SetParent(viewSpace, false);
+            foreach (var hand in hands) hand.transform.SetParent(viewSpace, false);
             activeSource = LearningXRInput.Read(ControlHand).source;
-            stick.Reset(); zoom.Reset();
-            resumeNarration = app.Narrator.IsPlaying;
-            if (resumeNarration) app.Narrator.TogglePause();
-            opening = StartCoroutine(CaptureAfterRelease());
+            zoom.Reset(); stick.Reset();
+            app.UI.RefreshInspectionZoom();
         }
 
-        IEnumerator CaptureAfterRelease()
-        {
-            // XRI releases held parts through CanInteract before copying the scene.
-            // Keep the workspace visible until case anatomy has been captured.
-            yield return null;
-            yield return null;
-            opening = null;
-            if (!Available || !app.UI.WorkspaceVisible) { Close(); yield break; }
-            var anatomy = (app.MuseumActive ? app.Museum.InspectionRenderers : app.Session.originals.Concat(app.Session.Fragments)
-                .Where(s => s && !s.record.reference_region).Select(s => (Renderer)s.Renderer)).Where(VisibleMesh).ToArray();
-            var cases = (app.MuseumActive ? System.Array.Empty<Renderer>() : app.Procedure.InspectionRenderers).Where(VisibleMesh).ToArray();
-            var source = cases.Length > 0 ? cases : anatomy;
-            if (source.Length == 0)
-            { Close(); app.Message("No visible model to inspect. Return to your activity and choose a visible layer."); yield break; }
-
-            var bounds = source[0].bounds;
-            foreach (var renderer in source) bounds.Encapsulate(renderer.bounds);
-            visual = new GameObject("Model inspection · visual only");
-            visual.transform.position = bounds.center;
-            var block = new MaterialPropertyBlock();
-            foreach (var renderer in source)
-            {
-                var copy = new GameObject(renderer.name + " · inspection");
-                copy.transform.SetPositionAndRotation(renderer.transform.position, renderer.transform.rotation);
-                copy.transform.localScale = renderer.transform.lossyScale;
-                copy.transform.SetParent(visual.transform, true);
-                copy.AddComponent<MeshFilter>().sharedMesh = renderer.GetComponent<MeshFilter>().sharedMesh;
-                var display = copy.AddComponent<MeshRenderer>();
-                display.sharedMaterials = renderer.sharedMaterials;
-                renderer.GetPropertyBlock(block); display.SetPropertyBlock(block);
-                for (int i = 0; i < display.sharedMaterials.Length; i++)
-                { renderer.GetPropertyBlock(block, i); display.SetPropertyBlock(block, i); }
-                display.shadowCastingMode = ShadowCastingMode.Off; display.receiveShadows = false;
-            }
-            foreach (var renderer in anatomy.Concat(cases).Distinct())
-            { hidden[renderer] = renderer.forceRenderingOff; renderer.forceRenderingOff = true; }
-            fitScale = .24f / Mathf.Max(.001f, bounds.extents.magnitude);
-            ResetView();
-            app.UI.ShowModelInspection();
-        }
-
-        static bool VisibleMesh(Renderer renderer) => renderer && renderer.enabled && !renderer.forceRenderingOff &&
-            renderer.gameObject.activeInHierarchy && renderer is MeshRenderer &&
-            renderer.GetComponent<MeshFilter>() && renderer.GetComponent<MeshFilter>().sharedMesh &&
-            !renderer.GetComponent<TMPro.TMP_Text>();
-
-        // Called after the ray/UI decision so one stick cannot scroll and zoom together.
+        // The hand ray gets first use of its stick for scrolling.
         public void HandleControllerAxis(LearningXRInput.State input, bool overUI)
         {
-            if (!IsOpen || !visual || !Available || overUI || app.UI.XRPanelCaptured ||
+            if (!IsOpen || !Available || overUI || app.UI.XRPanelCaptured ||
                 !input.tracked || input.source != activeSource)
             { stick.Reset(); return; }
             float x = input.axis.x, y = input.axis.y;
             stick.Filter(input.source, true, app.Settings.Current.stickDeadzone, ref x, ref y);
-            // Use the dominant axis to avoid rotating while enlarging the model.
-            if (Mathf.Abs(y) >= Mathf.Abs(x)) zoom.Move(y, Time.unscaledDeltaTime);
-            else visual.transform.Rotate(Vector3.up, x * 65 * Mathf.Min(Time.unscaledDeltaTime, .1f), Space.World);
-            ApplyZoom();
+            if (x == 0 && y == 0) return;
+            bool rotate = Mathf.Abs(x) > Mathf.Abs(y);
+            if (!TryGetPivot(rotate, out var pivot)) return;
+            if (!rotate) zoom.Move(y, Time.unscaledDeltaTime);
+            ApplyView(rotate ? -x * 65 * Mathf.Min(Time.unscaledDeltaTime, .1f) : 0, pivot);
         }
 
-        public void ZoomIn() { if (IsOpen && Available) { zoom.Step(true); ApplyZoom(); } }
-        public void ZoomOut() { if (IsOpen && Available) { zoom.Step(false); ApplyZoom(); } }
-        void ApplyZoom()
+        // An active hand stays on its grip point or cutting ray. Zoom alone must
+        // never move a held piece into a socket or draw a stroke across tissue.
+        bool TryGetPivot(bool rotate, out Vector3 pivot)
         {
-            if (visual) visual.transform.localScale = Vector3.one * (fitScale * zoom.Value);
-            if (app && app.UI) app.UI.RefreshInspectionZoom();
+            pivot = focus;
+            bool anchored = false;
+            foreach (var hand in hands)
+            {
+                var input = LearningXRInput.Read(hand.hand);
+                if (hand.interactablesSelected.Count > 0)
+                    pivot = hand.GetAttachTransform(hand.interactablesSelected[0]).position;
+                else if (app.CanUseCuttingTool && input.trigger && !hand.PointerOverUI)
+                {
+                    var ray = hand.InputRay(input);
+                    pivot = Physics.Raycast(ray, out var hit, 3, ~0, QueryTriggerInteraction.Ignore) ? hit.point : ray.origin;
+                }
+                else continue;
+                if (rotate || anchored) return false;
+                anchored = true;
+            }
+            return true;
         }
+
+        public void ZoomIn() => Step(true);
+        public void ZoomOut() => Step(false);
+        void Step(bool enlarge)
+        {
+            if (!IsOpen || !Available || !TryGetPivot(false, out var pivot)) return;
+            zoom.Step(enlarge); ApplyView(0, pivot);
+        }
+
+        void ApplyView(float yaw, Vector3 pivot)
+        {
+            float scale = 1f / zoom.Value;
+            float ratio = scale / viewSpace.localScale.x;
+            if (yaw == 0 && Mathf.Approximately(ratio, 1)) return;
+            var turn = Quaternion.AngleAxis(yaw, Vector3.up);
+            var position = pivot + turn * (viewSpace.position - pivot) * ratio;
+            SetView(position, turn * viewSpace.rotation, scale);
+            app.UI.RefreshInspectionZoom();
+        }
+
+        void SetView(Vector3 position, Quaternion rotation, float scale)
+        {
+            // Keep the workspace buttons at the same apparent distance and size during zoom.
+            var panel = app.UI.Root;
+            var panelPosition = viewSpace.InverseTransformPoint(panel.position);
+            var panelRotation = Quaternion.Inverse(viewSpace.rotation) * panel.rotation;
+            float ratio = scale / viewSpace.localScale.x;
+            viewSpace.SetPositionAndRotation(position, rotation);
+            viewSpace.localScale = Vector3.one * scale;
+            panel.SetPositionAndRotation(viewSpace.TransformPoint(panelPosition), viewSpace.rotation * panelRotation);
+            panel.localScale *= ratio;
+        }
+
         public void ResetView()
         {
-            if (!visual) return;
+            if (!IsOpen) return;
             zoom.Reset(); stick.Reset();
-            var head = Camera.main.transform;
-            var forward = Vector3.ProjectOnPlane(head.forward, Vector3.up).normalized;
-            if (forward.sqrMagnitude < .01f) forward = Vector3.forward;
-            var right = Vector3.Cross(Vector3.up, forward);
-            visual.transform.SetPositionAndRotation(head.position + forward * 1.05f + right * .3f - Vector3.up * .2f, Quaternion.identity);
-            ApplyZoom();
+            SetView(rig.position, rig.rotation, 1);
+            app.UI.RefreshInspectionZoom();
         }
-        public void ReturnToActivity()
-        {
-            bool returnToWorkspace = IsOpen && app && app.UI && app.UI.ScreenName == "Model inspection";
-            Close();
-            if (returnToWorkspace) app.UI.ShowWorkspace();
-        }
+
         public void Close()
         {
-            if (opening != null) StopCoroutine(opening);
-            opening = null;
-            foreach (var pair in hidden) if (pair.Key) pair.Key.forceRenderingOff = pair.Value;
-            hidden.Clear();
-            if (visual) { visual.SetActive(false); Destroy(visual); }
-            visual = null; IsOpen = false; stick.Reset(); button.Reset();
-            if (resumeNarration && app && app.Narrator && app.Narrator.Paused) app.Narrator.TogglePause();
-            resumeNarration = false;
+            if (!viewSpace) return;
+            if (app && app.UI && app.UI.Root && rig) ResetView();
+            if (head) head.SetParent(rig, false);
+            foreach (var hand in hands) if (hand) hand.transform.SetParent(rig, false);
+            Destroy(viewSpace.gameObject);
+            viewSpace = null; button.Reset(); stick.Reset(); zoom.Reset();
+            if (app && app.UI) app.UI.RefreshInspectionZoom();
         }
         void OnDisable() => Close();
-        void OnDestroy() => Close();
     }
 }

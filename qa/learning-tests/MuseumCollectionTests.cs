@@ -43,6 +43,10 @@ static class MuseumCollectionTests
             "Visceral and parietal pleura descriptions must distinguish the two surfaces.");
         check(museum.Entries.Where(e => e.Group == "pulmonary_vessels").Select(e => e.Description).Distinct().Count() == 2,
             "Pulmonary artery and vein descriptions must distinguish blood direction and oxygenation.");
+        check(new[]{"FMA9761", "FMA9762"}.All(id => museum.Find(id).Description.Contains("posterior sternum"))
+            && museum.Find("FMA9756").Description.Contains("between the ribs"), "Transversus thoracis and the intercostal layers need different attachments.");
+        check(museum.Entries.Where(e => e.Group == "pleural_layers" || e.Group == "pericardium").All(e => e.Description.Contains("teaching")),
+            "The specimen labels identify its reconstructed serous envelopes.");
         check((int)LearningMode.AnatomyCases == 0 && (int)LearningMode.GuidedDissection == 3 && Enum.GetValues<LearningMode>().Length == 4,
             "An ungraded museum must not change serialized assessment mode identities or server rubrics.");
         bool duplicateRejected = false;

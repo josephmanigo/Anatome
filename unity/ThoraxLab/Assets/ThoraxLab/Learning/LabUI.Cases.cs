@@ -11,22 +11,19 @@ namespace ThoraxLab.Learning
         Action browserReturn;
         bool browserWasAway;
 
-        void ReferenceBack(LearningUnit unit)
-        {
-            Button(content,app.Engine!=null?"Return to activity":"Back to unit",app.Engine!=null?(Action)ShowWorkspace:()=>ShowUnit(unit),true);
-        }
+        Action ReferenceDestination(LearningUnit unit) => app.Engine!=null?(Action)ShowWorkspace:()=>ShowUnit(unit);
         void ShowSourceDetails(LearningUnit unit,SourceReference source)
         {
-            Page("Source details",source.title);ReferenceBack(unit);
+            Page("Source details",source.title,back:()=>ShowReferences(unit),backName:"Back to references");
+            Button(content,app.Engine!=null?"Return to activity":"Open unit overview",ReferenceDestination(unit),true);
             Text(content,"Anatome lesson summary",25,Accent);Text(content,unit.lesson,23);
             Text(content,"This summary is written for the game. The original reference is available on its publisher's website.",21,Muted);
             Text(content,source.url,20,Muted);
             Button(content,"Open website in browser",()=>OpenReferenceWebsite(unit,source));
-            Button(content,"Back to references",()=>ShowReferences(unit));
         }
         void PrepareBrowserReturn(LearningUnit unit)
         {
-            browserReturn=app.Engine!=null?(Action)ShowWorkspace:()=>ShowUnit(unit);browserWasAway=false;
+            browserReturn=ReferenceDestination(unit);browserWasAway=false;
             app.Save();Page("Browser","Your place is saved");
             Button(content,app.Engine!=null?"Return to activity":"Return to unit",ReturnFromBrowser,true);
             Text(content,"Close the browser window to return. If the headset menu is still open, select Anatome and Resume.",25);
@@ -76,7 +73,8 @@ namespace ThoraxLab.Learning
         { CaseOverview(true); }
         void CaseOverview(bool introduction)
         {
-            Page("Case and controls",app.Unit.title);Button(content,introduction?"Begin this case":"Return to activity",ShowWorkspace,true);
+            Page("Case and controls",app.Unit.title,back:introduction?null:(Action)ShowWorkspace,backName:"Return to activity");
+            if(introduction)Button(content,"Begin this case",ShowWorkspace,true);
             Text(content,app.Unit.summary,25);Text(content,app.Unit.lesson,23,Muted);
             Text(content,"How this case works",28,Accent);
             Text(content,"1. Find the affected anatomy with the ray and trigger.\n2. Grip a cutaway, move it onto the answer dock, then release.\n3. Use the named tool on the enlarged model beside the specimen.\n4. Predict the response and reassess the anatomy.",23);

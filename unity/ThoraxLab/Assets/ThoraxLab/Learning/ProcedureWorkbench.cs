@@ -32,7 +32,7 @@ namespace ThoraxLab.Learning
         Vector3 previousTip, previousRouteTip;
         ProcedureTool sweepTool;
         readonly List<Vector3> route = new List<Vector3>();
-        Material steel, teal, white, amber, rubber;
+        Material steel, teal, amber, rubber;
         string objectiveId;
         Vector3 targetPoint, approach, toolRest;
         float contactDuration, effect, desiredEffect;
@@ -49,6 +49,7 @@ namespace ThoraxLab.Learning
         public Vector3 TargetPoint => targetPoint;
         public Vector3 Approach => approach;
         public IReadOnlyList<Vector3> TrainingRoute => route;
+        public CaseIncisionSurface Incision => caseAnatomy ? caseAnatomy.Incision : null;
         public IEnumerable<Renderer> VisibleRenderers => workbench?workbench.GetComponentsInChildren<Renderer>():Array.Empty<Renderer>();
         // Include the models used by the current case step, without its tray,
         // instruments, labels, dock or answer guidance.
@@ -71,11 +72,10 @@ namespace ThoraxLab.Learning
         public void Initialize(LabRuntime runtime)
         {
             app = runtime;
-            steel = Material("Surgical stainless", new Color(.62f,.69f,.73f), .78f, .58f);
-            teal = Material("Instrument teal", new Color(.10f,.48f,.46f), .12f,.38f);
-            white = Material("Medical polymer", new Color(.9f,.92f,.86f),0,.28f);
+            steel = InstrumentGeometry.FinishMaterial(InstrumentGeometry.Satin);
+            teal = InstrumentGeometry.FinishMaterial(InstrumentGeometry.Teal);
             amber = Material("Learning target",new Color(.92f,.64f,.25f),0,.35f);
-            rubber = Material("Instrument grip",new Color(.045f,.065f,.08f),0,.2f);
+            rubber = InstrumentGeometry.FinishMaterial(InstrumentGeometry.Ink);
         }
         static Material Material(string name, Color color, float metallic, float smoothness)
         {
@@ -115,8 +115,7 @@ namespace ThoraxLab.Learning
         }
         void BuildInstrumentTray(Vector3 position)
         {
-            // Visual-only insert with the original tray origin and outer dimensions.
-            // Tool rest positions, grab colliders, working ends and route rules are unchanged.
+            // Rest positions use the tray origin in table space.
             trayRoot=new GameObject("Current instrument tray");
             trayRoot.transform.SetParent(workbench.transform,false);trayRoot.transform.position=position;
             trayGeometry=new WorkbenchGeometry();var horizontal=Quaternion.Euler(90,0,0);
@@ -129,86 +128,39 @@ namespace ThoraxLab.Learning
                 trayGeometry.Box(new Vector3(0,.0055f,side*.047f),new Vector3(.066f,.011f,.004f),.004f,rubber,horizontal);
                 foreach(int end in new[]{-1,1})trayGeometry.Box(new Vector3(side*.083f,.0045f,end*.093f),new Vector3(.018f,.003f,.0015f),.0007f,teal,horizontal);
             }
-            trayGeometry.Build(trayRoot.transform,"Merged recessed instrument tray");
+            trayGeometry.Build(trayRoot.transform,"Merged recessed instrument tray",steel,teal,rubber);
         }
         ProcedureTool BuildTool(string id)
         {
             var go = new GameObject(FriendlyTool(id)); var tool=go.AddComponent<ProcedureTool>();tool.toolId=id;
-            GameObject Part(string title,PrimitiveType type,Vector3 position,Vector3 scale,Material mat)=>Shape(go.transform,title,type,position,scale,mat,false);
-            GameObject Shaft(string title,float z,float diameter,float length,Material mat){var p=Part(title,PrimitiveType.Cylinder,new Vector3(0,0,z),new Vector3(diameter,length*.5f,diameter),mat);p.transform.localRotation=Quaternion.Euler(90,0,0);return p;}
-            Vector3 tip=new Vector3(0,0,.142f);
-            if(id=="inhaler")
+            string visualId = id == "dressing" && unit.disease == "coronary-disease" ? "radial-band" : id;
+            var visual = InstrumentGeometry.Create(go.transform, visualId);
+            var bounds = new Bounds(Vector3.zero, Vector3.one * .02f);
+            bounds.Encapsulate(visual.GetComponent<MeshFilter>().sharedMesh.bounds);
+            // Grip the mask itself. The open space enclosed by its head strap is not a handle.
+            if(id=="oxygen")bounds=new Bounds(new Vector3(0,0,.031f),new Vector3(.105f,.122f,.076f));
+            var collider = go.AddComponent<BoxCollider>();
+            collider.center = bounds.center;
+            collider.size = bounds.size + Vector3.one * .015f;
+            Vector3 tip = id switch
             {
-                Part("L-shaped actuator",PrimitiveType.Cube,new Vector3(0,0,.02f),new Vector3(.041f,.071f,.038f),teal);
-                Part("Pressurised canister",PrimitiveType.Cylinder,new Vector3(0,.032f,.021f),new Vector3(.032f,.040f,.032f),steel);
-                Part("Canister press surface",PrimitiveType.Cylinder,new Vector3(0,.074f,.021f),new Vector3(.034f,.003f,.034f),white);
-                Part("Open mouthpiece",PrimitiveType.Cube,new Vector3(0,-.022f,.056f),new Vector3(.034f,.024f,.047f),teal);
-                Part("Mouthpiece aperture",PrimitiveType.Cube,new Vector3(0,-.022f,.081f),new Vector3(.024f,.015f,.002f),rubber);tip=new Vector3(0,-.022f,.084f);
-            }
-            else if(id=="spacer")
-            {
-                Shaft("Valved holding chamber",.048f,.055f,.14f,white);Shaft("Rear inhaler gasket",-.025f,.058f,.015f,teal);Shaft("One-way valve housing",.118f,.043f,.011f,teal);
-                Part("Mouthpiece",PrimitiveType.Cube,new Vector3(0,0,.139f),new Vector3(.036f,.022f,.033f),white);tip=new Vector3(0,0,.159f);
-            }
-            else if(id=="oxygen")
-            {
-                Part("Contoured oxygen mask",PrimitiveType.Sphere,new Vector3(0,0,.033f),new Vector3(.092f,.125f,.06f),white);
-                Part("Nose bridge",PrimitiveType.Cube,new Vector3(0,.044f,.052f),new Vector3(.031f,.012f,.013f),steel);
-                Part("Elastic strap",PrimitiveType.Cube,new Vector3(0,0,-.004f),new Vector3(.142f,.009f,.005f),teal);
-                Shaft("Oxygen inlet",-.022f,.018f,.042f,teal);tip=new Vector3(0,0,.067f);
-            }
-            else if(id=="cap"||id=="dressing")
-            {
-                Part(id=="cap"?"Removable inhaler cap":"Sterile fixation pad",PrimitiveType.Cube,Vector3.zero,id=="cap"?new Vector3(.037f,.025f,.027f):new Vector3(.085f,.064f,.009f),id=="cap"?teal:white);
-                if(id=="dressing")for(int i=0;i<7;i++)Part("Woven pad detail",PrimitiveType.Cube,new Vector3(-.03f+i*.01f,0,.005f),new Vector3(.001f,.047f,.001f),teal);
-                tip=new Vector3(0,0,id=="cap"?.016f:.008f);
-            }
-            else if(id=="ultrasound"||id=="probe")
-            {
-                Part("Ergonomic sensor body",PrimitiveType.Capsule,Vector3.zero,new Vector3(.025f,.043f,.023f),white).transform.localRotation=Quaternion.Euler(90,0,0);
-                Part(id=="ultrasound"?"Curved ultrasound face":"Assessment sensor face",PrimitiveType.Cube,new Vector3(0,0,.063f),new Vector3(id=="ultrasound"?.057f:.03f,.020f,.027f),teal);
-                Shaft("Cable strain relief",-.052f,.012f,.035f,rubber);tip=new Vector3(0,0,.079f);
-            }
-            else if(id=="swab")
-            {
-                Shaft("Applicator handle",.027f,.008f,.135f,white);Part("Antiseptic foam tip",PrimitiveType.Sphere,new Vector3(0,0,.112f),new Vector3(.033f,.024f,.042f),amber);tip=new Vector3(0,0,.135f);
-            }
-            else if(id=="scalpel"||id=="suture")
-            {
-                Part(id=="scalpel"?"Flat scalpel handle":"Needle holder",PrimitiveType.Cube,new Vector3(0,0,.008f),new Vector3(.012f,.006f,.11f),steel);
-                Part(id=="scalpel"?"Short incision blade":"Fine suture needle",PrimitiveType.Cube,new Vector3(0,0,.085f),new Vector3(id=="scalpel"?.014f:.002f,.002f,.042f),steel);
-                for(int i=0;i<5;i++)Part("Grip ridge",PrimitiveType.Cube,new Vector3(0,.004f,-.025f+i*.011f),new Vector3(.014f,.002f,.003f),rubber);tip=new Vector3(0,0,.108f);
-            }
-            else if(id=="connector")
-            {
-                Shaft("Luer connector",.042f,.021f,.10f,white);Shaft("Locking collar",.052f,.031f,.016f,teal);
-                Part("Tap control",PrimitiveType.Cube,new Vector3(.02f,.012f,.02f),new Vector3(.064f,.013f,.013f),teal);tip=new Vector3(0,0,.095f);
-            }
-            else if(id=="anaesthetic"||id=="needle"||id=="aspirator"||id=="medication")
-            {
-                Shaft("Syringe barrel",.025f,.026f,.077f,white);Shaft("Plunger rod",-.029f,.010f,.04f,steel);
-                Part("Thumb flange",PrimitiveType.Cube,new Vector3(0,0,-.054f),new Vector3(.040f,.014f,.006f),teal);
-                Part("Finger flange",PrimitiveType.Cube,new Vector3(0,0,-.009f),new Vector3(.047f,.012f,.005f),white);
-                for(int i=0;i<6;i++)Part("Graduation",PrimitiveType.Cube,new Vector3(0,.0135f,.004f+i*.009f),new Vector3(i%2==0?.015f:.009f,.001f,.0015f),rubber);
-                Shaft(id=="aspirator"?"Aspiration catheter":"Needle / prepared administration port",.100f,id=="aspirator"?.006f:.002f,.07f,steel);
-            }
-            else
-            {
-                Shaft(id=="valve"?"Valve deployment control":"Catheter grip",-.006f,id=="valve"?.035f:.019f,.085f,rubber);
-                Shaft("Delivery shaft",.070f,id=="guidewire"?.0018f:id=="drain"?.008f:.005f,.14f,id=="drain"?white:steel);
-                Shaft("Control collar",.016f,.027f,.013f,teal);
-                if(id=="drain")for(int i=0;i<4;i++)Part("Catheter fenestration",PrimitiveType.Sphere,new Vector3(0,.004f,.093f+i*.01f),new Vector3(.003f,.0015f,.005f),rubber);
-                if(id=="dilator")Part("Short tapered dilator",PrimitiveType.Capsule,new Vector3(0,0,.080f),new Vector3(.012f,.034f,.012f),white).transform.localRotation=Quaternion.Euler(90,0,0);
-                if(id=="balloon")Part("Deflated balloon",PrimitiveType.Capsule,new Vector3(0,0,.112f),new Vector3(.010f,.022f,.010f),white).transform.localRotation=Quaternion.Euler(90,0,0);
-                if(id=="stent"||id=="valve")for(int i=0;i<7;i++)Shaft("Crimped scaffold ring",.09f+i*.006f,id=="valve"?.022f:.011f,.0015f,steel);
-                if(id=="guidewire")Part("Soft wire tip",PrimitiveType.Sphere,new Vector3(.002f,0,.139f),Vector3.one*.003f,white);
-            }
-            var collider=go.AddComponent<BoxCollider>();var renderers=go.GetComponentsInChildren<Renderer>();var bounds=new Bounds(Vector3.zero,Vector3.one*.02f);foreach(var renderer in renderers)bounds.Encapsulate(renderer.bounds);collider.center=bounds.center;collider.size=bounds.size+Vector3.one*.015f;
-            // Keep the validated grab volume, origin and working endpoint, then replace only display geometry.
-            foreach(Transform oldVisual in go.transform){oldVisual.gameObject.SetActive(false);Destroy(oldVisual.gameObject);}
-            string visual=id=="dressing"&&unit.disease=="coronary-disease"?"radial-band":id;
-            InstrumentGeometry.Create(go.transform,visual);
-            if(id=="medication")tip=new Vector3(0,0,.081f);
+                "scalpel" => Vector3.forward * InstrumentGeometry.ScalpelTipZ,
+                "suture" => new Vector3(-.006f, .0016f, .1072f),
+                "guidewire" => new Vector3(.004f, 0, .140f),
+                "needle" or "anaesthetic" => new Vector3(.00085f, 0, .142f),
+                "aspirator" => new Vector3(.0028f, 0, .142f),
+                "inhaler" => new Vector3(0, -.022f, .07985f),
+                "spacer" => Vector3.forward * .1574f,
+                "oxygen" => Vector3.forward * InstrumentGeometry.OxygenSealZ,
+                "cap" => Vector3.forward * CaseAnatomyWorkbench.CapTipZ,
+                "dressing" => Vector3.forward * (visualId=="radial-band"?.008f:.0072f),
+                "ultrasound" or "probe" => Vector3.forward * .0789f,
+                "swab" => Vector3.forward * .135f,
+                "connector" => Vector3.forward * .095f,
+                "medication" => Vector3.forward * .081f,
+                "balloon" or "stent" or "valve" => Vector3.forward * .141f,
+                _ => Vector3.forward * .142f
+            };
             var bodyRigid=go.AddComponent<Rigidbody>();bodyRigid.isKinematic=true;bodyRigid.useGravity=false;
             tool.grab=go.AddComponent<XRGrabInteractable>();tool.grab.movementType=XRBaseInteractable.MovementType.Instantaneous;tool.grab.throwOnDetach=false;
             tool.grab.useDynamicAttach=true;tool.grab.matchAttachPosition=true;tool.grab.matchAttachRotation=true;tool.grab.snapToColliderVolume=false;
@@ -268,11 +220,18 @@ namespace ThoraxLab.Learning
             else return;
             if(!caseAnatomy||!caseAnatomy.TryRoute(objective.targetId,route))
             {route.Add(targetPoint-approach*.10f);route.Add(targetPoint-approach*.05f);route.Add(targetPoint);}
-            marker=Shape(workbench.transform,"Procedure alignment target",PrimitiveType.Sphere,targetPoint,Vector3.one*.014f,amber,true);
-            AddAlignmentGuide(marker.transform);
             pathRoot=new GameObject("Ordered instrument trajectory");pathRoot.transform.SetParent(workbench.transform,false);
-            foreach(var point in route)Shape(pathRoot.transform,"Trajectory checkpoint",PrimitiveType.Sphere,point,Vector3.one*.008f,teal,true);
-            AddRouteLabels();
+            if(objective.toolId=="scalpel"&&Incision&&objective.action==ActionKind.Trace){
+                marker=new GameObject("Skin insert guide");marker.transform.SetParent(workbench.transform,false);
+                foreach(var point in new[]{route[0],route[route.Count-1]})
+                    Shape(marker.transform,"Incision margin tick",PrimitiveType.Cube,point+Incision.transform.up*.007f-Incision.transform.forward*.002f,new Vector3(.0013f,.004f,.0013f),teal,true);
+            }
+            else{
+                marker=Shape(workbench.transform,"Procedure alignment target",PrimitiveType.Sphere,targetPoint,Vector3.one*.014f,amber,true);
+                AddAlignmentGuide(marker.transform);
+                foreach(var point in route)Shape(pathRoot.transform,"Trajectory checkpoint",PrimitiveType.Sphere,point,Vector3.one*.008f,teal,true);
+                AddRouteLabels();
+            }
             bool guide=app.Engine.Attempt.phase!=SessionPhase.Assessment && app.Variant.difficulty==Difficulty.Easy && app.Settings.Current.hints;
             hints=app.Settings.Current.hints;
             marker.SetActive(guide);pathRoot.SetActive(guide&&objective.action==ActionKind.Trace);
@@ -280,24 +239,32 @@ namespace ThoraxLab.Learning
         }
         void RefreshNeededTool()
         {
-            string needed=app.Engine?.Current?.toolId;
+            var objective=app.Engine?.Current;
+            string needed=objective?.toolId;
+            bool decision=objective?.action==ActionKind.ClinicalDecision;
             bool independent=app.Variant.difficulty==Difficulty.Hard||app.Engine.Attempt.phase==SessionPhase.Assessment;
             foreach(var pair in tools)
             {
-                bool decision=app.Engine.Current?.action==ActionKind.ClinicalDecision;
                 bool show=(!decision&&(pair.Key==needed||(independent&&offeredSlots.ContainsKey(pair.Key))))||pair.Value.Held;
                 if(show&&!pair.Value.gameObject.activeSelf){
                     int slot=independent&&offeredSlots.TryGetValue(pair.Key,out var position)?position:1;
                     pair.Value.transform.position=toolRest+Vector3.right*((slot-1)*.075f);pair.Value.transform.rotation=Quaternion.Euler(65,0,0);
-                    RestoreWithdrawalTool(pair.Value);
+                    PositionRetainedTool(pair.Value);
                 }
                 if(pair.Value.gameObject.activeSelf!=show)pair.Value.gameObject.SetActive(show);
             }
         }
-        void RestoreWithdrawalTool(ProcedureTool tool)
+        void PositionRetainedTool(ProcedureTool tool)
         {
             var objective=app.Engine?.Current;
-            if(objective==null||tool.Held||tool.toolId!=objective.toolId||!objective.targetId.EndsWith("withdrawal",StringComparison.Ordinal))return;
+            if(objective==null||tool.Held||tool.toolId!=objective.toolId)return;
+            if(tool.toolId=="cap"&&route.Count>0){
+                caseAnatomy.HideFittedCap();
+                tool.transform.rotation=Quaternion.LookRotation(approach,Vector3.up);
+                tool.transform.position=route[0]-tool.transform.rotation*tool.tip.localPosition;
+                return;
+            }
+            if(!objective.targetId.EndsWith("withdrawal",StringComparison.Ordinal))return;
             var prior=app.Engine.Attempt.actions.LastOrDefault(a=>a.toolId==tool.toolId&&a.localPosition.Length==3&&a.localRotation.Length==4&&app.Engine.Attempt.objectives.Any(o=>o.completed&&o.actionId==a.id));
             if(prior==null)return;
             // Evidence stores the working end, not the instrument's transform origin.
@@ -330,7 +297,7 @@ namespace ThoraxLab.Learning
             bool decision=objective?.action==ActionKind.ClinicalDecision;
             bool usesStation=objective!=null&&!decision&&objective.targetId.StartsWith("equipment:",StringComparison.Ordinal);
             if(stationRoot&&stationRoot.activeSelf!=usesStation)stationRoot.SetActive(usesStation);
-            bool usesTool=(!decision&&!string.IsNullOrEmpty(objective?.toolId))||tools.Values.Any(t=>t.Held);
+            bool usesTool=(!decision&&!string.IsNullOrEmpty(objective?.toolId))||HeldTool();
             if(trayRoot&&!trayRoot.activeSelf)trayRoot.SetActive(true);
             bool demonstration=app.Demonstrator&&app.Demonstrator.Playing;
             bool showsResponse=objective?.action==ActionKind.Reassess||demonstration;
@@ -352,47 +319,84 @@ namespace ThoraxLab.Learning
         void Update()
         {
             RefreshPresentation();
-            if(app?.Engine==null||unit==null||!unit.isCase||!app.CanInteract){contactDuration=0;lastActivation=false;return;}
+            if(app?.Engine==null||unit==null||!unit.isCase||!app.CanInteract){contactDuration=0;lastActivation=false;if(Incision&&Incision.Touching)Incision.BreakContact();return;}
             var objective=app.Engine.Current;if(objective==null){AnimateResponse();return;}
             if(objective.id!=objectiveId)SetTarget();
             if(objective.action==ActionKind.ClinicalDecision){AnimateResponse();return;}
-            RefreshNeededTool();
-            currentTool=tools.Values.FirstOrDefault(t=>t.Held&&t.activating)??tools.Values.FirstOrDefault(t=>t.Held)??DesktopTool;
+            currentTool=HeldTool()??DesktopTool;
             bool needsTrigger=objective.action==ActionKind.ToolActivate;
             bool active=currentTool&&(needsTrigger?currentTool.activating:currentTool.Held);
             // A completed physical gesture cannot complete the next step at the same pose.
             // A new tool, a fresh grip or deliberate movement starts the next contact/route.
             if(!needsTrigger&&consumedGesture&&currentTool&&(currentTool!=completedTool||Vector3.Distance(currentTool.Tip,completedTip)>.025f))consumedGesture=false;
-            if(active&&(!lastActivation||sweepTool!=currentTool)){previousTip=currentTool.Tip;sweepTool=currentTool;}
-            if(!active){consumedGesture=false;if(lastActivation)contactDuration=0;}lastActivation=active;
+            if(active&&(!lastActivation||sweepTool!=currentTool))
+            {
+                previousTip=currentTool.Tip;contactDuration=0;
+                if(sweepTool!=currentTool&&Incision)Incision.BreakContact();
+                sweepTool=currentTool;
+            }
+            if(!active){consumedGesture=false;contactDuration=0;if(Incision&&Incision.Touching)Incision.BreakContact();}
+            lastActivation=active;
+            Vector3 sweepStart=previousTip;
+            if(currentTool)previousTip=currentTool.Tip;
             AnimateResponse();
             if(!currentTool)return;
             InstrumentStatus=FriendlyTool(currentTool.toolId)+(unit.disease=="asthma"?Inspiration?" · patient breathing in":" · patient breathing out":"");
             if(!active||consumedGesture||objective.action<ActionKind.EquipmentConnect)return;
-            if(currentTool.toolId!="probe"&&currentTool.toolId!="connector"&&currentTool.toolId!="inhaler"&&currentTool.toolId!="spacer"&&currentTool.toolId!="oxygen"&&currentTool.toolId!="medication"&&CheckProtectedContact(currentTool)){consumedGesture=true;return;}
+            bool invasive=currentTool.toolId!="probe"&&currentTool.toolId!="connector"&&currentTool.toolId!="inhaler"&&currentTool.toolId!="spacer"&&currentTool.toolId!="oxygen"&&currentTool.toolId!="medication";
+            if(invasive&&CheckProtectedContact(currentTool,sweepStart)){if(Incision)Incision.BreakContact();consumedGesture=true;return;}
             float distance=Vector3.Distance(currentTool.Tip,targetPoint);
             float angle=Vector3.Angle(currentTool.transform.forward,approach);
             bool correctTool=currentTool.toolId==objective.toolId;
-            if(!correctTool){if(currentTool.activating||distance<=objective.maxDistance){contactDuration+=Time.deltaTime;if(contactDuration>=.8f){Submit(objective,currentTool,distance,angle,0);consumedGesture=true;}}else contactDuration=0;return;}
+            float radius=ContactRadius(objective,currentTool.toolId);
+            if(!correctTool){if(currentTool.activating||distance<=radius){contactDuration+=Time.deltaTime;if(contactDuration>=.8f){Submit(objective,currentTool,distance,angle,0);consumedGesture=true;}}else contactDuration=0;return;}
+            if(objective.action==ActionKind.Trace&&currentTool.toolId=="scalpel"&&Incision)
+            {
+                var skin=Incision;
+                bool finished=skin.Sample(currentTool.Tip,currentTool.transform.rotation,objective.maxAngle,Time.deltaTime);
+                contactDuration=skin.ContactSeconds;
+                if(finished&&contactDuration>=objective.minContactSeconds)
+                {
+                    Submit(objective,currentTool,distance,angle,skin.Progress);
+                    consumedGesture=true;
+                }
+                return;
+            }
             if(objective.action==ActionKind.Trace)
             {
                 // A stationary tip cannot consume adjacent checkpoints whose capture regions overlap.
                 float segment=routeIndex>0&&routeIndex<route.Count?Vector3.Distance(route[routeIndex-1],route[routeIndex]):.05f;
                 bool moved=routeIndex==0||Vector3.Distance(currentTool.Tip,previousRouteTip)>=Mathf.Min(.012f,segment*.4f);
-                if(routeIndex<route.Count&&moved&&Vector3.Distance(currentTool.Tip,route[routeIndex])<=Mathf.Min(.025f,objective.maxDistance)){previousRouteTip=currentTool.Tip;routeIndex++;}
+                if(routeIndex<route.Count&&moved)
+                {
+                    var step=route[routeIndex];var delta=currentTool.Tip-sweepStart;
+                    var nearest=currentTool.Tip;
+                    if(delta.sqrMagnitude>1e-10f&&delta.sqrMagnitude<=.045f*.045f)
+                        nearest=sweepStart+delta*Mathf.Clamp01(Vector3.Dot(step-sweepStart,delta)/delta.sqrMagnitude);
+                    if(Vector3.Distance(nearest,step)<=Mathf.Min(.014f,objective.maxDistance)){previousRouteTip=currentTool.Tip;routeIndex++;}
+                }
                 float progress=(float)routeIndex/route.Count;
                 InstrumentStatus=FriendlyTool(currentTool.toolId)+" · route "+routeIndex+" / "+route.Count;
-                if(CheckProtectedContact(currentTool)){consumedGesture=true;return;}
+                if(!invasive&&CheckProtectedContact(currentTool,sweepStart)){consumedGesture=true;return;}
                 if(progress<.95f)return;
             }
             // Do not penalize a learner while waiting for the represented inhalation phase.
             bool phaseReady=objective.equipmentState!="inspiration"||connected&&Inspiration;
-            if(distance<=objective.maxDistance&&angle<=objective.maxAngle&&phaseReady)contactDuration+=Time.deltaTime;else contactDuration=0;
+            if(distance<=radius&&angle<=objective.maxAngle&&phaseReady)contactDuration+=Mathf.Min(.1f,Time.deltaTime);else contactDuration=0;
             if(contactDuration>=objective.minContactSeconds)
             {
-                if((objective.action==ActionKind.ToolContact||objective.action==ActionKind.ToolActivate)&&CheckProtectedContact(currentTool)){consumedGesture=true;return;}
+                if(!invasive&&(objective.action==ActionKind.ToolContact||objective.action==ActionKind.ToolActivate)&&CheckProtectedContact(currentTool,sweepStart)){consumedGesture=true;return;}
                 Submit(objective,currentTool,distance,angle,objective.action==ActionKind.Trace?(float)routeIndex/route.Count:0);consumedGesture=true;
             }
+        }
+        ProcedureTool HeldTool()
+        {
+            ProcedureTool first=null;
+            foreach(var tool in tools.Values)if(tool.Held){
+                if(tool.activating)return tool;
+                if(!first)first=tool;
+            }
+            return first;
         }
         void Submit(ObjectiveDefinition objective,ProcedureTool tool,float distance,float angle,float pathFraction)
         {
@@ -401,9 +405,20 @@ namespace ThoraxLab.Learning
             var point=app.Session.specimen.InverseTransformPoint(tool.Tip);var rotation=Quaternion.Inverse(app.Session.specimen.rotation)*tool.transform.rotation;
             app.Emit(new InteractionAction {kind=objective.action,targetId=objective.targetId,toolId=tool.toolId,equipmentState=state,contactVerified=true,distance=distance,angle=angle,contactSeconds=contactDuration,pathFraction=pathFraction,localPosition=new[]{point.x,point.y,point.z},localRotation=new[]{rotation.x,rotation.y,rotation.z,rotation.w}});
         }
-        bool CheckProtectedContact(ProcedureTool tool)
+        static float ContactRadius(ObjectiveDefinition objective,string toolId)
         {
-            var movement=tool.Tip-previousTip;int swept=movement.sqrMagnitude>.0000001f?Physics.SphereCastNonAlloc(previousTip,.003f,movement.normalized,sweptContacts,movement.magnitude,~0,QueryTriggerInteraction.Ignore):0;previousTip=tool.Tip;
+            if(!objective.targetId.StartsWith("equipment:",StringComparison.Ordinal))return objective.maxDistance;
+            float patch=toolId switch
+            {
+                "oxygen" or "dressing" => .025f,
+                "swab" or "spacer" or "ultrasound" => .016f,
+                _ => .010f
+            };
+            return Mathf.Min(objective.maxDistance,patch);
+        }
+        bool CheckProtectedContact(ProcedureTool tool,Vector3 from)
+        {
+            var movement=tool.Tip-from;int swept=movement.sqrMagnitude>.0000001f?Physics.SphereCastNonAlloc(from,.003f,movement.normalized,sweptContacts,movement.magnitude,~0,QueryTriggerInteraction.Ignore):0;
             for(int i=0;i<swept;i++)if(RecordProtected(sweptContacts[i].collider,tool))return true;
             int count=Physics.OverlapSphereNonAlloc(tool.Tip,.003f,contacts);
             for(int i=0;i<count;i++)
@@ -417,16 +432,20 @@ namespace ThoraxLab.Learning
             var original=collider.GetComponentInParent<AnatomyStructure>();var supplementary=collider.GetComponentInParent<ProcedureProtectedRegion>();
             string id=original?original.record.id:supplementary?supplementary.anatomyId:null;
             if(string.IsNullOrEmpty(id)||!unit.protectedIds.Contains(id))return false;
+            completedTool=tool;completedTip=tool.Tip;
             app.Emit(new InteractionAction{kind=ActionKind.ProtectedStructureViolation,targetId=id,toolId=tool.toolId,contactVerified=true});return true;
         }
         public static string FriendlyTool(string id)
         {switch(id){case "probe":return "Assessment pointer";case "anaesthetic":return "Local anaesthetic syringe";case "guidewire":return "Guidewire";case "dilator":return "Short dilator";case "drain":return "Chest drain";case "connector":return "Circuit connector";case "dressing":return "Fixation dressing";case "aspirator":return "Aspiration catheter";case "medication":return "Prescribed medicine";case "oxygen":return "Oxygen mask";case "valve":return "Valve delivery handle";default:return string.IsNullOrEmpty(id)?"":char.ToUpperInvariant(id[0])+id.Substring(1);}}
         void AnimateResponse()
         {
-            if(app.Engine.Attempt.criticalFailure){desiredEffect=0;ResponseText="Recorded preservation failure · stop and reassess.";if(teachingModel)teachingModel.SetResponse(0,true);return;}
-            effect=Mathf.MoveTowards(effect,desiredEffect,Time.deltaTime*(unit.disease=="pneumonia"?.05f:.2f));
-            ResponseText="Enlarged schematic · "+(effect<.01f?"initial disease state":effect<desiredEffect-.01f?unit.disease=="pneumonia"?"days of recovery compressed":"response time compressed":unit.response);
-            if(teachingModel)teachingModel.SetResponse(effect,app.Settings.Current.reducedMotion);
+            bool failed=app.Engine.Attempt.criticalFailure;
+            if(failed){effect=desiredEffect=0;ResponseText="Recorded preservation failure · stop and reassess.";}
+            else{
+                effect=Mathf.MoveTowards(effect,desiredEffect,Time.deltaTime*(unit.disease=="pneumonia"?.05f:.2f));
+                ResponseText="Enlarged schematic · "+(effect<.01f?"initial disease state":effect<desiredEffect-.01f?unit.disease=="pneumonia"?"days of recovery compressed":"response time compressed":unit.response);
+            }
+            if(teachingModel)teachingModel.SetResponse(effect,failed||app.Settings.Current.reducedMotion);
             if(caseAnatomy)caseAnatomy.SetResponse(effect);
             if(unit.disease=="pneumothorax")foreach(var pair in healthyScales)if(pair.Key.StartsWith("MAL_R")&&app.Structures.TryGetValue(pair.Key,out var lung))
                 lung.transform.localScale=Vector3.Scale(pair.Value,new Vector3(Mathf.Lerp(.7f,1f,effect),Mathf.Lerp(.65f,1f,effect),Mathf.Lerp(.8f,1f,effect)));
@@ -437,6 +456,6 @@ namespace ThoraxLab.Learning
             trayGeometry?.Dispose();trayGeometry=null;
             healthyScales.Clear();if(workbench){workbench.SetActive(false);Destroy(workbench);}workbench=null;Reasoning=null;stationRoot=null;trayRoot=null;tools.Clear();equipment.Clear();route.Clear();toolLabels.Clear();unit=null;DesktopTool=null;currentTool=completedTool=null;marker=null;pathRoot=null;mechanismRoot=null;effect=desiredEffect=0;connected=false;ResponseText="";objectiveId=null;
         }
-        void OnDestroy(){Clear();foreach(var material in new[]{steel,teal,white,amber,rubber})if(material)Destroy(material);}
+        void OnDestroy(){Clear();if(amber)Destroy(amber);}
     }
 }

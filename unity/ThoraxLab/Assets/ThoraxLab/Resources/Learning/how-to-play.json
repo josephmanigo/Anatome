@@ -1,4 +1,26 @@
 {
+  "prompts": [
+    {
+      "id": "lab-welcome",
+      "text": "Welcome to Anatome. Choose Try your first VR lesson to begin, or sign in to save your progress. Open Guide at any time for spoken help."
+    },
+    {
+      "id": "orientation-select",
+      "text": "Point at the skin of the chest. Press the trigger, or pinch your thumb and index finger, to select it."
+    },
+    {
+      "id": "orientation-lift",
+      "text": "Hold the side grip, or curl your middle, ring and little fingers. Lift the skin slightly, then release your grip or open your hand."
+    },
+    {
+      "id": "museum-intro",
+      "text": "Welcome to the Thorax Museum. Point at an exhibit and press the trigger to select it. Hold the grip to pick it up. Choose Inspect or zoom on the panel for a closer look."
+    },
+    {
+      "id": "sandbox-intro",
+      "text": "Welcome to the dissection sandbox. Point at the model, hold the trigger and sweep a short cut. Release the trigger, then grip the separated piece. You can zoom and keep working."
+    }
+  ],
   "pages": [
     {
       "id": "guide-welcome",
@@ -16,7 +38,7 @@
       "id": "guide-grip",
       "title": "3. Hold, move and release",
       "art": "mode-assemble",
-      "text": "Point at a movable structure or tool. Hold the side grip, move your hand, and turn your wrist. Release the grip to let go. A pointing trigger and a holding grip do different jobs.\n\nChoose Try your first VR lesson, then Learn the VR controls. Select the skin, hold it, lift it, and release. Complete these physical actions to unlock Easy activities. Reading this guide does not complete them."
+      "text": "Point at a movable structure or tool. Hold the side grip, move your hand, and turn your wrist. Release the grip to let go.\n\nDuring an activity, press A on the right controller, or X if you use the left controller as your dominant hand. Point away from the panel. Push that stick up or down to zoom, or sideways to rotate the view. Keep using the trigger and grip to complete your step. Press the same button to return to normal size.\n\nChoose Try your first VR lesson, then Learn the VR controls. Select the skin, hold it, lift it, and release to unlock Easy activities."
     },
     {
       "id": "guide-learn",

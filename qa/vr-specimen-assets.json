@@ -1,9 +1,9 @@
 {
-    "generatedUtc": "2026-10-21T23:46:46.1171510Z",
-    "appearanceVersion": "vr-tissue-appearance-2026.09.06.3",
+    "generatedUtc": "2026-11-21T14:53:02.5090669Z",
+    "appearanceVersion": "vr-tissue-appearance-2026.11.21.5",
     "scope": "Imported source-mesh UV/tangent channels and separate presentation assets. Not anatomical or headset acceptance.",
-    "materialCount": 27,
-    "albedoMapCount": 27,
+    "materialCount": 31,
+    "albedoMapCount": 31,
     "normalMapCount": 27,
     "sourceChannelsPassed": true,
     "sourceMeshes": [

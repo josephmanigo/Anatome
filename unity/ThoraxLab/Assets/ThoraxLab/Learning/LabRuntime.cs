@@ -42,6 +42,7 @@ namespace ThoraxLab.Learning
         public string XRStatus => XRReady ? (XRSimulation ? "XR Device Simulator · Editor testing" : "VR headset connected") : "Connect a VR headset, or press Play with the XR Device Simulator in Unity.";
         public bool OrientationActive { get; private set; }
         public int OrientationStep { get; private set; }
+        string OrientationPrompt => OrientationStep == 0 ? "orientation-select" : "orientation-lift";
         public string CurrentTargetName => OrientationActive ? "Skin of the chest" : Engine?.Current != null && structures.TryGetValue(Engine.Current.targetId, out var target) ? target.record.name : Engine?.Current?.title ?? "Explore the specimen";
         public string AssemblyPlacementFeedback => Coach ? Coach.PlacementFeedback : null;
         public string TeachingWindowLabel => Presentation ? Presentation.CurrentWindowLabel : null;
@@ -49,7 +50,7 @@ namespace ThoraxLab.Learning
         {
             get
             {
-                if (OrientationActive) return OrientationStep == 0 ? "Point at the skin, then press trigger or pinch thumb and index once." : "Hold grip, or curl your middle, ring and little fingers. Lift slightly, then release or open your hand. The chest returns to the table.";
+                if (OrientationActive) return UI.PromptText(OrientationPrompt);
                 var current = Engine?.Current;
                 if (current == null) return "All steps complete. Finish to see your feedback.";
                 if (current.action == ActionKind.Place) return AssemblyPlacementFeedback ?? "Grip the nearby piece. Bring it into the matching outline and release.";
@@ -60,7 +61,7 @@ namespace ThoraxLab.Learning
         }
         public string Notice { get; private set; } = "Welcome to " + LearningBrand.Name + ".";
         public string SyncStatus { get; private set; } = "Sign in to save your learning.";
-        public bool CanInteract => UI && UI.WorkspaceVisible && (!Inspector || !Inspector.IsOpen) && (!Museum || !Museum.ChangingGallery) && !Paused && Focused && (XRReady || VerificationRunning);
+        public bool CanInteract => UI && UI.WorkspaceVisible && (!Museum || !Museum.ChangingGallery) && !Paused && Focused && (XRReady || VerificationRunning);
         public bool CanUseCuttingTool => CanInteract && !Session.busy && (Sandbox || (Variant?.mode == LearningMode.GuidedDissection && Engine?.Current?.action == ActionKind.Expose));
         public bool CanCut => CanUseCuttingTool && (Sandbox || (Session.selected && !Session.selected.fragment && Session.selected.record.id == Engine.Current.targetId));
         public static bool VerificationRunning
@@ -118,10 +119,6 @@ namespace ThoraxLab.Learning
                 gameObject.AddComponent<LearningControls>().Initialize(this);
                 gameObject.AddComponent<LearningPerformanceMonitor>();
                 var oldBoard = GameObject.Find("Dissection controls"); if (oldBoard) oldBoard.SetActive(false);
-                RenderSettings.ambientLight = new Color(.14f, .17f, .20f);
-                var environment=GameObject.Find("Laboratory");if(environment)foreach(var renderer in environment.GetComponentsInChildren<Renderer>())
-                {if(renderer.name.Contains("Light")||renderer.name.Contains("MainTable"))continue;var tint=new MaterialPropertyBlock();renderer.GetPropertyBlock(tint);tint.SetColor("_BaseColor",new Color(.13f,.18f,.23f));renderer.SetPropertyBlock(tint);}
-                var light = GameObject.Find("Specimen examination light")?.GetComponent<Light>(); if (light) { light.intensity = 2f; light.color = new Color(1f,.96f,.9f); }
                 Presentation = gameObject.AddComponent<VRSpecimenPresentation>(); Presentation.Initialize(Session); Presentation.ShowIntact();
                 Inspector = gameObject.AddComponent<ModelInspection>(); Inspector.Initialize(this);
                 Museum = gameObject.AddComponent<ThoraxMuseum>(); Museum.Initialize(this);
@@ -185,12 +182,13 @@ namespace ThoraxLab.Learning
                 if(!skin.GetComponent<OrientationGrabConstraint>())skin.gameObject.AddComponent<OrientationGrabConstraint>();
                 skin.Highlight(true);
             }
+            NarrateCurrentStep();
             Message(CurrentInstruction);
         }
         public void CompleteOrientation()
         {
             if(!OrientationActive||OrientationStep<2)return;
-            OrientationActive=false;Progress.orientationCompleted=true;Session.ResetSpecimen();Presentation.ShowIntact();Save();
+            Narrator.Stop();OrientationActive=false;Progress.orientationCompleted=true;Session.ResetSpecimen();Presentation.ShowIntact();Save();
             Notice="Ready to begin. Choose a mode and try its Easy lesson.";UI.ShowHub();
         }
         public bool Unlocked(ScenarioVariant variant) => variant != null && ProgressRules.IsUnlocked(Progress, variant.mode, variant.unitId, variant.difficulty, variant.version);
@@ -206,7 +204,12 @@ namespace ThoraxLab.Learning
             var attempt = new AttemptRecord { userId = Progress.userId, scenarioId = variant.id, unitId = Unit.id, contentVersion = variant.version, mode = variant.mode, difficulty = variant.difficulty, phase = phase, resetGeneration = Progress.resetGeneration, deviceId = SystemInfo.deviceUniqueIdentifier };
             Engine = new AssessmentEngine(variant, resumed ?? attempt); attemptStart = Time.realtimeSinceStartupAsDouble;
             PrepareSpecimen(); Physics.SyncTransforms();Procedure.Configure(Unit, variant); UI.ShowWorkspace();
-            if(phase!=SessionPhase.Assessment)Narrator.Play("intro-"+Variant.id, Variant.briefing);if(phase==SessionPhase.Lesson)Demonstrator.Play(); Save(); Changed?.Invoke();
+            if (phase != SessionPhase.Assessment)
+            {
+                if (resumed == null) Narrator.Play("intro-" + Variant.id, Variant.briefing, NarrateCurrentStep);
+                else NarrateCurrentStep();
+            }
+            if(phase==SessionPhase.Lesson)Demonstrator.Play(); Save(); Changed?.Invoke();
             if(Unit.isCase&&phase==SessionPhase.Lesson&&resumed==null)UI.ShowCaseIntroduction();
             FrameActivity();if(resumed!=null)_=RestoreCheckpointGeometry();
         }
@@ -235,6 +238,7 @@ namespace ThoraxLab.Learning
             if(!XRReady&&!VerificationRunning){Message(XRStatus);return;}
             Interrupt(); Unit = null; Variant = null; Sandbox = true; Session.SetMode(LabMode.Free); Presentation.ShowIntact(); UI.ShowWorkspace();
             Notice = "Dissection sandbox · cuts are temporary. Use Undo or Restore specimen.";
+            Narrator.Play("sandbox-intro", UI.PromptText("sandbox-intro"));
         }
         public void StartMuseum()
         {
@@ -243,6 +247,7 @@ namespace ThoraxLab.Learning
             Interrupt(); Unit=null; Variant=null; Paused=false;
             Museum.Open(); UI.ShowWorkspace(); UI.RecenterPanel();
             Notice="Thorax Museum · select, hold and enlarge any labeled exhibit.";
+            Narrator.Play("museum-intro", UI.PromptText("museum-intro"));
         }
         public void Select(AnatomyStructure structure, Vector3? contact = null)
         {
@@ -252,7 +257,7 @@ namespace ThoraxLab.Learning
             if(Presentation&&!Presentation.TryGetExposedSurface(structure,Camera.main.transform.position,out surface))
             {Message("That structure is covered by another layer. Work from the visible outer surface first.");return;}
             Session.Select(structure);
-            if(OrientationActive){if(structure.record.id=="FMA7163"&&OrientationStep==0){OrientationStep=1;Message(CurrentInstruction);}return;}
+            if(OrientationActive){if(structure.record.id=="FMA7163"&&OrientationStep==0){OrientationStep=1;NarrateCurrentStep();Message(CurrentInstruction);}return;}
             if (Engine == null) return;
             if (Variant.mode == LearningMode.IdentifyEnumerate || Variant.mode == LearningMode.AnatomyCases ||
                 (Variant.mode == LearningMode.GuidedDissection && Engine.Current?.action == ActionKind.Select))
@@ -344,7 +349,7 @@ namespace ThoraxLab.Learning
                 UpdateTeachingWindow();
                 Procedure.ObjectiveCompleted();
                 Coach.RefreshCurrent();
-                if (Engine.Current != null && Engine.Attempt.phase != SessionPhase.Assessment && !string.IsNullOrEmpty(Engine.Current.narration)) Narrator.Play(Engine.Current.narration, Engine.Current.instruction);
+                NarrateCurrentStep();
             }
             Save(); Changed?.Invoke(); return accepted;
         }
@@ -354,6 +359,14 @@ namespace ThoraxLab.Learning
             if (Unit.protectedIds.Contains(target.record.id)) RecordAction(new InteractionAction { kind = ActionKind.ProtectedStructureViolation, targetId = target.record.id, contactVerified = true },true);
             else if (Variant.mode == LearningMode.GuidedDissection && Engine.Current?.targetId==target.record.id)
             {Message("Chunk separated. Grip the small detached piece, lift it clear and release. Whole layers stay anchored.");}
+        }
+        public void NarrateCurrentStep()
+        {
+            if (OrientationActive) { Narrator.Play(OrientationPrompt, CurrentInstruction); return; }
+            if (Engine == null || Engine.Attempt.phase == SessionPhase.Assessment) return;
+            var step = Engine.Current;
+            if (step == null) { Narrator.Stop(); return; }
+            Narrator.Play(step.narration, step.title + ". " + step.instruction);
         }
         public void RevealHint()
         {
@@ -408,7 +421,7 @@ namespace ThoraxLab.Learning
         public async void RestoreActivity()
         {
             if(Session.busy){Message("Wait for the current cut or saved opening to finish.");return;}
-            if(Inspector)Inspector.ReturnToActivity();
+            if(Inspector)Inspector.Close();
             if(MuseumActive){Museum.ResetExhibits();return;}
             Session.ResetSpecimen();if(Engine!=null){PrepareSpecimen();Procedure.Configure(Unit,Variant);Procedure.RestoreCheckpoint();}
             else if(Presentation)Presentation.ShowIntact();
@@ -471,7 +484,7 @@ namespace ThoraxLab.Learning
         void OnApplicationPause(bool paused) { applicationPaused=paused;RefreshApplicationAvailability(); }
         void RefreshApplicationAvailability()
         {
-            if(!Focused&&Inspector)Inspector.ReturnToActivity();
+            if(!Focused&&Inspector)Inspector.Close();
             if(!Focused)Save();
             if(UI)UI.ApplicationAvailabilityChanged(Focused);
         }

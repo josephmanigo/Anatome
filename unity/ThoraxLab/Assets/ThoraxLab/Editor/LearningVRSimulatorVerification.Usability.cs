@@ -109,8 +109,8 @@ namespace ThoraxLab.Editor
             app.UI.ShowSignIn();yield return 5;
             var field=app.UI.Root.GetComponentsInChildren<TMP_InputField>().Single();field.text="learner@example.org";
             typeof(LabUI).GetMethod("OpenKeyboard",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(app.UI,new object[]{field});yield return 5;
-            var preview=app.UI.Root.GetComponentsInChildren<TMP_Text>().LastOrDefault(t=>t.text==field.text);
-            report.checks.Add(new LearningVRSimulatorVerification.Check{id="email_preview_fixed_above_keys",passed=preview&&!preview.GetComponentInParent<ScrollRect>(),detail="The entered address must remain fixed while keyboard keys scroll."});
+            var preview=app.UI.Root.GetComponentsInChildren<TMP_Text>().SingleOrDefault(t=>t.name=="Visible input");
+            report.checks.Add(new LearningVRSimulatorVerification.Check{id="email_preview_fixed_above_keys",passed=preview&&preview.text.Contains(field.text)&&!preview.GetComponentInParent<ScrollRect>(),detail="The entered address must remain fixed while keyboard keys scroll."});
             report.checks.Add(new LearningVRSimulatorVerification.Check{id="keyboard_back_available",passed=app.UI.Root.GetComponentsInChildren<Button>().Any(b=>b.name=="Back"),detail="VR keyboard needs a visible Back action that retains edits."});
             CaptureWorldInterface("vr-usability/email-before.png");app.UI.ShowSignIn();
             foreach(int frames in VerifyInterruptedOrientation())yield return frames;

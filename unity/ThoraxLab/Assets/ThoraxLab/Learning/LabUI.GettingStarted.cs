@@ -19,7 +19,7 @@ namespace ThoraxLab.Learning
 
         void ShowLearningGuidelines(Action back)
         {
-            Page("Getting started","Before you begin");
+            Page("Getting started","Before you begin",back:back);
             LearningGuidelines(content);
             Rule(content);
             Text(content,"Point and press trigger to select. Grip to hold a movable part; release to let go. Follow the current instruction beside the specimen, then choose Finish assessment to review your result.",24);
@@ -27,7 +27,6 @@ namespace ThoraxLab.Learning
             Text(content,"Visit the Thorax Museum to explore labeled exhibits grouped by body system. Every part has a name and brief description; museum visits are ungraded and also support grab and zoom.",24);
             Text(content,"Use Guide for controls, or Menu to pause. You can adjust comfort and text size at any time.",22,Muted);
             Button(content,"VR comfort & text size",()=>OpenAccessibilitySetup(()=>ShowLearningGuidelines(back)));
-            Button(content,"Back",back,true);
         }
 
         void OpenAccessibilitySetup(Action back)

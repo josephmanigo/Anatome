@@ -12,7 +12,7 @@ namespace ThoraxLab.Learning
     {
         public override void ModifyMesh(VertexHelper mesh)
         {
-            if(!IsActive()||LabWidgets.HighContrast)return;
+            if(!IsActive())return;
             var bounds=((RectTransform)transform).rect;var vertex=new UIVertex();
             for(int i=0;i<mesh.currentVertCount;i++)
             {
@@ -111,8 +111,19 @@ namespace ThoraxLab.Learning
             }
             texture.SetPixels32(pixels);texture.Apply(false,true);return Sprite.Create(texture,new Rect(0,0,size,size),Vector2.one*.5f,100,0,SpriteMeshType.FullRect,Vector4.one*17);
         }
+        public static Color ConsoleColor(SettingsProfile settings)
+        {
+            if(settings.highContrast)return Color.black;
+            var color=LabWidgets.Ground;
+            if(!settings.astigmatismReadingMode)color.a=.97f;
+            return color;
+        }
         public static Image Surface(Transform parent,string name,Color color)
-        {var image=LabWidgets.Panel(parent,name,color);image.sprite=Rounded;image.type=Image.Type.Sliced;image.gameObject.AddComponent<LabGlassTint>();return image;}
+        {
+            var image=LabWidgets.Panel(parent,name,color);image.sprite=Rounded;image.type=Image.Type.Sliced;
+            image.gameObject.AddComponent<LabGlassTint>().enabled=!LabWidgets.HighContrast&&!LabWidgets.AstigmatismReadingMode;
+            return image;
+        }
         public static void Border(RectTransform parent,Color? color=null)
         {var border=LabWidgets.Panel(parent,"Fine console edge",LabWidgets.HighContrast?Color.white:color??new Color(.63f,.83f,.92f,.65f));LabWidgets.Fill(border.rectTransform);border.sprite=Outline;border.type=Image.Type.Sliced;border.raycastTarget=false;var layout=border.gameObject.AddComponent<LayoutElement>();layout.ignoreLayout=true;}
         public static LabIcon Icon(Transform parent,LabGlyph glyph,Color? color=null,float size=26)

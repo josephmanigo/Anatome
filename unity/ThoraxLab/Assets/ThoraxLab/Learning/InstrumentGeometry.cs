@@ -8,19 +8,31 @@ namespace ThoraxLab.Learning
     /// <summary>
     /// Brand-neutral instrument presentation. Geometry is authored in the existing tool's
     /// local metre coordinates; this class never creates colliders or working-end markers.
-    /// Meshes are cached by instrument and detail is merged by surface, not one renderer
-    /// per graduation, tooth or grip groove. The six shared finishes serve the whole kit.
+    /// Meshes are cached by instrument and merged by finish. The saw blade is a separate
+    /// rigid part so it can oscillate about its spindle without moving the grip.
     /// </summary>
     public static class InstrumentGeometry
     {
-        const int Steel=0, Satin=1, Ivory=2, Teal=3, Ink=4, Clear=5;
-        static readonly Dictionary<string,Mesh> meshes=new Dictionary<string,Mesh>();
-        static Material[] materials;
+        public const float ScalpelTipZ=.108f, SawTipZ=.129f, OxygenSealZ=.067f;
+        public const string SawBladeName="Oscillating blade";
+        const float SawSpindleZ=.082f;
+        public const int Steel=0, Satin=1, Ivory=2, Teal=3, Ink=4, Clear=5, Fibre=6;
+        static readonly string[] finishNames={"Honed edge","Satin steel","Moulded ivory","Moulded teal","Grip rubber","Clear shell","Absorbent fibre"};
+        static readonly Material[] materials=new Material[finishNames.Length];
+        static readonly Dictionary<string,(Mesh mesh,int[] finishes)> meshes=new Dictionary<string,(Mesh,int[])>();
         public static readonly string[] SupportedIds={"scalpel","suture","inhaler","spacer","oxygen","cap","dressing","ultrasound","probe","swab","connector","anaesthetic","needle","aspirator","medication","guidewire","dilator","drain","balloon","stent","valve","dissection-scalpel","dissection-saw"};
 
         public static GameObject Create(Transform parent,string toolId)
         {
-            if(!meshes.TryGetValue(toolId,out var mesh))
+            var root=CreatePart(parent,toolId,"Crafted "+toolId+" / visual only");
+            if(toolId=="dissection-saw")
+                CreatePart(root.transform,SawBladeName,SawBladeName).transform.localPosition=Vector3.forward*SawSpindleZ;
+            return root;
+        }
+
+        static GameObject CreatePart(Transform parent,string toolId,string name)
+        {
+            if(!meshes.TryGetValue(toolId,out var part)||!part.mesh)
             {
                 var geometry=new Builder();
                 switch(toolId)
@@ -28,6 +40,7 @@ namespace ThoraxLab.Learning
                     case "scalpel": Scalpel(geometry,false);break;
                     case "dissection-scalpel": Scalpel(geometry,true);break;
                     case "dissection-saw": Saw(geometry);break;
+                    case SawBladeName: SawBlade(geometry);break;
                     case "suture": NeedleHolder(geometry);break;
                     case "inhaler": Inhaler(geometry);break;
                     case "spacer": Spacer(geometry);break;
@@ -42,55 +55,43 @@ namespace ThoraxLab.Learning
                     case "anaesthetic": case "needle": case "aspirator": case "medication": Syringe(geometry,toolId);break;
                     default: Catheter(geometry,toolId);break;
                 }
-                mesh=geometry.Finish("Detailed "+toolId);meshes.Add(toolId,mesh);
+                var mesh=geometry.Finish("Detailed "+toolId,out var finishes);
+                part=(mesh,finishes);
+                meshes[toolId]=part;
             }
-            var go=new GameObject("Crafted "+toolId+" / visual only");go.transform.SetParent(parent,false);
-            go.AddComponent<MeshFilter>().sharedMesh=mesh;
-            var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterials=GetMaterials();
+            var go=new GameObject(name);go.transform.SetParent(parent,false);
+            go.AddComponent<MeshFilter>().sharedMesh=part.mesh;
+            var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterials=Array.ConvertAll(part.finishes,FinishMaterial);
             renderer.shadowCastingMode=ShadowCastingMode.On;renderer.receiveShadows=true;
             return go;
         }
 
-        static Material[] GetMaterials()
+        public static Material FinishMaterial(int index)
         {
-            if(materials!=null)return materials;
-            Material Finish(string name,Color color,float metal,float smooth)
-            {
-                var material=new Material(Shader.Find("Universal Render Pipeline/Lit")){name=name};
-                material.SetColor("_BaseColor",color);material.SetFloat("_Metallic",metal);material.SetFloat("_Smoothness",smooth);
-                material.enableInstancing=true;return material;
-            }
-            materials=new[]{
-                Finish("Instrument / polished cutting steel",new Color(.76f,.81f,.83f),.74f,.72f),
-                Finish("Instrument / satin stainless",new Color(.57f,.64f,.66f),.60f,.43f),
-                Finish("Instrument / warm medical polymer",new Color(.86f,.89f,.86f),.02f,.34f),
-                Finish("Instrument / deep teal polymer",new Color(.075f,.31f,.32f),.06f,.38f),
-                Finish("Instrument / graphite elastomer",new Color(.028f,.044f,.049f),.02f,.24f),
-                Finish("Instrument / translucent polymer",new Color(.68f,.88f,.89f,.34f),.02f,.70f)
-            };
-            // The referenced socket asset ensures this URP transparent variant is included
-            // in release builds. No refraction, screen-copy pass or transparent shadow map.
-            var transparent=Resources.Load<Material>("Learning/GuidanceSocket");
-            if(transparent)
-            {
-                if(Application.isPlaying)UnityEngine.Object.Destroy(materials[Clear]);else UnityEngine.Object.DestroyImmediate(materials[Clear]);
-                materials[Clear]=new Material(transparent){name="Instrument / translucent polymer"};
-                materials[Clear].SetColor("_BaseColor",new Color(.68f,.88f,.89f,.34f));materials[Clear].SetFloat("_Smoothness",.70f);
-                materials[Clear].SetFloat("_Metallic",.02f);materials[Clear].enableInstancing=true;
-            }
-            return materials;
+            if(!materials[index])materials[index]=Resources.Load<Material>("Learning/InstrumentFinishes/"+finishNames[index]);
+            if(!materials[index])throw new InvalidOperationException("Missing instrument finish "+finishNames[index]);
+            return materials[index];
         }
+
+#if UNITY_EDITOR
+        [UnityEditor.InitializeOnLoadMethod]
+        static void CleanUpOnReload()=>UnityEditor.AssemblyReloadEvents.beforeAssemblyReload+=ResetCache;
+#endif
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetCache()
         {
-            foreach(var mesh in meshes.Values)if(mesh)UnityEngine.Object.Destroy(mesh);meshes.Clear();
-            if(materials!=null)foreach(var material in materials)if(material)UnityEngine.Object.Destroy(material);materials=null;
+            foreach(var part in meshes.Values)if(part.mesh)
+            {
+                if(Application.isPlaying)UnityEngine.Object.Destroy(part.mesh);
+                else UnityEngine.Object.DestroyImmediate(part.mesh);
+            }
+            meshes.Clear();
+            Array.Clear(materials,0,materials.Length);
         }
 
         static void Scalpel(Builder b,bool dissection)
         {
-            // A flattened, waisted handle with a distinct tang and curved cutting edge.
             float start=dissection?-.005f:-.047f;
             Quaternion rotation=dissection?Quaternion.Euler(0,0,90):Quaternion.identity;
             b.Push(Vector3.zero,rotation);
@@ -98,37 +99,101 @@ namespace ThoraxLab.Learning
             b.Lathe(Steel,new[]{new Vector3(.0048f,.0021f,.058f),new Vector3(.0034f,.0016f,.070f),new Vector3(.003f,.0014f,.076f)},16);
             for(int i=0;i<12;i++)
             {
-                float z=Mathf.Lerp(start+.012f,.045f,i/11f);
-                b.RoundBar(Ink,new Vector3(-.0045f,.00305f,z),new Vector3(.0045f,.00305f,z),.00022f,5);
-                b.RoundBar(Ink,new Vector3(-.0045f,-.00305f,z),new Vector3(.0045f,-.00305f,z),.00022f,5);
+                float z=Mathf.Lerp(start+.016f,.047f,i/11f);
+                foreach(float side in new[]{-1f,1f})
+                {
+                    var a=new Vector3(-.0041f,side*.00302f,z-.0009f);
+                    var c=new Vector3(.0041f,side*.00302f,z+.0009f);
+                    b.RoundBar(Ink,a,c,.00013f,5);
+                    b.RoundBar(Steel,a+Vector3.forward*.00030f,c+Vector3.forward*.00030f,.00019f,6);
+                }
             }
-            b.Polygon(Steel,new[]{new Vector2(-.003f,.067f),new Vector2(.004f,.069f),new Vector2(.0064f,.083f),new Vector2(.0052f,.094f),new Vector2(.0018f,.103f),new Vector2(0,.108f),new Vector2(-.003f,.083f)},.00070f);
-            b.Polygon(Satin,new[]{new Vector2(-.0024f,.068f),new Vector2(.003f,.070f),new Vector2(.0045f,.082f),new Vector2(.0032f,.092f),new Vector2(-.0024f,.082f)},.00074f);
-            b.RoundedBody(Ink,new Vector3(0,.00041f,.076f),new Vector3(.0018f,.00010f,.011f),.0006f);
-            // Recessed end panel and fine ruler ticks are decorative, without dose values.
             b.RoundedBody(Steel,new Vector3(0,.00305f,start+.009f),new Vector3(.0065f,.00016f,.007f),.001f);
+            // Each row describes the spine, the start of the grind, and the curved edge.
+            var rows=new[]{
+                new Vector4(.067f,-.0027f,.0017f,.0026f),new Vector4(.073f,-.0031f,.0024f,.0043f),
+                new Vector4(.074f,-.0032f,.0027f,.0047f),new Vector4(.082f,-.0033f,.00385f,.00645f),
+                new Vector4(.084f,-.0032f,.0040f,.00670f),new Vector4(.091f,-.0028f,.00365f,.00655f),
+                new Vector4(.097f,-.0020f,.00265f,.00512f),new Vector4(.103f,-.00095f,.00125f,.00285f),
+                new Vector4(.106f,-.00040f,.00046f,.00117f),new Vector4(ScalpelTipZ,0,0,0)};
+            Vector3 Surface(Vector4 row,float x)=>new Vector3(x,.00052f*Mathf.Clamp01((ScalpelTipZ-row.x)/.012f),row.x);
+            for(int i=0;i<rows.Length-1;i++)
+            {
+                var a=rows[i];var c=rows[i+1];
+                var backA=Surface(a,a.y);var backC=Surface(c,c.y);
+                var grindA=Surface(a,a.z);var grindC=Surface(c,c.z);
+                var edgeA=new Vector3(a.w,0,a.x);var edgeC=new Vector3(c.w,0,c.x);
+                if(i>=1&&i<=3)
+                {
+                    const float slotCenter=-.0005f;
+                    float near=i==1?0:.00078f,far=i==3?0:.00078f;
+                    var leftA=Surface(a,slotCenter-near);var leftC=Surface(c,slotCenter-far);
+                    var rightA=Surface(a,slotCenter+near);var rightC=Surface(c,slotCenter+far);
+                    b.SheetFaces(Satin,backA,backC,leftC,leftA);
+                    b.SheetFaces(Satin,rightA,rightC,grindC,grindA);
+                    b.ThicknessEdge(Satin,leftC,leftA);b.ThicknessEdge(Satin,rightA,rightC);
+                }
+                else b.SheetFaces(Satin,backA,backC,grindC,grindA);
+                b.SheetFaces(Steel,grindA,grindC,edgeC,edgeA);
+                b.ThicknessEdge(Satin,backA,backC);
+                if(i==0){b.ThicknessEdge(Satin,grindA,backA);b.ThicknessEdge(Steel,edgeA,grindA);}
+            }
             b.Pop();
         }
 
         static void Saw(Builder b)
         {
-            b.RoundedBody(Ink,new Vector3(0,-.008f,.026f),new Vector3(.027f,.034f,.074f),.007f);
-            b.RoundedBody(Teal,new Vector3(0,-.008f,.025f),new Vector3(.028f,.029f,.054f),.006f);
-            for(int i=0;i<7;i++)b.RoundedBody(Ink,new Vector3(0,-.008f,.006f+i*.007f),new Vector3(.0286f,.030f,.0018f),.0058f);
+            b.RoundedBody(Teal,new Vector3(0,-.008f,.026f),new Vector3(.028f,.034f,.074f),.007f);
+            for(int i=0;i<6;i++)b.RoundedBody(Ink,new Vector3(0,-.008f,.005f+i*.007f),new Vector3(.0295f,.0352f,.0026f),.0068f);
+            b.RoundedBody(Ink,new Vector3(0,-.008f,-.008f),new Vector3(.0284f,.0345f,.0055f),.0065f);
             b.RoundedBody(Satin,new Vector3(0,0,.070f),new Vector3(.034f,.024f,.035f),.006f);
             b.RoundedBody(Steel,new Vector3(0,0,.082f),new Vector3(.025f,.019f,.008f),.003f);
-            b.RoundedBody(Ink,new Vector3(0,.016f,.041f),new Vector3(.013f,.003f,.020f),.003f);
-            b.Push(Vector3.zero,Quaternion.Euler(0,0,90));
-            b.Polygon(Steel,new[]{new Vector2(-.008f,.081f),new Vector2(.008f,.081f),new Vector2(.0132f,.125f),new Vector2(-.0132f,.125f)},.0016f);
-            for(int i=0;i<13;i++)
+            b.RoundedBody(Ink,new Vector3(0,.0098f,.043f),new Vector3(.012f,.0038f,.016f),.002f);
+            b.RoundedBody(Teal,new Vector3(0,.0118f,.043f),new Vector3(.0085f,.0018f,.011f),.0008f);
+            foreach(float side in new[]{-1f,1f})
             {
-                float x=-.013f+i*.002f;
-                b.Polygon(Steel,new[]{new Vector2(x,.1248f),new Vector2(x+.001f,.129f),new Vector2(x+.0019f,.1248f)},.0016f);
+                var spindle=new Vector3(side*.017f,0,SawSpindleZ);
+                b.RoundBar(Ink,spindle,spindle+Vector3.right*side*.0006f,.0058f,20);
+                b.RoundBar(Satin,spindle+Vector3.right*side*.0006f,spindle+Vector3.right*side*.0013f,.00465f,20);
+                b.RoundBar(Steel,spindle+Vector3.right*side*.0013f,spindle+Vector3.right*side*.00165f,.00265f,14);
+                for(int i=0;i<3;i++)
+                    b.RoundBar(Ink,new Vector3(side*.017f,-.0025f,.058f+i*.0035f),new Vector3(side*.017f,.003f,.060f+i*.0035f),.0005f,8);
             }
-            for(int i=0;i<3;i++)b.RoundedBody(Ink,new Vector3(0,.00086f,.091f+i*.006f),new Vector3(.008f,.00012f,.0018f),.0005f);
+        }
+
+        static void SawBlade(Builder b)
+        {
+            b.Push(Vector3.back*SawSpindleZ,Quaternion.Euler(0,0,90));
+            const float depth=.00145f,slotOffset=.0041f,pitch=.00205f;
+            // The twin radiused apertures pass through the plate.
+            var rows=new[]{new Vector3(.078f,.0067f,0),new Vector3(.094f,.0089f,0),
+                new Vector3(.0950f,.0091f,.0010f),new Vector3(.0962f,.0093f,.00138f),
+                new Vector3(.1140f,.0119f,.00138f),new Vector3(.1152f,.0121f,.0010f),
+                new Vector3(.1162f,.0122f,0),new Vector3(.121f,pitch*6.5f,0)};
+            void Band(Vector3 a,Vector3 c,float leftA,float rightA,float leftC,float rightC)
+            {
+                b.Polygon(Satin,new[]{new Vector2(leftA,a.x),new Vector2(rightA,a.x),new Vector2(rightC,c.x),new Vector2(leftC,c.x)},depth);
+            }
+            for(int i=0;i<rows.Length-1;i++)
+            {
+                var a=rows[i];var c=rows[i+1];
+                if(a.z==0&&c.z==0){Band(a,c,-a.y,a.y,-c.y,c.y);continue;}
+                Band(a,c,-a.y,-slotOffset-a.z,-c.y,-slotOffset-c.z);
+                Band(a,c,-slotOffset+a.z,slotOffset-a.z,-slotOffset+c.z,slotOffset-c.z);
+                Band(a,c,slotOffset+a.z,a.y,slotOffset+c.z,c.y);
+            }
+            float Crown(float x)=>.12595f-.0026f*Mathf.Pow(x/(pitch*6.5f),2);
+            for(int tooth=-6;tooth<=6;tooth++)
+            {
+                float x=tooth*pitch,left=x-pitch*.5f,right=x+pitch*.5f;
+                float zl=Crown(left),zr=Crown(right);
+                b.Polygon(Satin,new[]{new Vector2(left,.121f),new Vector2(right,.121f),new Vector2(right,zr),new Vector2(left,zl)},depth);
+                var a=new Vector3(left,depth*.5f,zl);var c=new Vector3(right,depth*.5f,zr);
+                var tip=new Vector3(x,0,SawTipZ+Crown(x)-Crown(0));
+                b.SheetFaces(Steel,a,tip,tip,c);
+                b.ThicknessEdge(Steel,a,tip);b.ThicknessEdge(Steel,tip,c);
+            }
             b.Pop();
-            b.RoundBar(Steel,new Vector3(-.0172f,0,.068f),new Vector3(-.0169f,0,.068f),.0026f,12);
-            b.RoundBar(Ink,new Vector3(-.01735f,-.0017f,.068f),new Vector3(-.01735f,.0017f,.068f),.00026f,5);
         }
 
         static void NeedleHolder(Builder b)
@@ -170,8 +235,25 @@ namespace ThoraxLab.Learning
             // The pneumonia case uses a prepared IV administration port, never a
             // hypodermic needle applied to a prescription chart or to lung tissue.
             if(id=="medication")return;
-            b.Lathe(id=="aspirator"?Ivory:Steel,new[]{new Vector3(radius,radius,.080f),new Vector3(radius,radius,.138f),new Vector3(radius*.3f,radius*.3f,.142f)},12);
-            if(id=="aspirator")for(int i=0;i<3;i++)b.RoundedBody(Ink,new Vector3(0,radius+.00004f,.118f+i*.007f),new Vector3(.0014f,.00008f,.0025f),.0005f);
+            bool aspirator=id=="aspirator";
+            int shaft=aspirator?Ivory:Steel;
+            b.Lathe(shaft,new[]{new Vector3(radius,radius,.080f),new Vector3(radius,radius,.134f)},16,false);
+            for(int i=0;i<16;i++)
+            {
+                Vector3 Rim(int k)
+                {
+                    float angle=k*Mathf.PI/8;
+                    return new Vector3(radius*Mathf.Cos(angle),radius*Mathf.Sin(angle),
+                        .142f-(aspirator?.0004f:.0025f)*(1-Mathf.Cos(angle)));
+                }
+                var a=Rim(i);var c=Rim(i+1);
+                var innerA=new Vector3(a.x*.64f,a.y*.64f,a.z);
+                var innerC=new Vector3(c.x*.64f,c.y*.64f,c.z);
+                b.Face(shaft,new Vector3(a.x,a.y,.134f),new Vector3(c.x,c.y,.134f),c,a);
+                b.Face(shaft,a,c,innerC,innerA);
+                b.Face(shaft,innerA,innerC,new Vector3(innerC.x,innerC.y,.134f),new Vector3(innerA.x,innerA.y,.134f));
+            }
+            if(aspirator)for(int i=0;i<3;i++)b.RoundedBody(Ink,new Vector3(0,radius+.00004f,.118f+i*.007f),new Vector3(.0014f,.00008f,.0025f),.0005f);
         }
 
         static void RadialBand(Builder b)
@@ -219,16 +301,40 @@ namespace ThoraxLab.Learning
 
         static void OxygenMask(Builder b)
         {
-            // Contoured shell with a soft seal; open recess is visible through the polymer.
-            b.Lathe(Clear,new[]{new Vector3(.043f,.059f,.004f),new Vector3(.046f,.060f,.010f),new Vector3(.041f,.055f,.034f),new Vector3(.028f,.041f,.058f),new Vector3(.009f,.013f,.067f)},32);
+            // The broad open rim faces the patient along tool-local +Z. The nose clip remains uppermost.
+            b.Push(Vector3.forward*(OxygenSealZ+.005f),Quaternion.Euler(0,180,0));
+            b.Lathe(Clear,new[]{new Vector3(.043f,.059f,.004f),new Vector3(.046f,.060f,.010f),new Vector3(.041f,.055f,.034f),
+                new Vector3(.028f,.041f,.058f),new Vector3(.009f,.013f,.067f),new Vector3(.0078f,.0118f,.067f),
+                new Vector3(.0268f,.0398f,.057f),new Vector3(.0398f,.0538f,.033f),new Vector3(.0448f,.0588f,.010f),
+                new Vector3(.0418f,.0578f,.004f),new Vector3(.043f,.059f,.004f)},32,false);
             b.Loop(Teal,new Vector3(0,0,.005f),.045f,.059f,.0028f,36,Quaternion.Euler(90,0,0));
             b.RoundedBody(Satin,new Vector3(0,.044f,.050f),new Vector3(.031f,.005f,.004f),.0018f);
-            b.RoundedBody(Teal,new Vector3(0,0,-.004f),new Vector3(.142f,.009f,.0035f),.0017f);
-            b.Push(new Vector3(0,-.013f,.052f),Quaternion.Euler(35,0,0));b.Lathe(Teal,Profile(-.046f,-.015f,.009f,.008f),18);b.Pop();
             foreach(float sign in new[]{-1f,1f})
             {
                 b.RoundedBody(Ivory,new Vector3(sign*.043f,0,.014f),new Vector3(.008f,.016f,.006f),.002f);
                 for(int i=0;i<3;i++)b.RoundBar(Ink,new Vector3(sign*.027f,-.012f+i*.007f,.050f),new Vector3(sign*.034f,-.012f+i*.007f,.045f),.0008f,8);
+            }
+            b.Pop();
+            b.Push(Vector3.forward*(OxygenSealZ-.062f),Quaternion.Euler(163,0,0));
+            b.Lathe(Teal,new[]{new Vector3(.0085f,.0108f,-.001f),new Vector3(.0065f,.0065f,.004f),
+                new Vector3(.0048f,.0048f,.020f),new Vector3(.0035f,.0035f,.020f),new Vector3(.0048f,.0048f,.003f),
+                new Vector3(.0074f,.0096f,-.001f),new Vector3(.0085f,.0108f,-.001f)},20,false);
+            b.Pop();
+
+            // A flat elastic ribbon passes beside the cheeks and around the back of the training head.
+            Vector3[] previous=null;
+            for(int i=0;i<=32;i++)
+            {
+                float angle=Mathf.Lerp(-2.59f,2.59f,i/32f),s=Mathf.Sin(angle),c=Mathf.Cos(angle);
+                var center=new Vector3(.081f*s,.001f+.024f*Mathf.InverseLerp(Mathf.Cos(2.59f),1,c),OxygenSealZ+.067f+.090f*c);
+                var thickness=new Vector3(s/.081f,0,c/.090f).normalized*.00065f;
+                var width=Vector3.up*.0045f;
+                var current=new[]{center+thickness-width,center+thickness+width,center-thickness+width,center-thickness-width};
+                if(previous!=null)for(int edge=0;edge<4;edge++)
+                {
+                    int next=(edge+1)%4;b.Face(Ink,previous[edge],current[edge],current[next],previous[next]);
+                }
+                previous=current;
             }
         }
 
@@ -243,9 +349,8 @@ namespace ThoraxLab.Learning
         {
             b.RoundedBody(Ivory,Vector3.zero,new Vector3(.085f,.064f,.003f),.009f);
             b.RoundedBody(Clear,new Vector3(0,0,.002f),new Vector3(.070f,.049f,.0015f),.007f);
-            b.RoundedBody(Ivory,new Vector3(0,0,.005f),new Vector3(.045f,.031f,.004f),.005f);
-            for(int i=0;i<15;i++)b.RoundBar(Satin,new Vector3(-.019f,-.012f+i*.0017f,.0071f),new Vector3(.019f,-.012f+i*.0017f,.0071f),.00006f,4);
-            for(int i=0;i<20;i++)b.RoundBar(Satin,new Vector3(-.019f+i*.002f,-.011f,.00715f),new Vector3(-.019f+i*.002f,.011f,.00715f),.00005f,4);
+            b.RoundedBody(Fibre,new Vector3(0,0,.0043f),new Vector3(.046f,.032f,.0024f),.004f);
+            b.RoundedBody(Fibre,new Vector3(.0003f,0,.006f),new Vector3(.0445f,.031f,.0024f),.004f);
             b.RoundedBody(Teal,new Vector3(-.035f,0,.0017f),new Vector3(.003f,.024f,.0005f),.001f);
         }
 
@@ -266,8 +371,9 @@ namespace ThoraxLab.Learning
             b.Lathe(Ivory,Profile(-.0405f,.098f,.004f,.0035f),16);
             b.Lathe(Teal,Profile(-.025f,.015f,.0044f,.0044f),16);
             for(int i=0;i<6;i++)b.Ring(Ink,-.019f+i*.005f,.0045f,.004f,.0005f,16);
-            b.Lathe(Ivory,new[]{new Vector3(.005f,.005f,.091f),new Vector3(.0145f,.0105f,.101f),new Vector3(.0165f,.012f,.117f),new Vector3(.012f,.010f,.129f),new Vector3(.002f,.002f,.135f)},24);
-            for(int i=0;i<5;i++)b.Ring(Satin,.103f+i*.0045f,.0154f,.0149f,.00015f,20,.71f);
+            b.Lathe(Fibre,new[]{new Vector3(.005f,.005f,.091f),new Vector3(.013f,.0096f,.098f),
+                new Vector3(.0161f,.0118f,.106f),new Vector3(.0165f,.012f,.116f),
+                new Vector3(.015f,.0113f,.124f),new Vector3(.0103f,.0088f,.131f),new Vector3(.002f,.002f,.135f)},28);
         }
         static void Connector(Builder b)
         {
@@ -343,31 +449,37 @@ namespace ThoraxLab.Learning
         sealed class Builder
         {
             readonly List<Vector3> vertices=new List<Vector3>();
-            readonly List<Vector2> uv=new List<Vector2>();
-            readonly List<int>[] triangles={new List<int>(),new List<int>(),new List<int>(),new List<int>(),new List<int>(),new List<int>()};
+            readonly List<int>[] triangles={new List<int>(),new List<int>(),new List<int>(),new List<int>(),new List<int>(),new List<int>(),new List<int>()};
             Matrix4x4 transform=Matrix4x4.identity;
             public void Push(Vector3 position,Quaternion rotation){transform=Matrix4x4.TRS(position,rotation,Vector3.one);}
             public void Pop(){transform=Matrix4x4.identity;}
-            int V(Vector3 value,Vector2 tex=default){int i=vertices.Count;vertices.Add(transform.MultiplyPoint3x4(value));uv.Add(tex);return i;}
+            int V(Vector3 value){int i=vertices.Count;vertices.Add(transform.MultiplyPoint3x4(value));return i;}
             void Tri(int mat,int a,int b,int c){triangles[mat].Add(a);triangles[mat].Add(b);triangles[mat].Add(c);}
             void Quad(int mat,int a,int b,int c,int d){Tri(mat,a,b,c);Tri(mat,a,c,d);}
+            public void Face(int mat,Vector3 a,Vector3 b,Vector3 c,Vector3 d)=>Quad(mat,V(a),V(b),V(c),V(d));
+            static Vector3 Underside(Vector3 p)=>new Vector3(p.x,-p.y,p.z);
+            public void SheetFaces(int mat,Vector3 a,Vector3 b,Vector3 c,Vector3 d)
+            {
+                Face(mat,a,b,c,d);Face(mat,Underside(d),Underside(c),Underside(b),Underside(a));
+            }
+            public void ThicknessEdge(int mat,Vector3 a,Vector3 b)=>Face(mat,a,Underside(a),Underside(b),b);
             public void Lathe(int mat,IReadOnlyList<Vector3> rings,int sides=20,bool caps=true)
             {
                 int first=vertices.Count;
-                for(int j=0;j<rings.Count;j++)for(int k=0;k<=sides;k++)
+                for(int j=0;j<rings.Count;j++)for(int k=0;k<sides;k++)
                 {
                     float angle=k*Mathf.PI*2/sides;
-                    V(new Vector3(Mathf.Cos(angle)*rings[j].x,Mathf.Sin(angle)*rings[j].y,rings[j].z),new Vector2(k/(float)sides,j/(float)(rings.Count-1)));
+                    V(new Vector3(Mathf.Cos(angle)*rings[j].x,Mathf.Sin(angle)*rings[j].y,rings[j].z));
                 }
                 for(int j=0;j<rings.Count-1;j++)for(int k=0;k<sides;k++)
                 {
-                    int a=first+j*(sides+1)+k,b=a+sides+1;Quad(mat,a,a+1,b+1,b);
+                    int a=first+j*sides+k,c=first+j*sides+(k+1)%sides;Quad(mat,a,c,c+sides,a+sides);
                 }
                 if(caps)
                 {
                     int begin=V(new Vector3(0,0,rings[0].z)),end=V(new Vector3(0,0,rings[rings.Count-1].z));
-                    int last=first+(rings.Count-1)*(sides+1);
-                    for(int k=0;k<sides;k++){Tri(mat,begin,first+k+1,first+k);Tri(mat,end,last+k,last+k+1);}
+                    int last=first+(rings.Count-1)*sides;
+                    for(int k=0;k<sides;k++){int next=(k+1)%sides;Tri(mat,begin,first+next,first+k);Tri(mat,end,last+k,last+next);}
                 }
             }
             public void Ring(int mat,float z,float outer,float inner,float depth,int sides=20,float yScale=1)
@@ -429,14 +541,60 @@ namespace ThoraxLab.Learning
                 foreach(var p in outline)V(new Vector3(p.x,-depth/2,p.y));foreach(var p in outline)V(new Vector3(p.x,depth/2,p.y));
                 int n=outline.Length;
                 for(int i=1;i<n-1;i++){Tri(mat,first,first+i,first+i+1);Tri(mat,first+n,first+n+i+1,first+n+i);}
-                for(int i=0;i<n;i++)Quad(mat,first+i,first+n+i,first+n+(i+1)%n,first+(i+1)%n);
+                for(int i=0;i<n;i++)
+                {
+                    var a=outline[i];var c=outline[(i+1)%n];
+                    Face(mat,new Vector3(a.x,-depth/2,a.y),new Vector3(a.x,depth/2,a.y),
+                        new Vector3(c.x,depth/2,c.y),new Vector3(c.x,-depth/2,c.y));
+                }
             }
-            public Mesh Finish(string name)
+            public Mesh Finish(string name,out int[] finishes)
             {
-                var mesh=new Mesh{name=name,indexFormat=vertices.Count>65535?IndexFormat.UInt32:IndexFormat.UInt16};
-                mesh.SetVertices(vertices);mesh.SetUVs(0,uv);mesh.subMeshCount=triangles.Length;
-                for(int i=0;i<triangles.Length;i++)mesh.SetTriangles(triangles[i],i,false);
-                mesh.RecalculateNormals();mesh.RecalculateBounds();mesh.UploadMeshData(false);return mesh;
+                var normalSums=new Vector3[vertices.Count];
+                var mapped=new int[vertices.Count*3];
+                var source=new List<int>(vertices.Count);
+                var positions=new List<Vector3>(vertices.Count);
+                var uv=new List<Vector2>(vertices.Count);
+                var drawn=new List<int>();
+                var groups=new List<List<int>>();
+                // Project each face in local metres. Split UV seams while retaining its smoothed source normal.
+                int Project(int vertex,int axis)
+                {
+                    int key=vertex*3+axis;
+                    if(mapped[key]!=0)return mapped[key]-1;
+                    var p=vertices[vertex];
+                    uv.Add(axis==0?new Vector2(p.z,p.y):axis==1?new Vector2(p.z,p.x):new Vector2(p.x,p.y));
+                    source.Add(vertex);positions.Add(p);mapped[key]=positions.Count;
+                    return positions.Count-1;
+                }
+                for(int mat=0;mat<triangles.Length;mat++)
+                {
+                    var faces=triangles[mat];
+                    if(faces.Count==0)continue;
+                    var indices=new List<int>(faces.Count);
+                    for(int i=0;i<faces.Count;i+=3)
+                    {
+                        int a=faces[i],b=faces[i+1],c=faces[i+2];
+                        var normal=Vector3.Cross((vertices[b]-vertices[a])*1000,(vertices[c]-vertices[a])*1000);
+                        if(normal.sqrMagnitude<1e-14f)continue;
+                        normalSums[a]+=normal;normalSums[b]+=normal;normalSums[c]+=normal;
+                        float x=Mathf.Abs(normal.x),y=Mathf.Abs(normal.y),z=Mathf.Abs(normal.z);
+                        int axis=x>=y&&x>=z?0:y>=z?1:2;
+                        indices.Add(Project(a,axis));indices.Add(Project(b,axis));indices.Add(Project(c,axis));
+                    }
+                    if(indices.Count>0){drawn.Add(mat);groups.Add(indices);}
+                }
+                var normals=new List<Vector3>(source.Count);
+                foreach(int vertex in source)
+                {
+                    var normal=normalSums[vertex];
+                    normals.Add(normal.sqrMagnitude>1e-16f?normal/normal.magnitude:Vector3.up);
+                }
+                var mesh=new Mesh{name=name,hideFlags=HideFlags.DontSave,indexFormat=positions.Count>65535?IndexFormat.UInt32:IndexFormat.UInt16};
+                mesh.SetVertices(positions);mesh.SetNormals(normals);mesh.SetUVs(0,uv);mesh.subMeshCount=groups.Count;
+                for(int i=0;i<groups.Count;i++)mesh.SetTriangles(groups[i],i,false);
+                mesh.RecalculateTangents();mesh.RecalculateBounds();mesh.UploadMeshData(false);
+                finishes=drawn.ToArray();return mesh;
             }
         }
     }

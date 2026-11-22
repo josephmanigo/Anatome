@@ -18,7 +18,7 @@ namespace ThoraxLab.Learning
             if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(system))
                 throw new ArgumentException("Museum entries need an identity, name and system.");
             Id = id; Name = name; System = system; Group = group ?? ""; IsReference = reference;
-            Description = MuseumDescriptions.Describe(Group, tissue, name, reference);
+            Description = MuseumDescriptions.Describe(Group, tissue, name, reference, id);
         }
     }
 
@@ -85,8 +85,8 @@ namespace ThoraxLab.Learning
             ["papillary_muscles"] = "Muscle inside a ventricle that tensions the chordae tendineae. It helps keep valve leaflets from prolapsing during contraction.",
             ["azygos_system"] = "Part of the venous drainage along the thoracic spine. The azygos system returns blood from the chest wall toward the superior vena cava.",
             ["esophagus"] = "The muscular tube carrying swallowed food and liquid toward the stomach. It descends through the chest behind the trachea.",
-            ["lung_lobes"] = "A lobe of the lung containing airways and gas-exchanging tissue. Oxygen enters the blood and carbon dioxide leaves it in the alveoli.",
-            ["pericardium"] = "The sac surrounding the heart. It helps hold the heart in position and provides a low-friction environment for beating.",
+            ["lung_lobes"] = "CT lobe from the Mauritanian Anatomy Laboratory. Three lobes form the right lung and two form the left. The lab's airways and vessels come from a different donor.",
+            ["pericardium"] = "The sac around the heart. Its serous surfaces slide as the heart beats. This teaching reconstruction simplifies its attachments to the great vessels.",
             ["thoracic_fat"] = "Subcutaneous tissue beneath the skin. Its fat cushions the chest wall, stores energy and helps insulate the body.",
             ["thoracic_fascia"] = "Connective tissue supporting and separating structures of the chest wall. It surrounds muscles and helps organize tissue layers.",
             ["phrenic_nerves"] = "Nerve carrying motor signals to the diaphragm. It also carries sensation from parts of the diaphragm, pleura and pericardium.",
@@ -95,7 +95,7 @@ namespace ThoraxLab.Learning
             ["thoracic_duct"] = "The main lymphatic channel in the chest. It returns lymph from much of the body to the venous circulation near the left neck."
         };
 
-        public static string Describe(string group, string tissue, string name, bool reference)
+        public static string Describe(string group, string tissue, string name, bool reference, string id = null)
         {
             if (reference)
             {
@@ -109,12 +109,14 @@ namespace ThoraxLab.Learning
             }
             switch (group)
             {
+                case "intercostal_layers" when id == "FMA9761" || id == "FMA9762":
+                    return "Transversus thoracis lies on the inner anterior chest wall. Its slips run from the posterior sternum toward the costal cartilages, usually ribs 2 through 6.";
                 case "atrial_walls": return name.IndexOf("right", StringComparison.OrdinalIgnoreCase) >= 0 ?
                     "Muscular wall of the right atrium. This chamber receives venous blood from the body and passes it to the right ventricle." :
                     "Muscular wall of the left atrium. This chamber receives oxygenated blood from the lungs and passes it to the left ventricle.";
                 case "pleural_layers": return name.IndexOf("visceral", StringComparison.OrdinalIgnoreCase) >= 0 ?
-                    "The thin membrane covering the lung surface. It faces the pleural cavity and helps the lung slide smoothly during breathing." :
-                    "The thin membrane lining the inner chest wall and adjoining surfaces. It faces the pleural cavity around the lung.";
+                    "Visceral pleura covers the lung surface and extends into its fissures. This teaching envelope simplifies the fissures and the fold at the lung root." :
+                    "Parietal pleura lines the chest wall, diaphragm and mediastinum. This teaching envelope illustrates its position around the lung.";
                 case "great_vessels": return tissue == "vein" ?
                     "A major vein connected to the thoracic circulation. It carries blood from the body toward the right side of the heart." :
                     "A major artery connected to the thoracic circulation. It carries blood away from the heart toward the body's tissues.";

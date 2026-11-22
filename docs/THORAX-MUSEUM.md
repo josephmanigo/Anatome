@@ -21,7 +21,7 @@ Use **Choose a gallery / find a part** to switch systems or search names and des
 
 Trigger selects an exhibit. Grip lifts and rotates it; release returns it to its stand. A on the right controller, or X with left dominant hand, opens the existing inspection view for the selected exhibit. Stick up/down enlarges/shrinks it and sideways rotates it while pointing away from the panel. Panel zoom buttons are also available. Display sizes are normalized for visibility, so exhibits are not presented at their relative anatomical scale.
 
-The gallery has its own floor, walls and stands, using the current walking/teleport settings. Leaving restores the learner's prior lab position, heading and panel placement. Menu brings the controls beside the learner and pauses museum interactions; returning keeps the current gallery and selection. Gallery changes require release of held grip before grabbing a replacement model.
+The gallery has a terrazzo floor, oak display stands and an enclosed ceiling. A directory on the back wall shows the active system and display number. Physical labels face the learner as they walk around a stand. The room uses the current walking and teleport settings. Leaving restores the learner's prior lab position, heading and panel placement. Menu brings the controls beside the learner and pauses museum interactions. Returning keeps the current gallery and selection. Gallery changes require release of held grip before grabbing a replacement model. [Environment audit and before-and-after views](../qa/museum-environment/README.md)
 
 Museum copies share the original mesh/material assets but have independent transforms and grab components. They are not assessment anatomy targets and cannot be cut, submit evidence, earn XP or unlock levels. The museum has no graded scenario or saved attempt, so the four serialized assessment mode identities and server rubrics stay stable.
 
@@ -37,4 +37,4 @@ Unity -batchmode -projectPath unity/ThoraxLab \
   --thorax-museum-only
 ```
 
-It also runs at the end of the full simulator verification. Unity is unavailable in the cloud environment, so the scene verifier and physical headset acceptance have not run here. On a headset, validate both handedness settings, grip/release while pausing, gallery changes while holding a model, zoom, walking/teleporting, label readability at large text sizes, reference-marker presentation and return to the lab.
+It also runs at the end of the full simulator verification. In the Editor, choose **Anatome > Art > Verify museum in XR simulator** for the focused run. The environment audit records the local simulator result. Physical headset checks cover both handedness settings, grip/release while pausing, gallery changes while holding a model, zoom, walking and teleporting, large-text readability, reference markers, return to the lab and frame timing.

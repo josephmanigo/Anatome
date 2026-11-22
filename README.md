@@ -1,20 +1,49 @@
 # Anatome
 
-For the updated **1.6.0 APK** (Museum, model zoom, focused identification and accessibility), use [Build downloadable APK on GitHub](docs/GITHUB-APK.md). Connect the existing Windows build PC once; a successful workflow run adds the APK to [Releases](https://github.com/josephmanigo/Anatome/releases). The workflow downloads the project automatically, so the old project folder is not required.
+**Anatome** is a VR anatomy learning game built for medical students studying the human chest. Set inside a virtual operating room, students use their Meta Quest controllers to explore a fully layered 3D thorax, identify anatomical structures, assemble organs, and work through simulated clinical cases. English narration and captions guide every lesson, and completing an activity unlocks its next difficulty — from Easy through Hard.
 
-A VR anatomy learning game with four practical modes, mastery-based difficulty and a layered thorax specimen. Test it in Unity with the official XR Device Simulator.
+## About the Game
+
+Anatome places you inside a fully realized virtual dissection lab. A source-attributed 3D thorax specimen sits at the center — built from BodyParts3D and original reconstructions covering 243 tissue structures and six cardiac annotations. The lab is designed around focused, one-step-at-a-time learning: compact repositionable panels, restrained charcoal and teal UI, and guided narration keep you on task without overwhelming detail.
+
+Six clinical cases drive the anatomy into clinical context: **pneumothorax** with chest drain, **asthma** with inhaler and spacer, **coronary artery disease** with balloon and stent, **pneumonia** with prescribed care, **pleural effusion** with aspiration, and **aortic stenosis** with catheter valve replacement. Each case includes 3D mechanism matching, response prediction, and instrument interaction — not arbitrary completion buttons. Wrong decisions produce specific rationales; an unsafe safety decision blocks an assessment pass.
+
+Progression is explicit. Pass an activity at 80 % with all essential objectives to unlock the next difficulty. Unlimited retries, no countdown pressure. Learning rewards require demonstrated unassisted mastery.
+
+## Play on Meta Quest
+
+[Download Anatome 1.6.6 for Quest](https://github.com/josephmanigo/Anatome/releases/download/v1.6.6/Anatome-1.6.6.apk) · [Release notes](https://github.com/josephmanigo/Anatome/releases/tag/v1.6.6)
+
+Sideload the APK on Quest 2 or Quest 3 with SideQuest or Android Debug Bridge (ADB). This test build uses Android debug signing. Physical headset checks for this version are pending. For the Windows build and production signing workflow, see [Build and download the APK](docs/GITHUB-APK.md).
+
+Version 1.6.6 adds **Astigmatism reading mode**, with solid menu backgrounds, larger text and captions, and adjustable reading brightness. See [VR accessibility settings](docs/VR-ACCESSIBILITY.md).
+
+## Game Modes
+
+| Mode | What you do |
+|---|---|
+| Anatomy Cases | Examine six simulated conditions, predict responses, and practice treatment decisions using virtual instruments. |
+| Identify & Enumerate | Locate and name structures and identify how they relate to nearby anatomy. |
+| Assemble Anatomy | Pick up and place anatomical parts to reconstruct regions of the thorax. |
+| Guided Dissection | Reveal tissue layers and practice cuts with virtual instruments. Free Dissection provides an unscored sandbox. |
+
+The [Thorax Museum](docs/THORAX-MUSEUM.md) provides a space to inspect anatomy exhibits at your own pace.
+
+## Classroom Release
 
 Production-signed classroom release **1.4.9 / code 17**, curriculum **2026.10.2**, preserves package `org.thoraxlab.learning`. The user confirmed 1.4.9 works on **Quest 2 and Quest 3**, including login. The release has the same 1,346 application entries as that tested candidate, a permanent release key and a verified Android key-rotation proof. All **30 strict APK checks pass**. Learner privacy guidance, shared-headset instructions, backup/transfer exclusions, the head/skin visual refresh and automatic highest-supported refresh remain; there is **no fixed 72 FPS cap**. Get the exact production APK and ZIP from [the classroom release guide](docs/CLASSROOM-RELEASE.md). The new signing transition needs one in-place installation check before a fleet rollout; no headset was connected for that check.
 
 The Quest build retains OpenGL ES compatibility, startup facing, movable panels and joystick walking while merely pointing at the panel. Deliberate panel interaction captures movement. Dissection holds whole layers in place and grabs one detached chunk at a time; other learning modes retain anatomy inspection. Earlier audits in `docs` and `qa` are historical; acceptance applies only to the exact APK tested.
 
-For the **VR-only gamified learning application**, open `unity/ThoraxLab` in Unity and choose **Anatome → Open VR learning scene**, then press Play. **XR Device Simulator** is installed automatically in the Editor when no headset is connected. Start with **Try your first VR lesson** and complete the short controller orientation. See [VR-QUICKSTART.md](docs/VR-QUICKSTART.md) for the simulator controls. The Windows learning player requires PC VR; the Editor simulator is deliberately excluded from player builds. Four modes, Easy → Medium → Hard mastery, setup and current evidence are documented in [LEARNING-SETUP.md](docs/LEARNING-SETUP.md) and [LEARNING-ACCEPTANCE.md](docs/LEARNING-ACCEPTANCE.md).
+## Run the Game in Unity
+
+Open `unity/ThoraxLab` in Unity **6000.3.19f1**, choose **Anatome → Open VR learning scene**, then press Play. The Editor automatically enables the **XR Device Simulator** when no headset is connected. Start with **Try your first VR lesson** and complete the controller orientation. The Windows player requires PC VR. See the [VR quickstart](docs/VR-QUICKSTART.md), [learning setup](docs/LEARNING-SETUP.md), and [verification reports](docs/LEARNING-ACCEPTANCE.md).
 
 The separate asset demonstration is retained for the original asset handoff. Open `unity/ThoraxAssetDemo` in **Unity 6000.3.19f1**. The scene is `Assets/ThoraxLab/Scenes/ThoraxLab.unity`. Run `builds/AssetDemo/Windows/ThoraxLab.exe` for the desktop demonstration. The Quest-targeted package is `builds/AssetDemo/Android/ThoraxLab.apk`; consult `qa/reports/asset-demo-build-Android.json` and the handoff report for the verified result. The separate `unity/ThoraxLab` folder retains concurrent learning/account development and is not the frozen asset-demo handoff.
 
 Portable archives are in `handoff/`. Extract the asset/source and Unity archives into the same folder to retain the complete authoring and build pipeline. The Windows archive contains the complete player directory. `handoff/SHA256.json` records file sizes and checksums; `qa/reports/apk-verification.json` records the signed APK checks.
 
-## Contents
+## Repository Contents
 
 | Location | Contents |
 |---|---|
@@ -31,7 +60,7 @@ Portable archives are in `handoff/`. Extract the asset/source and Unity archives
 
 The catalog contains **249 entries: 243 tissue structures and six annotations of cardiac cavities/septal regions**. All 243 tissue volumes pass the native topology gate. A cardiac cavity annotation depicts empty space; the surrounding wall is the cuttable tissue. Septa are identified within sampled source walls; their complete extent is not independently segmented as removable anatomy.
 
-## Asset demonstration controls
+## Asset Demo Controls
 
 These controls belong to the separate `ThoraxAssetDemo` application. The revised learning game uses the VR controller and Editor simulator controls in [VR-QUICKSTART.md](docs/VR-QUICKSTART.md).
 
@@ -49,7 +78,7 @@ On Quest, use the controller trigger to point/select, press world-space buttons,
 
 Select the scalpel for soft tissue and the saw for bone. Release a held structure before cutting it. Only one selected target is processed at a time. Mesh Boolean work and collision cooking run on a worker. Results are validated and committed together; rejected cuts preserve the previous state. The session retains ten undo frames, at most 32 detached pieces and at most 100,000 triangles for a parent structure and its fragments. Changing modes restores the specimen. Grab strain is a small damped handling effect, not physiological tissue mechanics.
 
-## Sources and scope
+## Sources and Scope
 
 BodyParts3D is the primary assembly. The five MAL lung lobes are from another specimen and share a documented common registration and subsequent cage-fit adaptation. Missing tissue layers, membranes, nerves, neurovascular bundles and thoracic duct are authored reconstructions with explicit records. This is a gross-anatomy teaching presentation with simplified fine structure and tissue appearance.
 

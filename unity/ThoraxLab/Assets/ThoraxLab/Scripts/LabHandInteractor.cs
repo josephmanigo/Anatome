@@ -11,9 +11,15 @@ public class LabHandInteractor:XRBaseInteractor {
  Learning.MuseumExhibit museumExhibit;
  Transform controllerVisual,pointerTip;
  bool cutCancelled;
+ Quaternion previousBladeRotation;
+ AnatomyStructure strokeTarget;
+ bool strokeUsedSaw;
+ float nextBladeHaptic;
  public bool HasRayCutTarget {get;private set;}
+ public bool DrivingBlade {get;private set;}
  public Vector3 RayCutPoint {get;private set;}
  public Quaternion RayCutRotation {get;private set;}
+ internal bool PointerOverUI => overUI;
  public XRNode hand;public DissectionSession session;InputDevice device;bool grip,trigger,previousTrigger,previousGrip,toggledGrip,overUI;AnatomyStructure hit;LabButton button;Learning.ProcedureTool procedureTool;LineRenderer line;readonly List<float> stroke=new();Vector3 previousPoint;readonly Collider[] near=new Collider[32];
  public override bool isSelectActive{get{var app=Learning.LabRuntime.Instance;var current=Learning.LearningXRInput.Read(hand);bool pressed=app?.Settings?.Current.toggleGrip==true&&current.source!=Learning.XRInteractionSource.BareHand?grip:current.grip;return lastSource==current.source&&gripArmed&&current.tracked&&pressed&&session&&!session.busy&&(!overUI||interactablesSelected.Count>0)&&(!app||app.CanInteract);}}
  public override void GetValidTargets(List<IXRInteractable> targets){targets.Clear();if(interactablesSelected.Count>0){targets.Add(interactablesSelected[0]);return;}if(museumExhibit&&museumExhibit.Grab&&Learning.LabRuntime.Instance&&Learning.LabRuntime.Instance.MuseumActive)targets.Add(museumExhibit.Grab);else if(procedureTool&&procedureTool.grab)targets.Add(procedureTool.grab);else if(hit&&hit.Grab&&(!Learning.LabRuntime.Instance||Learning.LabRuntime.Instance.CanManipulate(hit)))targets.Add(hit.Grab);}
@@ -35,7 +41,7 @@ public class LabHandInteractor:XRBaseInteractor {
  }
  void Update(){
   var app=Learning.LabRuntime.Instance;
-  HasRayCutTarget=false;
+  HasRayCutTarget=false;DrivingBlade=false;
   // Keep observing button edges while hidden so tracking recovery cannot replay a held trigger.
   device=InputDevices.GetDeviceAtXRNode(hand);var xr=Learning.LearningXRInput.Read(hand);bool sourceChanged=lastSource!=xr.source;lastSource=xr.source;if(sourceChanged||!xr.tracked||!Learning.LearningXRInput.HeadTracked||(app&&!app.Focused)){if(line)line.enabled=false;grip=false;gripArmed=false;previousGrip=xr.grip;previousTrigger=xr.trigger;toggledGrip=false;cutCancelled|=xr.trigger;stroke.Clear();cuttingContacts.EndStroke();foreach(var selected in interactablesSelected){var held=(selected as Component)?.GetComponent<Learning.ProcedureTool>();if(held)held.activating=false;}if(app&&app.UI)app.UI.CancelXRPointer((int)hand+1);return;}
   transform.SetLocalPositionAndRotation(xr.position,xr.rotation);
@@ -47,10 +53,28 @@ public class LabHandInteractor:XRBaseInteractor {
   bool movementHand=hand==(preferences?.leftHanded==true?XRNode.RightHand:XRNode.LeftHand);
   Vector2 uiScroll=app&&app.CanInteract&&movementHand?Vector2.zero:xr.axis;
   overUI=app&&app.UI&&app.UI.RayPointer(ray,trigger&&!previousTrigger,uiScroll,rawGrip&&interactablesSelected.Count==0,trigger,(int)hand+1,transform.rotation);
-  if(app&&app.Inspector&&!movementHand)app.Inspector.HandleControllerAxis(xr,overUI);
+  if(app&&app.Inspector&&app.Inspector.IsOpen&&!movementHand){app.Inspector.HandleControllerAxis(xr,overUI);ray=InputRay(xr);}
   if(Physics.Raycast(ray,out var h,3,~0,QueryTriggerInteraction.Ignore)) {hit=h.collider.GetComponentInParent<AnatomyStructure>();button=h.collider.GetComponent<LabButton>();procedureTool=h.collider.GetComponentInParent<Learning.ProcedureTool>();museumExhibit=h.collider.GetComponentInParent<Learning.MuseumExhibit>();if(line){line.SetPosition(0,ray.origin);line.SetPosition(1,h.point);}}
   else if(line){line.SetPosition(0,ray.origin);line.SetPosition(1,ray.GetPoint(2));}
-  float closest=float.MaxValue;int count=Physics.OverlapSphereNonAlloc(transform.position,.035f,near);for(int i=0;i<count;i++){var exhibit=near[i].GetComponentInParent<Learning.MuseumExhibit>();if(exhibit&&app&&app.MuseumActive){float distance=exhibit.Renderer.bounds.SqrDistance(transform.position);if(distance<closest){closest=distance;museumExhibit=exhibit;hit=null;procedureTool=null;}continue;}var s=near[i].GetComponentInParent<AnatomyStructure>();if(s&&(!app||app.CanManipulate(s))){float distance=s.Renderer.bounds.SqrDistance(transform.position);if(distance<closest){closest=distance;hit=s;procedureTool=null;museumExhibit=null;}}}
+  float closest=float.MaxValue;int count=Physics.OverlapSphereNonAlloc(transform.position,.035f,near);
+  for(int i=0;i<count;i++){
+   var collider=near[i];
+   var tool=collider.GetComponentInParent<Learning.ProcedureTool>();
+   if(tool&&tool.grab){
+    float distance=(collider.ClosestPoint(transform.position)-transform.position).sqrMagnitude;
+    if(distance<closest){closest=distance;procedureTool=tool;hit=null;museumExhibit=null;}continue;
+   }
+   var exhibit=collider.GetComponentInParent<Learning.MuseumExhibit>();
+   if(exhibit&&app&&app.MuseumActive){
+    float distance=exhibit.Renderer.bounds.SqrDistance(transform.position);
+    if(distance<closest){closest=distance;museumExhibit=exhibit;hit=null;procedureTool=null;}continue;
+   }
+   var s=collider.GetComponentInParent<AnatomyStructure>();
+   if(s&&(!app||app.CanManipulate(s))){
+    float distance=s.Renderer.bounds.SqrDistance(transform.position);
+    if(distance<closest){closest=distance;hit=s;procedureTool=null;museumExhibit=null;}
+   }
+  }
   foreach(var selected in interactablesSelected){var held=(selected as Component)?.GetComponent<Learning.ProcedureTool>();if(held)held.activating=trigger&&!overUI&&app&&app.CanInteract;}
   if(app&&(!app.CanInteract||overUI)){if(!app.CanInteract){gripArmed=!rawGrip;toggledGrip=false;}stroke.Clear();cutCancelled|=trigger;cuttingContacts.EndStroke();previousTrigger=trigger;return;}
   var selectionHit=app&&app.CanUseCuttingTool?(h.collider?h.collider.GetComponentInParent<AnatomyStructure>():null):hit;
@@ -67,21 +91,55 @@ public class LabHandInteractor:XRBaseInteractor {
    HasRayCutTarget=true;RayCutPoint=center;RayCutRotation=bladeRotation;
   }
   bool contact=toolActive&&HasRayCutTarget;
+  if(stroke.Count>0&&(session.selected!=strokeTarget||session.saw!=strokeUsedSaw)){
+   if(session.selected!=strokeTarget||session.ValidateCutTool(strokeTarget))
+    app.Message("Stroke cancelled. Use the same tool on one surface, then release.");
+   stroke.Clear();cutCancelled=true;
+  }
   if(trigger&&contact&&!cutCancelled){
    // Learners may hold the trigger before the blade reaches the surface.
    if(stroke.Count==0&&rayStructure!=session.selected)app.Select(rayStructure,h.point);
    // A missed surface, occluder or large jump must never bridge separate tissue.
-   if(stroke.Count>0&&(rayStructure!=session.selected||Vector3.Distance(previousPoint,center)>.06f)){stroke.Clear();cutCancelled=true;app.Message("Stroke cancelled. Keep the ray on one surface, release, then try again.");}
+   if(stroke.Count>0&&(rayStructure!=strokeTarget||Vector3.Distance(previousPoint,center)>.06f)){stroke.Clear();cutCancelled=true;app.Message("Stroke cancelled. Keep the ray on one surface, release, then try again.");}
    if(!cutCancelled){cuttingContacts.Sample(app,center,bladeRotation,session.saw);if(cuttingContacts.StrokeBlocked){stroke.Clear();cutCancelled=true;}}
-   if(!cutCancelled&&app.CanCut&&session.selected&&rayStructure==session.selected&&(stroke.Count==0||Vector3.Distance(previousPoint,center)>.002f)&&stroke.Count<128*24&&session.selected.Renderer.bounds.SqrDistance(center)<.0025f){
-    NativeCutting.AddPose(stroke,session.selected.transform,center,bladeRotation,session.saw?.008f:.008f,session.saw?.012f:.008f,session.saw?.025f:.018f);previousPoint=center;
-    if(xr.source==Learning.XRInteractionSource.Controller&&(preferences==null||preferences.vibration))device.SendHapticImpulse(0,session.saw?.12f:.035f,.025f);
+   if(!cutCancelled&&app.CanCut&&session.selected&&rayStructure==session.selected&&session.selected.Renderer.bounds.SqrDistance(center)<.0025f){
+    bool cuttable=rayStructure.record.cutting_ready&&!rayStructure.record.reference_region;
+    if(cuttable&&!session.ValidateCutTool(rayStructure)){stroke.Clear();cutCancelled=true;}
+    else DrivingBlade=cuttable;
+    if(!cutCancelled&&(stroke.Count==0||Vector3.SqrMagnitude(previousPoint-center)>.002f*.002f)){
+     if(!AppendSurfaceStroke(rayStructure,center,bladeRotation)){
+      stroke.Clear();cutCancelled=true;DrivingBlade=false;
+      app.Message("Stroke interrupted. Release the trigger and start a new stroke on the same surface.");
+     }
+     else if(DrivingBlade&&Time.unscaledTime>=nextBladeHaptic&&xr.source==Learning.XRInteractionSource.Controller&&(preferences==null||preferences.vibration)){
+      device.SendHapticImpulse(0,session.saw?.12f:.035f,.025f);nextBladeHaptic=Time.unscaledTime+.055f;
+     }
+    }
    }
   }else{cuttingContacts.EndStroke();if(trigger&&stroke.Count>0){stroke.Clear();cutCancelled=true;app.Message("Stroke cancelled. Keep the ray on one surface, release, then try again.");}}
   if(!trigger&&previousTrigger){if(!cutCancelled&&stroke.Count>=48)session.Cut(stroke);else if(!cutCancelled&&stroke.Count>0)app.Message("Hold trigger and move the tool a short distance along the tissue, then release.");stroke.Clear();cutCancelled=false;}
   previousTrigger=trigger;
  }
- Ray InputRay(Learning.LearningXRInput.State state)=>state.separateAim?
+ bool AppendSurfaceStroke(AnatomyStructure target,Vector3 center,Quaternion rotation){
+  if(stroke.Count==0){strokeTarget=target;strokeUsedSaw=session.saw;}
+  int steps=stroke.Count==0?1:Mathf.CeilToInt(Vector3.Distance(previousPoint,center)/.005f);
+  if(stroke.Count/24+steps>128)return false;
+  for(int i=1;i<=steps;i++){
+   var point=center;var orientation=rotation;
+   if(i<steps){
+    float t=(float)i/steps;orientation=Quaternion.Slerp(previousBladeRotation,rotation,t);
+    var direction=orientation*Vector3.forward;
+    var projected=Vector3.Lerp(previousPoint,center,t);
+    // Sample the actual intervening face. A chord may cross air or a different structure.
+    if(!Physics.Raycast(projected-direction*.009f,direction,out var face,.018f,~0,QueryTriggerInteraction.Ignore)||
+       face.collider.GetComponentInParent<AnatomyStructure>()!=target)return false;
+    point=face.point-face.normal*.001f;
+   }
+   NativeCutting.AddPose(stroke,target.transform,point,orientation,.008f,session.saw?.012f:.008f,session.saw?.025f:.018f);
+  }
+  previousPoint=center;previousBladeRotation=rotation;return true;
+ }
+ internal Ray InputRay(Learning.LearningXRInput.State state)=>state.separateAim?
   new Ray(transform.parent.TransformPoint(state.rayPosition),transform.parent.rotation*state.rayRotation*Vector3.forward):new Ray(transform.position,transform.forward);
  void LateUpdate(){
   var app=Learning.LabRuntime.Instance;var input=Learning.LearningXRInput.Read(hand);bool tracked=input.tracked&&Learning.LearningXRInput.HeadTracked&&(!app||app.Focused);
@@ -93,7 +151,7 @@ public class LabHandInteractor:XRBaseInteractor {
   if(app&&app.UI){var panel=app.UI.Root;var plane=new Plane(panel.forward,panel.position);if(plane.Raycast(ray,out float distance)&&distance>0&&distance<3){var local=panel.InverseTransformPoint(ray.GetPoint(distance));if(panel.rect.Contains(new Vector2(local.x,local.y))){show=true;endpoint=ray.GetPoint(distance);}}}
   if(!show&&Physics.Raycast(ray,out var contact,3)){show=contact.collider.GetComponentInParent<AnatomyStructure>()||contact.collider.GetComponentInParent<Learning.ProcedureTool>()||contact.collider.GetComponentInParent<Learning.MuseumExhibit>()||contact.collider.GetComponent<LabButton>();endpoint=contact.point;}
   line.enabled=true;line.SetPosition(0,ray.origin);line.SetPosition(1,endpoint);
-  if(pointerTip&&show){pointerTip.position=endpoint;pointerTip.gameObject.SetActive(true);}
+  if(pointerTip&&show&&!HasRayCutTarget){pointerTip.position=endpoint;pointerTip.gameObject.SetActive(true);}
  }
 }
 }

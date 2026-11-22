@@ -57,7 +57,8 @@ namespace ThoraxLab.Learning
             else
             {
                 if(!app.Procedure.Tools.TryGetValue(objective.toolId,out var tool)){errors.Add("Missing tool: "+objective.id);yield break;}
-                Quaternion rotation=Quaternion.LookRotation(app.Procedure.Approach);
+                bool incision=objective.toolId=="scalpel"&&objective.action==ActionKind.Trace&&app.Procedure.Incision;
+                Quaternion rotation=incision?app.Procedure.Incision.WorkingRotation:Quaternion.LookRotation(app.Procedure.Approach);
                 var path=app.Procedure.TrainingRoute.ToArray();
                 if(objective.targetId.EndsWith("withdrawal",StringComparison.Ordinal))app.Procedure.ReturnLooseTools();
                 if(objective.targetId.EndsWith("withdrawal",StringComparison.Ordinal)&&Vector3.Distance(tool.Tip,path[0])>.005f){errors.Add("Withdrawal tool lost its retained insertion pose: "+objective.id);yield break;}
@@ -67,7 +68,13 @@ namespace ThoraxLab.Learning
                 Vector3 start=objective.action==ActionKind.Trace?path[0]:app.Procedure.TargetPoint-app.Procedure.Approach*.1f;
                 tool.transform.SetPositionAndRotation(start-rotation*tool.tip.localPosition,rotation);
                 tool.desktopHeld=true;tool.activating=false;yield return null;
-                if(objective.action==ActionKind.Trace)
+                if(incision){
+                    for(int i=0;i<=16;i++){
+                        tool.transform.SetPositionAndRotation(Vector3.Lerp(path[0],path[path.Length-1],i/16f)-rotation*tool.tip.localPosition,rotation);
+                        yield return null;
+                    }
+                }
+                else if(objective.action==ActionKind.Trace)
                     foreach(var point in path){tool.transform.SetPositionAndRotation(point-rotation*tool.tip.localPosition,rotation);yield return null;}
                 Vector3 target=app.Procedure.TargetPoint;tool.transform.SetPositionAndRotation(target-rotation*tool.tip.localPosition,rotation);
                 if(objective.equipmentState=="inspiration")

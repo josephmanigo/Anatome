@@ -2,7 +2,7 @@ using System;
 
 namespace ThoraxLab.Learning
 {
-    // Inspection changes only a visual copy, never the activity's metric scale.
+    // Zoom changes the tracked view while the activity keeps its metric scale.
     public sealed class InspectionZoom
     {
         public const float Minimum = .5f, Maximum = 3f;

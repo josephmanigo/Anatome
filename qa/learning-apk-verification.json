@@ -1,8 +1,8 @@
 {
-  "verifiedUtc": "2026-10-07T07:08:29.883737+00:00",
-  "apk": "C:\\Users\\My Pc\\Downloads\\new\\builds\\AnatomeQuest\\Anatome.apk",
-  "artifactSha256": "e7c9d03b4c9f1c274ccb899485a5a4cb85d19bc0a27cb5f1fd93b510e774cfa6",
-  "bytes": 109097081,
+  "verifiedUtc": "2026-11-17T21:56:45.153331+00:00",
+  "apk": "C:\\Users\\My Pc\\.gemini\\antigravity\\scratch\\Anatome\\builds\\AnatomeQuest\\Anatome.apk",
+  "artifactSha256": "7104604dbb2295c0a1156bb310fac82c38a1f2b702503a93a67af4f229570706",
+  "bytes": 111056093,
   "package": "org.thoraxlab.learning",
   "checks": [
     {
@@ -36,6 +36,16 @@
       "name": "Native cutting AArch64",
       "passed": true,
       "detail": null
+    },
+    {
+      "name": "Chunk extraction native entry point",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current chunk extraction native version",
+      "passed": true,
+      "detail": "3fd2b7c8250ffc5cf875e2f5b8baf543c234a7588151baedb0a20f88ca3989e9"
     },
     {
       "name": "16 KB native load alignment",
@@ -82,11 +92,6 @@
       "detail": "Anatome"
     },
     {
-      "name": "Application version",
-      "passed": true,
-      "detail": "1.2.1"
-    },
-    {
       "name": "Hand tracking permission",
       "passed": true,
       "detail": null
@@ -105,6 +110,8 @@
   "failures": 0,
   "physicalDeviceTested": false,
   "releaseSigningRequired": false,
+  "schoolPolicyRequired": false,
+  "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
   "nonDebugSigner": false,
   "signing": "Android Debug certificate; sideload review, not a store release"
 }
