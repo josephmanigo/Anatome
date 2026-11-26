@@ -29,8 +29,16 @@ namespace ThoraxLab.Learning
         static HandGestureLatch[] gestures={new HandGestureLatch(),new HandGestureLatch()};
         static State[] cached=new State[2];
         static int[] cachedFrame={-1,-1};
+        static State headState;
+        static int headFrame=-1;
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void ResetInput(){gates=new[]{new XRInteractionGate(),new XRInteractionGate()};gestures=new[]{new HandGestureLatch(),new HandGestureLatch()};cached=new State[2];cachedFrame=new[]{-1,-1};handSystems.Clear();}
+        static void ResetInput(){
+            gates=new[]{new XRInteractionGate(),new XRInteractionGate()};gestures=new[]{new HandGestureLatch(),new HandGestureLatch()};cached=new State[2];cachedFrame=new[]{-1,-1};handSystems.Clear();
+            InvalidateHead();
+            InputSystem.onAfterUpdate-=InvalidateHead;
+            InputSystem.onAfterUpdate+=InvalidateHead;
+        }
+        static void InvalidateHead()=>headFrame=-1;
         public static bool BareHandsActive=>Read(XRNode.LeftHand).source==XRInteractionSource.BareHand||Read(XRNode.RightHand).source==XRInteractionSource.BareHand;
         public static bool SimulationAllowed
         {
@@ -43,7 +51,7 @@ namespace ThoraxLab.Learning
 #endif
             }
         }
-        public static bool IsSimulated => SimulationAllowed && ReadDevice(XRNode.Head).source==XRInteractionSource.Simulator;
+        public static bool IsSimulated => SimulationAllowed && Read(XRNode.Head).source==XRInteractionSource.Simulator;
         public static bool HeadTracked => Read(XRNode.Head).tracked;
         static UnityEngine.InputSystem.InputDevice Simulated(XRNode node)
         {
@@ -59,13 +67,18 @@ namespace ThoraxLab.Learning
         }
         public static State Read(XRNode node)
         {
-            if(node==XRNode.Head)return ReadDevice(node);
+            if(node==XRNode.Head)
+            {
+                // Share gameplay reads, refreshing after any later input update (including BeforeRender).
+                if(headFrame!=Time.frameCount){headState=ReadDevice(node);headFrame=Time.frameCount;}
+                return headState;
+            }
             int side=node==XRNode.LeftHand?0:1;
             if(cachedFrame[side]==Time.frameCount)return cached[side];
             var state=ReadDevice(node);
             if(!state.tracked)state=ReadBareHand(node,side);
             else gestures[side].Update(false,0,0);
-            bool headTracked=ReadDevice(XRNode.Head).tracked;
+            bool headTracked=HeadTracked;
             gates[side].Filter(state.source,state.tracked&&headTracked,ref state.trigger,ref state.grip);
             cachedFrame[side]=Time.frameCount;cached[side]=state;return state;
         }
@@ -106,6 +119,7 @@ namespace ThoraxLab.Learning
                 bool hasPosition = physical.TryGetFeatureValue(XRUsages.devicePosition, out state.position);
                 bool hasRotation = physical.TryGetFeatureValue(XRUsages.deviceRotation, out state.rotation);
                 state.tracked = (!hasTracking || tracked) && hasPosition && hasRotation;
+                if(node==XRNode.Head)return state;
                 bool hasTrigger=physical.TryGetFeatureValue(XRUsages.triggerButton, out state.trigger);
                 bool hasGrip=physical.TryGetFeatureValue(XRUsages.gripButton, out state.grip);
                 if(!physical.TryGetFeatureValue(XRUsages.trigger, out state.triggerValue))state.triggerValue=state.trigger?1:0;
@@ -116,7 +130,7 @@ namespace ThoraxLab.Learning
                 physical.TryGetFeatureValue(XRUsages.menuButton, out state.menu);
                 physical.TryGetFeatureValue(XRUsages.primaryButton, out state.inspect);
                 physical.TryGetFeatureValue(XRUsages.primary2DAxis, out state.axis);
-                if(state.tracked||node==XRNode.Head)return state;
+                if(state.tracked)return state;
             }
             var simulated = Simulated(node);
             if (simulated == null) return new State { rotation = Quaternion.identity };

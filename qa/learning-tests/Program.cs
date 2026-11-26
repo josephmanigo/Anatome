@@ -145,12 +145,32 @@ class Program
         snap.Reset();Check(snap.Read(1,0)==0,"Resetting snap turn must discard held input.");
     }
 
+    static void CheckActivityCompletion()
+    {
+        var progress=new ProgressSnapshot{userId="learner",resetGeneration=2};
+        var variant=new ScenarioVariant{id="chest-easy",version="current",objectives=new[]{Objective("rib"),Objective("lung")}};
+        var attempt=new AttemptRecord{userId=progress.userId,resetGeneration=2,scenarioId=variant.id,contentVersion=variant.version,phase=SessionPhase.Lesson};
+        progress.attempts.Add(attempt);
+        var engine=new AssessmentEngine(variant,attempt);
+        engine.Apply(Hit("rib"));engine.Finish();
+        Check(!ProgressRules.HasCompletedActivity(progress,variant),"Early finish marked an unfinished activity green.");
+        attempt.objectives.Single(o=>o.objectiveId=="lung").completed=true;
+        Check(ProgressRules.HasCompletedActivity(progress,variant,SessionPhase.Lesson),"A completed lesson was not recognized.");
+        Check(!ProgressRules.HasCompletedActivity(progress,variant,SessionPhase.Practice),"A lesson marked a different phase complete.");
+        Check(ProgressRules.HasCompletedActivity(JsonSerializer.Deserialize<ProgressSnapshot>(JsonSerializer.Serialize(progress,Json),Json),variant),"Saved completion did not survive a reload.");
+        attempt.status=AttemptStatus.Interrupted;Check(!ProgressRules.HasCompletedActivity(progress,variant),"An interrupted attempt counted as finished.");
+        attempt.status=AttemptStatus.Completed;attempt.resetGeneration--;Check(!ProgressRules.HasCompletedActivity(progress,variant),"Reset activity remained marked.");
+        attempt.resetGeneration++;attempt.userId="another-learner";Check(!ProgressRules.HasCompletedActivity(progress,variant),"Activity state crossed learner accounts.");
+        attempt.userId=progress.userId;attempt.contentVersion="older";Check(!ProgressRules.HasCompletedActivity(progress,variant),"A superseded activity marked the current activity.");
+    }
+
     static void Main(string[] args)
     {
         CheckVRAccessibility();
         InspectionZoomTests.Run(Check);
         CheckFieldOfViewPreferences();
         CheckRefreshPreferences();
+        CheckActivityCompletion();
         CheckClinicalDecisions();
         CheckBrandStorageCompatibility();
         CheckCheckpointReconciliation();

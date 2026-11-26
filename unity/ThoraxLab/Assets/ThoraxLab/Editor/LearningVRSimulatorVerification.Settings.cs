@@ -62,6 +62,7 @@ namespace ThoraxLab.Editor
         IEnumerable<int> VerifyGraphicsTransitions()
         {
             VerifyRefreshRates();
+            VerifyExtremeRendering();
             var apis=UnityEditor.PlayerSettings.GetGraphicsAPIs(UnityEditor.BuildTarget.Android);
             FacingCheck("graphics/quest_driver_workaround",apis.Length==1&&apis[0]==UnityEngine.Rendering.GraphicsDeviceType.OpenGLES3,
                 "Quest 1.4.6 crashed four times in vulkan.adreno.so/vkCreateImageView; compatibility build must select only OpenGLES3. Configured: "+string.Join(",",apis));
@@ -81,6 +82,55 @@ namespace ThoraxLab.Editor
             }
             finally{app.Settings.Apply(saved);}
             yield return 8;
+        }
+        void VerifyExtremeRendering()
+        {
+            var preset = new SettingsProfile { platform = "Quest" };
+            preset.SetPreset(GraphicsPreset.Extreme);
+            Require("graphics/extreme_fidelity", preset.renderScale == 1.2f && preset.msaa == 4 &&
+                preset.textureLimit == 0 && preset.shadows && preset.shadowDistance == 8f,
+                "Quest Extreme retains supersampling, full textures, anti-aliasing and shadows.");
+            var skin = app.Structures["FMA7163"];
+            var meshes = skin.GetComponentsInChildren<MeshRenderer>(true);
+            skin.Highlight(false);
+            var stored = new MaterialPropertyBlock();
+            stored.SetFloat("_Smoothness", .39f);
+            meshes[0].SetPropertyBlock(stored);
+            try
+            {
+                skin.Highlight(true);
+                Require("graphics/selection_all_lods", meshes.Length == 3 && meshes.All(r => r.HasPropertyBlock()),
+                    "The selection tint reaches the full mesh and both display meshes.");
+                skin.Highlight(false);
+                var restored = new MaterialPropertyBlock();
+                meshes[0].GetPropertyBlock(restored);
+                Require("graphics/resting_tissue", Mathf.Approximately(restored.GetFloat("_Smoothness"), .39f) &&
+                    !restored.HasColor("_BaseColor") && meshes.Skip(1).All(r => !r.HasPropertyBlock()),
+                    "Deselecting restores earlier renderer properties and frees resting meshes for batching.");
+            }
+            finally { meshes[0].SetPropertyBlock(null); }
+            var edges = app.UI.Root.GetComponentsInChildren<Image>().Where(i => i.sprite == LabUIVisuals.Outline).ToArray();
+            Require("graphics/console_masks", edges.Length > 0 && edges.All(i => !i.fillCenter && !i.raycastTarget) &&
+                LabUIVisuals.Rounded.texture == LabUIVisuals.Outline.texture,
+                "Rounded controls and outlines share a texture. Outlines skip their transparent center.");
+
+            var tracked = headState;
+            bool available = LearningXRInput.HeadTracked;
+            try
+            {
+                SetHead(tracked.devicePosition, tracked.deviceRotation, false);
+                UnityEngine.InputSystem.InputSystem.QueueStateEvent(hmd, headState);
+                UnityEngine.InputSystem.InputSystem.Update();
+                Require("graphics/head_sample_invalidated", available && !LearningXRInput.HeadTracked,
+                    "A later input update in the same rendered frame reports tracking loss immediately.");
+            }
+            finally
+            {
+                headState = tracked;
+                UnityEngine.InputSystem.InputSystem.QueueStateEvent(hmd, tracked);
+                UnityEngine.InputSystem.InputSystem.Update();
+            }
+            Require("graphics/head_sample_recovered", LearningXRInput.HeadTracked, "The restored pose is available in the same frame.");
         }
         IEnumerable<int> DragSetting(string name,float fraction)
         {

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-26T14:24:29.571292+00:00",
+  "apk": "../../builds/Anatome-1.6.7.apk",
+  "package": "org.thoraxlab.learning",
+  "packageVersion": "1.6.7",
+  "versionCode": 27,
+  "bytes": 250477463,
+  "sha256": "2ac220ff19c63c29cafaa60aa2d7137383c39f97c008284598d32c7efcf4bf80",
+  "signing": "Sideload build. The Android debug certificate matches the signed 1.6.6 APK.",
+  "quest2": {
+    "targetFps": 60,
+    "baselineFpsReportedByUser": 20,
+    "headsetAvailable": false,
+    "achievedFps": null,
+    "inHeadsetReadabilityTested": false
+  },
+  "build": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "checks": {
+    "package": 20,
+    "packagedContent": 47,
+    "learning": 2161,
+    "focusedGraphics": 83,
+    "fullXr": 4160,
+    "trackingBypass": false
+  },
+  "firstFullXrAttempt": {
+    "checksBeforeStop": 3081,
+    "failed": "case_reaches_skin_insert",
+    "detail": "Timed out on the guidewire before the incision. The complete rerun passed this step and the subsequent incision tests."
+  },
+  "reports": {
+    "package": "learning-apk-verification.json",
+    "assetsComparedToPreviousApk": "packaged-assets.json",
+    "renderingAndTimings": "extreme-graphics.json",
+    "simulatedXr": "xr-full.json",
+    "graphicsChecks": "graphics-regression.json",
+    "renderedComparison": "visual-comparison.png",
+    "unscaledCapturesAndRawFrameData": "comparison-captures.zip"
+  }
+}

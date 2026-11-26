@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -42,6 +43,10 @@ public class AnatomyStructure : MonoBehaviour {
  public Quaternion RestRotation {get;private set;}
  Mesh originalMesh,validatedWorkingMesh; Material[] originalMaterials; Vector3 originalScale;
  MaterialPropertyBlock block;
+ bool neutralMaterialTint;
+ bool highlighted;
+ Dictionary<Renderer,MaterialPropertyBlock> previousOverrides;
+ static readonly int BaseColor=Shader.PropertyToID("_BaseColor");
  bool inspectionGrab;
  Vector3 inspectionPosition;
  Quaternion inspectionRotation;
@@ -61,10 +66,30 @@ public class AnatomyStructure : MonoBehaviour {
   inspectionPosition=transform.localPosition;inspectionRotation=transform.localRotation;
  }
  public void Highlight(bool on) {
-  block??=new MaterialPropertyBlock();Renderer.GetPropertyBlock(block);
-  // Preserve tissue colour: a strong cyan multiplier turns skin green and hides
-  // the distinction between layers. Selection also has a named UI status.
-  block.SetColor("_BaseColor",on?new Color(1.08f,1.08f,1.06f):Color.white);foreach(var renderer in GetComponentsInChildren<Renderer>())renderer.SetPropertyBlock(block);var lod=GetComponent<LODGroup>();if(lod&&lod.enabled&&gameObject.activeInHierarchy)lod.ForceLOD(on?0:-1);
+  if(on || !neutralMaterialTint){
+   block??=new MaterialPropertyBlock();
+   foreach(var renderer in GetComponentsInChildren<Renderer>(true)){
+    renderer.GetPropertyBlock(block);
+    if(on && !highlighted && !block.isEmpty){
+     var previous=new MaterialPropertyBlock();
+     renderer.GetPropertyBlock(previous);
+     (previousOverrides??=new Dictionary<Renderer,MaterialPropertyBlock>())[renderer]=previous;
+    }
+    block.SetColor(BaseColor,on?new Color(1.08f,1.08f,1.06f):Color.white);
+    renderer.SetPropertyBlock(block);
+   }
+  }else if(block!=null){
+   // The resting tissue materials already supply white. A redundant override prevents SRP batching.
+   foreach(var renderer in GetComponentsInChildren<Renderer>(true)){
+    MaterialPropertyBlock previous=null;
+    previousOverrides?.TryGetValue(renderer,out previous);
+    renderer.SetPropertyBlock(previous);
+   }
+   block=null;
+  }
+  if(!on)previousOverrides?.Clear();
+  highlighted=on;
+  var lod=GetComponent<LODGroup>();if(lod&&lod.enabled&&gameObject.activeInHierarchy)lod.ForceLOD(on?0:-1);
  }
  public void TrySnap(){
   // Inspection is temporary handling; it must never submit placement/removal evidence.
@@ -79,6 +104,8 @@ public class AnatomyStructure : MonoBehaviour {
   if(!outer||originalMaterials==null||originalMaterials.Length==0)return;
   originalMaterials[0]=outer;
   if(inner&&originalMaterials.Length>1)originalMaterials[1]=inner;
+  neutralMaterialTint=outer.HasColor(BaseColor)&&outer.GetColor(BaseColor).Equals(Color.white)
+   &&(!inner||(inner.HasColor(BaseColor)&&inner.GetColor(BaseColor).Equals(Color.white)));
  }
  public void RestoreOriginal(){inspectionGrab=false;gameObject.SetActive(!record.reference_region);RestorePose();if(originalMesh)SetMesh(validatedWorkingMesh?validatedWorkingMesh:originalMesh,originalMaterials);}
  public void SetMesh(Mesh mesh,Material[] materials){

@@ -1138,7 +1138,7 @@
     {
       "id": "FMA7396",
       "passed": true,
-      "max_bound_error_m": 0.0,
+      "max_bound_error_m": 1.6176162076497747e-08,
       "triangles": 11000,
       "stable_id": "FMA7396",
       "uv_layers": 1,
@@ -1619,8 +1619,8 @@
     {
       "id": "FMA50872",
       "passed": true,
-      "max_bound_error_m": 1.1920928955078125e-07,
-      "triangles": 5500,
+      "max_bound_error_m": 4.496614391946707e-08,
+      "triangles": 5232,
       "stable_id": "FMA50872",
       "uv_layers": 1,
       "uv_valid": true,

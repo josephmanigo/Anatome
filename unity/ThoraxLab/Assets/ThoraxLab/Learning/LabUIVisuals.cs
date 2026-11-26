@@ -94,22 +94,33 @@ namespace ThoraxLab.Learning
     {
         static Sprite rounded,outline;
         static readonly Dictionary<string,Texture2D> artwork=new();
-        public static Sprite Rounded => rounded?rounded:rounded=MakeSurface(false);
-        public static Sprite Outline => outline?outline:outline=MakeSurface(true);
-        static Sprite MakeSurface(bool ring)
+        public static Sprite Rounded { get { if(!rounded)MakeSurfaces(); return rounded; } }
+        public static Sprite Outline { get { if(!outline)MakeSurfaces(); return outline; } }
+        static void MakeSurfaces()
         {
-            const int size=64;const float radius=15;
-            var texture=new Texture2D(size,size,TextureFormat.RGBA32,false){name=ring?"Console edge mask":"Rounded control mask",filterMode=FilterMode.Bilinear,wrapMode=TextureWrapMode.Clamp};
-            var pixels=new Color32[size*size];
-            for(int y=0;y<size;y++)for(int x=0;x<size;x++)
+            const int size=64, outlineX=size+2, width=outlineX+size;
+            const float radius=15;
+            var texture=new Texture2D(width,size,TextureFormat.RGBA32,false){name="Console masks",filterMode=FilterMode.Bilinear,wrapMode=TextureWrapMode.Clamp};
+            var pixels=new Color32[width*size];
+            for(int y=0;y<size;y++)
             {
-                var q=new Vector2(Mathf.Abs(x+.5f-size*.5f)-(size*.5f-radius),Mathf.Abs(y+.5f-size*.5f)-(size*.5f-radius));
-                float d=new Vector2(Mathf.Max(q.x,0),Mathf.Max(q.y,0)).magnitude+Mathf.Min(Mathf.Max(q.x,q.y),0)-radius;
-                float alpha=ring?Mathf.Clamp01(.6f-Mathf.Abs(d+1.15f)):Mathf.Clamp01(.5f-d);
-                float light=ring?Mathf.Lerp(.35f,1,(float)y/(size-1)):Mathf.Lerp(.66f,1,Mathf.Clamp01(-d/4));
-                pixels[y*size+x]=new Color(light,light,light,alpha);
+                int row=y*width;
+                float edgeLight=Mathf.Lerp(.35f,1,(float)y/(size-1));
+                for(int x=0;x<size;x++)
+                {
+                    var q=new Vector2(Mathf.Abs(x+.5f-size*.5f)-(size*.5f-radius),Mathf.Abs(y+.5f-size*.5f)-(size*.5f-radius));
+                    float d=new Vector2(Mathf.Max(q.x,0),Mathf.Max(q.y,0)).magnitude+Mathf.Min(Mathf.Max(q.x,q.y),0)-radius;
+                    float light=Mathf.Lerp(.66f,1,Mathf.Clamp01(-d/4));
+                    pixels[row+x]=new Color(light,light,light,Mathf.Clamp01(.5f-d));
+                    pixels[row+outlineX+x]=new Color(edgeLight,edgeLight,edgeLight,Mathf.Clamp01(.6f-Mathf.Abs(d+1.15f)));
+                }
+                // Repeat each sprite's edge texels so bilinear sampling matches its separate clamped texture.
+                pixels[row+size]=pixels[row+size-1];
+                pixels[row+outlineX-1]=pixels[row+outlineX];
             }
-            texture.SetPixels32(pixels);texture.Apply(false,true);return Sprite.Create(texture,new Rect(0,0,size,size),Vector2.one*.5f,100,0,SpriteMeshType.FullRect,Vector4.one*17);
+            texture.SetPixels32(pixels);texture.Apply(false,true);
+            Sprite Mask(int x)=>Sprite.Create(texture,new Rect(x,0,size,size),Vector2.one*.5f,100,0,SpriteMeshType.FullRect,Vector4.one*17);
+            rounded=Mask(0);outline=Mask(outlineX);
         }
         public static Color ConsoleColor(SettingsProfile settings)
         {
@@ -125,7 +136,7 @@ namespace ThoraxLab.Learning
             return image;
         }
         public static void Border(RectTransform parent,Color? color=null)
-        {var border=LabWidgets.Panel(parent,"Fine console edge",LabWidgets.HighContrast?Color.white:color??new Color(.63f,.83f,.92f,.65f));LabWidgets.Fill(border.rectTransform);border.sprite=Outline;border.type=Image.Type.Sliced;border.raycastTarget=false;var layout=border.gameObject.AddComponent<LayoutElement>();layout.ignoreLayout=true;}
+        {var border=LabWidgets.Panel(parent,"Fine console edge",LabWidgets.HighContrast?Color.white:color??new Color(.63f,.83f,.92f,.65f));LabWidgets.Fill(border.rectTransform);border.sprite=Outline;border.type=Image.Type.Sliced;border.fillCenter=false;border.raycastTarget=false;var layout=border.gameObject.AddComponent<LayoutElement>();layout.ignoreLayout=true;}
         public static LabIcon Icon(Transform parent,LabGlyph glyph,Color? color=null,float size=26)
         {var rt=LabWidgets.Rect(glyph+" symbol",parent);rt.gameObject.AddComponent<CanvasRenderer>();var icon=rt.gameObject.AddComponent<LabIcon>();icon.glyph=glyph;icon.color=color??LabWidgets.Muted;icon.raycastTarget=false;LabWidgets.Size(icon,size,size);return icon;}
         public static Texture2D Art(string key)
@@ -141,9 +152,9 @@ namespace ThoraxLab.Learning
             var image=picture.gameObject.AddComponent<RawImage>();image.texture=Art(key);image.color=image.texture?Color.white:Color.clear;image.raycastTarget=false;
             var ratio=picture.gameObject.AddComponent<AspectRatioFitter>();ratio.aspectMode=AspectRatioFitter.AspectMode.FitInParent;ratio.aspectRatio=image.texture?(float)image.texture.width/image.texture.height:1.6f;
         }
-        public static Button Card(Transform parent,string title,string description,string artKey,System.Action action,string actionName=null,string status=null,bool enabled=true,LabGlyph symbol=LabGlyph.Arrow)
+        public static Button Card(Transform parent,string title,string description,string artKey,System.Action action,string actionName=null,string status=null,bool enabled=true,LabGlyph symbol=LabGlyph.Arrow,bool completed=false)
         {
-            var card=Surface(parent,actionName??title,LabWidgets.Surface);var button=card.gameObject.AddComponent<Button>();button.targetGraphic=card;button.interactable=enabled;
+            var card=Surface(parent,actionName??title,completed&&enabled?LabWidgets.CompletedGreen:LabWidgets.Surface);var button=card.gameObject.AddComponent<Button>();button.targetGraphic=card;button.interactable=enabled;
             var colors=button.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(.77f,.96f,.94f);colors.pressedColor=new Color(.55f,.77f,.75f);colors.selectedColor=colors.highlightedColor;colors.disabledColor=new Color(.55f,.58f,.61f);colors.fadeDuration=0;button.colors=colors;
             var layout=card.gameObject.AddComponent<HorizontalLayoutGroup>();layout.padding=new RectOffset(16,20,16,16);layout.spacing=20;layout.childControlHeight=true;layout.childControlWidth=true;layout.childForceExpandWidth=false;layout.childForceExpandHeight=false;layout.childAlignment=TextAnchor.MiddleLeft;
             var size=LabWidgets.Size(card,148);size.minWidth=0;size.preferredWidth=0;size.preferredHeight=-1;
@@ -155,8 +166,9 @@ namespace ThoraxLab.Learning
             var body=LabWidgets.Column(card.transform,"Activity details",0,7);var bodySize=LabWidgets.Size(body,flexible:1);bodySize.minWidth=0;bodySize.preferredWidth=0;
             var name=LabWidgets.Text(body,title,28);name.fontStyle=FontStyles.Bold;
             if(!string.IsNullOrEmpty(description))LabWidgets.Text(body,description,21,LabWidgets.Muted);
+            if(completed&&string.IsNullOrEmpty(status))status="Completed";
             if(!string.IsNullOrEmpty(status))LabWidgets.Text(body,status,20,enabled?LabWidgets.Accent:LabWidgets.Muted);
-            Icon(card.transform,enabled?LabGlyph.Arrow:LabGlyph.Lock,enabled?LabWidgets.Accent:LabWidgets.Muted,24);
+            Icon(card.transform,!enabled?LabGlyph.Lock:completed?LabGlyph.Check:LabGlyph.Arrow,enabled?LabWidgets.Accent:LabWidgets.Muted,24);
             Border(card.rectTransform);button.onClick.AddListener(()=>action?.Invoke());return button;
         }
         public static LabGlyph ButtonGlyph(string text)

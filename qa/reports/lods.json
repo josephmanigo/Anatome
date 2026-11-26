@@ -2,13 +2,13 @@
   {
     "level": 1,
     "objects": 249,
-    "triangles": 300171,
+    "triangles": 300055,
     "role": "intact display only; cutting always uses LOD0"
   },
   {
     "level": 2,
     "objects": 249,
-    "triangles": 144599,
+    "triangles": 144597,
     "role": "intact display only; cutting always uses LOD0"
   }
 ]

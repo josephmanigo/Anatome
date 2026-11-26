@@ -1,0 +1,161 @@
+{
+  "reference": "Anatome-1.6.6.apk",
+  "candidate": "Anatome-1.6.8.apk",
+  "method": "SHA-256 of each uncompressed Android Unity data file, concatenating split files in numeric order. Each named audio resource includes its audio stream.",
+  "sourceResources": {
+    ".asset": {
+      "compared": 14,
+      "byteIdentical": 14
+    },
+    ".fbx": {
+      "compared": 3,
+      "byteIdentical": 3
+    },
+    ".json": {
+      "compared": 7,
+      "byteIdentical": 3
+    },
+    ".mat": {
+      "compared": 54,
+      "byteIdentical": 54
+    },
+    ".md": {
+      "compared": 3,
+      "byteIdentical": 0
+    },
+    ".otf": {
+      "compared": 1,
+      "byteIdentical": 1
+    },
+    ".png": {
+      "compared": 87,
+      "byteIdentical": 87
+    },
+    ".prefab": {
+      "compared": 4,
+      "byteIdentical": 4
+    },
+    ".shader": {
+      "compared": 5,
+      "byteIdentical": 5
+    },
+    ".ttf": {
+      "compared": 1,
+      "byteIdentical": 1
+    },
+    ".txt": {
+      "compared": 4,
+      "byteIdentical": 4
+    },
+    ".wav": {
+      "compared": 346,
+      "byteIdentical": 346
+    }
+  },
+  "changedNamedResources": [
+    "ThoraxLab/Resources/Fonts/LICENSE.md",
+    "ThoraxLab/Resources/Learning/CardArt/card-art-provenance.json",
+    "ThoraxLab/Resources/Learning/Hands/Source/Unity-XR-Hands-LICENSE.md",
+    "ThoraxLab/Resources/Learning/Hands/Source/Unity-XR-Hands-Third-Party-Notices.md",
+    "ThoraxLab/Resources/Learning/Hands/glove-provenance.json",
+    "ThoraxLab/Resources/Learning/Specimen/FMA9757-validated-working-mesh.provenance.json",
+    "ThoraxLab/Resources/Learning/catalog.json"
+  ],
+  "primaryTextFont": {
+    "asset": "ThoraxLab/Resources/Fonts/SourceSans3-SDF.asset",
+    "byteIdentical": true,
+    "candidateSha256": "93ac66576d23a440ed4212d007946eb6278330cb2485650a3c25b499488b03ec"
+  },
+  "sceneData": {
+    "level0": {
+      "byteIdentical": true,
+      "referenceSha256": "6c7450d83f1176bb5b69643dba143d161d757d4cdf4b329f7d14fe971da8f24c",
+      "candidateSha256": "6c7450d83f1176bb5b69643dba143d161d757d4cdf4b329f7d14fe971da8f24c"
+    },
+    "sharedassets0.assets": {
+      "byteIdentical": true,
+      "referenceSha256": "698c351f4834f6f122d1656bf142f1c3bc1ffb1a937dbdfe90d6b31eea40d7da",
+      "candidateSha256": "698c351f4834f6f122d1656bf142f1c3bc1ffb1a937dbdfe90d6b31eea40d7da"
+    }
+  },
+  "fileCountBefore": 925,
+  "fileCountAfter": 923,
+  "byteIdenticalFiles": 911,
+  "changedOtherFiles": [
+    "12c7e0ed109a4fc469cff9edddc731d1",
+    "3defd9cba867e5a43b612fa4229ac64d",
+    "43baf0f99259cb640a41eca677fa7210",
+    "976277ddae865d04199d9c3786f5d8f8",
+    "b317e4382758f724389b0bb84164620a",
+    "boot.config",
+    "e4f1e1b63ff5c6a49a173e4b4df625cb",
+    "globalgamemanagers",
+    "unity_app_guid"
+  ],
+  "sceneObjects": {
+    "method": "SHA-256 of each packed Unity object by name and type, including metadata and payload. When the complete serialized archive has an identical SHA-256, its object inventory is read once.",
+    "comparison": {
+      "Material": {
+        "original": 55,
+        "optimized": 55,
+        "byteIdenticalObjects": 55,
+        "changedOriginalNames": [],
+        "changedNewNames": []
+      },
+      "Mesh": {
+        "original": 783,
+        "optimized": 783,
+        "byteIdenticalObjects": 783,
+        "changedOriginalNames": [],
+        "changedNewNames": []
+      },
+      "Texture2D": {
+        "original": 53,
+        "optimized": 53,
+        "byteIdenticalObjects": 53,
+        "changedOriginalNames": [],
+        "changedNewNames": []
+      }
+    },
+    "texturesAtLeast4096": [
+      "Brushed alloy normal",
+      "Brushed stainless",
+      "Glazed scrub tile",
+      "Glazed scrub tile normal",
+      "Medical equipment coating",
+      "Medical equipment coating normal",
+      "Perforated diffuser",
+      "Sealed ceiling tile",
+      "Sealed ceiling tile normal",
+      "Surgical nonwoven",
+      "Surgical textile normal",
+      "Theatre ceramic normal",
+      "Theatre ceramic panels",
+      "Theatre monitors",
+      "Theatre resin",
+      "Theatre resin normal",
+      "Woven linen",
+      "Woven linen normal"
+    ],
+    "lightmaps": [
+      "Lightmap-0_comp_dir",
+      "Lightmap-0_comp_light",
+      "Lightmap-1_comp_dir",
+      "Lightmap-1_comp_light",
+      "Lightmap-2_comp_dir",
+      "Lightmap-2_comp_light"
+    ],
+    "meshNameExamples": [
+      "A_FMA10014",
+      "A_FMA10014",
+      "A_FMA10014",
+      "A_FMA10037",
+      "A_FMA10037",
+      "A_FMA10037",
+      "A_FMA10059",
+      "A_FMA10059"
+    ]
+  },
+  "candidateSha256": "19e0d7795742d38eb9e695b9cb7e58b3db0548d2228c9566373fb5d00f07749e",
+  "referenceSha256": "be81646c77ed5edbbc30dd9dbea3ba963a6a70d487e879bc738fe2aabcf1ca19"
+}

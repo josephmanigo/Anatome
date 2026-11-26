@@ -746,11 +746,13 @@ bpy.ops.object.select_all(action='DESELECT')
 for o in bpy.data.objects:
  if o.type=='MESH' and o.name.startswith('Lab_'):o.select_set(True)
 bpy.ops.export_scene.fbx(filepath=str(ROOT/'exports/Laboratory.fbx'),use_selection=True,object_types={'MESH'},apply_unit_scale=True,axis_forward='-Z',axis_up='Y',bake_anim=False,path_mode='STRIP',use_mesh_modifiers=True)
+removed_room_triangles=runpy.run_path(str(ROOT/'pipeline/repair_environment_export.py'))['clean_generated'](ROOT/'exports/Laboratory.fbx')
 shutil.copyfile(ROOT/'exports/Laboratory.fbx',asset_dir/'Models/Laboratory.fbx')
 meshes=[o for o in bpy.context.selected_objects if o.type=='MESH']
 contact_baker=runpy.run_path(str(ROOT/'pipeline/bake_operating_room_contact.py'))['bake']
 contact_baker(meshes,asset_dir/'Laboratory/Theatre floor contact.png')
 report={'master':'blender/Laboratory_MASTER.blend','export':'exports/Laboratory.fbx','original_authoring':True,'reference':'operating1.webp (appearance); operating room.mp4 and London Health Sciences Centre (equipment layout)','room_metres':[12,9,3],'renderers':len(meshes),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in meshes),'materials':sorted({o.data.materials[0].name for o in meshes})}
+report['triangles']-=removed_room_triangles
 (ROOT/'qa/reports/environment-build.json').write_text(json.dumps(report,indent=2))
 print('LABORATORY_BUILD_COMPLETE',json.dumps(report))
 # Keep the chair in the editable room but outside the static room's baked UV atlases.

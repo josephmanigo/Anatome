@@ -1,0 +1,64 @@
+{
+  "apk": "Anatome-1.6.8.apk",
+  "configuration": "Read from the compiled Android TextAsset. The public project URL and key match the source configuration.",
+  "initialDns": {
+    "googleStatus": 3,
+    "cloudflareStatus": 3,
+    "result": "NXDOMAIN",
+    "deviceNetwork": "Supabase main site resolved on this PC while the project hostname failed."
+  },
+  "recoveredDns": {
+    "googleStatus": 0,
+    "cloudflareStatus": 0,
+    "answers": 2
+  },
+  "readOnlyChecks": [
+    {
+      "utc": "2026-11-26T14:39:21.958357+00:00",
+      "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+      "checks": {
+        "/auth/v1/health": {
+          "status": 200,
+          "name": "GoTrue"
+        },
+        "/auth/v1/settings": {
+          "status": 200,
+          "emailEnabled": true,
+          "signupDisabled": false,
+          "emailAutoconfirm": false
+        }
+      }
+    },
+    {
+      "utc": "2026-11-26T14:42:49.974646+00:00",
+      "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+      "checks": {
+        "/auth/v1/health": {
+          "status": 200,
+          "name": "GoTrue"
+        },
+        "/auth/v1/settings": {
+          "status": 200,
+          "emailEnabled": true,
+          "signupDisabled": false
+        }
+      }
+    },
+    {
+      "utc": "2026-11-26T14:52:48.5114101Z",
+      "project": "https://ckefbyhshjrlkheunpgc.supabase.co",
+      "checks": {
+        "/auth/v1/health": {
+          "status": 200
+        },
+        "/auth/v1/settings": {
+          "status": 200,
+          "emailEnabled": true
+        }
+      }
+    }
+  ],
+  "otpSent": false,
+  "mailboxTest": "Skipped at user request",
+  "administratorActionObserved": false
+}

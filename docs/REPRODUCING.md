@@ -38,6 +38,8 @@ Windows synthetic contract tests execute as part of the native build. They cover
 
 ## Asset verification and editing
 
+The final geometry build applies the reviewed bronchus, pulmonary branch and display-detail corrections after exporting all three anatomy FBXs. `pipeline/apply_reviewed_models.py` checks their mesh data and transforms before editing and updates the geometry contracts. Running this stage again on the corrected exports preserves the meshes. The laboratory generator removes zero-area triangles from the room FBX after export. Both operations use Blender’s bundled NumPy and FBX reader.
+
 The supplied Blender masters are the editable starting point. `THORAX_PRODUCTION` is separate from `IMMUTABLE_SOURCE_REFERENCE`, `MAL_IMMUTABLE_SEPARATE_SPECIMEN` and `CAVITY_REFERENCES`. Do not edit the original archive or substitute these hidden reference objects into the game export. Blender uses metres and a supine specimen; the source-to-production transform is documented in the source research and registration records.
 
 ```powershell

@@ -109,6 +109,15 @@ namespace ThoraxLab.Learning
 
     public static class ProgressRules
     {
+        public static bool HasCompletedActivity(ProgressSnapshot progress, ScenarioVariant variant, SessionPhase? phase = null)
+        {
+            return variant.objectives.Length > 0 && progress.attempts.Any(a => a != null &&
+                a.userId == progress.userId && a.resetGeneration == progress.resetGeneration &&
+                a.scenarioId == variant.id && a.contentVersion == variant.version && a.status == AttemptStatus.Completed &&
+                (!phase.HasValue || a.phase == phase.Value) && a.objectives != null &&
+                variant.objectives.All(step => a.objectives.Any(result => result != null && result.objectiveId == step.id && result.completed)));
+        }
+
         public static bool MergeCheckpoint(ProgressSnapshot progress, ActivityCheckpoint incoming, string activeAttemptId = null)
         {
             if (incoming == null || incoming.resetGeneration != progress.resetGeneration) return false;

@@ -1,0 +1,445 @@
+{
+    "schemaVersion": 1,
+    "utc": "2026-11-26T14:43:04.2115610Z",
+    "unityVersion": "6000.3.19f1",
+    "status": "passed",
+    "method": "Official XRI devices with queued Input System XR state events",
+    "screenshot": "",
+    "firstPersonHandsScreenshot": "",
+    "passed": true,
+    "runtimeQaBypass": false,
+    "searchIndexExistedAtStart": true,
+    "searchIndexExistedBeforePlay": true,
+    "devices": [
+        "XRSimulatedHMD #1 []",
+        "XRSimulatedController #2 [LeftHand]",
+        "XRSimulatedController #3 [RightHand]"
+    ],
+    "checks": [
+        {
+            "id": "runtime_ready",
+            "detail": "Runtime, world-space UI and original skin structure must initialize.",
+            "passed": true
+        },
+        {
+            "id": "anatomy_working_mesh_volume",
+            "detail": "Each working mesh has its original volume, including the validated replacement.",
+            "passed": true
+        },
+        {
+            "id": "anatomy_display_mesh_cpu_copies",
+            "detail": "Both display distances release their CPU-side vertex and index buffers.",
+            "passed": true
+        },
+        {
+            "id": "anatomy_player_vertex_precision",
+            "detail": "The Android build preserves full precision for the anatomy's positions, normals, tangents and UVs.",
+            "passed": true
+        },
+        {
+            "id": "lab_cabinet_glass_transmits",
+            "detail": "The runtime keeps the cabinet glass transparent.",
+            "passed": true
+        },
+        {
+            "id": "lab_ceiling_emission_and_bake",
+            "detail": "The twelve theatre luminaires and four adjoining lobby and observation lights provide baked illumination.",
+            "passed": true
+        },
+        {
+            "id": "theatre_floor_clear_coat",
+            "detail": "The resin uses the clear-coat shader and spatially baked contact shadows.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Floor",
+            "detail": "Floor uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Wall",
+            "detail": "Wall uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Blue",
+            "detail": "Blue uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Stainless",
+            "detail": "Stainless uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Ceramic",
+            "detail": "Ceramic uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Cloth",
+            "detail": "Cloth uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Ceiling",
+            "detail": "Ceiling uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/VentFace",
+            "detail": "VentFace uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/White",
+            "detail": "White uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/EquipmentBlue",
+            "detail": "EquipmentBlue uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/CylinderGreen",
+            "detail": "CylinderGreen uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Guard",
+            "detail": "Guard uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Black",
+            "detail": "Black uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_native_4k/Red",
+            "detail": "Red uses native 4096-pixel finishes in the running scene.",
+            "passed": true
+        },
+        {
+            "id": "theatre_diagnostic_display_4k",
+            "detail": "The monitor atlas was drawn at 4096 by 2048.",
+            "passed": true
+        },
+        {
+            "id": "theatre_wall_clock_running",
+            "detail": "The digital clock runs in local time and the case timer starts at zero.",
+            "passed": true
+        },
+        {
+            "id": "lab_drape_at_startup",
+            "detail": "Examination linen clearance above the adjustable tabletop is 1.40 mm.",
+            "passed": true
+        },
+        {
+            "id": "no_tracking_bypass",
+            "detail": "The test runs without --learning-qa and must depend on actual XR tracking.",
+            "passed": true
+        },
+        {
+            "id": "official_simulator_installed",
+            "detail": "LearningSimulatorSetup must install the official XRI XRDeviceSimulator with simulator, controller and required hand sample action assets.",
+            "passed": true
+        },
+        {
+            "id": "official_virtual_devices_created",
+            "detail": "The installed simulator must create an HMD plus both handed controllers; this harness never calls AddDevice.",
+            "passed": true
+        },
+        {
+            "id": "sample_controller_actions_enabled",
+            "detail": "The official keyboard/mouse sample actions are enabled and the lifecycle manager is configured for controller interaction before deterministic fixture injection.",
+            "passed": true
+        },
+        {
+            "id": "device_lifetime_retained",
+            "detail": "Disabling only the simulator input writer must retain its virtual devices.",
+            "passed": true
+        },
+        {
+            "id": "head_and_hand_pose_follow_devices",
+            "detail": "Camera and LabHandInteractor transforms follow queued simulator local poses through LearningXRInput; focused=True",
+            "passed": true
+        },
+        {
+            "id": "scrub_entry_installed",
+            "detail": "Both automatic scrub door leaves exist.",
+            "passed": true
+        },
+        {
+            "id": "scrub_entry_opens_clear_route",
+            "detail": "Approaching from theatre opens both leaves and clears a route into the external scrub lobby.",
+            "passed": true
+        },
+        {
+            "id": "scrub_entry_holds_from_lobby",
+            "detail": "The lobby-side sensor holds the entry open.",
+            "passed": true
+        },
+        {
+            "id": "scrub_entry_closes_after_departure",
+            "detail": "Both leaves return to the doorway after the learner leaves.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_0",
+            "detail": "Initial local yaw=0; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_0",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_0",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_90",
+            "detail": "Initial local yaw=90; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_90",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_90",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_180",
+            "detail": "Initial local yaw=180; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_180",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_180",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/yaw_270",
+            "detail": "Initial local yaw=270; world horizontal facing=(-0.91, 0.00, 0.42); expected=(-0.91, 0.00, 0.42)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/aisle_270",
+            "detail": "Arbitrary room origin still puts the head in the clear aisle: (0.85, 1.65, 0.65)",
+            "passed": true
+        },
+        {
+            "id": "startup_facing/natural_head_turn_270",
+            "detail": "Startup alignment must not override later physical head turns.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_data",
+            "detail": "Before sign-in, learners can read what is stored and choose session-only guest practice.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_explains_shared_headsets",
+            "detail": "Shared-headset identity visibility, sign-out and deletion limits are explained.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_does_not_change_progress",
+            "detail": "Reading privacy does not sign in, send a code or change progress.",
+            "passed": true
+        },
+        {
+            "id": "school/privacy_returns_to_signin",
+            "detail": "Privacy returns to the original sign-in flow.",
+            "passed": true
+        },
+        {
+            "id": "email/service_unavailable",
+            "detail": "An unreachable sign-in host has a service-specific message when a network is available.",
+            "passed": true
+        },
+        {
+            "id": "email/device_offline",
+            "detail": "A disconnected device receives a Wi-Fi recovery message.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_opens_from_controller/1",
+            "detail": "A real controller ray opens the in-world keyboard without an Android keyboard covering the email.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_preview_is_pinned/1",
+            "detail": "Entered email remains in a dedicated fixed display.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_stays_in_panel_when_keys_scroll/1",
+            "detail": "Scrolling the keys cannot scroll the email out of the console.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_cursor_edits_middle/1",
+            "detail": "Delete removes the character before the caret, not always the last character.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_insert_at_caret/1",
+            "detail": "Typing repairs the address at the selected caret position.",
+            "passed": true
+        },
+        {
+            "id": "vr_keyboard_back_keeps_email/1",
+            "detail": "Back closes the keyboard and preserves input.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_survives_page_return/1",
+            "detail": "Returning to sign-in restores the draft address.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_opens_from_controller/1.5",
+            "detail": "A real controller ray opens the in-world keyboard without an Android keyboard covering the email.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_preview_is_pinned/1.5",
+            "detail": "Entered email remains in a dedicated fixed display.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_stays_in_panel_when_keys_scroll/1.5",
+            "detail": "Scrolling the keys cannot scroll the email out of the console.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_cursor_edits_middle/1.5",
+            "detail": "Delete removes the character before the caret, not always the last character.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_insert_at_caret/1.5",
+            "detail": "Typing repairs the address at the selected caret position.",
+            "passed": true
+        },
+        {
+            "id": "vr_keyboard_back_keeps_email/1.5",
+            "detail": "Back closes the keyboard and preserves input.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_survives_page_return/1.5",
+            "detail": "Returning to sign-in restores the draft address.",
+            "passed": true
+        },
+        {
+            "id": "vr_long_email_window_keeps_caret",
+            "detail": "Maximum-length input uses a readable window around the caret.",
+            "passed": true
+        },
+        {
+            "id": "vr_email_character_limit",
+            "detail": "The keyboard cannot exceed the email character limit.",
+            "passed": true
+        },
+        {
+            "id": "vr_empty_email_edit_is_safe",
+            "detail": "Clear, Left and Delete safely handle empty input.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_uses_numeric_keyboard",
+            "detail": "The six-digit code uses a numeric keyboard.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_retains_leading_zero_and_limit",
+            "detail": "The code preserves zero at the start and rejects a seventh digit.",
+            "passed": true
+        },
+        {
+            "id": "vr_code_back_returns_to_email",
+            "detail": "Code entry can return to the editable email without sending another email.",
+            "passed": true
+        },
+        {
+            "id": "completion/initial_card",
+            "detail": "A new learner sees the standard unit button.",
+            "passed": true
+        },
+        {
+            "id": "completion/steps",
+            "detail": "",
+            "passed": true
+        },
+        {
+            "id": "completion/finish_green",
+            "detail": "The enabled finish control turns green when every step is done.",
+            "passed": true
+        },
+        {
+            "id": "completion/finished",
+            "detail": "The normal finish button closes the attempt.",
+            "passed": true
+        },
+        {
+            "id": "completion/unit",
+            "detail": "Only the finished unit turns green.",
+            "passed": true
+        },
+        {
+            "id": "completion/lesson_separate",
+            "detail": "Practice leaves the lesson button available in its original color.",
+            "passed": true
+        },
+        {
+            "id": "completion/phase",
+            "detail": "Completed practice has a green check and text while the unplayed assessment retains its original appearance.",
+            "passed": true
+        }
+    ],
+    "errors": [],
+    "observations": [
+        "Official simulator initial head=(0.00, 0.00, 0.00); world head=(0.85, 1.65, 0.65); world panel=(-0.24, 1.63, 0.55)",
+        "Aimed Email address world=(-0.23, 1.41, 0.61); screen=(577.30, 334.58, 0.94); button rect=(x:-306.00, y:-34.00, width:612.00, height:68.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.79, 0.40); screen=(832.29, 595.88, 1.09); button rect=(x:-80.25, y:-38.00, width:160.50, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.24, 1.79, 0.68); screen=(1001.24, 595.88, 1.09); button rect=(x:-80.25, y:-38.00, width:160.50, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed r world=(-0.23, 1.68, 0.53); screen=(906.41, 532.97, 1.09); button rect=(x:-31.05, y:-38.00, width:62.10, height:76.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.22, 1.95, 0.38); screen=(820.75, 693.80, 1.09); button rect=(x:-57.50, y:-29.00, width:115.00, height:58.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.23, 1.42, 0.61); screen=(955.97, 377.28, 1.10); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.76, 0.40); screen=(832.29, 576.60, 1.09); button rect=(x:-80.25, y:-50.00, width:160.50, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.24, 1.76, 0.68); screen=(1001.24, 576.60, 1.09); button rect=(x:-80.25, y:-50.00, width:160.50, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed r world=(-0.23, 1.66, 0.53); screen=(906.41, 517.75, 1.09); button rect=(x:-31.05, y:-50.00, width:62.10, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.22, 1.95, 0.40); screen=(831.40, 690.25, 1.09); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Email address world=(-0.23, 1.42, 0.61); screen=(955.97, 377.28, 1.10); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed q world=(-0.22, 1.56, 0.36); screen=(807.33, 458.90, 1.09); button rect=(x:-31.05, y:-50.00, width:62.10, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Clear world=(-0.24, 1.76, 0.83); screen=(1085.71, 576.60, 1.09); button rect=(x:-80.25, y:-50.00, width:160.50, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Left world=(-0.22, 1.76, 0.40); screen=(832.29, 576.60, 1.09); button rect=(x:-80.25, y:-50.00, width:160.50, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Delete world=(-0.24, 1.76, 0.68); screen=(1001.24, 576.60, 1.09); button rect=(x:-80.25, y:-50.00, width:160.50, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back world=(-0.22, 1.95, 0.40); screen=(831.40, 690.25, 1.09); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Six-digit code world=(-0.23, 1.57, 0.61); screen=(955.97, 463.09, 1.10); button rect=(x:-306.00, y:-44.00, width:612.00, height:88.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 0 world=(-0.23, 1.42, 0.61); screen=(955.96, 376.71, 1.09); button rect=(x:-324.00, y:-50.00, width:648.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 1 world=(-0.22, 1.66, 0.42); screen=(845.86, 517.75, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 2 world=(-0.23, 1.66, 0.61); screen=(955.96, 517.75, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 3 world=(-0.24, 1.66, 0.79); screen=(1066.05, 517.75, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 4 world=(-0.22, 1.57, 0.42); screen=(845.86, 462.96, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 5 world=(-0.23, 1.57, 0.61); screen=(955.96, 462.96, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed 6 world=(-0.24, 1.57, 0.79); screen=(1066.05, 462.96, 1.09); button rect=(x:-107.00, y:-50.00, width:214.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Done world=(-0.22, 1.32, 0.61); screen=(959.00, 317.86, 1.09); button rect=(x:-330.00, y:-50.00, width:660.00, height:100.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)",
+        "Aimed Back to email world=(-0.23, 1.95, 0.40); screen=(832.00, 689.36, 1.10); button rect=(x:-78.50, y:-36.00, width:157.00, height:72.00); camera pixel=(x:0.00, y:0.00, width:1918.00, height:1001.00)"
+    ]
+}

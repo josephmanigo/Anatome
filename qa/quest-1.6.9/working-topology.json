@@ -1,0 +1,26 @@
+{
+  "release": {
+    "FMA7396": {
+      "status": 2,
+      "message": "No material intersected.",
+      "triangles": 11000
+    },
+    "FMA50872": {
+      "status": 2,
+      "message": "No material intersected.",
+      "triangles": 5500
+    }
+  },
+  "corrected": {
+    "FMA7396": {
+      "status": 2,
+      "message": "No material intersected.",
+      "triangles": 11000
+    },
+    "FMA50872": {
+      "status": 2,
+      "message": "No material intersected.",
+      "triangles": 5232
+    }
+  }
+}

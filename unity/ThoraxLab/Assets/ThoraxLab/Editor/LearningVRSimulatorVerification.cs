@@ -316,6 +316,11 @@ namespace ThoraxLab.Editor
                 Require("voice/welcome",app.Narrator.IsPlaying && app.Narrator.Caption.StartsWith("Welcome to Anatome"),"The first tracked sign-in screen starts its spoken welcome.");
             foreach(int frames in VerifyStartupFacing())yield return frames;
             foreach(int frames in VerifySchoolPrivacy())yield return frames;
+            if(Environment.GetCommandLineArgs().Contains("--activity-colors-only")){
+                foreach(int frames in VerifyVRSignIn())yield return frames;
+                app.EnterPreview();app.Progress.orientationCompleted=true;
+                foreach(int frames in VerifyActivityCompletionColors())yield return frames;yield break;
+            }
             if(LearningVRSimulatorVerification.MuseumOnly){
                 foreach(int frames in VerifyThoraxMuseum())yield return frames;yield break;
             }
@@ -500,6 +505,7 @@ namespace ThoraxLab.Editor
             Require("world_space_interface", app.UI.Root.GetComponent<Canvas>().renderMode == RenderMode.WorldSpace,
                 "Captured interface is the actual world-space Unity canvas.");
             CaptureWorldInterface();
+            foreach(int frames in VerifyActivityCompletionColors())yield return frames;
             foreach(int frames in VerifyInterruptedOrientation())yield return frames;
             foreach(int frames in VerifyProcedureGrip())yield return frames;
             foreach(int frames in VerifyAssemblyGrip())yield return frames;

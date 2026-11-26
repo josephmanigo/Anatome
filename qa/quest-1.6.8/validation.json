@@ -1,0 +1,47 @@
+{
+  "utc": "2026-11-26T14:52:49.206433+00:00",
+  "apk": "../../builds/Anatome-1.6.8.apk",
+  "package": "org.thoraxlab.learning",
+  "version": "1.6.8",
+  "versionCode": 28,
+  "bytes": 250480351,
+  "sha256": "19e0d7795742d38eb9e695b9cb7e58b3db0548d2228c9566373fb5d00f07749e",
+  "signing": "Sideload certificate matches 1.6.6.",
+  "physicalQuest2Tested": false,
+  "headsetTargetFps": 60,
+  "actualHeadsetFps": null,
+  "headsetReadabilityTested": false,
+  "emailService": {
+    "previouslyReturnedNxDomain": true,
+    "publicServiceRecovered": true,
+    "emailEnabled": true,
+    "inboxAndOtpSignIn": "Skipped at user request"
+  },
+  "completion": "The Finish control is green when all steps are complete. Saved finished activities have a green button with a check. Scope follows learner, reset, scenario, version and phase.",
+  "checks": {
+    "buildErrors": 0,
+    "buildWarnings": 0,
+    "learning": 2169,
+    "focusedXr": 79,
+    "fullXr": 4169,
+    "package": 20,
+    "packagedContent": 47
+  },
+  "reports": {
+    "rendering": "extreme-graphics.json",
+    "visualComparison": "visual-comparison.png",
+    "captures": "comparison-captures.zip",
+    "completedActivityScreenshot": "completed-activity.png",
+    "service": "email-service.json",
+    "packagedArt": "packaged-assets.json",
+    "package": "learning-apk-verification.json",
+    "integration": "xr-full.json",
+    "completionAndEmailUi": "activity-signin-xr.json"
+  },
+  "previousBuildQa": {
+    "version": "1.6.7",
+    "initialCaseInteractionTimeout": "case_reaches_skin_insert",
+    "laterFullRunPassed": true,
+    "final168CheckPassed": true
+  }
+}

@@ -58,7 +58,7 @@
   },
   "passed": true,
   "objects": 35,
-  "triangles": 181575,
+  "triangles": 178513,
   "bounds_size_m": [
     17.22000026702881,
     9.260001182556152,
@@ -137,5 +137,5 @@
     "spawn_clearance_m": 5.1892242115236495
   },
   "total_room_and_chair_batches": 38,
-  "total_room_and_chair_triangles": 185099
+  "total_room_and_chair_triangles": 182037
 }

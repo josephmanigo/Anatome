@@ -1,0 +1,48 @@
+{
+  "meshes": 35,
+  "visibleTrianglesBefore": 178513,
+  "visibleTrianglesAfter": 178513,
+  "zeroTrianglesBefore": 3062,
+  "zeroTrianglesAfter": 0,
+  "nonidenticalSurfaceGroups": [],
+  "nonidenticalShadingNormals": [
+    "Lab_DarkSteel",
+    "Lab_Display",
+    "Lab_Guard",
+    "Lab_InstrumentSteel",
+    "Lab_Sign"
+  ],
+  "zeroNormalsOnVisibleAfter": 0,
+  "shadingNormalsDegreesMaxP99CountOver1Total": {
+    "Lab_DarkSteel": [
+      0.00723,
+      0.00579,
+      0,
+      45948
+    ],
+    "Lab_Display": [
+      0.009,
+      0.0,
+      0,
+      7110
+    ],
+    "Lab_Guard": [
+      0.00421,
+      0.0,
+      0,
+      30396
+    ],
+    "Lab_InstrumentSteel": [
+      0.06273,
+      0.00492,
+      0,
+      40500
+    ],
+    "Lab_Sign": [
+      0.13388,
+      0.00421,
+      0,
+      11376
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "platform": "Windows Unity Editor with simulated XR tracking",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "unity": "6000.3.19f1",
+  "scene": "Extreme, orientation activity in the operating room with learning console visible",
+  "headsetFpsTarget": 60,
+  "headsetTested": false,
+  "headsetFps": null,
+  "renderWork": {
+    "original": {
+      "structures": 243,
+      "renderers": 729,
+      "renderersWithBlocks": 729,
+      "edges": 6,
+      "edgesDrawingCenter": 6,
+      "maskTextures": 2,
+      "scale": 1.2000000476837158,
+      "msaa": 4,
+      "mipLimit": 0,
+      "shadowDistance": 8.0,
+      "medianDrawCalls": 302.0,
+      "medianSetPassCalls": 50.0,
+      "repeat2000HeadReadsMedianMs": 16.354,
+      "separateEditorRunFrameTiming": {
+        "frames": 180,
+        "medianMs": 4.4651,
+        "p95Ms": 6.2548
+      }
+    },
+    "optimized": {
+      "structures": 243,
+      "renderers": 729,
+      "renderersWithBlocks": 3,
+      "edges": 6,
+      "edgesDrawingCenter": 0,
+      "maskTextures": 1,
+      "scale": 1.2000000476837158,
+      "msaa": 4,
+      "mipLimit": 0,
+      "shadowDistance": 8.0,
+      "medianDrawCalls": 294.0,
+      "medianSetPassCalls": 35.0,
+      "repeat2000HeadReadsMedianMs": 0.1038,
+      "separateEditorRunFrameTiming": {
+        "frames": 180,
+        "medianMs": 8.9743,
+        "p95Ms": 11.0642
+      }
+    }
+  },
+  "frameTiming": {
+    "method": "One editor process on one PC. Alternated original vs optimized rendering configuration in balanced order, four samples per configuration. Each sample used 1.5 seconds of warm-up and 240 frames. The input change was active throughout. CPU and GPU frame times on Quest were not available.",
+    "original": {
+      "frames": 960,
+      "medianMs": 10.3262,
+      "p95Ms": 14.1537
+    },
+    "optimized": {
+      "frames": 960,
+      "medianMs": 9.2865,
+      "p95Ms": 12.1656
+    },
+    "trials": [
+      {
+        "optimized": false,
+        "frames": 240,
+        "medianMs": 9.0056,
+        "p95Ms": 13.6856,
+        "drawCalls": 302,
+        "setPassCalls": 50
+      },
+      {
+        "optimized": true,
+        "frames": 240,
+        "medianMs": 10.0741,
+        "p95Ms": 12.1675,
+        "drawCalls": 294,
+        "setPassCalls": 35
+      },
+      {
+        "optimized": true,
+        "frames": 240,
+        "medianMs": 10.6966,
+        "p95Ms": 13.4045,
+        "drawCalls": 294,
+        "setPassCalls": 35
+      },
+      {
+        "optimized": false,
+        "frames": 240,
+        "medianMs": 12.6618,
+        "p95Ms": 16.5362,
+        "drawCalls": 302,
+        "setPassCalls": 50
+      },
+      {
+        "optimized": true,
+        "frames": 240,
+        "medianMs": 8.3551,
+        "p95Ms": 10.1543,
+        "drawCalls": 294,
+        "setPassCalls": 35
+      },
+      {
+        "optimized": false,
+        "frames": 240,
+        "medianMs": 9.986,
+        "p95Ms": 12.4121,
+        "drawCalls": 302,
+        "setPassCalls": 50
+      },
+      {
+        "optimized": false,
+        "frames": 240,
+        "medianMs": 9.5787,
+        "p95Ms": 11.504,
+        "drawCalls": 302,
+        "setPassCalls": 50
+      },
+      {
+        "optimized": true,
+        "frames": 240,
+        "medianMs": 8.4907,
+        "p95Ms": 10.3798,
+        "drawCalls": 294,
+        "setPassCalls": 35
+      }
+    ]
+  },
+  "images": {
+    "console": {
+      "width": 1440,
+      "height": 900,
+      "differentRgbPixels": 55,
+      "maxChannelDeltaOutOf255": 1,
+      "pixelsWithChannelDeltaAbove2": 0,
+      "textRegions": {
+        "heading": {
+          "rectangle": [
+            460,
+            261,
+            810,
+            302
+          ],
+          "pixelCount": 14350,
+          "differentRgbPixels": 0
+        },
+        "instructionTitle": {
+          "rectangle": [
+            460,
+            304,
+            772,
+            335
+          ],
+          "pixelCount": 9672,
+          "differentRgbPixels": 0
+        },
+        "instructionBody": {
+          "rectangle": [
+            473,
+            404,
+            935,
+            501
+          ],
+          "pixelCount": 44814,
+          "differentRgbPixels": 0
+        }
+      }
+    },
+    "specimen": {
+      "width": 1440,
+      "height": 900,
+      "differentRgbPixels": 1499,
+      "maxChannelDeltaOutOf255": 1,
+      "pixelsWithChannelDeltaAbove2": 0
+    },
+    "room": {
+      "width": 1440,
+      "height": 900,
+      "differentRgbPixels": 124,
+      "maxChannelDeltaOutOf255": 74,
+      "pixelsWithChannelDeltaAbove2": 95
+    }
+  },
+  "identicalRgbPixels": 3886322,
+  "pixelsCompared": 3888000,
+  "identicalRgbPercent": 99.956842
+}

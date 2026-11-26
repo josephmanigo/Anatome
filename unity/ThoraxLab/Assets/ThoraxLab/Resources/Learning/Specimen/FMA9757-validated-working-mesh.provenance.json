@@ -1,8 +1,8 @@
 {
-    "utc": "2026-11-21T14:53:18.2591505Z",
+    "utc": "2026-11-26T19:23:38.5180371Z",
     "anatomyId": "FMA9757",
     "source": "Assets/ThoraxLab/Models/Thorax.fbx",
-    "sourceSha256": "ceff740bd9109f52f622968ab000a12aa60c876fce7eadf31a732de45a9ee74a",
+    "sourceSha256": "4578c94af239c287d68de3f7b40b1e973ebf84b99ccd8881cccca13c74202776",
     "derived": "Assets/ThoraxLab/Resources/Learning/Specimen/FMA9757-validated-working-mesh.asset",
     "operation": "Remove exactly one disconnected six-triangle negative-occupancy numerical artifact; retain every vertex and all vertex channels. No surface is moved or filled.",
     "sourceTriangles": 3976,

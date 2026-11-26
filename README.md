@@ -8,15 +8,21 @@ Anatome places you inside a fully realized virtual dissection lab. A source-attr
 
 Six clinical cases drive the anatomy into clinical context: **pneumothorax** with chest drain, **asthma** with inhaler and spacer, **coronary artery disease** with balloon and stent, **pneumonia** with prescribed care, **pleural effusion** with aspiration, and **aortic stenosis** with catheter valve replacement. Each case includes 3D mechanism matching, response prediction, and instrument interaction — not arbitrary completion buttons. Wrong decisions produce specific rationales; an unsafe safety decision blocks an assessment pass.
 
-Progression is explicit. Pass an activity at 80 % with all essential objectives to unlock the next difficulty. Unlimited retries, no countdown pressure. Learning rewards require demonstrated unassisted mastery.
+Completed activities turn green. To pass an assessment, score at least 80%, complete every essential step without answer hints, and avoid critical safety errors. Learners can retry at their own pace.
+
+## Watch the advertisement
+
+[![Watch the 60-second Anatome advertisement](docs/media/anatome-advertisement.jpg)](docs/media/Anatome-Advertisement.mp4)
+
+See the rib cage come together, explore six anatomy units and six patient cases, and visit the Thorax Museum. The 1080p film includes narration and English captions. [Download the MP4](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement.mp4) · [Editable film project](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement-source.zip)
 
 ## Play on Meta Quest
 
-[Download Anatome 1.6.6 for Quest](https://github.com/josephmanigo/Anatome/releases/download/v1.6.6/Anatome-1.6.6.apk) · [Release notes](https://github.com/josephmanigo/Anatome/releases/tag/v1.6.6)
+[Download the latest published Quest build](https://github.com/josephmanigo/Anatome/releases/latest) · [Browse release notes and downloads](https://github.com/josephmanigo/Anatome/releases)
 
 Sideload the APK on Quest 2 or Quest 3 with SideQuest or Android Debug Bridge (ADB). This test build uses Android debug signing. Physical headset checks for this version are pending. For the Windows build and production signing workflow, see [Build and download the APK](docs/GITHUB-APK.md).
 
-Version 1.6.6 adds **Astigmatism reading mode**, with solid menu backgrounds, larger text and captions, and adjustable reading brightness. See [VR accessibility settings](docs/VR-ACCESSIBILITY.md).
+Version 1.6.9 updates six anatomical structures across the three detail levels and cleans the laboratory geometry. It includes the green activity-completion controls and Astigmatism reading mode. [Model review](docs/ANATOMY-MODEL-REVIEW.md) · [VR accessibility settings](docs/VR-ACCESSIBILITY.md)
 
 ## Game Modes
 

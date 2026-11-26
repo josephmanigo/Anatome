@@ -1,0 +1,166 @@
+{
+  "utc": "2026-11-26T14:42:30.789072+00:00",
+  "apk": "Anatome-1.6.8.apk",
+  "sha256": "19e0d7795742d38eb9e695b9cb7e58b3db0548d2228c9566373fb5d00f07749e",
+  "checks": 47,
+  "missing": [],
+  "evidence": {
+    "lab scene objects": {
+      "Lab_Chair_Black": [
+        "level0.split8"
+      ],
+      "Lab_Chair_Guard": [
+        "level0.split8"
+      ],
+      "Lab_Chair_Stainless": [
+        "level0.split8"
+      ]
+    },
+    "CaseSkin": {
+      "Resources/Learning/CaseSkin/CutFace.mat": [
+        "3f3a480f62bc4057a3f87a7eead31239"
+      ],
+      "Resources/Learning/CaseSkin/CutFace_Albedo.png": [
+        "f3373f4148d4437fbd153bdbdd810b9c"
+      ],
+      "Resources/Learning/CaseSkin/CutFace_Normal.png": [
+        "eb6714607e1c4179a2cc52ff3bb496d1"
+      ],
+      "Resources/Learning/CaseSkin/Surface.mat": [
+        "73ea5aa3d9534fb6a3d7d6c4e80c5f0e"
+      ],
+      "Resources/Learning/CaseSkin/Surface_Albedo.png": [
+        "666541d5ec284086b3e93309c7dee44f"
+      ],
+      "Resources/Learning/CaseSkin/Surface_Normal.png": [
+        "e4c0e803f85440dcbf597fd9c89515f6"
+      ]
+    },
+    "InstrumentFinishes": {
+      "Resources/Learning/InstrumentFinishes/Absorbent fibre.mat": [
+        "9ff636ff30a85c7a82907f68d52b9d6e"
+      ],
+      "Resources/Learning/InstrumentFinishes/Brushed relief.png": [
+        "ce8468ad9bb050c3b9b8486248602dc3"
+      ],
+      "Resources/Learning/InstrumentFinishes/Clear shell.mat": [
+        "2e10331d31b057bab4801a2b7e2f8e1d"
+      ],
+      "Resources/Learning/InstrumentFinishes/Grip rubber.mat": [
+        "540661b081b45c3d9da429400ab4f413"
+      ],
+      "Resources/Learning/InstrumentFinishes/Honed edge.mat": [
+        "d106848640375d3fa4b70f771d84c2d2"
+      ],
+      "Resources/Learning/InstrumentFinishes/Mould grain.png": [
+        "f1d485ca768c52bd8c75a1697b55a45c"
+      ],
+      "Resources/Learning/InstrumentFinishes/Mould relief.png": [
+        "00d0a2d5f3bc55f4a753b45be176da27"
+      ],
+      "Resources/Learning/InstrumentFinishes/Moulded ivory.mat": [
+        "e178a4ad367754f9a696a770f20e1a35"
+      ],
+      "Resources/Learning/InstrumentFinishes/Moulded teal.mat": [
+        "8af880276c8d5174846e3cbe78f1eeb1"
+      ],
+      "Resources/Learning/InstrumentFinishes/Satin steel.mat": [
+        "c490f9da50cb52e38ebb3224b536e6b0"
+      ],
+      "Resources/Learning/InstrumentFinishes/Woven relief.png": [
+        "58f615031c91515d94c1ec6fec78efa2"
+      ]
+    },
+    "specimen materials": {
+      "Resources/Learning/Specimen/Tissue_lung.mat": [
+        "5ff476a7c1be5f04cb209ef6e1dc6e6d"
+      ],
+      "Resources/Learning/Specimen/Interior_lung.mat": [
+        "5d81717f36dc85246b0544956bce96d0"
+      ],
+      "Resources/Learning/Specimen/Tissue_cardiac.mat": [
+        "82fd8a39a83daf54a9de39cf8d76390f"
+      ],
+      "Resources/Learning/Specimen/Interior_cardiac.mat": [
+        "4be500e560d1dba4f89a2204fc067987"
+      ],
+      "Resources/Learning/Specimen/Tissue_valve.mat": [
+        "0f4c2e5f73c2b7b4eaa3fe6ec8f9ac2a"
+      ],
+      "Resources/Learning/Specimen/Interior_valve.mat": [
+        "5cf59083da13ff443a0cf63c0d89fc3b"
+      ],
+      "Resources/Learning/Specimen/Tissue_artery.mat": [
+        "b09e3f060471f1c48b9d097ecd01de9a"
+      ],
+      "Resources/Learning/Specimen/Interior_artery.mat": [
+        "9a19f1a6ce4c0ca41a22517f8e4e3f85"
+      ],
+      "Resources/Learning/Specimen/Tissue_vein.mat": [
+        "26f242449652d9345a660383650ff675"
+      ],
+      "Resources/Learning/Specimen/Interior_vein.mat": [
+        "2a59376fd490ad84f9e307211525ea85"
+      ],
+      "Resources/Learning/Specimen/Tissue_airway.mat": [
+        "2d6015945f681a544bdde4bd6ffd1f5e"
+      ],
+      "Resources/Learning/Specimen/Interior_airway.mat": [
+        "40c17ffc05cea9349adf4a217531a2b5"
+      ],
+      "Resources/Learning/Specimen/Tissue_esophagus.mat": [
+        "74f6e01249780d440a6591f2c7ba6847"
+      ],
+      "Resources/Learning/Specimen/Interior_esophagus.mat": [
+        "b4e543066573f004b8c739ad4208cb73"
+      ],
+      "Resources/Learning/Specimen/Tissue_membrane.mat": [
+        "1be59691d5249004dbcc89cd012996e3"
+      ],
+      "Resources/Learning/Specimen/Interior_membrane.mat": [
+        "eed460d7f5173a14baecc849db41b1ad"
+      ]
+    },
+    "museum": {
+      "Resources/Learning/AtlasLungDetail.fbx": [
+        "b992486d988a68740b097578966e5d01"
+      ],
+      "Resources/Learning/Museum/Gallery.prefab": [
+        "55bae73516aeeff4c8401116aad261fe"
+      ],
+      "Resources/Learning/Museum/Plinth.prefab": [
+        "2e085690c31f7f24e927179b2fd10139"
+      ],
+      "Resources/Fonts/SourceSans3-SDF.asset": [
+        "75818c610165c6a40ab07ef6192b02dd"
+      ]
+    },
+    "shaders": {
+      "ThoraxLab/Museum finish": [
+        "f07446cc491983146948c5fb63108676",
+        "globalgamemanagers"
+      ],
+      "ThoraxLab/Organ Surface": [
+        "0a63221546660d24a95e80f886619469",
+        "globalgamemanagers"
+      ]
+    },
+    "compiled player metadata": {
+      "CaseIncisionSurface": [
+        "Managed/Metadata/global-metadata.dat"
+      ],
+      "CaseIncisionStroke": [
+        "Managed/Metadata/global-metadata.dat"
+      ],
+      "LabHandInteractor": [
+        "Managed/Metadata/global-metadata.dat"
+      ],
+      "ProcedureTool": [
+        "Managed/Metadata/global-metadata.dat"
+      ],
+      "CaseAnatomyWorkbench": [
+        "Managed/Metadata/global-metadata.dat"
+      ]
+    }
+  }
+}

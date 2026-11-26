@@ -56,6 +56,10 @@ namespace ThoraxLab.Editor
 
         IEnumerable<int> VerifyVRSignIn()
         {
+            var connectionMessage=typeof(AccountService).GetMethod("ConnectionMessage",BindingFlags.Static|BindingFlags.NonPublic);
+            string Message(NetworkReachability network)=>(string)connectionMessage.Invoke(null,new object[]{true,network});
+            Require("email/service_unavailable",Message(NetworkReachability.ReachableViaLocalAreaNetwork).Contains("sign-in service"),"An unreachable sign-in host has a service-specific message when a network is available.");
+            Require("email/device_offline",Message(NetworkReachability.NotReachable).Contains("offline"),"A disconnected device receives a Wi-Fi recovery message.");
             var originalHead=headState;var originalLeft=leftState;var originalRight=rightState;
             var emailMember=typeof(LabUI).GetField("email",BindingFlags.Instance|BindingFlags.NonPublic);string originalEmail=(string)emailMember.GetValue(app.UI);
             float originalScale=app.Settings.Current.textScale;
@@ -102,6 +106,43 @@ namespace ThoraxLab.Editor
             Require("vr_code_back_returns_to_email",app.UI.ScreenName=="Sign in"&&app.UI.Root.GetComponentInChildren<TMP_InputField>().text=="qa@example.org","Code entry can return to the editable email without sending another email.");
             app.Settings.Current.textScale=originalScale;LabWidgets.TextScale=originalScale;emailMember.SetValue(app.UI,originalEmail);app.UI.ShowSignIn();
             headState=originalHead;leftState=originalLeft;rightState=originalRight;QueueAll();yield return 5;
+        }
+
+        IEnumerable<int> VerifyActivityCompletionColors()
+        {
+            var unit=app.Catalog.units.First(u=>u.id=="chest-wall");
+            var variant=unit.variants.First(v=>v.mode==LearningMode.IdentifyEnumerate&&v.difficulty==Difficulty.Easy);
+            Button FindButton(string name)=>app.UI.Root.GetComponentsInChildren<Button>().Single(b=>b.name==name);
+            bool Green(string name)=>FindButton(name).targetGraphic.color==LabWidgets.CompletedGreen;
+            app.UI.ShowUnits(variant.mode);yield return 3;
+            Require("completion/initial_card",!Green(unit.title),"A new learner sees the standard unit button.");
+            app.StartActivity(variant,SessionPhase.Practice);yield return 5;
+            var attempt=app.Engine.Attempt;
+            try
+            {
+                var errors=new List<string>();
+                while(app.Engine.Current!=null&&errors.Count==0){
+                    var step=LearningSceneActionFixture.CompleteCurrent(app,errors);
+                    while(step.MoveNext())yield return 1;
+                    yield return 2;
+                }
+                Require("completion/steps",errors.Count==0&&app.Engine.AllComplete,string.Join("; ",errors));
+                app.UI.RefreshLive();yield return 2;
+                Require("completion/finish_green",Green("Finish activity"),"The enabled finish control turns green when every step is done.");
+                FindButton("Finish activity").onClick.Invoke();yield return 4;
+                Require("completion/finished",attempt.status==AttemptStatus.Completed,"The normal finish button closes the attempt.");
+                app.UI.ShowUnits(variant.mode);yield return 4;
+                Require("completion/unit",Green(unit.title)&&!Green(app.Catalog.units.First(u=>!u.isCase&&u!=unit).title),"Only the finished unit turns green.");
+                FindButton(unit.title).onClick.Invoke();yield return 3;
+                Require("completion/lesson_separate",!Green("Learn step by step"),"Practice leaves the lesson button available in its original color.");
+                FindButton("Practice or assessment").onClick.Invoke();yield return 4;
+                Require("completion/phase",Green("Practice with guidance")&&!Green("Take the assessment")&&FindButton("Practice with guidance").GetComponentsInChildren<TMP_Text>().Any(t=>t.text=="Completed"),"Completed practice has a green check and text while the unplayed assessment retains its original appearance.");
+                CaptureWorldInterface("completed-activity.png");
+            }
+            finally
+            {
+                app.Interrupt();app.Progress.attempts.Remove(attempt);app.Progress.checkpoints.RemoveAll(c=>c.attemptId==attempt.id);app.UI.ShowHub();
+            }
         }
 
         IEnumerable<int> VerifyUsabilityBaseline()

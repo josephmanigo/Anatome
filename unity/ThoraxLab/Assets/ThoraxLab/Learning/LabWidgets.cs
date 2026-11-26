@@ -15,6 +15,7 @@ namespace ThoraxLab.Learning
     {
         public static readonly Color Ground = new Color(.035f,.065f,.095f,1);
         public static readonly Color Surface = new Color(.105f,.17f,.215f,1);
+        public static readonly Color CompletedGreen = new Color(.07f,.34f,.16f,1);
         public static readonly Color Ink = new Color(.95f,.97f,.98f,1);
         public static readonly Color Muted = new Color(.72f,.82f,.87f,1);
         public static readonly Color Accent = new Color(.48f,.88f,.81f,1);
@@ -51,15 +52,17 @@ namespace ThoraxLab.Learning
         {
             var rt=Rect("Text · "+(value??""),parent);var t=rt.gameObject.AddComponent<TextMeshProUGUI>();t.font=Font;t.text=value;t.fontSize=Mathf.Max(22,size)*TextScale;t.color=HighContrast&&(color==null||color==Muted)?Color.white:color??Ink;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Overflow;t.raycastTarget=false;t.richText=false;t.lineSpacing=3;return t;
         }
-        public static Button Button(Transform parent,string value,Action action,bool primary=false,bool enabled=true)
+        public static Button Button(Transform parent,string value,Action action,bool primary=false,bool enabled=true,bool completed=false)
         {
-            var image=LabUIVisuals.Surface(parent,value,primary?Accent:Surface);var b=image.gameObject.AddComponent<Button>();b.targetGraphic=image;b.interactable=enabled;
+            completed=completed&&enabled;
+            bool light=primary&&!completed;
+            var image=LabUIVisuals.Surface(parent,value,completed?CompletedGreen:light?Accent:Surface);var b=image.gameObject.AddComponent<Button>();b.targetGraphic=image;b.interactable=enabled;
             var colors=b.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(.8f,1,1);colors.pressedColor=new Color(.62f,.8f,.78f);colors.selectedColor=new Color(.8f,1,1);colors.disabledColor=new Color(.43f,.48f,.50f);colors.fadeDuration=0;b.colors=colors;
             var l=image.gameObject.AddComponent<HorizontalLayoutGroup>();l.padding=new RectOffset(20,20,12,12);l.spacing=12;l.childControlWidth=true;l.childControlHeight=true;l.childForceExpandWidth=false;l.childForceExpandHeight=false;l.childAlignment=TextAnchor.MiddleLeft;
-            var t=Text(image.transform,value,24,primary?Ground:Ink);t.alignment=TextAlignmentOptions.MidlineLeft;var labelSize=Size(t,flexible:1);labelSize.minWidth=0;labelSize.preferredWidth=0;t.fontStyle=FontStyles.Bold;
+            var t=Text(image.transform,value,24,light?Ground:Ink);t.alignment=TextAlignmentOptions.MidlineLeft;var labelSize=Size(t,flexible:1);labelSize.minWidth=0;labelSize.preferredWidth=0;t.fontStyle=FontStyles.Bold;
             var size=Size(image,ControlHeight,flexible:1);size.minWidth=0;size.preferredWidth=0;size.preferredHeight=-1;
             image.gameObject.AddComponent<LabButtonHeight>();
-            if(value.Length>5&&value!="Delete"&&!value.StartsWith("Shift "))LabUIVisuals.Icon(image.transform,LabUIVisuals.ButtonGlyph(value),primary?Ground:Muted,24);
+            if(value.Length>5&&value!="Delete"&&!value.StartsWith("Shift "))LabUIVisuals.Icon(image.transform,completed?LabGlyph.Check:LabUIVisuals.ButtonGlyph(value),light?Ground:Muted,24);
             LabUIVisuals.Border(image.rectTransform,primary?new Color(.8f,1,1,.7f):new Color(.56f,.76f,.85f,.5f));
             b.onClick.AddListener(()=>action?.Invoke());return b;
         }

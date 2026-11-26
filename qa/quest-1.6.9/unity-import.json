@@ -1,0 +1,29 @@
+{
+    "unity": "6000.3.19f1",
+    "files": [
+        {
+            "file": "Thorax.fbx",
+            "renderers": 249,
+            "previousIndices": 1876272,
+            "currentIndices": 1875468
+        },
+        {
+            "file": "Thorax_LOD1.fbx",
+            "renderers": 249,
+            "previousIndices": 900513,
+            "currentIndices": 900165
+        },
+        {
+            "file": "Thorax_LOD2.fbx",
+            "renderers": 249,
+            "previousIndices": 433797,
+            "currentIndices": 433791
+        },
+        {
+            "file": "Laboratory.fbx",
+            "renderers": 35,
+            "previousIndices": 535539,
+            "currentIndices": 535539
+        }
+    ]
+}

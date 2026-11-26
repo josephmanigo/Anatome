@@ -1,0 +1,96 @@
+{
+  "released": [
+    {
+      "lod": 0,
+      "mesh_count": 249,
+      "native_triangles": 625424,
+      "Blender_triangles": 625424,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 0,
+      "referenced_native_normals_out_of_tolerance": 0,
+      "unreferenced_native_normals_out_of_tolerance": 0,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 0,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 0
+    },
+    {
+      "lod": 1,
+      "mesh_count": 249,
+      "native_triangles": 300171,
+      "Blender_triangles": 300168,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 3,
+      "referenced_native_normals_out_of_tolerance": 3,
+      "unreferenced_native_normals_out_of_tolerance": 0,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 9,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 127
+    },
+    {
+      "lod": 2,
+      "mesh_count": 249,
+      "native_triangles": 144599,
+      "Blender_triangles": 144591,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 8,
+      "referenced_native_normals_out_of_tolerance": 9,
+      "unreferenced_native_normals_out_of_tolerance": 0,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 24,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 5142
+    }
+  ],
+  "corrected": [
+    {
+      "lod": 0,
+      "mesh_count": 249,
+      "native_triangles": 625156,
+      "Blender_triangles": 625156,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 0,
+      "referenced_native_normals_out_of_tolerance": 0,
+      "unreferenced_native_normals_out_of_tolerance": 0,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 0,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 0
+    },
+    {
+      "lod": 1,
+      "mesh_count": 249,
+      "native_triangles": 300055,
+      "Blender_triangles": 300055,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 0,
+      "referenced_native_normals_out_of_tolerance": 0,
+      "unreferenced_native_normals_out_of_tolerance": 3,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 0,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 127
+    },
+    {
+      "lod": 2,
+      "mesh_count": 249,
+      "native_triangles": 144597,
+      "Blender_triangles": 144597,
+      "native_zero_area": 0,
+      "native_same_index_duplicate_pairs": 0,
+      "referenced_native_normals_out_of_tolerance": 0,
+      "unreferenced_native_normals_out_of_tolerance": 9,
+      "all_raw_nonfinite_UV": 0,
+      "Blender_near_degenerate_tissue_triangles": 0,
+      "position_welded_tissue_boundary_edges": 0,
+      "position_welded_unused_tissue_vertices": 0,
+      "position_welded_unused_reference_vertices": 5142
+    }
+  ]
+}

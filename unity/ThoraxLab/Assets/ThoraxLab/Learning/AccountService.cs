@@ -196,17 +196,28 @@ namespace ThoraxLab.Learning
                     while (!operation.isDone) await Task.Yield();
                     if (request.result != UnityWebRequest.Result.Success)
                     {
+                        bool signIn = endpoint == "/auth/v1/otp" || endpoint == "/auth/v1/verify";
+                        if (request.responseCode == 0) throw new IOException(ConnectionMessage(signIn, Application.internetReachability));
+                        if (signIn && (request.responseCode == 502 || request.responseCode == 503 || request.responseCode == 504))
+                            throw new IOException("Anatome's sign-in service is temporarily unavailable. Try again shortly, or choose guest practice.");
                         if (request.responseCode == 429) throw new InvalidOperationException("Too many requests. Please wait and try again.");
                         if (request.responseCode == 401 || request.responseCode == 403) throw new InvalidOperationException("Your session or email code could not be verified. Request a new code.");
                         if (endpoint == "/auth/v1/otp" && request.responseCode >= 500 && request.responseCode <= 599) throw new InvalidOperationException("The email service could not send your code. Email sign-in is temporarily unavailable. You can choose guest practice without saving.");
                         if (endpoint.StartsWith("/rest/v1/", StringComparison.Ordinal) && (request.responseCode == 404 || request.downloadHandler.text.Contains("PGRST202"))) throw new InvalidOperationException("Progress sync is not available yet. Your progress remains saved on this device.");
                         if (request.responseCode == 400 && endpoint.Contains("verify")) throw new InvalidOperationException("That code is invalid or expired. Request a new code.");
-                        throw new IOException(request.responseCode == 0 ? "Cannot connect. Your local progress is safe; retry when internet is available." : "The account service could not complete this request. Please try again.");
+                        throw new IOException("The account service could not complete this request. Please try again.");
                     }
                     return request.downloadHandler.text;
                 }
             }
             finally { Busy = false; }
+        }
+
+        static string ConnectionMessage(bool signIn, NetworkReachability network)
+        {
+            if (network == NetworkReachability.NotReachable) return "This device is offline. Reconnect to Wi-Fi and try again.";
+            return signIn ? "Cannot reach Anatome's sign-in service. Try again shortly, or choose guest practice."
+                : "Cannot reach the account service. Your progress is saved on this device. Try again shortly.";
         }
     }
 }

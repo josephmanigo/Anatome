@@ -210,7 +210,12 @@ namespace ThoraxLab.Learning
                 Text(content,"Begin with the chest wall, then explore at your own pace.",25,Muted);
                 bool canContinue=app.Progress.attempts.Any(a=>a.status==AttemptStatus.Active);
                 if(canContinue)Button(content,"Continue your activity",app.ResumeLast,true);
-                else LabUIVisuals.Card(content,"Chest wall","Build your first map of the thorax.","chest-wall",()=>{chosenMode=LearningMode.IdentifyEnumerate;chosenDifficulty=Difficulty.Easy;app.StartActivity(next.variants.First(v=>v.mode==chosenMode&&v.difficulty==Difficulty.Easy),SessionPhase.Lesson);},"Start an Easy lesson","Start an Easy lesson");
+                else
+                {
+                    var first=next.variants.First(v=>v.mode==LearningMode.IdentifyEnumerate&&v.difficulty==Difficulty.Easy);
+                    bool finished=ProgressRules.HasCompletedActivity(app.Progress,first,SessionPhase.Lesson);
+                    LabUIVisuals.Card(content,"Chest wall","Build your first map of the thorax.","chest-wall",()=>{chosenMode=first.mode;chosenDifficulty=first.difficulty;app.StartActivity(first,SessionPhase.Lesson);},"Start an Easy lesson",finished?"Easy lesson completed":"Start an Easy lesson",completed:finished);
+                }
                 Button(content,"Choose an activity",ShowModes,!canContinue);
                 Text(content,"Medium opens after you pass Easy. Hard opens after Medium.",22,Muted);
                 Button(content,"How to play & unlock levels",()=>ShowLearningGuidelines(ShowHub));
@@ -243,7 +248,9 @@ namespace ThoraxLab.Learning
             {
                 var selected=unit;var easy=unit.variants.First(v=>v.mode==mode&&v.difficulty==Difficulty.Easy);
                 var best=app.Progress.attempts.Where(a=>a.unitId==unit.id&&a.mode==mode&&a.contentVersion==easy.version&&a.phase==SessionPhase.Assessment&&a.passed).OrderByDescending(a=>a.difficulty).FirstOrDefault();
-                LabUIVisuals.Card(content,unit.title,unit.summary,unit.id,()=>ShowUnit(selected),unit.title,best==null?"Begin on Easy":best.difficulty+" mastered");
+                var finished=unit.variants.Where(v=>v.mode==mode).OrderByDescending(v=>v.difficulty).FirstOrDefault(v=>ProgressRules.HasCompletedActivity(app.Progress,v));
+                string status=best!=null?best.difficulty+" mastered":finished!=null?finished.difficulty+" activity completed":"Begin on Easy";
+                LabUIVisuals.Card(content,unit.title,unit.summary,unit.id,()=>ShowUnit(selected),unit.title,status,completed:finished!=null);
             }
             if(mode==LearningMode.GuidedDissection){Rule(content);Button(content,"Free dissection sandbox",app.StartSandbox);}
         }
@@ -254,7 +261,7 @@ namespace ThoraxLab.Learning
             if(!app.Unlocked(variant)){chosenDifficulty=Difficulty.Easy;variant=unit.variants.First(v=>v.mode==chosenMode&&v.difficulty==chosenDifficulty);}
             var selected=variant;Text(content,chosenDifficulty+" · "+variant.objectives.Length+" hands-on steps",25,Accent);
             Text(content,"Watch a step, try it, then check your understanding.",23,Muted);
-            Button(content,"Learn step by step",()=>app.StartActivity(selected,SessionPhase.Lesson),true,app.Unlocked(selected));
+            Button(content,"Learn step by step",()=>app.StartActivity(selected,SessionPhase.Lesson),true,app.Unlocked(selected),ProgressRules.HasCompletedActivity(app.Progress,selected,SessionPhase.Lesson));
             Button(content,"Practice or assessment",()=>ShowPhaseChoice(selected),false,app.Unlocked(selected));
             Button(content,"Change difficulty",ShowDifficultyChoice);
         }
@@ -265,15 +272,17 @@ namespace ThoraxLab.Learning
             {
                 var variant=chosenUnit.variants.First(v=>v.mode==chosenMode&&v.difficulty==level);bool unlocked=app.Unlocked(variant);var selected=level;
                 string guidance=unlocked?(level==Difficulty.Easy?"One step at a time with clear guides.":level==Difficulty.Medium?"More independence and anatomical relationships.":"Precise work and more complex decisions."):(level==Difficulty.Easy?"Complete the VR introduction first.":"Pass the "+(level==Difficulty.Medium?"Easy":"Medium")+" assessment in this unit and mode first.");
-                LabUIVisuals.Card(content,level.ToString(),guidance,null,()=>{chosenDifficulty=selected;ShowUnit(chosenUnit);},level+(unlocked?"":" · locked"),unlocked?(level==chosenDifficulty?"Selected":"Available"):"Locked",unlocked,unlocked?LabGlyph.Layers:LabGlyph.Lock);
+                bool finished=unlocked&&ProgressRules.HasCompletedActivity(app.Progress,variant);
+                string status=!unlocked?"Locked":finished?"Activity completed":level==chosenDifficulty?"Selected":"Available";
+                LabUIVisuals.Card(content,level.ToString(),guidance,null,()=>{chosenDifficulty=selected;ShowUnit(chosenUnit);},level+(unlocked?"":" · locked"),status,unlocked,unlocked?LabGlyph.Layers:LabGlyph.Lock,finished);
             }
             Text(content,AssessmentRequirements,24,Muted);Text(content,"Lessons, practice and XP do not unlock levels. No time limit; unlimited retries.",22,Muted);
         }
         void ShowPhaseChoice(ScenarioVariant variant)
         {
             Page("Learning phase",chosenUnit.title+" · "+variant.difficulty,back:()=>ShowUnit(chosenUnit));
-            LabUIVisuals.Card(content,"Practice with guidance","Replay demonstrations and use placement guides.",null,()=>app.StartActivity(variant,SessionPhase.Practice),symbol:LabGlyph.Play);
-            LabUIVisuals.Card(content,"Take the assessment",AssessmentRequirements+" Unlimited retries.",null,()=>app.StartActivity(variant,SessionPhase.Assessment),symbol:LabGlyph.Check);
+            LabUIVisuals.Card(content,"Practice with guidance","Replay demonstrations and use placement guides.",null,()=>app.StartActivity(variant,SessionPhase.Practice),symbol:LabGlyph.Play,completed:ProgressRules.HasCompletedActivity(app.Progress,variant,SessionPhase.Practice));
+            LabUIVisuals.Card(content,"Take the assessment",AssessmentRequirements+" Unlimited retries.",null,()=>app.StartActivity(variant,SessionPhase.Assessment),symbol:LabGlyph.Check,completed:ProgressRules.HasCompletedActivity(app.Progress,variant,SessionPhase.Assessment));
             Button(content,"Read the anatomy and sources",()=>ShowReferences(chosenUnit));
         }
         void ShowReferences(LearningUnit unit)
@@ -313,7 +322,7 @@ namespace ThoraxLab.Learning
                 if(app.Unit.isCase)Button(content,"Case and controls",ShowCaseControls);
                 if(app.Engine.Attempt.phase!=SessionPhase.Assessment)
                     Button(content,"Show me this step",()=>{app.RevealHint();app.Demonstrator.Play();app.NarrateCurrentStep();});
-                finishButton=Button(content,app.Engine.Attempt.phase==SessionPhase.Assessment?"Finish assessment":"Finish activity",app.Finish,true);
+                finishButton=Button(content,app.Engine.Attempt.phase==SessionPhase.Assessment?"Finish assessment":"Finish activity",app.Finish,true,completed:true);
                 selectedLabel=Text(content,"",21,Muted);
                 Button(content,"Tools and more help",ShowActivityTools);
                 Text(content,(app.Variant.mode==LearningMode.GuidedDissection?"Cut a chunk, then grip that separated piece to lift and turn it. Whole layers stay on the table. ":"Grip visible anatomy to lift and turn it. Inspection parts return on release. ")+MovementSummary(),22,Muted);
