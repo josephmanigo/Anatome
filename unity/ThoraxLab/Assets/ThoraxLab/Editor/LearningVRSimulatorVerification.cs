@@ -147,7 +147,7 @@ namespace ThoraxLab.Editor
         readonly LearningVRSimulatorVerification.Report report = new LearningVRSimulatorVerification.Report();
         IEnumerator<int> steps;
         int remainingFrames, selectedEvents, releasedEvents;
-        bool finished;
+        bool finished, welcomeHeardAtSignIn;
         LabRuntime app;
         LabHandInteractor hand;
         XRDeviceSimulator simulator;
@@ -177,6 +177,8 @@ namespace ThoraxLab.Editor
         void Update()
         {
             if (finished || steps == null) return;
+            if (!welcomeHeardAtSignIn && app && app.UI && app.UI.ScreenName == "Sign in" && app.Narrator && app.Narrator.IsPlaying)
+                welcomeHeardAtSignIn = app.Narrator.Caption?.StartsWith("Welcome to Anatome", StringComparison.Ordinal) == true;
             if (remainingFrames-- > 0) return;
             try
             {
@@ -270,6 +272,11 @@ namespace ThoraxLab.Editor
             for (int frame = 0; frame < 300 && (!LabRuntime.Instance || LabRuntime.Instance.UI == null); frame++) yield return 1;
             app = LabRuntime.Instance;
             Require("runtime_ready", app && app.UI && app.Presentation && app.Structures.ContainsKey("FMA7163"), "Runtime, world-space UI and original skin structure must initialize.");
+            if (Application.isBatchMode && !app.Focused)
+            {
+                app.SendMessage("OnApplicationFocus", true);
+                report.observations.Add("Delivered the foreground event to the initially unfocused batch simulator before testing device input.");
+            }
             VerifyAnatomyMeshStorage();
             VerifyLaboratorySurfaces();
             Require("no_tracking_bypass", !LabRuntime.VerificationRunning, "The test runs without --learning-qa and must depend on actual XR tracking.");
@@ -313,7 +320,7 @@ namespace ThoraxLab.Editor
             foreach (var frames in VerifyScrubEntry()) yield return frames;
 
             if(Environment.GetCommandLineArgs().Contains("--model-inspection-only"))
-                Require("voice/welcome",app.Narrator.IsPlaying && app.Narrator.Caption.StartsWith("Welcome to Anatome"),"The first tracked sign-in screen starts its spoken welcome.");
+                Require("voice/welcome",welcomeHeardAtSignIn,"The first tracked sign-in screen played the spoken welcome with its opening caption.");
             foreach(int frames in VerifyStartupFacing())yield return frames;
             foreach(int frames in VerifySchoolPrivacy())yield return frames;
             if(Environment.GetCommandLineArgs().Contains("--activity-colors-only")){
@@ -540,6 +547,8 @@ namespace ThoraxLab.Editor
 
         IEnumerable<int> VerifyAssemblyGrip(bool zoom=false)
         {
+            bool savedHints=app.Settings.Current.hints;
+            if(zoom)app.Settings.Current.hints=true;
             var variant=app.Catalog.units.First(u=>u.id=="chest-wall").variants.First(v=>v.mode==LearningMode.AssembleAnatomy&&v.difficulty==Difficulty.Easy);
             app.StartActivity(variant,zoom?SessionPhase.Lesson:SessionPhase.Practice);yield return zoom?4:16;
             var objective=app.Engine.Current;var target=app.Structures[objective.targetId];var parent=target.transform.parent;
@@ -550,7 +559,8 @@ namespace ThoraxLab.Editor
                 Require("inspection/assembly_demo_active",app.Inspector.IsOpen&&app.Inspector.Magnification>1&&app.Demonstrator.Playing,"The automatic assembly demonstration is playing at magnification.");
                 VerifySingleSolidModel("inspection/single_solid/assembly_lesson",target.Renderer);
                 var path=GameObject.Find("Placement guide line")?.GetComponent<LineRenderer>();
-                var socket=GameObject.Find("Correct anatomical shape and orientation").GetComponent<MeshRenderer>();
+                var socket=GameObject.Find("Correct anatomical shape and orientation")?.GetComponent<MeshRenderer>();
+                Require("inspection/assembly_socket",socket&&socket.enabled,"The guided lesson renders its matching outline. Hints="+app.Settings.Current.hints+", phase="+app.Engine.Attempt.phase+", action="+objective.action);
                 var startCenter=target.Renderer.bounds.center;var endCenter=socket.bounds.center;
                 Require("inspection/assembly_placement_line",path&&path.GetComponent<Collider>()==null&&
                     Vector3.Distance(path.GetPosition(0),startCenter)<.005f&&
@@ -593,6 +603,7 @@ namespace ThoraxLab.Editor
                 "The real XRI release places the Easy part and advances to the next piece without errors.");
             if(zoom)Require("inspection/assembly_placement",app.Inspector.IsOpen&&app.Inspector.Magnification>1,"The part was placed at magnification through a real grip and release.");
             CaptureWorldInterface("vr-assembly-controller-verified.png");
+            if(zoom)app.Settings.Current.hints=savedHints;
         }
 
         IEnumerable<int> VerifyInterruptedOrientation()

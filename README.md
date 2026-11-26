@@ -14,11 +14,11 @@ Completed activities turn green. To pass an assessment, score at least 80%, comp
 
 [![Watch the 60-second Anatome advertisement](docs/media/anatome-advertisement.jpg)](docs/media/Anatome-Advertisement.mp4)
 
-See the rib cage come together, explore six anatomy units and six patient cases, and visit the Thorax Museum. The 1080p film includes narration and English captions. [Download the MP4](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement.mp4) · [Editable film project](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement-source.zip)
+See the rib cage come together, explore six anatomy units and six patient cases, and visit the Thorax Museum. The 1080p film includes English captions and a generated female voice that pronounces Anatome like “anatomy.” [Download the MP4](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement.mp4) · [Editable film project](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-Advertisement-source.zip)
 
 ## Play on Meta Quest
 
-[Download the latest published Quest build](https://github.com/josephmanigo/Anatome/releases/latest) · [Browse release notes and downloads](https://github.com/josephmanigo/Anatome/releases)
+[Download Anatome 1.6.9 for Quest](https://github.com/josephmanigo/Anatome/releases/download/v1.6.9/Anatome-1.6.9.apk) · [Release notes and corrected models](https://github.com/josephmanigo/Anatome/releases/tag/v1.6.9)
 
 Sideload the APK on Quest 2 or Quest 3 with SideQuest or Android Debug Bridge (ADB). This test build uses Android debug signing. Physical headset checks for this version are pending. For the Windows build and production signing workflow, see [Build and download the APK](docs/GITHUB-APK.md).
 

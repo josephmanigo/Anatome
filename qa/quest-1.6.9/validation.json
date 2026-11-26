@@ -1,0 +1,36 @@
+{
+  "version": "1.6.9",
+  "versionCode": 29,
+  "package": "org.thoraxlab.learning",
+  "buildResult": [
+    "Succeeded",
+    "0 errors",
+    "0 warnings",
+    "00:13:58.4655636"
+  ],
+  "apkSha256": "cf0d9c67a34493ba114ec18a62a6278fe1b937a0a71959222007b4418c7365b7",
+  "apkChecksPassed": 20,
+  "signing": "Android debug certificate used for the existing GitHub sideload release",
+  "certificateSha256": "b340d254f5849ccea16bd38c92cb630f2093366a24e877b42c892412aa9e9aae",
+  "physicalHeadsetTested": false,
+  "productionCatalogAssertionsPassed": 2169,
+  "modelInspectionSimulatorPassed": true,
+  "modelInspectionSimulatorChecksPassed": 307,
+  "packagedAnatomyCatalogEntries": 249,
+  "packagedDetailMeshes": 747,
+  "advertisement": {
+    "durationSeconds": 60,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "chapters": 7,
+    "closedCaptions": "English",
+    "sha256": "1a6e283a0986efda9bba456e8540eb6c177586eb74a90998934b236d0db6e901"
+  },
+  "downloads": {
+    "Anatome-1.6.9.apk": "cf0d9c67a34493ba114ec18a62a6278fe1b937a0a71959222007b4418c7365b7",
+    "Anatome-Advertisement.mp4": "1a6e283a0986efda9bba456e8540eb6c177586eb74a90998934b236d0db6e901",
+    "Anatome-Advertisement-source.zip": "b5a3da921b8f5027abfb429b65bbfcd51de06bb2cafe4136d28543d58e626239",
+    "Anatome-Corrected-Models.zip": "337ca515a0427ed0ace125bfa7867ab3a2676a5346760b11e43f13e403ec4587"
+  }
+}

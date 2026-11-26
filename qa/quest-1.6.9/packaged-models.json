@@ -1,0 +1,280 @@
+{
+  "apk": "Anatome-1.6.9.apk",
+  "apkSha256": "cf0d9c67a34493ba114ec18a62a6278fe1b937a0a71959222007b4418c7365b7",
+  "previousApk": "Anatome-1.6.8.apk",
+  "catalogEntries": 249,
+  "detailLevels": 3,
+  "verifiedPackagedMeshes": 747,
+  "packagedTrianglesByDetail": [
+    625156,
+    300055,
+    144597
+  ],
+  "unchangedBoundsAndTriangleIndices": 243,
+  "corrected": {
+    "A_FMA9756": [
+      {
+        "previousTriangles": 3940,
+        "currentTriangles": 3940,
+        "previousSize": [
+          0.0027174,
+          0.0035034,
+          0.0018732
+        ],
+        "currentSize": [
+          0.0027174,
+          0.0035034,
+          0.0018732
+        ]
+      },
+      {
+        "previousTriangles": 1890,
+        "currentTriangles": 1894,
+        "previousSize": [
+          0.0027104,
+          0.0034559,
+          0.0018477
+        ],
+        "currentSize": [
+          0.0027104,
+          0.0034559,
+          0.0018477
+        ]
+      },
+      {
+        "previousTriangles": 850,
+        "currentTriangles": 854,
+        "previousSize": [
+          0.002714,
+          0.0033589,
+          0.0017538
+        ],
+        "currentSize": [
+          0.002714,
+          0.0033589,
+          0.0017538
+        ]
+      }
+    ],
+    "A_FMA9757": [
+      {
+        "previousTriangles": 3976,
+        "currentTriangles": 3976,
+        "previousSize": [
+          0.0026551,
+          0.0029524,
+          0.0020336
+        ],
+        "currentSize": [
+          0.0026551,
+          0.0029524,
+          0.0020336
+        ]
+      },
+      {
+        "previousTriangles": 1908,
+        "currentTriangles": 1906,
+        "previousSize": [
+          0.0026535,
+          0.0029348,
+          0.0020352
+        ],
+        "currentSize": [
+          0.0026535,
+          0.0029348,
+          0.0020352
+        ]
+      },
+      {
+        "previousTriangles": 858,
+        "currentTriangles": 856,
+        "previousSize": [
+          0.0026612,
+          0.0029039,
+          0.0020224
+        ],
+        "currentSize": [
+          0.0026612,
+          0.0029039,
+          0.0020224
+        ]
+      }
+    ],
+    "A_FMA7396": [
+      {
+        "previousTriangles": 11000,
+        "currentTriangles": 11000,
+        "previousSize": [
+          0.0007404,
+          0.0007729,
+          0.0005745
+        ],
+        "currentSize": [
+          0.0007404,
+          0.0007729,
+          0.0003365
+        ]
+      },
+      {
+        "previousTriangles": 5280,
+        "currentTriangles": 5280,
+        "previousSize": [
+          0.0007412,
+          0.0007727,
+          0.0005747
+        ],
+        "currentSize": [
+          0.0007412,
+          0.0007727,
+          0.0003365
+        ]
+      },
+      {
+        "previousTriangles": 2376,
+        "currentTriangles": 2376,
+        "previousSize": [
+          0.0007415,
+          0.000772,
+          0.0005735
+        ],
+        "currentSize": [
+          0.0007415,
+          0.000772,
+          0.0003337
+        ]
+      }
+    ],
+    "A_FMA7240": [
+      {
+        "previousTriangles": 4526,
+        "currentTriangles": 4526,
+        "previousSize": [
+          0.0003599,
+          0.0002334,
+          0.0002417
+        ],
+        "currentSize": [
+          0.0003599,
+          0.0002334,
+          0.0002417
+        ]
+      },
+      {
+        "previousTriangles": 2172,
+        "currentTriangles": 2178,
+        "previousSize": [
+          0.0003597,
+          0.0002337,
+          0.0002417
+        ],
+        "currentSize": [
+          0.0003597,
+          0.0002337,
+          0.0002417
+        ]
+      },
+      {
+        "previousTriangles": 976,
+        "currentTriangles": 982,
+        "previousSize": [
+          0.0003596,
+          0.0002341,
+          0.0002418
+        ],
+        "currentSize": [
+          0.0003596,
+          0.0002341,
+          0.0002418
+        ]
+      }
+    ],
+    "A_FMA7265": [
+      {
+        "previousTriangles": 816,
+        "currentTriangles": 816,
+        "previousSize": [
+          0.0002504,
+          0.0003284,
+          0.0003552
+        ],
+        "currentSize": [
+          0.0002504,
+          0.0003284,
+          0.0003552
+        ]
+      },
+      {
+        "previousTriangles": 390,
+        "currentTriangles": 390,
+        "previousSize": [
+          0.0002502,
+          0.0003284,
+          0.0003551
+        ],
+        "currentSize": [
+          0.0002502,
+          0.0003284,
+          0.0003551
+        ]
+      },
+      {
+        "previousTriangles": 174,
+        "currentTriangles": 180,
+        "previousSize": [
+          0.0002497,
+          0.0003285,
+          0.0003571
+        ],
+        "currentSize": [
+          0.0002497,
+          0.0003285,
+          0.0003571
+        ]
+      }
+    ],
+    "A_FMA50872": [
+      {
+        "previousTriangles": 5500,
+        "currentTriangles": 5232,
+        "previousSize": [
+          0.0015124,
+          0.0033347,
+          0.0015083
+        ],
+        "currentSize": [
+          0.0015124,
+          0.0021005,
+          0.0015083
+        ]
+      },
+      {
+        "previousTriangles": 2640,
+        "currentTriangles": 2516,
+        "previousSize": [
+          0.001511,
+          0.0033357,
+          0.0015079
+        ],
+        "currentSize": [
+          0.001511,
+          0.0021005,
+          0.0015079
+        ]
+      },
+      {
+        "previousTriangles": 1188,
+        "currentTriangles": 1172,
+        "previousSize": [
+          0.0015087,
+          0.0033314,
+          0.0015056
+        ],
+        "currentSize": [
+          0.0015087,
+          0.0021007,
+          0.0015056
+        ]
+      }
+    ]
+  }
+}
